@@ -9,7 +9,7 @@
       shortName: "Workspace",
       description: "A reusable, local-first workspace for records and documents.",
       version: "1.0.0",
-      buildId: "2026.08.01.1",
+      buildId: "2026.08.02.1",
       repository: {
         label: "Project repository",
         url: "https://github.com/example/local-workspace"
@@ -42,7 +42,6 @@
       cloudSync: true,
       roadmap: true,
       developerTools: true,
-      installation: true,
       hints: true,
       demoData: true
     },
@@ -108,7 +107,8 @@
       { id: "documents", title: "Working with documents", section: "Features", keywords: "document notes rich text editor", html: "<p>Documents support a small safe formatting set: headings, bold, italic, lists, quotes, and links. Imported markup is sanitized before display.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before they replace current data. The current copy is saved locally as a recovery snapshot first.</p>" },
       { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. Configure a private repository, branch, JSON file path, and a fine-grained token with Contents access. Conflicts always ask whether to upload, download, merge, or cancel.</p>" },
-      { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Open the install helper for instructions tailored to this device. Once the application shell has loaded, core local features continue to work offline.</p>" },
+      { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline.</p>" },
+      { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press", html: "<p>Click or tap the app icon to switch between light and dark themes. Press and hold it to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Content remains in browser storage unless you export it or explicitly use GitHub sync. Tokens are stored separately per device and are excluded from backups and diagnostics.</p>" },
       { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt hints", html: "<p>Press <kbd>/</kbd> for global search and <kbd>?</kbd> for Help. Hold <kbd>Alt</kbd> to reveal shortcut hints. Every pointer-only convenience has a keyboard or visible-button alternative.</p>" }
     ]

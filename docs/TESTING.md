@@ -77,7 +77,7 @@ Use a static HTTP server. Test with a clean browser profile and with an upgraded
 - [ ] Reload with network disabled opens records, documents, settings and backup features.
 - [ ] Network-only sync clearly reports offline and never blocks local editing.
 - [ ] Light/dark manifest, favicon, install icon and theme colors match appearance.
-- [ ] Install instructions match iPhone, iPad, Android, Mac and Windows/other categories.
+- [ ] No in-app install modal appears and the browser's native installation path remains available.
 - [ ] Standalone launch is detected where the browser exposes it.
 - [ ] A changed cache/build id produces an update-available notice and refreshes only after user action.
 
@@ -103,4 +103,7 @@ Use a static HTTP server. Test with a clean browser profile and with an upgraded
 - [ ] Help search finds installation, backup, sync and shortcut guidance.
 - [ ] Released/planned/wishlist roadmap filters and every requested sort work.
 - [ ] Developer Mode diagnostics omit secrets and arbitrary code execution.
+- [ ] Clicking or tapping the app icon changes theme without opening a dialog.
+- [ ] Holding the app icon toggles Developer Mode once, reveals or hides its version pill, and does not also change theme.
+- [ ] The Beta pill appears for `/beta/`, `?beta=1`, and `?beta=true`, but not for ordinary URLs.
 - [ ] Disabling each optional feature flag leaves the remaining application coherent.

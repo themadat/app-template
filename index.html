@@ -33,17 +33,17 @@
 
   <header class="app-header">
     <div class="title-cluster">
-      <button id="appIconButton" class="app-icon-button" type="button" aria-label="Installation options" title="Installation options" data-shortcut="A">
+      <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode">
         <img id="appIcon" src="assets/icons/app-icon-light.svg" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">Local Workspace</span>
-        <button id="workspaceTitleButton" class="workspace-title-button" type="button" title="Rename workspace" data-shortcut="R">
-          <span id="workspaceTitle">My Workspace</span>
-          <span aria-hidden="true">✎</span>
-        </button>
+        <div class="identity-pill-row">
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes">v1.0.0</button>
+          <span id="developerModePill" class="developer-mode-pill" title="Developer Mode is enabled" hidden>Dev Mode v1.0.0</span>
+          <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
+        </div>
       </div>
-      <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes">v1.0.0</button>
     </div>
 
     <div class="global-search-wrap">
@@ -205,14 +205,6 @@
     </form>
   </dialog>
 
-  <dialog id="renameDialog" class="app-dialog small-dialog" aria-labelledby="renameDialogTitle">
-    <form id="renameForm" method="dialog">
-      <header class="dialog-header"><h2 id="renameDialogTitle">Rename workspace</h2><button type="button" class="icon-button" data-close-dialog="renameDialog" aria-label="Close">×</button></header>
-      <div class="dialog-body"><label class="field"><span>Workspace title</span><input id="renameInput" maxlength="100" required data-initial-focus></label></div>
-      <footer class="dialog-footer"><button type="button" class="button" data-close-dialog="renameDialog">Cancel</button><button type="submit" class="button primary">Save title</button></footer>
-    </form>
-  </dialog>
-
   <dialog id="linkDialog" class="app-dialog small-dialog" aria-labelledby="linkDialogTitle">
     <form id="linkForm" method="dialog">
       <header class="dialog-header"><h2 id="linkDialogTitle">Add document link</h2><button type="button" class="icon-button" data-close-dialog="linkDialog" aria-label="Close">×</button></header>
@@ -318,19 +310,6 @@
           </section>
         </div>
       </div>
-    </div>
-  </dialog>
-
-  <dialog id="installDialog" class="app-dialog install-dialog" aria-labelledby="installDialogTitle">
-    <div class="dialog-shell">
-      <header class="dialog-header"><div><span class="eyebrow">Installable web app</span><h2 id="installDialogTitle">Add as App</h2></div><button type="button" class="icon-button" data-close-dialog="installDialog" aria-label="Close">×</button></header>
-      <div class="dialog-body">
-        <div class="install-preview"><img src="assets/icons/app-icon-light.svg" alt="Light application icon"><img src="assets/icons/app-icon-dark.svg" alt="Dark application icon"><div><strong data-install-device>Device</strong><span data-install-state></span></div></div>
-        <div class="segmented install-variant" aria-label="Install icon"><button type="button" data-icon-variant="auto" aria-pressed="true">Automatic</button><button type="button" data-icon-variant="light" aria-pressed="false">Light</button><button type="button" data-icon-variant="dark" aria-pressed="false">Dark</button></div>
-        <ol class="install-steps" data-install-steps></ol>
-        <div class="inline-status"><span aria-hidden="true">✓</span><span>After the shell has loaded once, records, documents, settings, backup, and help remain available offline.</span></div>
-      </div>
-      <footer class="dialog-footer"><button type="button" class="button" data-close-dialog="installDialog">Close</button><button type="button" class="button primary" data-install-prompt hidden>Install now</button></footer>
     </div>
   </dialog>
 
