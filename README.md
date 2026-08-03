@@ -24,6 +24,76 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`. There is nothing to install or compile.
 
+## Set up a new app repository with GitHub SSH
+
+Use SSH for the Git remote when creating an application from this template. This prevents Git from prompting for a GitHub username and password; GitHub authenticates the computer with an SSH key instead.
+
+1. Check whether this computer already has an Ed25519 key:
+
+   ```sh
+   ls -al ~/.ssh
+   ```
+
+   If both `id_ed25519` and `id_ed25519.pub` exist, keep them and continue to step 3. The file ending in `.pub` is the public key. Never copy, upload, or share the private `id_ed25519` file.
+
+2. If the key does not exist, create it with the email address used by your GitHub account:
+
+   ```sh
+   ssh-keygen -t ed25519 -C "YOUR_GITHUB_EMAIL"
+   ```
+
+   Accept the suggested file location. A passphrase is optional but recommended.
+
+3. On macOS, start the SSH agent and save the key in Keychain:
+
+   ```sh
+   eval "$(ssh-agent -s)"
+   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+   ```
+
+   On Linux, use `ssh-add ~/.ssh/id_ed25519` after starting the SSH agent instead.
+
+4. Copy the public key on macOS:
+
+   ```sh
+   pbcopy < ~/.ssh/id_ed25519.pub
+   ```
+
+   On other systems, display it with `cat ~/.ssh/id_ed25519.pub` and copy the complete line. In GitHub, open **Settings → SSH and GPG keys → New SSH key**, choose **Authentication Key**, paste the public key, and save it.
+
+5. Test the connection:
+
+   ```sh
+   ssh -T git@github.com
+   ```
+
+   The first connection may ask you to confirm GitHub's host fingerprint. A successful test says that you authenticated and that GitHub does not provide shell access.
+
+6. Create the new repository from this template on GitHub, then use its SSH URL. For a fresh clone:
+
+   ```sh
+   git clone git@github.com:OWNER/REPOSITORY.git
+   ```
+
+   If the app is already cloned and its remote uses `https://`, switch it to SSH and verify the result:
+
+   ```sh
+   git remote set-url origin git@github.com:OWNER/REPOSITORY.git
+   git remote -v
+   ```
+
+7. Push the initial branch and remember its upstream:
+
+   ```sh
+   git push -u origin main
+   ```
+
+After that, ordinary `git pull` and `git push` commands use SSH. If Git still requests a GitHub username and password, run `git remote -v` and confirm that the URL starts with `git@github.com:` rather than `https://`. If it reports `Permission denied (publickey)`, confirm that the public key was added to the correct GitHub account and loaded into the SSH agent. A prompt for the SSH key's passphrase is local and is not a GitHub password.
+
+GitHub's official guides cover [generating and loading an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?apiVersion=2022-11-28&platform=mac), [adding the public key to an account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and [testing the connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection).
+
+This SSH setup is for maintaining the application's source repository. The optional in-app GitHub synchronization module runs in a browser and therefore continues to use a narrowly scoped access token; browsers cannot use a computer's SSH key for that feature.
+
 ## Host as a static site
 
 Upload the repository contents without changing their relative paths. Any static host that serves HTTPS and JSON/manifest files with ordinary MIME types will work. The service worker is scoped to the folder containing `sw.js`, so keep it at the application root.
