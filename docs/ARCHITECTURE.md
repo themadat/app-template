@@ -19,6 +19,7 @@ assets/
     splash-*.png               Optional Apple launch assets
   js/
     config.js                  Identity, feature flags, statuses, releases, roadmap, help
+    icons.js                   Shared inline SVG symbol catalog and mounting helpers
     core/
       utils.js                 Escaping, sanitizing, validation, ids, dates, hashes
       state.js                 Defaults, schema, migrations, normalization, validation
@@ -47,7 +48,7 @@ The persisted root is one human-readable object:
   "schemaVersion": 3,
   "meta": {
     "appVersion": "1.0.0",
-    "buildId": "2026.08.01.1",
+    "buildId": "2026.08.02.2",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "unique id",

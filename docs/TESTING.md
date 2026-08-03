@@ -104,6 +104,9 @@ Use a static HTTP server. Test with a clean browser profile and with an upgraded
 - [ ] Released/planned/wishlist roadmap filters and every requested sort work.
 - [ ] Developer Mode diagnostics omit secrets and arbitrary code execution.
 - [ ] Clicking or tapping the app icon changes theme without opening a dialog.
-- [ ] Holding the app icon toggles Developer Mode once, reveals or hides its version pill, and does not also change theme.
+- [ ] Holding the app icon toggles Developer Mode once, adds or removes `DEV` in the single version pill, and does not also change theme.
+- [ ] Version and Beta pill text is centered, including when the version pill contains `DEV`.
+- [ ] Primary toolbar and module buttons use inline SVG symbols above small title-case labels.
+- [ ] The computed interface font uses the Helvetica stack.
 - [ ] The Beta pill appears for `/beta/`, `?beta=1`, and `?beta=true`, but not for ordinary URLs.
 - [ ] Disabling each optional feature flag leaves the remaining application coherent.

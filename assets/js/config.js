@@ -9,7 +9,7 @@
       shortName: "Workspace",
       description: "A reusable, local-first workspace for records and documents.",
       version: "1.0.0",
-      buildId: "2026.08.02.1",
+      buildId: "2026.08.02.2",
       repository: {
         label: "Project repository",
         url: "https://github.com/example/local-workspace"

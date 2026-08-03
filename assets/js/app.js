@@ -3,6 +3,7 @@
 
   const App = window.LocalApp;
   const config = App.config;
+  const icons = App.icons;
   const u = App.utils;
   const model = App.stateModel;
   const storage = App.storage;
@@ -54,12 +55,12 @@
   }
 
   function applyIdentity() {
+    icons.mount(document);
     document.title = config.identity.name;
     $("meta[name='description']").content = config.identity.description;
     $("#appName").textContent = config.identity.name;
     $("#versionButton").textContent = "v" + config.identity.version;
     $("#versionButton").setAttribute("aria-label", "Open release notes for version " + config.identity.version);
-    $("#developerModePill").textContent = "Dev Mode v" + config.identity.version;
     $("#appIcon").src = config.identity.assets.appIconLight;
     $("#releaseCurrentVersion").textContent = "v" + config.identity.version;
     if (!config.features.documents) {
@@ -145,7 +146,10 @@
 
   function renderHeader() {
     const developerMode = config.features.developerTools && state().preferences.controls.developerMode;
-    $("#developerModePill").hidden = !developerMode;
+    const versionButton = $("#versionButton");
+    versionButton.textContent = "v" + config.identity.version + (developerMode ? " DEV" : "");
+    versionButton.dataset.developer = developerMode ? "true" : "false";
+    versionButton.setAttribute("aria-label", "Open release notes for version " + config.identity.version + (developerMode ? ". Developer Mode is enabled" : ""));
     $("#betaPill").hidden = !isBetaDeploy();
     document.documentElement.dataset.developer = developerMode ? "on" : "off";
     setInputValue($("#globalSearch"), state().ui.search);
@@ -187,7 +191,6 @@
       button.title = info.title + ". " + info.message;
       button.setAttribute("aria-label", info.title + ". " + info.message);
     });
-    $("[data-sync-icon]").textContent = info.icon;
     $("[data-floating-status-icon]").textContent = offline ? "∕" : info.icon;
   }
 
@@ -229,9 +232,9 @@
     const tags = record.tags.slice(0, 3).map(function (tag) { return '<span class="tag">' + u.escapeHtml(tag) + "</span>"; }).join("");
     return '<article id="record-option-' + u.escapeHtml(record.id) + '" class="record-card' + (selected ? " selected" : "") + (expanded ? " expanded" : "") + '" role="option" aria-selected="' + selected + '" aria-expanded="' + expanded + '" tabindex="0" draggable="true" data-record-id="' + u.escapeHtml(record.id) + '">' +
       '<span class="drag-handle" aria-hidden="true">⠿</span>' +
-      '<div class="record-card-copy"><div class="record-card-title"><strong>' + u.escapeHtml(record.title) + '</strong>' + (record.favorite ? '<span class="favorite-mark" aria-label="Favorite">★</span>' : "") + '</div><div class="record-card-meta">' + statusPill(record) + '<span>' + u.escapeHtml(record.category) + '</span><span>' + u.dateLabel(record.updatedAt) + "</span></div>" +
+      '<div class="record-card-copy"><div class="record-card-title"><strong>' + u.escapeHtml(record.title) + '</strong>' + (record.favorite ? '<span class="favorite-mark" aria-label="Favorite">' + icons.markup("favorite") + '</span>' : "") + '</div><div class="record-card-meta">' + statusPill(record) + '<span>' + u.escapeHtml(record.category) + '</span><span>' + u.dateLabel(record.updatedAt) + "</span></div>" +
       (expanded && record.summary ? '<p>' + u.escapeHtml(record.summary) + "</p>" : "") + (tags ? '<div class="tag-row">' + tags + "</div>" : "") + "</div>" +
-      '<button class="record-menu-button icon-button" type="button" data-record-menu="' + u.escapeHtml(record.id) + '" aria-label="Actions for ' + u.escapeHtml(record.title) + '" aria-haspopup="menu" aria-expanded="false">•••</button>' +
+      '<button class="record-menu-button icon-button" type="button" data-record-menu="' + u.escapeHtml(record.id) + '" aria-label="Actions for ' + u.escapeHtml(record.title) + '" aria-haspopup="menu" aria-expanded="false">' + icons.markup("more") + '</button>' +
       "</article>";
   }
 
@@ -296,7 +299,7 @@
     }
     const statuses = config.statuses.map(function (status) { return '<option value="' + status.id + '"' + (record.status === status.id ? " selected" : "") + '>' + u.escapeHtml(status.label) + "</option>"; }).join("");
     const urlLink = record.url ? '<button class="safe-link-button" type="button" data-open-url="' + u.escapeHtml(record.url) + '">Open external link <span aria-hidden="true">↗</span></button>' : '<span class="field-help">No external link</span>';
-    container.innerHTML = '<header class="panel-header detail-header"><button type="button" class="mobile-back-button" data-mobile-back aria-label="Back to records">← Records</button><div><span class="eyebrow">Record detail</span><strong>' + u.escapeHtml(record.title) + '</strong></div><div class="panel-header-actions"><button class="button icon-button" type="button" data-toggle-favorite="' + u.escapeHtml(record.id) + '" aria-label="' + (record.favorite ? "Remove favorite" : "Add favorite") + '" aria-pressed="' + record.favorite + '" title="Favorite">★</button><button class="button icon-button" type="button" data-record-menu="' + u.escapeHtml(record.id) + '" aria-label="Record actions" aria-haspopup="menu" aria-expanded="false">•••</button></div></header>' +
+    container.innerHTML = '<header class="panel-header detail-header"><button type="button" class="mobile-back-button" data-mobile-back aria-label="Back to records">' + icons.markup("back") + '<span>Records</span></button><div><span class="eyebrow">Record detail</span><strong>' + u.escapeHtml(record.title) + '</strong></div><div class="panel-header-actions"><button class="button icon-button" type="button" data-toggle-favorite="' + u.escapeHtml(record.id) + '" aria-label="' + (record.favorite ? "Remove favorite" : "Add favorite") + '" aria-pressed="' + record.favorite + '" title="Favorite">' + icons.markup("favorite") + '</button><button class="button icon-button" type="button" data-record-menu="' + u.escapeHtml(record.id) + '" aria-label="Record actions" aria-haspopup="menu" aria-expanded="false">' + icons.markup("more") + '</button></div></header>' +
       '<form class="record-detail-form" data-record-form="' + u.escapeHtml(record.id) + '"><label class="field full"><span>Title</span><input data-record-field="title" maxlength="140" value="' + u.escapeHtml(record.title) + '"></label>' +
       '<label class="field"><span>Category</span><input data-record-field="category" maxlength="60" value="' + u.escapeHtml(record.category) + '"></label><label class="field"><span>Status</span><select data-record-field="status">' + statuses + "</select></label>" +
       '<label class="field full"><span>Summary</span><textarea data-record-field="summary" rows="7" maxlength="4000">' + u.escapeHtml(record.summary) + "</textarea></label>" +
@@ -315,11 +318,11 @@
     const record = state().workspace.records.find(function (item) { return item.id === recordId; });
     if (!record) return;
     components.openMenu(anchor, [
-      { icon: record.favorite ? "☆" : "★", label: record.favorite ? "Remove favorite" : "Add favorite", action: function () { toggleFavorite(recordId); } },
+      { symbol: "favorite", label: record.favorite ? "Remove favorite" : "Add favorite", action: function () { toggleFavorite(recordId); } },
       { icon: "↑", label: "Move up", action: function () { reorderRecord(recordId, -1); } },
       { icon: "↓", label: "Move down", action: function () { reorderRecord(recordId, 1); } },
       { separator: true },
-      { icon: "×", label: "Delete record", danger: true, action: function () { requestDeleteRecord(recordId); } }
+      { symbol: "close", label: "Delete record", danger: true, action: function () { requestDeleteRecord(recordId); } }
     ], { focus: true });
   }
 
@@ -448,7 +451,7 @@
   function documentCard(documentItem) {
     const selected = state().ui.selectedDocumentId === documentItem.id;
     const preview = u.stripHtml(documentItem.html).slice(0, 120);
-    return '<article id="document-option-' + u.escapeHtml(documentItem.id) + '" class="document-card' + (selected ? " selected" : "") + '" role="option" aria-selected="' + selected + '" tabindex="0" draggable="true" data-document-id="' + u.escapeHtml(documentItem.id) + '"><span class="drag-handle" aria-hidden="true">⠿</span><div><strong>' + u.escapeHtml(documentItem.title) + '</strong><p>' + u.escapeHtml(preview || "Empty document") + '</p><small>Updated ' + u.relativeTime(documentItem.updatedAt) + '</small></div><button class="icon-button" type="button" data-document-menu="' + u.escapeHtml(documentItem.id) + '" aria-label="Actions for ' + u.escapeHtml(documentItem.title) + '" aria-haspopup="menu" aria-expanded="false">•••</button></article>';
+    return '<article id="document-option-' + u.escapeHtml(documentItem.id) + '" class="document-card' + (selected ? " selected" : "") + '" role="option" aria-selected="' + selected + '" tabindex="0" draggable="true" data-document-id="' + u.escapeHtml(documentItem.id) + '"><span class="drag-handle" aria-hidden="true">⠿</span><div><strong>' + u.escapeHtml(documentItem.title) + '</strong><p>' + u.escapeHtml(preview || "Empty document") + '</p><small>Updated ' + u.relativeTime(documentItem.updatedAt) + '</small></div><button class="icon-button" type="button" data-document-menu="' + u.escapeHtml(documentItem.id) + '" aria-label="Actions for ' + u.escapeHtml(documentItem.title) + '" aria-haspopup="menu" aria-expanded="false">' + icons.markup("more") + '</button></article>';
   }
 
   function renderDocumentList() {
@@ -484,7 +487,7 @@
       container.innerHTML = emptyState("No document selected", state().workspace.documents.length ? "Choose a document from the list." : "Add a document to begin.", state().workspace.documents.length ? "" : "Add document", "new-document");
       return;
     }
-    container.innerHTML = '<header class="panel-header detail-header"><button type="button" class="mobile-back-button" data-mobile-back aria-label="Back to documents">← Documents</button><div><span class="eyebrow">Document</span><strong>' + u.escapeHtml(documentItem.title) + '</strong></div><div class="panel-header-actions"><button class="button icon-button" type="button" data-document-menu="' + u.escapeHtml(documentItem.id) + '" aria-label="Document actions" aria-haspopup="menu" aria-expanded="false">•••</button></div></header>' +
+    container.innerHTML = '<header class="panel-header detail-header"><button type="button" class="mobile-back-button" data-mobile-back aria-label="Back to documents">' + icons.markup("back") + '<span>Documents</span></button><div><span class="eyebrow">Document</span><strong>' + u.escapeHtml(documentItem.title) + '</strong></div><div class="panel-header-actions"><button class="button icon-button" type="button" data-document-menu="' + u.escapeHtml(documentItem.id) + '" aria-label="Document actions" aria-haspopup="menu" aria-expanded="false">' + icons.markup("more") + '</button></div></header>' +
       '<div class="document-editor-shell" data-document-shell="' + u.escapeHtml(documentItem.id) + '"><label class="field document-title-field"><span class="visually-hidden">Document title</span><input data-document-title maxlength="140" value="' + u.escapeHtml(documentItem.title) + '"></label>' +
       '<div class="editor-toolbar" role="toolbar" aria-label="Document formatting"><button type="button" data-editor-command="bold" aria-label="Bold" title="Bold"><strong>B</strong></button><button type="button" data-editor-command="italic" aria-label="Italic" title="Italic"><em>I</em></button><button type="button" data-editor-command="underline" aria-label="Underline" title="Underline"><u>U</u></button><button type="button" data-editor-block="h2" aria-label="Heading" title="Heading">H2</button><button type="button" data-editor-command="insertUnorderedList" aria-label="Bulleted list" title="Bulleted list">• List</button><button type="button" data-editor-block="blockquote" aria-label="Block quote" title="Block quote">“ ”</button><button type="button" data-editor-link aria-label="Add link" title="Add link">↗ Link</button></div>' +
       '<div id="documentEditor" class="document-editor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Document content" data-document-editor="' + u.escapeHtml(documentItem.id) + '">' + documentItem.html + '</div>' +
@@ -538,7 +541,7 @@
       { icon: "↑", label: "Move up", action: function () { reorderDocument(documentId, -1); } },
       { icon: "↓", label: "Move down", action: function () { reorderDocument(documentId, 1); } },
       { separator: true },
-      { icon: "×", label: "Delete document", danger: true, action: function () { requestDeleteDocument(documentId); } }
+      { symbol: "close", label: "Delete document", danger: true, action: function () { requestDeleteDocument(documentId); } }
     ], { focus: true });
   }
 

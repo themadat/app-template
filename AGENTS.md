@@ -16,6 +16,7 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 - Persisted fields require a default, normalization, validation, and a backward-compatible migration when the schema changes. Never discard user-created records or documents during an upgrade.
 - App behavior changes update `identity.buildId` and the service-worker cache id together. Documentation-only and agent-instruction changes do not require release churn.
 - Use semantic HTML, labelled controls, visible focus, live status where appropriate, safe URLs, escaped user text, and the shared dialog/focus behavior.
+- Use the shared inline SVG symbol catalog for interface icons whenever an appropriate symbol exists; do not use emoji or font glyphs for standard controls.
 - Verify proportionally: JavaScript syntax, JSON parsing, `git diff --check`, referenced asset paths, and relevant desktop/mobile/offline workflows.
 - Stop local preview servers before the final response.
 

@@ -20,12 +20,19 @@ For a production application, set `features.demoData` to `false` after deciding 
 ## Themes and branding
 
 - Base semantic variables live near the top of `assets/css/app.css`.
+- The default interface font is the Helvetica stack declared on `body` in `assets/css/app.css`.
 - One-click presets and editable status colors live in `assets/js/config.js`.
 - User colors are accepted only when `CSS.supports("color", value)` succeeds; derived shades use guarded color mixing.
 - `textScale` changes application-wide type and `readingScale` affects the document editor separately.
 - Light/dark icon and manifest selection is handled in `assets/js/core/pwa.js`.
 
 Preserve contrast and non-color status cues when changing palettes. Test light, dark, system, forced-colors, and reduced-motion modes.
+
+## Interface symbols
+
+Reusable controls use the inline SVG symbol catalog in `assets/js/icons.js`. Add `data-symbol="symbolName"` to an empty static icon container; `LocalApp.icons.mount()` replaces it with the matching SVG during startup. For trusted markup rendered by JavaScript, use `LocalApp.icons.markup("symbolName")`. Keep accessible names on the containing button and mark decorative SVGs hidden from assistive technology.
+
+When adding a symbol, export its SVG paths, retain a valid `viewBox`, use `currentColor` through the shared `.sf-symbol` rule, and register a neutral name in the `SYMBOLS` map. Prefer a matching SF Symbol in SVG form over emoji, Unicode approximations, or an icon font.
 
 ## Configure modules
 
