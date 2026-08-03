@@ -235,6 +235,15 @@
       if (activePopover && !activePopover.popover.contains(event.target) && !activePopover.anchor.contains(event.target)) closePopover({ restoreFocus: false });
     });
     document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !activePopover) {
+        const dialogs = Array.from(document.querySelectorAll("dialog[open]"));
+        const dialog = dialogs[dialogs.length - 1];
+        if (dialog && dialog.id !== "confirmDialog" && dialog.id !== "choiceDialog") {
+          event.preventDefault();
+          closeDialog(dialog, "cancel");
+        }
+        return;
+      }
       if (!activePopover) return;
       const buttons = Array.from(activePopover.popover.querySelectorAll("button:not([disabled])"));
       const index = buttons.indexOf(document.activeElement);

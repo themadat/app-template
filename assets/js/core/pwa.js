@@ -7,6 +7,10 @@
   let registration = null;
   let refreshing = false;
 
+  function versionedAsset(path) {
+    return path + "?v=" + encodeURIComponent(config.identity.buildId);
+  }
+
   function installed() {
     return window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   }
@@ -31,9 +35,9 @@
     const dark = effectiveDark();
     const variant = dark ? "dark" : "light";
     const manifest = document.querySelector("link[rel='manifest']");
-    if (manifest) manifest.href = dark ? config.identity.assets.manifestDark : config.identity.assets.manifestLight;
+    if (manifest) manifest.href = versionedAsset(dark ? config.identity.assets.manifestDark : config.identity.assets.manifestLight);
     const apple = document.querySelector("link[rel='apple-touch-icon']");
-    if (apple) apple.href = variant === "dark" ? "assets/icons/apple-touch-icon-dark.png" : "assets/icons/apple-touch-icon.png";
+    if (apple) apple.href = versionedAsset(variant === "dark" ? "assets/icons/apple-touch-icon-dark.png" : "assets/icons/apple-touch-icon.png");
     const theme = document.querySelector("meta[name='theme-color']:not([media])");
     if (theme) theme.content = dark ? "#121616" : "#f5f3ed";
     document.documentElement.dataset.installIcon = variant;
@@ -55,7 +59,7 @@
   async function registerServiceWorker() {
     if (!("serviceWorker" in navigator) || !/^https?:$/.test(location.protocol)) return;
     try {
-      registration = await navigator.serviceWorker.register("sw.js");
+      registration = await navigator.serviceWorker.register(versionedAsset("sw.js"), { updateViaCache: "none" });
       if (registration.waiting && navigator.serviceWorker.controller) updateAvailable(registration.waiting);
       registration.addEventListener("updatefound", function () {
         const worker = registration.installing;

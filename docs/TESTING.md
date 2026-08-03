@@ -12,8 +12,7 @@
 
 - [ ] Header, version/Beta pills, global search, toolbar, status, and module navigation fit without horizontal overflow.
 - [ ] `/` focuses global search; results route to notes, Help, releases, and Roadmap.
-- [ ] A note can be created, edited as plain text, searched, sorted, selected, reordered by pointer and keyboard, and deleted with confirmation.
-- [ ] The Notepad divider works by pointer and arrow keys and proportions persist after reload.
+- [ ] Notes opens as one modal, focuses its textarea, autosaves plain text, appears in global search, and restores focus when closed.
 - [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work.
 - [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
@@ -22,7 +21,7 @@
 
 - [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport.
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
-- [ ] Notepad uses list/detail navigation with a visible Back control instead of compressed columns.
+- [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
 - [ ] Support fills the screen and uses one scrolling content surface.
 - [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
@@ -30,7 +29,7 @@
 
 - [ ] Visible focus, logical focus order, labels, roles, and ARIA state are correct.
 - [ ] Escape closes menus, popovers, and dialogs and returns focus to the trigger.
-- [ ] `?`, `1`, `2`, `N`, `S`, `E`, and the Developer Mode shortcut work outside editable fields.
+- [ ] `?`, `2`, `N`, `V`, `S`, `E`, and the Developer Mode shortcut work outside editable fields.
 - [ ] Holding the configured modifier reveals shortcut hints and releasing it hides them.
 - [ ] Tabs and menu items support arrow-key movement.
 - [ ] Reduced-motion mode removes nonessential transitions and animations.
@@ -38,7 +37,7 @@
 
 ## Persistence, import, and migration
 
-- [ ] Notes, selections, filters, sorting, panel state, hints, release state, and preferences persist after reload.
+- [ ] Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
 - [ ] Reset Preferences preserves notes; Erase All removes content, preferences, token, and recovery data only after custom confirmation.
 - [ ] Export contains state-model version, notes, preferences, and module settings, but never the GitHub token.
 - [ ] A malformed or oversized import is rejected without replacing current data.
@@ -57,7 +56,8 @@
 
 ## PWA and recovery
 
-- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notepad, Roadmap, and Support.
+- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, Roadmap, and Support.
+- [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
 - [ ] A waiting service worker shows Update available and refreshes only after the user chooses it.
 - [ ] Light/dark favicon, manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.

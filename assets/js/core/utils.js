@@ -127,6 +127,17 @@
     return cleanLine(template.content.textContent || "", config.controls.maxTextLength);
   }
 
+  function richTextToPlainText(value, max) {
+    const template = document.createElement("template");
+    const withBreaks = sanitizeRichHtml(value)
+      .replace(/<br\s*\/?\s*>/gi, "\n")
+      .replace(/<\/(p|li|h2|h3|blockquote)>/gi, "\n");
+    template.innerHTML = withBreaks;
+    return cleanText(template.content.textContent || "", max || config.controls.maxDocumentHtmlLength)
+      .replace(/\n{3,}/g, "\n\n")
+      .replace(/^\n+|\n+$/g, "");
+  }
+
   function isoNow() {
     return new Date().toISOString();
   }
@@ -227,6 +238,7 @@
     mixColor,
     sanitizeRichHtml,
     stripHtml,
+    richTextToPlainText,
     isoNow,
     uid,
     ensureIso,

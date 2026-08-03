@@ -19,14 +19,14 @@ All modules attach to `window.LocalApp`. Runtime network access occurs only afte
 
 ## State model
 
-The current model is version 3:
+The current model is version 4:
 
 ```json
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "meta": {
     "appVersion": "1.0.0",
-    "buildId": "2026.08.02.4",
+    "buildId": "2026.08.03.2",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -35,7 +35,13 @@ The current model is version 3:
   "workspace": {
     "title": "My App",
     "records": [],
-    "documents": []
+    "documents": [
+      {
+        "id": "app-notes",
+        "title": "Notes",
+        "html": "Escaped plain text"
+      }
+    ]
   },
   "preferences": {
     "appearance": {},
@@ -44,8 +50,8 @@ The current model is version 3:
     "installation": {}
   },
   "ui": {
-    "activeModule": "documents",
-    "selectedDocumentId": "",
+    "activeModule": "roadmap",
+    "selectedDocumentId": "app-notes",
     "search": "",
     "documents": {},
     "panels": {},
@@ -61,7 +67,7 @@ The current model is version 3:
 }
 ```
 
-The visible Notepad continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in that field. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
+The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 
 The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry.
 
@@ -87,10 +93,10 @@ Merging chooses the newer note for each stable id, honors newer deletion tombsto
 
 ## Accessibility and responsive behavior
 
-The shell uses landmarks, native buttons and inputs, native dialogs, tabs, listboxes, status regions, and explicit ARIA state. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents, and note reordering has `Alt + Arrow` controls.
+The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
 
-Desktop uses a resizable Notepad list/detail grid. Mobile converts this into explicit list/detail navigation and makes Support a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
+Notes uses one spacious modal on desktop and a full-screen editor on mobile. Support also becomes a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
 
 ## PWA and offline strategy
 
-`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Navigation falls back to the cached `index.html`; optional GitHub API traffic remains network-only. A new waiting service worker triggers an Update available toast and refreshes only after the user chooses Refresh.
+`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A new waiting service worker triggers an Update available toast and refreshes only after the user chooses Refresh.

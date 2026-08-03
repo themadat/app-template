@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="A focused local-first app foundation with Notepad, Roadmap, support, and optional GitHub Sync.">
+  <meta name="description" content="A focused local-first app foundation with Notes, Roadmap, support, and optional GitHub Sync.">
   <meta name="theme-color" content="#f5f3ed">
   <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121616" media="(prefers-color-scheme: dark)">
@@ -12,22 +12,22 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <script defer src="assets/js/config.js"></script>
-  <script defer src="assets/js/icons.js"></script>
-  <script defer src="assets/js/core/utils.js"></script>
-  <script defer src="assets/js/core/state.js"></script>
-  <script defer src="assets/js/core/storage.js"></script>
-  <script defer src="assets/js/core/components.js"></script>
-  <script defer src="assets/js/core/portability.js"></script>
-  <script defer src="assets/js/core/sync.js"></script>
-  <script defer src="assets/js/core/pwa.js"></script>
-  <script defer src="assets/js/app.js"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=2026.08.03.2">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=2026.08.03.2">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=2026.08.03.2">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=2026.08.03.2" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=2026.08.03.2" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=2026.08.03.2">
+  <script defer src="assets/js/config.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/icons.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/utils.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/state.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/storage.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/components.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/portability.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/sync.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/core/pwa.js?v=2026.08.03.2"></script>
+  <script defer src="assets/js/app.js?v=2026.08.03.2"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -35,12 +35,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=2026.08.03.2" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes">v1.0.0</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V" data-shortcut="V">v1.0.0</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -55,8 +55,8 @@
     </div>
 
     <div class="top-toolbar" aria-label="Application actions">
-      <button id="newItemButton" class="button primary action-button" type="button" data-action="new" data-shortcut="N">
-        <span class="button-icon" aria-hidden="true" data-symbol="add"></span><span class="button-label">Note</span>
+      <button id="notesButton" class="button primary action-button" type="button" aria-haspopup="dialog" aria-controls="notesDialog" aria-keyshortcuts="N" data-shortcut="N">
+        <span class="button-icon" aria-hidden="true" data-symbol="documents"></span><span class="button-label">Notes</span>
       </button>
       <button id="supportButton" class="button icon-button action-button" type="button" aria-label="Settings and help" title="Settings and help" data-shortcut="?">
         <span class="button-icon" aria-hidden="true" data-symbol="support"></span><span class="button-label">Support</span>
@@ -71,8 +71,7 @@
   </header>
 
   <nav id="moduleNav" class="module-nav" aria-label="Primary modules">
-    <button type="button" data-module="documents" aria-current="page" data-shortcut="1"><span class="module-icon" aria-hidden="true" data-symbol="documents"></span><span class="module-label">Notepad</span></button>
-    <button type="button" data-module="roadmap" data-shortcut="2"><span class="module-icon" aria-hidden="true" data-symbol="roadmap"></span><span class="module-label">Roadmap</span></button>
+    <button type="button" data-module="roadmap" aria-current="page" data-shortcut="2"><span class="module-icon" aria-hidden="true" data-symbol="roadmap"></span><span class="module-label">Roadmap</span></button>
   </nav>
 
   <aside id="whatsNewBanner" class="whats-new-banner" aria-labelledby="whatsNewTitle" hidden>
@@ -94,31 +93,7 @@
   </aside>
 
   <main id="mainContent" tabindex="-1">
-    <section id="documentsModule" class="module-surface" data-module-surface="documents" aria-labelledby="documentsHeading">
-      <h1 id="documentsHeading" class="visually-hidden">Notepad</h1>
-      <div class="workspace-grid" data-workspace-grid="documents">
-        <section class="workspace-panel list-panel" data-panel="list" aria-label="Note list">
-          <header class="panel-header">
-            <div><span class="eyebrow">Notepad</span><strong id="documentResultCount">0 notes</strong></div>
-            <button class="button icon-button" type="button" data-action="new-document" aria-label="Add note" title="Add note"><span aria-hidden="true" data-symbol="addCircle"></span></button>
-          </header>
-          <div class="sticky-controls documents-controls">
-            <label class="grow-control"><span class="visually-hidden">Search notes</span><input id="documentSearch" type="search" placeholder="Search notes"></label>
-            <label><span class="visually-hidden">Sort notes</span><select id="documentSort" aria-label="Sort notes"><option value="order">Custom order</option><option value="title">Title</option><option value="updatedAt">Recently updated</option><option value="createdAt">Recently created</option></select></label>
-          </div>
-          <div id="documentListState" class="content-state" hidden></div>
-          <div id="documentList" class="document-list" role="listbox" aria-label="Notes"></div>
-        </section>
-
-        <button id="documentsDivider" class="panel-divider" type="button" role="separator" aria-label="Resize notepad panels" aria-orientation="vertical" aria-valuemin="25" aria-valuemax="70" aria-valuenow="38" title="Drag or use arrow keys to resize panels"><span aria-hidden="true"></span></button>
-
-        <section class="workspace-panel detail-panel document-detail-panel" data-panel="detail" aria-label="Note editor">
-          <div id="documentDetail"></div>
-        </section>
-      </div>
-    </section>
-
-    <section id="roadmapModule" class="module-surface roadmap-surface" data-module-surface="roadmap" aria-labelledby="roadmapHeading" hidden>
+    <section id="roadmapModule" class="module-surface roadmap-surface" data-module-surface="roadmap" aria-labelledby="roadmapHeading">
       <header class="roadmap-header">
         <div><span class="eyebrow">Replaceable demonstration module</span><h1 id="roadmapHeading">Roadmap</h1><p>Released work, planned features, and wishlist ideas.</p></div>
         <span id="roadmapCount" class="count-pill">0 items</span>
@@ -136,12 +111,15 @@
     <button id="floatingStatusButton" class="floating-button status-button" type="button" aria-label="GitHub synchronization" title="GitHub synchronization" data-sync-state="setup" data-shortcut="S"><span data-floating-status-icon aria-hidden="true">○</span></button>
   </div>
 
-  <dialog id="documentDialog" class="app-dialog form-dialog" aria-labelledby="documentDialogTitle">
-    <form id="documentCreateForm" method="dialog">
-      <header class="dialog-header"><div><span class="eyebrow">Notepad</span><h2 id="documentDialogTitle">New note</h2></div><button type="button" class="icon-button" data-close-dialog="documentDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
-      <div class="dialog-body"><label class="field"><span>Title</span><input id="newDocumentTitle" name="title" maxlength="140" required data-initial-focus></label></div>
-      <footer class="dialog-footer"><button type="button" class="button" data-close-dialog="documentDialog">Cancel</button><button type="submit" class="button primary">Add note</button></footer>
-    </form>
+  <dialog id="notesDialog" class="app-dialog notes-dialog" aria-labelledby="notesDialogTitle">
+    <div class="dialog-shell">
+      <header class="dialog-header"><div><span class="eyebrow">Autosaves locally</span><h2 id="notesDialogTitle">Notes</h2></div><button type="button" class="icon-button" data-close-dialog="notesDialog" aria-label="Close Notes"><span aria-hidden="true" data-symbol="close"></span></button></header>
+      <div class="dialog-body notes-dialog-body">
+        <label class="visually-hidden" for="notesTextarea">Notes</label>
+        <textarea id="notesTextarea" class="notes-textarea" placeholder="Jot down anything…" aria-describedby="notesSaveStatus"></textarea>
+      </div>
+      <footer class="dialog-footer notes-dialog-footer"><span id="notesSaveStatus" role="status" aria-live="polite">Saved locally</span><button type="button" class="button primary" data-close-dialog="notesDialog">Done</button></footer>
+    </div>
   </dialog>
 
   <dialog id="supportDialog" class="app-dialog support-dialog" aria-labelledby="supportDialogTitle" data-backdrop-close="false">
@@ -176,9 +154,7 @@
             </div>
 
             <div class="settings-section">
-              <div class="section-heading"><div><span class="eyebrow">Workspace</span><h3>Panels & guidance</h3></div></div>
-              <div class="setting-row"><div><strong>Note list</strong><small>Show the Notepad list on desktop.</small></div><button id="settingsListPanel" type="button" class="toggle-button" aria-pressed="true">Shown</button></div>
-              <div class="setting-row"><div><strong>Detail panel</strong><small>Show the selected item on desktop.</small></div><button id="settingsDetailPanel" type="button" class="toggle-button" aria-pressed="true">Shown</button></div>
+              <div class="section-heading"><div><span class="eyebrow">Workspace</span><h3>Guidance</h3></div></div>
               <div class="setting-row"><div><strong>Contextual hints</strong><small>Hints can also be dismissed one at a time.</small></div><button id="hintsToggle" type="button" class="toggle-button" aria-pressed="true">On</button></div>
               <div class="button-row"><button id="restoreHintsButton" class="button" type="button">Restore dismissed hints</button></div>
             </div>
@@ -206,7 +182,7 @@
               <div class="section-heading"><div><span class="eyebrow">Data safety</span><h3>Backup, restore & reset</h3></div></div>
               <p class="section-intro">JSON backups include notes, preferences, and module settings. Tokens are excluded.</p>
               <div class="button-row"><button id="exportButton" class="button primary" type="button">Export JSON</button><button id="importButton" class="button" type="button">Import JSON</button><input id="importFileInput" type="file" accept="application/json,.json" hidden></div>
-              <div class="danger-zone"><div><strong>Reset preferences</strong><small>Keep notes, but restore appearance, filters, panels, and hints.</small></div><button id="resetPreferencesButton" class="button danger-text" type="button">Reset preferences</button></div>
+              <div class="danger-zone"><div><strong>Reset preferences</strong><small>Keep notes, but restore appearance, filters, and hints.</small></div><button id="resetPreferencesButton" class="button danger-text" type="button">Reset preferences</button></div>
               <div class="danger-zone"><div><strong>Erase all application data</strong><small>Permanently remove content, preferences, sync settings, token, and recovery data from this browser.</small></div><button id="eraseAllButton" class="button danger" type="button">Erase all data</button></div>
             </div>
           </section>

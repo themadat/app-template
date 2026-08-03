@@ -7,9 +7,9 @@
     identity: {
       name: "App Template",
       shortName: "Template",
-      description: "A focused local-first shell with Notepad, Roadmap, support, and optional GitHub Sync.",
+      description: "A focused local-first shell with Notes, Roadmap, support, and optional GitHub Sync.",
       version: "1.0.0",
-      buildId: "2026.08.02.4",
+      buildId: "2026.08.03.2",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -27,10 +27,10 @@
       }
     },
 
-    schemaVersion: 3,
+    schemaVersion: 4,
     storage: {
-      stateKey: "appTemplate.state.v3",
-      legacyKeys: ["localWorkspace.state.v3", "localWorkspace.state.v2", "localWorkspace.state.v1"],
+      stateKey: "appTemplate.state.v4",
+      legacyKeys: ["appTemplate.state.v3", "localWorkspace.state.v3", "localWorkspace.state.v2", "localWorkspace.state.v1"],
       recoveryKey: "appTemplate.recovery.v1",
       secretKey: "appTemplate.githubToken.v1",
       sessionSecretKey: "appTemplate.githubToken.session.v1"
@@ -76,9 +76,9 @@
         version: "1.0.0",
         date: "2026-08-01",
         title: "Focused application foundation",
-        summary: "A reusable shell with Notepad, Roadmap, support tools, and optional GitHub Sync.",
-        features: ["Basic local Notepad", "Searchable Roadmap and Help", "Complete opt-in GitHub synchronization", "Offline-ready application shell"],
-        improvements: ["Responsive list/detail layout", "Accessible dialogs, notifications, and keyboard shortcuts"],
+        summary: "A reusable shell with Notes, Roadmap, support tools, and optional GitHub Sync.",
+        features: ["Single local Notes workspace", "Searchable Roadmap and Help", "Complete opt-in GitHub synchronization", "Offline-ready application shell"],
+        improvements: ["Responsive Notes modal", "Accessible dialogs, notifications, and keyboard shortcuts"],
         fixes: [],
         knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
       },
@@ -96,21 +96,21 @@
 
     roadmap: [
       { id: "road-1", title: "Optional attachment adapter", description: "Document an extension point for local or remote file attachments.", state: "planned", priority: 2, target: "1.2", effort: 3, createdAt: "2026-07-08T12:00:00.000Z" },
-      { id: "road-2", title: "Saved Notepad searches", description: "Let users name and restore common note searches.", state: "wishlist", priority: 3, target: "Unscheduled", effort: 2, createdAt: "2026-07-20T12:00:00.000Z" },
+      { id: "road-2", title: "Notes print view", description: "Add a clean print layout for the single Notes workspace.", state: "wishlist", priority: 3, target: "Unscheduled", effort: 2, createdAt: "2026-07-20T12:00:00.000Z" },
       { id: "road-3", title: "Local print layout", description: "Add a clean print view for notes and roadmap entries.", state: "planned", priority: 1, target: "1.1", effort: 1, createdAt: "2026-07-29T12:00:00.000Z" },
-      { id: "road-4", title: "Focused template foundation", description: "Ship the shell, Notepad, Roadmap, sync, recovery, PWA, and support modules.", state: "released", priority: 1, target: "1.0", effort: 4, createdAt: "2026-06-12T12:00:00.000Z" }
+      { id: "road-4", title: "Focused template foundation", description: "Ship the shell, Notes, Roadmap, sync, recovery, PWA, and support modules.", state: "released", priority: 1, target: "1.0", effort: 4, createdAt: "2026-06-12T12:00:00.000Z" }
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start notepad notes roadmap", html: "<p>Use <strong>Notepad</strong> for plain-text notes and <strong>Roadmap</strong> for released, planned, and wishlist items. Local changes save automatically.</p>" },
-      { id: "notepad", title: "Working with Notepad", section: "Features", keywords: "notepad notes text edit search sort", html: "<p>Create a note, choose it from the list, and edit its title or text. Notes save locally and are included in backup and synchronization data.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start notes roadmap", html: "<p>Open <strong>Notes</strong> for a single plain-text scratchpad and use <strong>Roadmap</strong> for released, planned, and wishlist items. Local changes save automatically.</p>" },
+      { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },
       { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. Configure a private repository, branch, JSON file path, and a fine-grained token with Contents access. Conflicts always ask whether to upload, download, merge, or cancel.</p>" },
       { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline.</p>" },
       { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press", html: "<p>Click or tap the app icon to switch between light and dark themes. Press and hold it to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },
-      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt hints", html: "<p>Press <kbd>/</kbd> for global search and <kbd>?</kbd> for Help. Hold <kbd>Alt</kbd> to reveal shortcut hints. The Shortcuts tab lists every command.</p>" }
+      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt hints version", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, and <kbd>?</kbd> for Help. Hold <kbd>Alt</kbd> to reveal shortcut hints. The Shortcuts tab lists every command.</p>" }
     ]
   };
 

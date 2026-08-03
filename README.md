@@ -4,8 +4,8 @@ A static, local-first HTML application foundation with no build step, runtime de
 
 The included product surface is intentionally focused:
 
-- Sticky application header with version, Beta, global search, Note, and Support controls.
-- Plain-text Notepad with local autosave, search, sorting, reordering, and responsive list/detail navigation.
+- Sticky application header with version, Beta, global search, Notes, and Support controls.
+- Single plain-text Notes modal with local autosave.
 - Replaceable demonstration Roadmap with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap support views.
 - Optional GitHub Contents API synchronization with explicit conflict choices and manual JSON backup/restore.
@@ -27,13 +27,13 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 1. Update identity, version, release notes, help, roadmap data, repository links, and feature flags in `assets/js/config.js`.
 2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
 3. Replace the single demonstration note in `demoDocuments()` inside `assets/js/core/state.js`.
-4. Extend or replace the Notepad and Roadmap surfaces in `index.html` and `assets/js/app.js`. Preserve the shared core modules unless the corresponding feature is deliberately removed.
-5. Increase `identity.buildId` and update `CACHE_NAME` in `sw.js` together whenever shipped browser behavior or assets change.
+4. Extend or replace the Notes dialog and Roadmap surface in `index.html` and `assets/js/app.js`. Preserve the shared core modules unless the corresponding feature is deliberately removed.
+5. Increase `identity.buildId`, update the build query values in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together whenever shipped browser behavior or assets change.
 
 ## Project structure
 
 ```text
-index.html                     Application shell, Notepad, Roadmap, and dialogs
+index.html                     Application shell, Notes, Roadmap, and dialogs
 assets/css/app.css             Theme, layout, components, and responsive behavior
 assets/js/config.js            Identity, versions, themes, help, releases, and roadmap
 assets/js/icons.js             Inline SF Symbol SVG catalog
@@ -72,7 +72,7 @@ Editable sources and generated install assets are in `assets/icons/`. Keep the e
    - `apple-touch-icon-dark.png` at 180 × 180
 
 5. Replace `splash-light.svg` and `splash-dark.svg`, then export `splash-light.png` and `splash-dark.png` at 1170 × 1170.
-6. Increase the build identifier and service-worker cache name so installed copies receive the assets.
+6. Increase the build identifier, update the matching build queries in `index.html`, and update both `CACHE_NAME` and `ASSET_VERSION` in `sw.js` so installed copies receive the assets.
 
 Example Inkscape exports:
 
@@ -138,6 +138,8 @@ The token stays in browser storage on that device, is never included in exports 
 ## Host as a static site
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
+
+The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. Existing installations that still have an older cache-first worker may need to choose **Refresh** once in the Update available message; the build-stamped URLs prevent that worker from mixing old scripts into the refreshed page.
 
 ## Agent workflow
 
