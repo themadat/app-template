@@ -13,8 +13,8 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 - Search with `rg` before reading broad file ranges. Keep edits narrow and never reformat unrelated code.
 - Keep the application static, dependency-free at runtime, and usable from an ordinary static host.
 - Central identity, versions, and shell settings live in `assets/js/config.js`.
-- Keep `main#mainContent` intentionally blank until an application explicitly adds a feature. Do not restore demonstration records, documents, search, sync, support, roadmap, or generic state systems preemptively.
-- The shell persists only theme and Developer Mode preferences. Add application state architecture only when a real application requires it.
+- Preserve the focused foundation: top bar, global search, basic Notepad, demonstrative Roadmap, Support, local persistence/recovery, and optional GitHub Sync. Do not restore the removed Records interface or rich-text editor without an explicit request.
+- Keep additions narrow and configurable. The compatibility state may retain legacy record/document fields so older backups and sync copies remain readable.
 - App behavior changes update `identity.buildId` and the service-worker cache id together. Documentation-only and agent-instruction changes do not require release churn.
 - Use semantic HTML, labelled controls, visible focus, safe URLs, and escaped user text.
 - Use the shared inline SVG symbol catalog for interface icons whenever an appropriate symbol exists; do not use emoji or font glyphs for standard controls.

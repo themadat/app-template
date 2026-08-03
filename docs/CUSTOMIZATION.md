@@ -1,104 +1,48 @@
-# Customization guide
-
-This guide separates safe configuration changes from application-specific extension work. Keep the required state, storage, portability, component, and PWA foundations unless your replacement supplies the same guarantees.
+# Customization
 
 ## Rename the application
 
-1. Change `identity.name`, `shortName`, `description`, repository links, support links, version, and build id in `assets/js/config.js`.
-2. Mirror the public name, short name, description, version-related shortcut URLs, and theme colors in `manifest.webmanifest` and `manifest-dark.webmanifest`. Static manifests intentionally duplicate this small public subset so browsers can read install metadata before JavaScript runs; `config.js` remains the runtime source of truth.
-3. Replace the editable SVG sources in `assets/icons/`, then regenerate the PNG sizes listed by both manifests.
-4. Change the storage key prefix only before release. Changing it later requires a legacy-key migration or users will appear to lose their local data.
-
-The visible version, Help release cards, export metadata, state metadata, service-worker cache id, and update notice should all move together for a release.
+Change `identity` in `assets/js/config.js`, then mirror user-visible fallback metadata in `index.html`, `manifest.webmanifest`, and `manifest-dark.webmanifest`. Update repository and support URLs before publishing.
 
 ## Replace demonstration data
 
-Edit `demoRecords()` and `demoDocuments()` in `assets/js/core/state.js`. Keep stable ids, valid ISO timestamps, and the documented normalized shapes. Sample content must not contain secrets because it is shipped to every browser.
+- Edit `demoDocuments()` in `assets/js/core/state.js` for the first-run note.
+- Edit `roadmap` and `releases` in `assets/js/config.js`.
+- Keep stable ids and valid ISO dates.
+- Do not ship secrets, personal data, or domain-specific source-application content.
 
-For a production application, set `features.demoData` to `false` after deciding what an empty first run should show. Developer Mode has a demonstration-data reset for testing; it is hidden in normal use.
+## Themes
 
-## Themes and branding
+Base theme variables live at the top of `assets/css/app.css`. Editable user values are normalized in `state.js` and applied in `app.js`. Add a preset to `config.themes` with `accent`, `accent2`, `success`, `warning`, and `danger` six-digit hex values.
 
-- Base semantic variables live near the top of `assets/css/app.css`.
-- The default interface font is the Helvetica stack declared on `body` in `assets/css/app.css`.
-- One-click presets and editable status colors live in `assets/js/config.js`.
-- User colors are accepted only when `CSS.supports("color", value)` succeeds; derived shades use guarded color mixing.
-- `textScale` changes application-wide type and `readingScale` affects the document editor separately.
-- Light/dark icon and manifest selection is handled in `assets/js/core/pwa.js`.
+## Keyboard shortcuts
 
-Preserve contrast and non-color status cues when changing palettes. Test light, dark, system, forced-colors, and reduced-motion modes.
+Add a visible entry to `SHORTCUTS` in `assets/js/app.js`, add `data-shortcut` to the related control when a hint is useful, and handle the key in `handleGlobalKeydown()`. Ignore shortcuts in editable controls and always retain a visible, keyboard-operable action.
 
-## Interface symbols
+## Add a record type or module
 
-Reusable controls use the inline SVG symbol catalog in `assets/js/icons.js`. Add `data-symbol="symbolName"` to an empty static icon container; `LocalApp.icons.mount()` replaces it with the matching SVG during startup. For trusted markup rendered by JavaScript, use `LocalApp.icons.markup("symbolName")`. Keep accessible names on the containing button and mark decorative SVGs hidden from assistive technology.
+1. Define a narrow default and normalizer in `assets/js/core/state.js`.
+2. Add migration handling before changing stored shapes.
+3. Add a semantic module surface and navigation control in `index.html`.
+4. Add render and event functions in `assets/js/app.js`.
+5. Add responsive and reduced-motion styles.
+6. Include the collection in export/sync payloads only if users manage it.
+7. Document and test empty, loading, disabled, offline, and error states that apply.
 
-When adding a symbol, export its SVG paths, retain a valid `viewBox`, use `currentColor` through the shared `.sf-symbol` rule, and register a neutral name in the `SYMBOLS` map. Prefer a matching SF Symbol in SVG form over emoji, Unicode approximations, or an icon font.
+Avoid generic abstractions until a second real module needs the same behavior.
 
-## Configure modules
+## Remove optional modules
 
-Feature flags are in `assets/js/config.js`:
-
-| Flag | Module |
-| --- | --- |
-| `records` | Generic record list/detail demonstration |
-| `documents` | Rich-text document workspace |
-| `cloudSync` | GitHub configuration and status controls |
-| `roadmap` | Searchable released/planned/wishlist view |
-| `developerTools` | Hidden diagnostics and test tools |
-| `hints` | Contextual hint system |
-| `demoData` | First-run sample records and documents |
-
-Flags hide and disable a module without changing the persisted schema. That is the lowest-risk way to customize the template.
-
-## Remove an optional module completely
-
-After disabling its feature flag and testing old-state normalization:
-
-- Documents: remove its navigation, workspace and creation dialog from `index.html`, its render/event code from `assets/js/app.js`, and document-specific styles. Retain document migration fields until old user backups no longer need support.
-- GitHub sync: remove `assets/js/core/sync.js`, its script tag, sync settings/status markup, and the file from the service-worker shell list. Keep JSON import/export.
-- Roadmap: remove the roadmap markup, navigation, configuration data and render functions.
-- Developer tools: remove its tab panel and rendering/actions. Diagnostics are never required at runtime.
-- Hints: remove the hint banner and actions after defaulting the normalized hint state safely.
-
-`assets/js/core/pwa.js` remains foundation code: it registers the service worker, announces updates, detects broad device categories for diagnostics, and keeps manifest, icon, and theme-color assets aligned with the active appearance. Installation itself uses the browser or operating system UI; the template does not include an Add as App modal.
-
-Always remove stale asset paths from `sw.js`; one missing precache resource can prevent a new shell from installing.
-
-## Add a new record field
-
-1. Add a safe default and normalizer to `normalizeRecord()` in `assets/js/core/state.js`.
-2. Add the field to `demoRecords()` if it helps explain the feature.
-3. Add semantic controls to the record detail renderer in `assets/js/app.js`.
-4. Update search, filter, sorting, export summaries, merge behavior, and help where relevant.
-5. If existing persisted state needs conversion, increment `schemaVersion` and add a sequential migration.
-6. Test absent, malformed, extreme-length, imported, and conflict-merged values.
-
-## Add a new module
-
-Create a namespaced state object under `modules` and user content under `workspace`. Give it explicit defaults and a strict normalizer. Add one navigation route and an accessible top-level region, register shortcuts only when they do not conflict, include module content in sync/export as appropriate, and add its local shell resources to `sw.js`. Avoid a generic plugin framework until two real modules need the same lifecycle.
-
-## Create a migration
-
-1. Increase `config.schemaVersion` and the current storage key suffix.
-2. Keep the old storage key in `storage.legacyKeys`.
-3. Add a pure `migrateNtoNPlus1(input)` function in `assets/js/core/state.js`.
-4. Register it in the `migrations` map.
-5. Preserve recognized user-created content; map renamed, split, combined, and removed values explicitly.
-6. Let current normalization sanitize and fill defaults after all migrations run.
-7. Add fixtures under `docs/examples/` and run them through the import preview before release.
-
-Never mutate an imported object in place, skip a version, or overwrite an already-published migration. Unknown future schema versions must remain rejected.
-
-## Register a shortcut
-
-Add the visible description to the `SHORTCUTS` array in `assets/js/app.js`, then implement it in the global or appropriate module handler. Ignore printable global shortcuts while the user is editing, unless the shortcut uses a modifier and is safe. Update Help and verify the shortcut at desktop, mobile hardware-keyboard, and assistive-technology focus states.
+- Roadmap: remove its two visible surfaces and event/render code, then set `features.roadmap` to `false`. Release history can remain without planned/wishlist views.
+- GitHub Sync: remove `core/sync.js`, its script tag, settings/status markup, related event wiring, and its `sw.js` cache entry. Keep JSON backup/restore.
+- Developer tools: set `features.developerTools` to `false` and remove the Developer panel if it will never be used.
+- Contextual hints: set `features.hints` to `false` and remove hint/settings markup if desired.
+- Notepad: remove its surface and creation dialog plus document render/event code. Retain legacy document migration fields until old backups no longer need support.
 
 ## Publish a version
 
-1. Update `identity.version` and `identity.buildId`.
-2. Add a structured release entry with date, features, improvements, fixes, and known issues.
-3. Change `CACHE_NAME` in `sw.js` and review every precached resource.
-4. Mirror install metadata in both manifests.
-5. Regenerate icons if branding changed.
-6. Export/import the new state, import every supported legacy fixture, and complete `docs/TESTING.md`.
-7. Deploy all files atomically where possible. The app will show an update notice when the new service worker is ready.
+Update `identity.version`, add the newest release card first, update manifest text if public metadata changed, choose a fresh `buildId`, and set the matching `CACHE_NAME` in `sw.js`. Run the complete checklist in `docs/TESTING.md`.
+
+## Icons and PWA assets
+
+Follow the size and export instructions in the README. Keep the service worker asset list synchronized with renamed files and verify light, dark, maskable, touch, favicon, and splash variants.

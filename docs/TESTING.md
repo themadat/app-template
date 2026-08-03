@@ -1,112 +1,64 @@
 # Verification checklists
 
-Use a static HTTP server. Test with a clean browser profile and with an upgraded profile that already contains data. Complete both automated smoke checks and manual keyboard/screen-reader checks before a release.
+## Automated baseline
 
-## Accessibility
-
-- [ ] Landmarks, headings, controls, fields, lists and links use appropriate native semantics.
-- [ ] Every icon-only control has a useful accessible name and tooltip.
-- [ ] Keyboard focus is always visible and follows a predictable order.
-- [ ] Dialogs focus an appropriate element, contain focus, close with Escape and restore the trigger.
-- [ ] Tabs, menus, listboxes, expandable rows and comparison/roadmap objects are keyboard-operable.
-- [ ] Drag and long-press operations have visible and keyboard alternatives.
-- [ ] Validation errors identify their field and are announced.
-- [ ] Loading, sync, save, offline and error states are exposed through live regions.
-- [ ] Status never depends on color alone.
-- [ ] Text and control contrast passes WCAG AA in light and dark themes.
-- [ ] Touch controls remain usable at 44 × 44 CSS pixels where practical.
-- [ ] System and application reduced-motion settings suppress nonessential animation.
-- [ ] 200% text zoom does not hide actions or create horizontal page scrolling.
-- [ ] Forced-colors mode retains focus, selection, status and boundaries.
+- [ ] Every JavaScript file and `sw.js` passes `node --check`.
+- [ ] Both manifests parse as JSON.
+- [ ] `git diff --check` is clean.
+- [ ] Every local `src`, `href`, manifest icon, and service-worker shell path exists.
+- [ ] No console errors appear during startup or the tested workflows.
 
 ## Desktop
 
-- [ ] Test current Chrome/Edge, Firefox and Safari at 1280 × 800 and a wide display.
-- [ ] Header, search, navigation and floating status remain available without covering content.
-- [ ] List/detail panels can be independently hidden and restored.
-- [ ] Divider moves with pointer and keyboard; its proportion persists after reload.
-- [ ] Popovers and context menus remain within every viewport edge.
-- [ ] `/`, `?`, module shortcuts, major-action shortcuts and Escape behave as documented.
-- [ ] Holding the configured modifier shows useful shortcut hints without blocking primary content.
-- [ ] Record/document reorder works by drag and keyboard.
+- [ ] Header, version/Beta pills, global search, toolbar, status, and module navigation fit without horizontal overflow.
+- [ ] `/` focuses global search; results route to notes, Help, releases, and Roadmap.
+- [ ] A note can be created, edited as plain text, searched, sorted, selected, reordered by pointer and keyboard, and deleted with confirmation.
+- [ ] The Notepad divider works by pointer and arrow keys and proportions persist after reload.
+- [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work.
+- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus.
+- [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
 
-## Tablet
+## Tablet and mobile
 
-- [ ] Test portrait and landscape around 768 × 1024.
-- [ ] Desktop multi-panel layout becomes a clear single-column list/detail flow.
-- [ ] Navigation and action controls wrap without horizontal overflow.
-- [ ] On-screen keyboard does not hide active form controls.
-- [ ] Touch, pointer and hardware-keyboard paths produce equivalent results.
+- [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport.
+- [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
+- [ ] Notepad uses list/detail navigation with a visible Back control instead of compressed columns.
+- [ ] Support fills the screen and uses one scrolling content surface.
+- [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
-## Mobile
+## Keyboard and accessibility
 
-- [ ] Test iPhone-sized 390 × 844 and an Android-sized 412 × 915 viewport.
-- [ ] List/detail uses explicit forward/back navigation, not compressed columns.
-- [ ] Dialogs use the full screen with one scroll surface and safe-area padding.
-- [ ] Inputs remain at 16px or larger and do not trigger unwanted zoom.
-- [ ] Floating actions do not cover selected fields, toasts or final list rows.
-- [ ] Long press opens secondary actions without making them the only route.
-- [ ] No page, dialog, list item, URL or long title causes horizontal overflow.
+- [ ] Visible focus, logical focus order, labels, roles, and ARIA state are correct.
+- [ ] Escape closes menus, popovers, and dialogs and returns focus to the trigger.
+- [ ] `?`, `1`, `2`, `N`, `S`, `E`, and the Developer Mode shortcut work outside editable fields.
+- [ ] Holding the configured modifier reveals shortcut hints and releasing it hides them.
+- [ ] Tabs and menu items support arrow-key movement.
+- [ ] Reduced-motion mode removes nonessential transitions and animations.
+- [ ] Light and dark themes meet contrast needs; status always includes text or an accessible label.
 
-## Local persistence and recovery
+## Persistence, import, and migration
 
-- [ ] First run generates valid neutral demonstration state.
-- [ ] Add, edit, select, filter, sort, search, resize and preference changes survive reload.
-- [ ] Rapid input does not create duplicate actions or lose the last value.
-- [ ] Malformed, partial and missing stored state recover to normalized state without a blank crash.
-- [ ] Storage denial and quota failure show an actionable error while keeping in-memory work available.
-- [ ] Reset Preferences preserves records and documents.
-- [ ] Erase All Data identifies scope, requires custom confirmation and returns to an empty workspace.
-- [ ] A saved recovery snapshot can be restored after import/download replacement.
-
-## JSON export and import
-
-- [ ] Export filename is descriptive and timestamped.
-- [ ] Export contains records, documents, settings and state-model version.
-- [ ] Export never contains the configured GitHub token.
-- [ ] Current export imports into a clean browser with matching counts and content.
-- [ ] Bare v1, wrapped v2 and current v3 fixtures show the correct preview and migrations.
-- [ ] Renamed, removed, split and combined legacy values normalize as documented.
-- [ ] Invalid JSON, oversized files, future schema versions and unusable shapes are rejected without changing current state.
-- [ ] Imported HTML, URLs, ids, arrays, colors, lengths and numbers are sanitized or rejected.
-- [ ] Replacement requires confirmation and creates a recovery snapshot first.
-
-## Offline and installation
-
-- [ ] First HTTPS/localhost load registers the service worker and fully caches the shell.
-- [ ] Reload with network disabled opens records, documents, settings and backup features.
-- [ ] Network-only sync clearly reports offline and never blocks local editing.
-- [ ] Light/dark manifest, favicon, install icon and theme colors match appearance.
-- [ ] No in-app install modal appears and the browser's native installation path remains available.
-- [ ] Standalone launch is detected where the browser exposes it.
-- [ ] A changed cache/build id produces an update-available notice and refreshes only after user action.
+- [ ] Notes, selections, filters, sorting, panel state, hints, release state, and preferences persist after reload.
+- [ ] Reset Preferences preserves notes; Erase All removes content, preferences, token, and recovery data only after custom confirmation.
+- [ ] Export contains state-model version, notes, preferences, and module settings, but never the GitHub token.
+- [ ] A malformed or oversized import is rejected without replacing current data.
+- [ ] A valid import shows its preview, migrates and sanitizes, confirms replacement, and preserves a recovery copy.
+- [ ] `docs/examples/legacy-backup-v1.json` and `legacy-backup-v2.json` migrate without losing their user content.
 
 ## GitHub synchronization
 
-- [ ] Sync remains dormant before configuration and explicit test/action.
-- [ ] Owner, repository, branch and path validation rejects unsafe or malformed targets.
-- [ ] Token is stored according to the remember choice, masked after entry and forgettable.
-- [ ] Connection test distinguishes authentication, missing repository/branch, offline and network failures.
-- [ ] Missing remote file presents first-sync choices.
-- [ ] Local-only changes upload; remote-only changes download; equal copies report Current.
-- [ ] Divergence never overwrites silently and offers upload, download, merge or cancel.
-- [ ] Merge honors newer item timestamps and deletion tombstones.
-- [ ] Download and merge create recovery snapshots.
-- [ ] A stale SHA/write conflict stops and rechecks rather than retrying blindly.
-- [ ] Periodic, visibility and online rechecks do not overlap or apply stale responses.
-- [ ] Unexpected remote JSON is treated as an untrusted import and cannot replace local state.
+- [ ] Missing configuration opens setup; invalid values show actionable validation.
+- [ ] Connection testing distinguishes authentication, permission, missing repository/branch, network, and malformed remote-file failures.
+- [ ] Local-only, remote-only, current, missing-file, first-sync, conflict, offline, and error states have distinct accessible labels and styles.
+- [ ] Conflict choices include merge, upload, download, and cancel; no divergent data is overwritten silently.
+- [ ] Download and merge preserve a recovery copy and keep device-local cloud settings.
+- [ ] Visibility, interval, and reconnect checks do not overlap or apply stale responses.
+- [ ] JSON backup/restore remains usable without GitHub.
 
-## Release and support content
+## PWA and recovery
 
-- [ ] Visible version, export metadata, newest release and manifest metadata agree.
-- [ ] What’s New appears once per version and dismissal persists.
-- [ ] Help search finds installation, backup, sync and shortcut guidance.
-- [ ] Released/planned/wishlist roadmap filters and every requested sort work.
-- [ ] Developer Mode diagnostics omit secrets and arbitrary code execution.
-- [ ] Clicking or tapping the app icon changes theme without opening a dialog.
-- [ ] Holding the app icon toggles Developer Mode once, adds or removes `DEV` in the single version pill, and does not also change theme.
-- [ ] Version and Beta pill text is centered, including when the version pill contains `DEV`.
-- [ ] Primary toolbar and module buttons use inline SVG symbols above small title-case labels.
-- [ ] The computed interface font uses the Helvetica stack.
-- [ ] The Beta pill appears for `/beta/`, `?beta=1`, and `?beta=true`, but not for ordinary URLs.
-- [ ] Disabling each optional feature flag leaves the remaining application coherent.
+- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notepad, Roadmap, and Support.
+- [ ] A waiting service worker shows Update available and refreshes only after the user chooses it.
+- [ ] Light/dark favicon, manifest, touch icon, install icon, and splash assets resolve.
+- [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
+- [ ] Storage quota and unavailable-API paths show useful fallback messages.

@@ -5,21 +5,15 @@
   const config = App.config;
   const u = App.utils;
   const STATUS_IDS = new Set(config.statuses.map(function (status) { return status.id; }));
-  const MODULE_IDS = ["records", "documents", "roadmap"];
+  const MODULE_IDS = ["documents", "roadmap"];
 
   function demoRecords(now) {
-    return [
-      { id: "demo-record-welcome", title: "Welcome record", summary: "This neutral item demonstrates the detail panel and editable fields.", category: "General", status: "active", url: "", tags: ["sample", "start"], favorite: true, order: 0, createdAt: now, updatedAt: now },
-      { id: "demo-record-review", title: "Review the settings", summary: "Try appearance, text size, button presentation, hints, backup, and optional sync settings.", category: "Setup", status: "paused", url: "", tags: ["sample"], favorite: false, order: 1, createdAt: now, updatedAt: now },
-      { id: "demo-record-offline", title: "Test offline use", summary: "Serve the app once, reload it offline, and confirm that local records and documents remain available.", category: "Testing", status: "idea", url: "", tags: ["sample", "offline"], favorite: false, order: 2, createdAt: now, updatedAt: now },
-      { id: "demo-record-customize", title: "Replace demonstration data", summary: "Use the documentation to swap in an application-specific record model or remove the sample module content.", category: "Customization", status: "complete", url: "", tags: ["sample"], favorite: false, order: 3, createdAt: now, updatedAt: now }
-    ];
+    return [];
   }
 
   function demoDocuments(now) {
     return [
-      { id: "demo-document-welcome", title: "Welcome", html: "<h2>Your local workspace</h2><p>This optional document module is a safe, reusable place for notes and longer-form content.</p><ul><li>Content saves automatically.</li><li>JSON backups include every document.</li><li>Imported rich text is sanitized.</li></ul>", order: 0, createdAt: now, updatedAt: now },
-      { id: "demo-document-checklist", title: "Customization notes", html: "<h2>Make it yours</h2><p>Rename the app in <code>assets/js/config.js</code>, replace the demonstration records, adjust status definitions, and turn optional modules on or off.</p>", order: 1, createdAt: now, updatedAt: now }
+      { id: "demo-document-welcome", title: "Welcome", html: "<p>This is a simple local note. Start typing to replace it.</p>", order: 0, createdAt: now, updatedAt: now }
     ];
   }
 
@@ -43,7 +37,7 @@
         tombstones: { records: [], documents: [] }
       },
       workspace: {
-        title: "My Workspace",
+        title: "My App",
         records: records,
         documents: documents
       },
@@ -75,7 +69,7 @@
         }
       },
       ui: {
-        activeModule: "records",
+        activeModule: "documents",
         selectedRecordId: records[0] ? records[0].id : "",
         selectedDocumentId: documents[0] ? documents[0].id : "",
         search: "",
@@ -164,7 +158,7 @@
           const document = u.plainObject(item);
           return {
             id: document.id || u.uid("document"),
-            title: document.title || document.name || "Untitled document",
+            title: document.title || document.name || "Untitled note",
             html: document.html || document.content || document.text || "",
             order: Number.isFinite(Number(document.order)) ? Number(document.order) : index,
             createdAt: document.createdAt || now,
@@ -282,7 +276,7 @@
     const createdAt = u.ensureIso(source.createdAt, now);
     return {
       id: id,
-      title: u.cleanLine(source.title || source.name || "Untitled document", 140) || "Untitled document",
+      title: u.cleanLine(source.title || source.name || "Untitled note", 140) || "Untitled note",
       html: u.sanitizeRichHtml(source.html || source.content || source.text || ""),
       order: Number.isFinite(Number(source.order)) ? Math.round(Number(source.order)) : index,
       createdAt: createdAt,
@@ -334,7 +328,7 @@
     const sortBy = ["order", "title", "status", "updatedAt", "createdAt"].includes(sourceRecordUi.sortBy) ? sourceRecordUi.sortBy : "order";
     const documentSort = ["order", "title", "updatedAt", "createdAt"].includes(sourceDocumentUi.sortBy) ? sourceDocumentUi.sortBy : "order";
     const activeCandidates = MODULE_IDS.filter(function (id) { return id !== "documents" || config.features.documents; }).filter(function (id) { return id !== "roadmap" || config.features.roadmap; });
-    const activeModule = activeCandidates.includes(sourceUi.activeModule) ? sourceUi.activeModule : "records";
+    const activeModule = activeCandidates.includes(sourceUi.activeModule) ? sourceUi.activeModule : "documents";
     const sourceTombstones = u.plainObject(sourceMeta.tombstones);
     const state = {
       schemaVersion: config.schemaVersion,

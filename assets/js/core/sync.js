@@ -404,7 +404,7 @@
       const choices = runtime.remoteMissing
         ? [{ value: "upload", label: "Upload this device", description: "Create the GitHub data file from this device.", kind: "primary" }]
         : [
-            { value: "merge", label: "Merge both copies", description: "Keep the newest version of each record and document.", kind: "primary" },
+            { value: "merge", label: "Merge both copies", description: "Keep the newest version of each saved item.", kind: "primary" },
             { value: "upload", label: "Upload this device", description: "Replace the GitHub copy with this device.", kind: "secondary" },
             { value: "download", label: "Download GitHub", description: "Replace this device after saving a recovery copy.", kind: "secondary" }
           ];

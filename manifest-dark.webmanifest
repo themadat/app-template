@@ -1,14 +1,14 @@
 {
   "name": "App Template",
   "short_name": "Template",
-  "description": "A minimal static application shell.",
+  "description": "A focused local-first app foundation with Notepad, Roadmap, support, and optional GitHub Sync.",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#121616",
+  "theme_color": "#121616",
   "orientation": "any",
   "categories": ["utilities"],
   "icons": [

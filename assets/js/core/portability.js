@@ -55,9 +55,7 @@
     const current = summaryFor(storage.getState(), []);
     document.querySelector("[data-import-file]").textContent = fileName || "Selected backup";
     document.querySelector("[data-import-workspace]").textContent = summary.workspaceTitle;
-    document.querySelector("[data-import-records]").textContent = summary.records + " (current: " + current.records + ")";
     document.querySelector("[data-import-documents]").textContent = summary.documents + " (current: " + current.documents + ")";
-    document.querySelector("[data-import-categories]").textContent = String(summary.categories);
     document.querySelector("[data-import-version]").textContent = "State v" + summary.schemaVersion + " · app v" + (summary.appVersion || "unknown");
     document.querySelector("[data-import-updated]").textContent = u.dateLabel(summary.updatedAt);
     const migrationRow = document.querySelector("[data-import-migrations-row]");
@@ -91,7 +89,7 @@
     if (!pendingImport) return;
     const accepted = await App.components.confirm({
       title: "Replace current data?",
-      message: "The validated backup will replace records, documents, preferences, and module settings. A recoverable copy of the current data will be saved first.",
+      message: "The validated backup will replace notes, preferences, and module settings. A recoverable copy of the current data will be saved first.",
       confirmLabel: "Replace data",
       cancelLabel: "Keep current data",
       danger: true,
@@ -102,7 +100,7 @@
     storage.replace(pendingImport.state, { recoveryReason: "Before importing " + summary.workspaceTitle, reason: "import" });
     pendingImport = null;
     App.components.closeDialog("#importPreviewDialog", "imported");
-    App.components.toast("Imported " + summary.records + " records and " + summary.documents + " documents.", { title: "Backup restored", kind: "success" });
+    App.components.toast("Imported " + summary.documents + " notes.", { title: "Backup restored", kind: "success" });
   }
 
   function init() {
