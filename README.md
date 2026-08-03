@@ -2,17 +2,18 @@
 
 A static, local-first HTML application foundation with no build step, runtime dependency, backend, account, or sign-in.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.1` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.2` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
 - Sticky application header with version, Beta, centered global search, Notes, and Settings controls.
-- Single plain-text Notes modal with local autosave.
-- Replaceable demonstration Roadmap with search, view filters, and sorting.
+- Blank main application workspace ready for app-specific content.
+- Single plain-text Notes modal that starts empty and autosaves locally.
+- Replaceable Roadmap inside Settings with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
 - Optional GitHub Contents API synchronization with explicit conflict choices and manual JSON backup/restore.
 - Contextual hints, toast and live announcements, keyboard shortcuts, shortcut-hint mode, and hidden Developer Mode.
-- Installable offline PWA shell with light/dark assets and a bottom new-version toast with Force refresh.
+- Installable offline PWA shell with light/dark assets and a bottom new-version toast with an icon-only Force refresh action.
 
 ## Run locally
 
@@ -28,14 +29,14 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 
 1. Update identity, version, release notes, help, roadmap data, repository links, and feature flags in `assets/js/config.js`.
 2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
-3. Replace the single demonstration note in `demoDocuments()` inside `assets/js/core/state.js`.
-4. Extend or replace the Notes dialog and Roadmap surface in `index.html` and `assets/js/app.js`. Preserve the shared core modules unless the corresponding feature is deliberately removed.
+3. Leave the default Notes document blank or add intentional starter text in `demoDocuments()` inside `assets/js/core/state.js`.
+4. Build the application-specific interface inside the blank `main` element. Extend or replace Notes and the Settings Roadmap only when the new app needs different behavior.
 5. Use `major.minor.patch.build` versions. Increment the fourth number for every completed application update; when intentionally changing major, minor, or patch, reset the build number to `1` unless another value is required. Keep `identity.buildId` equal to the full version, add the matching dated release entry, update the build query values in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
 
 ## Project structure
 
 ```text
-index.html                     Application shell, Notes, Roadmap, and dialogs
+index.html                     Application shell, blank workspace, Notes, and dialogs
 assets/css/app.css             Theme, layout, components, and responsive behavior
 assets/js/config.js            Identity, versions, themes, help, releases, and roadmap
 assets/js/icons.js             Inline SF Symbol SVG catalog
@@ -141,7 +142,7 @@ The token stays in browser storage on that device, is never included in exports 
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
 
-The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. When a waiting worker is ready, a persistent **New version available** toast appears at the bottom. **Force refresh** activates that worker and reloads with a cache-busting URL, including in the installed PWA.
+The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. When a waiting worker is ready, a persistent **New version available** toast appears at the bottom. Its clockwise-arrow action force-activates that worker and reloads with a cache-busting URL, including in the installed PWA.
 
 ## Agent workflow
 
@@ -152,4 +153,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.1 - Refine the pre-launch shell`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.2 - Refine the pre-launch shell`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

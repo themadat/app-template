@@ -189,25 +189,6 @@ a { color: var(--accent-strong); }
 .top-toolbar .button-label { font-size: .62rem; font-weight: 650; line-height: 1.05; text-transform: none; }
 :root[data-button-style="icons"] .top-toolbar .action-button { width: 46px; min-width: 46px; min-height: 46px; }
 :root[data-button-style="text"] .top-toolbar .action-button { width: auto; min-width: 54px; min-height: 42px; padding-inline: .6rem; }
-.module-nav {
-  position: sticky;
-  top: calc(98px + var(--safe-top));
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  gap: .25rem;
-  min-width: 0;
-  padding: .4rem max(.9rem, var(--safe-right)) .4rem max(.9rem, var(--safe-left));
-  border-bottom: 1px solid var(--line);
-  background: var(--bg);
-}
-.module-nav button { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: .12rem; min-width: 76px; min-height: 50px; padding: .3rem .65rem .25rem; border-color: transparent; border-radius: 11px; background: transparent; color: var(--muted); }
-.module-icon { display: grid; place-items: center; width: 22px; height: 22px; font-size: 1.25rem; }
-.module-icon .sf-symbol { width: 20px; height: 20px; }
-.module-label { font-size: .66rem; font-weight: 650; line-height: 1.05; }
-.module-nav button:hover { background: var(--surface-2); color: var(--text); }
-.module-nav button[aria-current="page"] { border-color: var(--line); background: var(--surface); color: var(--accent-strong); box-shadow: var(--shadow-small); }
-
 .whats-new-banner, .context-hint {
   display: flex;
   align-items: center;
@@ -225,6 +206,7 @@ a { color: var(--accent-strong); }
 .whats-new-banner strong { font-size: .95rem; }
 .whats-new-banner span:last-child { color: var(--muted); }
 .banner-actions { display: flex; flex: 0 0 auto; gap: .35rem; }
+.banner-actions .icon-button { width: 38px; min-width: 38px; height: 38px; }
 .context-hint { justify-content: flex-start; border-left-color: var(--accent); background: var(--accent-soft); }
 .context-hint p { margin: 0; flex: 1; }
 .context-hint .icon-button { margin-left: auto; border: 0; background: transparent; }
@@ -376,7 +358,6 @@ dialog::backdrop { background: rgba(10, 16, 14, .56); backdrop-filter: blur(3px)
 .notes-dialog-title-icon { display: inline-grid; place-items: center; color: var(--accent-strong); font-size: 1.05rem; }
 .notes-dialog-body { display: flex; min-height: 0; }
 .notes-textarea { flex: 1 1 auto; width: 100%; min-height: 0; resize: none; font-size: calc(1rem * var(--reading-scale)); line-height: 1.65; }
-.notes-dialog-footer { align-items: center; justify-content: space-between; color: var(--muted); font-size: .75rem; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
 .choice-actions { display: grid; gap: .5rem; margin-top: 1rem; }
 .choice-actions .button { display: grid; justify-items: start; height: auto; min-height: 60px; text-align: left; }
@@ -429,7 +410,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .check-field { display: flex; align-items: center; gap: .45rem; color: var(--muted); }
 .check-field input { min-height: 0; }
 
-.support-search { display: flex; align-items: center; gap: .65rem; margin: -1rem -1rem .9rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line); }
+.support-search { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin: -1rem -1rem .9rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line); }
 .help-content { display: grid; gap: .75rem; }
 .help-section { padding: .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .help-section > h3 { margin: 0 0 .6rem; color: var(--accent-strong); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
@@ -485,6 +466,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .app-toast[data-kind="danger"] { border-left-color: var(--danger); }
 .app-toast > div { display: grid; min-width: 0; }
 .app-toast span[data-toast-message] { color: var(--muted); }
+.toast-action-icon { color: var(--accent-strong); }
 .toast-mark { color: var(--accent); }
 .app-toast[data-kind="success"] .toast-mark { color: var(--success); }
 .app-toast[data-kind="warning"] .toast-mark { color: var(--warning); }
@@ -526,15 +508,11 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .identity-copy { max-width: min(47vw, 240px); }
   .app-name { font-size: .92rem; }
   .version-pill, .environment-pill { min-height: 20px; padding: .12rem .34rem; font-size: .58rem; }
-  .top-toolbar .action-button:not(.primary):not(#supportButton) { display: none; }
-  .top-toolbar .action-button.primary, .top-toolbar #supportButton { width: 49px; min-width: 49px; min-height: 48px; padding: .22rem .18rem .2rem; }
+  .top-toolbar .action-button { width: 49px; min-width: 49px; min-height: 48px; padding: .22rem .18rem .2rem; }
   .top-toolbar .button-label { font-size: .58rem; }
-  .module-nav { top: calc(144px + var(--safe-top)); gap: .35rem; padding-inline: max(.55rem, var(--safe-left)) max(.55rem, var(--safe-right)); }
-  .module-nav button { flex: 1 0 auto; justify-content: center; min-height: 48px; }
   .whats-new-banner, .context-hint { align-items: flex-start; margin-inline: .55rem; }
   .whats-new-banner { flex-direction: column; }
-  .banner-actions { width: 100%; }
-  .banner-actions .button { flex: 1; }
+  .banner-actions { align-self: flex-end; }
   main { padding: .55rem max(.55rem, var(--safe-right)) calc(5.5rem + var(--safe-bottom)) max(.55rem, var(--safe-left)); }
   .workspace-panel { min-height: calc(100svh - 13.2rem); border-radius: 12px; }
   .records-controls { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto auto; }
@@ -582,6 +560,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .app-toast { bottom: calc(.5rem + var(--safe-bottom)); width: calc(100vw - 1rem - var(--safe-left) - var(--safe-right)); grid-template-columns: 18px minmax(0, 1fr) auto; }
   .app-toast > .button[data-toast-action] { grid-column: 2 / 4; }
   .app-toast > .icon-button { grid-column: 3; grid-row: 1; }
+  .app-toast > .toast-action-icon { grid-column: 3; grid-row: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {

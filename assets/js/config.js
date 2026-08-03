@@ -7,9 +7,9 @@
     identity: {
       name: "App Template",
       shortName: "Template",
-      description: "A focused pre-launch local-first shell with Notes, Roadmap, settings, and optional GitHub Sync.",
-      version: "0.0.1.1",
-      buildId: "0.0.1.1",
+      description: "A focused pre-launch local-first shell with a blank app workspace, Notes, settings, and optional GitHub Sync.",
+      version: "0.0.1.2",
+      buildId: "0.0.1.2",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -73,6 +73,16 @@
 
     releases: [
       {
+        version: "0.0.1.2",
+        date: "2026-08-03T15:00:00.000Z",
+        title: "Blank application workspace",
+        summary: "The main app area is empty and ready for a future app while Notes, Roadmap, updates, and shortcuts remain available from the shell.",
+        features: ["Theme shortcut on the app icon", "Modifier-tolerant global shortcuts"],
+        improvements: ["Unaccented Notes toolbar action", "Icon-only release and force-refresh actions", "Roadmap search, filters, and sorting live in Settings"],
+        fixes: ["Fresh and unchanged demonstration Notes start blank", "Notes closes from its standard close control without a redundant Done button"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
+      {
         version: "0.0.1.1",
         date: "2026-08-03T12:00:00.000Z",
         title: "Pre-launch application foundation",
@@ -92,15 +102,15 @@
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start notes roadmap", html: "<p>Open <strong>Notes</strong> for a single plain-text scratchpad and use <strong>Roadmap</strong> for released, planned, and wishlist items. Local changes save automatically.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start notes roadmap", html: "<p>The main application workspace starts blank. Open <strong>Notes</strong> for a plain-text scratchpad, and find the replaceable <strong>Roadmap</strong> inside Settings. Local changes save automatically.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },
       { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. Configure a private repository, branch, JSON file path, and a fine-grained token with Contents access. Conflicts always ask whether to upload, download, merge, or cancel.</p>" },
       { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline.</p>" },
-      { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press", html: "<p>Click or tap the app icon to switch between light and dark themes. Press and hold it to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
+      { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press shortcut", html: "<p>Click or tap the app icon, or press <kbd>T</kbd>, to switch between light and dark themes. Press and hold the icon to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },
-      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt hints version", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, and <kbd>?</kbd> for Help. Hold <kbd>Alt</kbd> to reveal shortcut hints. The Shortcuts tab lists every command.</p>" }
+      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints version", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, and <kbd>?</kbd> for Help. Listed shortcuts continue to work while Shift, Control, or Option is held. Hold the configured modifier to reveal shortcut hints.</p>" }
     ]
   };
 

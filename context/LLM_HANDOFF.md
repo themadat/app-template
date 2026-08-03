@@ -6,7 +6,7 @@ Start a new session with:
 Continue work in /Users/stripes/Documents/GitHub/app-template. Read AGENTS.md and context/LLM_HANDOFF.md first. Preserve manual edits and run git status --short before editing.
 ```
 
-This repository is a focused application foundation. It includes the reusable top bar with centered global search, a single plain-text Notes modal, a replaceable demonstration Roadmap without a separate navigation strip, Settings views, combined floating storage/sync status, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface, multi-note workspace, and rich-text editor are not part of the template.
+This repository is a focused application foundation. It includes the reusable top bar with centered global search, a blank main workspace, a single plain-text Notes modal, a replaceable demonstration Roadmap inside Settings, combined floating storage/sync status, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface, multi-note workspace, rich-text editor, and app-space Roadmap are not part of the template.
 
 ## Workflows
 
@@ -50,7 +50,7 @@ Do not silently move from one lifecycle stage to another.
 
 ## Repository map
 
-- `index.html`: sticky shell, Notes, Roadmap, Settings, dialogs, and live regions.
+- `index.html`: sticky shell, blank workspace, Notes, Settings, dialogs, and live regions.
 - `assets/css/app.css`: themes, safe areas, components, module layouts, and responsive behavior.
 - `assets/js/config.js`: identity, version/build id, assets, themes, Help, releases, and Roadmap data.
 - `assets/js/icons.js`: inline SF Symbol SVG catalog.
@@ -64,7 +64,7 @@ Do not silently move from one lifecycle stage to another.
 ## Invariants
 
 - Keep the runtime static, dependency-free, backend-free, and hostable as ordinary files.
-- Preserve the single Notes modal and Roadmap unless the user explicitly removes or replaces them. Keep the rest of the main application open to concrete app-specific work.
+- Preserve the single Notes modal and Settings Roadmap unless the user explicitly removes or replaces them. Keep the blank main application workspace open to concrete app-specific work.
 - The built-in application icon click changes theme; press-and-hold toggles Developer Mode without also changing theme.
 - Developer Mode adds `DEV` to the single version pill. Beta remains a separate environment pill.
 - Standard interface icons use inline SF Symbol SVGs rather than emoji or icon fonts.
@@ -83,7 +83,7 @@ git diff --check
 python3 -m http.server 8000
 ```
 
-Check desktop and mobile layout, no horizontal overflow, centered global search, Notes editing and persistence, Roadmap filtering/sorting, Settings tabs, combined floating storage/sync status, sync setup, shortcuts, contextual hints, SVG controls, theme click, Developer Mode hold/toggle-back, Beta detection, fresh online reloads, bottom new-version toast with Force refresh, and offline reload. Stop the server afterward.
+Check desktop and mobile layout, no horizontal overflow, centered global search, blank main workspace, Notes editing and persistence, Settings Roadmap filtering/sorting, Settings tabs, combined floating storage/sync status, sync setup, modified and unmodified shortcuts, contextual hints, SVG controls, theme click/T shortcut, Developer Mode hold/toggle-back, Beta detection, fresh online reloads, bottom new-version toast with its arrow-only Force refresh action, and offline reload. Stop the server afterward.
 
 ## End of turn
 

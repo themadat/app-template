@@ -33,7 +33,7 @@ Avoid generic abstractions until a second real module needs the same behavior.
 
 ## Remove optional modules
 
-- Roadmap: remove its two visible surfaces and event/render code, then set `features.roadmap` to `false`. Release history can remain without planned/wishlist views.
+- Roadmap: remove its Settings tab/panel and event/render code, then set `features.roadmap` to `false`. Release history can remain without planned/wishlist views.
 - GitHub Sync: remove `core/sync.js`, its script tag, settings/status markup, related event wiring, and its `sw.js` cache entry. Keep JSON backup/restore.
 - Developer tools: set `features.developerTools` to `false` and remove the Developer panel if it will never be used.
 - Contextual hints: set `features.hints` to `false` and remove hint/settings markup if desired.

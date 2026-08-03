@@ -13,7 +13,7 @@ The application is a static page with ordered scripts and no module loader:
 7. `core/portability.js` handles safe JSON import and export.
 8. `core/sync.js` implements optional GitHub synchronization.
 9. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
-10. `app.js` renders the visible modules and binds interactions and shortcuts.
+10. `app.js` renders the shell and Settings modules and binds interactions and shortcuts. The main workspace intentionally starts blank.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -25,8 +25,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.1",
-    "buildId": "0.0.1.1",
+    "appVersion": "0.0.1.2",
+    "buildId": "0.0.1.2",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -67,7 +67,7 @@ The current model is version 4:
 }
 ```
 
-The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
+The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. Fresh Notes are blank, and normalization removes the exact former demonstration sentence while preserving all other user text. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 
 The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry.
 
@@ -99,4 +99,4 @@ Notes uses one spacious modal on desktop and a full-screen editor on mobile. Set
 
 ## PWA and offline strategy
 
-`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A waiting service worker triggers a persistent bottom **New version available** toast. **Force refresh** activates the waiting worker and reloads through a cache-busting URL so installed PWAs can update immediately.
+`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A waiting service worker triggers a persistent bottom **New version available** toast. Its accessible clockwise-arrow action activates the waiting worker and reloads through a cache-busting URL so installed PWAs can update immediately.

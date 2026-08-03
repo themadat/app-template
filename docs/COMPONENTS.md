@@ -12,7 +12,7 @@ Use `components.confirm()` for destructive operations and `components.choose()` 
 
 ## Toasts, announcements, and loading
 
-`components.toast()` updates the reusable `role="status"` toast and can include one action. Critical completion text can also be written to the assertive live region. `components.setLoading()` controls the modal loading overlay for operations such as connection tests.
+`components.toast()` updates the reusable `role="status"` toast and can include one text or SF Symbol action. Critical completion text can also be written to the assertive live region. `components.setLoading()` controls the modal loading overlay for operations such as connection tests.
 
 ## Empty and error states
 
@@ -20,15 +20,15 @@ Module empty states use one shared visual pattern with a heading, explanation, a
 
 ## Notes
 
-Notes is one large plain-text textarea in a native modal. It opens from the visible Notes control or `N`, autosaves locally, and returns focus to its trigger when closed. The compatibility `documents` collection remains in state and sync payloads, but normalization consolidates it to the stable `app-notes` document. Migration from earlier multi-note state retains each title as a section heading and preserves its text.
+Notes is one large, initially blank plain-text textarea in a native modal. It opens from the visible Notes control or `N`, autosaves locally, closes from the standard close control or Escape, and returns focus to its trigger. There is no redundant Done action or autosave heading. The compatibility `documents` collection remains in state and sync payloads, but normalization consolidates it to the stable `app-notes` document. Migration from earlier multi-note state retains each title as a section heading and preserves its text.
 
 ## Global search
 
-`/` focuses the centered global search unless the user is already editing a field. Results include Notes, Help topics, release entries, and Roadmap items. Result activation opens the relevant dialog, module, or Settings view.
+`/` focuses the centered global search unless the user is already editing a field. Results include Notes, Help topics, release entries, and Roadmap items. Roadmap results open its Settings view; the main application workspace stays blank.
 
 ## Shortcut hints
 
-Controls declare `data-shortcut`. When the configured modifier is held, a CSS badge appears without replacing the visible control. Shortcuts never replace visible buttons or native interactions.
+Controls declare `data-shortcut`. When the configured modifier is held, a CSS badge appears without replacing the visible control. Global shortcuts use physical key codes and continue to work while Shift, Control, or Option is held; Command-key combinations remain available to the browser. Shortcuts never replace visible buttons or native interactions.
 
 ## Icon conventions
 

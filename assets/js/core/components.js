@@ -98,14 +98,18 @@
   }
 
   function toast(messageText, options) {
-    const settings = Object.assign({ title: "Saved", kind: "info", duration: 3200, actionLabel: "", onAction: null }, options || {});
+    const settings = Object.assign({ title: "Saved", kind: "info", duration: 3200, actionLabel: "", actionSymbol: "", onAction: null }, options || {});
     const toastEl = document.querySelector("#appToast");
     toastEl.dataset.kind = settings.kind;
     toastEl.querySelector("[data-toast-title]").textContent = settings.title;
     toastEl.querySelector("[data-toast-message]").textContent = messageText;
     const action = toastEl.querySelector("[data-toast-action]");
     action.hidden = !settings.actionLabel;
-    action.textContent = settings.actionLabel || "";
+    action.className = settings.actionSymbol ? "icon-button toast-action-icon" : "button small";
+    action.setAttribute("aria-label", settings.actionLabel || "Notification action");
+    action.title = settings.actionLabel || "";
+    if (settings.actionSymbol && App.icons) App.icons.set(action, settings.actionSymbol);
+    else action.textContent = settings.actionLabel || "";
     action.onclick = settings.onAction || null;
     toastEl.hidden = false;
     requestAnimationFrame(function () { toastEl.classList.add("visible"); });
