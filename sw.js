@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "app-template-shell-2026.08.02.3";
+const CACHE_NAME = "app-template-shell-2026.08.02.4";
 const SHELL = [
   "./",
   "./index.html",
@@ -9,6 +9,13 @@ const SHELL = [
   "./assets/css/app.css",
   "./assets/js/config.js",
   "./assets/js/icons.js",
+  "./assets/js/core/utils.js",
+  "./assets/js/core/state.js",
+  "./assets/js/core/storage.js",
+  "./assets/js/core/components.js",
+  "./assets/js/core/portability.js",
+  "./assets/js/core/sync.js",
+  "./assets/js/core/pwa.js",
   "./assets/js/app.js",
   "./assets/icons/favicon.svg",
   "./assets/icons/app-icon-light.svg",

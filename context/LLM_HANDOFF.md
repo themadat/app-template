@@ -6,7 +6,7 @@ Start a new session with:
 Continue work in /Users/stripes/Documents/GitHub/app-template. Read AGENTS.md and context/LLM_HANDOFF.md first. Preserve manual edits and run git status --short before editing.
 ```
 
-This repository is intentionally a blank application shell. The top bar, appearance behavior, install assets, and offline shell are reusable; `main#mainContent` contains no demonstration product or feature framework.
+This repository is a focused application foundation. It includes the reusable top bar, global search, a basic plain-text Notepad, a replaceable demonstration Roadmap, Support views, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface and rich-text editor are not part of the template.
 
 ## Workflows
 
@@ -32,7 +32,7 @@ Investigate a wish without implementing it.
 Implement an approved plan.
 
 - Read the wish and plan, set the wish to `Active`, and keep the Resume section current.
-- Add only the architecture the real feature needs. Do not reintroduce the former demonstration modules or a speculative framework.
+- Add only the architecture the real feature needs. Do not reintroduce the former Records interface, rich-text editor, or a speculative framework.
 - When browser assets or behavior change, update `identity.buildId` in `assets/js/config.js` and `CACHE_NAME` in `sw.js` together.
 - Change the semantic version only when the user chooses a release version.
 - Verify the affected desktop, mobile, accessibility, and offline behavior.
@@ -51,11 +51,12 @@ Do not silently move from one lifecycle stage to another.
 
 ## Repository map
 
-- `index.html`: sticky top bar and intentionally empty main application area.
-- `assets/css/app.css`: themes, safe areas, shell layout, pills, and basic buttons.
-- `assets/js/config.js`: identity, version/build id, assets, and shell preferences.
-- `assets/js/icons.js`: small inline SF Symbol SVG catalog.
-- `assets/js/app.js`: identity rendering, theme switching, Developer Mode, Beta detection, and service-worker registration.
+- `index.html`: sticky shell, Notepad, Roadmap, Support, dialogs, and live regions.
+- `assets/css/app.css`: themes, safe areas, components, module layouts, and responsive behavior.
+- `assets/js/config.js`: identity, version/build id, assets, themes, Help, releases, and Roadmap data.
+- `assets/js/icons.js`: inline SF Symbol SVG catalog.
+- `assets/js/app.js`: rendering, event wiring, shortcuts, theme, Developer Mode, and Beta detection.
+- `assets/js/core/`: state, storage, reusable components, portability, GitHub Sync, and PWA behavior.
 - `assets/icons/`: editable SVG sources and generated install assets.
 - `manifest.webmanifest` and `manifest-dark.webmanifest`: install metadata.
 - `sw.js`: minimal offline shell.
@@ -64,7 +65,7 @@ Do not silently move from one lifecycle stage to another.
 ## Invariants
 
 - Keep the runtime static, dependency-free, backend-free, and hostable as ordinary files.
-- Keep `main#mainContent` blank unless the user is building a concrete application.
+- Preserve Notepad and Roadmap unless the user explicitly removes or replaces them. Keep the rest of the main application open to concrete app-specific work.
 - The built-in application icon click changes theme; press-and-hold toggles Developer Mode without also changing theme.
 - Developer Mode adds `DEV` to the single version pill. Beta remains a separate environment pill.
 - Standard interface icons use inline SF Symbol SVGs rather than emoji or icon fonts.
@@ -83,7 +84,7 @@ git diff --check
 python3 -m http.server 8000
 ```
 
-Check desktop and mobile layout, no horizontal overflow, both basic buttons and SVGs, theme click, Developer Mode hold/toggle-back, Beta detection, and offline reload. Stop the server afterward.
+Check desktop and mobile layout, no horizontal overflow, global and module search, Notepad editing and persistence, Roadmap filtering/sorting, Support tabs, sync setup/status, shortcuts, contextual hints, SVG controls, theme click, Developer Mode hold/toggle-back, Beta detection, update messaging, and offline reload. Stop the server afterward.
 
 ## End of turn
 

@@ -1,16 +1,16 @@
 # App Template
 
-A deliberately minimal static HTML application shell. It has no build step, package manager, runtime dependency, backend, account, or domain-specific feature.
+A static, local-first HTML application foundation with no build step, runtime dependency, backend, account, or sign-in.
 
-The shipped interface contains only:
+The included product surface is intentionally focused:
 
-- A responsive, sticky top bar.
-- Application icon, name, version, and automatic Beta indicator.
-- Two basic Apple-style buttons using inline SF Symbol SVGs.
-- Light and dark themes.
-- Developer Mode through a press-and-hold on the application icon.
-- An intentionally empty `<main>` element for the new application.
-- A small offline PWA shell.
+- Sticky application header with version, Beta, global search, Note, and Support controls.
+- Plain-text Notepad with local autosave, search, sorting, reordering, and responsive list/detail navigation.
+- Replaceable demonstration Roadmap with search, view filters, and sorting.
+- Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap support views.
+- Optional GitHub Contents API synchronization with explicit conflict choices and manual JSON backup/restore.
+- Contextual hints, toast and live announcements, keyboard shortcuts, shortcut-hint mode, and hidden Developer Mode.
+- Installable offline PWA shell with light/dark assets and update-available messaging.
 
 ## Run locally
 
@@ -20,52 +20,43 @@ From the repository folder:
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000`. Nothing needs to be installed or compiled.
+Open `http://localhost:8000`. Use a local server instead of opening `index.html` directly so the service worker and PWA behavior can run.
 
 ## Start a new application
 
-1. Edit the application identity in `assets/js/config.js`.
-2. Mirror the public name, description, and theme colors in `manifest.webmanifest` and `manifest-dark.webmanifest`.
-3. Replace the empty `<main id="mainContent">` in `index.html` with the new application.
-4. Rename or remove the two example top-bar buttons. Their `data-app-action` attributes are extension hooks; the template does not attach behavior to them.
-5. Add application styles after the shell styles in `assets/css/app.css`, or move them into separate stylesheets.
-6. Increase `identity.buildId` and update `CACHE_NAME` in `sw.js` whenever shipped browser assets change.
-
-The application icon remains the only built-in control: click or tap it to switch themes, and press and hold it to toggle Developer Mode. Developer Mode adds `DEV` to the single version pill. A `BETA` pill appears for a `/beta/` path, `?beta=1`, or `?beta=true`.
+1. Update identity, version, release notes, help, roadmap data, repository links, and feature flags in `assets/js/config.js`.
+2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
+3. Replace the single demonstration note in `demoDocuments()` inside `assets/js/core/state.js`.
+4. Extend or replace the Notepad and Roadmap surfaces in `index.html` and `assets/js/app.js`. Preserve the shared core modules unless the corresponding feature is deliberately removed.
+5. Increase `identity.buildId` and update `CACHE_NAME` in `sw.js` together whenever shipped browser behavior or assets change.
 
 ## Project structure
 
 ```text
-index.html                 Top bar and empty application area
-assets/css/app.css         Shell variables, layout, buttons, and responsive styles
-assets/js/config.js        Application identity and shell settings
-assets/js/icons.js         Inline SVG symbol catalog
-assets/js/app.js           Theme, Developer Mode, identity, and PWA registration
-assets/icons/              Editable and generated application assets
-manifest*.webmanifest      Light and dark install metadata
-sw.js                      Offline shell cache
-context/                   Agent wish, plan, start, and cut workflow
+index.html                     Application shell, Notepad, Roadmap, and dialogs
+assets/css/app.css             Theme, layout, components, and responsive behavior
+assets/js/config.js            Identity, versions, themes, help, releases, and roadmap
+assets/js/icons.js             Inline SF Symbol SVG catalog
+assets/js/app.js               Application rendering, actions, and keyboard wiring
+assets/js/core/state.js        Defaults, normalization, migrations, validation, and merge
+assets/js/core/storage.js      Local persistence, secret storage, and recovery copies
+assets/js/core/components.js   Dialogs, popovers, menus, toasts, and loading UI
+assets/js/core/portability.js  JSON export, validation preview, and import
+assets/js/core/sync.js         Optional GitHub synchronization state machine
+assets/js/core/pwa.js          PWA assets, update notices, and device detection
+assets/icons/                  Editable and generated application assets
+manifest*.webmanifest          Light and dark install metadata
+sw.js                          Offline shell and update cache
+docs/                          Architecture, components, customization, and test checklists
+context/                       Agent wish, plan, start, and cut workflow
 ```
-
-## Add or change top-bar buttons
-
-Copy one of the existing buttons in `index.html` and give it a neutral extension hook:
-
-```html
-<button class="top-action" type="button" data-app-action="example">
-  <span class="action-icon" aria-hidden="true" data-symbol="more"></span>
-  <span class="action-label">Example</span>
-</button>
-```
-
-Register SF Symbol SVG markup in `assets/js/icons.js`; use SVG symbols instead of emoji or icon-font glyphs whenever possible. Give the button an accessible name whenever its visible text is not sufficient.
 
 ## Update the application icons
 
-Editable sources and generated install assets are in `assets/icons/`. Keep the existing filenames unless you also update their references in `index.html`, both manifests, `assets/js/config.js`, and `sw.js`.
+Editable sources and generated install assets are in `assets/icons/`. Keep the existing filenames unless you also update every reference in `index.html`, both manifests, `assets/js/config.js`, and `sw.js`.
 
 1. Replace `app-icon-light.svg` and `app-icon-dark.svg` with square SVG artwork. Keep important artwork inside the central 80% for maskable crops.
-2. Update `favicon.svg`.
+2. Replace `favicon.svg`.
 3. Export the light icon to:
 
    - `icon-192.png` at 192 × 192
@@ -81,20 +72,20 @@ Editable sources and generated install assets are in `assets/icons/`. Keep the e
    - `apple-touch-icon-dark.png` at 180 × 180
 
 5. Replace `splash-light.svg` and `splash-dark.svg`, then export `splash-light.png` and `splash-dark.png` at 1170 × 1170.
-6. Increase the build identifier and service-worker cache name so installed copies receive the new assets.
+6. Increase the build identifier and service-worker cache name so installed copies receive the assets.
 
-Example Inkscape export:
+Example Inkscape exports:
 
 ```sh
 inkscape assets/icons/app-icon-light.svg --export-filename=assets/icons/icon-512.png --export-width=512 --export-height=512
 inkscape assets/icons/app-icon-dark.svg --export-filename=assets/icons/icon-512-dark.png --export-width=512 --export-height=512
 ```
 
-After replacement, verify the favicon, launcher icon, maskable crop, and splash artwork in both appearances.
+Verify the favicon, launcher icon, maskable crop, and splash artwork in both appearances.
 
-## Set up GitHub SSH
+## Set up GitHub SSH for repository work
 
-Use an SSH remote so Git does not ask for a GitHub username and password.
+This controls Git clone, pull, and push from your computer. It is separate from the optional in-app sync module, which uses the GitHub Contents API and a fine-grained token because a browser cannot use your SSH key.
 
 1. Check for an existing key:
 
@@ -115,23 +106,18 @@ Use an SSH remote so Git does not ask for a GitHub username and password.
    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
    ```
 
-4. Copy the public key:
+4. Copy the public key and add it in GitHub under **Settings → SSH and GPG keys → New SSH key**:
 
    ```sh
    pbcopy < ~/.ssh/id_ed25519.pub
    ```
 
-   Add it in GitHub under **Settings → SSH and GPG keys → New SSH key**. Never upload or share the private file without `.pub`.
+   Never upload or share the private file without `.pub`.
 
-5. Test authentication:
+5. Test authentication and set the repository’s SSH remote:
 
    ```sh
    ssh -T git@github.com
-   ```
-
-6. Use the repository’s SSH URL:
-
-   ```sh
    git remote set-url origin git@github.com:OWNER/REPOSITORY.git
    git remote -v
    git push -u origin main
@@ -139,15 +125,27 @@ Use an SSH remote so Git does not ask for a GitHub username and password.
 
 If Git reports `Permission denied (publickey)`, confirm the key is loaded and attached to the correct GitHub account. A prompt for the SSH key’s passphrase is local; it is not a GitHub password.
 
+## Configure optional in-app GitHub Sync
+
+Open **Support → Settings → GitHub synchronization** and provide:
+
+- Repository owner and name.
+- Branch and JSON file path.
+- A fine-grained personal access token limited to the selected repository with **Contents: Read and write** permission.
+
+The token stays in browser storage on that device, is never included in exports or diagnostics, and is not displayed again. The Sync button checks local and remote state before choosing upload, download, merge, or conflict handling. JSON export/import remains the fallback.
+
 ## Host as a static site
 
-Upload the repository contents without changing their relative paths. Use HTTPS in production so the service worker and installation features are available. Keep `sw.js` at the application root because its location defines the offline scope.
+Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
 
 ## Agent workflow
 
-`AGENTS.md` and `context/LLM_HANDOFF.md` define the repository workflow. The supported shorthands are:
+`AGENTS.md` and `context/LLM_HANDOFF.md` define the repository workflow:
 
 - `wish`: record an idea only.
 - `plan`: investigate and document it only.
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
+
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a specific one-line commit, and pushes the current branch. They do not run it unless explicitly asked.

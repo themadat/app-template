@@ -1,0 +1,96 @@
+# Architecture
+
+## Layers
+
+The application is a static page with ordered scripts and no module loader:
+
+1. `config.js` defines identity, feature flags, themes, help, releases, and demonstration Roadmap content.
+2. `icons.js` provides reusable inline SF Symbol SVG markup.
+3. `core/utils.js` provides escaping, sanitization, URL/color validation, ids, dates, and hashing.
+4. `core/state.js` owns defaults, normalization, migrations, validation, export envelopes, sync payloads, and collection merging.
+5. `core/storage.js` loads and autosaves browser state, stores the optional token separately, and manages one recovery copy.
+6. `core/components.js` implements dialogs, choices, menus/popovers, loading UI, toasts, and long press.
+7. `core/portability.js` handles safe JSON import and export.
+8. `core/sync.js` implements optional GitHub synchronization.
+9. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
+10. `app.js` renders the visible modules and binds interactions and shortcuts.
+
+All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
+
+## State model
+
+The current model is version 3:
+
+```json
+{
+  "schemaVersion": 3,
+  "meta": {
+    "appVersion": "1.0.0",
+    "buildId": "2026.08.02.4",
+    "createdAt": "ISO timestamp",
+    "updatedAt": "ISO timestamp",
+    "lastMutationId": "stable id",
+    "tombstones": { "records": [], "documents": [] }
+  },
+  "workspace": {
+    "title": "My App",
+    "records": [],
+    "documents": []
+  },
+  "preferences": {
+    "appearance": {},
+    "controls": {},
+    "hints": {},
+    "installation": {}
+  },
+  "ui": {
+    "activeModule": "documents",
+    "selectedDocumentId": "",
+    "search": "",
+    "documents": {},
+    "panels": {},
+    "navigation": {},
+    "seenReleaseVersion": "",
+    "supportTab": "settings"
+  },
+  "modules": {
+    "documents": {},
+    "roadmap": {},
+    "cloudSync": {}
+  }
+}
+```
+
+The visible Notepad continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in that field. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
+
+The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry.
+
+## Persistence and migration
+
+Startup checks the current storage key and then known legacy keys. Every candidate runs through wrapper unwrapping, sequential migration, normalization, sanitization, and validation. Malformed saved state falls back to a valid recovery copy or a fresh default without replacing an import file.
+
+User mutations update metadata and schedule an autosave. Storage failures emit an application event that becomes an actionable toast. Import, cloud download, merge, reset, and other replacements create or preserve recovery data as appropriate.
+
+Add a migration by creating `migrateNtoNPlus1`, registering it in `migrations`, increasing `schemaVersion`, and adding a fixture that proves renamed, removed, split, or combined values preserve user content.
+
+## GitHub conflict strategy
+
+The sync module stores a baseline target, SHA, and content hash after a successful sync. A remote check compares local, remote, and baseline hashes:
+
+- Local only: upload.
+- Remote only: download after saving a recovery copy.
+- Equal: report Current.
+- No baseline or missing remote file: request a first-sync decision.
+- Both changed: offer merge, upload, download, or cancel.
+
+Merging chooses the newer note for each stable id, honors newer deletion tombstones, and takes preferences from the newer whole state while preserving local per-device cloud configuration. Requests are sequenced and aborted to prevent overlap and stale responses. Checks repeat periodically, on visibility, and when connectivity returns.
+
+## Accessibility and responsive behavior
+
+The shell uses landmarks, native buttons and inputs, native dialogs, tabs, listboxes, status regions, and explicit ARIA state. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents, and note reordering has `Alt + Arrow` controls.
+
+Desktop uses a resizable Notepad list/detail grid. Mobile converts this into explicit list/detail navigation and makes Support a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
+
+## PWA and offline strategy
+
+`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Navigation falls back to the cached `index.html`; optional GitHub API traffic remains network-only. A new waiting service worker triggers an Update available toast and refreshes only after the user chooses Refresh.
