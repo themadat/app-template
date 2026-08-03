@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A focused local-first shell with Notes, Roadmap, support, and optional GitHub Sync.",
-      version: "1.0.1",
-      buildId: "2026.08.03.3",
+      version: "1.0.1.1",
+      buildId: "1.0.1.1",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -73,18 +73,18 @@
 
     releases: [
       {
-        version: "1.0.1",
+        version: "1.0.1.1",
         date: "2026-08-03T12:00:00.000Z",
-        title: "Reliable focused shell",
-        summary: "Notes now uses one focused modal, refreshes load a consistent build, and repository handoffs carry the app version.",
-        features: ["Single-modal Notes workspace", "Versioned update and commit workflow"],
-        improvements: ["Build-stamped application assets", "Network-first refresh and offline fallback"],
+        title: "Reliable versioned shell",
+        summary: "Notes now uses one focused modal, refreshes load a consistent build, and updates use a four-part app version.",
+        features: ["Single-modal Notes workspace", "Major.minor.patch.build versioning"],
+        improvements: ["Build-stamped application assets", "Version-first commit handoffs", "Dedicated Notes SF Symbol"],
         fixes: ["Escape closes Notes and restores focus", "Legacy caches no longer mix old and new application files"],
         knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
       },
       {
-        version: "1.0.0",
-        date: "2026-08-01",
+        version: "1.0.0.0",
+        date: "2026-08-01T12:00:00.000Z",
         title: "Focused application foundation",
         summary: "A reusable shell with Notes, Roadmap, support tools, and optional GitHub Sync.",
         features: ["Single local Notes workspace", "Searchable Roadmap and Help", "Complete opt-in GitHub synchronization", "Offline-ready application shell"],
@@ -93,8 +93,8 @@
         knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
       },
       {
-        version: "0.3.0",
-        date: "2026-07-18",
+        version: "0.3.0.0",
+        date: "2026-07-18T12:00:00.000Z",
         title: "Template preview",
         summary: "The reusable state and recovery foundations were established.",
         features: ["Versioned local state and migration fixtures"],

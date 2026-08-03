@@ -15,7 +15,7 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 - Central identity, versions, and shell settings live in `assets/js/config.js`.
 - Preserve the focused foundation: top bar, global search, single Notes modal, demonstrative Roadmap, Support, local persistence/recovery, and optional GitHub Sync. Do not restore the removed Records interface, multi-note workspace, or rich-text editor without an explicit request.
 - Keep additions narrow and configurable. The compatibility state may retain legacy record/document fields so older backups and sync copies remain readable.
-- Every completed application update increments the visible patch version in `identity.version`, adds or updates the matching release entry, chooses a fresh `identity.buildId`, and updates the build queries in `index.html` plus the service-worker cache/build ids. A user-specified release version overrides the automatic patch increment. Wish, plan, and agent-instruction-only edits do not change the app version unless explicitly requested.
+- Application versions use `major.minor.patch.build`. Every completed application update increments the fourth `build` number. An explicit major, minor, or patch change resets `build` to `1` unless the user specifies another value. Keep `identity.buildId` identical to the full four-part `identity.version`, add or update the matching dated release entry, and update the build queries in `index.html` plus the service-worker cache/build ids. Wish, plan, and agent-instruction-only edits do not change the app version unless explicitly requested.
 - Use semantic HTML, labelled controls, visible focus, safe URLs, and escaped user text.
 - Use the shared inline SVG symbol catalog for interface icons whenever an appropriate symbol exists; do not use emoji or font glyphs for standard controls.
 - Verify proportionally: JavaScript syntax, manifest JSON parsing, `git diff --check`, referenced asset paths, and relevant desktop/mobile/offline workflows.
@@ -37,12 +37,12 @@ The detailed contracts are in `context/LLM_HANDOFF.md`. Do not silently advance 
 After changing files, finish with:
 
 1. A concise outcome summary and verification result.
-2. Exactly one copy-paste-ready shell command that stages only the files belonging to the completed request, commits them with a specific imperative one-line message containing the current app version and build id, and pushes the current branch to `origin`.
+2. Exactly one copy-paste-ready shell command that stages only the files belonging to the completed request, commits them with the exact subject shape `Version - Text`, and pushes the current branch to `origin`.
 
 Command shape:
 
 ```bash
-git add . && git commit -m "Describe the completed change vX.Y.Z (build YYYY.MM.DD.N)" && git push origin <current-branch>
+git add . && git commit -m "X.Y.Z.B - Describe the completed change" && git push origin <current-branch>
 ```
 
 Do not run the commit or push unless the user explicitly asks. Use `git add .` when `git status --short` confirms every change belongs to the completed request; otherwise list only the task files and call out the unrelated changes. Never use `git add -A` when unrelated or user-owned changes are present. If no files changed, do not suggest an empty commit.
