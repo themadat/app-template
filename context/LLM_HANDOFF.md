@@ -33,8 +33,7 @@ Implement an approved plan.
 
 - Read the wish and plan, set the wish to `Active`, and keep the Resume section current.
 - Add only the architecture the real feature needs. Do not reintroduce the former Records interface, rich-text editor, or a speculative framework.
-- When browser assets or behavior change, update `identity.buildId` in `assets/js/config.js`, the build queries in `index.html`, and `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
-- Change the semantic version only when the user chooses a release version.
+- For every completed application update, increment the patch component of `identity.version`, add or update the matching release entry, choose a fresh `identity.buildId`, update the build queries in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together. Use an explicit user-selected version instead of the automatic patch increment when provided.
 - Verify the affected desktop, mobile, accessibility, and offline behavior.
 
 ### `cut`
@@ -71,7 +70,7 @@ Do not silently move from one lifecycle stage to another.
 - Standard interface icons use inline SF Symbol SVGs rather than emoji or icon fonts.
 - New controls use native elements, accessible names, visible focus, and touch-sized hit areas.
 - Avoid horizontal overflow and preserve safe-area and reduced-motion behavior.
-- App behavior changes update the build id and service-worker cache id together.
+- Every application update advances the visible app version and build id, with matching release, asset-query, and service-worker cache values.
 
 ## Verification baseline
 
@@ -88,4 +87,4 @@ Check desktop and mobile layout, no horizontal overflow, global search, Notes ed
 
 ## End of turn
 
-After file changes, give one concise outcome/verification summary followed by exactly one copy-paste command that stages only task files, commits with a specific imperative subject, and pushes the current branch. Do not run it unless explicitly requested.
+After file changes, give one concise outcome/verification summary followed by exactly one copy-paste command that stages only task files, commits with a specific imperative subject containing the current app version and build id, and pushes the current branch. Use `git add .` when `git status --short` confirms all changes belong to the task; otherwise name the task files explicitly. Do not run it unless explicitly requested.
