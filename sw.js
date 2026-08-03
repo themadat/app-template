@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "local-workspace-shell-2026.08.02.2";
+const CACHE_NAME = "app-template-shell-2026.08.02.3";
 const SHELL = [
   "./",
   "./index.html",
@@ -9,13 +9,6 @@ const SHELL = [
   "./assets/css/app.css",
   "./assets/js/config.js",
   "./assets/js/icons.js",
-  "./assets/js/core/utils.js",
-  "./assets/js/core/state.js",
-  "./assets/js/core/storage.js",
-  "./assets/js/core/components.js",
-  "./assets/js/core/portability.js",
-  "./assets/js/core/sync.js",
-  "./assets/js/core/pwa.js",
   "./assets/js/app.js",
   "./assets/icons/favicon.svg",
   "./assets/icons/app-icon-light.svg",
@@ -38,7 +31,7 @@ self.addEventListener("install", function (event) {
 
 self.addEventListener("activate", function (event) {
   event.waitUntil(Promise.all([
-    caches.keys().then(function (keys) { return Promise.all(keys.filter(function (key) { return key.startsWith("local-workspace-shell-") && key !== CACHE_NAME; }).map(function (key) { return caches.delete(key); })); }),
+    caches.keys().then(function (keys) { return Promise.all(keys.filter(function (key) { return (key.startsWith("app-template-shell-") || key.startsWith("local-workspace-shell-")) && key !== CACHE_NAME; }).map(function (key) { return caches.delete(key); })); }),
     self.clients.claim()
   ]));
 });

@@ -1,23 +1,19 @@
 {
-  "name": "Local Workspace",
-  "short_name": "Workspace",
-  "description": "A reusable, local-first workspace for records and documents.",
+  "name": "App Template",
+  "short_name": "Template",
+  "description": "A minimal static application shell.",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
-  "background_color": "#f5f3ed",
-  "theme_color": "#f5f3ed",
+  "background_color": "#f5f5f7",
+  "theme_color": "#f5f5f7",
   "orientation": "any",
-  "categories": ["productivity", "utilities"],
+  "categories": ["utilities"],
   "icons": [
     { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "assets/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
-  ],
-  "shortcuts": [
-    { "name": "Records", "short_name": "Records", "url": "./index.html#records", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Documents", "short_name": "Documents", "url": "./index.html#documents", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }

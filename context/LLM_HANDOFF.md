@@ -6,109 +6,85 @@ Start a new session with:
 Continue work in /Users/stripes/Documents/GitHub/app-template. Read AGENTS.md and context/LLM_HANDOFF.md first. Preserve manual edits and run git status --short before editing.
 ```
 
-The workflow shorthands are `wish`, `plan`, `start`, and `cut`. They deliberately separate backlog capture, design, implementation, and release finalization so a new agent can resume from repository context rather than chat history.
+This repository is intentionally a blank application shell. The top bar, appearance behavior, install assets, and offline shell are reusable; `main#mainContent` contains no demonstration product or feature framework.
 
 ## Workflows
 
-### `wish` — capture an idea
+### `wish`
 
-Record an idea for later without planning or implementing it.
+Record an idea in `context/WISHES.md` without planning or implementing it.
 
-- Read `context/WISHES.md`, check for duplicates, and assign the next unused `WISH-###` id.
-- Capture a title, behavior-focused description, rationale, priority, effort, target kind or version, acceptance criteria, constraints, affected modules, and open questions.
-- Use reasonable defaults when intent is clear. Ask only when ambiguity materially changes scope or architecture, and record assumptions.
-- Set status to `Proposed`. Do not create a plan, edit application code, or retarget a release unless explicitly requested.
-- The internal wish ledger is not user-facing and requires no version or release-note update. Add a matching item to `config.roadmap` only when the user explicitly wants it shown in the demonstration Roadmap.
+- Check for duplicates and use the next `WISH-###` id.
+- Capture behavior, rationale, priority, effort, acceptance criteria, constraints, affected files, and material open questions.
+- Set the status to `Proposed`.
 
-### `plan` — investigate and document
+### `plan`
 
-Explore a wish before implementation.
+Investigate a wish without implementing it.
 
-- Read the wish, this handoff, the latest release entry, and the relevant code paths.
-- Identify scope, non-goals, UI states, accessibility, responsive behavior, state-model effects, migration needs, import/export and sync effects, offline behavior, security risks, and tests.
-- Create or revise `context/WISH-###-<slug>-PLAN.md` with a `## Resume` section at the top, followed by decisions, phases, file/symbol map, schema changes, acceptance criteria, test plan, and open questions.
-- Link the plan from the wish and set its status to `Planned`.
-- Planning-only changes do not alter application files, build id, service-worker cache, or release notes unless explicitly requested.
-- Do not implement during `plan`.
+- Create or revise `context/WISH-###-slug-PLAN.md`.
+- Put a `## Resume` section first, followed by decisions, scope, non-goals, file map, accessibility/responsive considerations, tests, and open questions.
+- Link it from the wish and set the status to `Planned`.
+- Do not change runtime files, build ids, or cache ids.
 
-### `start` — implement an approved plan
+### `start`
 
-Open or continue implementation from a written plan.
+Implement an approved plan.
 
-- Read the wish, plan, and handoff before editing. If no adequate plan exists, stop and run `plan` unless the user explicitly requests a small direct change.
-- Set the wish status to `Active` and keep the plan's `## Resume` section current with completed work, in-progress work, exact next steps, touched files/symbols, verification, and gotchas.
-- Preserve the static, dependency-free architecture and optional-module boundaries.
-- For application behavior changes, update `identity.buildId` in `assets/js/config.js` and `CACHE_NAME` in `sw.js` together. Use `YYYY.MM.DD.N`; increment `N` for subsequent builds on the same date.
-- Change `identity.version` only when the planned release version is explicitly chosen or during `cut`.
-- Persisted state changes require defaults, normalization, validation, and sequential migrations in `assets/js/core/state.js`. Keep older backup wrappers importable and tokens outside exported state.
-- Update help, shortcuts, tests, and customization docs as the implemented surface requires.
-- Verify relevant desktop, tablet, mobile, offline, import/migration/recovery, accessibility, and mocked sync behavior before stopping.
+- Read the wish and plan, set the wish to `Active`, and keep the Resume section current.
+- Add only the architecture the real feature needs. Do not reintroduce the former demonstration modules or a speculative framework.
+- When browser assets or behavior change, update `identity.buildId` in `assets/js/config.js` and `CACHE_NAME` in `sw.js` together.
+- Change the semantic version only when the user chooses a release version.
+- Verify the affected desktop, mobile, accessibility, and offline behavior.
 
-### `cut` — finalize a release
+### `cut`
 
-Turn the active implementation line into a coherent release.
+Finalize an active line as a release.
 
-- Inventory dirty files and preserve unrelated/manual edits.
-- Choose or confirm the semantic version and update `identity.version` in `assets/js/config.js`.
-- Set a fresh `identity.buildId` and matching `CACHE_NAME` in `sw.js`.
-- Add one structured release entry in `config.releases`: date, title, summary, features, improvements, fixes, and known issues. Keep it public-facing and free of prompts or internal workflow details.
-- Mark the wish `Shipped`, record the released version and date, and move any remaining follow-ups into new wishes.
-- Refresh Help, What's New, Roadmap, README, manifests, install metadata, and documentation wherever the release changed their claims. Do not change `schemaVersion` unless the persisted model actually changed.
-- Replace the plan's Resume block with a short completion note and move the completed plan to `context/archive/` when historical detail is useful; otherwise remove its active reference from this handoff.
-- Run syntax and JSON checks, `git diff --check`, asset-reference checks, desktop/mobile smoke tests, offline service-worker reload, current and legacy import tests, recovery tests, accessibility checks, and mocked cloud first-sync/conflict tests when sync changed.
-- Stop preview servers and leave no active line unless the user explicitly keeps one open.
+- Confirm the semantic version and update `identity.version`.
+- Set a fresh build id and matching service-worker cache id.
+- Update the manifests and README when public identity or behavior changed.
+- Mark the wish `Shipped`, record its version/date, and archive its plan when useful.
+- Run the complete verification baseline below.
 
-## Version and release surfaces
-
-- Runtime identity and public version: `assets/js/config.js` → `identity`.
-- Current state-model version and storage keys: `assets/js/config.js` plus migrations in `assets/js/core/state.js`.
-- Public release history, Help content, roadmap demonstration data, statuses, themes, and feature flags: `assets/js/config.js`.
-- Visible version rendering: `assets/js/app.js`.
-- Offline cache version and shell resources: `sw.js`.
-- Install metadata and icon paths: `manifest.webmanifest`, `manifest-dark.webmanifest`, and `index.html`.
-- Public operating and customization guidance: `README.md` and `docs/`.
-
-Build ids invalidate the offline shell; semantic versions communicate releases to users. A behavior change normally bumps the build id. A schema change separately bumps `schemaVersion` and adds a sequential migration. Documentation-only and planning-only changes need neither.
+Do not silently move from one lifecycle stage to another.
 
 ## Repository map
 
-- `index.html`: semantic application shell and dialogs.
-- `assets/css/app.css`: shell, components, themes, responsive layouts, safe areas, reduced motion.
-- `assets/js/config.js`: identity and replaceable structured product content.
-- `assets/js/core/utils.js`: escaping, rich-text sanitization, colors, safe URLs, ids, dates, fingerprints.
-- `assets/js/core/state.js`: defaults, schema, migrations, normalization, validation, merge behavior.
-- `assets/js/core/storage.js`: startup loading, autosave, recovery snapshots, quota handling, separate secret storage.
-- `assets/js/core/components.js`: dialogs, confirmations, menus, popovers, toasts, focus behavior.
-- `assets/js/core/portability.js`: JSON export, safe import, preview, confirmation, recovery.
-- `assets/js/core/sync.js`: optional GitHub Contents synchronization and conflict state machine.
-- `assets/js/core/pwa.js`: installation, device guidance, appearance-aware assets, service-worker updates.
-- `assets/js/app.js`: rendering, module behavior, shortcuts, and event wiring.
-- `docs/`: source audit, architecture, components, customization, and verification checklists.
+- `index.html`: sticky top bar and intentionally empty main application area.
+- `assets/css/app.css`: themes, safe areas, shell layout, pills, and basic buttons.
+- `assets/js/config.js`: identity, version/build id, assets, and shell preferences.
+- `assets/js/icons.js`: small inline SF Symbol SVG catalog.
+- `assets/js/app.js`: identity rendering, theme switching, Developer Mode, Beta detection, and service-worker registration.
+- `assets/icons/`: editable SVG sources and generated install assets.
+- `manifest.webmanifest` and `manifest-dark.webmanifest`: install metadata.
+- `sw.js`: minimal offline shell.
+- `README.md`: setup, customization, icons, SSH, and hosting instructions.
 
 ## Invariants
 
-- Browser-local state is primary; cloud synchronization is optional and user-initiated.
-- Never export, render, or log a stored GitHub token. Preserve it only in the separate per-device secret key.
-- Imports and remote responses are untrusted: parse, migrate, normalize, sanitize, validate, preview, confirm, and save a recovery copy before replacement.
-- Preserve user records and documents across upgrades. Deletion tombstones must survive sync merges until they are safely superseded.
-- External links allow only safe HTTP(S) URLs and open with `noopener noreferrer` behavior.
-- Critical actions must have visible keyboard/touch routes; hover, drag, right-click, and long press are conveniences only.
-- Mobile uses explicit list/detail navigation and full-screen dialogs; desktop panel visibility and proportions remain independently persistent.
-- A missing optional browser API must produce an unavailable state, not a broken application.
+- Keep the runtime static, dependency-free, backend-free, and hostable as ordinary files.
+- Keep `main#mainContent` blank unless the user is building a concrete application.
+- The built-in application icon click changes theme; press-and-hold toggles Developer Mode without also changing theme.
+- Developer Mode adds `DEV` to the single version pill. Beta remains a separate environment pill.
+- Standard interface icons use inline SF Symbol SVGs rather than emoji or icon fonts.
+- New controls use native elements, accessible names, visible focus, and touch-sized hit areas.
+- Avoid horizontal overflow and preserve safe-area and reduced-motion behavior.
+- App behavior changes update the build id and service-worker cache id together.
 
 ## Verification baseline
 
 From the repository root:
 
 ```sh
-for file in assets/js/config.js assets/js/core/*.js assets/js/app.js sw.js; do node --check "$file" || exit 1; done
-node -e "const fs=require('fs'); for (const file of ['manifest.webmanifest','manifest-dark.webmanifest','docs/examples/legacy-backup-v1.json','docs/examples/legacy-backup-v2.json']) JSON.parse(fs.readFileSync(file,'utf8'));"
+for file in assets/js/*.js sw.js; do node --check "$file" || exit 1; done
+node -e "const fs=require('fs'); for (const file of ['manifest.webmanifest','manifest-dark.webmanifest']) JSON.parse(fs.readFileSync(file,'utf8'));"
 git diff --check
 python3 -m http.server 8000
 ```
 
-Open `http://127.0.0.1:8000`, perform the relevant checks in `docs/TESTING.md`, and stop the server before the final response.
+Check desktop and mobile layout, no horizontal overflow, both basic buttons and SVGs, theme click, Developer Mode hold/toggle-back, Beta detection, and offline reload. Stop the server afterward.
 
-## End-of-turn handoff
+## End of turn
 
-The final response after file changes has one concise summary and one copy-paste command. The command stages only task files, commits with a specific imperative subject, and pushes the current branch. Determine the branch before composing it; do not assume `main`. Do not execute it unless explicitly asked.
+After file changes, give one concise outcome/verification summary followed by exactly one copy-paste command that stages only task files, commits with a specific imperative subject, and pushes the current branch. Do not run it unless explicitly requested.

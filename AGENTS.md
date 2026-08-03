@@ -12,12 +12,13 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 
 - Search with `rg` before reading broad file ranges. Keep edits narrow and never reformat unrelated code.
 - Keep the application static, dependency-free at runtime, and usable from an ordinary static host.
-- Central identity, versions, feature flags, releases, roadmap examples, and help content live in `assets/js/config.js`.
-- Persisted fields require a default, normalization, validation, and a backward-compatible migration when the schema changes. Never discard user-created records or documents during an upgrade.
+- Central identity, versions, and shell settings live in `assets/js/config.js`.
+- Keep `main#mainContent` intentionally blank until an application explicitly adds a feature. Do not restore demonstration records, documents, search, sync, support, roadmap, or generic state systems preemptively.
+- The shell persists only theme and Developer Mode preferences. Add application state architecture only when a real application requires it.
 - App behavior changes update `identity.buildId` and the service-worker cache id together. Documentation-only and agent-instruction changes do not require release churn.
-- Use semantic HTML, labelled controls, visible focus, live status where appropriate, safe URLs, escaped user text, and the shared dialog/focus behavior.
+- Use semantic HTML, labelled controls, visible focus, safe URLs, and escaped user text.
 - Use the shared inline SVG symbol catalog for interface icons whenever an appropriate symbol exists; do not use emoji or font glyphs for standard controls.
-- Verify proportionally: JavaScript syntax, JSON parsing, `git diff --check`, referenced asset paths, and relevant desktop/mobile/offline workflows.
+- Verify proportionally: JavaScript syntax, manifest JSON parsing, `git diff --check`, referenced asset paths, and relevant desktop/mobile/offline workflows.
 - Stop local preview servers before the final response.
 
 ## Workflow shorthands
