@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="A focused pre-launch local-first app foundation with Notes, Roadmap, settings, and optional GitHub Sync.">
+  <meta name="description" content="A focused pre-launch local-first app foundation with a blank workspace, Notes, settings, and optional GitHub Sync.">
   <meta name="theme-color" content="#f5f3ed">
   <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121616" media="(prefers-color-scheme: dark)">
@@ -12,35 +12,35 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.1">
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=0.0.1.1">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.1">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.1" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.1" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.1">
-  <script defer src="assets/js/config.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.1"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.1"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.2">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=0.0.1.2">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.2">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.2" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.2" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.2">
+  <script defer src="assets/js/config.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.2"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.2"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
 
   <header class="app-header">
     <div class="title-cluster">
-      <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.1" alt="">
+      <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T" data-shortcut="T">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.2" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V" data-shortcut="V">v0.0.1.1</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V" data-shortcut="V">v0.0.1.2</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -55,7 +55,7 @@
     </div>
 
     <div class="top-toolbar" aria-label="Application actions">
-      <button id="notesButton" class="button primary action-button" type="button" aria-haspopup="dialog" aria-controls="notesDialog" aria-keyshortcuts="N" data-shortcut="N">
+      <button id="notesButton" class="button action-button" type="button" aria-haspopup="dialog" aria-controls="notesDialog" aria-keyshortcuts="N" data-shortcut="N">
         <span class="button-icon" aria-hidden="true" data-symbol="notes"></span><span class="button-label">Notes</span>
       </button>
       <button id="supportButton" class="button icon-button action-button" type="button" aria-label="Open settings" title="Open settings" data-shortcut="?">
@@ -73,8 +73,8 @@
       <span data-whats-new-summary></span>
     </div>
     <div class="banner-actions">
-      <button type="button" class="button small" data-open-releases>View release</button>
-      <button type="button" class="button small quiet" data-dismiss-release aria-label="Dismiss What’s New">Dismiss</button>
+      <button type="button" class="icon-button" data-open-releases aria-label="View release notes" title="View release notes"><span aria-hidden="true" data-symbol="releaseNotes"></span></button>
+      <button type="button" class="icon-button quiet" data-dismiss-release aria-label="Dismiss What’s New" title="Dismiss What’s New"><span aria-hidden="true" data-symbol="close"></span></button>
     </div>
   </aside>
 
@@ -84,20 +84,7 @@
     <button type="button" class="icon-button" data-dismiss-hint="workspace-basics" aria-label="Dismiss hint"><span aria-hidden="true" data-symbol="close"></span></button>
   </aside>
 
-  <main id="mainContent" tabindex="-1">
-    <section id="roadmapModule" class="module-surface roadmap-surface" data-module-surface="roadmap" aria-labelledby="roadmapHeading">
-      <header class="roadmap-header">
-        <div><span class="eyebrow">Replaceable demonstration module</span><h1 id="roadmapHeading">Roadmap</h1><p>Released work, planned features, and wishlist ideas.</p></div>
-        <span id="roadmapCount" class="count-pill">0 items</span>
-      </header>
-      <div class="roadmap-controls sticky-controls">
-        <label class="grow-control"><span class="visually-hidden">Search roadmap</span><input id="roadmapSearch" type="search" placeholder="Search roadmap"></label>
-        <label><span>View</span><select id="roadmapState"><option value="all">All</option><option value="released">Released</option><option value="planned">Planned</option><option value="wishlist">Wishlist</option></select></label>
-        <label><span>Sort</span><select id="roadmapSort"><option value="priority">Priority</option><option value="target">Target release</option><option value="effort">Effort</option><option value="age">Age</option><option value="title">Title</option></select></label>
-      </div>
-      <div id="roadmapList" class="roadmap-list"></div>
-    </section>
-  </main>
+  <main id="mainContent" tabindex="-1" aria-label="Application workspace"></main>
 
   <div class="floating-actions" aria-label="Storage and synchronization status">
     <button id="floatingStatusButton" class="floating-button status-button" type="button" aria-label="Saved locally. GitHub setup required." title="Saved locally. GitHub setup required." data-sync-state="setup" data-shortcut="S">
@@ -108,12 +95,11 @@
 
   <dialog id="notesDialog" class="app-dialog notes-dialog" aria-labelledby="notesDialogTitle">
     <div class="dialog-shell">
-      <header class="dialog-header"><div><span class="eyebrow">Autosaves locally</span><h2 id="notesDialogTitle" class="notes-dialog-title"><span class="notes-dialog-title-icon" aria-hidden="true" data-symbol="notes"></span><span>Notes</span></h2></div><button type="button" class="icon-button" data-close-dialog="notesDialog" aria-label="Close Notes"><span aria-hidden="true" data-symbol="close"></span></button></header>
+      <header class="dialog-header"><div><h2 id="notesDialogTitle" class="notes-dialog-title"><span class="notes-dialog-title-icon" aria-hidden="true" data-symbol="notes"></span><span>Notes</span></h2></div><button type="button" class="icon-button" data-close-dialog="notesDialog" aria-label="Close Notes"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body notes-dialog-body">
         <label class="visually-hidden" for="notesTextarea">Notes</label>
-        <textarea id="notesTextarea" class="notes-textarea" placeholder="Jot down anything…" aria-describedby="notesSaveStatus"></textarea>
+        <textarea id="notesTextarea" class="notes-textarea" placeholder="Jot down anything…"></textarea>
       </div>
-      <footer class="dialog-footer notes-dialog-footer"><span id="notesSaveStatus" role="status" aria-live="polite">Saved locally</span><button type="button" class="button primary" data-close-dialog="notesDialog">Done</button></footer>
     </div>
   </dialog>
 
@@ -192,7 +178,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.1</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.2</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>
@@ -203,7 +189,7 @@
           </section>
 
           <section id="supportRoadmapPanel" class="support-panel" role="tabpanel" aria-labelledby="supportRoadmapTab" data-support-panel="roadmap" hidden>
-            <div class="support-search sticky-controls"><label class="grow-control"><span class="visually-hidden">Search support roadmap</span><input id="supportRoadmapSearch" type="search" placeholder="Search roadmap"></label><select id="supportRoadmapState" aria-label="Roadmap view"><option value="all">All</option><option value="released">Released</option><option value="planned">Planned</option><option value="wishlist">Wishlist</option></select></div>
+            <div class="support-search sticky-controls"><label class="grow-control"><span class="visually-hidden">Search support roadmap</span><input id="supportRoadmapSearch" type="search" placeholder="Search roadmap"></label><select id="supportRoadmapState" aria-label="Roadmap view"><option value="all">All</option><option value="released">Released</option><option value="planned">Planned</option><option value="wishlist">Wishlist</option></select><select id="supportRoadmapSort" aria-label="Sort roadmap"><option value="priority">Priority</option><option value="target">Target release</option><option value="effort">Effort</option><option value="age">Age</option><option value="title">Title</option></select></div>
             <div id="supportRoadmapList" class="roadmap-list compact-roadmap"></div>
           </section>
 

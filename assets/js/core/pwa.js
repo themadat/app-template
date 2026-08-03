@@ -66,6 +66,7 @@
       kind: "info",
       duration: 0,
       actionLabel: "Force refresh",
+      actionSymbol: "arrowClockwise",
       onAction: function () { forceRefresh(worker); }
     });
   }

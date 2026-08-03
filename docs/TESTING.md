@@ -10,11 +10,11 @@
 
 ## Desktop
 
-- [ ] Header, version/Beta pills, centered global search, toolbar, and combined floating storage/sync status fit without horizontal overflow; no Roadmap navigation strip appears.
-- [ ] `/` focuses global search; results route to notes, Help, releases, and Roadmap.
-- [ ] Notes opens as one modal, focuses its textarea, autosaves plain text, appears in global search, and restores focus when closed.
+- [ ] Header, version/Beta pills, centered global search, toolbar, and combined floating storage/sync status fit without horizontal overflow; the main workspace is blank.
+- [ ] `/` focuses global search; results route to Notes, Help, releases, and the Settings Roadmap.
+- [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
-- [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work.
+- [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work inside Settings.
 - [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
 
@@ -30,7 +30,7 @@
 
 - [ ] Visible focus, logical focus order, labels, roles, and ARIA state are correct.
 - [ ] Escape closes menus, popovers, and dialogs and returns focus to the trigger.
-- [ ] `?`, `2`, `N`, `V`, `S`, `E`, and the Developer Mode shortcut work outside editable fields.
+- [ ] `?`, `2`, `N`, `V`, `S`, `E`, `T`, and `D` work outside editable fields both alone and while Shift, Control, or Option is held.
 - [ ] Holding the configured modifier reveals shortcut hints and releasing it hides them.
 - [ ] Tabs and menu items support arrow-key movement.
 - [ ] Reduced-motion mode removes nonessential transitions and animations.
@@ -57,9 +57,9 @@
 
 ## PWA and recovery
 
-- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, Roadmap, and Settings.
+- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, the Settings Roadmap, and Settings.
 - [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
-- [ ] A waiting service worker shows a bottom New version available toast; Force refresh activates it and reloads the browser tab or installed PWA.
+- [ ] A waiting service worker shows a bottom New version available toast; its arrow-only Force refresh action activates it and reloads the browser tab or installed PWA.
 - [ ] Light/dark favicon, manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.

@@ -13,7 +13,7 @@
 
   function demoDocuments(now) {
     return [
-      { id: "app-notes", title: "Notes", html: "This is a simple local note. Start typing to replace it.", order: 0, createdAt: now, updatedAt: now }
+      { id: "app-notes", title: "Notes", html: "", order: 0, createdAt: now, updatedAt: now }
     ];
   }
 
@@ -305,7 +305,8 @@
       if (ordered.length === 1) return text;
       return [item.title, text].filter(Boolean).join("\n\n");
     });
-    const text = u.cleanText(sections.filter(Boolean).join("\n\n—\n\n"), config.controls.maxDocumentHtmlLength);
+    let text = u.cleanText(sections.filter(Boolean).join("\n\n—\n\n"), config.controls.maxDocumentHtmlLength);
+    if (ordered.length === 1 && text === "This is a simple local note. Start typing to replace it.") text = "";
     return [{
       id: "app-notes",
       title: "Notes",

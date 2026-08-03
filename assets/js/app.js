@@ -24,13 +24,14 @@
     { keys: "/", label: "Focus global search", group: "Global" },
     { keys: "Esc", label: "Close a dialog or menu", group: "Global" },
     { keys: "?", label: "Open Help Center", group: "Global" },
-    { keys: "2", label: "Open Roadmap", group: "Navigation" },
+    { keys: "2", label: "Open Roadmap in Settings", group: "Navigation" },
     { keys: "N", label: "Open Notes", group: "Actions" },
     { keys: "V", label: "Open What’s New", group: "Actions" },
     { keys: "S", label: "Run the primary sync action", group: "Actions" },
     { keys: "E", label: "Export a JSON backup", group: "Actions" },
-    { keys: "Arrow keys", label: "Move through tabs, menus, and list choices", group: "Navigation" },
-    { keys: "Ctrl + Alt + Shift + D", label: "Toggle hidden Developer Mode", group: "Developer" }
+    { keys: "T", label: "Switch color theme", group: "Actions" },
+    { keys: "D", label: "Toggle hidden Developer Mode", group: "Developer" },
+    { keys: "Arrow keys", label: "Move through tabs, menus, and list choices", group: "Navigation" }
   ];
 
   function state() {
@@ -98,18 +99,6 @@
     return beta === "1" || beta === "true";
   }
 
-  function renderNavigation() {
-    const active = state().ui.activeModule;
-    $$('[data-module]').forEach(function (button) {
-      const selected = button.dataset.module === active;
-      button.toggleAttribute("hidden", !activeModuleEnabled(button.dataset.module));
-      if (selected) button.setAttribute("aria-current", "page"); else button.removeAttribute("aria-current");
-    });
-    $$('[data-module-surface]').forEach(function (surface) {
-      surface.hidden = surface.dataset.moduleSurface !== active;
-    });
-  }
-
   function renderHeader() {
     const developerMode = config.features.developerTools && state().preferences.controls.developerMode;
     const versionButton = $("#versionButton");
@@ -162,7 +151,6 @@
   function renderNotesEditor() {
     const documentItem = state().workspace.documents[0];
     setInputValue($("#notesTextarea"), documentText(documentItem));
-    $("#notesSaveStatus").textContent = "Saved locally";
   }
 
   function saveNotes(value) {
@@ -173,7 +161,6 @@
       documentItem.html = documentHtml(normalized);
       documentItem.updatedAt = u.isoNow();
     }, { reason: "edit-document" });
-    $("#notesSaveStatus").textContent = "Saving…";
     $("[data-floating-local-label]").textContent = "Saving locally…";
     renderGlobalSearchResults();
   }
@@ -204,15 +191,6 @@
 
   function roadmapCard(item) {
     return '<article class="roadmap-card" data-roadmap-state="' + item.state + '"><header><span class="roadmap-state">' + u.escapeHtml(item.state) + '</span><span class="priority-chip">P' + item.priority + '</span></header><h3>' + u.escapeHtml(item.title) + '</h3><p>' + u.escapeHtml(item.description) + '</p><footer><span>Target ' + u.escapeHtml(item.target) + '</span><span>Effort ' + item.effort + '/4</span><span>Added ' + u.dateLabel(item.createdAt) + "</span></footer></article>";
-  }
-
-  function renderRoadmap() {
-    setInputValue($("#roadmapSearch"), state().modules.roadmap.search);
-    $("#roadmapState").value = state().modules.roadmap.state;
-    $("#roadmapSort").value = state().modules.roadmap.sortBy;
-    const items = filteredRoadmap();
-    $("#roadmapCount").textContent = items.length + " item" + (items.length === 1 ? "" : "s");
-    $("#roadmapList").innerHTML = items.length ? items.map(roadmapCard).join("") : emptyState("No roadmap matches", "Try another search or view.", "Clear roadmap filters", "clear-roadmap-filters");
   }
 
   function globalSearchMatches(query) {
@@ -248,18 +226,17 @@
   function activateGlobalSearchResult(type, id) {
     if (type === "notes") openNotes($("#globalSearch"));
     else if (type === "help") { openSupport("help"); setInputValue($("#helpSearch"), config.help.find(function (topic) { return topic.id === id; })?.title || ""); renderHelp(); }
-    else if (type === "roadmap") { switchModule("roadmap"); storage.mutate(function (next) { next.modules.roadmap.search = config.roadmap.find(function (item) { return item.id === id; })?.title || ""; }, { reason: "roadmap-search" }); renderRoadmap(); }
+    else if (type === "roadmap") {
+      storage.mutate(function (next) { next.modules.roadmap.search = config.roadmap.find(function (item) { return item.id === id; })?.title || ""; }, { reason: "roadmap-search" });
+      openSupport("roadmap", $("#globalSearch"));
+    }
     else if (type === "release") { versionView = "released"; openSupport("releases"); }
     $("#globalSearchResults").hidden = true;
   }
 
   function switchModule(moduleId) {
     if (!activeModuleEnabled(moduleId)) return;
-    storage.mutate(function (next) {
-      next.ui.activeModule = moduleId;
-    }, { reason: "switch-module" });
-    renderNavigation(); renderRoadmap();
-    if (history.replaceState) history.replaceState(null, "", location.pathname + location.search + "#" + moduleId);
+    if (moduleId === "roadmap") openSupport("roadmap");
   }
 
   function openSupport(tab, trigger) {
@@ -373,15 +350,17 @@
   function renderShortcuts() {
     const groups = {};
     SHORTCUTS.forEach(function (shortcut) { (groups[shortcut.group] = groups[shortcut.group] || []).push(shortcut); });
-    $("#shortcutContent").innerHTML = Object.keys(groups).map(function (group) {
+    $("#shortcutContent").innerHTML = '<p class="section-intro">Listed shortcuts also work while Shift, Control, or Option is held. Command-key combinations remain available to the browser.</p>' + Object.keys(groups).map(function (group) {
       return '<section><h3>' + group + "</h3>" + groups[group].map(function (shortcut) { return '<div class="shortcut-row"><kbd>' + u.escapeHtml(shortcut.keys) + '</kbd><span>' + u.escapeHtml(shortcut.label) + "</span></div>"; }).join("") + "</section>";
     }).join("");
   }
 
   function renderSupportRoadmap() {
-    const search = $("#supportRoadmapSearch").value;
-    const roadmapState = $("#supportRoadmapState").value || "all";
-    const items = filteredRoadmap({ search: search, state: roadmapState });
+    const moduleState = state().modules.roadmap;
+    setInputValue($("#supportRoadmapSearch"), moduleState.search);
+    $("#supportRoadmapState").value = moduleState.state;
+    $("#supportRoadmapSort").value = moduleState.sortBy;
+    const items = filteredRoadmap();
     $("#supportRoadmapList").innerHTML = items.length ? items.map(roadmapCard).join("") : emptyState("No roadmap matches", "Try another search or view.");
   }
 
@@ -417,7 +396,7 @@
 
   function clearRoadmapFilters() {
     storage.mutate(function (next) { next.modules.roadmap.search = ""; next.modules.roadmap.state = "all"; next.modules.roadmap.sortBy = "priority"; }, { reason: "clear-roadmap-filters" });
-    renderRoadmap();
+    renderSupportRoadmap();
   }
 
   async function resetPreferences() {
@@ -625,8 +604,18 @@
     $("#resetPreferencesButton").addEventListener("click", resetPreferences);
     $("#eraseAllButton").addEventListener("click", eraseAllData);
     $("#helpSearch").addEventListener("input", renderHelp);
-    $("#supportRoadmapSearch").addEventListener("input", renderSupportRoadmap);
-    $("#supportRoadmapState").addEventListener("change", renderSupportRoadmap);
+    $("#supportRoadmapSearch").addEventListener("input", function (event) {
+      storage.mutate(function (next) { next.modules.roadmap.search = u.cleanLine(event.target.value, 200); }, { reason: "roadmap-filter" });
+      renderSupportRoadmap();
+    });
+    $("#supportRoadmapState").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.roadmap.state = event.target.value; }, { reason: "roadmap-filter" });
+      renderSupportRoadmap();
+    });
+    $("#supportRoadmapSort").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.roadmap.sortBy = event.target.value; }, { reason: "roadmap-sort" });
+      renderSupportRoadmap();
+    });
     $("#restoreRecoveryButton").addEventListener("click", restoreRecovery);
     $("#saveRecoveryButton").addEventListener("click", saveRecoveryCopy);
     $("#disableDeveloperButton").addEventListener("click", function () { toggleDeveloperMode(false); });
@@ -646,25 +635,26 @@
 
   function handleGlobalKeydown(event) {
     updateShortcutHints(event, false);
-    if (event.ctrlKey && event.altKey && event.shiftKey && event.code === "KeyD") { event.preventDefault(); toggleDeveloperMode(undefined, { openPanel: true }); return; }
     if (event.key === "Escape") {
       $("#globalSearchResults").hidden = true;
       return;
     }
     if (u.isEditableTarget(event.target)) return;
-    if (!event.ctrlKey && !event.metaKey && !event.altKey && (event.key === "?" || (event.key === "/" && event.shiftKey))) {
-      event.preventDefault(); openSupport("help", event.target); return;
+    if (event.metaKey) return;
+    if (event.code === "Slash") {
+      event.preventDefault();
+      if (event.shiftKey) openSupport("help", event.target);
+      else { $("#globalSearch").focus(); $("#globalSearch").select(); }
+      return;
     }
-    if (!event.ctrlKey && !event.metaKey && !event.altKey && !event.shiftKey && event.key === "/") {
-      event.preventDefault(); $("#globalSearch").focus(); $("#globalSearch").select(); return;
-    }
-    if (event.ctrlKey || event.metaKey || event.altKey) return;
-    const key = event.key.toLowerCase();
-    if (key === "2" && activeModuleEnabled("roadmap")) { event.preventDefault(); switchModule("roadmap"); }
-    else if (key === "n") { event.preventDefault(); openNotes(event.target); }
-    else if (key === "v") { event.preventDefault(); openSupport("releases", event.target); }
-    else if (key === "s") { event.preventDefault(); sync.syncNow(event.target); }
-    else if (key === "e") { event.preventDefault(); portability.exportJson(); }
+    if (event.repeat) return;
+    if (event.code === "Digit2" && activeModuleEnabled("roadmap")) { event.preventDefault(); openSupport("roadmap", event.target); }
+    else if (event.code === "KeyN") { event.preventDefault(); openNotes(event.target); }
+    else if (event.code === "KeyV") { event.preventDefault(); openSupport("releases", event.target); }
+    else if (event.code === "KeyS") { event.preventDefault(); sync.syncNow(event.target); }
+    else if (event.code === "KeyE") { event.preventDefault(); portability.exportJson(); }
+    else if (event.code === "KeyT") { event.preventDefault(); toggleThemeFromAppIcon(); }
+    else if (event.code === "KeyD") { event.preventDefault(); toggleDeveloperMode(undefined, { openPanel: true }); }
   }
 
   function bindGeneralEvents() {
@@ -710,9 +700,6 @@
     });
     document.addEventListener("focusin", function (event) { if (!event.target.closest(".global-search-wrap")) $("#globalSearchResults").hidden = true; });
 
-    $("#roadmapSearch").addEventListener("input", function (event) { storage.mutate(function (next) { next.modules.roadmap.search = u.cleanLine(event.target.value, 200); }, { reason: "roadmap-filter" }); renderRoadmap(); });
-    $("#roadmapState").addEventListener("change", function (event) { storage.mutate(function (next) { next.modules.roadmap.state = event.target.value; }, { reason: "roadmap-filter" }); renderRoadmap(); });
-    $("#roadmapSort").addEventListener("change", function (event) { storage.mutate(function (next) { next.modules.roadmap.sortBy = event.target.value; }, { reason: "roadmap-sort" }); renderRoadmap(); });
     bindSupportEvents();
     document.addEventListener("keydown", handleGlobalKeydown);
     document.addEventListener("keyup", function (event) { updateShortcutHints(event, false); });
@@ -722,9 +709,7 @@
   function renderAll() {
     applyAppearance();
     renderHeader();
-    renderNavigation();
     renderNotesEditor();
-    if (config.features.roadmap) renderRoadmap();
     renderGlobalSearchResults();
     if ($("#supportDialog").open) renderSupport();
   }
@@ -741,11 +726,10 @@
       requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); $("#syncOwner").focus(); });
     });
     window.addEventListener("app:storageerror", function (event) {
-      $("#notesSaveStatus").textContent = "Not saved";
       components.toast(event.detail.message, { title: event.detail.title, kind: "danger", duration: 0, actionLabel: "Export", onAction: portability.exportJson });
       renderSyncStatus();
     });
-    window.addEventListener("app:statesaved", function () { renderSyncStatus(); $("#notesSaveStatus").textContent = "Saved locally"; });
+    window.addEventListener("app:statesaved", renderSyncStatus);
     window.addEventListener("app:networkchange", function () { document.documentElement.classList.toggle("offline", navigator.onLine === false); renderSyncStatus(); });
     window.addEventListener("app:pwaerror", function (event) { components.toast(event.detail.message, { title: "Offline support unavailable", kind: "warning", duration: 5000 }); });
     window.addEventListener("app:statechange", function (event) {
@@ -757,10 +741,6 @@
       const media = window.matchMedia(query);
       if (typeof media.addEventListener === "function") media.addEventListener("change", applyAppearance);
       else if (typeof media.addListener === "function") media.addListener(applyAppearance);
-    });
-    window.addEventListener("hashchange", function () {
-      const requested = location.hash.slice(1);
-      if (activeModuleEnabled(requested) && requested !== state().ui.activeModule) switchModule(requested);
     });
   }
 
@@ -777,10 +757,6 @@
 
   function init() {
     storage.load();
-    const requestedModule = location.hash.slice(1);
-    if (activeModuleEnabled(requestedModule) && requestedModule !== state().ui.activeModule) {
-      storage.mutate(function (next) { next.ui.activeModule = requestedModule; next.ui.navigation.mobileScreen = "list"; }, { touch: false, reason: "startup-route" });
-    }
     applyIdentity();
     components.init();
     portability.init();
