@@ -41,7 +41,7 @@ Avoid generic abstractions until a second real module needs the same behavior.
 
 ## Publish a version
 
-Update `identity.version`, add the newest release card first, update manifest text if public metadata changed, choose a fresh `buildId`, update the build queries in `index.html`, and set the matching `CACHE_NAME` and `ASSET_VERSION` in `sw.js`. Run the complete checklist in `docs/TESTING.md`.
+Every completed application update increments the patch component of `identity.version` unless an explicit release version was chosen. Add the newest release card first, update manifest text if public metadata changed, choose a fresh `buildId`, update the build queries in `index.html`, and set the matching `CACHE_NAME` and `ASSET_VERSION` in `sw.js`. Include the app version and build id in the commit subject, then run the complete checklist in `docs/TESTING.md`.
 
 ## Icons and PWA assets
 
