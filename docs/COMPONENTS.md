@@ -2,6 +2,10 @@
 
 The shared component layer uses native HTML wherever possible and attaches small behavior helpers through `window.LocalApp.components`. It does not require a framework.
 
+## Icons and labelled actions
+
+Standard interface controls use the shared SF-style inline SVG catalog in `assets/js/icons.js`. The SVG inherits `currentColor`; the control owns the accessible name and the decorative icon stays `aria-hidden`. Primary shell and module actions place the symbol above a small title-case label. If no appropriate symbol exists, add one to the catalog instead of using emoji or an icon font.
+
 ## Dialogs, sheets and confirmations
 
 `components.openDialog(dialog, options)` records the trigger, opens the native modal, and focuses the requested or first appropriate control. Closing restores focus. Escape uses the native dialog lifecycle. On small screens, application dialogs become full-screen surfaces with one page scroll; a dialog can use the same structure as a mobile sheet without nested scrolling.

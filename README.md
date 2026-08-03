@@ -145,6 +145,7 @@ After replacing icons:
 | Area | Responsibility | Classification |
 | --- | --- | --- |
 | `index.html`, `assets/css/app.css`, `assets/js/app.js` | Application shell, responsive workspaces, event wiring | Required foundation |
+| `assets/js/icons.js` | Shared inline SVG symbols for interface controls | Shared reusable components |
 | `assets/js/core/state.js`, `storage.js`, `utils.js` | State defaults, validation, migrations, local persistence, defensive utilities | Required foundation |
 | `assets/js/core/components.js` | Dialogs, menus, popovers, toasts, status and focus behavior | Shared reusable components |
 | `assets/js/core/portability.js` | Safe JSON backup preview, confirmation, import and export | Required foundation |
@@ -180,11 +181,12 @@ Imports accept this format plus the documented older wrappers and bare legacy st
 ## Main customization points
 
 - Rename and version the product in `assets/js/config.js`; mirror public install metadata in both manifest files.
-- The header shows only the configured application name. Click or tap its icon to switch light/dark themes; press and hold the icon to toggle Developer Mode. Developer Mode adds a version pill beneath the name.
+- The header shows only the configured application name. Click or tap its icon to switch light/dark themes; press and hold the icon to toggle Developer Mode. Developer Mode adds `DEV` to the existing version pill.
 - A `BETA` pill appears beneath the application name when the app is served from a `/beta/` path or opened with `?beta=1` or `?beta=true`.
 - Installation uses the browser or operating system controls; the template intentionally has no Add as App modal.
 - Replace neutral demonstration records and documents in `assets/js/core/state.js`.
 - Edit CSS variables in `assets/css/app.css`, then adjust presets and editable color defaults in `assets/js/config.js`.
+- The interface uses a Helvetica font stack and shared SF-style inline SVG symbols from `assets/js/icons.js`. Use `data-symbol="name"` in static markup and `LocalApp.icons.markup("name")` when generating trusted interface markup.
 - Register shortcuts in the `SHORTCUTS` list and keyboard handler in `assets/js/app.js`.
 - Add sequential migrations in `assets/js/core/state.js`; never rewrite old migration behavior after release.
 - Add release notes, roadmap entries, and help topics as structured arrays in `assets/js/config.js`.

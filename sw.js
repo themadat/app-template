@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "local-workspace-shell-2026.08.02.1";
+const CACHE_NAME = "local-workspace-shell-2026.08.02.2";
 const SHELL = [
   "./",
   "./index.html",
@@ -8,6 +8,7 @@ const SHELL = [
   "./manifest-dark.webmanifest",
   "./assets/css/app.css",
   "./assets/js/config.js",
+  "./assets/js/icons.js",
   "./assets/js/core/utils.js",
   "./assets/js/core/state.js",
   "./assets/js/core/storage.js",

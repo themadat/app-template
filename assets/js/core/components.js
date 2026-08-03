@@ -175,7 +175,8 @@
       const icon = document.createElement("span");
       icon.className = "menu-icon";
       icon.setAttribute("aria-hidden", "true");
-      icon.textContent = item.icon || "•";
+      if (item.symbol && window.LocalApp.icons) window.LocalApp.icons.set(icon, item.symbol);
+      else icon.textContent = item.icon || "•";
       const label = document.createElement("span");
       label.textContent = item.label;
       button.append(icon, label);

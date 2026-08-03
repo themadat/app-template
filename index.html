@@ -19,6 +19,7 @@
   <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="assets/css/app.css">
   <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/icons.js"></script>
   <script defer src="assets/js/core/utils.js"></script>
   <script defer src="assets/js/core/state.js"></script>
   <script defer src="assets/js/core/storage.js"></script>
@@ -40,14 +41,13 @@
         <span id="appName" class="app-name">Local Workspace</span>
         <div class="identity-pill-row">
           <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes">v1.0.0</button>
-          <span id="developerModePill" class="developer-mode-pill" title="Developer Mode is enabled" hidden>Dev Mode v1.0.0</span>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
     </div>
 
     <div class="global-search-wrap">
-      <span class="search-icon" aria-hidden="true">⌕</span>
+      <span class="search-icon" aria-hidden="true" data-symbol="search"></span>
       <label class="visually-hidden" for="globalSearch">Search records, documents, help, and roadmap</label>
       <input id="globalSearch" type="search" autocomplete="off" placeholder="Search workspace" aria-haspopup="listbox" aria-controls="globalSearchResults" data-shortcut="/">
       <kbd aria-hidden="true">/</kbd>
@@ -56,19 +56,19 @@
 
     <div class="top-toolbar" aria-label="Application actions">
       <button id="newItemButton" class="button primary action-button" type="button" data-action="new" data-shortcut="N">
-        <span class="button-icon" aria-hidden="true">＋</span><span class="button-label">New</span>
+        <span class="button-icon" aria-hidden="true" data-symbol="add"></span><span class="button-label">New</span>
       </button>
       <button id="toggleListPanelButton" class="button icon-button action-button" type="button" aria-label="Toggle list panel" title="Toggle list panel" aria-pressed="true" data-shortcut="L">
-        <span class="button-icon" aria-hidden="true">☰</span><span class="button-label">List</span>
+        <span class="button-icon" aria-hidden="true" data-symbol="list"></span><span class="button-label">List</span>
       </button>
       <button id="toggleDetailPanelButton" class="button icon-button action-button" type="button" aria-label="Toggle detail panel" title="Toggle detail panel" aria-pressed="true" data-shortcut="D">
-        <span class="button-icon" aria-hidden="true">▤</span><span class="button-label">Detail</span>
+        <span class="button-icon" aria-hidden="true" data-symbol="detail"></span><span class="button-label">Detail</span>
       </button>
       <button id="syncToolbarButton" class="button icon-button action-button sync-button" type="button" aria-label="GitHub synchronization" title="GitHub synchronization" data-sync-state="setup" data-shortcut="S">
-        <span class="button-icon" aria-hidden="true" data-sync-icon>○</span><span class="button-label">Sync</span>
+        <span class="button-icon" aria-hidden="true" data-symbol="sync"></span><span class="button-label">Sync</span>
       </button>
       <button id="supportButton" class="button icon-button action-button" type="button" aria-label="Settings and help" title="Settings and help" data-shortcut="?">
-        <span class="button-icon" aria-hidden="true">⚙</span><span class="button-label">Support</span>
+        <span class="button-icon" aria-hidden="true" data-symbol="support"></span><span class="button-label">Support</span>
         <span id="releaseUnreadDot" class="unread-dot" aria-label="Unread release notes" hidden></span>
       </button>
     </div>
@@ -80,9 +80,9 @@
   </header>
 
   <nav id="moduleNav" class="module-nav" aria-label="Primary modules">
-    <button type="button" data-module="records" aria-current="page" data-shortcut="1"><span aria-hidden="true">▦</span><span>Records</span></button>
-    <button type="button" data-module="documents" data-shortcut="2"><span aria-hidden="true">▧</span><span>Documents</span></button>
-    <button type="button" data-module="roadmap" data-shortcut="3"><span aria-hidden="true">⌁</span><span>Roadmap</span></button>
+    <button type="button" data-module="records" aria-current="page" data-shortcut="1"><span class="module-icon" aria-hidden="true" data-symbol="records"></span><span class="module-label">Records</span></button>
+    <button type="button" data-module="documents" data-shortcut="2"><span class="module-icon" aria-hidden="true" data-symbol="documents"></span><span class="module-label">Documents</span></button>
+    <button type="button" data-module="roadmap" data-shortcut="3"><span class="module-icon" aria-hidden="true" data-symbol="roadmap"></span><span class="module-label">Roadmap</span></button>
   </nav>
 
   <aside id="whatsNewBanner" class="whats-new-banner" aria-labelledby="whatsNewTitle" hidden>
@@ -100,7 +100,7 @@
   <aside id="contextHint" class="context-hint" data-hint-key="workspace-basics" hidden>
     <span aria-hidden="true">i</span>
     <p>Use the list to choose an item and the detail panel to edit it. Changes save automatically.</p>
-    <button type="button" class="icon-button" data-dismiss-hint="workspace-basics" aria-label="Dismiss hint">×</button>
+    <button type="button" class="icon-button" data-dismiss-hint="workspace-basics" aria-label="Dismiss hint"><span aria-hidden="true" data-symbol="close"></span></button>
   </aside>
 
   <main id="mainContent" tabindex="-1">
@@ -114,8 +114,8 @@
               <strong id="recordResultCount">0 items</strong>
             </div>
             <div class="panel-header-actions">
-              <button id="recordViewModeButton" class="button icon-button" type="button" aria-label="Toggle record density" title="Toggle record density" aria-pressed="false"><span aria-hidden="true">≡</span></button>
-              <button class="button icon-button" type="button" data-action="new-record" aria-label="Add record" title="Add record"><span aria-hidden="true">＋</span></button>
+              <button id="recordViewModeButton" class="button icon-button" type="button" aria-label="Toggle record density" title="Toggle record density" aria-pressed="false"><span aria-hidden="true" data-symbol="list"></span></button>
+              <button class="button icon-button" type="button" data-action="new-record" aria-label="Add record" title="Add record"><span aria-hidden="true" data-symbol="addCircle"></span></button>
             </div>
           </header>
           <div class="records-controls sticky-controls">
@@ -125,7 +125,7 @@
               <option value="order">Custom order</option><option value="title">Title</option><option value="status">Status</option><option value="updatedAt">Recently updated</option><option value="createdAt">Recently created</option>
             </select></label>
             <button id="recordSortDirection" class="button icon-button" type="button" aria-label="Reverse sort direction" title="Reverse sort direction" aria-pressed="false">↕</button>
-            <button id="favoritesFilter" class="button icon-button" type="button" aria-label="Show favorites only" title="Show favorites only" aria-pressed="false">★</button>
+            <button id="favoritesFilter" class="button icon-button" type="button" aria-label="Show favorites only" title="Show favorites only" aria-pressed="false"><span aria-hidden="true" data-symbol="favorite"></span></button>
           </div>
           <div id="recordListState" class="content-state" hidden></div>
           <div id="recordList" class="record-list" role="listbox" aria-label="Records" aria-activedescendant=""></div>
@@ -145,7 +145,7 @@
         <section class="workspace-panel list-panel" data-panel="list" aria-label="Document list">
           <header class="panel-header">
             <div><span class="eyebrow">Documents</span><strong id="documentResultCount">0 documents</strong></div>
-            <button class="button icon-button" type="button" data-action="new-document" aria-label="Add document" title="Add document"><span aria-hidden="true">＋</span></button>
+            <button class="button icon-button" type="button" data-action="new-document" aria-label="Add document" title="Add document"><span aria-hidden="true" data-symbol="addCircle"></span></button>
           </header>
           <div class="sticky-controls documents-controls">
             <label class="grow-control"><span class="visually-hidden">Search documents</span><input id="documentSearch" type="search" placeholder="Search documents"></label>
@@ -178,13 +178,13 @@
   </main>
 
   <div class="floating-actions" aria-label="Quick actions">
-    <button id="floatingAddButton" class="floating-button primary" type="button" data-action="new" aria-label="Add item" title="Add item"><span aria-hidden="true">＋</span></button>
+    <button id="floatingAddButton" class="floating-button primary" type="button" data-action="new" aria-label="Add item" title="Add item"><span aria-hidden="true" data-symbol="addCircle"></span></button>
     <button id="floatingStatusButton" class="floating-button status-button" type="button" aria-label="Global status" title="Global status" data-sync-state="setup"><span data-floating-status-icon aria-hidden="true">○</span></button>
   </div>
 
   <dialog id="recordDialog" class="app-dialog form-dialog" aria-labelledby="recordDialogTitle">
     <form id="recordCreateForm" method="dialog">
-      <header class="dialog-header"><div><span class="eyebrow">Records</span><h2 id="recordDialogTitle">New record</h2></div><button type="button" class="icon-button" data-close-dialog="recordDialog" aria-label="Close">×</button></header>
+      <header class="dialog-header"><div><span class="eyebrow">Records</span><h2 id="recordDialogTitle">New record</h2></div><button type="button" class="icon-button" data-close-dialog="recordDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body form-grid">
         <label class="field full"><span>Title</span><input id="newRecordTitle" name="title" maxlength="140" required data-initial-focus></label>
         <label class="field"><span>Category</span><input id="newRecordCategory" name="category" maxlength="60" value="General"></label>
@@ -199,7 +199,7 @@
 
   <dialog id="documentDialog" class="app-dialog form-dialog" aria-labelledby="documentDialogTitle">
     <form id="documentCreateForm" method="dialog">
-      <header class="dialog-header"><div><span class="eyebrow">Documents</span><h2 id="documentDialogTitle">New document</h2></div><button type="button" class="icon-button" data-close-dialog="documentDialog" aria-label="Close">×</button></header>
+      <header class="dialog-header"><div><span class="eyebrow">Documents</span><h2 id="documentDialogTitle">New document</h2></div><button type="button" class="icon-button" data-close-dialog="documentDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body"><label class="field"><span>Title</span><input id="newDocumentTitle" name="title" maxlength="140" required data-initial-focus></label></div>
       <footer class="dialog-footer"><button type="button" class="button" data-close-dialog="documentDialog">Cancel</button><button type="submit" class="button primary">Add document</button></footer>
     </form>
@@ -207,7 +207,7 @@
 
   <dialog id="linkDialog" class="app-dialog small-dialog" aria-labelledby="linkDialogTitle">
     <form id="linkForm" method="dialog">
-      <header class="dialog-header"><h2 id="linkDialogTitle">Add document link</h2><button type="button" class="icon-button" data-close-dialog="linkDialog" aria-label="Close">×</button></header>
+      <header class="dialog-header"><h2 id="linkDialogTitle">Add document link</h2><button type="button" class="icon-button" data-close-dialog="linkDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body"><label class="field"><span>Web address</span><input id="documentLinkInput" type="url" inputmode="url" placeholder="https://example.com" data-initial-focus></label><p class="field-help">Select text in the document before opening this dialog.</p></div>
       <footer class="dialog-footer"><button type="button" class="button" data-close-dialog="linkDialog">Cancel</button><button type="submit" class="button primary">Add link</button></footer>
     </form>
@@ -215,7 +215,7 @@
 
   <dialog id="supportDialog" class="app-dialog support-dialog" aria-labelledby="supportDialogTitle" data-backdrop-close="false">
     <div class="dialog-shell">
-      <header class="dialog-header support-header"><div><span class="eyebrow">Application support</span><h2 id="supportDialogTitle">Settings & Help</h2></div><button type="button" class="icon-button" data-close-dialog="supportDialog" aria-label="Close">×</button></header>
+      <header class="dialog-header support-header"><div><span class="eyebrow">Application support</span><h2 id="supportDialogTitle">Settings & Help</h2></div><button type="button" class="icon-button" data-close-dialog="supportDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="support-layout">
         <div class="support-tabs" role="tablist" aria-label="Support sections">
           <button id="settingsTab" type="button" role="tab" aria-selected="true" aria-controls="settingsPanel" data-support-tab="settings">Settings</button>
@@ -315,7 +315,7 @@
 
   <dialog id="importPreviewDialog" class="app-dialog import-dialog" aria-labelledby="importPreviewTitle" data-backdrop-close="false">
     <div class="dialog-shell">
-      <header class="dialog-header"><div><span class="eyebrow">Validated backup</span><h2 id="importPreviewTitle">Review import</h2></div><button type="button" class="icon-button" data-close-dialog="importPreviewDialog" aria-label="Close">×</button></header>
+      <header class="dialog-header"><div><span class="eyebrow">Validated backup</span><h2 id="importPreviewTitle">Review import</h2></div><button type="button" class="icon-button" data-close-dialog="importPreviewDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body">
         <p><strong data-import-file></strong> passed parsing, migration, sanitization, normalization, and validation.</p>
         <dl class="preview-grid"><div><dt>Workspace</dt><dd data-import-workspace></dd></div><div><dt>Records</dt><dd data-import-records></dd></div><div><dt>Documents</dt><dd data-import-documents></dd></div><div><dt>Categories</dt><dd data-import-categories></dd></div><div><dt>Versions</dt><dd data-import-version></dd></div><div><dt>Last updated</dt><dd data-import-updated></dd></div><div data-import-migrations-row><dt>Migrations</dt><dd data-import-migrations></dd></div></dl>
@@ -349,7 +349,7 @@
   <div id="globalPopover" class="global-popover" hidden></div>
 
   <aside id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
-    <span class="toast-mark" aria-hidden="true">●</span><div><strong data-toast-title>Saved</strong><span data-toast-message></span></div><button type="button" class="button small" data-toast-action hidden></button><button type="button" class="icon-button" data-toast-close aria-label="Dismiss notification">×</button>
+    <span class="toast-mark" aria-hidden="true">●</span><div><strong data-toast-title>Saved</strong><span data-toast-message></span></div><button type="button" class="button small" data-toast-action hidden></button><button type="button" class="icon-button" data-toast-close aria-label="Dismiss notification"><span aria-hidden="true" data-symbol="close"></span></button>
   </aside>
 
   <div id="loadingOverlay" class="loading-overlay" role="status" aria-live="polite" hidden><div class="loading-card"><span class="spinner" aria-hidden="true"></span><strong data-loading-label>Loading…</strong></div></div>
