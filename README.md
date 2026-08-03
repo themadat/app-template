@@ -180,6 +180,9 @@ Imports accept this format plus the documented older wrappers and bare legacy st
 ## Main customization points
 
 - Rename and version the product in `assets/js/config.js`; mirror public install metadata in both manifest files.
+- The header shows only the configured application name. Click or tap its icon to switch light/dark themes; press and hold the icon to toggle Developer Mode. Developer Mode adds a version pill beneath the name.
+- A `BETA` pill appears beneath the application name when the app is served from a `/beta/` path or opened with `?beta=1` or `?beta=true`.
+- Installation uses the browser or operating system controls; the template intentionally has no Add as App modal.
 - Replace neutral demonstration records and documents in `assets/js/core/state.js`.
 - Edit CSS variables in `assets/css/app.css`, then adjust presets and editable color defaults in `assets/js/config.js`.
 - Register shortcuts in the `SHORTCUTS` list and keyboard handler in `assets/js/app.js`.

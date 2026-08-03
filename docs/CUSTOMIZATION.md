@@ -38,7 +38,6 @@ Feature flags are in `assets/js/config.js`:
 | `cloudSync` | GitHub configuration and status controls |
 | `roadmap` | Searchable released/planned/wishlist view |
 | `developerTools` | Hidden diagnostics and test tools |
-| `installation` | Device-specific install helper |
 | `hints` | Contextual hint system |
 | `demoData` | First-run sample records and documents |
 
@@ -52,8 +51,9 @@ After disabling its feature flag and testing old-state normalization:
 - GitHub sync: remove `assets/js/core/sync.js`, its script tag, sync settings/status markup, and the file from the service-worker shell list. Keep JSON import/export.
 - Roadmap: remove the roadmap markup, navigation, configuration data and render functions.
 - Developer tools: remove its tab panel and rendering/actions. Diagnostics are never required at runtime.
-- Installation helper: remove `assets/js/core/pwa.js` only if you also remove install/update guidance; keep service-worker registration elsewhere if offline support remains required.
 - Hints: remove the hint banner and actions after defaulting the normalized hint state safely.
+
+`assets/js/core/pwa.js` remains foundation code: it registers the service worker, announces updates, detects broad device categories for diagnostics, and keeps manifest, icon, and theme-color assets aligned with the active appearance. Installation itself uses the browser or operating system UI; the template does not include an Add as App modal.
 
 Always remove stale asset paths from `sw.js`; one missing precache resource can prevent a new shell from installing.
 

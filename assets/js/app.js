@@ -15,6 +15,8 @@
   let savedDocumentSelection = null;
   let versionView = "released";
   let hintModifierActive = false;
+  let appIconHoldTimer = 0;
+  let appIconHoldHandled = false;
 
   const $ = function (selector, root) { return (root || document).querySelector(selector); };
   const $$ = function (selector, root) { return Array.from((root || document).querySelectorAll(selector)); };
@@ -57,6 +59,7 @@
     $("#appName").textContent = config.identity.name;
     $("#versionButton").textContent = "v" + config.identity.version;
     $("#versionButton").setAttribute("aria-label", "Open release notes for version " + config.identity.version);
+    $("#developerModePill").textContent = "Dev Mode v" + config.identity.version;
     $("#appIcon").src = config.identity.assets.appIconLight;
     $("#releaseCurrentVersion").textContent = "v" + config.identity.version;
     if (!config.features.documents) {
@@ -91,7 +94,18 @@
     root.style.setProperty("--warning", appearance.warning);
     root.style.setProperty("--danger", appearance.danger);
     $("#appIcon").src = dark ? config.identity.assets.appIconDark : config.identity.assets.appIconLight;
+    const iconButton = $("#appIconButton");
+    const nextTheme = dark ? "light" : "dark";
+    iconButton.setAttribute("aria-label", "Switch to " + nextTheme + " theme. Press and hold to toggle Developer Mode");
+    iconButton.title = "Switch to " + nextTheme + " theme · Press and hold for Developer Mode";
     pwa.applyAppearanceAssets?.();
+  }
+
+  function isBetaDeploy() {
+    const path = (location.pathname || "").toLowerCase();
+    if (/\/beta(\/|$)/.test(path)) return true;
+    const beta = new URLSearchParams(location.search || "").get("beta");
+    return beta === "1" || beta === "true";
   }
 
   function renderNavigation() {
@@ -130,7 +144,10 @@
   }
 
   function renderHeader() {
-    $("#workspaceTitle").textContent = state().workspace.title;
+    const developerMode = config.features.developerTools && state().preferences.controls.developerMode;
+    $("#developerModePill").hidden = !developerMode;
+    $("#betaPill").hidden = !isBetaDeploy();
+    document.documentElement.dataset.developer = developerMode ? "on" : "off";
     setInputValue($("#globalSearch"), state().ui.search);
     renderSyncStatus();
     const latest = config.releases[0];
@@ -967,17 +984,66 @@
     }
   }
 
-  function toggleDeveloperMode(force) {
+  function toggleDeveloperMode(force, options) {
     if (!config.features.developerTools) return;
     storage.mutate(function (next) { next.preferences.controls.developerMode = typeof force === "boolean" ? force : !next.preferences.controls.developerMode; }, { reason: "developer-mode" });
     $("#developerTab").hidden = !state().preferences.controls.developerMode;
+    renderHeader();
     if (state().preferences.controls.developerMode) {
       components.toast("Developer Mode is available in Settings & Help.", { title: "Developer Mode on", kind: "info" });
-      openSupport("developer");
+      if (options && options.openPanel) openSupport("developer");
     } else {
       if (state().ui.supportTab === "developer") switchSupportTab("settings");
       components.toast("Developer tools are hidden.", { title: "Developer Mode off", kind: "info" });
     }
+  }
+
+  function toggleThemeFromAppIcon() {
+    const nextMode = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    storage.mutate(function (next) { next.preferences.appearance.mode = nextMode; }, { reason: "appearance" });
+    applyAppearance();
+    if ($("#supportDialog").open && state().ui.supportTab === "settings") renderSettings();
+    components.toast(nextMode === "dark" ? "Dark theme is active." : "Light theme is active.", { title: "Theme changed", kind: "info", duration: 2200 });
+  }
+
+  function bindAppIconGestures() {
+    const button = $("#appIconButton");
+    let startX = 0;
+    let startY = 0;
+
+    function cancelHold() {
+      window.clearTimeout(appIconHoldTimer);
+      appIconHoldTimer = 0;
+      delete button.dataset.holdActive;
+    }
+
+    button.addEventListener("pointerdown", function (event) {
+      if (event.button !== 0) return;
+      cancelHold();
+      appIconHoldHandled = false;
+      startX = event.clientX;
+      startY = event.clientY;
+      button.dataset.holdActive = "true";
+      appIconHoldTimer = window.setTimeout(function () {
+        appIconHoldTimer = 0;
+        appIconHoldHandled = true;
+        delete button.dataset.holdActive;
+        toggleDeveloperMode();
+        window.setTimeout(function () { appIconHoldHandled = false; }, 900);
+      }, 620);
+    });
+    button.addEventListener("pointermove", function (event) {
+      if (Math.abs(event.clientX - startX) > 10 || Math.abs(event.clientY - startY) > 10) cancelHold();
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach(function (name) { button.addEventListener(name, cancelHold); });
+    button.addEventListener("click", function (event) {
+      if (appIconHoldHandled) {
+        event.preventDefault();
+        appIconHoldHandled = false;
+        return;
+      }
+      toggleThemeFromAppIcon();
+    });
   }
 
   function applyEditorCommand(command, value) {
@@ -1211,7 +1277,7 @@
 
   function handleGlobalKeydown(event) {
     updateShortcutHints(event, false);
-    if (event.ctrlKey && event.altKey && event.shiftKey && event.code === "KeyD") { event.preventDefault(); toggleDeveloperMode(); return; }
+    if (event.ctrlKey && event.altKey && event.shiftKey && event.code === "KeyD") { event.preventDefault(); toggleDeveloperMode(undefined, { openPanel: true }); return; }
     if (event.key === "Escape") {
       $("#globalSearchResults").hidden = true;
       if (!$$("dialog").some(function (dialog) { return dialog.open; }) && state().ui.navigation.mobileScreen === "detail" && window.innerWidth < 700) mobileBack();
@@ -1235,8 +1301,7 @@
   }
 
   function bindGeneralEvents() {
-    $("#appIconButton").addEventListener("click", function (event) { pwa.openInstall(event.currentTarget); });
-    $("#workspaceTitleButton").addEventListener("click", function (event) { $("#renameInput").value = state().workspace.title; components.openDialog("#renameDialog", { trigger: event.currentTarget, focus: "#renameInput" }); });
+    bindAppIconGestures();
     $("#versionButton").addEventListener("click", function (event) { openSupport("releases", event.currentTarget); });
     $("#supportButton").addEventListener("click", function (event) { openSupport(state().ui.supportTab, event.currentTarget); });
     $("#newItemButton").addEventListener("click", function (event) { openNewForActive(event.currentTarget); });
@@ -1297,8 +1362,6 @@
       addRecord({ title: $("#newRecordTitle").value, category: $("#newRecordCategory").value, status: $("#newRecordStatus").value, summary: $("#newRecordSummary").value, tags: $("#newRecordTags").value, url: $("#newRecordUrl").value });
       components.closeDialog("#recordDialog", "created");
     });
-    $("#renameForm").addEventListener("submit", function (event) { event.preventDefault(); storage.mutate(function (next) { next.workspace.title = u.cleanLine($("#renameInput").value, 100) || "My Workspace"; }, { reason: "rename-workspace" }); components.closeDialog("#renameDialog", "saved"); renderHeader(); });
-
     $("#documentSearch").addEventListener("input", function (event) { storage.mutate(function (next) { next.ui.documents.search = u.cleanLine(event.target.value, 200); }, { reason: "document-search" }); renderDocumentList(); });
     $("#documentSort").addEventListener("change", function (event) { storage.mutate(function (next) { next.ui.documents.sortBy = event.target.value; }, { reason: "document-sort" }); renderDocumentList(); });
     const rememberRecordScroll = u.debounce(function () { storage.mutate(function (next) { next.ui.navigation.recordsScrollTop = $("#recordList").scrollTop; }, { touch: false, reason: "record-scroll" }); }, 180);
@@ -1329,8 +1392,6 @@
     $("#roadmapSearch").addEventListener("input", function (event) { storage.mutate(function (next) { next.modules.roadmap.search = u.cleanLine(event.target.value, 200); }, { reason: "roadmap-filter" }); renderRoadmap(); });
     $("#roadmapState").addEventListener("change", function (event) { storage.mutate(function (next) { next.modules.roadmap.state = event.target.value; }, { reason: "roadmap-filter" }); renderRoadmap(); });
     $("#roadmapSort").addEventListener("change", function (event) { storage.mutate(function (next) { next.modules.roadmap.sortBy = event.target.value; }, { reason: "roadmap-sort" }); renderRoadmap(); });
-    $("#installDialog")?.addEventListener("close", function () { savedDocumentSelection = null; });
-
     bindRecordList(); bindDocumentList(); bindSupportEvents();
     bindDivider($("#recordsDivider")); bindDivider($("#documentsDivider"));
     document.addEventListener("keydown", handleGlobalKeydown);

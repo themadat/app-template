@@ -26,7 +26,7 @@ assets/
       components.js            Dialogs, confirmations, toasts, popovers, focus management
       portability.js           JSON export, import parsing, preview, replacement
       sync.js                  Optional GitHub Contents API state machine
-      pwa.js                   Service worker, install/update/device/offline behavior
+      pwa.js                   Service worker, update, device diagnostics, theme-aware assets
     app.js                     Shell rendering, event wiring, records/documents/support modules
 docs/
   SOURCE-AUDIT.md              Evidence and decisions from both source applications
@@ -164,10 +164,10 @@ Migrations demonstrate renamed, removed, split, and combined fields. Unknown fie
 - Cache only the versioned application shell and local assets.
 - Use cache-first for shell assets and navigation fallback; optional GitHub API requests remain network-only.
 - Install a new cache atomically and remove old application caches during activation.
-- Continue running if service workers, caches, install prompts, or storage estimates are unavailable.
+- Continue running if service workers, caches, native browser installation, or storage estimates are unavailable.
 - Announce an installed update and let the user explicitly refresh.
 - Switch light/dark manifest and icon references when appearance changes.
-- Provide device-specific instructions for iPhone, iPad, Android, Mac, and Windows/other PCs.
+- Leave installation to the browser or operating system rather than intercepting its prompt with an in-app modal.
 
 ## Cloud synchronization conflict strategy
 
@@ -192,7 +192,6 @@ Browser storage cannot make a personal access token cryptographically secure. Th
 - GitHub synchronization (`features.cloudSync`).
 - Roadmap (`features.roadmap`).
 - Developer tools (`features.developerTools`).
-- Installation helper (`features.installation`).
 - Contextual hints (`features.hints`).
 - Demonstration records (`features.demoData`, replaced on first-run customization).
 
