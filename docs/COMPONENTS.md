@@ -2,7 +2,7 @@
 
 ## Dialogs and choices
 
-`components.openDialog()` stores the trigger, opens a native modal, and focuses the requested or first appropriate control. Closing restores focus. Confirmation, message, choice, import-preview, creation, and Support dialogs share this lifecycle. On mobile, application dialogs become full-screen surfaces with one scrolling panel.
+`components.openDialog()` stores the trigger, opens a native modal, and focuses the requested or first appropriate control. Closing restores focus. Confirmation, message, choice, import-preview, creation, and Settings dialogs share this lifecycle. On mobile, application dialogs become full-screen surfaces with one scrolling panel.
 
 Use `components.confirm()` for destructive operations and `components.choose()` when the user must explicitly select among safe alternatives such as sync merge/upload/download.
 
@@ -24,7 +24,7 @@ Notes is one large plain-text textarea in a native modal. It opens from the visi
 
 ## Global search
 
-`/` focuses the global search unless the user is already editing a field. Results include Notes, Help topics, release entries, and Roadmap items. Result activation opens the relevant dialog, module, or Support view.
+`/` focuses the centered global search unless the user is already editing a field. Results include Notes, Help topics, release entries, and Roadmap items. Result activation opens the relevant dialog, module, or Settings view.
 
 ## Shortcut hints
 
