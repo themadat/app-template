@@ -13,6 +13,7 @@
 - [ ] Header, version/Beta pills, global search, toolbar, status, and module navigation fit without horizontal overflow.
 - [ ] `/` focuses global search; results route to notes, Help, releases, and Roadmap.
 - [ ] Notes opens as one modal, focuses its textarea, autosaves plain text, appears in global search, and restores focus when closed.
+- [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
 - [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work.
 - [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.

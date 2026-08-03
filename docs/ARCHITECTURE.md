@@ -25,8 +25,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "1.0.1",
-    "buildId": "2026.08.03.3",
+    "appVersion": "1.0.1.1",
+    "buildId": "1.0.1.1",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",

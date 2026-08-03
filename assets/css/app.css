@@ -369,6 +369,8 @@ dialog::backdrop { background: rgba(10, 16, 14, .56); backdrop-filter: blur(3px)
 .form-dialog { width: min(620px, calc(100vw - 2rem)); }
 .choice-dialog { width: min(560px, calc(100vw - 2rem)); }
 .notes-dialog { width: min(900px, calc(100vw - 2rem)); height: min(80svh, 760px); }
+.notes-dialog-title { display: flex; align-items: center; gap: .45rem; }
+.notes-dialog-title-icon { display: inline-grid; place-items: center; color: var(--accent-strong); font-size: 1.05rem; }
 .notes-dialog-body { display: flex; min-height: 0; }
 .notes-textarea { flex: 1 1 auto; width: 100%; min-height: 0; resize: none; font-size: calc(1rem * var(--reading-scale)); line-height: 1.65; }
 .notes-dialog-footer { align-items: center; justify-content: space-between; color: var(--muted); font-size: .75rem; }
@@ -438,8 +440,8 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .version-views { margin-bottom: .8rem; }
 .release-list { display: grid; gap: .7rem; }
 .release-card { padding: .9rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-.release-card header { display: flex; justify-content: space-between; align-items: flex-start; gap: .7rem; }
-.release-card header > div { display: flex; align-items: center; gap: .55rem; }
+.release-card header { display: grid; gap: .45rem; }
+.release-version-line { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; }
 .release-card h4 { margin: 0; }
 .release-card time { color: var(--muted); font-size: .72rem; }
 .release-card > p { color: var(--muted); }
@@ -571,8 +573,6 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .danger-zone { align-items: stretch; flex-direction: column; }
   .danger-zone .button { width: 100%; }
   .release-summary { flex-direction: column; }
-  .release-card header { flex-direction: column; }
-  .release-card header > div { flex-wrap: wrap; }
   .release-sections { grid-template-columns: 1fr; }
   .shortcut-content { grid-template-columns: 1fr; }
   .preview-grid { grid-template-columns: 1fr; }

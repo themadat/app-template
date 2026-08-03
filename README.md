@@ -28,7 +28,7 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
 3. Replace the single demonstration note in `demoDocuments()` inside `assets/js/core/state.js`.
 4. Extend or replace the Notes dialog and Roadmap surface in `index.html` and `assets/js/app.js`. Preserve the shared core modules unless the corresponding feature is deliberately removed.
-5. For every completed application update, increment the patch component of `identity.version` (or use an explicitly chosen release version), add the matching release entry, choose a fresh `identity.buildId`, update the build query values in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
+5. Use `major.minor.patch.build` versions. Increment the fourth number for every completed application update; when intentionally changing major, minor, or patch, reset the build number to `1` unless another value is required. Keep `identity.buildId` equal to the full version, add the matching dated release entry, update the build query values in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
 
 ## Project structure
 
@@ -72,7 +72,7 @@ Editable sources and generated install assets are in `assets/icons/`. Keep the e
    - `apple-touch-icon-dark.png` at 180 × 180
 
 5. Replace `splash-light.svg` and `splash-dark.svg`, then export `splash-light.png` and `splash-dark.png` at 1170 × 1170.
-6. Advance the app version and build identifier, add the matching release entry, update the build queries in `index.html`, and update both `CACHE_NAME` and `ASSET_VERSION` in `sw.js` so installed copies receive the assets.
+6. Advance the fourth component of the app version, use the same full version as the build identifier, add the matching release entry, update the build queries in `index.html`, and update both `CACHE_NAME` and `ASSET_VERSION` in `sw.js` so installed copies receive the assets.
 
 Example Inkscape exports:
 
@@ -150,4 +150,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a specific one-line commit containing the current app version and build id, and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `1.0.1.1 - Adopt four-part app versions`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
