@@ -25,8 +25,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "1.0.1.1",
-    "buildId": "1.0.1.1",
+    "appVersion": "0.0.1.1",
+    "buildId": "0.0.1.1",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -95,8 +95,8 @@ Merging chooses the newer note for each stable id, honors newer deletion tombsto
 
 The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
 
-Notes uses one spacious modal on desktop and a full-screen editor on mobile. Support also becomes a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
+Notes uses one spacious modal on desktop and a full-screen editor on mobile. Settings also becomes a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
 
 ## PWA and offline strategy
 
-`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A new waiting service worker triggers an Update available toast and refreshes only after the user chooses Refresh.
+`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A waiting service worker triggers a persistent bottom **New version available** toast. **Force refresh** activates the waiting worker and reloads through a cache-busting URL so installed PWAs can update immediately.

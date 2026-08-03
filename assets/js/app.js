@@ -138,26 +138,17 @@
   function renderSyncStatus() {
     const info = sync.getInfo();
     const offline = navigator.onLine === false;
-    const globalIcon = $("[data-global-status-icon]");
-    const globalLabel = $("[data-global-status-label]");
-    if (offline) {
-      globalIcon.innerHTML = icons.markup("sync");
-      globalLabel.textContent = "Offline · saved locally";
-    } else if (!sync.configured()) {
-      globalIcon.innerHTML = icons.markup(storage.isPersistent() ? "check" : "close");
-      globalLabel.textContent = storage.isPersistent() ? "Saved locally" : "Storage unavailable";
-    } else {
-      globalIcon.innerHTML = icons.markup(info.kind === "danger" ? "close" : info.kind === "success" ? "check" : "sync");
-      globalLabel.textContent = info.title;
-    }
-    [$("#floatingStatusButton")].forEach(function (button) {
-      if (!button) return;
-      button.dataset.syncState = info.state;
-      button.disabled = info.busy || info.state === "offline";
-      button.title = info.title + ". " + info.message;
-      button.setAttribute("aria-label", info.title + ". " + info.message);
-    });
-    $("[data-floating-status-icon]").innerHTML = icons.markup("sync");
+    const localAvailable = storage.isPersistent();
+    const localLabel = localAvailable ? "Saved locally" : "Storage unavailable";
+    const syncLabel = !config.features.cloudSync ? "GitHub disabled" : offline ? "GitHub offline" : !sync.configured() ? "GitHub setup required" : "GitHub · " + info.title;
+    const button = $("#floatingStatusButton");
+    button.dataset.syncState = localAvailable ? (offline ? "offline" : info.state) : "error";
+    button.disabled = info.busy;
+    button.title = localLabel + ". " + syncLabel + ". " + info.message;
+    button.setAttribute("aria-label", button.title);
+    $("[data-floating-local-label]").textContent = localLabel;
+    $("[data-floating-sync-label]").textContent = syncLabel;
+    $("[data-floating-status-icon]").innerHTML = icons.markup(!localAvailable || info.kind === "danger" ? "close" : sync.configured() || info.busy ? "sync" : "check");
   }
 
   function documentText(documentItem) {
@@ -183,6 +174,7 @@
       documentItem.updatedAt = u.isoNow();
     }, { reason: "edit-document" });
     $("#notesSaveStatus").textContent = "Saving…";
+    $("[data-floating-local-label]").textContent = "Saving locally…";
     renderGlobalSearchResults();
   }
 
@@ -319,6 +311,10 @@
   }
 
   function renderSyncSettings() {
+    const localAvailable = storage.isPersistent();
+    $("#localStorageSettingsState").textContent = localAvailable ? "Saved locally" : "Unavailable";
+    $("#localStorageSettingsState").dataset.kind = localAvailable ? "success" : "danger";
+    $("#localStorageSettingsSummary").innerHTML = '<span aria-hidden="true">' + icons.markup(localAvailable ? "check" : "close") + '</span><span><strong>' + (localAvailable ? "Browser storage is working" : "Browser storage is unavailable") + '</strong><small>' + (localAvailable ? "Notes, preferences, and sync metadata save automatically on this device." : "Changes may not survive a reload. Export a backup before continuing.") + "</small></span>";
     if (!config.features.cloudSync) { $("#cloudSyncSettings").hidden = true; return; }
     const cloud = state().modules.cloudSync;
     const info = sync.getInfo();
@@ -677,8 +673,14 @@
     $("#supportButton").addEventListener("click", function (event) { openSupport(state().ui.supportTab, event.currentTarget); });
     $("#notesButton").addEventListener("click", function (event) { openNotes(event.currentTarget); });
     $("#notesTextarea").addEventListener("input", function (event) { saveNotes(event.target.value); });
-    $("#floatingStatusButton").addEventListener("click", function (event) { if (sync.configured()) sync.syncNow(event.currentTarget); else openSupport("settings", event.currentTarget); });
-    $("#moduleNav").addEventListener("click", function (event) { const button = event.target.closest("[data-module]"); if (button) switchModule(button.dataset.module); });
+    $("#floatingStatusButton").addEventListener("click", function (event) {
+      const info = sync.getInfo();
+      if (sync.configured() && info.state !== "offline") sync.syncNow(event.currentTarget);
+      else {
+        openSupport("settings", event.currentTarget);
+        requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); });
+      }
+    });
     document.addEventListener("click", function (event) {
       const action = event.target.closest("[data-action]");
       if (action) handleAction(action.dataset.action, action);
@@ -736,7 +738,7 @@
     window.addEventListener("app:opensyncsettings", function (event) {
       openSupport("settings", event.detail && event.detail.trigger);
       $("#syncAdvancedFields").open = true;
-      requestAnimationFrame(function () { $("#cloudSyncSettings").scrollIntoView({ block: "start" }); $("#syncOwner").focus(); });
+      requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); $("#syncOwner").focus(); });
     });
     window.addEventListener("app:storageerror", function (event) {
       $("#notesSaveStatus").textContent = "Not saved";

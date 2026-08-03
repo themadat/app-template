@@ -7,9 +7,9 @@
     identity: {
       name: "App Template",
       shortName: "Template",
-      description: "A focused local-first shell with Notes, Roadmap, support, and optional GitHub Sync.",
-      version: "1.0.1.1",
-      buildId: "1.0.1.1",
+      description: "A focused pre-launch local-first shell with Notes, Roadmap, settings, and optional GitHub Sync.",
+      version: "0.0.1.1",
+      buildId: "0.0.1.1",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -73,34 +73,14 @@
 
     releases: [
       {
-        version: "1.0.1.1",
+        version: "0.0.1.1",
         date: "2026-08-03T12:00:00.000Z",
-        title: "Reliable versioned shell",
-        summary: "Notes now uses one focused modal, refreshes load a consistent build, and updates use a four-part app version.",
-        features: ["Single-modal Notes workspace", "Major.minor.patch.build versioning"],
-        improvements: ["Build-stamped application assets", "Version-first commit handoffs", "Dedicated Notes SF Symbol"],
-        fixes: ["Escape closes Notes and restores focus", "Legacy caches no longer mix old and new application files"],
+        title: "Pre-launch application foundation",
+        summary: "A focused local-first shell with centered search, combined storage and GitHub status, and force-refreshable PWA updates.",
+        features: ["Single-modal Notes workspace", "Major.minor.patch.build versioning", "Combined Storage & GitHub settings"],
+        improvements: ["Centered app-bar search", "Unified floating save and sync status", "Dedicated Notes SF Symbol", "Bottom new-version toast with force refresh"],
+        fixes: ["Installed apps can explicitly activate and reload a waiting application update", "The redundant Roadmap navigation strip is removed"],
         knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
-      },
-      {
-        version: "1.0.0.0",
-        date: "2026-08-01T12:00:00.000Z",
-        title: "Focused application foundation",
-        summary: "A reusable shell with Notes, Roadmap, support tools, and optional GitHub Sync.",
-        features: ["Single local Notes workspace", "Searchable Roadmap and Help", "Complete opt-in GitHub synchronization", "Offline-ready application shell"],
-        improvements: ["Responsive Notes modal", "Accessible dialogs, notifications, and keyboard shortcuts"],
-        fixes: [],
-        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
-      },
-      {
-        version: "0.3.0.0",
-        date: "2026-07-18T12:00:00.000Z",
-        title: "Template preview",
-        summary: "The reusable state and recovery foundations were established.",
-        features: ["Versioned local state and migration fixtures"],
-        improvements: ["Centralized identity and appearance configuration"],
-        fixes: ["Legacy backup wrappers now migrate predictably"],
-        knownIssues: []
       }
     ],
 
@@ -108,7 +88,7 @@
       { id: "road-1", title: "Optional attachment adapter", description: "Document an extension point for local or remote file attachments.", state: "planned", priority: 2, target: "1.2", effort: 3, createdAt: "2026-07-08T12:00:00.000Z" },
       { id: "road-2", title: "Notes print view", description: "Add a clean print layout for the single Notes workspace.", state: "wishlist", priority: 3, target: "Unscheduled", effort: 2, createdAt: "2026-07-20T12:00:00.000Z" },
       { id: "road-3", title: "Local print layout", description: "Add a clean print view for notes and roadmap entries.", state: "planned", priority: 1, target: "1.1", effort: 1, createdAt: "2026-07-29T12:00:00.000Z" },
-      { id: "road-4", title: "Focused template foundation", description: "Ship the shell, Notes, Roadmap, sync, recovery, PWA, and support modules.", state: "released", priority: 1, target: "1.0", effort: 4, createdAt: "2026-06-12T12:00:00.000Z" }
+      { id: "road-4", title: "Focused template foundation", description: "Ship the shell, Notes, Roadmap, sync, recovery, PWA, and settings modules.", state: "released", priority: 1, target: "1.0", effort: 4, createdAt: "2026-06-12T12:00:00.000Z" }
     ],
 
     help: [

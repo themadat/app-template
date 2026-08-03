@@ -2,15 +2,17 @@
 
 A static, local-first HTML application foundation with no build step, runtime dependency, backend, account, or sign-in.
 
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.1` (`major.minor.patch.build`). Routine updates increment the fourth number.
+
 The included product surface is intentionally focused:
 
-- Sticky application header with version, Beta, global search, Notes, and Support controls.
+- Sticky application header with version, Beta, centered global search, Notes, and Settings controls.
 - Single plain-text Notes modal with local autosave.
 - Replaceable demonstration Roadmap with search, view filters, and sorting.
-- Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap support views.
+- Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
 - Optional GitHub Contents API synchronization with explicit conflict choices and manual JSON backup/restore.
 - Contextual hints, toast and live announcements, keyboard shortcuts, shortcut-hint mode, and hidden Developer Mode.
-- Installable offline PWA shell with light/dark assets and update-available messaging.
+- Installable offline PWA shell with light/dark assets and a bottom new-version toast with Force refresh.
 
 ## Run locally
 
@@ -127,7 +129,7 @@ If Git reports `Permission denied (publickey)`, confirm the key is loaded and at
 
 ## Configure optional in-app GitHub Sync
 
-Open **Support → Settings → GitHub synchronization** and provide:
+Open **Settings → Storage & GitHub** and provide:
 
 - Repository owner and name.
 - Branch and JSON file path.
@@ -139,7 +141,7 @@ The token stays in browser storage on that device, is never included in exports 
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
 
-The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. Existing installations that still have an older cache-first worker may need to choose **Refresh** once in the Update available message; the build-stamped URLs prevent that worker from mixing old scripts into the refreshed page.
+The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. When a waiting worker is ready, a persistent **New version available** toast appears at the bottom. **Force refresh** activates that worker and reloads with a cache-busting URL, including in the installed PWA.
 
 ## Agent workflow
 
@@ -150,4 +152,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `1.0.1.1 - Adopt four-part app versions`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.1 - Refine the pre-launch shell`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

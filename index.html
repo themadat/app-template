@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="A focused local-first app foundation with Notes, Roadmap, support, and optional GitHub Sync.">
+  <meta name="description" content="A focused pre-launch local-first app foundation with Notes, Roadmap, settings, and optional GitHub Sync.">
   <meta name="theme-color" content="#f5f3ed">
   <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121616" media="(prefers-color-scheme: dark)">
@@ -12,22 +12,22 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=1.0.1.1">
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=1.0.1.1">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=1.0.1.1">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=1.0.1.1" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=1.0.1.1" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=1.0.1.1">
-  <script defer src="assets/js/config.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/icons.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/utils.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/state.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/storage.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/components.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/portability.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/sync.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/core/pwa.js?v=1.0.1.1"></script>
-  <script defer src="assets/js/app.js?v=1.0.1.1"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.1">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=0.0.1.1">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.1">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.1" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.1" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.1">
+  <script defer src="assets/js/config.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.1"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.1"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -35,12 +35,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=1.0.1.1" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.1" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V" data-shortcut="V">v1.0.1.1</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V" data-shortcut="V">v0.0.1.1</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -58,21 +58,13 @@
       <button id="notesButton" class="button primary action-button" type="button" aria-haspopup="dialog" aria-controls="notesDialog" aria-keyshortcuts="N" data-shortcut="N">
         <span class="button-icon" aria-hidden="true" data-symbol="notes"></span><span class="button-label">Notes</span>
       </button>
-      <button id="supportButton" class="button icon-button action-button" type="button" aria-label="Settings and help" title="Settings and help" data-shortcut="?">
-        <span class="button-icon" aria-hidden="true" data-symbol="support"></span><span class="button-label">Support</span>
+      <button id="supportButton" class="button icon-button action-button" type="button" aria-label="Open settings" title="Open settings" data-shortcut="?">
+        <span class="button-icon" aria-hidden="true" data-symbol="support"></span><span class="button-label">Settings</span>
         <span id="releaseUnreadDot" class="unread-dot" aria-label="Unread release notes" hidden></span>
       </button>
     </div>
 
-    <div id="globalStatus" class="global-status" role="status" aria-live="polite">
-      <span data-global-status-icon aria-hidden="true">✓</span>
-      <span data-global-status-label>Saved locally</span>
-    </div>
   </header>
-
-  <nav id="moduleNav" class="module-nav" aria-label="Primary modules">
-    <button type="button" data-module="roadmap" aria-current="page" data-shortcut="2"><span class="module-icon" aria-hidden="true" data-symbol="roadmap"></span><span class="module-label">Roadmap</span></button>
-  </nav>
 
   <aside id="whatsNewBanner" class="whats-new-banner" aria-labelledby="whatsNewTitle" hidden>
     <div>
@@ -88,7 +80,7 @@
 
   <aside id="contextHint" class="context-hint" data-hint-key="workspace-basics" hidden>
     <span aria-hidden="true">i</span>
-    <p>Notes save automatically in this browser. Use GitHub Sync only when you choose to configure it.</p>
+    <p>The floating status button combines local-save and optional GitHub Sync information.</p>
     <button type="button" class="icon-button" data-dismiss-hint="workspace-basics" aria-label="Dismiss hint"><span aria-hidden="true" data-symbol="close"></span></button>
   </aside>
 
@@ -107,8 +99,11 @@
     </section>
   </main>
 
-  <div class="floating-actions" aria-label="Quick actions">
-    <button id="floatingStatusButton" class="floating-button status-button" type="button" aria-label="GitHub synchronization" title="GitHub synchronization" data-sync-state="setup" data-shortcut="S"><span data-floating-status-icon aria-hidden="true">○</span></button>
+  <div class="floating-actions" aria-label="Storage and synchronization status">
+    <button id="floatingStatusButton" class="floating-button status-button" type="button" aria-label="Saved locally. GitHub setup required." title="Saved locally. GitHub setup required." data-sync-state="setup" data-shortcut="S">
+      <span class="floating-status-icon" data-floating-status-icon aria-hidden="true">○</span>
+      <span class="floating-status-copy"><strong data-floating-local-label>Saved locally</strong><small data-floating-sync-label>GitHub setup required</small></span>
+    </button>
   </div>
 
   <dialog id="notesDialog" class="app-dialog notes-dialog" aria-labelledby="notesDialogTitle">
@@ -124,9 +119,9 @@
 
   <dialog id="supportDialog" class="app-dialog support-dialog" aria-labelledby="supportDialogTitle" data-backdrop-close="false">
     <div class="dialog-shell">
-      <header class="dialog-header support-header"><div><span class="eyebrow">Application support</span><h2 id="supportDialogTitle">Settings & Help</h2></div><button type="button" class="icon-button" data-close-dialog="supportDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
+      <header class="dialog-header support-header"><div><span class="eyebrow">Application preferences</span><h2 id="supportDialogTitle">Settings</h2></div><button type="button" class="icon-button" data-close-dialog="supportDialog" aria-label="Close"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="support-layout">
-        <div class="support-tabs" role="tablist" aria-label="Support sections">
+        <div class="support-tabs" role="tablist" aria-label="Settings sections">
           <button id="settingsTab" type="button" role="tab" aria-selected="true" aria-controls="settingsPanel" data-support-tab="settings">Settings</button>
           <button id="helpTab" type="button" role="tab" aria-selected="false" aria-controls="helpPanel" data-support-tab="help">Help</button>
           <button id="releasesTab" type="button" role="tab" aria-selected="false" aria-controls="releasesPanel" data-support-tab="releases">What’s New</button>
@@ -159,8 +154,11 @@
               <div class="button-row"><button id="restoreHintsButton" class="button" type="button">Restore dismissed hints</button></div>
             </div>
 
-            <div id="cloudSyncSettings" class="settings-section">
-              <div class="section-heading"><div><span class="eyebrow">Optional module</span><h3>GitHub synchronization</h3></div><span id="syncSettingsState" class="status-pill" data-kind="neutral">Setup required</span></div>
+            <div id="storageSyncSettings" class="settings-section">
+              <div class="section-heading"><div><span class="eyebrow">Data & connection</span><h3>Storage & GitHub</h3></div><span id="localStorageSettingsState" class="status-pill" data-kind="success">Saved locally</span></div>
+              <div id="localStorageSettingsSummary" class="inline-status" role="status" aria-live="polite"></div>
+              <div id="cloudSyncSettings" class="sync-settings-group">
+              <div class="section-heading subsection-heading"><div><span class="eyebrow">Optional integration</span><h4>GitHub synchronization</h4></div><span id="syncSettingsState" class="status-pill" data-kind="neutral">Setup required</span></div>
               <p class="section-intro">Core features work without GitHub. A fine-grained token is stored only on this device, is never exported, and cannot be made cryptographically secure by browser storage.</p>
               <div id="syncSettingsSummary" class="inline-status" role="status" aria-live="polite"></div>
               <details id="syncAdvancedFields">
@@ -176,6 +174,7 @@
                 <div class="button-row"><button id="testSyncButton" class="button" type="button">Test connection</button><button id="saveSyncButton" class="button primary" type="button">Save settings</button><button id="forgetSyncButton" class="button danger-text" type="button">Forget GitHub</button></div>
               </details>
               <div class="button-row"><button id="syncNowSettingsButton" class="button primary" type="button">Sync now</button></div>
+              </div>
             </div>
 
             <div class="settings-section">
@@ -193,7 +192,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v1.0.1.1</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.1</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>

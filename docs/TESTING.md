@@ -10,7 +10,7 @@
 
 ## Desktop
 
-- [ ] Header, version/Beta pills, global search, toolbar, status, and module navigation fit without horizontal overflow.
+- [ ] Header, version/Beta pills, centered global search, toolbar, and combined floating storage/sync status fit without horizontal overflow; no Roadmap navigation strip appears.
 - [ ] `/` focuses global search; results route to notes, Help, releases, and Roadmap.
 - [ ] Notes opens as one modal, focuses its textarea, autosaves plain text, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
@@ -23,7 +23,7 @@
 - [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport.
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
 - [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
-- [ ] Support fills the screen and uses one scrolling content surface.
+- [ ] Settings fills the screen and uses one scrolling content surface.
 - [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
 ## Keyboard and accessibility
@@ -57,9 +57,9 @@
 
 ## PWA and recovery
 
-- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, Roadmap, and Support.
+- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, Roadmap, and Settings.
 - [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
-- [ ] A waiting service worker shows Update available and refreshes only after the user chooses it.
+- [ ] A waiting service worker shows a bottom New version available toast; Force refresh activates it and reloads the browser tab or installed PWA.
 - [ ] Light/dark favicon, manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.

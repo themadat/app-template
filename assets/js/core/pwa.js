@@ -6,6 +6,7 @@
   const storage = App.storage;
   let registration = null;
   let refreshing = false;
+  let refreshFallbackTimer = 0;
 
   function versionedAsset(path) {
     return path + "?v=" + encodeURIComponent(config.identity.buildId);
@@ -43,16 +44,29 @@
     document.documentElement.dataset.installIcon = variant;
   }
 
+  function forceRefreshUrl() {
+    const target = new URL(location.href);
+    target.searchParams.set("force-refresh", String(Date.now()));
+    return target.href;
+  }
+
+  function forceRefresh(worker) {
+    if (refreshing) return;
+    refreshing = true;
+    const waitingWorker = worker || registration && registration.waiting;
+    if (waitingWorker) waitingWorker.postMessage({ type: "SKIP_WAITING" });
+    if (registration && typeof registration.update === "function") registration.update().catch(function () {});
+    window.clearTimeout(refreshFallbackTimer);
+    refreshFallbackTimer = window.setTimeout(function () { location.replace(forceRefreshUrl()); }, waitingWorker ? 1200 : 0);
+  }
+
   function updateAvailable(worker) {
-    App.components.toast("A newer application shell is ready.", {
-      title: "Update available",
+    App.components.toast("A newer app version is ready. Force refresh to install it now.", {
+      title: "New version available",
       kind: "info",
       duration: 0,
-      actionLabel: "Refresh",
-      onAction: function () {
-        refreshing = true;
-        worker.postMessage({ type: "SKIP_WAITING" });
-      }
+      actionLabel: "Force refresh",
+      onAction: function () { forceRefresh(worker); }
     });
   }
 
@@ -69,7 +83,10 @@
         });
       });
       navigator.serviceWorker.addEventListener("controllerchange", function () {
-        if (refreshing) location.reload();
+        if (refreshing) {
+          window.clearTimeout(refreshFallbackTimer);
+          location.replace(forceRefreshUrl());
+        }
       });
     } catch (error) {
       window.dispatchEvent(new CustomEvent("app:pwaerror", { detail: { message: "Offline installation is unavailable in this browser session." } }));
@@ -101,6 +118,7 @@
     installed: installed,
     networkStatus: networkStatus,
     applyAppearanceAssets: applyAppearanceAssets,
+    forceRefresh: forceRefresh,
     getRegistration: function () { return registration; }
   };
 })();
