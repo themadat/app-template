@@ -37,11 +37,11 @@ Avoid generic abstractions until a second real module needs the same behavior.
 - GitHub Sync: remove `core/sync.js`, its script tag, settings/status markup, related event wiring, and its `sw.js` cache entry. Keep JSON backup/restore.
 - Developer tools: set `features.developerTools` to `false` and remove the Developer panel if it will never be used.
 - Contextual hints: set `features.hints` to `false` and remove hint/settings markup if desired.
-- Notepad: remove its surface and creation dialog plus document render/event code. Retain legacy document migration fields until old backups no longer need support.
+- Notes: remove its top-bar control, modal, and event code. Retain legacy document migration fields until old backups no longer need support.
 
 ## Publish a version
 
-Update `identity.version`, add the newest release card first, update manifest text if public metadata changed, choose a fresh `buildId`, and set the matching `CACHE_NAME` in `sw.js`. Run the complete checklist in `docs/TESTING.md`.
+Update `identity.version`, add the newest release card first, update manifest text if public metadata changed, choose a fresh `buildId`, update the build queries in `index.html`, and set the matching `CACHE_NAME` and `ASSET_VERSION` in `sw.js`. Run the complete checklist in `docs/TESTING.md`.
 
 ## Icons and PWA assets
 

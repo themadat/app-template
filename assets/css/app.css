@@ -319,7 +319,6 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); outline
 .editor-toolbar button { min-height: 34px; padding: .25rem .55rem; border: 1px solid transparent; border-radius: 6px; background: transparent; }
 .editor-toolbar button:hover { border-color: var(--line); background: var(--surface); }
 .document-editor { flex: 1; min-height: 260px; overflow-y: auto; padding: clamp(1rem, 3vw, 2.5rem); border: 1px solid var(--line); border-radius: 0 0 10px 10px; background: var(--surface); font-size: calc(1rem * var(--reading-scale)); line-height: 1.7; }
-.notepad-editor { width: 100%; border-radius: 10px; resize: none; font-family: Helvetica, Arial, sans-serif; white-space: pre-wrap; }
 .document-editor h2 { margin: 1.1em 0 .45em; font-size: 1.5em; }
 .document-editor h3 { margin: 1em 0 .4em; font-size: 1.2em; }
 .document-editor blockquote { margin: 1rem 0; padding: .2rem 0 .2rem 1rem; border-left: 4px solid var(--accent); color: var(--muted); }
@@ -369,6 +368,10 @@ dialog::backdrop { background: rgba(10, 16, 14, .56); backdrop-filter: blur(3px)
 .small-dialog { width: min(460px, calc(100vw - 2rem)); }
 .form-dialog { width: min(620px, calc(100vw - 2rem)); }
 .choice-dialog { width: min(560px, calc(100vw - 2rem)); }
+.notes-dialog { width: min(900px, calc(100vw - 2rem)); height: min(80svh, 760px); }
+.notes-dialog-body { display: flex; min-height: 0; }
+.notes-textarea { flex: 1 1 auto; width: 100%; min-height: 0; resize: none; font-size: calc(1rem * var(--reading-scale)); line-height: 1.65; }
+.notes-dialog-footer { align-items: center; justify-content: space-between; color: var(--muted); font-size: .75rem; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
 .choice-actions { display: grid; gap: .5rem; margin-top: 1rem; }
 .choice-actions .button { display: grid; justify-items: start; height: auto; min-height: 60px; text-align: left; }

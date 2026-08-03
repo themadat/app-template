@@ -8,7 +8,7 @@ Use `components.confirm()` for destructive operations and `components.choose()` 
 
 ## Menus and popovers
 
-`components.openMenu()` renders an anchored menu into the shared popover. Positioning is clamped to the visible viewport, focus moves into the menu, arrow keys move between commands, and Escape closes and restores focus. Note actions support click, right-click, and long press.
+`components.openMenu()` renders an anchored menu into the shared popover. Positioning is clamped to the visible viewport, focus moves into the menu, arrow keys move between commands, and Escape closes and restores focus.
 
 ## Toasts, announcements, and loading
 
@@ -18,13 +18,13 @@ Use `components.confirm()` for destructive operations and `components.choose()` 
 
 Module empty states use one shared visual pattern with a heading, explanation, and optional visible recovery action. Sync, storage, import, and PWA failures use inline status, message dialogs, or persistent toasts depending on whether immediate action is required.
 
-## Notepad
+## Notes
 
-Notepad is a deliberately basic plain-text editor backed by the compatibility `documents` collection. User text is escaped before storage, list previews use sanitized text, and imported legacy rich text is converted to readable text when opened in the textarea. Notes support search, sorting, pointer reorder, `Alt + Arrow` reorder, deletion confirmation, and mobile list/detail navigation.
+Notes is one large plain-text textarea in a native modal. It opens from the visible Notes control or `N`, autosaves locally, and returns focus to its trigger when closed. The compatibility `documents` collection remains in state and sync payloads, but normalization consolidates it to the stable `app-notes` document. Migration from earlier multi-note state retains each title as a section heading and preserves its text.
 
 ## Global search
 
-`/` focuses the global search unless the user is already editing a field. Results include notes, Help topics, release entries, and Roadmap items. Result activation routes to the relevant module or Support view. Module-specific searches remain independent.
+`/` focuses the global search unless the user is already editing a field. Results include Notes, Help topics, release entries, and Roadmap items. Result activation opens the relevant dialog, module, or Support view.
 
 ## Shortcut hints
 

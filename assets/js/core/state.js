@@ -5,7 +5,7 @@
   const config = App.config;
   const u = App.utils;
   const STATUS_IDS = new Set(config.statuses.map(function (status) { return status.id; }));
-  const MODULE_IDS = ["documents", "roadmap"];
+  const MODULE_IDS = ["roadmap"];
 
   function demoRecords(now) {
     return [];
@@ -13,7 +13,7 @@
 
   function demoDocuments(now) {
     return [
-      { id: "demo-document-welcome", title: "Welcome", html: "<p>This is a simple local note. Start typing to replace it.</p>", order: 0, createdAt: now, updatedAt: now }
+      { id: "app-notes", title: "Notes", html: "This is a simple local note. Start typing to replace it.", order: 0, createdAt: now, updatedAt: now }
     ];
   }
 
@@ -69,7 +69,7 @@
         }
       },
       ui: {
-        activeModule: "documents",
+        activeModule: "roadmap",
         selectedRecordId: records[0] ? records[0].id : "",
         selectedDocumentId: documents[0] ? documents[0].id : "",
         search: "",
@@ -218,7 +218,14 @@
     };
   }
 
-  const migrations = { 1: migrate1to2, 2: migrate2to3 };
+  function migrate3to4(input) {
+    const source = u.plainObject(input);
+    source.schemaVersion = 4;
+    source.ui = Object.assign({}, u.plainObject(source.ui), { activeModule: "roadmap" });
+    return source;
+  }
+
+  const migrations = { 1: migrate1to2, 2: migrate2to3, 3: migrate3to4 };
 
   function unwrapInput(input) {
     const source = u.plainObject(input);
@@ -284,6 +291,31 @@
     };
   }
 
+  function consolidateDocuments(documents, now) {
+    const ordered = documents.slice().sort(function (a, b) { return a.order - b.order; });
+    if (!ordered.length) return [{ id: "app-notes", title: "Notes", html: "", order: 0, createdAt: now, updatedAt: now }];
+    const createdAt = ordered.reduce(function (earliest, item) {
+      return Date.parse(item.createdAt) < Date.parse(earliest) ? item.createdAt : earliest;
+    }, ordered[0].createdAt);
+    const updatedAt = ordered.reduce(function (latest, item) {
+      return Date.parse(item.updatedAt) > Date.parse(latest) ? item.updatedAt : latest;
+    }, ordered[0].updatedAt);
+    const sections = ordered.map(function (item) {
+      const text = u.richTextToPlainText(item.html, config.controls.maxDocumentHtmlLength);
+      if (ordered.length === 1) return text;
+      return [item.title, text].filter(Boolean).join("\n\n");
+    });
+    const text = u.cleanText(sections.filter(Boolean).join("\n\n—\n\n"), config.controls.maxDocumentHtmlLength);
+    return [{
+      id: "app-notes",
+      title: "Notes",
+      html: u.escapeHtml(text).replace(/\n/g, "<br>"),
+      order: 0,
+      createdAt: createdAt,
+      updatedAt: updatedAt
+    }];
+  }
+
   function normalizeTombstones(value) {
     const used = new Set();
     return (Array.isArray(value) ? value : []).map(function (entry) {
@@ -316,19 +348,21 @@
     const sourceCloud = u.plainObject(sourceModules.cloudSync);
     const theme = config.themes.find(function (item) { return item.id === sourceAppearance.preset; }) || defaultTheme();
     const recordIds = new Set();
-    const documentIds = new Set();
+    const normalizedDocumentIds = new Set();
     const records = (Array.isArray(sourceWorkspace.records) ? sourceWorkspace.records : []).slice(0, config.controls.maxRecords).map(function (record, index) {
       return normalizeRecord(record, index, recordIds, now);
     });
-    const documents = (Array.isArray(sourceWorkspace.documents) ? sourceWorkspace.documents : []).slice(0, config.controls.maxDocuments).map(function (document, index) {
-      return normalizeDocument(document, index, documentIds, now);
+    const normalizedDocuments = (Array.isArray(sourceWorkspace.documents) ? sourceWorkspace.documents : []).slice(0, config.controls.maxDocuments).map(function (document, index) {
+      return normalizeDocument(document, index, normalizedDocumentIds, now);
     });
+    const documents = consolidateDocuments(normalizedDocuments, now);
+    const documentIds = new Set(documents.map(function (documentItem) { return documentItem.id; }));
     const categories = new Set(records.map(function (record) { return record.category; }));
     const mode = ["system", "light", "dark"].includes(sourceAppearance.mode) ? sourceAppearance.mode : "system";
     const sortBy = ["order", "title", "status", "updatedAt", "createdAt"].includes(sourceRecordUi.sortBy) ? sourceRecordUi.sortBy : "order";
     const documentSort = ["order", "title", "updatedAt", "createdAt"].includes(sourceDocumentUi.sortBy) ? sourceDocumentUi.sortBy : "order";
-    const activeCandidates = MODULE_IDS.filter(function (id) { return id !== "documents" || config.features.documents; }).filter(function (id) { return id !== "roadmap" || config.features.roadmap; });
-    const activeModule = activeCandidates.includes(sourceUi.activeModule) ? sourceUi.activeModule : "documents";
+    const activeCandidates = MODULE_IDS.filter(function (id) { return id !== "roadmap" || config.features.roadmap; });
+    const activeModule = activeCandidates.includes(sourceUi.activeModule) ? sourceUi.activeModule : (activeCandidates[0] || "");
     const sourceTombstones = u.plainObject(sourceMeta.tombstones);
     const state = {
       schemaVersion: config.schemaVersion,

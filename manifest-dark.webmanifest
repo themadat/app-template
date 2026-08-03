@@ -1,7 +1,7 @@
 {
   "name": "App Template",
   "short_name": "Template",
-  "description": "A focused local-first app foundation with Notepad, Roadmap, support, and optional GitHub Sync.",
+  "description": "A focused local-first app foundation with Notes, Roadmap, support, and optional GitHub Sync.",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",

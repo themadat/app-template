@@ -1,35 +1,37 @@
 "use strict";
 
-const CACHE_NAME = "app-template-shell-2026.08.02.4";
+const CACHE_NAME = "app-template-shell-2026.08.03.2";
+const ASSET_VERSION = "2026.08.03.2";
+const versioned = function (path) { return path + "?v=" + ASSET_VERSION; };
 const SHELL = [
   "./",
   "./index.html",
-  "./manifest.webmanifest",
-  "./manifest-dark.webmanifest",
-  "./assets/css/app.css",
-  "./assets/js/config.js",
-  "./assets/js/icons.js",
-  "./assets/js/core/utils.js",
-  "./assets/js/core/state.js",
-  "./assets/js/core/storage.js",
-  "./assets/js/core/components.js",
-  "./assets/js/core/portability.js",
-  "./assets/js/core/sync.js",
-  "./assets/js/core/pwa.js",
-  "./assets/js/app.js",
-  "./assets/icons/favicon.svg",
-  "./assets/icons/app-icon-light.svg",
-  "./assets/icons/app-icon-dark.svg",
+  versioned("./manifest.webmanifest"),
+  versioned("./manifest-dark.webmanifest"),
+  versioned("./assets/css/app.css"),
+  versioned("./assets/js/config.js"),
+  versioned("./assets/js/icons.js"),
+  versioned("./assets/js/core/utils.js"),
+  versioned("./assets/js/core/state.js"),
+  versioned("./assets/js/core/storage.js"),
+  versioned("./assets/js/core/components.js"),
+  versioned("./assets/js/core/portability.js"),
+  versioned("./assets/js/core/sync.js"),
+  versioned("./assets/js/core/pwa.js"),
+  versioned("./assets/js/app.js"),
+  versioned("./assets/icons/favicon.svg"),
+  versioned("./assets/icons/app-icon-light.svg"),
+  versioned("./assets/icons/app-icon-dark.svg"),
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/icons/icon-512-maskable.png",
   "./assets/icons/icon-192-dark.png",
   "./assets/icons/icon-512-dark.png",
   "./assets/icons/icon-512-maskable-dark.png",
-  "./assets/icons/apple-touch-icon.png",
-  "./assets/icons/apple-touch-icon-dark.png",
-  "./assets/icons/splash-light.png",
-  "./assets/icons/splash-dark.png"
+  versioned("./assets/icons/apple-touch-icon.png"),
+  versioned("./assets/icons/apple-touch-icon-dark.png"),
+  versioned("./assets/icons/splash-light.png"),
+  versioned("./assets/icons/splash-dark.png")
 ];
 
 self.addEventListener("install", function (event) {
@@ -54,19 +56,20 @@ self.addEventListener("fetch", function (event) {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === "navigate") {
-    event.respondWith(caches.match("./index.html").then(function (cached) {
-      return cached || fetch(request).catch(function () { return caches.match("./index.html"); });
-    }));
+    event.respondWith(fetch(request, { cache: "no-cache" }).then(function (response) {
+      if (response && response.ok && response.type === "basic") {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then(function (cache) { cache.put("./index.html", copy); });
+      }
+      return response;
+    }).catch(function () { return caches.match("./index.html").then(function (cached) { return cached || Response.error(); }); }));
     return;
   }
 
-  event.respondWith(caches.match(request).then(function (cached) {
-    if (cached) return cached;
-    return fetch(request).then(function (response) {
+  event.respondWith(fetch(request, { cache: "no-cache" }).then(function (response) {
       if (!response || !response.ok || response.type !== "basic") return response;
       const copy = response.clone();
       caches.open(CACHE_NAME).then(function (cache) { cache.put(request, copy); });
       return response;
-    });
-  }));
+    }).catch(function () { return caches.match(request).then(function (cached) { return cached || Response.error(); }); }));
 });
