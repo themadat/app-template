@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A focused pre-launch local-first shell with a blank app workspace, Notes, settings, and optional GitHub Sync.",
-      version: "0.0.1.2",
-      buildId: "0.0.1.2",
+      version: "0.0.1.3",
+      buildId: "0.0.1.3",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -47,7 +47,7 @@
     },
 
     controls: {
-      shortcutHintModifier: "Alt",
+      shortcutHintModifier: "ShiftControlOption",
       autosaveDelayMs: 180,
       syncCheckIntervalMs: 5 * 60 * 1000,
       maxImportBytes: 5 * 1024 * 1024,
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.3",
+        date: "2026-08-28T12:00:00.000Z",
+        title: "Adaptive icons and command hints",
+        summary: "The application now uses the supplied light, dark, and gray artwork and reveals available keyboard commands with the Shift–Control–Option chord.",
+        features: ["Shift–Control–Option shortcut overlay", "Hover descriptions for shortcut-enabled controls"],
+        improvements: ["New light and dark app, install, touch, and splash artwork", "Gray favicon artwork", "Settings now has its own comma shortcut"],
+        fixes: ["Shortcut badges stay scoped to the active dialog", "Search remains available with the full modifier chord"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.2",
         date: "2026-08-03T15:00:00.000Z",
@@ -110,7 +120,7 @@
       { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline.</p>" },
       { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press shortcut", html: "<p>Click or tap the app icon, or press <kbd>T</kbd>, to switch between light and dark themes. Press and hold the icon to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },
-      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints version", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, and <kbd>?</kbd> for Help. Listed shortcuts continue to work while Shift, Control, or Option is held. Hold the configured modifier to reveal shortcut hints.</p>" }
+      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
     ]
   };
 

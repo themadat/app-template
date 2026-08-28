@@ -399,7 +399,7 @@
         controls: {
           buttonStyle: ["icons", "text", "both"].includes(sourceControls.buttonStyle) ? sourceControls.buttonStyle : "both",
           shortcutHints: sourceControls.shortcutHints !== false,
-          shortcutHintModifier: ["Alt", "Shift", "Control"].includes(sourceControls.shortcutHintModifier) ? sourceControls.shortcutHintModifier : config.controls.shortcutHintModifier,
+          shortcutHintModifier: sourceControls.shortcutHintModifier === "ShiftControlOption" ? sourceControls.shortcutHintModifier : config.controls.shortcutHintModifier,
           developerMode: sourceControls.developerMode === true
         },
         hints: {

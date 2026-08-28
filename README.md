@@ -2,7 +2,7 @@
 
 A static, local-first HTML application foundation with no build step, runtime dependency, backend, account, or sign-in.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.2` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.3` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -58,8 +58,8 @@ context/                       Agent wish, plan, start, and cut workflow
 
 Editable sources and generated install assets are in `assets/icons/`. Keep the existing filenames unless you also update every reference in `index.html`, both manifests, `assets/js/config.js`, and `sw.js`.
 
-1. Replace `app-icon-light.svg` and `app-icon-dark.svg` with square SVG artwork. Keep important artwork inside the central 80% for maskable crops.
-2. Replace `favicon.svg`.
+1. Replace the six editable source files named `App Icon Template Light.svg`, `App Icon Template Light.png`, `App Icon Template Dark.svg`, `App Icon Template Dark.png`, `App Icon Template Gray.svg`, and `App Icon Template Gray.png`.
+2. Copy the light and dark SVG sources to `app-icon-light.svg` and `app-icon-dark.svg`. Copy the gray SVG source to `favicon.svg` so the browser favicon remains appearance-neutral. Keep important artwork inside the central 80% for maskable crops.
 3. Export the light icon to:
 
    - `icon-192.png` at 192 × 192
@@ -153,4 +153,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.2 - Refine the pre-launch shell`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.3 - Add adaptive icons and command hints`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

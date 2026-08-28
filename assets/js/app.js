@@ -21,17 +21,18 @@
   const versionedAsset = function (path) { return path + "?v=" + encodeURIComponent(config.identity.buildId); };
 
   const SHORTCUTS = [
-    { keys: "/", label: "Focus global search", group: "Global" },
-    { keys: "Esc", label: "Close a dialog or menu", group: "Global" },
-    { keys: "?", label: "Open Help Center", group: "Global" },
-    { keys: "2", label: "Open Roadmap in Settings", group: "Navigation" },
-    { keys: "N", label: "Open Notes", group: "Actions" },
-    { keys: "V", label: "Open What’s New", group: "Actions" },
-    { keys: "S", label: "Run the primary sync action", group: "Actions" },
-    { keys: "E", label: "Export a JSON backup", group: "Actions" },
-    { keys: "T", label: "Switch color theme", group: "Actions" },
-    { keys: "D", label: "Toggle hidden Developer Mode", group: "Developer" },
-    { keys: "Arrow keys", label: "Move through tabs, menus, and list choices", group: "Navigation" }
+    { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
+    { keys: "Esc", hintKey: "Esc", chordKey: "Esc", label: "Close a dialog or menu", group: "Global" },
+    { keys: "H or ?", hintKey: "H", chordKey: "H", label: "Open Help Center", group: "Global" },
+    { keys: ",", hintKey: ",", chordKey: ",", label: "Open Settings", group: "Global" },
+    { keys: "2", hintKey: "2", chordKey: "2", label: "Open Roadmap in Settings", group: "Navigation" },
+    { keys: "N", hintKey: "N", chordKey: "N", label: "Open Notes", group: "Actions" },
+    { keys: "V", hintKey: "V", chordKey: "V", label: "Open What’s New", group: "Actions" },
+    { keys: "S", hintKey: "S", chordKey: "S", label: "Run the primary sync action", group: "Actions" },
+    { keys: "E", hintKey: "E", chordKey: "E", label: "Export a JSON backup", group: "Actions" },
+    { keys: "T", hintKey: "T", chordKey: "T", label: "Switch color theme", group: "Actions" },
+    { keys: "D", hintKey: "D", chordKey: "D", label: "Toggle hidden Developer Mode", group: "Developer" },
+    { keys: "Arrow keys", label: "Move through tabs, menus, and list choices", group: "Navigation", chord: false }
   ];
 
   function state() {
@@ -89,6 +90,7 @@
     const nextTheme = dark ? "light" : "dark";
     iconButton.setAttribute("aria-label", "Switch to " + nextTheme + " theme. Press and hold to toggle Developer Mode");
     iconButton.title = "Switch to " + nextTheme + " theme · Press and hold for Developer Mode";
+    decorateShortcutControls(iconButton);
     pwa.applyAppearanceAssets?.();
   }
 
@@ -135,6 +137,7 @@
     button.disabled = info.busy;
     button.title = localLabel + ". " + syncLabel + ". " + info.message;
     button.setAttribute("aria-label", button.title);
+    decorateShortcutControls(button);
     $("[data-floating-local-label]").textContent = localLabel;
     $("[data-floating-sync-label]").textContent = syncLabel;
     $("[data-floating-status-icon]").innerHTML = icons.markup(!localAvailable || info.kind === "danger" ? "close" : sync.configured() || info.busy ? "sync" : "check");
@@ -350,8 +353,11 @@
   function renderShortcuts() {
     const groups = {};
     SHORTCUTS.forEach(function (shortcut) { (groups[shortcut.group] = groups[shortcut.group] || []).push(shortcut); });
-    $("#shortcutContent").innerHTML = '<p class="section-intro">Listed shortcuts also work while Shift, Control, or Option is held. Command-key combinations remain available to the browser.</p>' + Object.keys(groups).map(function (group) {
-      return '<section><h3>' + group + "</h3>" + groups[group].map(function (shortcut) { return '<div class="shortcut-row"><kbd>' + u.escapeHtml(shortcut.keys) + '</kbd><span>' + u.escapeHtml(shortcut.label) + "</span></div>"; }).join("") + "</section>";
+    $("#shortcutContent").innerHTML = '<p class="section-intro">Use a listed key directly or with Shift–Control–Option. Hold the full chord to reveal badges on currently available controls; hover those controls to see the command. Command-key combinations remain available to the browser.</p>' + Object.keys(groups).map(function (group) {
+      return '<section><h3>' + group + "</h3>" + groups[group].map(function (shortcut) {
+        const chord = shortcut.chord === false ? "" : '<span class="shortcut-alternative">or</span><kbd>⇧⌃⌥ ' + u.escapeHtml(shortcut.chordKey) + "</kbd>";
+        return '<div class="shortcut-row"><span class="shortcut-key-pair"><kbd>' + u.escapeHtml(shortcut.keys) + "</kbd>" + chord + '</span><span>' + u.escapeHtml(shortcut.label) + "</span></div>";
+      }).join("") + "</section>";
     }).join("");
   }
 
@@ -621,16 +627,48 @@
     $("#disableDeveloperButton").addEventListener("click", function () { toggleDeveloperMode(false); });
   }
 
-  function modifierHeld(event) {
-    const modifier = state().preferences.controls.shortcutHintModifier;
-    return modifier === "Alt" ? event.altKey : modifier === "Shift" ? event.shiftKey : event.ctrlKey;
+  function shortcutChordHeld(event) {
+    return Boolean(event.shiftKey && event.ctrlKey && event.altKey && !event.metaKey);
+  }
+
+  function refreshShortcutEligibility(active) {
+    const openDialogs = $$("dialog[open]");
+    const activeDialog = openDialogs[openDialogs.length - 1] || null;
+    $$('[data-shortcut]').forEach(function (control) {
+      const ownerDialog = control.closest("dialog");
+      const available = !control.disabled && control.getAttribute("aria-disabled") !== "true" && control.getClientRects().length > 0;
+      const inActiveScope = activeDialog ? ownerDialog === activeDialog : !ownerDialog;
+      control.classList.toggle("shortcut-eligible", Boolean(active && available && inActiveScope));
+    });
+  }
+
+  function decorateShortcutControls(root) {
+    const controls = root && root.matches?.("[data-shortcut]") ? [root] : $$('[data-shortcut]', root || document);
+    controls.forEach(function (control) {
+      const key = control.dataset.shortcut;
+      const definition = SHORTCUTS.find(function (item) { return item.hintKey === key; });
+      const currentTitle = String(control.getAttribute("title") || "");
+      const undecoratedTitle = currentTitle.includes(" · Shortcut:") ? "" : currentTitle;
+      const baseTitle = undecoratedTitle || control.getAttribute("aria-label") || definition?.label || control.textContent.trim();
+      const chordKey = definition?.chordKey || key;
+      control.title = baseTitle + " · Shortcut: " + key + " or Shift + Control + Option + " + chordKey;
+    });
   }
 
   function updateShortcutHints(event, forceOff) {
-    const active = !forceOff && state().preferences.controls.shortcutHints && modifierHeld(event);
-    if (active === hintModifierActive) return;
+    const active = !forceOff && state().preferences.controls.shortcutHints && shortcutChordHeld(event);
     hintModifierActive = active;
     document.documentElement.classList.toggle("shortcut-hints-visible", active);
+    refreshShortcutEligibility(active);
+  }
+
+  function runShortcut(event, action) {
+    event.preventDefault();
+    action();
+    requestAnimationFrame(function () {
+      decorateShortcutControls();
+      refreshShortcutEligibility(hintModifierActive);
+    });
   }
 
   function handleGlobalKeydown(event) {
@@ -642,22 +680,28 @@
     if (u.isEditableTarget(event.target)) return;
     if (event.metaKey) return;
     if (event.code === "Slash") {
-      event.preventDefault();
-      if (event.shiftKey) openSupport("help", event.target);
-      else { $("#globalSearch").focus(); $("#globalSearch").select(); }
+      if (!shortcutChordHeld(event) && event.shiftKey) runShortcut(event, function () { openSupport("help", event.target); });
+      else runShortcut(event, function () { $("#globalSearch").focus(); $("#globalSearch").select(); });
       return;
     }
     if (event.repeat) return;
-    if (event.code === "Digit2" && activeModuleEnabled("roadmap")) { event.preventDefault(); openSupport("roadmap", event.target); }
-    else if (event.code === "KeyN") { event.preventDefault(); openNotes(event.target); }
-    else if (event.code === "KeyV") { event.preventDefault(); openSupport("releases", event.target); }
-    else if (event.code === "KeyS") { event.preventDefault(); sync.syncNow(event.target); }
-    else if (event.code === "KeyE") { event.preventDefault(); portability.exportJson(); }
-    else if (event.code === "KeyT") { event.preventDefault(); toggleThemeFromAppIcon(); }
-    else if (event.code === "KeyD") { event.preventDefault(); toggleDeveloperMode(undefined, { openPanel: true }); }
+    if (event.code === "KeyH") runShortcut(event, function () { openSupport("help", event.target); });
+    else if (event.code === "Comma") runShortcut(event, function () { openSupport("settings", event.target); });
+    else if (event.code === "Digit2" && activeModuleEnabled("roadmap")) runShortcut(event, function () { openSupport("roadmap", event.target); });
+    else if (event.code === "KeyN") runShortcut(event, function () { openNotes(event.target); });
+    else if (event.code === "KeyV") runShortcut(event, function () { openSupport("releases", event.target); });
+    else if (event.code === "KeyS") runShortcut(event, function () { sync.syncNow(event.target); });
+    else if (event.code === "KeyE") runShortcut(event, portability.exportJson);
+    else if (event.code === "KeyT") runShortcut(event, toggleThemeFromAppIcon);
+    else if (event.code === "KeyD") runShortcut(event, function () { toggleDeveloperMode(undefined, { openPanel: true }); });
   }
 
   function bindGeneralEvents() {
+    $$('[data-close-dialog]').forEach(function (button) {
+      if (!button.dataset.shortcut) button.dataset.shortcut = "Esc";
+      if (!button.hasAttribute("aria-keyshortcuts")) button.setAttribute("aria-keyshortcuts", "Escape Control+Alt+Shift+Escape");
+    });
+    decorateShortcutControls();
     bindAppIconGestures();
     $("#versionButton").addEventListener("click", function (event) { openSupport("releases", event.currentTarget); });
     $("#supportButton").addEventListener("click", function (event) { openSupport(state().ui.supportTab, event.currentTarget); });
@@ -704,6 +748,7 @@
     document.addEventListener("keydown", handleGlobalKeydown);
     document.addEventListener("keyup", function (event) { updateShortcutHints(event, false); });
     window.addEventListener("blur", function () { updateShortcutHints({ altKey: false, shiftKey: false, ctrlKey: false }, true); });
+    new MutationObserver(function () { if (hintModifierActive) refreshShortcutEligibility(true); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["open", "hidden", "disabled", "aria-disabled"] });
   }
 
   function renderAll() {
@@ -712,6 +757,8 @@
     renderNotesEditor();
     renderGlobalSearchResults();
     if ($("#supportDialog").open) renderSupport();
+    decorateShortcutControls();
+    refreshShortcutEligibility(hintModifierActive);
   }
 
   function bindRuntimeEvents() {

@@ -30,8 +30,9 @@
 
 - [ ] Visible focus, logical focus order, labels, roles, and ARIA state are correct.
 - [ ] Escape closes menus, popovers, and dialogs and returns focus to the trigger.
-- [ ] `?`, `2`, `N`, `V`, `S`, `E`, `T`, and `D` work outside editable fields both alone and while Shift, Control, or Option is held.
-- [ ] Holding the configured modifier reveals shortcut hints and releasing it hides them.
+- [ ] `/`, `H`/`?`, `,`, `2`, `N`, `V`, `S`, `E`, `T`, and `D` work outside editable fields both directly and while Shift–Control–Option is held.
+- [ ] Holding Shift–Control–Option reveals shortcut hints only for enabled controls in the active page or dialog, and releasing any chord key hides them.
+- [ ] Hovering a shortcut-enabled control shows both its plain key and Shift–Control–Option command.
 - [ ] Tabs and menu items support arrow-key movement.
 - [ ] Reduced-motion mode removes nonessential transitions and animations.
 - [ ] Light and dark themes meet contrast needs; status always includes text or an accessible label.
