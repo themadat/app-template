@@ -1,7 +1,7 @@
 "use strict";
 
-const CACHE_NAME = "app-template-shell-0.0.1.2";
-const ASSET_VERSION = "0.0.1.2";
+const CACHE_NAME = "app-template-shell-0.0.1.3";
+const ASSET_VERSION = "0.0.1.3";
 const versioned = function (path) { return path + "?v=" + ASSET_VERSION; };
 const SHELL = [
   "./",
@@ -22,12 +22,12 @@ const SHELL = [
   versioned("./assets/icons/favicon.svg"),
   versioned("./assets/icons/app-icon-light.svg"),
   versioned("./assets/icons/app-icon-dark.svg"),
-  "./assets/icons/icon-192.png",
-  "./assets/icons/icon-512.png",
-  "./assets/icons/icon-512-maskable.png",
-  "./assets/icons/icon-192-dark.png",
-  "./assets/icons/icon-512-dark.png",
-  "./assets/icons/icon-512-maskable-dark.png",
+  versioned("./assets/icons/icon-192.png"),
+  versioned("./assets/icons/icon-512.png"),
+  versioned("./assets/icons/icon-512-maskable.png"),
+  versioned("./assets/icons/icon-192-dark.png"),
+  versioned("./assets/icons/icon-512-dark.png"),
+  versioned("./assets/icons/icon-512-maskable-dark.png"),
   versioned("./assets/icons/apple-touch-icon.png"),
   versioned("./assets/icons/apple-touch-icon-dark.png"),
   versioned("./assets/icons/splash-light.png"),
