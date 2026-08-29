@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.8",
-      buildId: "0.0.1.8",
+      version: "0.0.1.9",
+      buildId: "0.0.1.9",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.9",
+        date: "2026-08-29T21:00:00.000Z",
+        title: "Single GitHub Pages deployment",
+        summary: "Pushes now use the repository’s existing GitHub Pages branch deployment without also starting a redundant custom publishing workflow.",
+        features: [],
+        improvements: ["One automatic Pages deployment per main-branch push", "Hosting instructions now document the single deployment path"],
+        fixes: ["Removed the duplicate push-triggered GitHub Pages workflow"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.8",
         date: "2026-08-29T20:00:00.000Z",

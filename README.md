@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.8` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.9` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -163,6 +163,8 @@ The token stays in browser storage on that device, is never included in exports 
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
 
+For GitHub Pages, use **Settings → Pages → Deploy from a branch**, select `main` and `/ (root)`, then save. GitHub’s built-in **pages build and deployment** workflow will publish each push. Do not add a second push-triggered Pages workflow unless you first disable branch deployment; enabling both paths creates two deployments for the same commit.
+
 The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. When a waiting worker is ready, a persistent **New version available** toast appears at the bottom. Its clockwise-arrow action force-activates that worker and reloads with a cache-busting URL, including in the installed PWA.
 
 ## Agent workflow
@@ -174,4 +176,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.8 - Add the searchable SVG icon library`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.9 - Use one GitHub Pages deployment path`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
