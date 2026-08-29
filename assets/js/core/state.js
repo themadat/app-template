@@ -102,6 +102,7 @@
         supportTab: "settings"
       },
       modules: {
+        iconLibrary: { source: "all", sortBy: "name" },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -345,6 +346,7 @@
     const sourcePanels = u.plainObject(sourceUi.panels);
     const sourceNavigation = u.plainObject(sourceUi.navigation);
     const sourceModules = u.plainObject(source.modules);
+    const sourceIconLibrary = u.plainObject(sourceModules.iconLibrary);
     const sourceRoadmap = u.plainObject(sourceModules.roadmap);
     const sourceCloud = u.plainObject(sourceModules.cloudSync);
     const theme = config.themes.find(function (item) { return item.id === sourceAppearance.preset; }) || defaultTheme();
@@ -444,6 +446,10 @@
         supportTab: ["settings", "help", "releases", "shortcuts", "roadmap", "developer"].includes(sourceUi.supportTab) ? sourceUi.supportTab : "settings"
       },
       modules: {
+        iconLibrary: {
+          source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
+          sortBy: ["name", "nameDesc", "source"].includes(sourceIconLibrary.sortBy) ? sourceIconLibrary.sortBy : "name"
+        },
         records: Object.assign({}, base.modules.records, u.plainObject(sourceModules.records)),
         documents: { enabled: config.features.documents && u.plainObject(sourceModules.documents).enabled !== false },
         roadmap: {
@@ -511,6 +517,7 @@
     next.ui.navigation = defaults.ui.navigation;
     next.ui.dismissedHints = [];
     next.ui.supportTab = "settings";
+    next.modules.iconLibrary = defaults.modules.iconLibrary;
     next.modules.roadmap = defaults.modules.roadmap;
     next.modules.cloudSync.advancedOpen = false;
     return normalize(touch(next));
@@ -546,6 +553,7 @@
       preferences: normalized.preferences,
       ui: normalized.ui,
       modules: {
+        iconLibrary: normalized.modules.iconLibrary,
         records: normalized.modules.records,
         documents: normalized.modules.documents,
         roadmap: normalized.modules.roadmap

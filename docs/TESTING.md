@@ -10,8 +10,10 @@
 
 ## Desktop
 
-- [ ] Header, version/Beta pills, centered global search, toolbar, and combined floating storage/sync status fit without horizontal overflow; the main workspace is blank.
-- [ ] `/` focuses global search; results route to Notes, Help, releases, and the Settings Roadmap.
+- [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
+- [ ] The catalog reports 932 unique icons, renders responsive previews, filters by each source, sorts in every direction, and progressively reveals large result sets.
+- [ ] `/` focuses global search; icon matches filter the main grid and search results focus their corresponding copy button; support matches still route to Notes, Help, releases, and the Settings Roadmap.
+- [ ] Selecting an icon copies complete SVG markup, shows a visible and announced success state, and provides an actionable failure message when clipboard access is unavailable.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
 - [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work inside Settings.
@@ -39,7 +41,7 @@
 
 ## Persistence, import, and migration
 
-- [ ] Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
+- [ ] Icon source/sort settings, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
 - [ ] Reset Preferences preserves notes; Erase All removes content, preferences, token, and recovery data only after custom confirmation.
 - [ ] Export contains state-model version, notes, preferences, and module settings, but never the GitHub token.
 - [ ] A malformed or oversized import is rejected without replacing current data.
@@ -58,7 +60,7 @@
 
 ## PWA and recovery
 
-- [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, the Settings Roadmap, and Settings.
+- [ ] First online visit caches every `SHELL` entry, including the generated icon catalog, and a later offline reload supports icon search/copy, Notes, the Settings Roadmap, and Settings.
 - [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
 - [ ] A waiting service worker shows a bottom New version available toast; its arrow-only Force refresh action activates it and reloads the browser tab or installed PWA.
 - [ ] The Safari favicon uses a fully opaque `#8E8E93` background with visible blue blueprint geometry and no inset outline; manifest, touch icon, install icon, and splash assets resolve.
