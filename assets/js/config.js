@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A focused pre-launch local-first shell with a blank app workspace, Notes, settings, and optional GitHub Sync.",
-      version: "0.0.1.5",
-      buildId: "0.0.1.5",
+      version: "0.0.1.6",
+      buildId: "0.0.1.6",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.6",
+        date: "2026-08-29T16:00:00.000Z",
+        title: "Full-bleed Safari favicon",
+        summary: "Safari now receives a fully opaque gray favicon canvas with no inset shape, transparent margin, or outline treatment.",
+        features: [],
+        improvements: ["Gray favicon artwork runs edge to edge"],
+        fixes: ["Removed the inset squircle and its visible Safari tab outline"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.5",
         date: "2026-08-29T15:00:00.000Z",

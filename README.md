@@ -2,7 +2,7 @@
 
 A static, local-first HTML application foundation with no build step, runtime dependency, backend, account, or sign-in.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.5` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.6` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -59,7 +59,7 @@ context/                       Agent wish, plan, start, and cut workflow
 Editable sources and generated install assets are in `assets/icons/`. Keep the existing filenames unless you also update every reference in `index.html`, both manifests, `assets/js/config.js`, and `sw.js`.
 
 1. Replace the six editable source files named `App Icon Template Light.svg`, `App Icon Template Light.png`, `App Icon Template Dark.svg`, `App Icon Template Dark.png`, `App Icon Template Gray.svg`, and `App Icon Template Gray.png`.
-2. Copy the light and dark SVG sources to `app-icon-light.svg` and `app-icon-dark.svg`. Copy the gray SVG source to `favicon.svg`; keep its appearance-aware fill so the squircle is gray in light browser chrome and white in dark browser chrome. Keep important artwork inside the central 80% for maskable crops.
+2. Copy the light and dark SVG sources to `app-icon-light.svg` and `app-icon-dark.svg`. Copy the gray SVG source to `favicon.svg`; keep this favicon fully opaque and edge to edge so Safari does not introduce an inset outline. Keep important install-icon artwork inside the central 80% for maskable crops.
 3. Export the light icon to:
 
    - `icon-192.png` at 192 × 192
@@ -153,4 +153,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.5 - Fill the dark-mode favicon`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.6 - Make the Safari favicon full bleed`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
