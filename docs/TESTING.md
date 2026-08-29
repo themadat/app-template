@@ -61,6 +61,6 @@
 - [ ] First online visit caches every `SHELL` entry and a later offline reload opens Notes, the Settings Roadmap, and Settings.
 - [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
 - [ ] A waiting service worker shows a bottom New version available toast; its arrow-only Force refresh action activates it and reloads the browser tab or installed PWA.
-- [ ] The favicon squircle is filled gray in light browser chrome and filled white in dark browser chrome; manifest, touch icon, install icon, and splash assets resolve.
+- [ ] The Safari favicon is fully opaque gray with no inset shape, transparent margin, or outline; manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.
