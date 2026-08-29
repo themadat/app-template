@@ -31,7 +31,7 @@
     { keys: "S", hintKey: "S", chordKey: "S", label: "Run the primary sync action", group: "Actions" },
     { keys: "E", hintKey: "E", chordKey: "E", label: "Export a JSON backup", group: "Actions" },
     { keys: "T", hintKey: "T", chordKey: "T", label: "Switch color theme", group: "Actions" },
-    { keys: "D", hintKey: "D", chordKey: "D", label: "Toggle hidden Developer Mode", group: "Developer" },
+    { keys: "D or |", hintKey: "D", secondaryHintKey: "|", chordKey: "D or |", label: "Toggle hidden Developer Mode", group: "Developer" },
     { keys: "Arrow keys", label: "Move through tabs, menus, and list choices", group: "Navigation", chord: false }
   ];
 
@@ -645,13 +645,18 @@
   function decorateShortcutControls(root) {
     const controls = root && root.matches?.("[data-shortcut]") ? [root] : $$('[data-shortcut]', root || document);
     controls.forEach(function (control) {
-      const key = control.dataset.shortcut;
+      const keys = [control.dataset.shortcut, control.dataset.shortcutSecondary].filter(Boolean);
+      const key = keys[0];
       const definition = SHORTCUTS.find(function (item) { return item.hintKey === key; });
       const currentTitle = String(control.getAttribute("title") || "");
-      const undecoratedTitle = currentTitle.includes(" · Shortcut:") ? "" : currentTitle;
+      const undecoratedTitle = / · Shortcuts?:/.test(currentTitle) ? "" : currentTitle;
       const baseTitle = undecoratedTitle || control.getAttribute("aria-label") || definition?.label || control.textContent.trim();
-      const chordKey = definition?.chordKey || key;
-      control.title = baseTitle + " · Shortcut: " + key + " or Shift + Control + Option + " + chordKey;
+      const commands = keys.map(function (commandKey) {
+        const command = SHORTCUTS.find(function (item) { return item.hintKey === commandKey || item.secondaryHintKey === commandKey; });
+        const chordKey = commandKey === command?.secondaryHintKey ? commandKey : command?.chordKey || commandKey;
+        return commandKey + " or Shift + Control + Option + " + chordKey;
+      });
+      control.title = baseTitle + " · Shortcut" + (commands.length > 1 ? "s: " : ": ") + commands.join("; ");
     });
   }
 
@@ -685,7 +690,8 @@
       return;
     }
     if (event.repeat) return;
-    if (event.code === "KeyH") runShortcut(event, function () { openSupport("help", event.target); });
+    if ((event.code === "Backslash" && event.shiftKey) || event.key === "|") runShortcut(event, function () { toggleDeveloperMode(undefined, { openPanel: true }); });
+    else if (event.code === "KeyH") runShortcut(event, function () { openSupport("help", event.target); });
     else if (event.code === "Comma") runShortcut(event, function () { openSupport("settings", event.target); });
     else if (event.code === "Digit2" && activeModuleEnabled("roadmap")) runShortcut(event, function () { openSupport("roadmap", event.target); });
     else if (event.code === "KeyN") runShortcut(event, function () { openNotes(event.target); });
