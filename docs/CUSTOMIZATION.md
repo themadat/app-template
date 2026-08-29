@@ -13,9 +13,9 @@ Change `identity` in `assets/js/config.js`, then mirror user-visible fallback me
 
 ## Update the icon catalog
 
-Edit the SVG constants in their source apps, then run `node build/compile-icon-library.mjs` from this repository. The default scan group is the sibling `visit-tracker`, `cocktail-list`, and `app-template` directories. Pass explicit directories as command arguments to use another group. Commit the regenerated `assets/js/icon-library.js`; consumers do not need Node or a build step.
+Edit SVG template literals or standalone SVG files in their source apps, then run `node build/compile-icon-library.mjs` from this repository. The default scan discovers every non-hidden sibling directory beside `app-template`, including `mctree-mchome`; pass explicit directories as command arguments to use a narrower group. Commit the regenerated `assets/js/icon-library.js`; consumers do not need Node or a build step.
 
-The compiler accepts named inline SVG constants, fixed SF Symbol markup embedded in source HTML, and narrowly recognized standalone interface-symbol sources. It removes XML wrappers, rejects scripts, event handlers, foreign objects, JavaScript URLs, and dynamic template fragments, then deduplicates normalized artwork. Extend `STANDALONE_ICON_PATHS` only for folders that contain reusable interface symbols rather than branding, maps, splash art, or other domain artwork.
+The compiler accepts every complete SVG template literal ending with `</svg>` and a closing backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files up to 256 KB. It removes XML wrappers, rejects scripts, event handlers, foreign objects, JavaScript or external URLs, and dynamic template fragments, then deduplicates normalized artwork and labels it as SF Symbol or Custom.
 
 ## Themes
 

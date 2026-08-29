@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.9",
-      buildId: "0.0.1.9",
+      version: "0.0.1.10",
+      buildId: "0.0.1.10",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.10",
+        date: "2026-08-29T22:00:00.000Z",
+        title: "Complete multi-repository icon scan",
+        summary: "The icon library now scans every sibling application repository, captures complete SVG template literals wherever they appear, and separates SF Symbols from custom artwork.",
+        features: ["Generated catalog of 2,975 deduplicated SVG icons", "SF Symbols versus Custom type filter", "Automatic discovery of sibling application directories"],
+        improvements: ["McTree McHome and every other contributing sibling repository now appear in the source filter", "Standalone SVG files are included alongside SVG template literals", "Catalog output reports scan and classification totals"],
+        fixes: ["SVG template literals no longer require a named variable assignment to be captured", "Repositories outside the former three-directory allowlist are no longer skipped"],
+        knownIssues: ["Two oversized world-map canvases are intentionally excluded from the icon catalog.", "GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.9",
         date: "2026-08-29T21:00:00.000Z",
@@ -172,8 +182,8 @@
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search copy svg notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog, optionally filter by source, and select any icon card to copy its complete SVG markup. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
-      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search copy clipboard source filter sort catalog compiler", html: "<p>Search by symbol name, alias, or source repository. Choose an icon card to copy sanitized inline SVG markup that is ready to paste into another HTML or JavaScript application. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search copy svg notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog, optionally filter by icon type and source, and select any icon card to copy its complete SVG markup. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
+      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search copy clipboard source filter sort catalog compiler", html: "<p>Search by symbol name, alias, SF Symbol/Custom type, or source repository. Choose an icon card to copy sanitized inline SVG markup that is ready to paste into another HTML or JavaScript application. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },

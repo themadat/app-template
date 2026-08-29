@@ -102,7 +102,7 @@
         supportTab: "settings"
       },
       modules: {
-        iconLibrary: { source: "all", sortBy: "name" },
+        iconLibrary: { kind: "all", source: "all", sortBy: "name" },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -447,6 +447,7 @@
       },
       modules: {
         iconLibrary: {
+          kind: ["all", "sf-symbol", "custom"].includes(sourceIconLibrary.kind) ? sourceIconLibrary.kind : "all",
           source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
           sortBy: ["name", "nameDesc", "source"].includes(sourceIconLibrary.sortBy) ? sourceIconLibrary.sortBy : "name"
         },

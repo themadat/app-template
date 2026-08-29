@@ -6,7 +6,7 @@ Start a new session with:
 Continue work in /Users/stripes/Documents/GitHub/app-template. Read AGENTS.md and context/LLM_HANDOFF.md first. Preserve manual edits and run git status --short before editing.
 ```
 
-This repository is a focused SVG icon-library application. It includes the reusable top bar with centered icon search, a searchable and copyable main catalog, a single plain-text Notes modal, a replaceable demonstration Roadmap inside Settings, combined floating storage/sync status, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface, multi-note workspace, rich-text editor, and app-space Roadmap are not part of the template.
+This repository is a focused SVG icon-library application. It includes the reusable top bar with centered icon search, a searchable and copyable main catalog with SF Symbols/Custom and source filters, a single plain-text Notes modal, a replaceable demonstration Roadmap inside Settings, combined floating storage/sync status, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface, multi-note workspace, rich-text editor, and app-space Roadmap are not part of the template.
 
 ## Workflows
 
@@ -64,7 +64,7 @@ Do not silently move from one lifecycle stage to another.
 ## Invariants
 
 - Keep the runtime static, dependency-free, backend-free, and hostable as ordinary files.
-- Preserve the searchable icon catalog, single Notes modal, and Settings Roadmap unless the user explicitly removes or replaces them.
+- Preserve the full sibling-repository icon scan and searchable icon catalog, single Notes modal, and Settings Roadmap unless the user explicitly removes or replaces them.
 - Use one GitHub Pages deployment path. This repository relies on GitHub’s built-in branch deployment from `main`; do not add a second push-triggered Pages workflow while that setting is enabled.
 - The built-in application icon click changes theme; press-and-hold toggles Developer Mode without also changing theme.
 - Developer Mode adds `DEV` to the single version pill. Beta remains a separate environment pill.

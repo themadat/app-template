@@ -11,7 +11,7 @@
 ## Desktop
 
 - [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
-- [ ] The catalog reports 932 unique icons, renders responsive previews, filters by each source, sorts in every direction, and progressively reveals large result sets.
+- [ ] The catalog reports 2,975 unique icons, renders responsive previews, filters by SF Symbols versus Custom and by each contributing source, sorts in every direction, and progressively reveals large result sets.
 - [ ] `/` focuses global search; icon matches filter the main grid and search results focus their corresponding copy button; support matches still route to Notes, Help, releases, and the Settings Roadmap.
 - [ ] Selecting an icon copies complete SVG markup, shows a visible and announced success state, and provides an actionable failure message when clipboard access is unavailable.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
@@ -41,7 +41,7 @@
 
 ## Persistence, import, and migration
 
-- [ ] Icon source/sort settings, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
+- [ ] Icon type/source/sort settings, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
 - [ ] Reset Preferences preserves notes; Erase All removes content, preferences, token, and recovery data only after custom confirmation.
 - [ ] Export contains state-model version, notes, preferences, and module settings, but never the GitHub token.
 - [ ] A malformed or oversized import is rejected without replacing current data.

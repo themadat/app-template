@@ -14,7 +14,7 @@
   const iconCatalog = App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : [];
   const iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
   const iconSearchIndex = new Map(iconCatalog.map(function (icon) {
-    return [icon.id, [icon.label, icon.name].concat(icon.aliases || [], icon.repositories || [], (icon.sources || []).map(function (source) { return source.symbol + " " + source.file; })).join(" ").toLowerCase()];
+    return [icon.id, [icon.label, icon.name, icon.kind === "sf-symbol" ? "sf symbol sf symbols" : "custom"].concat(icon.aliases || [], icon.repositories || [], (icon.sources || []).map(function (source) { return source.symbol + " " + source.file; })).join(" ").toLowerCase()];
   }));
   const ICON_PAGE_SIZE = 120;
   let versionView = "released";
@@ -205,8 +205,11 @@
   }
 
   function repositoryLabel(value) {
+    if (value === "mctree-mchome") return "McTree McHome";
     return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
   }
+
+  function iconKindLabel(value) { return value === "sf-symbol" ? "SF Symbol" : "Custom"; }
 
   function iconMatches(icon, needle) {
     return !needle || (iconSearchIndex.get(icon.id) || "").includes(needle);
@@ -216,9 +219,10 @@
     const moduleState = state().modules.iconLibrary;
     const availableSources = new Set(App.iconLibrary && App.iconLibrary.sourceRepositories || []);
     const source = availableSources.has(moduleState.source) ? moduleState.source : "all";
+    const kind = ["sf-symbol", "custom"].includes(moduleState.kind) ? moduleState.kind : "all";
     const needle = String(state().ui.search || "").trim().toLowerCase();
     const filtered = iconCatalog.filter(function (icon) {
-      return (source === "all" || icon.repositories.includes(source)) && iconMatches(icon, needle);
+      return (kind === "all" || icon.kind === kind) && (source === "all" || icon.repositories.includes(source)) && iconMatches(icon, needle);
     });
     filtered.sort(function (a, b) {
       if (moduleState.sortBy === "nameDesc") return b.label.localeCompare(a.label, undefined, { numeric: true });
@@ -233,7 +237,8 @@
 
   function iconCard(icon) {
     const sourceText = icon.repositories.map(repositoryLabel).join(" + ");
-    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + u.escapeHtml(icon.id) + '" class="icon-card" type="button" data-icon-id="' + u.escapeHtml(icon.id) + '" aria-label="Copy ' + u.escapeHtml(icon.label) + ' SVG" title="Copy SVG · ' + u.escapeHtml(sourceText) + '"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + u.escapeHtml(icon.label) + '</strong><code>' + u.escapeHtml(icon.name) + '</code><span class="icon-card-meta">' + u.escapeHtml(sourceText) + '</span><span class="icon-copy-label"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></span></button></div>';
+    const typeText = iconKindLabel(icon.kind);
+    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + u.escapeHtml(icon.id) + '" class="icon-card" type="button" data-icon-id="' + u.escapeHtml(icon.id) + '" aria-label="Copy ' + u.escapeHtml(icon.label) + ' SVG" title="Copy SVG · ' + u.escapeHtml(typeText + " · " + sourceText) + '"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + u.escapeHtml(icon.label) + '</strong><code>' + u.escapeHtml(icon.name) + '</code><span class="icon-card-meta">' + u.escapeHtml(typeText + " · " + sourceText) + '</span><span class="icon-copy-label"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></span></button></div>';
   }
 
   function renderIconLibrary() {
@@ -246,6 +251,7 @@
     }
     const selectedSource = sources.includes(state().modules.iconLibrary.source) ? state().modules.iconLibrary.source : "all";
     setInputValue(sourceSelect, selectedSource);
+    setInputValue($("#iconKindFilter"), state().modules.iconLibrary.kind);
     setInputValue($("#iconSort"), state().modules.iconLibrary.sortBy);
     const matches = filteredIcons();
     const shown = matches.slice(0, iconVisibleCount);
@@ -256,7 +262,7 @@
     $("#iconLoadMore").hidden = shown.length >= matches.length;
     $("#iconClearSearch").hidden = !state().ui.search;
     $("#iconLibraryCount").textContent = matches.length === iconCatalog.length ? iconCatalog.length + " icons" : matches.length + " of " + iconCatalog.length;
-    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons." : " icons.") : "No icons match the current search and source.";
+    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons." : " icons.") : "No icons match the current search and filters.";
   }
 
   function writeClipboard(text) {
@@ -308,7 +314,7 @@
     if (!needle) return [];
     const results = [];
     iconCatalog.forEach(function (icon) {
-      if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: "SVG icon · " + icon.repositories.map(repositoryLabel).join(" + ") });
+      if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: iconKindLabel(icon.kind) + " · " + icon.repositories.map(repositoryLabel).join(" + ") });
     });
     const notes = state().workspace.documents[0];
     if (config.features.documents && notes && (`notes ${documentText(notes)}`).toLowerCase().includes(needle)) results.push({ type: "notes", id: notes.id, title: "Notes", meta: "Local notes" });
@@ -338,7 +344,7 @@
 
   function activateGlobalSearchResult(type, id) {
     if (type === "icon") {
-      if (state().modules.iconLibrary.source !== "all") storage.mutate(function (next) { next.modules.iconLibrary.source = "all"; }, { reason: "icon-source" });
+      if (state().modules.iconLibrary.source !== "all" || state().modules.iconLibrary.kind !== "all") storage.mutate(function (next) { next.modules.iconLibrary.source = "all"; next.modules.iconLibrary.kind = "all"; }, { reason: "icon-filters" });
       iconVisibleCount = ICON_PAGE_SIZE;
       renderIconLibrary();
       requestAnimationFrame(function () {
@@ -877,6 +883,11 @@
     });
     $("#iconSourceFilter").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.iconLibrary.source = event.target.value; }, { reason: "icon-source" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+    });
+    $("#iconKindFilter").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.iconLibrary.kind = event.target.value; }, { reason: "icon-kind" });
       iconVisibleCount = ICON_PAGE_SIZE;
       renderIconLibrary();
     });

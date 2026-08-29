@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. It scans the configured local repositories, sanitizes SVG markup, hashes normalized artwork for content deduplication, merges aliases/source references, and rewrites the single generated catalog file. The UI renders 120 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork for content deduplication, merges aliases/source references, and rewrites the single generated catalog file. The UI renders 120 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.9",
-    "buildId": "0.0.1.9",
+    "appVersion": "0.0.1.10",
+    "buildId": "0.0.1.10",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -63,7 +63,7 @@ The current model is version 4:
     "supportTab": "settings"
   },
   "modules": {
-    "iconLibrary": { "source": "all", "sortBy": "name" },
+    "iconLibrary": { "kind": "all", "source": "all", "sortBy": "name" },
     "documents": {},
     "roadmap": {},
     "cloudSync": {}
