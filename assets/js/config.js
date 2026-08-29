@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A focused pre-launch local-first shell with a blank app workspace, Notes, settings, and optional GitHub Sync.",
-      version: "0.0.1.6",
-      buildId: "0.0.1.6",
+      version: "0.0.1.7",
+      buildId: "0.0.1.7",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.7",
+        date: "2026-08-29T17:00:00.000Z",
+        title: "Safari-gray blueprint favicon",
+        summary: "The full-bleed favicon now combines Safari’s neutral system gray with the template’s blue construction grid, diagonals, and concentric circles.",
+        features: [],
+        improvements: ["Safari-default gray favicon background", "Blueprint geometry tuned for small tab sizes"],
+        fixes: ["Restored the requested blueprint identity without reintroducing an inset outline"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.6",
         date: "2026-08-29T16:00:00.000Z",
