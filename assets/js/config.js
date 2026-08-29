@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A focused pre-launch local-first shell with a blank app workspace, Notes, settings, and optional GitHub Sync.",
-      version: "0.0.1.4",
-      buildId: "0.0.1.4",
+      version: "0.0.1.5",
+      buildId: "0.0.1.5",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.5",
+        date: "2026-08-29T15:00:00.000Z",
+        title: "Filled dark-mode favicon",
+        summary: "The favicon squircle now uses an appearance-aware solid fill so it remains filled instead of reading as a white outline in dark browser chrome.",
+        features: [],
+        improvements: ["Gray filled squircle in light browser chrome", "White filled squircle in dark browser chrome"],
+        fixes: ["Dark title bars no longer make the favicon interior disappear against the surrounding gray"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.4",
         date: "2026-08-29T12:00:00.000Z",
