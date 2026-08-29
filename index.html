@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="A focused pre-launch local-first app foundation with a blank workspace, Notes, settings, and optional GitHub Sync.">
+  <meta name="description" content="A searchable local SVG icon library for finding and copying reusable interface symbols.">
   <meta name="theme-color" content="#f5f3ed">
   <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121616" media="(prefers-color-scheme: dark)">
@@ -12,22 +12,23 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.7">
-  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.7">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.7">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.7" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.7" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.7">
-  <script defer src="assets/js/config.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.7"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.7"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.8">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.8">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.8">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.8" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.8" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.8">
+  <script defer src="assets/js/config.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/icon-library.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.8"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.8"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -35,12 +36,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T | Control+Alt+Shift+T Control+Alt+Shift+|" data-shortcut="T" data-shortcut-secondary="|">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.7" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.8" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.7</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.8</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -48,8 +49,8 @@
 
     <div class="global-search-wrap" data-shortcut="/">
       <span class="search-icon" aria-hidden="true" data-symbol="search"></span>
-      <label class="visually-hidden" for="globalSearch">Search notes, help, releases, and roadmap</label>
-      <input id="globalSearch" type="search" autocomplete="off" placeholder="Search app" aria-haspopup="listbox" aria-controls="globalSearchResults" aria-keyshortcuts="/ Control+Alt+Shift+/">
+      <label class="visually-hidden" for="globalSearch">Search icons and application support</label>
+      <input id="globalSearch" type="search" autocomplete="off" placeholder="Search icons" aria-haspopup="listbox" aria-controls="globalSearchResults" aria-describedby="iconSearchHelp" aria-keyshortcuts="/ Control+Alt+Shift+/">
       <kbd aria-hidden="true">/</kbd>
       <div id="globalSearchResults" class="global-search-results" role="listbox" aria-label="Search results" hidden></div>
     </div>
@@ -78,13 +79,36 @@
     </div>
   </aside>
 
-  <aside id="contextHint" class="context-hint" data-hint-key="workspace-basics" hidden>
+  <aside id="contextHint" class="context-hint" data-hint-key="icon-library-basics" hidden>
     <span aria-hidden="true">i</span>
-    <p>The floating status button combines local-save and optional GitHub Sync information.</p>
-    <button type="button" class="icon-button" data-dismiss-hint="workspace-basics" aria-label="Dismiss hint"><span aria-hidden="true" data-symbol="close"></span></button>
+    <p>Press <kbd>/</kbd> to search the icon library, then select a result to copy its complete SVG.</p>
+    <button type="button" class="icon-button" data-dismiss-hint="icon-library-basics" aria-label="Dismiss hint"><span aria-hidden="true" data-symbol="close"></span></button>
   </aside>
 
-  <main id="mainContent" tabindex="-1" aria-label="Application workspace"></main>
+  <main id="mainContent" tabindex="-1" aria-label="SVG icon library">
+    <section class="icon-library" aria-labelledby="iconLibraryTitle">
+      <header class="icon-library-header">
+        <div>
+          <span class="eyebrow">Reusable SVG symbols</span>
+          <h1 id="iconLibraryTitle">Icon Library</h1>
+          <p id="iconSearchHelp">Search from the app bar, then select any icon to copy its complete SVG markup.</p>
+        </div>
+        <span id="iconLibraryCount" class="count-pill">Loading icons…</span>
+      </header>
+      <div class="icon-library-controls" aria-label="Icon library controls">
+        <label><span>Source</span><select id="iconSourceFilter"><option value="all">All sources</option></select></label>
+        <label><span>Sort</span><select id="iconSort"><option value="name">Name A–Z</option><option value="nameDesc">Name Z–A</option><option value="source">Source</option></select></label>
+        <button id="iconClearSearch" class="button" type="button" hidden>Clear search</button>
+      </div>
+      <div id="iconLibraryStatus" class="icon-library-status" role="status" aria-live="polite"></div>
+      <div id="iconLibraryGrid" class="icon-library-grid" role="list" aria-label="Available SVG icons"></div>
+      <div id="iconLibraryEmpty" class="icon-library-empty" hidden>
+        <strong>No icons found</strong>
+        <span>Try another name or source.</span>
+      </div>
+      <div class="icon-library-more"><button id="iconLoadMore" class="button" type="button" hidden>Show more icons</button></div>
+    </section>
+  </main>
 
   <div class="floating-actions" aria-label="Storage and synchronization status">
     <button id="floatingStatusButton" class="floating-button status-button" type="button" aria-label="Saved locally. GitHub setup required." title="Saved locally. GitHub setup required." aria-keyshortcuts="S Control+Alt+Shift+S" data-sync-state="setup" data-shortcut="S">
@@ -178,7 +202,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.7</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.8</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>

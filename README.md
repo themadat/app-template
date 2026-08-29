@@ -1,13 +1,14 @@
 # App Template
 
-A static, local-first HTML application foundation with no build step, runtime dependency, backend, account, or sign-in.
+A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.7` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.8` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
-- Sticky application header with version, Beta, centered global search, Notes, and Settings controls.
-- Blank main application workspace ready for app-specific content.
+- Sticky application header with version, Beta, centered icon search, Notes, and Settings controls.
+- Responsive catalog of 932 deduplicated SVG icons gathered from the related local applications.
+- Source filtering, name/source sorting, batched rendering, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
 - Replaceable Roadmap inside Settings with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
@@ -30,16 +31,17 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 1. Update identity, version, release notes, help, roadmap data, repository links, and feature flags in `assets/js/config.js`.
 2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
 3. Leave the default Notes document blank or add intentional starter text in `demoDocuments()` inside `assets/js/core/state.js`.
-4. Build the application-specific interface inside the blank `main` element. Extend or replace Notes and the Settings Roadmap only when the new app needs different behavior.
+4. Replace or remove the icon-library page when the new app needs a different main interface. The reusable shell, Notes, Settings, and synchronization modules remain independent.
 5. Use `major.minor.patch.build` versions. Increment the fourth number for every completed application update; when intentionally changing major, minor, or patch, reset the build number to `1` unless another value is required. Keep `identity.buildId` equal to the full version, add the matching dated release entry, update the build query values in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
 
 ## Project structure
 
 ```text
-index.html                     Application shell, blank workspace, Notes, and dialogs
+index.html                     Application shell, icon-library page, Notes, and dialogs
 assets/css/app.css             Theme, layout, components, and responsive behavior
 assets/js/config.js            Identity, versions, themes, help, releases, and roadmap
 assets/js/icons.js             Inline SF Symbol SVG catalog
+assets/js/icon-library.js      Generated, deduplicated icon data used by the main page
 assets/js/app.js               Application rendering, actions, and keyboard wiring
 assets/js/core/state.js        Defaults, normalization, migrations, validation, and merge
 assets/js/core/storage.js      Local persistence, secret storage, and recovery copies
@@ -48,11 +50,30 @@ assets/js/core/portability.js  JSON export, validation preview, and import
 assets/js/core/sync.js         Optional GitHub synchronization state machine
 assets/js/core/pwa.js          PWA assets, update notices, and device detection
 assets/icons/                  Editable and generated application assets
+build/compile-icon-library.mjs Dependency-free development-time icon scanner/compiler
 manifest*.webmanifest          Light and dark install metadata
 sw.js                          Offline shell and update cache
 docs/                          Architecture, components, customization, and test checklists
 context/                       Agent wish, plan, start, and cut workflow
 ```
+
+## Rebuild the SVG icon catalog
+
+The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler scans sibling `visit-tracker`, `cocktail-list`, and this `app-template` repository. It extracts named SVG constants and fixed symbols embedded in source HTML, includes recognized standalone interface-symbol sources, rejects executable SVG content, deduplicates matching artwork, and preserves searchable aliases and source metadata.
+
+Run it after adding or changing source symbols:
+
+```sh
+node build/compile-icon-library.mjs
+```
+
+To scan a different group of local repositories, pass their directories explicitly:
+
+```sh
+node build/compile-icon-library.mjs /path/to/first-app /path/to/second-app
+```
+
+The compiler replaces only `assets/js/icon-library.js`. Application branding, favicons, splash artwork, and map illustrations are intentionally excluded from the reusable interface catalog. After rebuilding, advance the app build version and test search, source filters, icon previews, clipboard copying, and offline loading.
 
 ## Update the application icons
 
@@ -153,4 +174,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.7 - Add the Safari-gray blueprint favicon`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.8 - Add the searchable SVG icon library`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

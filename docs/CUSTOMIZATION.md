@@ -11,6 +11,12 @@ Change `identity` in `assets/js/config.js`, then mirror user-visible fallback me
 - Keep stable ids and valid ISO dates.
 - Do not ship secrets, personal data, or domain-specific source-application content.
 
+## Update the icon catalog
+
+Edit the SVG constants in their source apps, then run `node build/compile-icon-library.mjs` from this repository. The default scan group is the sibling `visit-tracker`, `cocktail-list`, and `app-template` directories. Pass explicit directories as command arguments to use another group. Commit the regenerated `assets/js/icon-library.js`; consumers do not need Node or a build step.
+
+The compiler accepts named inline SVG constants, fixed SF Symbol markup embedded in source HTML, and narrowly recognized standalone interface-symbol sources. It removes XML wrappers, rejects scripts, event handlers, foreign objects, JavaScript URLs, and dynamic template fragments, then deduplicates normalized artwork. Extend `STANDALONE_ICON_PATHS` only for folders that contain reusable interface symbols rather than branding, maps, splash art, or other domain artwork.
+
 ## Themes
 
 Base theme variables live at the top of `assets/css/app.css`. Editable user values are normalized in `state.js` and applied in `app.js`. Add a preset to `config.themes` with `accent`, `accent2`, `success`, `warning`, and `danger` six-digit hex values.
@@ -38,6 +44,7 @@ Avoid generic abstractions until a second real module needs the same behavior.
 - Developer tools: set `features.developerTools` to `false` and remove the Developer panel if it will never be used.
 - Contextual hints: set `features.hints` to `false` and remove hint/settings markup if desired.
 - Notes: remove its top-bar control, modal, and event code. Retain legacy document migration fields until old backups no longer need support.
+- Icon library: remove `icon-library.js`, its script and service-worker entries, the main-page catalog markup/styles, and the related render/copy/filter code in `app.js`. Replace the `main` landmark with the new application interface.
 
 ## Publish a version
 

@@ -11,10 +11,18 @@
   const portability = App.portability;
   const sync = App.sync;
   const pwa = App.pwa;
+  const iconCatalog = App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : [];
+  const iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
+  const iconSearchIndex = new Map(iconCatalog.map(function (icon) {
+    return [icon.id, [icon.label, icon.name].concat(icon.aliases || [], icon.repositories || [], (icon.sources || []).map(function (source) { return source.symbol + " " + source.file; })).join(" ").toLowerCase()];
+  }));
+  const ICON_PAGE_SIZE = 120;
   let versionView = "released";
   let hintModifierActive = false;
   let appIconHoldTimer = 0;
   let appIconHoldHandled = false;
+  let iconVisibleCount = ICON_PAGE_SIZE;
+  let copiedIconTimer = 0;
 
   const $ = function (selector, root) { return (root || document).querySelector(selector); };
   const $$ = function (selector, root) { return Array.from((root || document).querySelectorAll(selector)); };
@@ -122,7 +130,7 @@
       $("[data-whats-new-summary]").textContent = latest.summary;
     }
     const hint = $("#contextHint");
-    const hintHidden = !config.features.hints || !state().preferences.hints.enabled || state().preferences.hints.dismissed.includes("workspace-basics");
+    const hintHidden = !config.features.hints || !state().preferences.hints.enabled || state().preferences.hints.dismissed.includes("icon-library-basics");
     hint.hidden = hintHidden;
   }
 
@@ -196,10 +204,112 @@
     return '<article class="roadmap-card" data-roadmap-state="' + item.state + '"><header><span class="roadmap-state">' + u.escapeHtml(item.state) + '</span><span class="priority-chip">P' + item.priority + '</span></header><h3>' + u.escapeHtml(item.title) + '</h3><p>' + u.escapeHtml(item.description) + '</p><footer><span>Target ' + u.escapeHtml(item.target) + '</span><span>Effort ' + item.effort + '/4</span><span>Added ' + u.dateLabel(item.createdAt) + "</span></footer></article>";
   }
 
+  function repositoryLabel(value) {
+    return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
+  }
+
+  function iconMatches(icon, needle) {
+    return !needle || (iconSearchIndex.get(icon.id) || "").includes(needle);
+  }
+
+  function filteredIcons() {
+    const moduleState = state().modules.iconLibrary;
+    const availableSources = new Set(App.iconLibrary && App.iconLibrary.sourceRepositories || []);
+    const source = availableSources.has(moduleState.source) ? moduleState.source : "all";
+    const needle = String(state().ui.search || "").trim().toLowerCase();
+    const filtered = iconCatalog.filter(function (icon) {
+      return (source === "all" || icon.repositories.includes(source)) && iconMatches(icon, needle);
+    });
+    filtered.sort(function (a, b) {
+      if (moduleState.sortBy === "nameDesc") return b.label.localeCompare(a.label, undefined, { numeric: true });
+      if (moduleState.sortBy === "source") {
+        const compared = String(a.repositories[0] || "").localeCompare(String(b.repositories[0] || ""));
+        if (compared) return compared;
+      }
+      return a.label.localeCompare(b.label, undefined, { numeric: true });
+    });
+    return filtered;
+  }
+
+  function iconCard(icon) {
+    const sourceText = icon.repositories.map(repositoryLabel).join(" + ");
+    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + u.escapeHtml(icon.id) + '" class="icon-card" type="button" data-icon-id="' + u.escapeHtml(icon.id) + '" aria-label="Copy ' + u.escapeHtml(icon.label) + ' SVG" title="Copy SVG · ' + u.escapeHtml(sourceText) + '"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + u.escapeHtml(icon.label) + '</strong><code>' + u.escapeHtml(icon.name) + '</code><span class="icon-card-meta">' + u.escapeHtml(sourceText) + '</span><span class="icon-copy-label"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></span></button></div>';
+  }
+
+  function renderIconLibrary() {
+    const grid = $("#iconLibraryGrid");
+    if (!grid) return;
+    const sources = App.iconLibrary && App.iconLibrary.sourceRepositories || [];
+    const sourceSelect = $("#iconSourceFilter");
+    if (sourceSelect.options.length !== sources.length + 1) {
+      sourceSelect.innerHTML = '<option value="all">All sources</option>' + sources.map(function (source) { return '<option value="' + u.escapeHtml(source) + '">' + u.escapeHtml(repositoryLabel(source)) + '</option>'; }).join("");
+    }
+    const selectedSource = sources.includes(state().modules.iconLibrary.source) ? state().modules.iconLibrary.source : "all";
+    setInputValue(sourceSelect, selectedSource);
+    setInputValue($("#iconSort"), state().modules.iconLibrary.sortBy);
+    const matches = filteredIcons();
+    const shown = matches.slice(0, iconVisibleCount);
+    grid.innerHTML = shown.map(iconCard).join("");
+    icons.mount(grid);
+    grid.hidden = shown.length === 0;
+    $("#iconLibraryEmpty").hidden = shown.length !== 0;
+    $("#iconLoadMore").hidden = shown.length >= matches.length;
+    $("#iconClearSearch").hidden = !state().ui.search;
+    $("#iconLibraryCount").textContent = matches.length === iconCatalog.length ? iconCatalog.length + " icons" : matches.length + " of " + iconCatalog.length;
+    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons." : " icons.") : "No icons match the current search and source.";
+  }
+
+  function writeClipboard(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function (resolve, reject) {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      try {
+        if (!document.execCommand("copy")) throw new Error("Copy was rejected.");
+        resolve();
+      } catch (error) {
+        reject(error);
+      } finally {
+        field.remove();
+      }
+    });
+  }
+
+  async function copyIcon(iconId, button) {
+    const icon = iconById.get(iconId);
+    if (!icon || button.disabled) return;
+    button.disabled = true;
+    try {
+      await writeClipboard(icon.svg);
+      $$(".icon-card[data-copied='true']").forEach(function (card) { delete card.dataset.copied; card.querySelector("[data-icon-copy-text]").textContent = "Copy SVG"; });
+      button.dataset.copied = "true";
+      button.querySelector("[data-icon-copy-text]").textContent = "Copied";
+      components.toast(icon.label + " is ready to paste into another app.", { title: "SVG copied", kind: "success", duration: 2200 });
+      window.clearTimeout(copiedIconTimer);
+      copiedIconTimer = window.setTimeout(function () {
+        if (!button.isConnected) return;
+        delete button.dataset.copied;
+        button.querySelector("[data-icon-copy-text]").textContent = "Copy SVG";
+      }, 1800);
+    } catch (error) {
+      components.toast("The browser did not allow clipboard access. Try again from HTTPS or localhost.", { title: "Could not copy SVG", kind: "danger", duration: 5000 });
+    } finally {
+      button.disabled = false;
+    }
+  }
+
   function globalSearchMatches(query) {
     const needle = query.trim().toLowerCase();
     if (!needle) return [];
     const results = [];
+    iconCatalog.forEach(function (icon) {
+      if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: "SVG icon · " + icon.repositories.map(repositoryLabel).join(" + ") });
+    });
     const notes = state().workspace.documents[0];
     if (config.features.documents && notes && (`notes ${documentText(notes)}`).toLowerCase().includes(needle)) results.push({ type: "notes", id: notes.id, title: "Notes", meta: "Local notes" });
     config.help.forEach(function (topic) {
@@ -212,7 +322,7 @@
       const releaseText = [release.version, release.title, release.summary].concat(release.features || [], release.improvements || [], release.fixes || [], release.knownIssues || []).join(" ");
       if (releaseText.toLowerCase().includes(needle)) results.push({ type: "release", id: release.version, title: release.title, meta: "Release · v" + release.version });
     });
-    return results.slice(0, 10);
+    return results.slice(0, 12);
   }
 
   function renderGlobalSearchResults() {
@@ -223,11 +333,21 @@
     container.hidden = false;
     container.innerHTML = results.length ? results.map(function (result, index) {
       return '<button type="button" role="option" id="global-result-' + index + '" data-search-type="' + result.type + '" data-search-id="' + u.escapeHtml(result.id) + '"><span><strong>' + u.escapeHtml(result.title) + '</strong><small>' + u.escapeHtml(result.meta) + "</small></span><span aria-hidden=\"true\">→</span></button>";
-    }).join("") : '<div class="search-empty">No matches across notes, help, releases, or roadmap.</div>';
+    }).join("") : '<div class="search-empty">No matching icons or support content.</div>';
   }
 
   function activateGlobalSearchResult(type, id) {
-    if (type === "notes") openNotes($("#globalSearch"));
+    if (type === "icon") {
+      if (state().modules.iconLibrary.source !== "all") storage.mutate(function (next) { next.modules.iconLibrary.source = "all"; }, { reason: "icon-source" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+      requestAnimationFrame(function () {
+        const card = document.getElementById("icon-card-" + id);
+        card?.scrollIntoView({ block: "center", behavior: document.documentElement.dataset.motion === "reduce" ? "auto" : "smooth" });
+        card?.focus({ preventScroll: true });
+      });
+    }
+    else if (type === "notes") openNotes($("#globalSearch"));
     else if (type === "help") { openSupport("help"); setInputValue($("#helpSearch"), config.help.find(function (topic) { return topic.id === id; })?.title || ""); renderHelp(); }
     else if (type === "roadmap") {
       storage.mutate(function (next) { next.modules.roadmap.search = config.roadmap.find(function (item) { return item.id === id; })?.title || ""; }, { reason: "roadmap-search" });
@@ -733,6 +853,8 @@
     });
     $("#globalSearch").addEventListener("input", function (event) {
       storage.mutate(function (next) { next.ui.search = u.cleanLine(event.target.value, 200); }, { reason: "global-search" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
       renderGlobalSearchResults();
     });
     $("#globalSearch").addEventListener("focus", renderGlobalSearchResults);
@@ -749,6 +871,29 @@
       else if (event.key === "Escape") { event.preventDefault(); $("#globalSearch").focus(); $("#globalSearchResults").hidden = true; }
     });
     document.addEventListener("focusin", function (event) { if (!event.target.closest(".global-search-wrap")) $("#globalSearchResults").hidden = true; });
+    $("#iconLibraryGrid").addEventListener("click", function (event) {
+      const button = event.target.closest("[data-icon-id]");
+      if (button) copyIcon(button.dataset.iconId, button);
+    });
+    $("#iconSourceFilter").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.iconLibrary.source = event.target.value; }, { reason: "icon-source" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+    });
+    $("#iconSort").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.iconLibrary.sortBy = event.target.value; }, { reason: "icon-sort" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+    });
+    $("#iconClearSearch").addEventListener("click", function () {
+      storage.mutate(function (next) { next.ui.search = ""; }, { reason: "global-search" });
+      $("#globalSearch").value = "";
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+      renderGlobalSearchResults();
+      $("#globalSearch").focus();
+    });
+    $("#iconLoadMore").addEventListener("click", function () { iconVisibleCount += ICON_PAGE_SIZE; renderIconLibrary(); });
 
     bindSupportEvents();
     document.addEventListener("keydown", handleGlobalKeydown);
@@ -761,6 +906,7 @@
     applyAppearance();
     renderHeader();
     renderNotesEditor();
+    renderIconLibrary();
     renderGlobalSearchResults();
     if ($("#supportDialog").open) renderSupport();
     decorateShortcutControls();
