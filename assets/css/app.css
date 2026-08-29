@@ -136,6 +136,7 @@ a { color: var(--accent-strong); }
   pointer-events: none;
   transition: opacity .12s ease, transform .12s ease;
 }
+[data-shortcut][data-shortcut-secondary]::after { content: attr(data-shortcut) "  " attr(data-shortcut-secondary); }
 .shortcut-hints-visible [data-shortcut].shortcut-eligible::after { opacity: 1; transform: none; }
 
 .app-header {
