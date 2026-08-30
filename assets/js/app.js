@@ -36,6 +36,9 @@
     { keys: "2", hintKey: "2", chordKey: "2", label: "Open Roadmap in Settings", group: "Navigation" },
     { keys: "N", hintKey: "N", chordKey: "N", label: "Open Notes", group: "Actions" },
     { keys: "V", hintKey: "V", chordKey: "V", label: "Open What’s New", group: "Actions" },
+    { keys: "R", hintKey: "R", chordKey: "R", label: "Show released updates", group: "What’s New" },
+    { keys: "P", hintKey: "P", chordKey: "P", label: "Show planned features", group: "What’s New" },
+    { keys: "W", hintKey: "W", chordKey: "W", label: "Show wishlist items", group: "What’s New" },
     { keys: "S", hintKey: "S", chordKey: "S", label: "Run the primary sync action", group: "Actions" },
     { keys: "E", hintKey: "E", chordKey: "E", label: "Export a JSON backup", group: "Actions" },
     { keys: "T", hintKey: "T", chordKey: "T", label: "Switch color theme", group: "Actions" },
@@ -699,6 +702,17 @@
       if (versionButton) { versionView = versionButton.dataset.versionView; renderReleases(); return; }
     });
     dialog.addEventListener("keydown", function (event) {
+      const releaseViewByCode = { KeyR: "released", KeyP: "planned", KeyW: "wishlist" };
+      const releaseView = releaseViewByCode[event.code];
+      if (!$("#releasesPanel").hidden && releaseView && !event.repeat && !u.isEditableTarget(event.target) && shortcutModifiersAllowed(event)) {
+        event.stopPropagation();
+        runShortcut(event, function () {
+          versionView = releaseView;
+          renderReleases();
+          $("[data-version-view='" + releaseView + "']")?.focus({ preventScroll: true });
+        });
+        return;
+      }
       const tab = event.target.closest("[role='tab']");
       if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
       event.preventDefault();
@@ -755,6 +769,10 @@
 
   function shortcutChordHeld(event) {
     return Boolean(event.shiftKey && event.ctrlKey && event.altKey && !event.metaKey);
+  }
+
+  function shortcutModifiersAllowed(event) {
+    return shortcutChordHeld(event) || (!event.shiftKey && !event.ctrlKey && !event.altKey && !event.metaKey);
   }
 
   function refreshShortcutEligibility(active) {

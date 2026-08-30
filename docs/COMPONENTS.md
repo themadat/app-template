@@ -28,7 +28,7 @@ Notes is one large, initially blank plain-text textarea in a native modal. It op
 
 ## Shortcut hints
 
-Controls declare `data-shortcut`. Holding Shift–Control–Option reveals badges only on enabled controls in the active page or dialog; hovering a shortcut-enabled control exposes the plain and chorded commands. Global shortcuts use physical key codes and work both directly and with the full chord held. Command-key combinations remain available to the browser. Shortcuts never replace visible buttons or native interactions.
+Controls declare `data-shortcut`. Holding Shift–Control–Option reveals badges only on enabled controls in the active page or dialog; hovering a shortcut-enabled control exposes the plain and chorded commands. Global shortcuts use physical key codes and work both directly and with the full chord held. Command-key combinations remain available to the browser. The What’s New panel uses contextual R, P, and W commands for Released, Planned, and Wishlist views. Shortcuts never replace visible buttons or native interactions.
 
 ## Icon conventions
 

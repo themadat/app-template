@@ -17,7 +17,7 @@
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
 - [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work inside Settings.
-- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus.
+- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus; R, P, and W select the three What’s New views directly and with Shift–Control–Option.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
 
 ## Tablet and mobile
