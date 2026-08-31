@@ -11,9 +11,9 @@
 ## Desktop
 
 - [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
-- [ ] The catalog reports 2,975 unique icons, renders narrow responsive cards with preview/name plus bottom-corner type/info controls, wraps long names, filters through persistent category chips and type/source controls, sorts in every direction, and progressively reveals large result sets.
+- [ ] The catalog reports 1,327 unique icons, renders narrow responsive cards with preview/name plus bottom-corner type/info controls, wraps long names, keeps persistent category chips plus type/source/sort controls in the vertical left rail, sorts in every direction, and progressively reveals large result sets.
 - [ ] `/` focuses global search; Enter closes suggestions and moves to matching cards below; suggestion results still focus their corresponding copy button or route to Notes, Help, releases, and the Settings Roadmap.
-- [ ] Name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
+- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, and name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
 - [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
@@ -23,7 +23,7 @@
 
 ## Tablet and mobile
 
-- [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport.
+- [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport; the rail remains vertical at tablet width and becomes a compact top filter surface on mobile.
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
 - [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
 - [ ] Icon details fills the mobile viewport, wraps long file paths, and keeps its single content panel scrollable.

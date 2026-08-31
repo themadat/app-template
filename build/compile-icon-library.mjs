@@ -29,7 +29,9 @@ const MAX_STANDALONE_SVG_BYTES = 256 * 1024;
 const FORBIDDEN_SVG = /<(?:script|foreignObject)\b|javascript\s*:|\son[a-z]+\s*=/i;
 const FORBIDDEN_REFERENCE = /(?:href|xlink:href)\s*=\s*["'](?!#)|@import\b|url\(\s*["']?(?:https?:|\/\/)/i;
 const recordsByHash = new Map();
-const stats = { files: 0, extracted: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0 };
+const sfRecordsByName = new Map();
+const iconRecords = new Set();
+const stats = { files: 0, extracted: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
 
 function walk(root) {
   const files = [];
@@ -57,6 +59,10 @@ function cleanSvg(svg) {
   value = value.replace(/\s(?:aria-hidden|focusable)=(?:"[^"]*"|'[^']*')/gi, "");
   value = value.replace(/^<svg\b([^>]*)>/i, '<svg$1 aria-hidden="true" focusable="false">');
   return value;
+}
+
+function normalizeSfSymbolPaint(svg) {
+  return svg.replace(/\sfill=(["'])(?:white|black|#fff(?:fff)?|#000(?:000)?)\1/gi, ' fill="currentColor"');
 }
 
 function canonicalSvg(svg) {
@@ -199,23 +205,46 @@ function isSfSymbol(input) {
     || /(?:^|\/)build\/icon-sources\/source-material\//i.test(file);
 }
 
+function consolidateRecords(target, duplicate) {
+  duplicate.aliases.forEach(function (alias) { target.aliases.add(alias); });
+  target.sources.push.apply(target.sources, duplicate.sources);
+  duplicate.kinds.forEach(function (kind) { target.kinds.add(kind); });
+  recordsByHash.forEach(function (record, hash) { if (record === duplicate) recordsByHash.set(hash, target); });
+  sfRecordsByName.forEach(function (record, name) { if (record === duplicate) sfRecordsByName.set(name, target); });
+  iconRecords.delete(duplicate);
+  return target;
+}
+
 function addIcon(input) {
   const kind = isSfSymbol(input) ? "sf-symbol" : "custom";
-  const svg = cleanSvg(input.svg);
+  let svg = cleanSvg(input.svg);
   if (!svg) { stats.rejected += 1; return; }
+  if (kind === "sf-symbol") svg = normalizeSfSymbolPaint(svg);
   const hash = crypto.createHash("sha256").update(canonicalSvg(svg)).digest("hex").slice(0, 12);
   const name = normalizedName(input.symbol);
   const source = { repo: input.repo, file: input.file, symbol: input.symbol };
-  const existing = recordsByHash.get(hash);
+  const matchingArtwork = recordsByHash.get(hash);
+  const matchingSfName = kind === "sf-symbol" ? sfRecordsByName.get(name) : null;
+  let existing = matchingArtwork || matchingSfName;
+  if (matchingArtwork && matchingSfName && matchingArtwork !== matchingSfName) {
+    existing = consolidateRecords(matchingSfName, matchingArtwork);
+    stats.mergedBySfName += 1;
+  }
   stats.extracted += 1;
   if (existing) {
+    if (!matchingArtwork && matchingSfName) stats.mergedBySfName += 1;
     existing.aliases.add(name);
     existing.sources.push(source);
     existing.kinds.add(kind);
+    recordsByHash.set(hash, existing);
+    if (kind === "sf-symbol") sfRecordsByName.set(name, existing);
     if (!input.inline && name.length < existing.name.length) existing.name = name;
     return;
   }
-  recordsByHash.set(hash, { hash: hash, name: name, aliases: new Set([name]), sources: [source], kinds: new Set([kind]), svg: svg });
+  const record = { hash: hash, name: name, aliases: new Set([name]), sources: [source], kinds: new Set([kind]), svg: svg };
+  recordsByHash.set(hash, record);
+  if (kind === "sf-symbol") sfRecordsByName.set(name, record);
+  iconRecords.add(record);
 }
 
 function templateSymbol(text, matchIndex, svg, source, ordinal) {
@@ -275,6 +304,10 @@ for (const source of sources) {
   for (const absolute of walk(source.root)) {
     const relative = path.relative(source.root, absolute).split(path.sep).join("/");
     if (path.resolve(absolute) === path.resolve(outputFile)) continue;
+    if (source.name === "svg-converter" && /^(?:output|output-circle:square)\//i.test(relative)) {
+      stats.skippedGenerated += 1;
+      continue;
+    }
     const extension = path.extname(absolute).toLowerCase();
     if (TEXT_EXTENSIONS.has(extension)) {
       stats.files += 1;
@@ -290,9 +323,11 @@ for (const source of sources) {
   }
 }
 
-const records = Array.from(recordsByHash.values()).map(function (record) {
+const records = Array.from(iconRecords).map(function (record) {
   const aliases = Array.from(record.aliases).sort();
-  const sourcesForIcon = record.sources.sort(function (a, b) {
+  const sourcesForIcon = Array.from(new Map(record.sources.map(function (source) {
+    return [[source.repo, source.file, source.symbol].join("\u0000"), source];
+  })).values()).sort(function (a, b) {
     return (a.repo + a.file + a.symbol).localeCompare(b.repo + b.file + b.symbol);
   });
   const preferred = record.name;
@@ -363,6 +398,8 @@ process.stdout.write(JSON.stringify({
   customIcons: records.filter(function (record) { return record.kind === "custom"; }).length,
   rejected: stats.rejected,
   skippedOversized: stats.skippedOversized,
+  skippedGenerated: stats.skippedGenerated,
+  mergedBySfName: stats.mergedBySfName,
   scannedSources: sources.filter(function (source) { return fs.existsSync(source.root); }).map(function (source) { return source.name; }),
   contributingSources: contributingSources
 }, null, 2) + "\n");

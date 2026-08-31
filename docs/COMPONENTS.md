@@ -28,7 +28,7 @@ Notes is one large, initially blank plain-text textarea in a native modal. It op
 
 ## Icon catalog
 
-Catalog cards deliberately show only the SVG preview and multiline name, with Custom/Symbol at bottom left and the information button at bottom right. Selecting the card copies its complete sanitized SVG. The quick-select chip toolbar filters persistent multi-category metadata; global search matches names, aliases, categories, semantic tags, repositories, and source metadata. The information dialog shows categories, tags, normalized identifier, aliases, repositories, filenames, full paths, and source-symbol names. Arrow keys, Home, and End move among visible card copy buttons.
+Catalog cards deliberately show only the SVG preview and multiline name, with Custom/Symbol at bottom left and the information button at bottom right. Selecting the card copies its complete sanitized SVG. The sticky vertical rail groups result count, type, source, sort, and persistent multi-category chips; global search matches names, aliases, categories, semantic tags, repositories, and source metadata. The information dialog shows categories, tags, normalized identifier, aliases, repositories, filenames, full paths, and source-symbol names. Arrow keys, Home, and End move among visible card copy buttons.
 
 ## Shortcut hints
 

@@ -1031,12 +1031,13 @@
       requestAnimationFrame(function () { $("[data-icon-category][aria-pressed='true']")?.focus({ preventScroll: true }); });
     });
     $("#iconCategoryFilters").addEventListener("keydown", function (event) {
-      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
       const buttons = $$("[data-icon-category]:not(:disabled)", event.currentTarget);
       const current = event.target.closest("[data-icon-category]");
       const index = buttons.indexOf(current);
       if (index < 0 || !buttons.length) return;
-      let next = index + (event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0);
+      const forward = event.key === "ArrowDown" || event.key === "ArrowRight";
+      let next = index + (forward ? 1 : event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 0);
       if (event.key === "Home") next = 0;
       if (event.key === "End") next = buttons.length - 1;
       next = (next + buttons.length) % buttons.length;

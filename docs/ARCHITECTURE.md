@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork for content deduplication, merges aliases/source references, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. The UI renders 120 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. The UI renders 120 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.14",
-    "buildId": "0.0.1.14",
+    "appVersion": "0.0.1.15",
+    "buildId": "0.0.1.15",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -97,7 +97,7 @@ Merging chooses the newer note for each stable id, honors newer deletion tombsto
 
 ## Accessibility and responsive behavior
 
-The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. The icon catalog is an announced list of native copy buttons; its quick-select categories are native pressed buttons in a labeled toolbar, and search results can move focus to the corresponding card. Copy success and errors use live toast messaging. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
+The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. The icon catalog is an announced list of native copy buttons; its quick-select categories are native pressed buttons in a labeled vertical filter rail, and search results can move focus to the corresponding card. Copy success and errors use live toast messaging. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
 
 Notes uses one spacious modal on desktop and a full-screen editor on mobile. Settings also becomes a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
 
