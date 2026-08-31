@@ -2,13 +2,13 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.15` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.16` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
 - Sticky application header with version, Beta, centered icon search, Notes, and Settings controls.
-- Responsive catalog of 1,327 deduplicated SVG icons gathered from the sibling local applications.
-- Dense Symbol/Custom cards beside a sticky vertical category/filter rail, with semantic search tags, on-demand source details, module shortcuts, sorting, batched rendering, and one-click SVG copying.
+- Full-width responsive catalog of 1,378 deduplicated SVG icons gathered from the sibling local applications.
+- Dense Symbol/Custom cards beside a compact sticky category/filter rail, with a dedicated Cloud/Server category, semantic search tags, on-demand source details, module shortcuts, batched rendering, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
 - Replaceable Roadmap inside Settings with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
@@ -59,7 +59,7 @@ context/                       Agent wish, plan, start, and cut workflow
 
 ## Rebuild the SVG icon catalog
 
-The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler discovers and scans every non-hidden sibling directory beside `app-template`, including `mctree-mchome`. It captures every complete SVG template literal that closes with `</svg>` and a backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files. It rejects dynamic, executable, or externally referenced SVG content, skips standalone canvases larger than 256 KB, deduplicates matching artwork, coalesces repeated SF Symbol names, classifies results as SF Symbols or Custom, assigns one or more reusable categories, generates semantic search tags, and preserves aliases plus source metadata. For `svg-converter`, it deliberately ignores the generated `output/` and `output-circle:square/` trees because those copies remove transparent-canvas opacity and duplicate the raw symbols.
+The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler discovers and scans every non-hidden sibling directory beside `app-template`, including `mctree-mchome`. It captures every complete SVG template literal that closes with `</svg>` and a backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files. It rejects dynamic, executable, or externally referenced SVG content, skips standalone canvases larger than 256 KB, deduplicates matching artwork, coalesces repeated SF Symbol names, classifies results as SF Symbols or Custom, assigns one or more reusable categories, generates semantic search tags, and preserves aliases plus source metadata. For `svg-converter`, it deliberately ignores the generated `output/` and `output-circle:square/` trees because those copies remove transparent-canvas opacity and duplicate the raw symbols. Every SVG in `app-input/server:drive/` is assigned to the `Cloud/Server` category even when it merges with an existing symbol.
 
 Run it after adding or changing source symbols:
 
@@ -176,4 +176,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.15 - Clean icon sources and add filter rail`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.16 - Expand browsing and add Cloud/Server icons`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

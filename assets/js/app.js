@@ -251,14 +251,7 @@
         && (category === "all" || (icon.categories || []).includes(category))
         && iconMatches(icon, needle);
     });
-    filtered.sort(function (a, b) {
-      if (moduleState.sortBy === "nameDesc") return b.label.localeCompare(a.label, undefined, { numeric: true });
-      if (moduleState.sortBy === "source") {
-        const compared = String(a.repositories[0] || "").localeCompare(String(b.repositories[0] || ""));
-        if (compared) return compared;
-      }
-      return a.label.localeCompare(b.label, undefined, { numeric: true });
-    });
+    filtered.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }); });
     return filtered;
   }
 
@@ -372,7 +365,6 @@
     const selectedSource = sources.includes(state().modules.iconLibrary.source) ? state().modules.iconLibrary.source : "all";
     setInputValue(sourceSelect, selectedSource);
     setInputValue($("#iconKindFilter"), state().modules.iconLibrary.kind);
-    setInputValue($("#iconSort"), state().modules.iconLibrary.sortBy);
     const baseMatches = filteredIcons({ ignoreCategory: true });
     renderIconCategories(baseMatches);
     const matches = filteredIcons();
@@ -1052,11 +1044,6 @@
     });
     $("#iconKindFilter").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.iconLibrary.kind = event.target.value; }, { reason: "icon-kind" });
-      iconVisibleCount = ICON_PAGE_SIZE;
-      renderIconLibrary();
-    });
-    $("#iconSort").addEventListener("change", function (event) {
-      storage.mutate(function (next) { next.modules.iconLibrary.sortBy = event.target.value; }, { reason: "icon-sort" });
       iconVisibleCount = ICON_PAGE_SIZE;
       renderIconLibrary();
     });

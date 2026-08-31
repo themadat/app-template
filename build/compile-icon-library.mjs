@@ -97,6 +97,7 @@ const ICON_CATEGORIES = [
   { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "phone", "call", "megaphone", "bell", "notification", "mention"] },
   { id: "commerce", label: "Commerce", terms: ["cart", "bag", "basket", "credit", "currency", "dollar", "bank", "wallet", "gift", "receipt", "tag"] },
   { id: "devices", label: "Devices", terms: ["desktop", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "watch", "keyboard", "mouse", "printer", "display", "monitor", "television", "tv"] },
+  { id: "cloud-server", label: "Cloud/Server", terms: ["cloud", "icloud", "server", "drive", "externaldrive", "internaldrive", "opticaldiscdrive", "storage", "database", "network"] },
   { id: "documents", label: "Documents", terms: ["document", "doc", "file", "folder", "page", "paper", "note", "clipboard", "book", "text", "list", "archive"] },
   { id: "editing", label: "Editing", terms: ["pencil", "pen", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat"] },
   { id: "food-drink", label: "Food & Drink", terms: ["cocktail", "drink", "glass", "wine", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
@@ -179,6 +180,10 @@ function deriveMetadata(record) {
     });
     return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
+  const isCloudServerSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/server:drive\//i.test(source.file);
+  });
+  if (isCloudServerSource && !categories.includes("cloud-server")) categories.push("cloud-server");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {

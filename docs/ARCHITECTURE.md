@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.15",
-    "buildId": "0.0.1.15",
+    "appVersion": "0.0.1.16",
+    "buildId": "0.0.1.16",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -63,7 +63,7 @@ The current model is version 4:
     "supportTab": "settings"
   },
   "modules": {
-    "iconLibrary": { "category": "all", "kind": "all", "source": "all", "sortBy": "name" },
+    "iconLibrary": { "category": "all", "kind": "all", "source": "all" },
     "documents": {},
     "roadmap": {},
     "cloudSync": {}

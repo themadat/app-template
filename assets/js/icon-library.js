@@ -3859,16 +3859,104 @@
 </svg>`
     },
     {
+      id: "arrow-trianglehead-2-clockwise-rotate-90-icloud-571390",
+      name: "arrow_trianglehead_2_clockwise_rotate_90_icloud",
+      label: "Arrow Trianglehead 2 Clockwise Rotate 90 Icloud",
+      kind: "sf-symbol",
+      aliases: ["arrow_trianglehead_2_clockwise_rotate_90_icloud"],
+      categories: ["arrows","cloud-server"],
+      tags: ["90","arrow","arrow trianglehead 2 clockwise rotate 90 icloud","arrow_trianglehead_2_clockwise_rotate_90_icloud","arrows","back","clockwise","cloud/server","direction","forward","icloud","navigate","rotate","trianglehead"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/arrow.trianglehead.2.clockwise.rotate.90.icloud.svg","symbol":"arrow.trianglehead.2.clockwise.rotate.90.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M10.4199 13.7207L13.8818 13.7207C14.375 13.7207 14.5312 13.2275 14.2383 12.832L12.6807 10.7227C12.3926 10.332 11.8994 10.3223 11.6064 10.7227L10.0732 12.832C9.78516 13.2227 9.93652 13.7207 10.4199 13.7207ZM16.5869 18.0713C17.7686 18.0713 18.8574 17.6709 19.6729 17.0557C20.2197 16.6895 20.2441 16.1328 19.9951 15.7715C19.751 15.4346 19.2676 15.2783 18.7354 15.6348C18.1494 16.084 17.4121 16.3623 16.5869 16.3623C14.5996 16.3623 12.9785 14.7461 12.9785 12.7588C12.9785 12.29 12.5977 11.9092 12.1289 11.9092C11.6602 11.9092 11.2793 12.29 11.2793 12.7588C11.2793 15.6885 13.6523 18.0713 16.5869 18.0713ZM22.7539 11.8018L19.292 11.8018C18.7939 11.8018 18.6426 12.2949 18.9355 12.6855L20.4883 14.7949C20.7812 15.1855 21.2695 15.2002 21.5674 14.7949L23.0957 12.6855C23.3887 12.2949 23.2373 11.8018 22.7539 11.8018ZM16.5869 7.44629C15.4053 7.44629 14.3164 7.85156 13.501 8.46191C12.9541 8.82812 12.9297 9.38477 13.1787 9.74609C13.4229 10.083 13.9062 10.2441 14.4385 9.8877C15.0244 9.43359 15.7617 9.15527 16.5869 9.15527C18.5742 9.15527 20.1953 10.7715 20.1953 12.7588C20.1953 13.2275 20.5762 13.6133 21.0498 13.6133C21.5137 13.6133 21.8945 13.2275 21.8945 12.7588C21.8945 9.82422 19.5215 7.44629 16.5869 7.44629Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "arrow-trianglehead-2-clockwise-rotate-90-icloud-fill-d9328c",
       name: "arrow_trianglehead_2_clockwise_rotate_90_icloud_fill",
       label: "Arrow Trianglehead 2 Clockwise Rotate 90 Icloud Fill",
       kind: "sf-symbol",
       aliases: ["arrow_trianglehead_2_clockwise_rotate_90_icloud_fill"],
-      categories: ["arrows"],
-      tags: ["90","arrow","arrow trianglehead 2 clockwise rotate 90 icloud fill","arrow_trianglehead_2_clockwise_rotate_90_icloud_fill","arrows","back","clockwise","direction","fill","forward","icloud","navigate","rotate","trianglehead"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ARROW_TRIANGLEHEAD_2_CLOCKWISE_ROTATE_90_ICLOUD_FILL"}],
+      categories: ["arrows","cloud-server"],
+      tags: ["90","arrow","arrow trianglehead 2 clockwise rotate 90 icloud fill","arrow_trianglehead_2_clockwise_rotate_90_icloud_fill","arrows","back","clockwise","cloud/server","direction","fill","forward","icloud","navigate","rotate","trianglehead"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ARROW_TRIANGLEHEAD_2_CLOCKWISE_ROTATE_90_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/arrow.trianglehead.2.clockwise.rotate.90.icloud.fill.svg","symbol":"arrow.trianglehead.2.clockwise.rotate.90.icloud.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false"><g><rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/><path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM11.2354 10.7031L9.56055 13.0029C9.2334 13.4375 9.4043 13.9893 9.94629 13.9893L10.9602 13.9893C11.4531 16.6915 13.8151 18.7354 16.665 18.7354C17.9395 18.7354 19.126 18.3057 20.0146 17.6416C20.6201 17.2363 20.6494 16.6211 20.3662 16.2158C20.1123 15.835 19.5654 15.6592 18.9697 16.0596C18.3398 16.5332 17.5537 16.8311 16.665 16.8311C14.8841 16.8311 13.3749 15.6265 12.9142 13.9893L13.7402 13.9893C14.2871 13.9893 14.458 13.4375 14.1309 13.0029L12.4268 10.7031C12.1094 10.2734 11.5674 10.249 11.2354 10.7031ZM13.3154 8.21777C12.71 8.62305 12.6807 9.24316 12.959 9.64844C13.2129 10.0244 13.7646 10.2051 14.3555 9.80469C14.9902 9.33105 15.7764 9.02832 16.665 9.02832C18.446 9.02832 19.9552 10.2329 20.4158 11.8701L19.5898 11.8701C19.043 11.8701 18.8721 12.4219 19.1992 12.8564L20.8984 15.1611C21.2158 15.5908 21.7627 15.6104 22.0898 15.1611L23.7695 12.8564C24.0967 12.4219 23.9209 11.8701 23.3838 11.8701L22.365 11.8701C21.872 9.16884 19.5106 7.12891 16.665 7.12891C15.3857 7.12891 14.2041 7.55859 13.3154 8.21777Z"/></g></svg>`
+    },
+    {
+      id: "arrow-trianglehead-clockwise-icloud-fcf74c",
+      name: "arrow_trianglehead_clockwise_icloud",
+      label: "Arrow Trianglehead Clockwise Icloud",
+      kind: "sf-symbol",
+      aliases: ["arrow_trianglehead_clockwise_icloud"],
+      categories: ["arrows","cloud-server"],
+      tags: ["arrow","arrow trianglehead clockwise icloud","arrow_trianglehead_clockwise_icloud","arrows","back","clockwise","cloud/server","direction","forward","icloud","navigate","trianglehead"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/arrow.trianglehead.clockwise.icloud.svg","symbol":"arrow.trianglehead.clockwise.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M15.8691 7.07031L15.8691 11.3281C15.8691 11.9336 16.5088 12.168 16.9775 11.7725L19.3018 9.80957C19.7314 9.44824 19.7119 8.90137 19.3018 8.55957L16.9775 6.62109C16.5039 6.24512 15.8691 6.47461 15.8691 7.07031ZM16.8604 17.9395C19.5752 17.9395 21.7627 15.7422 21.7627 13.0225C21.7627 12.5391 21.3672 12.1436 20.8789 12.1436C20.3906 12.1436 19.9902 12.5391 19.9902 13.0225C19.9902 14.7705 18.5938 16.1719 16.8604 16.1719C15.1172 16.1719 13.7256 14.7607 13.7256 12.998C13.7256 11.2402 15.1172 9.83398 16.8604 9.83398C17.3438 9.83398 17.7441 9.43848 17.7441 8.94531C17.7441 8.45703 17.3438 8.05664 16.8604 8.05664C14.1504 8.05664 11.9531 10.2539 11.9531 12.998C11.9531 15.7422 14.1455 17.9395 16.8604 17.9395Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "arrow-trianglehead-clockwise-icloud-fill-524e56",
+      name: "arrow_trianglehead_clockwise_icloud_fill",
+      label: "Arrow Trianglehead Clockwise Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["arrow_trianglehead_clockwise_icloud_fill"],
+      categories: ["arrows","cloud-server"],
+      tags: ["arrow","arrow trianglehead clockwise icloud fill","arrow_trianglehead_clockwise_icloud_fill","arrows","back","clockwise","cloud/server","direction","fill","forward","icloud","navigate","trianglehead"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/arrow.trianglehead.clockwise.icloud.fill.svg","symbol":"arrow.trianglehead.clockwise.icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM15.9131 6.72852L15.9131 7.85957C13.5747 8.34068 11.8164 10.4144 11.8164 12.9248C11.8164 15.8057 14.1113 18.1006 16.9531 18.1006C19.7949 18.1006 22.0898 15.8057 22.0898 12.9443C22.0898 12.4316 21.665 12.0264 21.1523 12.0264C20.6348 12.0264 20.2148 12.4316 20.2148 12.9443C20.2148 14.7656 18.7646 16.2256 16.9531 16.2256C15.1318 16.2256 13.6914 14.7656 13.6914 12.9248C13.6914 11.4648 14.612 10.2358 15.9131 9.804L15.9131 11.1914C15.9131 11.8213 16.582 12.0703 17.0801 11.6553L19.5117 9.60449C19.9609 9.22363 19.9463 8.6377 19.5117 8.27637L17.0801 6.25C16.5771 5.85449 15.9131 6.09375 15.9131 6.72852Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "arrow-trianglehead-counterclockwise-icloud-cb6e05",
+      name: "arrow_trianglehead_counterclockwise_icloud",
+      label: "Arrow Trianglehead Counterclockwise Icloud",
+      kind: "sf-symbol",
+      aliases: ["arrow_trianglehead_counterclockwise_icloud"],
+      categories: ["arrows","cloud-server"],
+      tags: ["arrow","arrow trianglehead counterclockwise icloud","arrow_trianglehead_counterclockwise_icloud","arrows","back","cloud/server","counterclockwise","direction","forward","icloud","navigate","trianglehead"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/arrow.trianglehead.counterclockwise.icloud.svg","symbol":"arrow.trianglehead.counterclockwise.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M17.8516 7.07031C17.8516 6.47461 17.2168 6.24512 16.7432 6.62109L14.4189 8.55957C14.0039 8.90137 13.9893 9.44824 14.4189 9.80957L16.7432 11.7725C17.2119 12.168 17.8516 11.9336 17.8516 11.3281ZM16.8555 17.9395C19.5703 17.9395 21.7627 15.7422 21.7627 12.998C21.7627 10.2539 19.5654 8.05664 16.8555 8.05664C16.3721 8.05664 15.9766 8.45703 15.9766 8.94531C15.9766 9.43848 16.3721 9.83398 16.8555 9.83398C18.5986 9.83398 19.9902 11.2402 19.9902 12.998C19.9902 14.7607 18.5986 16.1719 16.8555 16.1719C15.1221 16.1719 13.7256 14.7705 13.7256 13.0225C13.7256 12.5391 13.3301 12.1436 12.8418 12.1436C12.3535 12.1436 11.9531 12.5391 11.9531 13.0225C11.9531 15.7422 14.1455 17.9395 16.8555 17.9395Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "arrow-trianglehead-counterclockwise-icloud-fill-6bfbf6",
+      name: "arrow_trianglehead_counterclockwise_icloud_fill",
+      label: "Arrow Trianglehead Counterclockwise Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["arrow_trianglehead_counterclockwise_icloud_fill"],
+      categories: ["arrows","cloud-server"],
+      tags: ["arrow","arrow trianglehead counterclockwise icloud fill","arrow_trianglehead_counterclockwise_icloud_fill","arrows","back","cloud/server","counterclockwise","direction","fill","forward","icloud","navigate","trianglehead"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/arrow.trianglehead.counterclockwise.icloud.fill.svg","symbol":"arrow.trianglehead.counterclockwise.icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM16.8262 6.25L14.3896 8.27637C13.96 8.6377 13.9453 9.22363 14.3896 9.60449L16.8262 11.6553C17.3242 12.0703 17.9932 11.8213 17.9932 11.1914L17.9932 9.80559C19.2932 10.2386 20.2148 11.4665 20.2148 12.9248C20.2148 14.7656 18.7695 16.2256 16.9482 16.2256C15.1367 16.2256 13.6914 14.7656 13.6914 12.9443C13.6914 12.4316 13.2715 12.0264 12.749 12.0264C12.2412 12.0264 11.8164 12.4316 11.8164 12.9443C11.8164 15.8057 14.1113 18.1006 16.9482 18.1006C19.79 18.1006 22.0898 15.8057 22.0898 12.9248C22.0898 10.4161 20.3302 8.3435 17.9932 7.86078L17.9932 6.72852C17.9932 6.09375 17.3291 5.85449 16.8262 6.25Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "arrow-trianglehead-turn-up-right-circle-c41d84",
@@ -6201,6 +6289,41 @@
 </svg>`
     },
     {
+      id: "bolt-horizontal-icloud-b72384",
+      name: "bolt_horizontal_icloud",
+      label: "Bolt Horizontal Icloud",
+      kind: "sf-symbol",
+      aliases: ["bolt_horizontal_icloud"],
+      categories: ["cloud-server","weather"],
+      tags: ["bolt","bolt horizontal icloud","bolt_horizontal_icloud","cloud/server","energy","horizontal","icloud","lightning","power","weather"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/bolt.horizontal.icloud.svg","symbol":"bolt.horizontal.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M8.5498 14.6924C7.89551 15.5176 8.67188 16.3672 9.55078 15.9131L13.5059 13.8232L18.3496 16.4795C18.6084 16.6309 18.8525 16.709 19.0869 16.709C19.4287 16.709 19.7461 16.5283 20.0342 16.1719L24.0186 11.1084C24.6436 10.3223 23.916 9.44824 23.0225 9.90723L19.0576 11.9873L14.2139 9.33594C13.9551 9.18945 13.7109 9.10645 13.4766 9.10645C13.1348 9.10645 12.8223 9.28223 12.5391 9.64355Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "bolt-horizontal-icloud-fill-dd051a",
+      name: "bolt_horizontal_icloud_fill",
+      label: "Bolt Horizontal Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["bolt_horizontal_icloud_fill"],
+      categories: ["cloud-server","weather"],
+      tags: ["bolt","bolt horizontal icloud fill","bolt_horizontal_icloud_fill","cloud/server","energy","fill","horizontal","icloud","lightning","power","weather"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/bolt.horizontal.icloud.fill.svg","symbol":"bolt.horizontal.icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM12.3584 9.50195L8.19824 14.7803C7.50977 15.6494 8.31543 16.5479 9.25293 16.0693L13.3838 13.8818L18.4326 16.6504C18.7109 16.8115 18.9648 16.8945 19.2139 16.8945C19.5703 16.8945 19.9072 16.7041 20.21 16.333L24.3799 11.04C25.0342 10.2148 24.2725 9.28711 23.3203 9.77051L19.1748 11.9482L14.126 9.18457C13.8477 9.0332 13.6035 8.94043 13.3447 8.94043C12.998 8.94043 12.666 9.12598 12.3584 9.50195Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "bolt-slash-circle-6d1a25",
       name: "bolt_slash_circle",
       label: "Bolt Slash Circle",
@@ -7107,15 +7230,33 @@
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.666 28.8574" aria-hidden="true" focusable="false"><g><rect height="28.8574" opacity="0" width="37.666" x="0" y="0"/><path d="M31.3183 13.2677C30.8254 13.1668 30.3157 13.1152 29.7949 13.1152C25.4785 13.1152 21.9141 16.6699 21.9141 20.9863C21.9141 22.9101 22.617 24.6794 23.7808 26.0487C22.2138 26.7518 20.4771 27.1387 18.6523 27.1387C11.6504 27.1387 5.9375 21.4258 5.9375 14.4238C5.9375 7.41211 11.6504 1.69922 18.6523 1.69922C25.2738 1.69922 30.737 6.79392 31.3183 13.2677ZM22.8613 9.4043L17.2168 18.3789L14.4043 14.8633C14.1406 14.5215 13.8965 14.4141 13.5938 14.4141C13.1055 14.4141 12.7246 14.8145 12.7246 15.3027C12.7246 15.5469 12.8223 15.791 12.9883 16.0059L16.3184 20.0293C16.6016 20.3906 16.8848 20.5469 17.2559 20.5469C17.627 20.5469 17.9297 20.3711 18.1543 20.0293L24.2773 10.4297C24.4043 10.2246 24.5312 9.9707 24.5312 9.73633C24.5312 9.23828 24.1016 8.90625 23.6328 8.90625C23.3398 8.90625 23.0566 9.08203 22.8613 9.4043Z"/><path d="M36.1035 20.9863C36.1035 24.4434 33.2227 27.3047 29.7949 27.3047C26.3281 27.3047 23.4766 24.4629 23.4766 20.9863C23.4766 17.5293 26.3281 14.668 29.7949 14.668C33.252 14.668 36.1035 17.5195 36.1035 20.9863ZM29.082 17.7148L29.082 20.2734L26.5137 20.2734C26.0938 20.2734 25.8008 20.5469 25.8008 20.9863C25.8008 21.416 26.0938 21.6992 26.5137 21.6992L29.082 21.6992L29.082 24.2676C29.082 24.6875 29.3555 24.9707 29.7949 24.9707C30.2246 24.9707 30.498 24.6875 30.498 24.2676L30.498 21.6992L33.0664 21.6992C33.4863 21.6992 33.7695 21.416 33.7695 20.9863C33.7695 20.5469 33.4863 20.2734 33.0664 20.2734L30.498 20.2734L30.498 17.7148C30.498 17.2949 30.2246 17.002 29.7949 17.002C29.3555 17.002 29.082 17.2949 29.082 17.7148Z"/></g></svg>`
     },
     {
+      id: "checkmark-icloud-9d7898",
+      name: "checkmark_icloud",
+      label: "Checkmark Icloud",
+      kind: "sf-symbol",
+      aliases: ["checkmark_icloud"],
+      categories: ["cloud-server","status"],
+      tags: ["check","checkmark","checkmark icloud","checkmark_icloud","cloud/server","confirm","done","icloud","status","success"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/checkmark.icloud.svg","symbol":"checkmark.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M15.3076 17.3047C15.7568 17.3047 16.167 17.085 16.4209 16.6748L21.4648 8.69629C21.6162 8.45703 21.7432 8.16895 21.7432 7.88086C21.7432 7.25098 21.1865 6.77246 20.5469 6.77246C20.1221 6.77246 19.7607 6.99219 19.5068 7.42676L15.2734 14.4141L13.1055 11.7236C12.8564 11.4062 12.5439 11.2354 12.1484 11.2354C11.5039 11.2354 10.9668 11.7383 10.9668 12.4023C10.9668 12.7002 11.0693 12.9736 11.2988 13.2568L14.1504 16.7041C14.4727 17.1045 14.8438 17.3047 15.3076 17.3047Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "checkmark-icloud-fill-380256",
       name: "checkmark_icloud_fill",
       label: "Checkmark Icloud Fill",
       kind: "sf-symbol",
       aliases: ["checkmark_icloud_fill"],
-      categories: ["status"],
-      tags: ["check","checkmark","checkmark icloud fill","checkmark_icloud_fill","confirm","done","fill","icloud","status","success"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__CHECKMARK_ICLOUD_FILL"}],
+      categories: ["cloud-server","status"],
+      tags: ["check","checkmark","checkmark icloud fill","checkmark_icloud_fill","cloud/server","confirm","done","fill","icloud","status","success"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__CHECKMARK_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/checkmark.icloud.fill.svg","symbol":"checkmark.icloud.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false"><g><rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/><path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM19.5068 7.55371L15.2734 14.541L13.1055 11.8506C12.8564 11.5332 12.5439 11.3623 12.1484 11.3623C11.5039 11.3623 10.9668 11.8652 10.9668 12.5293C10.9668 12.8271 11.0693 13.0957 11.2988 13.3838L14.1504 16.8311C14.4727 17.2314 14.8438 17.4316 15.3076 17.4316C15.7568 17.4316 16.167 17.2119 16.4209 16.8018L21.4648 8.82324C21.6162 8.58398 21.7432 8.2959 21.7432 8.00781C21.7432 7.37793 21.1865 6.89941 20.5469 6.89941C20.1221 6.89941 19.7607 7.11914 19.5068 7.55371Z"/></g></svg>`
     },
     {
@@ -7629,8 +7770,8 @@
       label: "Cloud Bolt Circle",
       kind: "sf-symbol",
       aliases: ["cloud_bolt_circle"],
-      categories: ["weather"],
-      tags: ["bolt","circle","cloud","cloud bolt circle","cloud_bolt_circle","energy","lightning","online","power","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["bolt","circle","cloud","cloud bolt circle","cloud/server","cloud_bolt_circle","energy","lightning","online","power","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.bolt.circle.svg","symbol":"cloud.bolt.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_BOLT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7647,8 +7788,8 @@
       label: "Cloud Bolt Rain Circle",
       kind: "sf-symbol",
       aliases: ["cloud_bolt_rain_circle"],
-      categories: ["weather"],
-      tags: ["bolt","circle","cloud","cloud bolt rain circle","cloud_bolt_rain_circle","energy","lightning","online","power","rain","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["bolt","circle","cloud","cloud bolt rain circle","cloud/server","cloud_bolt_rain_circle","energy","lightning","online","power","rain","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.bolt.rain.circle.svg","symbol":"cloud.bolt.rain.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_BOLT_RAIN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7665,8 +7806,8 @@
       label: "Cloud Circle",
       kind: "sf-symbol",
       aliases: ["cloud_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud circle","cloud_circle","online","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud circle","cloud/server","cloud_circle","online","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.circle.svg","symbol":"cloud.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7683,8 +7824,8 @@
       label: "Cloud Drizzle Circle",
       kind: "sf-symbol",
       aliases: ["cloud_drizzle_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud drizzle circle","cloud_drizzle_circle","drizzle","online","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud drizzle circle","cloud/server","cloud_drizzle_circle","drizzle","online","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.drizzle.circle.svg","symbol":"cloud.drizzle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_DRIZZLE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7701,8 +7842,8 @@
       label: "Cloud Fog Circle",
       kind: "sf-symbol",
       aliases: ["cloud_fog_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud fog circle","cloud_fog_circle","fog","online","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud fog circle","cloud/server","cloud_fog_circle","fog","online","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.fog.circle.svg","symbol":"cloud.fog.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_FOG_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7719,8 +7860,8 @@
       label: "Cloud Hail Circle",
       kind: "sf-symbol",
       aliases: ["cloud_hail_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud hail circle","cloud_hail_circle","hail","online","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud hail circle","cloud/server","cloud_hail_circle","hail","online","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.hail.circle.svg","symbol":"cloud.hail.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_HAIL_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7737,8 +7878,8 @@
       label: "Cloud Heavyrain Circle",
       kind: "sf-symbol",
       aliases: ["cloud_heavyrain_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud heavyrain circle","cloud_heavyrain_circle","heavyrain","online","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud heavyrain circle","cloud/server","cloud_heavyrain_circle","heavyrain","online","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.heavyrain.circle.svg","symbol":"cloud.heavyrain.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_HEAVYRAIN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7755,8 +7896,8 @@
       label: "Cloud Moon Bolt Circle",
       kind: "sf-symbol",
       aliases: ["cloud_moon_bolt_circle"],
-      categories: ["weather"],
-      tags: ["bolt","circle","cloud","cloud moon bolt circle","cloud_moon_bolt_circle","energy","lightning","moon","online","power","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["bolt","circle","cloud","cloud moon bolt circle","cloud/server","cloud_moon_bolt_circle","energy","lightning","moon","online","power","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.moon.bolt.circle.svg","symbol":"cloud.moon.bolt.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_MOON_BOLT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7773,8 +7914,8 @@
       label: "Cloud Moon Circle",
       kind: "sf-symbol",
       aliases: ["cloud_moon_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud moon circle","cloud_moon_circle","moon","online","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud moon circle","cloud/server","cloud_moon_circle","moon","online","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.moon.circle.svg","symbol":"cloud.moon.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_MOON_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7791,8 +7932,8 @@
       label: "Cloud Moon Rain Circle",
       kind: "sf-symbol",
       aliases: ["cloud_moon_rain_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud moon rain circle","cloud_moon_rain_circle","moon","online","rain","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud moon rain circle","cloud/server","cloud_moon_rain_circle","moon","online","rain","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.moon.rain.circle.svg","symbol":"cloud.moon.rain.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_MOON_RAIN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7809,8 +7950,8 @@
       label: "Cloud Rain Circle",
       kind: "sf-symbol",
       aliases: ["cloud_rain_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud rain circle","cloud_rain_circle","online","rain","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud rain circle","cloud/server","cloud_rain_circle","online","rain","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.rain.circle.svg","symbol":"cloud.rain.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_RAIN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7827,8 +7968,8 @@
       label: "Cloud Sleet Circle",
       kind: "sf-symbol",
       aliases: ["cloud_sleet_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud sleet circle","cloud_sleet_circle","online","sleet","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud sleet circle","cloud/server","cloud_sleet_circle","online","sleet","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.sleet.circle.svg","symbol":"cloud.sleet.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_SLEET_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7845,8 +7986,8 @@
       label: "Cloud Snow Circle",
       kind: "sf-symbol",
       aliases: ["cloud_snow_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud snow circle","cloud_snow_circle","online","snow","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud snow circle","cloud/server","cloud_snow_circle","online","snow","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.snow.circle.svg","symbol":"cloud.snow.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_SNOW_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7863,8 +8004,8 @@
       label: "Cloud Sun Bolt Circle",
       kind: "sf-symbol",
       aliases: ["cloud_sun_bolt_circle"],
-      categories: ["weather"],
-      tags: ["bolt","circle","cloud","cloud sun bolt circle","cloud_sun_bolt_circle","energy","lightning","online","power","sun","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["bolt","circle","cloud","cloud sun bolt circle","cloud/server","cloud_sun_bolt_circle","energy","lightning","online","power","sun","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.sun.bolt.circle.svg","symbol":"cloud.sun.bolt.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_SUN_BOLT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7881,8 +8022,8 @@
       label: "Cloud Sun Circle",
       kind: "sf-symbol",
       aliases: ["cloud_sun_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud sun circle","cloud_sun_circle","online","sun","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud sun circle","cloud/server","cloud_sun_circle","online","sun","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.sun.circle.svg","symbol":"cloud.sun.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_SUN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -7899,8 +8040,8 @@
       label: "Cloud Sun Rain Circle",
       kind: "sf-symbol",
       aliases: ["cloud_sun_rain_circle"],
-      categories: ["weather"],
-      tags: ["circle","cloud","cloud sun rain circle","cloud_sun_rain_circle","online","rain","sun","sync","weather"],
+      categories: ["cloud-server","weather"],
+      tags: ["circle","cloud","cloud sun rain circle","cloud/server","cloud_sun_rain_circle","online","rain","sun","sync","weather"],
       repositories: ["svg-converter","visit-tracker"],
       sources: [{"repo":"svg-converter","file":"bulk-convert-circle/cloud.sun.rain.circle.svg","symbol":"cloud.sun.rain.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLOUD_SUN_RAIN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
@@ -10465,15 +10606,33 @@
 </svg>`
     },
     {
+      id: "exclamationmark-icloud-a1c69b",
+      name: "exclamationmark_icloud",
+      label: "Exclamationmark Icloud",
+      kind: "sf-symbol",
+      aliases: ["exclamationmark_icloud"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","exclamationmark","exclamationmark icloud","exclamationmark_icloud","icloud"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/exclamationmark.icloud.svg","symbol":"exclamationmark.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M16.2988 13.7598C16.9873 13.7598 17.3779 13.3789 17.4219 12.6416L17.5928 8.65723C17.627 7.88086 17.0752 7.34863 16.2842 7.34863C15.4883 7.34863 14.9414 7.87598 14.9805 8.64746L15.1416 12.6465C15.1904 13.3691 15.5859 13.7598 16.2988 13.7598ZM16.2891 17.7344C17.1484 17.7344 17.7539 17.1729 17.7539 16.3867C17.7539 15.5908 17.1436 15.0391 16.2891 15.0391C15.4102 15.0391 14.8096 15.6006 14.8096 16.3867C14.8096 17.168 15.415 17.7344 16.2891 17.7344Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "exclamationmark-icloud-fill-c3956a",
       name: "exclamationmark_icloud_fill",
       label: "Exclamationmark Icloud Fill",
       kind: "sf-symbol",
       aliases: ["exclamationmark_icloud_fill"],
-      categories: ["other"],
-      tags: ["exclamationmark","exclamationmark icloud fill","exclamationmark_icloud_fill","fill","icloud","other"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__EXCLAMATIONMARK_ICLOUD_FILL"}],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","exclamationmark","exclamationmark icloud fill","exclamationmark_icloud_fill","fill","icloud"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__EXCLAMATIONMARK_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/exclamationmark.icloud.fill.svg","symbol":"exclamationmark.icloud.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false"><g><rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/><path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM14.7266 16.5625C14.7266 17.3877 15.3662 17.9883 16.2891 17.9883C17.1973 17.9883 17.8369 17.3975 17.8369 16.5625C17.8369 15.7275 17.1924 15.1416 16.2891 15.1416C15.3613 15.1416 14.7266 15.7324 14.7266 16.5625ZM14.9072 8.49609L15.0781 12.6416C15.127 13.4082 15.542 13.8184 16.2988 13.8184C17.0312 13.8184 17.4414 13.4131 17.4902 12.6318L17.666 8.50098C17.7051 7.68066 17.1191 7.11426 16.2842 7.11426C15.4443 7.11426 14.8682 7.67578 14.9072 8.49609Z"/></g></svg>`
     },
     {
@@ -10501,16 +10660,358 @@
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.3281 26.9238" aria-hidden="true" focusable="false"><g><rect height="26.9238" opacity="0" width="21.3281" x="0" y="0"/><path d="M5.54688 17.3438L15.459 17.3438C15.8496 17.3438 16.1426 17.041 16.1426 16.6602C16.1426 16.2793 15.8496 15.9863 15.459 15.9863L5.54688 15.9863C5.14648 15.9863 4.85352 16.2793 4.85352 16.6602C4.85352 17.041 5.14648 17.3438 5.54688 17.3438ZM5.54688 21.1719L10.2832 21.1719C10.6738 21.1719 10.9668 20.8789 10.9668 20.5078C10.9668 20.127 10.6738 19.8242 10.2832 19.8242L5.54688 19.8242C5.14648 19.8242 4.85352 20.127 4.85352 20.5078C4.85352 20.8789 5.14648 21.1719 5.54688 21.1719ZM7.08984 12.8711L13.9258 12.8711C14.5801 12.8711 14.9805 12.4023 14.9805 11.8164C14.9805 11.6504 14.9219 11.4746 14.834 11.3184L11.416 5.19531C11.2109 4.85352 10.8594 4.6582 10.5078 4.6582C10.1562 4.6582 9.79492 4.85352 9.59961 5.19531L6.17188 11.3184C6.08398 11.4746 6.03516 11.6504 6.03516 11.8164C6.03516 12.4023 6.44531 12.8711 7.08984 12.8711ZM10.498 11.6504C10.1562 11.6504 9.86328 11.3672 9.86328 11.0156C9.86328 10.6641 10.166 10.3906 10.498 10.3906C10.8496 10.3906 11.1523 10.6738 11.1523 11.0156C11.1426 11.3672 10.8496 11.6504 10.498 11.6504ZM10.498 9.81445C10.2539 9.81445 10.0586 9.64844 10.0586 9.38477L10.0098 7.06055C10 6.75781 10.2051 6.55273 10.498 6.55273C10.8008 6.55273 11.0156 6.75781 11.0059 7.06055L10.957 9.38477C10.957 9.64844 10.752 9.81445 10.498 9.81445ZM0 23.125C0 25.6445 1.25977 26.9238 3.75977 26.9238L17.207 26.9238C19.707 26.9238 20.9668 25.6445 20.9668 23.125L20.9668 3.80859C20.9668 1.28906 19.707 0.00976562 17.207 0.00976562L3.75977 0.00976562C1.25977 0.00976562 0 1.28906 0 3.80859ZM1.72852 23.0859L1.72852 3.84766C1.72852 2.48047 2.45117 1.73828 3.85742 1.73828L17.1094 1.73828C18.5156 1.73828 19.2383 2.48047 19.2383 3.84766L19.2383 23.0859C19.2383 24.4531 18.5156 25.1953 17.1094 25.1953L3.85742 25.1953C2.45117 25.1953 1.72852 24.4531 1.72852 23.0859Z"/></g></svg>`
     },
     {
+      id: "externaldrive-a500c8",
+      name: "externaldrive",
+      label: "Externaldrive",
+      kind: "sf-symbol",
+      aliases: ["externaldrive"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","externaldrive"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.svg","symbol":"externaldrive"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2695 22.4609" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="22.4609" opacity="0" width="31.2695" x="0" y="0"/>
+  <path d="M0 16.3623C0 19.8877 2.57812 22.4609 6.28906 22.4609L24.624 22.4609C28.3301 22.4609 30.9082 19.8877 30.9082 16.3623C30.9082 15.2734 30.6006 14.2969 30.2246 13.418L25.7666 3.2666C24.8535 1.16699 23.0908 0.0244141 20.6885 0.0244141L10.2344 0.0244141C7.83691 0.0244141 6.07422 1.16699 5.15625 3.2666L0.751953 13.3154C0.356445 14.2236 0 15.2246 0 16.3623ZM2.71484 16.3623C2.71484 14.4092 4.15039 12.9834 6.28906 12.9834L24.624 12.9834C26.7578 12.9834 28.1982 14.4092 28.1982 16.3623C28.1982 18.457 26.7578 19.7412 24.624 19.7412L6.28906 19.7412C4.15039 19.7412 2.71484 18.3154 2.71484 16.3623ZM4.86816 10.5176L7.70996 3.85254C8.12012 2.88086 9.00391 2.3584 10.1758 2.3584L20.752 2.3584C21.9141 2.3584 22.8076 2.88086 23.2129 3.85254L26.0449 10.5127C25.6104 10.3613 25.1318 10.2637 24.624 10.2637L6.28906 10.2637C5.78613 10.2637 5.30273 10.3613 4.86816 10.5176ZM22.7881 16.3623C22.7881 17.3096 23.5596 18.0518 24.4971 18.0518C25.4102 18.0518 26.1816 17.2998 26.1816 16.3623C26.1816 15.4541 25.4053 14.6729 24.4971 14.6729C23.5645 14.6729 22.7881 15.4541 22.7881 16.3623Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-checkmark-c4b926",
+      name: "externaldrive_badge_checkmark",
+      label: "Externaldrive Badge Checkmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_checkmark"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","check","checkmark","cloud/server","confirm","done","externaldrive","externaldrive badge checkmark","externaldrive_badge_checkmark","status","success"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.checkmark.svg","symbol":"externaldrive.badge.checkmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM10.332 18.5938L7.47559 22.5391L6.11816 21.0254C5.9375 20.8252 5.68848 20.7129 5.38086 20.7129C4.85352 20.7129 4.37012 21.084 4.37012 21.7139C4.37012 21.9678 4.4873 22.2314 4.67285 22.4365L6.74805 24.6924C6.95801 24.917 7.27539 25.0098 7.54883 25.0098C7.88574 25.0098 8.19336 24.8682 8.36426 24.6387L11.9775 19.7217C12.1094 19.541 12.1729 19.3262 12.1729 19.1504C12.1729 18.5938 11.7188 18.1543 11.167 18.1543C10.8301 18.1543 10.5273 18.3252 10.332 18.5938Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-exclamationmark-cac740",
+      name: "externaldrive_badge_exclamationmark",
+      label: "Externaldrive Badge Exclamationmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_exclamationmark"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","exclamationmark","externaldrive","externaldrive badge exclamationmark","externaldrive_badge_exclamationmark","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.exclamationmark.svg","symbol":"externaldrive.badge.exclamationmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM7.09473 24.5898C7.09473 25.293 7.63672 25.8203 8.35449 25.8203C9.07715 25.8203 9.61426 25.293 9.61914 24.5898C9.62402 23.916 9.06738 23.3838 8.35449 23.3838C7.64648 23.3838 7.09473 23.9062 7.09473 24.5898ZM7.27539 18.1006L7.3877 21.6406C7.40723 22.1826 7.80762 22.5586 8.35449 22.5586C8.90625 22.5586 9.31152 22.1826 9.33594 21.6406L9.44336 18.1006C9.46289 17.4756 9.00879 17.041 8.35449 17.041C7.70508 17.041 7.26074 17.4854 7.27539 18.1006Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-icloud-b9c404",
+      name: "externaldrive_badge_icloud",
+      label: "Externaldrive Badge Icloud",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_icloud"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive badge icloud","externaldrive_badge_icloud","icloud","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.icloud.svg","symbol":"externaldrive.badge.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.6309 27.7344" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="27.7344" opacity="0" width="46.6309" x="0" y="0"/>
+  <path d="M33.4424 5.90332L37.9004 16.0547C38.2764 16.9336 38.584 17.9102 38.584 18.999C38.584 22.5244 36.0059 25.0977 32.2998 25.0977L19.3422 25.0977C19.7962 24.333 20.0439 23.4566 20.0439 22.5537C20.0439 22.4949 20.043 22.4362 20.0389 22.3779L32.2998 22.3779C34.4336 22.3779 35.874 21.0938 35.874 18.999C35.874 17.0459 34.4336 15.6201 32.2998 15.6201L16.9123 15.6201C16.0961 14.3392 14.8639 13.3906 13.3962 12.9416C13.5817 12.9148 13.7718 12.9004 13.9648 12.9004L32.2998 12.9004C32.8076 12.9004 33.2861 12.998 33.7207 13.1494L30.8887 6.48926C30.4834 5.51758 29.5898 4.99512 28.4277 4.99512L17.8516 4.99512C16.6797 4.99512 15.7959 5.51758 15.3857 6.48926L12.7095 12.7661C12.2871 12.6799 11.8478 12.6367 11.3965 12.6367C10.8317 12.6367 10.2958 12.7069 9.79268 12.8379L12.832 5.90332C13.75 3.80371 15.5127 2.66113 17.9102 2.66113L28.3643 2.66113C30.7666 2.66113 32.5293 3.80371 33.4424 5.90332ZM33.8574 18.999C33.8574 19.9365 33.0859 20.6885 32.1729 20.6885C31.2354 20.6885 30.4639 19.9463 30.4639 18.999C30.4639 18.0908 31.2402 17.3096 32.1729 17.3096C33.0811 17.3096 33.8574 18.0908 33.8574 18.999Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M5.7959 25.9277L14.5947 25.9277C16.6406 25.9277 18.2471 24.4336 18.2471 22.5537C18.2471 21.2061 17.4756 19.9609 16.1914 19.4385C16.2061 16.543 14.1064 14.4385 11.3965 14.4385C9.72656 14.4385 8.41797 15.2832 7.60254 16.4746C5.9375 16.0449 4.25781 17.2705 4.16504 19.0723C2.70508 19.3359 1.80176 20.6592 1.80176 22.2803C1.80176 24.2871 3.54492 25.9277 5.7959 25.9277Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-minus-21976a",
+      name: "externaldrive_badge_minus",
+      label: "Externaldrive Badge Minus",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_minus"],
+      categories: ["actions","cloud-server","status"],
+      tags: ["actions","badge","cloud/server","externaldrive","externaldrive badge minus","externaldrive_badge_minus","minus","remove","status","subtract"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.minus.svg","symbol":"externaldrive.badge.minus"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM5.07812 20.5176C4.57031 20.5176 4.13086 20.957 4.13574 21.46C4.14062 21.958 4.57031 22.3926 5.07812 22.3926L11.6406 22.3926C12.1484 22.3926 12.5781 21.958 12.5781 21.46C12.5781 20.9473 12.1484 20.5176 11.6406 20.5176Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-person-crop-cc7e1a",
+      name: "externaldrive_badge_person_crop",
+      label: "Externaldrive Badge Person Crop",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_person_crop"],
+      categories: ["cloud-server","editing","people","status"],
+      tags: ["account","badge","cloud/server","crop","editing","externaldrive","externaldrive badge person crop","externaldrive_badge_person_crop","people","person","profile","status","user"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.person.crop.svg","symbol":"externaldrive.badge.person.crop"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM4.77539 24.3896L4.77539 24.4434C5.15137 25.2979 6.54785 26.2598 8.35938 26.2598C10.1709 26.2598 11.5527 25.3076 11.9434 24.4434L11.9434 24.3945C11.5527 23.6133 10.1562 22.7295 8.35449 22.7295C6.5625 22.7295 5.16602 23.6084 4.77539 24.3896ZM6.38672 19.4873C6.38672 20.7422 7.24121 21.6602 8.35449 21.6602C9.46777 21.6602 10.3223 20.7422 10.3223 19.4873C10.3223 18.3594 9.46289 17.4023 8.35449 17.4023C7.25098 17.4023 6.38672 18.3594 6.38672 19.4873Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-plus-8dc586",
+      name: "externaldrive_badge_plus",
+      label: "Externaldrive Badge Plus",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_plus"],
+      categories: ["actions","cloud-server","status"],
+      tags: ["actions","add","badge","cloud/server","create","externaldrive","externaldrive badge plus","externaldrive_badge_plus","new","plus","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.plus.svg","symbol":"externaldrive.badge.plus"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM7.42188 18.1885L7.42188 20.5176L5.08301 20.5176C4.5166 20.5176 4.14062 20.8887 4.14062 21.46C4.14062 22.0215 4.52637 22.3926 5.08301 22.3926L7.42188 22.3926L7.42188 24.7461C7.42188 25.3027 7.79297 25.6787 8.35449 25.6787C8.92578 25.6787 9.29688 25.3027 9.29688 24.7461L9.29688 22.3926L11.6357 22.3926C12.1924 22.3926 12.5732 22.0215 12.5732 21.46C12.5732 20.8887 12.1924 20.5176 11.6357 20.5176L9.29688 20.5176L9.29688 18.1885C9.29688 17.6221 8.92578 17.251 8.35449 17.251C7.79297 17.251 7.42188 17.6318 7.42188 18.1885Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-questionmark-6d4d0b",
+      name: "externaldrive_badge_questionmark",
+      label: "Externaldrive Badge Questionmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_questionmark"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive badge questionmark","externaldrive_badge_questionmark","questionmark","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.questionmark.svg","symbol":"externaldrive.badge.questionmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM7.02148 24.6484C7.02148 25.2734 7.51465 25.7031 8.13965 25.7031C8.78906 25.7031 9.26758 25.2734 9.26758 24.6484C9.27246 24.0527 8.79395 23.6084 8.13965 23.6084C7.51465 23.6084 7.02148 24.0479 7.02148 24.6484ZM5.62988 18.9111C5.62988 19.3555 5.94727 19.7119 6.52344 19.7119C6.96289 19.7119 7.17773 19.4678 7.39746 19.2529C7.66602 18.9746 7.96875 18.7695 8.41797 18.7695C8.93066 18.7695 9.2627 19.0479 9.2627 19.4775C9.2627 19.9609 8.86719 20.2246 8.20312 20.6787C7.62207 21.0938 7.22168 21.4844 7.22168 22.1533C7.22168 22.1631 7.22168 22.1875 7.22168 22.2021C7.22168 22.7197 7.63184 23.0029 8.1543 23.0029C8.65234 23.0029 9.01367 22.7637 9.13574 22.3047C9.21875 21.8701 9.46289 21.6406 9.90723 21.3184C10.6201 20.8105 11.3184 20.4395 11.3184 19.3701C11.3184 18.0664 10.1611 17.1045 8.47656 17.1045C7.04102 17.1045 5.62988 17.832 5.62988 18.9111Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-timemachine-f9aac3",
+      name: "externaldrive_badge_timemachine",
+      label: "Externaldrive Badge Timemachine",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_timemachine"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive badge timemachine","externaldrive_badge_timemachine","status","timemachine"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.timemachine.svg","symbol":"externaldrive.badge.timemachine"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M8.35449 28.0078C11.9238 28.0078 14.9121 25.0342 14.9121 21.4502C14.9121 17.8662 11.9434 14.9023 8.35449 14.9023C4.76562 14.9023 1.79688 17.8662 1.79688 21.4502L3.68652 21.4502C3.68652 18.8965 5.7959 16.7871 8.35449 16.7871C10.918 16.7871 13.0225 18.8965 13.0225 21.4502C13.0225 24.0039 10.9033 26.123 8.35449 26.123C6.81152 26.123 5.52734 25.3662 4.66797 24.3066C4.32617 23.8916 3.79883 23.7793 3.37402 24.043C2.91992 24.3262 2.81738 24.9658 3.17383 25.4346C4.4043 27.0605 6.34766 28.0078 8.35449 28.0078ZM2.27539 22.8613C2.69043 23.3301 3.16406 23.3301 3.58398 22.8613L5.24414 20.9033C5.74219 20.3564 5.41016 19.6387 4.65332 19.6387L1.18652 19.6387C0.43457 19.6387 0.107422 20.3418 0.610352 20.9033ZM10.0195 24.5654C10.3857 24.3018 10.4346 23.8281 10.1514 23.4326L8.22754 20.8154L8.84766 22.6904L8.84766 18.833C8.84766 18.3887 8.50586 18.0566 8.05664 18.0566C7.61719 18.0566 7.25098 18.4033 7.25098 18.833L7.25098 21.9238C7.25098 22.1387 7.30957 22.3193 7.45605 22.5146L8.87207 24.3799C9.16016 24.7607 9.65332 24.8438 10.0195 24.5654Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-wifi-c72c6b",
+      name: "externaldrive_badge_wifi",
+      label: "Externaldrive Badge Wifi",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_wifi"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive badge wifi","externaldrive_badge_wifi","status","wifi"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.wifi.svg","symbol":"externaldrive.badge.wifi"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.4408 26.4844" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="26.4844" opacity="0" width="43.4408" x="0" y="0"/>
+  <path d="M31.8474 5.27832L36.3054 15.4297C36.6814 16.3086 36.989 17.2852 36.989 18.374C36.989 21.8994 34.4109 24.4727 30.7048 24.4727L12.3698 24.4727C12.3606 24.4727 12.3513 24.4726 12.3426 24.4715L15.0631 21.7529L30.7048 21.7529C32.8386 21.7529 34.279 20.4688 34.279 18.374C34.279 16.4209 32.8386 14.9951 30.7048 14.9951L17.2053 14.9951C15.7903 13.6942 13.9158 12.749 11.8989 12.3046C12.0531 12.2852 12.2105 12.2754 12.3698 12.2754L30.7048 12.2754C31.2126 12.2754 31.6911 12.373 32.1257 12.5244L29.2937 5.86426C28.8884 4.89258 27.9948 4.37012 26.8327 4.37012L16.2566 4.37012C15.0847 4.37012 14.2009 4.89258 13.7907 5.86426L11.1074 12.1575C10.5123 12.064 9.90826 12.0166 9.30343 12.0166C8.95527 12.0166 8.60736 12.0323 8.26162 12.067L11.237 5.27832C12.155 3.17871 13.9177 2.03613 16.3152 2.03613L26.7693 2.03613C29.1716 2.03613 30.9343 3.17871 31.8474 5.27832ZM32.2624 18.374C32.2624 19.3115 31.4909 20.0635 30.5778 20.0635C29.6403 20.0635 28.8689 19.3213 28.8689 18.374C28.8689 17.4658 29.6452 16.6846 30.5778 16.6846C31.486 16.6846 32.2624 17.4658 32.2624 18.374Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M2.8337 18.5205C3.02413 18.7109 3.30245 18.6816 3.46847 18.5059C4.99191 16.9287 6.9548 16.0254 9.30343 16.0254C11.6472 16.0254 13.6687 16.8799 15.1384 18.5059C15.2946 18.6865 15.5778 18.7109 15.7732 18.5205L16.6521 17.6074C16.7937 17.4561 16.8132 17.2412 16.6716 17.0703C15.0652 15.1221 12.1892 13.833 9.30343 13.833C6.41769 13.833 3.54171 15.1221 1.93038 17.0703C1.78878 17.2412 1.80831 17.4561 1.94992 17.6074Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M5.48995 21.1768C5.68527 21.3721 5.93917 21.3672 6.13449 21.1523C6.92062 20.3076 8.08273 19.7314 9.30343 19.7314C10.5241 19.7314 11.5935 20.4004 12.4675 21.1523C12.6872 21.3428 12.9216 21.3721 13.112 21.1768L14.0984 20.1904C14.2546 20.0439 14.2497 19.834 14.113 19.6631C13.1071 18.3936 11.2907 17.5537 9.30343 17.5537C7.31613 17.5537 5.53878 18.4277 4.48898 19.6631C4.34738 19.8291 4.34738 20.0439 4.50363 20.1904Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M9.30343 24.668C9.4841 24.668 9.63546 24.5947 9.89425 24.3457L11.4323 22.8516C11.5984 22.6904 11.6277 22.5195 11.5153 22.3633C11.0271 21.6846 10.153 21.2598 9.30343 21.2598C8.44894 21.2598 7.59445 21.6992 7.08663 22.3633C6.96945 22.5146 7.00363 22.6904 7.16964 22.8516L8.70773 24.3457C8.96652 24.5947 9.11788 24.668 9.30343 24.668Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-badge-xmark-4de901",
+      name: "externaldrive_badge_xmark",
+      label: "Externaldrive Badge Xmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_badge_xmark"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cancel","close","cloud/server","dismiss","externaldrive","externaldrive badge xmark","externaldrive_badge_xmark","status","xmark"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.badge.xmark.svg","symbol":"externaldrive.badge.xmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3594 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="43.3594" x="0" y="0"/>
+  <path d="M31.8066 6.94336L36.2646 17.0947C36.6406 17.9736 36.9482 18.9502 36.9482 20.0391C36.9482 23.5645 34.3701 26.1377 30.6641 26.1377L15.2466 26.1377C15.8091 25.322 16.2297 24.4039 16.4642 23.418L30.6641 23.418C32.7979 23.418 34.2383 22.1338 34.2383 20.0391C34.2383 18.0859 32.7979 16.6602 30.6641 16.6602L15.1762 16.6602C14.3678 15.5083 13.2729 14.5705 11.9959 13.9553C12.1056 13.9453 12.2169 13.9404 12.3291 13.9404L30.6641 13.9404C31.1719 13.9404 31.6504 14.0381 32.085 14.1895L29.2529 7.5293C28.8477 6.55762 27.9541 6.03516 26.792 6.03516L16.2158 6.03516C15.0439 6.03516 14.1602 6.55762 13.75 7.5293L11.1611 13.6012C10.3275 13.2895 9.42925 13.1176 8.4945 13.1077L11.1963 6.94336C12.1143 4.84375 13.877 3.70117 16.2744 3.70117L26.7285 3.70117C29.1309 3.70117 30.8936 4.84375 31.8066 6.94336ZM32.2217 20.0391C32.2217 20.9766 31.4502 21.7285 30.5371 21.7285C29.5996 21.7285 28.8281 20.9863 28.8281 20.0391C28.8281 19.1309 29.6045 18.3496 30.5371 18.3496C31.4453 18.3496 32.2217 19.1309 32.2217 20.0391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 21.4502C14.9121 25.0342 11.9238 28.0078 8.35449 28.0078C4.76562 28.0078 1.80176 25.0488 1.80176 21.4502C1.80176 17.8662 4.76562 14.9023 8.35449 14.9023C11.9531 14.9023 14.9121 17.8613 14.9121 21.4502ZM10.0732 18.374L8.34473 20.1074L6.7041 18.4717C6.33789 18.1201 5.74219 18.1152 5.38086 18.4717C5.01953 18.833 5.0293 19.4287 5.38086 19.7949L7.0166 21.4355L5.28809 23.1592C4.90723 23.5303 4.93652 24.1504 5.30762 24.5117C5.67383 24.873 6.28906 24.9121 6.65527 24.541L8.38379 22.8027L10.0195 24.4287C10.3857 24.79 10.9766 24.7852 11.3379 24.4238C11.7041 24.0625 11.6992 23.4766 11.3379 23.1104L9.71191 21.4795L11.4453 19.7461C11.8262 19.3701 11.7773 18.7793 11.416 18.4082C11.0449 18.0371 10.4492 17.998 10.0732 18.374Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-connected-to-line-below-d2d9eb",
+      name: "externaldrive_connected_to_line_below",
+      label: "Externaldrive Connected To Line Below",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_connected_to_line_below"],
+      categories: ["cloud-server"],
+      tags: ["below","cloud/server","connected","externaldrive","externaldrive connected to line below","externaldrive_connected_to_line_below","line","to"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.connected.to.line.below.svg","symbol":"externaldrive.connected.to.line.below"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.4033 29.2969" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.2969" opacity="0" width="28.4033" x="0" y="0"/>
+  <path d="M15.1562 23.2486C15.8806 23.5643 16.4656 24.1452 16.7848 24.8682L25.0781 24.8682C25.7666 24.8682 26.3281 25.4395 26.3281 26.1279C26.3281 26.8115 25.7666 27.3828 25.0781 27.3828L16.796 27.3828C16.3098 28.5046 15.1886 29.2969 13.8965 29.2969C12.6044 29.2969 11.4832 28.5046 10.997 27.3828L2.71973 27.3828C2.03125 27.3828 1.46973 26.8115 1.46973 26.1279C1.46973 25.4395 2.03125 24.8682 2.71973 24.8682L11.0082 24.8682C11.3288 24.1419 11.9177 23.559 12.6465 23.2439L12.6465 20.8008L15.1562 20.8008Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M0 15.1562C0 18.4521 2.42188 20.8008 5.8252 20.8008L22.2168 20.8008C25.6201 20.8008 28.042 18.4521 28.042 15.1562C28.042 14.2041 27.793 13.3008 27.4121 12.4414L23.4229 3.36914C22.5684 1.41113 20.9229 0.356445 18.7012 0.356445L9.3457 0.356445C7.13379 0.356445 5.47852 1.40137 4.61914 3.36914L0.683594 12.3535C0.317383 13.1885 0 14.1211 0 15.1562ZM4.94629 9.49219L7.25586 4.03809C7.59277 3.24219 8.30566 2.8125 9.29199 2.8125L18.7646 2.8125C19.7559 2.8125 20.4736 3.24219 20.8057 4.03809L23.1006 9.49219C22.8223 9.47266 22.4365 9.51172 21.9678 9.51172L6.08398 9.51172C5.61035 9.51172 5.22949 9.47266 4.94629 9.49219ZM2.80273 15.1562C2.80273 13.4814 4.03809 12.3145 5.8252 12.3145L22.2168 12.3145C24.0039 12.3145 25.2393 13.4814 25.2393 15.1562C25.2393 16.8994 24.0771 17.998 22.2168 17.998L5.8252 17.998C4.0332 17.998 2.80273 16.8262 2.80273 15.1562ZM20.5078 15.1562C20.5078 16.0352 21.2207 16.7285 22.0947 16.7236C22.9541 16.7188 23.6719 16.0254 23.6719 15.1562C23.6719 14.3115 22.9395 13.584 22.0947 13.584C21.2451 13.584 20.5078 14.3115 20.5078 15.1562Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-connected-to-line-below-fill-e06851",
+      name: "externaldrive_connected_to_line_below_fill",
+      label: "Externaldrive Connected To Line Below Fill",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_connected_to_line_below_fill"],
+      categories: ["cloud-server"],
+      tags: ["below","cloud/server","connected","externaldrive","externaldrive connected to line below fill","externaldrive_connected_to_line_below_fill","fill","line","to"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.connected.to.line.below.fill.svg","symbol":"externaldrive.connected.to.line.below.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.4756 29.3066" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.3066" opacity="0" width="27.4756" x="0" y="0"/>
+  <path d="M14.8047 23.2554C15.533 23.5715 16.119 24.1556 16.4371 24.8828L24.7363 24.8828C25.4199 24.8828 25.9863 25.4492 25.9863 26.1377C25.9863 26.8262 25.4199 27.3926 24.7363 27.3926L16.4469 27.3926C15.9636 28.5161 14.8464 29.3066 13.5498 29.3066C12.2569 29.3066 11.1351 28.5161 10.6493 27.3926L2.37305 27.3926C1.68945 27.3926 1.12305 26.8262 1.12305 26.1377C1.12305 25.4492 1.68945 24.8828 2.37305 24.8828L10.6591 24.8828C10.9795 24.1544 11.5694 23.5695 12.2998 23.2537L12.2998 20.5908L14.8047 20.5908Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M4.86816 9.15039L22.2412 9.15039C23.457 9.15039 24.5703 9.42383 25.5176 9.93164L22.5781 3.28613C21.7822 1.47461 20.2441 0.463867 18.1494 0.463867L8.97461 0.463867C6.87012 0.463867 5.3418 1.47461 4.55078 3.28613L1.61621 9.92676C2.55371 9.42383 3.65723 9.15039 4.86816 9.15039ZM4.86816 20.5908L22.2412 20.5908C25.1367 20.5908 27.1143 18.623 27.1143 15.7568C27.1143 12.8809 25.1367 10.9033 22.2412 10.9033L4.86816 10.9033C1.97754 10.9033 0 12.8809 0 15.7568C0 18.623 1.97754 20.5908 4.86816 20.5908ZM20.7031 15.7568C20.7031 14.9121 21.4258 14.1943 22.2754 14.1943C23.1201 14.1943 23.8477 14.9121 23.8477 15.7568C23.8477 16.6211 23.1201 17.3047 22.2754 17.3193C21.4258 17.3242 20.7031 16.6309 20.7031 15.7568Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-fill-e3ac1b",
+      name: "externaldrive_fill",
+      label: "Externaldrive Fill",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","externaldrive","externaldrive fill","externaldrive_fill","fill"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.svg","symbol":"externaldrive.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2979 22.207" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="22.207" opacity="0" width="30.2979" x="0" y="0"/>
+  <path d="M5.37598 22.207L24.5605 22.207C27.7441 22.207 29.9365 20.0293 29.9365 16.8701C29.9365 13.7158 27.7441 11.5381 24.5605 11.5381L5.37598 11.5381C2.19238 11.5381 0 13.7158 0 16.8701C0 20.0293 2.19238 22.207 5.37598 22.207ZM5.37598 9.61426L24.5605 9.61426C25.9033 9.61426 27.1191 9.92188 28.1689 10.4736L24.9121 3.11523C24.0332 1.12793 22.3535 0.0146484 20.0439 0.0146484L9.90723 0.0146484C7.59277 0.0146484 5.9082 1.12793 5.03418 3.11523L1.78223 10.4639C2.82227 9.92188 4.03809 9.61426 5.37598 9.61426ZM22.8662 16.8945C22.8662 16.0107 23.6279 15.249 24.5312 15.249C25.415 15.249 26.1719 16.0107 26.1719 16.8945C26.1719 17.8076 25.4199 18.5303 24.5312 18.54C23.623 18.5449 22.8662 17.8174 22.8662 16.8945Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "externaldrive-fill-badge-checkmark-5d4202",
       name: "externaldrive_fill_badge_checkmark",
       label: "Externaldrive Fill Badge Checkmark",
       kind: "sf-symbol",
       aliases: ["externaldrive_fill_badge_checkmark"],
-      categories: ["status"],
-      tags: ["badge","check","checkmark","confirm","done","externaldrive","externaldrive fill badge checkmark","externaldrive_fill_badge_checkmark","fill","status","success"],
-      repositories: ["mctree-mchome"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__EXTERNALDRIVE_FILL_BADGE_CHECKMARK"}],
+      categories: ["cloud-server","status"],
+      tags: ["badge","check","checkmark","cloud/server","confirm","done","externaldrive","externaldrive fill badge checkmark","externaldrive_fill_badge_checkmark","fill","status","success"],
+      repositories: ["mctree-mchome","svg-converter"],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__EXTERNALDRIVE_FILL_BADGE_CHECKMARK"},{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.checkmark.svg","symbol":"externaldrive.fill.badge.checkmark"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false"><g><rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/><path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z"/><path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM10.3271 19.2969L7.4707 23.2422L6.11328 21.7285C5.9375 21.5234 5.68359 21.416 5.37109 21.416C4.84863 21.416 4.36523 21.7871 4.36523 22.417C4.36523 22.6709 4.4873 22.9297 4.66309 23.1396L6.74805 25.3955C6.94824 25.6201 7.27051 25.7129 7.54395 25.7129C7.87598 25.7129 8.19336 25.5713 8.36426 25.3418L11.9727 20.4248C12.1094 20.2441 12.168 20.0293 12.168 19.8535C12.168 19.292 11.7139 18.8574 11.167 18.8574C10.8203 18.8574 10.5225 19.0234 10.3271 19.2969Z"/></g></svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-exclamationmark-4d30dc",
+      name: "externaldrive_fill_badge_exclamationmark",
+      label: "Externaldrive Fill Badge Exclamationmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_exclamationmark"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","exclamationmark","externaldrive","externaldrive fill badge exclamationmark","externaldrive_fill_badge_exclamationmark","fill","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.exclamationmark.svg","symbol":"externaldrive.fill.badge.exclamationmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/>
+  <path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM7.08496 25.293C7.08496 25.9961 7.63184 26.5186 8.34961 26.5186C9.06738 26.5186 9.61426 25.9961 9.61914 25.293C9.61914 24.6191 9.0625 24.0869 8.34961 24.0869C7.6416 24.0869 7.08496 24.6094 7.08496 25.293ZM7.27539 18.8037L7.3877 22.3438C7.40234 22.8809 7.80273 23.2617 8.35449 23.2617C8.90625 23.2617 9.31152 22.8809 9.32617 22.3438L9.43848 18.8037C9.45801 18.1787 9.00391 17.7441 8.35449 17.7441C7.70508 17.7441 7.25586 18.1836 7.27539 18.8037Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-icloud-1570a8",
+      name: "externaldrive_fill_badge_icloud",
+      label: "Externaldrive Fill Badge Icloud",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_icloud"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive fill badge icloud","externaldrive_fill_badge_icloud","fill","icloud","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.icloud.svg","symbol":"externaldrive.fill.badge.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.251 27.5977" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="27.5977" opacity="0" width="47.251" x="0" y="0"/>
+  <path d="M38.4082 19.5654C38.4082 22.7246 36.2158 24.9023 33.0322 24.9023L19.3855 24.9023C19.8175 24.1512 20.0537 23.2967 20.0537 22.417C20.0537 20.7617 19.2773 19.1797 17.9248 18.2178C17.6927 16.6143 16.9519 15.2326 15.8694 14.2334L33.0322 14.2334C36.2158 14.2334 38.4082 16.4111 38.4082 19.5654ZM31.3379 19.5898C31.3379 20.5127 32.0947 21.2402 33.0029 21.2354C33.8916 21.2256 34.6436 20.5029 34.6436 19.5898C34.6436 18.7061 33.8867 17.9443 33.0029 17.9443C32.0996 17.9443 31.3379 18.7061 31.3379 19.5898ZM33.3838 5.81055L36.6406 13.1689C35.5908 12.6172 34.375 12.3096 33.0322 12.3096L13.8477 12.3096C13.1889 12.3096 12.5598 12.3841 11.967 12.5253C11.7796 12.5078 11.5892 12.5 11.3965 12.5C11.0954 12.5 10.8023 12.5201 10.5188 12.5606L13.5059 5.81055C14.3799 3.82324 16.0645 2.70996 18.3789 2.70996L28.5156 2.70996C30.8252 2.70996 32.5049 3.82324 33.3838 5.81055Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M5.80566 25.791L14.6045 25.791C16.6455 25.791 18.2471 24.292 18.2471 22.417C18.2471 21.0693 17.4805 19.8193 16.2012 19.3018C16.2061 16.4062 14.1064 14.3018 11.3965 14.3018C9.72656 14.3018 8.42285 15.1465 7.60742 16.333C5.94238 15.9033 4.25781 17.1289 4.16504 18.9355C2.70996 19.1992 1.80664 20.5225 1.80664 22.1436C1.80664 24.1455 3.54492 25.791 5.80566 25.791Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-minus-8f1261",
+      name: "externaldrive_fill_badge_minus",
+      label: "Externaldrive Fill Badge Minus",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_minus"],
+      categories: ["actions","cloud-server","status"],
+      tags: ["actions","badge","cloud/server","externaldrive","externaldrive fill badge minus","externaldrive_fill_badge_minus","fill","minus","remove","status","subtract"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.minus.svg","symbol":"externaldrive.fill.badge.minus"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/>
+  <path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM5.07324 21.2207C4.57031 21.2207 4.13086 21.6553 4.13574 22.1582C4.14062 22.6562 4.57031 23.0957 5.07324 23.0957L11.6406 23.0957C12.1436 23.0957 12.5684 22.6562 12.5684 22.1582C12.5684 21.6504 12.1436 21.2207 11.6406 21.2207Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-person-crop-2f738f",
+      name: "externaldrive_fill_badge_person_crop",
+      label: "Externaldrive Fill Badge Person Crop",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_person_crop"],
+      categories: ["cloud-server","editing","people","status"],
+      tags: ["account","badge","cloud/server","crop","editing","externaldrive","externaldrive fill badge person crop","externaldrive_fill_badge_person_crop","fill","people","person","profile","status","user"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.person.crop.svg","symbol":"externaldrive.fill.badge.person.crop"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/>
+  <path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM4.76562 25.0928L4.76562 25.1465C5.14648 25.9961 6.54785 26.958 8.35938 26.958C10.166 26.958 11.5479 26.0059 11.9434 25.1465L11.9434 25.0977C11.543 24.3164 10.1562 23.4326 8.35449 23.4326C6.55273 23.4326 5.16602 24.3066 4.76562 25.0928ZM6.38672 20.1904C6.38672 21.4453 7.24121 22.3633 8.34961 22.3633C9.45801 22.3633 10.3174 21.4453 10.3174 20.1904C10.3174 19.0576 9.45801 18.1055 8.34961 18.1055C7.24609 18.1055 6.38672 19.0576 6.38672 20.1904Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-plus-ee0c4a",
+      name: "externaldrive_fill_badge_plus",
+      label: "Externaldrive Fill Badge Plus",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_plus"],
+      categories: ["actions","cloud-server","status"],
+      tags: ["actions","add","badge","cloud/server","create","externaldrive","externaldrive fill badge plus","externaldrive_fill_badge_plus","fill","new","plus","status"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.plus.svg","symbol":"externaldrive.fill.badge.plus"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/>
+  <path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM7.41211 18.8916L7.41211 21.2207L5.07324 21.2207C4.51172 21.2207 4.14062 21.5918 4.14062 22.1582C4.14062 22.7246 4.52637 23.0957 5.07324 23.0957L7.41211 23.0957L7.41211 25.4443C7.41211 26.0059 7.7832 26.3818 8.35449 26.3818C8.9209 26.3818 9.29688 26.0059 9.29688 25.4443L9.29688 23.0957L11.6357 23.0957C12.1875 23.0957 12.5684 22.7246 12.5684 22.1582C12.5684 21.5918 12.1875 21.2207 11.6357 21.2207L9.29688 21.2207L9.29688 18.8916C9.29688 18.3252 8.9209 17.9492 8.35449 17.9492C7.7832 17.9492 7.41211 18.335 7.41211 18.8916Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "externaldrive-fill-badge-questionmark-1a0b89",
@@ -10518,11 +11019,49 @@
       label: "Externaldrive Fill Badge Questionmark",
       kind: "sf-symbol",
       aliases: ["externaldrive_fill_badge_questionmark"],
-      categories: ["status"],
-      tags: ["badge","externaldrive","externaldrive fill badge questionmark","externaldrive_fill_badge_questionmark","fill","questionmark","status"],
-      repositories: ["mctree-mchome"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__EXTERNALDRIVE_FILL_BADGE_QUESTIONMARK"}],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive fill badge questionmark","externaldrive_fill_badge_questionmark","fill","questionmark","status"],
+      repositories: ["mctree-mchome","svg-converter"],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__EXTERNALDRIVE_FILL_BADGE_QUESTIONMARK"},{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.questionmark.svg","symbol":"externaldrive.fill.badge.questionmark"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false"><g><rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/><path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z"/><path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM7.0166 25.3516C7.0166 25.9717 7.50488 26.4062 8.13965 26.4062C8.78418 26.4062 9.2627 25.9717 9.26758 25.3516C9.26758 24.7559 8.78906 24.3115 8.13965 24.3115C7.50977 24.3115 7.0166 24.751 7.0166 25.3516ZM5.625 19.6094C5.625 20.0586 5.94238 20.415 6.52344 20.415C6.95801 20.415 7.17773 20.1709 7.3877 19.9561C7.66602 19.6729 7.95898 19.4727 8.4082 19.4727C8.9209 19.4727 9.25781 19.751 9.25781 20.1807C9.25781 20.6592 8.86719 20.9229 8.20312 21.3818C7.61719 21.792 7.21191 22.1875 7.21191 22.8516C7.21191 22.8662 7.21191 22.8857 7.21191 22.9053C7.21191 23.4229 7.62207 23.7061 8.14941 23.7061C8.65234 23.7061 9.01367 23.4668 9.13086 23.0029C9.21387 22.5732 9.45801 22.3438 9.90234 22.0215C10.6152 21.5137 11.3184 21.1426 11.3184 20.0732C11.3184 18.7695 10.1562 17.8027 8.47168 17.8027C7.03613 17.8027 5.625 18.5352 5.625 19.6094Z"/></g></svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-timemachine-172caa",
+      name: "externaldrive_fill_badge_timemachine",
+      label: "Externaldrive Fill Badge Timemachine",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_timemachine"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive fill badge timemachine","externaldrive_fill_badge_timemachine","fill","status","timemachine"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.timemachine.svg","symbol":"externaldrive.fill.badge.timemachine"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/>
+  <path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M8.35449 28.7109C11.9189 28.7109 14.9023 25.7324 14.9023 22.1533C14.9023 18.5693 11.9434 15.6006 8.35449 15.6006C4.76074 15.6006 1.79688 18.5693 1.79688 22.1533L3.68164 22.1533C3.68164 19.5947 5.79102 17.4854 8.35449 17.4854C10.9082 17.4854 13.0176 19.5947 13.0176 22.1533C13.0176 24.707 10.8984 26.8262 8.35449 26.8262C6.81152 26.8262 5.52246 26.0693 4.66309 25.0098C4.32129 24.5947 3.79395 24.4824 3.36914 24.7461C2.91504 25.0293 2.81738 25.6689 3.16895 26.1377C4.39941 27.7637 6.33789 28.7109 8.35449 28.7109ZM2.26562 23.5596C2.69043 24.0332 3.15918 24.0332 3.5791 23.5596L5.23926 21.6064C5.73242 21.0547 5.40527 20.3418 4.65332 20.3418L1.18652 20.3418C0.429688 20.3418 0.0976562 21.0449 0.610352 21.6064ZM10.0146 25.2686C10.3857 25 10.4346 24.5264 10.1514 24.1357L8.22754 21.5186L8.84766 23.3936L8.84766 19.5361C8.84766 19.0918 8.49609 18.7598 8.05176 18.7598C7.60742 18.7598 7.24609 19.1016 7.24609 19.5361L7.24609 22.627C7.24609 22.8418 7.30957 23.0225 7.45117 23.2129L8.87207 25.083C9.15527 25.4639 9.64355 25.5469 10.0146 25.2686Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-fill-badge-wifi-088102",
+      name: "externaldrive_fill_badge_wifi",
+      label: "Externaldrive Fill Badge Wifi",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_badge_wifi"],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cloud/server","externaldrive","externaldrive fill badge wifi","externaldrive_fill_badge_wifi","fill","status","wifi"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.wifi.svg","symbol":"externaldrive.fill.badge.wifi"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.4823 26.4844" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="26.4844" opacity="0" width="43.4823" x="0" y="0"/>
+  <path d="M36.5239 19.0088C36.5239 22.168 34.3315 24.3457 31.1479 24.3457L12.4721 24.3457L17.9692 18.8525C18.77 18.0566 18.8286 16.8164 18.0864 15.9131C17.3652 15.0398 16.4526 14.2833 15.4161 13.6768L31.1479 13.6768C34.3315 13.6768 36.5239 15.8545 36.5239 19.0088ZM29.4536 19.0332C29.4536 19.9561 30.2104 20.6836 31.1186 20.6787C32.0073 20.6689 32.7592 19.9463 32.7592 19.0332C32.7592 18.1494 32.0024 17.3877 31.1186 17.3877C30.2153 17.3877 29.4536 18.1494 29.4536 19.0332ZM31.4995 5.25391L34.7563 12.6123C33.7065 12.0605 32.4907 11.7529 31.1479 11.7529L11.9633 11.7529C11.2158 11.7529 10.5063 11.849 9.84609 12.0314C9.66671 12.0208 9.48693 12.0166 9.30708 12.0166C9.07755 12.0166 8.84815 12.0234 8.61941 12.038L11.6215 5.25391C12.4956 3.2666 14.1801 2.15332 16.4946 2.15332L26.6313 2.15332C28.9409 2.15332 30.6206 3.2666 31.4995 5.25391Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M2.83736 18.5205C3.0229 18.7109 3.30611 18.6816 3.47212 18.5059C4.99068 16.9287 6.95845 16.0254 9.30708 16.0254C11.6508 16.0254 13.6723 16.8799 15.1372 18.5059C15.2983 18.6865 15.5815 18.7109 15.7719 18.5205L16.6557 17.6074C16.7973 17.4561 16.8168 17.2412 16.6752 17.0703C15.0688 15.1221 12.1879 13.833 9.30708 13.833C6.42134 13.833 3.54536 15.1221 1.93404 17.0703C1.78755 17.2412 1.80708 17.4561 1.95357 17.6074Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M5.48872 21.1768C5.68404 21.3721 5.93794 21.3672 6.13814 21.1523C6.92427 20.3076 8.08638 19.7314 9.30708 19.7314C10.5229 19.7314 11.5922 20.4004 12.4711 21.1523C12.6958 21.3428 12.9252 21.3721 13.1157 21.1768L14.1069 20.1904C14.2583 20.0439 14.2534 19.834 14.1167 19.6631C13.1108 18.3936 11.2895 17.5537 9.30708 17.5537C7.31978 17.5537 5.54732 18.4277 4.49263 19.6631C4.34615 19.8291 4.35103 20.0439 4.5024 20.1904Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M9.30708 24.668C9.48286 24.668 9.63911 24.5947 9.8979 24.3457L11.4409 22.8516C11.602 22.6904 11.6313 22.5195 11.519 22.3633C11.0307 21.6846 10.1518 21.2598 9.30708 21.2598C8.45747 21.2598 7.5981 21.6992 7.0854 22.3633C6.9731 22.5146 7.00728 22.6904 7.16841 22.8516L8.71626 24.3457C8.97017 24.5947 9.12642 24.668 9.30708 24.668Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "externaldrive-fill-badge-xmark-0ff316",
@@ -10530,11 +11069,47 @@
       label: "Externaldrive Fill Badge Xmark",
       kind: "sf-symbol",
       aliases: ["externaldrive_fill_badge_xmark"],
-      categories: ["status"],
-      tags: ["badge","cancel","close","dismiss","externaldrive","externaldrive fill badge xmark","externaldrive_fill_badge_xmark","fill","status","xmark"],
-      repositories: ["mctree-mchome"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__EXTERNALDRIVE_FILL_BADGE_XMARK"}],
+      categories: ["cloud-server","status"],
+      tags: ["badge","cancel","close","cloud/server","dismiss","externaldrive","externaldrive fill badge xmark","externaldrive_fill_badge_xmark","fill","status","xmark"],
+      repositories: ["mctree-mchome","svg-converter"],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__EXTERNALDRIVE_FILL_BADGE_XMARK"},{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.badge.xmark.svg","symbol":"externaldrive.fill.badge.xmark"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.3213 30.5176" aria-hidden="true" focusable="false"><g><rect height="30.5176" opacity="0" width="44.3213" x="0" y="0"/><path d="M36.9434 21.0254C36.9434 24.1846 34.751 26.3623 31.5674 26.3623L15.5405 26.3623C16.2843 25.1243 16.709 23.6818 16.709 22.1533C16.709 19.5591 15.5006 17.2275 13.6205 15.6934L31.5674 15.6934C34.751 15.6934 36.9434 17.8711 36.9434 21.0254ZM29.873 21.0498C29.873 21.9727 30.6299 22.7002 31.5381 22.6953C32.4268 22.6855 33.1787 21.9629 33.1787 21.0498C33.1787 20.166 32.4219 19.4043 31.5381 19.4043C30.6348 19.4043 29.873 20.166 29.873 21.0498ZM31.9189 7.27051L35.1758 14.6289C34.126 14.0771 32.9102 13.7695 31.5674 13.7695L12.3828 13.7695C11.6438 13.7695 10.942 13.8634 10.2883 14.0418C9.9143 13.9424 9.5275 13.8774 9.13231 13.8435L12.041 7.27051C12.915 5.2832 14.5996 4.16992 16.9141 4.16992L27.0508 4.16992C29.3604 4.16992 31.04 5.2832 31.9189 7.27051Z"/><path d="M14.9121 22.1533C14.9121 25.7373 11.9238 28.7109 8.35449 28.7109C4.76562 28.7109 1.79688 25.752 1.79688 22.1533C1.79688 18.5693 4.76562 15.6055 8.35449 15.6055C11.9482 15.6055 14.9121 18.5645 14.9121 22.1533ZM10.0684 19.0771L8.33984 20.8105L6.69434 19.1748C6.33789 18.8232 5.74219 18.8184 5.38086 19.1748C5.01953 19.5312 5.0293 20.1318 5.38086 20.4932L7.01172 22.1387L5.27832 23.8623C4.90234 24.2334 4.93164 24.8535 5.30762 25.2148C5.66895 25.5713 6.28906 25.6152 6.65527 25.2441L8.38379 23.5059L10.0146 25.1318C10.3857 25.4932 10.9717 25.4883 11.3379 25.127C11.6992 24.7656 11.6992 24.1797 11.3379 23.8086L9.71191 22.1826L11.4404 20.4492C11.8164 20.0684 11.7725 19.4775 11.4062 19.1113C11.0449 18.7402 10.4443 18.7012 10.0684 19.0771Z"/></g></svg>`
+    },
+    {
+      id: "externaldrive-fill-trianglebadge-exclamationmark-f8a76a",
+      name: "externaldrive_fill_trianglebadge_exclamationmark",
+      label: "Externaldrive Fill Trianglebadge Exclamationmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_fill_trianglebadge_exclamationmark"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","exclamationmark","externaldrive","externaldrive fill trianglebadge exclamationmark","externaldrive_fill_trianglebadge_exclamationmark","fill","trianglebadge"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.fill.trianglebadge.exclamationmark.svg","symbol":"externaldrive.fill.trianglebadge.exclamationmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.5674 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="41.5674" x="0" y="0"/>
+  <path d="M35.5664 21.0254C35.5664 24.1846 33.374 26.3623 30.1904 26.3623L17.8035 26.3623C17.7366 25.9447 17.5909 25.5342 17.3682 25.1562L12.0868 15.6934L30.1904 15.6934C33.374 15.6934 35.5664 17.8711 35.5664 21.0254ZM28.4961 21.0498C28.4961 21.9727 29.2529 22.7002 30.1611 22.6953C31.0498 22.6855 31.8018 21.9629 31.8018 21.0498C31.8018 20.166 31.0449 19.4043 30.1611 19.4043C29.2578 19.4043 28.4961 20.166 28.4961 21.0498ZM30.542 7.27051L33.7988 14.6289C32.749 14.0771 31.5332 13.7695 30.1904 13.7695L11.0059 13.7695C10.56 13.7695 10.1277 13.8037 9.71236 13.8723C9.45762 13.8133 9.19546 13.7842 8.93066 13.7842C8.50082 13.7842 8.07779 13.8609 7.68124 14.011L10.6641 7.27051C11.5381 5.2832 13.2227 4.16992 15.5371 4.16992L25.6738 4.16992C27.9834 4.16992 29.6631 5.2832 30.542 7.27051Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M10.4883 16.499L15.8252 26.0352C15.9863 26.3281 16.0693 26.626 16.0693 26.9238C16.0693 27.9102 15.3467 28.7402 14.2627 28.7402L3.59375 28.7402C2.50977 28.7402 1.79688 27.9102 1.79688 26.9238C1.79688 26.626 1.875 26.3281 2.04102 26.04L7.36816 16.499C7.71484 15.8838 8.32031 15.5664 8.93555 15.5664C9.54102 15.5664 10.1367 15.8691 10.4883 16.499ZM7.74414 25.7275C7.74414 26.377 8.25684 26.875 8.92578 26.875C9.60449 26.875 10.1172 26.377 10.1221 25.7275C10.1221 25.083 9.59473 24.5898 8.92578 24.5898C8.27148 24.5898 7.74414 25.0781 7.74414 25.7275ZM7.91504 19.585L8.02246 22.9443C8.03711 23.4375 8.4082 23.7988 8.92578 23.7988C9.44336 23.7988 9.81934 23.4375 9.83887 22.9443L9.94141 19.585C9.96094 18.9941 9.52637 18.584 8.92578 18.584C8.32031 18.584 7.89551 18.999 7.91504 19.585Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "externaldrive-trianglebadge-exclamationmark-593c8d",
+      name: "externaldrive_trianglebadge_exclamationmark",
+      label: "Externaldrive Trianglebadge Exclamationmark",
+      kind: "sf-symbol",
+      aliases: ["externaldrive_trianglebadge_exclamationmark"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","exclamationmark","externaldrive","externaldrive trianglebadge exclamationmark","externaldrive_trianglebadge_exclamationmark","trianglebadge"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/externaldrive.trianglebadge.exclamationmark.svg","symbol":"externaldrive.trianglebadge.exclamationmark"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.5391 30.5176" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="30.5176" opacity="0" width="42.5391" x="0" y="0"/>
+  <path d="M31.3965 7.29492L35.8545 17.4463C36.2305 18.3252 36.5381 19.3018 36.5381 20.3906C36.5381 23.916 33.96 26.4893 30.2539 26.4893L17.8234 26.4893C17.7654 26.0283 17.6134 25.5725 17.3682 25.1562L16.5942 23.7695L30.2539 23.7695C32.3877 23.7695 33.8281 22.4854 33.8281 20.3906C33.8281 18.4375 32.3877 17.0117 30.2539 17.0117L12.8226 17.0117L12.0459 15.6201C11.7607 15.1179 11.3828 14.7119 10.9462 14.4119C11.2556 14.3356 11.5829 14.292 11.9189 14.292L30.2539 14.292C30.7617 14.292 31.2402 14.3896 31.6748 14.541L28.8428 7.88086C28.4375 6.90918 27.5439 6.38672 26.3818 6.38672L15.8057 6.38672C14.6338 6.38672 13.75 6.90918 13.3398 7.88086L10.6366 14.221C10.1156 13.9334 9.52985 13.7842 8.93066 13.7842C8.56863 13.7842 8.21143 13.8386 7.87098 13.9461L10.7861 7.29492C11.7041 5.19531 13.4668 4.05273 15.8643 4.05273L26.3184 4.05273C28.7207 4.05273 30.4834 5.19531 31.3965 7.29492ZM31.8115 20.3906C31.8115 21.3281 31.04 22.0801 30.127 22.0801C29.1895 22.0801 28.418 21.3379 28.418 20.3906C28.418 19.4824 29.1943 18.7012 30.127 18.7012C31.0352 18.7012 31.8115 19.4824 31.8115 20.3906Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M10.4883 16.499L15.8252 26.0352C15.9863 26.3281 16.0693 26.626 16.0693 26.9238C16.0693 27.9102 15.3467 28.7402 14.2627 28.7402L3.59375 28.7402C2.50977 28.7402 1.79688 27.9102 1.79688 26.9238C1.79688 26.626 1.875 26.3281 2.04102 26.04L7.36816 16.499C7.71484 15.8838 8.32031 15.5664 8.93555 15.5664C9.54102 15.5664 10.1367 15.8691 10.4883 16.499ZM7.74414 25.7275C7.74414 26.377 8.25684 26.875 8.92578 26.875C9.60449 26.875 10.1172 26.377 10.1221 25.7275C10.1221 25.083 9.59473 24.5898 8.92578 24.5898C8.27148 24.5898 7.74414 25.0781 7.74414 25.7275ZM7.91504 19.585L8.02246 22.9443C8.03711 23.4375 8.4082 23.7988 8.92578 23.7988C9.44336 23.7988 9.81934 23.4375 9.83887 22.9443L9.94141 19.585C9.96094 18.9941 9.52637 18.584 8.92578 18.584C8.32031 18.584 7.89551 18.999 7.91504 19.585Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "eye-9e926a",
@@ -14374,16 +14949,69 @@
 </svg>`
     },
     {
+      id: "icloud-73182e",
+      name: "icloud",
+      label: "Icloud",
+      kind: "sf-symbol",
+      aliases: ["icloud"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","icloud"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.svg","symbol":"icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "icloud-and-arrow-down-fadb1f",
+      name: "icloud_and_arrow_down",
+      label: "Icloud And Arrow Down",
+      kind: "sf-symbol",
+      aliases: ["icloud_and_arrow_down"],
+      categories: ["arrows","cloud-server"],
+      tags: ["and","arrow","arrows","back","cloud/server","direction","down","forward","icloud","icloud and arrow down","icloud_and_arrow_down","navigate"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.and.arrow.down.svg","symbol":"icloud.and.arrow.down"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 36.9434" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="36.9434" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 15.0977C31.0547 16.0645 32.5684 18.291 32.5684 21.0645C32.5684 24.3799 30.0732 26.7139 26.0986 26.7139L19.8047 26.7139L19.8047 23.8232L25.9863 23.8232C28.4424 23.8232 29.6191 22.6025 29.6191 20.8301C29.6191 18.8037 28.208 17.5439 25.8838 17.1582C25.7129 17.1338 25.6396 17.0312 25.6592 16.8506C25.7227 16.2305 25.7812 15.4541 25.7422 14.7119C25.5469 11.0791 22.7686 8.08105 18.9697 8.08105C15.9619 8.08105 14.082 9.6875 12.8955 11.8994C12.8125 12.0459 12.7002 12.0801 12.5391 12.0361C9.69238 11.2256 7.10449 12.6025 7.27051 16.1963C7.28027 16.3818 7.19238 16.4844 7.01172 16.4844C4.53125 16.4844 2.94434 17.998 2.94434 20.3174C2.94434 22.2461 4.38477 23.8232 6.9043 23.8232L12.5293 23.8232L12.5293 26.7139L6.89941 26.7139C2.67578 26.7139 0 23.9014 0 20.4102C0 17.3291 1.80176 14.8828 4.70215 14.3506C4.87793 10.791 8.34473 8.48145 11.4844 9.21387C13.1201 6.83594 15.7031 5.19531 19.0039 5.19531C24.375 5.19531 28.5303 9.3457 28.5107 15.0977Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M11.7773 28.2666C11.167 28.2666 10.6396 28.7207 10.6396 29.3701C10.6396 29.707 10.7666 29.9463 10.9961 30.1758L15.1416 34.1748C15.4834 34.5068 15.8154 34.6289 16.167 34.6289C16.5186 34.6289 16.8506 34.5068 17.1924 34.1748L21.333 30.1758C21.5625 29.9463 21.6895 29.707 21.6895 29.3701C21.6895 28.7207 21.1523 28.2666 20.5469 28.2666C20.2197 28.2666 19.9072 28.4033 19.6875 28.6475L17.998 30.4346L16.167 32.9297L14.3311 30.4346L12.6416 28.6475C12.4219 28.4033 12.0996 28.2666 11.7773 28.2666ZM16.167 17.3291C15.4395 17.3291 14.8584 17.9248 14.8584 18.6133L14.8584 29.4824L15.1172 33.2617C15.1611 33.8428 15.5908 34.3164 16.167 34.3164C16.7432 34.3164 17.1729 33.8428 17.2168 33.2617L17.4756 29.4824L17.4756 18.6133C17.4756 17.9248 16.8945 17.3291 16.167 17.3291Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "icloud-and-arrow-down-fill-e19ab8",
       name: "icloud_and_arrow_down_fill",
       label: "Icloud And Arrow Down Fill",
       kind: "sf-symbol",
       aliases: ["icloud_and_arrow_down_fill"],
-      categories: ["arrows"],
-      tags: ["and","arrow","arrows","back","direction","down","fill","forward","icloud","icloud and arrow down fill","icloud_and_arrow_down_fill","navigate"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ICLOUD_AND_ARROW_DOWN_FILL"}],
+      categories: ["arrows","cloud-server"],
+      tags: ["and","arrow","arrows","back","cloud/server","direction","down","fill","forward","icloud","icloud and arrow down fill","icloud_and_arrow_down_fill","navigate"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ICLOUD_AND_ARROW_DOWN_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/icloud.and.arrow.down.fill.svg","symbol":"icloud.and.arrow.down.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 28.8086" aria-hidden="true" focusable="false"><g><rect height="28.8086" opacity="0" width="32.9297" x="0" y="0"/><path d="M0 16.3428C0 19.834 2.67578 22.6465 6.89941 22.6465L26.0986 22.6465C30.0732 22.6465 32.5684 20.3125 32.5684 16.9971C32.5684 14.2236 31.0547 11.9971 28.5107 11.0303C28.5303 5.27832 24.375 1.12793 19.0039 1.12793C15.7031 1.12793 13.1201 2.76855 11.4844 5.14648C8.34473 4.41406 4.87793 6.72363 4.70215 10.2832C1.80176 10.8154 0 13.2617 0 16.3428Z"/><path d="M16.167 28.8086C15.4395 28.8086 14.8584 28.2129 14.8584 27.5244L14.8584 15.7129L15.0293 13.8672L14.3311 14.7559L12.6416 16.5479C12.4219 16.7871 12.0996 16.9189 11.7773 16.9189C11.167 16.9189 10.6396 16.4648 10.6396 15.8252C10.6396 15.4883 10.7666 15.2441 10.9961 15.0195L15.1416 11.0205C15.4834 10.6836 15.8154 10.5664 16.167 10.5664C16.5186 10.5664 16.8506 10.6836 17.1924 11.0205L21.333 15.0195C21.5625 15.2441 21.6895 15.4883 21.6895 15.8252C21.6895 16.4648 21.1523 16.9189 20.5469 16.9189C20.2197 16.9189 19.9072 16.7871 19.6875 16.5479L17.998 14.7559L17.3047 13.8672L17.4756 15.7129L17.4756 27.5244C17.4756 28.2129 16.8945 28.8086 16.167 28.8086Z" transform="translate(0 39.375) scale(1 -1)"/></g></svg>`
+    },
+    {
+      id: "icloud-and-arrow-up-226aa9",
+      name: "icloud_and_arrow_up",
+      label: "Icloud And Arrow Up",
+      kind: "sf-symbol",
+      aliases: ["icloud_and_arrow_up"],
+      categories: ["arrows","cloud-server"],
+      tags: ["and","arrow","arrows","back","cloud/server","direction","forward","icloud","icloud and arrow up","icloud_and_arrow_up","navigate","up"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.and.arrow.up.svg","symbol":"icloud.and.arrow.up"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 33.5059" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="33.5059" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 13.3789C31.0547 14.3457 32.5684 16.5723 32.5684 19.3457C32.5684 22.6611 30.0732 24.9951 26.0986 24.9951L19.8047 24.9951L19.8047 22.1045L25.9863 22.1045C28.4424 22.1045 29.6191 20.8838 29.6191 19.1113C29.6191 17.085 28.208 15.8252 25.8838 15.4395C25.7129 15.415 25.6396 15.3125 25.6592 15.1318C25.7227 14.5117 25.7812 13.7354 25.7422 12.9932C25.5469 9.36035 22.7686 6.3623 18.9697 6.3623C15.9619 6.3623 14.082 7.96875 12.8955 10.1807C12.8125 10.3271 12.7002 10.3613 12.5391 10.3174C9.69238 9.50684 7.10449 10.8838 7.27051 14.4775C7.28027 14.6631 7.19238 14.7656 7.01172 14.7656C4.53125 14.7656 2.94434 16.2793 2.94434 18.5986C2.94434 20.5273 4.38477 22.1045 6.9043 22.1045L12.5293 22.1045L12.5293 24.9951L6.89941 24.9951C2.67578 24.9951 0 22.1826 0 18.6914C0 15.6104 1.80176 13.1641 4.70215 12.6318C4.87793 9.07227 8.34473 6.7627 11.4844 7.49512C13.1201 5.11719 15.7031 3.47656 19.0039 3.47656C24.375 3.47656 28.5303 7.62695 28.5107 13.3789Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M11.7773 19.209C12.0996 19.209 12.4219 19.0771 12.6416 18.8379L14.3311 17.0459L16.167 14.5557L17.998 17.0459L19.6875 18.8379C19.9072 19.0771 20.2197 19.209 20.5469 19.209C21.1523 19.209 21.6895 18.7549 21.6895 18.1152C21.6895 17.7783 21.5625 17.5342 21.333 17.3096L17.1924 13.3105C16.8506 12.9736 16.5186 12.8564 16.167 12.8564C15.8154 12.8564 15.4834 12.9736 15.1416 13.3105L10.9961 17.3096C10.7666 17.5342 10.6396 17.7783 10.6396 18.1152C10.6396 18.7549 11.167 19.209 11.7773 19.209ZM16.167 31.25C16.8945 31.25 17.4756 30.6543 17.4756 29.9658L17.4756 18.0029L17.2168 14.2139C17.1729 13.6426 16.7432 13.1641 16.167 13.1641C15.5908 13.1641 15.1611 13.6426 15.1172 14.2139L14.8584 18.0029L14.8584 29.9658C14.8584 30.6543 15.4395 31.25 16.167 31.25Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "icloud-and-arrow-up-fill-8ef7b5",
@@ -14391,27 +15019,96 @@
       label: "Icloud And Arrow Up Fill",
       kind: "sf-symbol",
       aliases: ["icloud_and_arrow_up_fill"],
-      categories: ["arrows"],
-      tags: ["and","arrow","arrows","back","direction","fill","forward","icloud","icloud and arrow up fill","icloud_and_arrow_up_fill","navigate","up"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ICLOUD_AND_ARROW_UP_FILL"}],
+      categories: ["arrows","cloud-server"],
+      tags: ["and","arrow","arrows","back","cloud/server","direction","fill","forward","icloud","icloud and arrow up fill","icloud_and_arrow_up_fill","navigate","up"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ICLOUD_AND_ARROW_UP_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/icloud.and.arrow.up.fill.svg","symbol":"icloud.and.arrow.up.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 28.8086" aria-hidden="true" focusable="false"><g><rect height="28.8086" opacity="0" width="32.9297" x="0" y="0"/><path d="M0 16.3428C0 19.834 2.67578 22.6465 6.89941 22.6465L26.0986 22.6465C30.0732 22.6465 32.5684 20.3125 32.5684 16.9971C32.5684 14.2236 31.0547 11.9971 28.5107 11.0303C28.5303 5.27832 24.375 1.12793 19.0039 1.12793C15.7031 1.12793 13.1201 2.76855 11.4844 5.14648C8.34473 4.41406 4.87793 6.72363 4.70215 10.2832C1.80176 10.8154 0 13.2617 0 16.3428ZM16.167 28.8086C15.4395 28.8086 14.8584 28.2129 14.8584 27.5244L14.8584 15.7129L15.0293 13.8672L14.3311 14.7559L12.6416 16.5479C12.4219 16.7871 12.0996 16.9189 11.7773 16.9189C11.167 16.9189 10.6396 16.4648 10.6396 15.8252C10.6396 15.4883 10.7666 15.2441 10.9961 15.0195L15.1416 11.0205C15.4834 10.6836 15.8154 10.5664 16.167 10.5664C16.5186 10.5664 16.8506 10.6836 17.1924 11.0205L21.333 15.0195C21.5625 15.2441 21.6895 15.4883 21.6895 15.8252C21.6895 16.4648 21.1523 16.9189 20.5469 16.9189C20.2197 16.9189 19.9072 16.7871 19.6875 16.5479L17.998 14.7559L17.3047 13.8672L17.4756 15.7129L17.4756 27.5244C17.4756 28.2129 16.8945 28.8086 16.167 28.8086Z"/></g></svg>`
     },
     {
-      id: "icloud-circle-21d629",
+      id: "icloud-circle-a9a05f",
       name: "icloud_circle",
       label: "Icloud Circle",
       kind: "sf-symbol",
       aliases: ["icloud_circle"],
-      categories: ["other"],
-      tags: ["circle","icloud","icloud circle","icloud_circle","other"],
+      categories: ["cloud-server"],
+      tags: ["circle","cloud/server","icloud","icloud circle","icloud_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"bulk-convert-circle/icloud.circle.svg","symbol":"icloud.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ICLOUD_CIRCLE"}],
-      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false">
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.circle.svg","symbol":"icloud.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/icloud.circle.svg","symbol":"icloud.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ICLOUD_CIRCLE"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
-  <rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/>
-  <path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z" fill="currentColor" fill-opacity="0.85"/>
-  <path d="M8.17383 17.3145L17.832 17.3145C19.3457 17.3145 20.4883 16.1523 20.4883 14.6875C20.4883 13.418 19.6289 12.373 18.4863 12.1387C18.5059 11.9922 18.5156 11.8164 18.5156 11.6797C18.5156 9.12109 16.5137 7.07031 13.8672 7.07031C12.3145 7.07031 10.9277 7.80273 10.0977 8.99414C9.92188 8.95508 9.6875 8.92578 9.52148 8.92578C8.22266 8.92578 7.14844 9.87305 7.00195 11.1719C5.83008 11.6309 4.94141 12.7637 4.94141 14.1602C4.94141 16.1621 6.30859 17.3145 8.17383 17.3145Z" fill="currentColor" fill-opacity="0.85"/>
+  <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
+  <path d="M13.1641 26.333C20.4346 26.333 26.333 20.4346 26.333 13.1689C26.333 5.89844 20.4346 0 13.1641 0C5.89355 0 0 5.89844 0 13.1689C0 20.4346 5.89355 26.333 13.1641 26.333ZM13.1641 23.3789C7.51953 23.3789 2.9541 18.8135 2.9541 13.1689C2.9541 7.52441 7.51953 2.9541 13.1641 2.9541C18.8086 2.9541 23.374 7.52441 23.374 13.1689C23.374 18.8135 18.8086 23.3789 13.1641 23.3789Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M8.71582 17.7197L18.1006 17.7197C19.6045 17.7197 20.752 16.5381 20.752 15.0293C20.752 13.7598 19.9072 12.7881 18.8379 12.4756C18.8477 12.2852 18.8477 12.085 18.8232 11.9043C18.6865 9.5166 16.7578 7.63184 14.248 7.63184C12.7783 7.63184 11.4258 8.31543 10.6055 9.42383C10.3418 9.38965 10.0586 9.38965 9.82422 9.42871C8.68652 9.54102 7.75879 10.4004 7.57812 11.5771C6.40137 12.0508 5.57129 13.1641 5.57129 14.6143C5.57129 16.5332 6.91895 17.7197 8.71582 17.7197Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "icloud-circle-fill-e6d088",
+      name: "icloud_circle_fill",
+      label: "Icloud Circle Fill",
+      kind: "sf-symbol",
+      aliases: ["icloud_circle_fill"],
+      categories: ["cloud-server"],
+      tags: ["circle","cloud/server","fill","icloud","icloud circle fill","icloud_circle_fill"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.circle.fill.svg","symbol":"icloud.circle.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
+  <path d="M26.333 13.1787C26.333 20.4443 20.4297 26.3477 13.1641 26.3477C5.90332 26.3477 0 20.4443 0 13.1787C0 5.92285 5.90332 0.0146484 13.1641 0.0146484C20.4297 0.0146484 26.333 5.92285 26.333 13.1787ZM10.5029 9.28223C10.21 9.25293 9.91699 9.25293 9.66797 9.29688C8.48145 9.41406 7.50977 10.3076 7.3291 11.5381C6.09375 12.0312 5.22949 13.1982 5.22949 14.7266C5.22949 16.7236 6.62598 17.9736 8.51562 17.9736L18.335 17.9736C19.9121 17.9736 21.1182 16.7383 21.1182 15.1562C21.1182 13.8184 20.2295 12.8076 19.1113 12.4805C19.1211 12.2656 19.1162 12.0654 19.0869 11.875C18.9453 9.38477 16.9336 7.40723 14.3066 7.40723C12.7686 7.40723 11.3574 8.125 10.5029 9.28223Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "icloud-dashed-e31a0b",
+      name: "icloud_dashed",
+      label: "Icloud Dashed",
+      kind: "sf-symbol",
+      aliases: ["icloud_dashed"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","dashed","icloud","icloud dashed","icloud_dashed"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.dashed.svg","symbol":"icloud.dashed"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 25.2246" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.2246" opacity="0" width="32.8076" x="0" y="0"/>
+  <path d="M0.0244141 16.5234C0.380859 18.8525 1.97266 20.8398 4.20898 21.875L5.63477 19.3408C4.33105 18.7891 3.37402 17.7588 3.05176 16.5234ZM6.18652 22.5244C6.70898 22.627 7.28027 22.6953 7.87109 22.6953L12.1045 22.7002L12.1045 19.8047L8.13477 19.8047C7.99805 19.8047 7.86133 19.7998 7.73926 19.7852ZM14.1455 22.7002L19.1455 22.7002L19.1455 19.8047L14.1455 19.8047ZM21.1865 22.7002L25.2979 22.7002C25.918 22.7002 26.5332 22.6172 27.1094 22.4805L25.5713 19.7754C25.4004 19.8047 25.2246 19.8096 25.0488 19.8096L21.1865 19.8047ZM29.0283 21.7334C30.8154 20.752 32.0947 19.082 32.4316 17.1094L29.375 17.1094C29.1162 17.9932 28.4717 18.75 27.6123 19.2041ZM29.4482 15.0684L32.4463 15.0684C32.1875 13.1543 31.1475 11.4404 29.5068 10.4102L26.7676 12.1484C28.1738 12.6465 29.1504 13.6914 29.4482 15.0684ZM25.6885 10.4053L28.3984 8.68652C28.2324 6.95312 27.666 5.39062 26.7969 4.0918L24.5703 5.96191C25.2148 6.9873 25.6104 8.18848 25.6836 9.46777C25.7031 9.77051 25.7031 10.0977 25.6885 10.4053ZM23.2178 4.42871L25.498 2.51465C24.0283 1.12305 22.124 0.214844 19.9609 0L19.9609 2.92969C21.2207 3.11035 22.334 3.64746 23.2178 4.42871ZM13.3545 5.81543C14.4092 4.24805 15.8594 3.14941 17.9297 2.89551L17.9297 0C15.5029 0.239258 13.4814 1.40137 12.085 3.11035ZM7.24609 9.86816C7.55859 7.42188 9.36035 6.30859 11.46 6.5625L10.1562 3.79395C7.66113 3.76465 5.33691 5.51758 4.77539 8.07129ZM0 14.4775L2.99316 14.4775C3.28613 12.9004 4.33105 11.748 5.86426 11.377L3.3252 9.5459C1.47461 10.4053 0.283203 12.251 0 14.4775Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "icloud-fill-b010b8",
+      name: "icloud_fill",
+      label: "Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["icloud_fill"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","fill","icloud","icloud fill","icloud_fill"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.fill.svg","symbol":"icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0889C32.5684 13.3887 31.0547 10.9424 28.5107 9.90234C28.5303 4.15039 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.59082 4.70215 9.15527C1.80176 9.70703 0 12.3242 0 15.5322C0 19.4873 3.44727 22.7441 7.9248 22.7441Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "icloud-slash-ebd930",
+      name: "icloud_slash",
+      label: "Icloud Slash",
+      kind: "sf-symbol",
+      aliases: ["icloud_slash"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","icloud","icloud slash","icloud_slash","slash"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.slash.svg","symbol":"icloud.slash"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 29.8145" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="29.8145" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M7.48223 11.3744C7.31339 11.9138 7.23753 12.5431 7.27051 13.2568C7.28027 13.4424 7.19238 13.5449 7.01172 13.5449C4.53125 13.5449 2.94434 15.2832 2.94434 17.7881C2.94434 20.1416 5.08301 22.1143 7.92969 22.1143L18.2372 22.1171L21.127 25.0037L7.9248 25C3.44727 25 0 21.748 0 17.7881C0 14.5801 1.80176 11.9678 4.70215 11.416C4.74236 10.6006 4.94789 9.84604 5.28659 9.18126ZM28.5107 12.1631C31.0547 13.1982 32.5684 15.6445 32.5684 18.3496C32.5684 21.1842 30.6954 23.5805 28.0079 24.5419L25.5733 22.1095C27.8686 22.0144 29.6191 20.3836 29.6191 18.3496C29.6191 16.1768 28.1689 14.6143 25.8838 14.2236C25.7129 14.1992 25.6396 14.0918 25.6592 13.916C25.7227 13.2959 25.7812 12.5195 25.7422 11.7725C25.5469 8.14453 22.7686 5.14648 18.9697 5.14648C15.9619 5.14648 14.165 6.7627 12.8955 8.96484C12.8101 9.10723 12.7062 9.14351 12.5523 9.10034L9.59603 6.14675C10.2117 6.07565 10.8492 6.11421 11.4844 6.27441C13.1201 3.89648 15.7031 2.25586 19.0039 2.25586C24.375 2.25586 28.5303 6.41113 28.5107 12.1631Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M26.3135 27.9199C26.7041 28.3105 27.3438 28.3105 27.7148 27.9199C28.1055 27.5488 28.1055 26.9092 27.7148 26.5186L6.24023 5.05371C5.84473 4.66309 5.2002 4.68262 4.82422 5.05371C4.44824 5.42969 4.46289 6.09375 4.82422 6.45996Z" fill="currentColor" fill-opacity="0.85"/>
  </g>
 </svg>`
     },
@@ -14421,26 +15118,44 @@
       label: "Icloud Slash Fill",
       kind: "sf-symbol",
       aliases: ["icloud_slash_fill"],
-      categories: ["other"],
-      tags: ["fill","icloud","icloud slash fill","icloud_slash_fill","other","slash"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ICLOUD_SLASH_FILL"}],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","fill","icloud","icloud slash fill","icloud_slash_fill","slash"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ICLOUD_SLASH_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/icloud.slash.fill.svg","symbol":"icloud.slash.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 29.8145" aria-hidden="true" focusable="false"><g><rect height="29.8145" opacity="0" width="32.9297" x="0" y="0"/><path d="M21.1172 24.9939L7.9248 24.9902C3.44727 24.9902 0 21.7334 0 17.7783C0 14.5703 1.80176 11.9531 4.70215 11.4014C4.74217 10.5898 4.94597 9.83871 5.28208 9.17676ZM28.5107 12.1484C31.0547 13.1885 32.5684 15.6348 32.5684 18.335C32.5684 21.1758 30.692 23.5748 28.0005 24.5345L9.58715 6.13787C10.2055 6.06533 10.8461 6.10366 11.4844 6.26465C13.1201 3.88672 15.7031 2.24609 19.0039 2.24609C24.375 2.24609 28.5303 6.39648 28.5107 12.1484Z"/><path d="M26.3135 27.9199C26.7041 28.3105 27.3438 28.3105 27.7148 27.9199C28.1055 27.5488 28.1055 26.9092 27.7148 26.5186L6.24023 5.05371C5.84473 4.66309 5.2002 4.68262 4.82422 5.05371C4.44824 5.42969 4.46289 6.09375 4.82422 6.45996Z"/></g></svg>`
     },
     {
-      id: "icloud-square-fill-9178d0",
+      id: "icloud-square-27aac2",
+      name: "icloud_square",
+      label: "Icloud Square",
+      kind: "sf-symbol",
+      aliases: ["icloud_square"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","icloud","icloud square","icloud_square","square"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.square.svg","symbol":"icloud.square"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
+  <path d="M4.29199 23.8232L19.5264 23.8232C22.3145 23.8232 23.8232 22.3193 23.8232 19.5605L23.8232 4.26758C23.8232 1.50391 22.3145 0 19.5264 0L4.29199 0C1.50879 0 0 1.49902 0 4.26758L0 19.5605C0 22.3291 1.50879 23.8232 4.29199 23.8232ZM4.58008 20.9326C3.47656 20.9326 2.89062 20.3857 2.89062 19.2285L2.89062 4.59961C2.89062 3.44727 3.47656 2.89062 4.58008 2.89062L19.2383 2.89062C20.332 2.89062 20.9326 3.44727 20.9326 4.59961L20.9326 19.2285C20.9326 20.3857 20.332 20.9326 19.2383 20.9326Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M7.55371 16.3867L16.7773 16.3867C18.2568 16.3867 19.3848 15.2246 19.3848 13.7451C19.3848 12.4951 18.5547 11.543 17.5 11.2354C17.5098 11.0498 17.5098 10.8545 17.4854 10.6738C17.3584 8.3252 15.459 6.46973 12.9883 6.46973C11.5479 6.46973 10.2148 7.14355 9.40918 8.23242C9.15039 8.19824 8.87207 8.19824 8.64258 8.24219C7.52441 8.34473 6.60645 9.19434 6.43555 10.3516C5.27832 10.8154 4.46289 11.9092 4.46289 13.335C4.46289 15.2197 5.78613 16.3867 7.55371 16.3867Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "icloud-square-fill-40231c",
       name: "icloud_square_fill",
       label: "Icloud Square Fill",
       kind: "sf-symbol",
       aliases: ["icloud_square_fill"],
-      categories: ["other"],
-      tags: ["fill","icloud","icloud square fill","icloud_square_fill","other","square"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","fill","icloud","icloud square fill","icloud_square_fill","square"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"bulk-convert-square/icloud.square.fill.svg","symbol":"icloud.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ICLOUD_SQUARE_FILL"}],
-      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.3203 22.959" aria-hidden="true" focusable="false">
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/icloud.square.fill.svg","symbol":"icloud.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/icloud.square.fill.svg","symbol":"icloud.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ICLOUD_SQUARE_FILL"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
-  <rect height="22.959" opacity="0" width="23.3203" x="0" y="0"/>
-  <path d="M22.959 3.76953L22.959 19.1992C22.959 21.6797 21.6797 22.959 19.1504 22.959L3.79883 22.959C1.2793 22.959 0 21.6992 0 19.1992L0 3.76953C0 1.26953 1.2793 0 3.79883 0L19.1504 0C21.6797 0 22.959 1.2793 22.959 3.76953ZM8.81836 7.66602C8.63281 7.62695 8.39844 7.59766 8.23242 7.59766C6.89453 7.59766 5.78125 8.56445 5.64453 9.89258C4.44336 10.3711 3.53516 11.5234 3.53516 12.959C3.53516 15.0195 4.92188 16.1914 6.8457 16.1914L16.7383 16.1914C18.291 16.1914 19.4531 15 19.4531 13.4961C19.4531 12.1973 18.5742 11.123 17.4121 10.8887C17.4219 10.7324 17.4316 10.5566 17.4316 10.4199C17.4316 7.80273 15.3809 5.68359 12.6758 5.68359C11.084 5.68359 9.66797 6.44531 8.81836 7.66602Z" fill="currentColor" fill-opacity="0.85"/>
+  <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
+  <path d="M23.8232 4.26758L23.8232 19.5605C23.8232 22.3193 22.3145 23.8232 19.5264 23.8232L4.29199 23.8232C1.50879 23.8232 0 22.3291 0 19.5605L0 4.26758C0 1.49902 1.50879 0 4.29199 0L19.5264 0C22.3145 0 23.8232 1.50391 23.8232 4.26758ZM9.31152 8.00781C9.02344 7.97363 8.72559 7.97363 8.48145 8.02246C7.29004 8.13965 6.32324 9.0332 6.14258 10.2588C4.90723 10.7568 4.03809 11.9238 4.03809 13.4473C4.03809 15.4541 5.43945 16.6992 7.3291 16.6992L17.1484 16.6992C18.7256 16.6992 19.9219 15.459 19.9219 13.877C19.9219 12.5439 19.0381 11.5283 17.9248 11.2061C17.9297 10.9961 17.9248 10.791 17.8955 10.6006C17.7588 8.11035 15.7422 6.12793 13.1152 6.12793C11.5771 6.12793 10.166 6.85059 9.31152 8.00781Z" fill="currentColor" fill-opacity="0.85"/>
  </g>
 </svg>`
     },
@@ -14640,6 +15355,40 @@
       repositories: ["visit-tracker"],
       sources: [{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__INSET_FILLED_TOPRIGHT_RECTANGLE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.9512 22.959" aria-hidden="true" focusable="false"><g><rect height="22.959" opacity="0" width="29.9512" x="0" y="0"/><path d="M3.79883 22.959L25.7812 22.959C28.3105 22.959 29.5898 21.6797 29.5898 19.1992L29.5898 3.76953C29.5898 1.2793 28.3105 0 25.7812 0L3.79883 0C1.2793 0 0 1.26953 0 3.76953L0 19.1992C0 21.6992 1.2793 22.959 3.79883 22.959ZM3.83789 21.2305C2.4707 21.2305 1.72852 20.5078 1.72852 19.1016L1.72852 3.85742C1.72852 2.46094 2.4707 1.72852 3.83789 1.72852L25.752 1.72852C27.0898 1.72852 27.8516 2.46094 27.8516 3.85742L27.8516 19.1016C27.8516 20.5078 27.0898 21.2305 25.752 21.2305Z"/><path d="M16.0254 11.4746L25.0684 11.4746C25.9277 11.4746 26.2988 11.0938 26.2988 10.2246L26.2988 4.54102C26.2988 3.67188 25.9277 3.29102 25.0684 3.29102L16.0254 3.29102C15.166 3.29102 14.7949 3.67188 14.7949 4.54102L14.7949 10.2246C14.7949 11.0938 15.166 11.4746 16.0254 11.4746Z"/></g></svg>`
+    },
+    {
+      id: "internaldrive-a0f2b5",
+      name: "internaldrive",
+      label: "Internaldrive",
+      kind: "sf-symbol",
+      aliases: ["internaldrive"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","internaldrive"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/internaldrive.svg","symbol":"internaldrive"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2695 22.4609" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="22.4609" opacity="0" width="31.2695" x="0" y="0"/>
+  <path d="M11.7578 17.5439C11.7578 17.998 12.1143 18.3496 12.5635 18.3496C12.998 18.3496 13.3496 17.998 13.3496 17.5439L13.3496 15.1807C13.3496 14.7412 12.998 14.3848 12.5635 14.3848C12.1143 14.3848 11.7578 14.7412 11.7578 15.1807ZM14.6533 17.5439C14.6533 17.998 15.0049 18.3496 15.4541 18.3496C15.8936 18.3496 16.25 17.998 16.25 17.5439L16.25 15.1807C16.25 14.7412 15.8936 14.3848 15.4541 14.3848C15.0049 14.3848 14.6533 14.7412 14.6533 15.1807ZM17.5488 17.5439C17.5488 17.998 17.9053 18.3496 18.3545 18.3496C18.7891 18.3496 19.1406 17.998 19.1406 17.5439L19.1406 15.1807C19.1406 14.7412 18.7891 14.3848 18.3545 14.3848C17.9053 14.3848 17.5488 14.7412 17.5488 15.1807ZM20.4443 17.5439C20.4443 17.998 20.7959 18.3496 21.2451 18.3496C21.6797 18.3496 22.0361 17.998 22.0361 17.5439L22.0361 15.1807C22.0361 14.7412 21.6797 14.3848 21.2451 14.3848C20.7959 14.3848 20.4443 14.7412 20.4443 15.1807ZM23.3398 17.5439C23.3398 17.998 23.6963 18.3496 24.1455 18.3496C24.5801 18.3496 24.9316 17.998 24.9316 17.5439L24.9316 15.1807C24.9316 14.7412 24.5801 14.3848 24.1455 14.3848C23.6963 14.3848 23.3398 14.7412 23.3398 15.1807ZM0 16.3623C0 19.8877 2.57812 22.4609 6.28906 22.4609L24.624 22.4609C28.3301 22.4609 30.9082 19.8877 30.9082 16.3623C30.9082 15.2734 30.6006 14.2969 30.2246 13.418L25.7666 3.2666C24.8535 1.16699 23.0908 0.0244141 20.6885 0.0244141L10.2344 0.0244141C7.83691 0.0244141 6.07422 1.16699 5.15625 3.2666L0.751953 13.3154C0.356445 14.2236 0 15.2246 0 16.3623ZM2.71484 16.3623C2.71484 14.4092 4.15039 12.9834 6.28906 12.9834L24.624 12.9834C26.7578 12.9834 28.1982 14.4092 28.1982 16.3623C28.1982 18.457 26.7578 19.7412 24.624 19.7412L6.28906 19.7412C4.15039 19.7412 2.71484 18.3154 2.71484 16.3623ZM4.86816 10.5176L7.70996 3.85254C8.11523 2.88086 9.00391 2.3584 10.1758 2.3584L20.752 2.3584C21.9141 2.3584 22.8125 2.88086 23.2129 3.85254L26.0449 10.5127C25.6104 10.3613 25.1318 10.2637 24.624 10.2637L6.28906 10.2637C5.78613 10.2637 5.30273 10.3613 4.86816 10.5176Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "internaldrive-fill-2ca605",
+      name: "internaldrive_fill",
+      label: "Internaldrive Fill",
+      kind: "sf-symbol",
+      aliases: ["internaldrive_fill"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","fill","internaldrive","internaldrive fill","internaldrive_fill"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/internaldrive.fill.svg","symbol":"internaldrive.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2979 22.207" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="22.207" opacity="0" width="30.2979" x="0" y="0"/>
+  <path d="M11.0986 18.1055L11.0986 15.6348C11.0986 15.1758 11.4697 14.8047 11.9434 14.8047C12.4072 14.8047 12.7783 15.1758 12.7783 15.6348L12.7783 18.1055C12.7783 18.5791 12.4072 18.9551 11.9434 18.9551C11.4697 18.9551 11.0986 18.5791 11.0986 18.1055ZM14.1309 18.1055L14.1309 15.6348C14.1309 15.1758 14.5068 14.8047 14.9805 14.8047C15.4395 14.8047 15.8154 15.1758 15.8154 15.6348L15.8154 18.1055C15.8154 18.5791 15.4395 18.9551 14.9805 18.9551C14.5068 18.9551 14.1309 18.5791 14.1309 18.1055ZM17.1631 18.1055L17.1631 15.6348C17.1631 15.1758 17.5342 14.8047 18.0078 14.8047C18.4766 14.8047 18.8477 15.1758 18.8477 15.6348L18.8477 18.1055C18.8477 18.5791 18.4766 18.9551 18.0078 18.9551C17.5342 18.9551 17.1631 18.5791 17.1631 18.1055ZM20.1904 18.1055L20.1904 15.6348C20.1904 15.1758 20.5713 14.8047 21.04 14.8047C21.499 14.8047 21.875 15.1758 21.875 15.6348L21.875 18.1055C21.875 18.5791 21.499 18.9551 21.04 18.9551C20.5713 18.9551 20.1904 18.5791 20.1904 18.1055ZM23.2324 18.1055L23.2324 15.6348C23.2324 15.1758 23.6035 14.8047 24.082 14.8047C24.541 14.8047 24.9072 15.1758 24.9072 15.6348L24.9072 18.1055C24.9072 18.5791 24.541 18.9551 24.082 18.9551C23.6035 18.9551 23.2324 18.5791 23.2324 18.1055ZM5.37598 22.207L24.5605 22.207C27.7441 22.207 29.9365 20.0293 29.9365 16.8701C29.9365 13.7158 27.7441 11.5381 24.5605 11.5381L5.37598 11.5381C2.19238 11.5381 0 13.7158 0 16.8701C0 20.0293 2.19238 22.207 5.37598 22.207ZM5.37598 9.61426L24.5605 9.61426C25.9033 9.61426 27.1191 9.92188 28.1689 10.4736L24.9121 3.11523C24.0332 1.12793 22.3535 0.0146484 20.0439 0.0146484L9.90723 0.0146484C7.59277 0.0146484 5.9082 1.12793 5.03418 3.11523L1.78223 10.4639C2.82227 9.92188 4.03809 9.61426 5.37598 9.61426Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "ipad-gen1-crop-homebutton-circle-1b4cd8",
@@ -14992,11 +15741,28 @@
       label: "Key Icloud",
       kind: "sf-symbol",
       aliases: ["key_icloud"],
-      categories: ["security"],
-      tags: ["icloud","key","key icloud","key_icloud","security"],
-      repositories: ["mctree-mchome"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__KEY_ICLOUD"}],
+      categories: ["cloud-server","security"],
+      tags: ["cloud/server","icloud","key","key icloud","key_icloud","security"],
+      repositories: ["mctree-mchome","svg-converter"],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__KEY_ICLOUD"},{"repo":"svg-converter","file":"app-input/server:drive/key.icloud.svg","symbol":"key.icloud"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false"><g><rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/><path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z"/><path d="M22.9053 12.8662C22.9053 10.835 21.2744 9.20898 19.2627 9.20898C17.7686 9.20898 16.4502 10.0732 15.8838 11.4355L10.6299 11.4355C10.459 11.4355 10.293 11.5039 10.1611 11.6455L9.22852 12.6074C9.08691 12.7588 9.07227 13.0176 9.24805 13.1934L10.957 14.917C11.1475 15.1074 11.4258 15.0879 11.6064 14.9121L12.5391 13.9746L13.8818 15.3174C14.0479 15.4932 14.3262 15.4883 14.5166 15.3027L15.8057 14.0332C16.5234 15.625 17.7686 16.5234 19.2627 16.5234C21.2695 16.5234 22.9053 14.8926 22.9053 12.8662ZM21.084 12.8613C21.084 13.457 20.5957 13.9502 19.9902 13.9502C19.3896 13.9502 18.9014 13.457 18.9014 12.8613C18.9014 12.2656 19.3896 11.7773 19.9902 11.7773C20.5957 11.7773 21.084 12.2607 21.084 12.8613Z"/></g></svg>`
+    },
+    {
+      id: "key-icloud-fill-5068e3",
+      name: "key_icloud_fill",
+      label: "Key Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["key_icloud_fill"],
+      categories: ["cloud-server","security"],
+      tags: ["cloud/server","fill","icloud","key","key icloud fill","key_icloud_fill","security"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/key.icloud.fill.svg","symbol":"key.icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM15.8691 11.3818L10.3809 11.3818C10.2002 11.3818 10.0293 11.4453 9.88281 11.5918L8.91602 12.6025C8.76465 12.7637 8.75 13.0322 8.93066 13.2275L10.7275 15.0195C10.9229 15.2295 11.2109 15.21 11.4111 15.0146L12.3877 14.0479L13.7744 15.4395C13.9551 15.6348 14.2432 15.6299 14.4531 15.4248L15.7959 14.1016C16.5332 15.7666 17.8516 16.7041 19.4043 16.7041C21.5088 16.7041 23.2129 14.9951 23.2129 12.876C23.2129 10.7471 21.5088 9.04785 19.4043 9.04785C17.8467 9.04785 16.4648 9.95605 15.8691 11.3818ZM21.3135 12.8711C21.3135 13.501 20.7959 14.0088 20.1758 14.0088C19.5361 14.0088 19.0332 13.501 19.0332 12.8711C19.0332 12.2461 19.5361 11.7334 20.1758 11.7334C20.7959 11.7334 21.3135 12.2363 21.3135 12.8711Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "kipsign-circle-bac519",
@@ -15452,15 +16218,33 @@
 </svg>`
     },
     {
+      id: "link-icloud-d8ab7b",
+      name: "link_icloud",
+      label: "Link Icloud",
+      kind: "sf-symbol",
+      aliases: ["link_icloud"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","icloud","link","link icloud","link_icloud"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/link.icloud.svg","symbol":"link.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M11.2695 16.9971C12.627 18.3594 14.5703 18.3545 15.9326 16.9971L18.3936 14.5459C19.751 13.1934 19.7412 11.2549 18.3838 9.8877C18.0176 9.51172 17.6123 9.30176 17.29 9.2041L16.5332 9.95117C16.4258 10.0781 16.2842 10.2295 16.123 10.4199C16.5527 10.3711 16.9873 10.5518 17.3535 10.9229C18.1445 11.709 18.1592 12.8027 17.3535 13.6084L14.9902 15.9717C14.1943 16.7676 13.0859 16.7627 12.2998 15.9717C11.5039 15.166 11.5088 14.0771 12.2998 13.2764L13.1445 12.4268C12.9395 11.8994 12.8711 11.1914 13.1543 10.459L11.2695 12.3438C9.91699 13.7012 9.91211 15.6348 11.2695 16.9971ZM21.7285 6.55762C20.3662 5.19043 18.4229 5.18555 17.0654 6.54297L14.6045 9.00391C13.2422 10.3613 13.2568 12.2998 14.6143 13.6621C14.9805 14.0332 15.3955 14.2432 15.6982 14.3457L16.4551 13.5986C16.626 13.4131 16.6943 13.3252 16.8213 13.1592C16.4258 13.1689 15.9863 12.9834 15.6348 12.6318C14.8389 11.8359 14.834 10.7471 15.6348 9.94141L18.0029 7.57812C18.8037 6.77734 19.9072 6.79199 20.6885 7.57324C21.4844 8.37891 21.4893 9.4873 20.6934 10.2734L19.8438 11.1133C20.0586 11.6504 20.1221 12.3633 19.8389 13.0908L21.7236 11.2061C23.0762 9.84863 23.0713 7.91016 21.7285 6.55762Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "link-icloud-fill-7b4d3c",
       name: "link_icloud_fill",
       label: "Link Icloud Fill",
       kind: "sf-symbol",
       aliases: ["link_icloud_fill"],
-      categories: ["other"],
-      tags: ["fill","icloud","link","link icloud fill","link_icloud_fill","other"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__LINK_ICLOUD_FILL"}],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","fill","icloud","link","link icloud fill","link_icloud_fill"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__LINK_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/link.icloud.fill.svg","symbol":"link.icloud.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false"><g><rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/><path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM16.5527 10C16.4355 10.1221 16.2939 10.2783 16.1328 10.4785C16.5674 10.4346 16.9922 10.6152 17.3877 10.9961C18.2275 11.792 18.2275 12.9492 17.3877 13.7891L14.9268 16.25C14.0967 17.0801 12.959 17.0654 12.1387 16.25C11.2939 15.415 11.3184 14.2822 12.1387 13.4521L12.998 12.5928C12.7783 12.0361 12.6953 11.2939 12.9932 10.5225L11.0449 12.4658C9.62891 13.8818 9.62891 15.9131 11.0449 17.334C12.4658 18.7549 14.4922 18.7549 15.9229 17.334L18.4912 14.7754C19.9023 13.3594 19.9316 11.2939 18.4814 9.90723C18.1006 9.53613 17.6855 9.30664 17.3584 9.20898ZM17.0898 6.42578L14.5264 8.98926C13.1104 10.4004 13.0762 12.4756 14.5312 13.8525C14.917 14.2236 15.332 14.4531 15.6445 14.5605L16.4502 13.7744C16.6162 13.5742 16.6943 13.4814 16.8262 13.3154C16.4209 13.3203 15.9912 13.1299 15.6152 12.7637C14.7754 11.9678 14.7852 10.8105 15.6152 9.98047L18.0762 7.51953C18.9111 6.68457 20.0439 6.70898 20.8643 7.51465C21.7041 8.33984 21.7041 9.4873 20.874 10.3125L20.0049 11.1719C20.2295 11.7285 20.3076 12.4805 20.0098 13.2471L21.958 11.2939C23.374 9.87305 23.3643 7.85156 21.9629 6.44043C20.5371 5.00488 18.5107 5.00488 17.0898 6.42578Z"/></g></svg>`
     },
     {
@@ -15746,6 +16530,41 @@
   <rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/>
   <path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z" fill="currentColor" fill-opacity="0.85"/>
   <path d="M8.14453 17.7246C8.14453 18.6914 8.56445 19.1309 9.45312 19.1309L15.957 19.1309C16.8457 19.1309 17.2754 18.6914 17.2754 17.7246L17.2754 12.6367C17.2754 11.7285 16.8848 11.2793 16.0938 11.2402L16.0938 9.66797C16.0938 7.41211 14.7266 5.89844 12.7051 5.89844C10.6836 5.89844 9.31641 7.41211 9.31641 9.66797L9.31641 11.2402C8.52539 11.2793 8.14453 11.7285 8.14453 12.6367ZM10.4883 11.2305L10.4883 9.56055C10.4883 8.03711 11.377 7.04102 12.7051 7.04102C14.0332 7.04102 14.9316 8.03711 14.9316 9.56055L14.9316 11.2305Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "lock-icloud-3b8cc5",
+      name: "lock_icloud",
+      label: "Lock Icloud",
+      kind: "sf-symbol",
+      aliases: ["lock_icloud"],
+      categories: ["cloud-server","security"],
+      tags: ["cloud/server","icloud","lock","lock icloud","lock_icloud","privacy","private","secure","security"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/lock.icloud.svg","symbol":"lock.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M13.5498 18.0078L19.0381 18.0078C19.834 18.0078 20.2246 17.5977 20.2246 16.7236L20.2246 12.5293C20.2246 11.7725 19.9219 11.3574 19.3066 11.2793L19.3066 10.0732C19.3066 8.05664 18.0811 6.71387 16.2842 6.71387C14.4922 6.71387 13.2764 8.05664 13.2764 10.0732L13.2764 11.2842C12.6562 11.3672 12.3486 11.7725 12.3486 12.5293L12.3486 16.7236C12.3486 17.5977 12.7393 18.0078 13.5498 18.0078ZM14.6973 11.2598L14.6973 9.98535C14.6973 8.84277 15.3223 8.10547 16.2842 8.10547C17.251 8.10547 17.8809 8.84277 17.8809 9.98535L17.8809 11.2598Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "lock-icloud-fill-6dda51",
+      name: "lock_icloud_fill",
+      label: "Lock Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["lock_icloud_fill"],
+      categories: ["cloud-server","security"],
+      tags: ["cloud/server","fill","icloud","lock","lock icloud fill","lock_icloud_fill","privacy","private","secure","security"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/lock.icloud.fill.svg","symbol":"lock.icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM13.1299 9.98535L13.1299 11.25C12.4805 11.333 12.1631 11.7627 12.1631 12.5488L12.1631 16.9287C12.1631 17.8516 12.5781 18.2812 13.4277 18.2812L19.1699 18.2812C20 18.2812 20.4102 17.8516 20.4102 16.9287L20.4102 12.5488C20.4102 11.7627 20.0977 11.3281 19.4531 11.2451L19.4531 9.98535C19.4531 7.86133 18.1689 6.45996 16.2842 6.45996C14.4092 6.45996 13.1299 7.86133 13.1299 9.98535ZM17.9395 9.8877L17.9395 11.2158L14.6338 11.2158L14.6338 9.8877C14.6338 8.69629 15.2881 7.93457 16.2842 7.93457C17.2852 7.93457 17.9395 8.69629 17.9395 9.8877Z" fill="currentColor" fill-opacity="0.85"/>
  </g>
 </svg>`
     },
@@ -17123,8 +17942,8 @@
       label: "Network",
       kind: "sf-symbol",
       aliases: ["network"],
-      categories: ["other"],
-      tags: ["network","other"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","network"],
       repositories: ["visit-tracker"],
       sources: [{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__NETWORK"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false"><g><rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/><path d="M1.85547 7.45117C5.08789 10.6445 9.52148 12.4805 14.248 12.4609C17.8613 12.4414 21.2891 11.2988 24.1211 9.23828L23.5254 7.99805C20.8887 9.99023 17.6562 11.1035 14.248 11.123C9.69727 11.1621 5.44922 9.29688 2.45117 6.09375ZM0.615234 14.4824C7.16797 20.0391 16.4648 21.0742 23.9941 17.2266L23.9941 15.6934C16.6113 19.8242 7.27539 18.7793 0.908203 12.959ZM6.75781 23.125L8.34961 23.5352C7.62695 21.7773 7.22656 19.9316 7.1582 18.0176C6.5332 11.4746 9.22852 5.17578 14.1504 1.03516L12.7246 0.517578C7.8418 4.91211 5.22461 11.3672 5.83008 18.0664C5.87891 19.7852 6.19141 21.4844 6.75781 23.125ZM15.0781 24.4238L16.3379 23.8965C14.0332 20.5859 12.7539 16.6406 12.7539 12.5098C12.7539 8.53516 13.916 4.76562 16.0449 1.57227L14.7559 1.09375C12.5977 4.47266 11.416 8.4082 11.416 12.5098C11.416 16.8262 12.7148 20.9375 15.0781 24.4238ZM22.5488 19.707L23.4082 18.6719C19.2188 16.2891 16.5527 11.8945 16.4453 6.94336C16.3965 5.12695 16.709 3.33984 17.3535 1.68945L16.0742 1.31836C15.3906 3.0957 15.0684 5 15.1074 6.96289C15.2148 12.2754 18.0762 17.0605 22.5488 19.707ZM7.1875 12.334C8.22266 12.334 9.0625 11.4844 9.0625 10.4395C9.0625 9.41406 8.22266 8.56445 7.1875 8.56445C6.14258 8.56445 5.29297 9.41406 5.29297 10.4395C5.29297 11.4844 6.14258 12.334 7.1875 12.334ZM16.8359 13.4277C17.832 13.4277 18.6523 12.6074 18.6523 11.5918C18.6523 10.5859 17.832 9.76562 16.8359 9.76562C15.8203 9.76562 14.9902 10.5859 14.9902 11.5918C14.9902 12.6074 15.8203 13.4277 16.8359 13.4277ZM13.1543 20.6934C14.1895 20.6934 15.0293 19.8633 15.0293 18.8184C15.0293 17.7734 14.1895 16.9434 13.1543 16.9434C12.1094 16.9434 11.2793 17.7734 11.2793 18.8184C11.2793 19.8633 12.1094 20.6934 13.1543 20.6934ZM12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.9551C6.51367 23.9551 1.48438 18.9258 1.48438 12.7246C1.48438 6.51367 6.51367 1.48438 12.7148 1.48438C18.9258 1.48438 23.9551 6.51367 23.9551 12.7246C23.9551 18.9258 18.9258 23.9551 12.7148 23.9551Z"/></g></svg>`
@@ -17437,6 +18256,40 @@
 		C6.822,2.191,7.012,1.629,6.336,1.59C5.73,1.557,5.749,2.122,5.367,2.666c0.177-1.182-0.724-1.733-0.872-2.605
 		C3.483-0.162,3.104,0.227,3.305,1.242z"/>
 </g>
+</svg>`
+    },
+    {
+      id: "opticaldiscdrive-a6c0bb",
+      name: "opticaldiscdrive",
+      label: "Opticaldiscdrive",
+      kind: "sf-symbol",
+      aliases: ["opticaldiscdrive"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","opticaldiscdrive"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/opticaldiscdrive.svg","symbol":"opticaldiscdrive"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2695 22.4609" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="22.4609" opacity="0" width="31.2695" x="0" y="0"/>
+  <path d="M6.02051 16.3623C6.02051 16.8945 6.45508 17.3291 6.98242 17.3291L23.9307 17.3291C24.4629 17.3291 24.8975 16.8945 24.8975 16.3623C24.8975 15.8252 24.4629 15.3955 23.9307 15.3955L6.98242 15.3955C6.45508 15.3955 6.02051 15.8252 6.02051 16.3623ZM0 16.3623C0 19.8877 2.57812 22.4609 6.28906 22.4609L24.624 22.4609C28.3301 22.4609 30.9082 19.8877 30.9082 16.3623C30.9082 15.2734 30.6006 14.2969 30.2246 13.418L25.7666 3.2666C24.8535 1.16699 23.0908 0.0244141 20.6885 0.0244141L10.2344 0.0244141C7.83691 0.0244141 6.07422 1.16699 5.15625 3.2666L0.751953 13.3154C0.356445 14.2236 0 15.2246 0 16.3623ZM2.71484 16.3623C2.71484 14.4092 4.15039 12.9834 6.28906 12.9834L24.624 12.9834C26.7578 12.9834 28.1982 14.4092 28.1982 16.3623C28.1982 18.457 26.7578 19.7412 24.624 19.7412L6.28906 19.7412C4.15039 19.7412 2.71484 18.3154 2.71484 16.3623ZM4.86816 10.5176L7.70996 3.85254C8.11523 2.88086 9.00391 2.3584 10.1758 2.3584L20.752 2.3584C21.9141 2.3584 22.8125 2.88086 23.2129 3.85254L26.0449 10.5127C25.6104 10.3613 25.1318 10.2637 24.624 10.2637L6.28906 10.2637C5.78613 10.2637 5.30273 10.3613 4.86816 10.5176Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "opticaldiscdrive-fill-2230bc",
+      name: "opticaldiscdrive_fill",
+      label: "Opticaldiscdrive Fill",
+      kind: "sf-symbol",
+      aliases: ["opticaldiscdrive_fill"],
+      categories: ["cloud-server"],
+      tags: ["cloud/server","fill","opticaldiscdrive","opticaldiscdrive fill","opticaldiscdrive_fill"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/opticaldiscdrive.fill.svg","symbol":"opticaldiscdrive.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2979 22.207" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="22.207" opacity="0" width="30.2979" x="0" y="0"/>
+  <path d="M5.08301 16.8701C5.08301 16.3135 5.53711 15.8447 6.1084 15.8447L23.833 15.8447C24.3994 15.8447 24.8535 16.3135 24.8535 16.8701C24.8535 17.4365 24.3994 17.9004 23.833 17.9004L6.1084 17.9004C5.53711 17.9004 5.08301 17.4365 5.08301 16.8701ZM5.37598 22.207L24.5605 22.207C27.7441 22.207 29.9365 20.0293 29.9365 16.8701C29.9365 13.7158 27.7441 11.5381 24.5605 11.5381L5.37598 11.5381C2.19238 11.5381 0 13.7158 0 16.8701C0 20.0293 2.19238 22.207 5.37598 22.207ZM5.37598 9.61426L24.5605 9.61426C25.9033 9.61426 27.1191 9.92188 28.1689 10.4736L24.9121 3.11523C24.0332 1.12793 22.3535 0.0146484 20.0439 0.0146484L9.90723 0.0146484C7.59277 0.0146484 5.9082 1.12793 5.03418 3.11523L1.78223 10.4639C2.82227 9.92188 4.03809 9.61426 5.37598 9.61426Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
 </svg>`
     },
     {
@@ -18267,6 +19120,40 @@
       repositories: ["mctree-mchome"],
       sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PERSON_FILL_BADGE_MINUS"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.7246 35.4199" aria-hidden="true" focusable="false"><g><rect height="35.4199" opacity="0" width="37.7246" x="0" y="0"/><path d="M23.9893 20.6966C22.1714 22.2302 21.0107 24.5208 21.0107 27.0605C21.0107 27.7773 21.1027 28.474 21.2849 29.1357L10.3516 29.1357C8.87695 29.1357 7.99316 28.4229 7.99316 27.2461C7.99316 24.0186 12.1484 19.5947 18.6768 19.5947C20.6912 19.5947 22.4803 20.0166 23.9893 20.6966ZM23.8037 11.7578C23.8037 14.9072 21.499 17.3828 18.6816 17.3828C15.8691 17.3828 13.5645 14.9072 13.5645 11.7725C13.5645 8.72559 15.8887 6.25977 18.6816 6.25977C21.4746 6.25977 23.8037 8.69629 23.8037 11.7578Z"/><path d="M35.9229 27.0605C35.9229 30.6396 32.9395 33.623 29.3652 33.623C25.7764 33.623 22.8125 30.6543 22.8125 27.0605C22.8125 23.4766 25.7764 20.5078 29.3652 20.5078C32.959 20.5078 35.9229 23.4717 35.9229 27.0605ZM26.084 26.123C25.5859 26.123 25.1367 26.5674 25.1465 27.0654C25.1514 27.5684 25.5859 28.0078 26.084 28.0078L32.6514 28.0078C33.1592 28.0078 33.584 27.5684 33.584 27.0654C33.584 26.5625 33.1592 26.123 32.6514 26.123Z"/></g></svg>`
+    },
+    {
+      id: "person-icloud-a97074",
+      name: "person_icloud",
+      label: "Person Icloud",
+      kind: "sf-symbol",
+      aliases: ["person_icloud"],
+      categories: ["cloud-server","people"],
+      tags: ["account","cloud/server","icloud","people","person","person icloud","person_icloud","profile","user"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/person.icloud.svg","symbol":"person.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M9.93652 20.1514L23.9941 20.1514C23.0176 18.0029 20.5518 15.8691 16.9678 15.8691C13.3838 15.8691 10.918 18.0029 9.93652 20.1514ZM16.9678 14.4385C18.7891 14.4482 20.2344 12.8271 20.2344 10.8594C20.2344 8.95508 18.7842 7.37305 16.9678 7.37305C15.1514 7.37305 13.6963 8.95508 13.6963 10.8594C13.7012 12.8174 15.1465 14.4238 16.9678 14.4385ZM25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
+      id: "person-icloud-fill-91281b",
+      name: "person_icloud_fill",
+      label: "Person Icloud Fill",
+      kind: "sf-symbol",
+      aliases: ["person_icloud_fill"],
+      categories: ["cloud-server","people"],
+      tags: ["account","cloud/server","fill","icloud","people","person","person icloud fill","person_icloud_fill","profile","user"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/person.icloud.fill.svg","symbol":"person.icloud.fill"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM10.0244 19.8486L23.9111 19.8486C22.8223 17.7881 20.3857 15.8545 16.9678 15.8545C13.5498 15.8545 11.1084 17.7881 10.0244 19.8486ZM13.6963 10.8496C13.7012 12.8027 15.1465 14.4141 16.9678 14.4238C18.7891 14.4385 20.2344 12.8125 20.2344 10.8496C20.2344 8.94531 18.7842 7.3584 16.9678 7.3584C15.1514 7.3584 13.6963 8.94531 13.6963 10.8496Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
     },
     {
       id: "person-line-dotted-person-fill-3f6760",
@@ -29389,15 +30276,33 @@
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false"><g><rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/><path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z"/><path d="M8.98438 17.6953L17.6758 8.99414C17.8516 8.82812 17.9492 8.61328 17.9492 8.37891C17.9492 7.89062 17.5586 7.51953 17.0703 7.51953C16.8359 7.51953 16.6309 7.60742 16.4648 7.7832L7.74414 16.4746C7.56836 16.6504 7.48047 16.8457 7.48047 17.0996C7.48047 17.5781 7.86133 17.9688 8.34961 17.9688C8.60352 17.9688 8.80859 17.8711 8.98438 17.6953ZM16.4453 17.6953C16.6113 17.8711 16.8164 17.9688 17.0703 17.9688C17.5586 17.9688 17.9492 17.5781 17.9492 17.0996C17.9492 16.8457 17.8516 16.6504 17.6758 16.4746L8.96484 7.7832C8.78906 7.60742 8.59375 7.51953 8.34961 7.51953C7.86133 7.51953 7.48047 7.89062 7.48047 8.37891C7.48047 8.61328 7.56836 8.82812 7.74414 8.99414Z"/></g></svg>`
     },
     {
+      id: "xmark-icloud-0a8b2c",
+      name: "xmark_icloud",
+      label: "Xmark Icloud",
+      kind: "sf-symbol",
+      aliases: ["xmark_icloud"],
+      categories: ["cloud-server","status"],
+      tags: ["cancel","close","cloud/server","dismiss","icloud","status","xmark","xmark icloud","xmark_icloud"],
+      repositories: ["svg-converter"],
+      sources: [{"repo":"svg-converter","file":"app-input/server:drive/xmark.icloud.svg","symbol":"xmark.icloud"}],
+      svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
+ <g>
+  <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
+  <path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z" fill="currentColor" fill-opacity="0.85"/>
+  <path d="M13.6621 17.3633L20.4004 10.6201C20.6055 10.4199 20.7178 10.1611 20.7178 9.8877C20.7178 9.29199 20.2588 8.84277 19.668 8.84277C19.3604 8.84277 19.1162 8.94043 18.9111 9.15527L12.1582 15.8887C11.9531 16.0938 11.8408 16.3428 11.8408 16.626C11.8408 17.2168 12.2998 17.6807 12.8906 17.6807C13.208 17.6807 13.457 17.5732 13.6621 17.3633ZM18.8965 17.3633C19.1016 17.5732 19.3555 17.6807 19.668 17.6807C20.2588 17.6807 20.7178 17.2168 20.7178 16.626C20.7178 16.3428 20.6055 16.0938 20.4004 15.8887L13.6523 9.15527C13.4424 8.94043 13.1982 8.84277 12.8906 8.84277C12.2998 8.84277 11.8408 9.29199 11.8408 9.8877C11.8408 10.1611 11.9531 10.4199 12.1582 10.6201Z" fill="currentColor" fill-opacity="0.85"/>
+ </g>
+</svg>`
+    },
+    {
       id: "xmark-icloud-fill-938a85",
       name: "xmark_icloud_fill",
       label: "Xmark Icloud Fill",
       kind: "sf-symbol",
       aliases: ["xmark_icloud_fill"],
-      categories: ["status"],
-      tags: ["cancel","close","dismiss","fill","icloud","status","xmark","xmark icloud fill","xmark_icloud_fill"],
-      repositories: ["cocktail-list"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__XMARK_ICLOUD_FILL"}],
+      categories: ["cloud-server","status"],
+      tags: ["cancel","close","cloud/server","dismiss","fill","icloud","status","xmark","xmark icloud fill","xmark_icloud_fill"],
+      repositories: ["cocktail-list","svg-converter"],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__XMARK_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/server:drive/xmark.icloud.fill.svg","symbol":"xmark.icloud.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false"><g><rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/><path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM19.1797 8.70117L16.2872 11.5861L13.3984 8.70117C13.1641 8.4668 12.8857 8.35449 12.5439 8.35449C11.8799 8.35449 11.3623 8.8623 11.3623 9.52148C11.3623 9.8291 11.4893 10.1221 11.7139 10.3467L14.6162 13.2528L11.7139 16.1475C11.4893 16.3721 11.3623 16.6602 11.3623 16.9678C11.3623 17.6318 11.8799 18.1494 12.5439 18.1494C12.8955 18.1494 13.1738 18.0322 13.4082 17.8027L16.2842 14.923L19.1602 17.8027C19.3945 18.0322 19.6777 18.1494 20.0342 18.1494C20.6934 18.1494 21.2109 17.6318 21.2109 16.9678C21.2109 16.6602 21.084 16.3721 20.8545 16.1475L17.9541 13.2509L20.8545 10.3467C21.084 10.1221 21.2109 9.8291 21.2109 9.52148C21.2109 8.8623 20.6934 8.35449 20.0342 8.35449C19.6875 8.35449 19.4092 8.4668 19.1797 8.70117Z"/></g></svg>`
     },
     {
@@ -29468,7 +30373,7 @@
     },
   ];
   window.LocalApp.iconLibrary = Object.freeze({
-    categories: Object.freeze([{"id":"actions","label":"Actions"},{"id":"arrows","label":"Arrows"},{"id":"communication","label":"Communication"},{"id":"commerce","label":"Commerce"},{"id":"devices","label":"Devices"},{"id":"documents","label":"Documents"},{"id":"editing","label":"Editing"},{"id":"food-drink","label":"Food & Drink"},{"id":"health","label":"Health"},{"id":"interface","label":"Interface"},{"id":"maps-travel","label":"Maps & Travel"},{"id":"media","label":"Media"},{"id":"nature","label":"Nature"},{"id":"people","label":"People"},{"id":"security","label":"Security"},{"id":"shapes","label":"Shapes"},{"id":"status","label":"Status"},{"id":"time","label":"Time"},{"id":"weather","label":"Weather"},{"id":"other","label":"Other"}].map(Object.freeze)),
+    categories: Object.freeze([{"id":"actions","label":"Actions"},{"id":"arrows","label":"Arrows"},{"id":"communication","label":"Communication"},{"id":"commerce","label":"Commerce"},{"id":"devices","label":"Devices"},{"id":"cloud-server","label":"Cloud/Server"},{"id":"documents","label":"Documents"},{"id":"editing","label":"Editing"},{"id":"food-drink","label":"Food & Drink"},{"id":"health","label":"Health"},{"id":"interface","label":"Interface"},{"id":"maps-travel","label":"Maps & Travel"},{"id":"media","label":"Media"},{"id":"nature","label":"Nature"},{"id":"people","label":"People"},{"id":"security","label":"Security"},{"id":"shapes","label":"Shapes"},{"id":"status","label":"Status"},{"id":"time","label":"Time"},{"id":"weather","label":"Weather"},{"id":"other","label":"Other"}].map(Object.freeze)),
     sourceRepositories: Object.freeze(["app-icon-favicon-kit","app-template","carcassone-cheatsheet","cocktail-list","game-timer","mctree-mchome","pickle-score","roadmap-gen","soccer-charts","svg-converter","visit-tracker"]),
     icons: Object.freeze(ICON_LIBRARY.map(Object.freeze))
   });
