@@ -11,13 +11,14 @@
 ## Desktop
 
 - [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
-- [ ] The catalog reports 2,975 unique icons, renders responsive previews, filters by SF Symbols versus Custom and by each contributing source, sorts in every direction, and progressively reveals large result sets.
-- [ ] `/` focuses global search; icon matches filter the main grid and search results focus their corresponding copy button; support matches still route to Notes, Help, releases, and the Settings Roadmap.
-- [ ] Selecting an icon copies complete SVG markup, shows a visible and announced success state, and provides an actionable failure message when clipboard access is unavailable.
+- [ ] The catalog reports 2,975 unique icons, renders narrow responsive cards with only preview/name/Symbol-or-Custom type, wraps long names, filters by type and source, sorts in every direction, and progressively reveals large result sets.
+- [ ] `/` focuses global search; Enter closes suggestions and moves to matching cards below; suggestion results still focus their corresponding copy button or route to Notes, Help, releases, and the Settings Roadmap.
+- [ ] Selecting an icon copies complete SVG markup; each information button opens identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
+- [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
 - [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work inside Settings.
-- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus; R, P, and W select the three What’s New views directly and with Shift–Control–Option.
+- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus; the main-page What’s New banner exposes V to view release notes and X to dismiss it, directly and with Shift–Control–Option.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
 
 ## Tablet and mobile
@@ -25,6 +26,7 @@
 - [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport.
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
 - [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
+- [ ] Icon details fills the mobile viewport, wraps long file paths, and keeps its single content panel scrollable.
 - [ ] Settings fills the screen and uses one scrolling content surface.
 - [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
@@ -32,10 +34,10 @@
 
 - [ ] Visible focus, logical focus order, labels, roles, and ARIA state are correct.
 - [ ] Escape closes menus, popovers, and dialogs and returns focus to the trigger.
-- [ ] `/`, `H`/`?`, `,`, `2`, `N`, `V`, `S`, `E`, `T`, and `D`/`|` work outside editable fields both directly and while Shift–Control–Option is held.
+- [ ] `/`, `H`/`?`, `,`, `2`, `N`, `V`, `S`, `E`, `T`, and `D`/`|` work outside editable fields; icon commands F/G/I/C/L work in their valid contexts, directly and with Shift–Control–Option.
 - [ ] Holding Shift–Control–Option reveals shortcut hints only for enabled controls in the active page or dialog, and releasing any chord key hides them.
 - [ ] Hovering a shortcut-enabled control shows both its plain key and Shift–Control–Option command.
-- [ ] Tabs and menu items support arrow-key movement.
+- [ ] Tabs and menu items support arrow-key movement; icon cards support Left/Right/Up/Down plus Home/End without hiding the separate information controls.
 - [ ] Reduced-motion mode removes nonessential transitions and animations.
 - [ ] Light and dark themes meet contrast needs; status always includes text or an accessible label.
 

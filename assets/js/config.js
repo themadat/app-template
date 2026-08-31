@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.11",
-      buildId: "0.0.1.11",
+      version: "0.0.1.13",
+      buildId: "0.0.1.13",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -73,13 +73,23 @@
 
     releases: [
       {
-        version: "0.0.1.11",
-        date: "2026-08-29T23:00:00.000Z",
-        title: "What’s New shortcuts",
-        summary: "The What’s New dialog now provides direct and Shift–Control–Option commands for switching among released, planned, and wishlist views.",
-        features: ["R, P, and W contextual release-view shortcuts"],
-        improvements: ["V shortcut badge on the What’s New tab", "Shortcut-hint badges and hover descriptions for every release view"],
-        fixes: ["Release-view shortcuts run only for an unmodified key or the full Shift–Control–Option chord"],
+        version: "0.0.1.13",
+        date: "2026-08-31T16:00:00.000Z",
+        title: "Compact icon library",
+        summary: "The icon library now uses compact name-and-type cards, provides source details on demand, and includes a complete module shortcut set.",
+        features: ["Accessible icon-details dialog with identifiers, aliases, repositories, filenames, paths, and source symbols", "Icon-library commands for filters, first result, focused-icon details, clearing search, and loading more"],
+        improvements: ["Narrow cards show only the icon, a multiline name, and Custom or Symbol type", "Arrow keys plus Home and End move through the visible icon grid"],
+        fixes: ["Enter in global search now closes suggestions, renders the catalog matches below, and focuses the first result"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
+      {
+        version: "0.0.1.12",
+        date: "2026-08-29T23:30:00.000Z",
+        title: "What’s New banner shortcuts",
+        summary: "The main-page What’s New banner now provides keyboard commands for viewing release notes or dismissing the notice.",
+        features: ["V to view release notes", "X to dismiss the What’s New banner"],
+        improvements: ["Shortcut-hint badges and hover descriptions on both banner actions"],
+        fixes: ["The dismiss command is available only while the banner is visible on the active page and only for a plain key or the full Shift–Control–Option chord"],
         knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
       },
       {
@@ -193,7 +203,7 @@
 
     help: [
       { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search copy svg notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog, optionally filter by icon type and source, and select any icon card to copy its complete SVG markup. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
-      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search copy clipboard source filter sort catalog compiler", html: "<p>Search by symbol name, alias, SF Symbol/Custom type, or source repository. Choose an icon card to copy sanitized inline SVG markup that is ready to paste into another HTML or JavaScript application. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
+      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search copy clipboard source filter sort catalog compiler", html: "<p>Search by symbol name, alias, Symbol/Custom type, or source repository, then press <kbd>Enter</kbd> to move to the matching grid. Choose a compact icon card to copy its sanitized inline SVG, or use its information button for identifier, alias, repository, filename, path, and source-symbol details. Use <kbd>F</kbd> for filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for the focused icon’s details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },
@@ -201,7 +211,7 @@
       { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline.</p>" },
       { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press shortcut pipe", html: "<p>Click or tap the app icon, or press <kbd>T</kbd>, to switch between light and dark themes. Press and hold the icon, or press <kbd>|</kbd> or <kbd>D</kbd>, to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },
-      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version pipe developer", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>|</kbd> or <kbd>D</kbd> for Developer Mode, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. While What’s New is open, use <kbd>R</kbd> for Released, <kbd>P</kbd> for Planned, and <kbd>W</kbd> for Wishlist. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
+      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version pipe developer", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>|</kbd> or <kbd>D</kbd> for Developer Mode, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. On the main-page What’s New banner, use <kbd>V</kbd> to view release notes and <kbd>X</kbd> to dismiss the notice. In the icon library, use <kbd>F</kbd>, <kbd>G</kbd>, <kbd>I</kbd>, <kbd>C</kbd>, and <kbd>L</kbd> for the visible module actions. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
     ]
   };
 

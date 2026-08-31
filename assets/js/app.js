@@ -30,15 +30,19 @@
 
   const SHORTCUTS = [
     { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
+    { keys: "Enter", label: "Show icon search results below", group: "Icon Library", chord: false },
+    { keys: "F", hintKey: "F", chordKey: "F", label: "Focus icon filters", group: "Icon Library" },
+    { keys: "G", hintKey: "G", chordKey: "G", label: "Focus the first visible icon", group: "Icon Library" },
+    { keys: "I", hintKey: "I", chordKey: "I", label: "Show details for the focused icon", group: "Icon Library" },
+    { keys: "C", hintKey: "C", chordKey: "C", label: "Clear the icon search", group: "Icon Library" },
+    { keys: "L", hintKey: "L", chordKey: "L", label: "Show more matching icons", group: "Icon Library" },
     { keys: "Esc", hintKey: "Esc", chordKey: "Esc", label: "Close a dialog or menu", group: "Global" },
     { keys: "H or ?", hintKey: "H", chordKey: "H", label: "Open Help Center", group: "Global" },
     { keys: ",", hintKey: ",", chordKey: ",", label: "Open Settings", group: "Global" },
     { keys: "2", hintKey: "2", chordKey: "2", label: "Open Roadmap in Settings", group: "Navigation" },
     { keys: "N", hintKey: "N", chordKey: "N", label: "Open Notes", group: "Actions" },
     { keys: "V", hintKey: "V", chordKey: "V", label: "Open What’s New", group: "Actions" },
-    { keys: "R", hintKey: "R", chordKey: "R", label: "Show released updates", group: "What’s New" },
-    { keys: "P", hintKey: "P", chordKey: "P", label: "Show planned features", group: "What’s New" },
-    { keys: "W", hintKey: "W", chordKey: "W", label: "Show wishlist items", group: "What’s New" },
+    { keys: "X", hintKey: "X", chordKey: "X", label: "Dismiss the What’s New banner", group: "What’s New" },
     { keys: "S", hintKey: "S", chordKey: "S", label: "Run the primary sync action", group: "Actions" },
     { keys: "E", hintKey: "E", chordKey: "E", label: "Export a JSON backup", group: "Actions" },
     { keys: "T", hintKey: "T", chordKey: "T", label: "Switch color theme", group: "Actions" },
@@ -137,6 +141,11 @@
     hint.hidden = hintHidden;
   }
 
+  function dismissWhatsNew() {
+    storage.mutate(function (next) { next.ui.seenReleaseVersion = config.releases[0].version; }, { reason: "release-seen" });
+    renderHeader();
+  }
+
   function renderSyncStatus() {
     const info = sync.getInfo();
     const offline = navigator.onLine === false;
@@ -212,7 +221,7 @@
     return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
   }
 
-  function iconKindLabel(value) { return value === "sf-symbol" ? "SF Symbol" : "Custom"; }
+  function iconKindLabel(value) { return value === "sf-symbol" ? "Symbol" : "Custom"; }
 
   function iconMatches(icon, needle) {
     return !needle || (iconSearchIndex.get(icon.id) || "").includes(needle);
@@ -238,10 +247,82 @@
     return filtered;
   }
 
+  function sourceFileName(value) {
+    const parts = String(value || "").split(/[\\/]/);
+    return parts[parts.length - 1] || "Unknown file";
+  }
+
   function iconCard(icon) {
-    const sourceText = icon.repositories.map(repositoryLabel).join(" + ");
     const typeText = iconKindLabel(icon.kind);
-    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + u.escapeHtml(icon.id) + '" class="icon-card" type="button" data-icon-id="' + u.escapeHtml(icon.id) + '" aria-label="Copy ' + u.escapeHtml(icon.label) + ' SVG" title="Copy SVG · ' + u.escapeHtml(typeText + " · " + sourceText) + '"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + u.escapeHtml(icon.label) + '</strong><code>' + u.escapeHtml(icon.name) + '</code><span class="icon-card-meta">' + u.escapeHtml(typeText + " · " + sourceText) + '</span><span class="icon-copy-label"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></span></button></div>';
+    const label = u.escapeHtml(icon.label);
+    const id = u.escapeHtml(icon.id);
+    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + label + '</strong><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div>';
+  }
+
+  function openIconInfo(iconId, trigger) {
+    const icon = iconById.get(iconId);
+    if (!icon) return;
+    const aliases = Array.isArray(icon.aliases) ? icon.aliases.filter(Boolean) : [];
+    const sources = Array.isArray(icon.sources) ? icon.sources : [];
+    $("#iconInfoDialogTitle").textContent = icon.label;
+    $("#iconInfoName").textContent = icon.label;
+    $("#iconInfoType").textContent = iconKindLabel(icon.kind);
+    $("#iconInfoIdentifier").textContent = icon.name || "—";
+    $("#iconInfoAliases").textContent = aliases.join(", ");
+    $("#iconInfoAliasesRow").hidden = aliases.length === 0;
+    $("#iconInfoPreview").innerHTML = icon.svg;
+    $("#iconInfoSourceCount").textContent = sources.length + (sources.length === 1 ? " source" : " sources");
+    $("#iconInfoSources").innerHTML = sources.length ? sources.map(function (source) {
+      const file = String(source.file || "");
+      const symbol = String(source.symbol || "");
+      return '<li><div class="icon-source-heading"><strong>' + u.escapeHtml(repositoryLabel(source.repo)) + '</strong><span>' + u.escapeHtml(sourceFileName(file)) + '</span></div><dl><div><dt>File</dt><dd><code>' + u.escapeHtml(file || "Unknown file") + '</code></dd></div>' + (symbol ? '<div><dt>Source symbol</dt><dd><code>' + u.escapeHtml(symbol) + '</code></dd></div>' : "") + '</dl></li>';
+    }).join("") : '<li class="icon-source-empty">No source metadata is available.</li>';
+    const copyButton = $("#iconInfoCopyButton");
+    copyButton.dataset.iconInfoCopy = icon.id;
+    delete copyButton.dataset.copied;
+    copyButton.querySelector("[data-icon-copy-text]").textContent = "Copy SVG";
+    components.openDialog("#iconInfoDialog", { trigger: trigger, focus: "#iconInfoCopyButton" });
+  }
+
+  function focusFirstIcon() {
+    const first = $(".icon-card", $("#iconLibraryGrid"));
+    if (!first) return;
+    first.scrollIntoView({ block: "center", behavior: document.documentElement.dataset.motion === "reduce" ? "auto" : "smooth" });
+    first.focus({ preventScroll: true });
+  }
+
+  function submitIconSearch() {
+    $("#globalSearchResults").hidden = true;
+    iconVisibleCount = ICON_PAGE_SIZE;
+    renderIconLibrary();
+    requestAnimationFrame(function () {
+      const first = $(".icon-card", $("#iconLibraryGrid"));
+      const target = first || $("#iconLibraryEmpty");
+      target?.scrollIntoView({ block: "center", behavior: document.documentElement.dataset.motion === "reduce" ? "auto" : "smooth" });
+      if (first) first.focus({ preventScroll: true });
+      else if (target) { target.tabIndex = -1; target.focus({ preventScroll: true }); }
+    });
+  }
+
+  function moveIconGridFocus(event) {
+    if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+    const item = event.target.closest(".icon-card-item");
+    if (!item) return;
+    const cards = $$(".icon-card", event.currentTarget);
+    const current = item.querySelector(".icon-card");
+    const index = cards.indexOf(current);
+    if (index < 0 || !cards.length) return;
+    const columns = Math.max(1, getComputedStyle(event.currentTarget).gridTemplateColumns.split(" ").filter(Boolean).length);
+    let next = index;
+    if (event.key === "ArrowLeft") next -= 1;
+    else if (event.key === "ArrowRight") next += 1;
+    else if (event.key === "ArrowUp") next -= columns;
+    else if (event.key === "ArrowDown") next += columns;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = cards.length - 1;
+    next = Math.max(0, Math.min(cards.length - 1, next));
+    event.preventDefault();
+    cards[next].focus();
   }
 
   function renderIconLibrary() {
@@ -702,17 +783,6 @@
       if (versionButton) { versionView = versionButton.dataset.versionView; renderReleases(); return; }
     });
     dialog.addEventListener("keydown", function (event) {
-      const releaseViewByCode = { KeyR: "released", KeyP: "planned", KeyW: "wishlist" };
-      const releaseView = releaseViewByCode[event.code];
-      if (!$("#releasesPanel").hidden && releaseView && !event.repeat && !u.isEditableTarget(event.target) && shortcutModifiersAllowed(event)) {
-        event.stopPropagation();
-        runShortcut(event, function () {
-          versionView = releaseView;
-          renderReleases();
-          $("[data-version-view='" + releaseView + "']")?.focus({ preventScroll: true });
-        });
-        return;
-      }
       const tab = event.target.closest("[role='tab']");
       if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
       event.preventDefault();
@@ -834,12 +904,21 @@
       return;
     }
     if (event.repeat) return;
+    const iconPageActive = !$("dialog[open]");
+    const focusedIconItem = document.activeElement.closest?.(".icon-card-item");
+    const focusedIconId = focusedIconItem?.querySelector("[data-icon-id]")?.dataset.iconId;
     if ((event.code === "Backslash" && event.shiftKey) || event.key === "|") runShortcut(event, function () { toggleDeveloperMode(undefined, { openPanel: true }); });
     else if (event.code === "KeyH") runShortcut(event, function () { openSupport("help", event.target); });
     else if (event.code === "Comma") runShortcut(event, function () { openSupport("settings", event.target); });
     else if (event.code === "Digit2" && activeModuleEnabled("roadmap")) runShortcut(event, function () { openSupport("roadmap", event.target); });
     else if (event.code === "KeyN") runShortcut(event, function () { openNotes(event.target); });
+    else if (event.code === "KeyF" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconKindFilter").focus(); });
+    else if (event.code === "KeyG" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, focusFirstIcon);
+    else if (event.code === "KeyI" && iconPageActive && focusedIconId && shortcutModifiersAllowed(event)) runShortcut(event, function () { openIconInfo(focusedIconId, document.activeElement); });
+    else if (event.code === "KeyC" && iconPageActive && !$("#iconClearSearch").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconClearSearch").click(); });
+    else if (event.code === "KeyL" && iconPageActive && !$("#iconLoadMore").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconLoadMore").click(); });
     else if (event.code === "KeyV") runShortcut(event, function () { openSupport("releases", event.target); });
+    else if (event.code === "KeyX" && !$("dialog[open]") && !$("#whatsNewBanner").hidden && shortcutModifiersAllowed(event)) runShortcut(event, dismissWhatsNew);
     else if (event.code === "KeyS") runShortcut(event, function () { sync.syncNow(event.target); });
     else if (event.code === "KeyE") runShortcut(event, portability.exportJson);
     else if (event.code === "KeyT") runShortcut(event, toggleThemeFromAppIcon);
@@ -870,7 +949,7 @@
       if (action) handleAction(action.dataset.action, action);
       const dismissHint = event.target.closest("[data-dismiss-hint]");
       if (dismissHint) { storage.mutate(function (next) { next.preferences.hints.dismissed = Array.from(new Set(next.preferences.hints.dismissed.concat(dismissHint.dataset.dismissHint))); }, { reason: "dismiss-hint" }); renderHeader(); }
-      if (event.target.closest("[data-dismiss-release]")) { storage.mutate(function (next) { next.ui.seenReleaseVersion = config.releases[0].version; }, { reason: "release-seen" }); renderHeader(); }
+      if (event.target.closest("[data-dismiss-release]")) dismissWhatsNew();
       if (event.target.closest("[data-open-releases]")) openSupport("releases", event.target.closest("[data-open-releases]"));
       const safeLink = event.target.closest("[data-open-url]");
       if (safeLink && !u.safeExternalOpen(safeLink.dataset.openUrl)) components.toast("That external address is not allowed.", { title: "Link unavailable", kind: "warning" });
@@ -884,8 +963,9 @@
     $("#globalSearch").addEventListener("focus", renderGlobalSearchResults);
     $("#globalSearch").addEventListener("keydown", function (event) {
       const results = $$("button[role='option']", $("#globalSearchResults"));
-      if (event.key === "ArrowDown" && results.length) { event.preventDefault(); results[0].focus(); }
-      if (event.key === "Escape") { $("#globalSearchResults").hidden = true; event.target.select(); }
+      if (event.key === "Enter") { event.preventDefault(); submitIconSearch(); }
+      else if (event.key === "ArrowDown" && results.length) { event.preventDefault(); results[0].focus(); }
+      else if (event.key === "Escape") { $("#globalSearchResults").hidden = true; event.target.select(); }
     });
     $("#globalSearchResults").addEventListener("click", function (event) { const result = event.target.closest("[data-search-type]"); if (result) activateGlobalSearchResult(result.dataset.searchType, result.dataset.searchId); });
     $("#globalSearchResults").addEventListener("keydown", function (event) {
@@ -896,9 +976,13 @@
     });
     document.addEventListener("focusin", function (event) { if (!event.target.closest(".global-search-wrap")) $("#globalSearchResults").hidden = true; });
     $("#iconLibraryGrid").addEventListener("click", function (event) {
+      const infoButton = event.target.closest("[data-icon-info]");
+      if (infoButton) { openIconInfo(infoButton.dataset.iconInfo, infoButton); return; }
       const button = event.target.closest("[data-icon-id]");
       if (button) copyIcon(button.dataset.iconId, button);
     });
+    $("#iconLibraryGrid").addEventListener("keydown", moveIconGridFocus);
+    $("#iconInfoCopyButton").addEventListener("click", function (event) { copyIcon(event.currentTarget.dataset.iconInfoCopy, event.currentTarget); });
     $("#iconSourceFilter").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.iconLibrary.source = event.target.value; }, { reason: "icon-source" });
       iconVisibleCount = ICON_PAGE_SIZE;
