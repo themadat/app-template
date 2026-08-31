@@ -85,6 +85,107 @@ function labelFor(name) {
   }).join(" ");
 }
 
+const ICON_CATEGORIES = [
+  { id: "actions", label: "Actions", terms: ["add", "plus", "minus", "copy", "duplicate", "delete", "trash", "download", "upload", "share", "export", "import", "refresh", "reload", "undo", "redo", "save", "print", "scan"] },
+  { id: "arrows", label: "Arrows", terms: ["arrow", "chevron", "caret", "direction", "forward", "backward"] },
+  { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "phone", "call", "megaphone", "bell", "notification", "mention"] },
+  { id: "commerce", label: "Commerce", terms: ["cart", "bag", "basket", "credit", "currency", "dollar", "bank", "wallet", "gift", "receipt", "tag"] },
+  { id: "devices", label: "Devices", terms: ["desktop", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "watch", "keyboard", "mouse", "printer", "display", "monitor", "television", "tv"] },
+  { id: "documents", label: "Documents", terms: ["document", "doc", "file", "folder", "page", "paper", "note", "clipboard", "book", "text", "list", "archive"] },
+  { id: "editing", label: "Editing", terms: ["pencil", "pen", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat"] },
+  { id: "food-drink", label: "Food & Drink", terms: ["cocktail", "drink", "glass", "wine", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
+  { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
+  { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "settings", "magnifyingglass", "search", "filter", "sort"] },
+  { id: "maps-travel", label: "Maps & Travel", terms: ["map", "location", "pin", "globe", "compass", "car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "travel"] },
+  { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
+  { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish"] },
+  { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
+  { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
+  { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
+  { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge"] },
+  { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
+  { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
+];
+
+const TAG_GROUPS = [
+  ["plus", "add", "create", "new"],
+  ["minus", "remove", "subtract"],
+  ["trash", "delete", "remove", "discard"],
+  ["xmark", "close", "dismiss", "cancel"],
+  ["checkmark", "check", "done", "confirm", "success"],
+  ["pencil", "edit", "write", "compose"],
+  ["gear", "settings", "preferences", "configuration", "options"],
+  ["magnifyingglass", "search", "find", "lookup", "discover"],
+  ["arrow", "navigate", "direction", "forward", "back"],
+  ["square_and_arrow_up", "share", "export", "send"],
+  ["square_and_arrow_down", "import", "download", "receive"],
+  ["document", "file", "page", "paper", "text", "notes"],
+  ["folder", "directory", "files", "collection"],
+  ["person", "user", "account", "profile", "people"],
+  ["lock", "secure", "security", "private", "privacy"],
+  ["eye", "view", "show", "visible", "visibility"],
+  ["eye_slash", "hide", "hidden", "invisible"],
+  ["info", "information", "details", "about"],
+  ["exclamation", "warning", "alert", "caution"],
+  ["question", "help", "support", "faq"],
+  ["heart", "favorite", "love", "health"],
+  ["star", "favorite", "rating", "featured"],
+  ["house", "home", "start"],
+  ["map", "location", "place", "geography", "travel"],
+  ["pin", "location", "marker", "place"],
+  ["car", "vehicle", "drive", "transport", "travel"],
+  ["airplane", "plane", "flight", "transport", "travel"],
+  ["message", "chat", "conversation", "communication"],
+  ["envelope", "mail", "email", "message"],
+  ["bell", "notification", "alert", "reminder"],
+  ["camera", "photo", "picture", "image"],
+  ["play", "media", "start", "video", "audio"],
+  ["speaker", "volume", "sound", "audio"],
+  ["microphone", "mic", "voice", "audio", "record"],
+  ["calendar", "date", "schedule", "event"],
+  ["clock", "time", "recent", "history"],
+  ["cart", "shopping", "store", "commerce", "purchase"],
+  ["credit_card", "payment", "commerce", "purchase"],
+  ["cocktail", "drink", "beverage", "bar"],
+  ["fork", "food", "restaurant", "dining"],
+  ["cloud", "weather", "online", "sync"],
+  ["bolt", "lightning", "power", "energy", "weather"]
+];
+
+function metadataKeys(values) {
+  const keys = new Set();
+  values.forEach(function (value) {
+    const normalized = normalizedName(value);
+    if (!normalized || normalized === "unnamed_icon") return;
+    keys.add(normalized);
+    keys.add(normalized.replace(/_/g, " "));
+    normalized.split("_").filter(function (part) { return part.length > 1; }).forEach(function (part) { keys.add(part); });
+  });
+  return keys;
+}
+
+function deriveMetadata(record) {
+  const keys = metadataKeys([record.name].concat(Array.from(record.aliases), record.sources.map(function (item) { return item.symbol; })));
+  const categories = ICON_CATEGORIES.filter(function (category) {
+    if (category.id === "shapes") return category.terms.some(function (term) {
+      const normalized = normalizedName(term);
+      return record.name === normalized || record.name.startsWith(normalized + "_");
+    });
+    return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
+  }).map(function (category) { return category.id; });
+  if (!categories.length) categories.push("other");
+  const tags = new Set(Array.from(keys));
+  TAG_GROUPS.forEach(function (group) {
+    if (!group.some(function (term) { return keys.has(normalizedName(term)); })) return;
+    group.forEach(function (term) { tags.add(normalizedName(term).replace(/_/g, " ")); });
+  });
+  categories.forEach(function (categoryId) {
+    const category = ICON_CATEGORIES.find(function (item) { return item.id === categoryId; });
+    tags.add(category ? category.label.toLowerCase() : "other");
+  });
+  return { categories: categories, tags: Array.from(tags).filter(Boolean).sort().slice(0, 120) };
+}
+
 function templateLiteral(value) {
   return "`" + String(value).replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${") + "`";
 }
@@ -195,12 +296,15 @@ const records = Array.from(recordsByHash.values()).map(function (record) {
     return (a.repo + a.file + a.symbol).localeCompare(b.repo + b.file + b.symbol);
   });
   const preferred = record.name;
+  const metadata = deriveMetadata(record);
   return {
     id: preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6),
     name: preferred,
     label: labelFor(preferred),
     kind: record.kinds.has("sf-symbol") ? "sf-symbol" : "custom",
     aliases: aliases,
+    categories: metadata.categories,
+    tags: metadata.tags,
     repositories: Array.from(new Set(sourcesForIcon.map(function (source) { return source.repo; }))).sort(),
     sources: sourcesForIcon,
     svg: record.svg
@@ -224,6 +328,8 @@ records.forEach(function (record) {
   lines.push("      label: " + JSON.stringify(record.label) + ",");
   lines.push("      kind: " + JSON.stringify(record.kind) + ",");
   lines.push("      aliases: " + JSON.stringify(record.aliases) + ",");
+  lines.push("      categories: " + JSON.stringify(record.categories) + ",");
+  lines.push("      tags: " + JSON.stringify(record.tags) + ",");
   lines.push("      repositories: " + JSON.stringify(record.repositories) + ",");
   lines.push("      sources: " + JSON.stringify(record.sources) + ",");
   lines.push("      svg: " + templateLiteral(record.svg));
@@ -231,7 +337,12 @@ records.forEach(function (record) {
 });
 
 lines.push("  ];");
+const exportedCategories = ICON_CATEGORIES.concat([{ id: "other", label: "Other", terms: [] }]).filter(function (category) {
+  return records.some(function (record) { return record.categories.includes(category.id); });
+}).map(function (category) { return { id: category.id, label: category.label }; });
+
 lines.push("  window.LocalApp.iconLibrary = Object.freeze({");
+lines.push("    categories: Object.freeze(" + JSON.stringify(exportedCategories) + ".map(Object.freeze)),");
 lines.push("    sourceRepositories: Object.freeze(" + JSON.stringify(contributingSources) + "),");
 lines.push("    icons: Object.freeze(ICON_LIBRARY.map(Object.freeze))");
 lines.push("  });");

@@ -28,11 +28,11 @@ Notes is one large, initially blank plain-text textarea in a native modal. It op
 
 ## Icon catalog
 
-Catalog cards deliberately show only the SVG preview, a multiline name, and the Custom or Symbol type. Selecting the card copies its complete sanitized SVG. A separate SF Symbol information button opens a native dialog with the normalized identifier, aliases, repositories, filenames, full source paths, and source-symbol names. Arrow keys, Home, and End move among visible card copy buttons.
+Catalog cards deliberately show only the SVG preview and multiline name, with Custom/Symbol at bottom left and the information button at bottom right. Selecting the card copies its complete sanitized SVG. The quick-select chip toolbar filters persistent multi-category metadata; global search matches names, aliases, categories, semantic tags, repositories, and source metadata. The information dialog shows categories, tags, normalized identifier, aliases, repositories, filenames, full paths, and source-symbol names. Arrow keys, Home, and End move among visible card copy buttons.
 
 ## Shortcut hints
 
-Controls declare `data-shortcut`. Holding Shift–Control–Option reveals badges only on enabled controls in the active page or dialog; hovering a shortcut-enabled control exposes the plain and chorded commands. Global shortcuts use physical key codes and work both directly and with the full chord held. Command-key combinations remain available to the browser. The main-page What’s New banner exposes V to view release notes and contextual X to dismiss the notice. The icon library exposes F for filters, G for the first result, I for focused-icon details, C to clear search, and L to load more. Shortcuts never replace visible buttons or native interactions.
+Controls declare `data-shortcut`. Holding Shift–Control–Option reveals badges only on enabled controls in the active page or dialog; hovering a shortcut-enabled control exposes the plain and chorded commands. Global shortcuts use physical key codes and work both directly and with the full chord held. Command-key combinations remain available to the browser. The main-page What’s New banner exposes V to view release notes and contextual X to dismiss the notice. The icon library exposes F for categories and filters, G for the first result, I for focused-icon details, C to clear search, and L to load more. Shortcuts never replace visible buttons or native interactions.
 
 ## Icon conventions
 

@@ -12,23 +12,23 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.13">
-  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.13">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.13">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.13" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.13" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.13">
-  <script defer src="assets/js/config.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/icon-library.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.13"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.13"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.14">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.14">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.14">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.14" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.14" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.14">
+  <script defer src="assets/js/config.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/icon-library.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.14"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.14"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -36,12 +36,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T | Control+Alt+Shift+T Control+Alt+Shift+|" data-shortcut="T" data-shortcut-secondary="|">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.13" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.14" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.13</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.14</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -50,7 +50,7 @@
     <div class="global-search-wrap" data-shortcut="/">
       <span class="search-icon" aria-hidden="true" data-symbol="search"></span>
       <label class="visually-hidden" for="globalSearch">Search icons and application support</label>
-      <input id="globalSearch" type="search" autocomplete="off" placeholder="Search icons" aria-haspopup="listbox" aria-controls="globalSearchResults" aria-describedby="iconSearchHelp" aria-keyshortcuts="/ Control+Alt+Shift+/">
+      <input id="globalSearch" type="search" autocomplete="off" placeholder="Search icons" aria-haspopup="listbox" aria-controls="globalSearchResults" aria-keyshortcuts="/ Control+Alt+Shift+/">
       <kbd aria-hidden="true">/</kbd>
       <div id="globalSearchResults" class="global-search-results" role="listbox" aria-label="Search results" hidden></div>
     </div>
@@ -86,17 +86,13 @@
   </aside>
 
   <main id="mainContent" tabindex="-1" aria-label="SVG icon library">
-    <section class="icon-library" aria-labelledby="iconLibraryTitle">
-      <header class="icon-library-header">
-        <div>
-          <span class="eyebrow">Reusable SVG symbols</span>
-          <h1 id="iconLibraryTitle">Icon Library</h1>
-          <p id="iconSearchHelp">Search from the app bar and press Enter to move to the matching icons. Select an icon to copy its SVG.</p>
-        </div>
-        <span id="iconLibraryCount" class="count-pill">Loading icons…</span>
-      </header>
+    <section class="icon-library" aria-label="Icon library">
       <div class="icon-library-controls" aria-label="Icon library controls">
-        <label data-shortcut="F" title="Focus icon filters"><span>Type</span><select id="iconKindFilter" aria-keyshortcuts="F Control+Alt+Shift+F"><option value="all">All types</option><option value="sf-symbol">SF Symbols</option><option value="custom">Custom</option></select></label>
+        <div class="icon-category-row">
+          <div id="iconCategoryFilters" class="icon-category-filters" role="toolbar" aria-label="Quick-select icon category"></div>
+          <span id="iconLibraryCount" class="count-pill">Loading icons…</span>
+        </div>
+        <label><span>Type</span><select id="iconKindFilter"><option value="all">All types</option><option value="sf-symbol">SF Symbols</option><option value="custom">Custom</option></select></label>
         <label><span>Source</span><select id="iconSourceFilter"><option value="all">All sources</option></select></label>
         <label><span>Sort</span><select id="iconSort"><option value="name">Name A–Z</option><option value="nameDesc">Name Z–A</option><option value="source">Source</option></select></label>
         <button id="iconClearSearch" class="button" type="button" aria-keyshortcuts="C Control+Alt+Shift+C" data-shortcut="C" hidden>Clear search</button>
@@ -105,7 +101,7 @@
       <div id="iconLibraryGrid" class="icon-library-grid" role="list" aria-label="Available SVG icons" aria-keyshortcuts="G Control+Alt+Shift+G"></div>
       <div id="iconLibraryEmpty" class="icon-library-empty" hidden>
         <strong>No icons found</strong>
-        <span>Try another name, type, or source.</span>
+        <span>Try another search, category, type, or source.</span>
       </div>
       <div class="icon-library-more"><button id="iconLoadMore" class="button" type="button" aria-keyshortcuts="L Control+Alt+Shift+L" data-shortcut="L" hidden>Show more icons</button></div>
     </section>
@@ -129,6 +125,8 @@
         <dl class="icon-info-facts">
           <div><dt>Identifier</dt><dd><code id="iconInfoIdentifier"></code></dd></div>
           <div id="iconInfoAliasesRow"><dt>Aliases</dt><dd id="iconInfoAliases"></dd></div>
+          <div><dt>Categories</dt><dd id="iconInfoCategories"></dd></div>
+          <div><dt>Search tags</dt><dd id="iconInfoTags"></dd></div>
         </dl>
         <section class="icon-info-sources" aria-labelledby="iconInfoSourcesTitle">
           <div class="section-heading"><div><span class="eyebrow">Origin</span><h3 id="iconInfoSourcesTitle">Sources</h3></div><span id="iconInfoSourceCount" class="count-pill"></span></div>
@@ -224,7 +222,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.13</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.14</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>

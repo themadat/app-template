@@ -12,9 +12,12 @@
   const sync = App.sync;
   const pwa = App.pwa;
   const iconCatalog = App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : [];
+  const iconCategories = App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : [];
+  const iconCategoryById = new Map(iconCategories.map(function (category) { return [category.id, category]; }));
   const iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
   const iconSearchIndex = new Map(iconCatalog.map(function (icon) {
-    return [icon.id, [icon.label, icon.name, icon.kind === "sf-symbol" ? "sf symbol sf symbols" : "custom"].concat(icon.aliases || [], icon.repositories || [], (icon.sources || []).map(function (source) { return source.symbol + " " + source.file; })).join(" ").toLowerCase()];
+    const categoryLabels = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; });
+    return [icon.id, [icon.label, icon.name, icon.kind === "sf-symbol" ? "sf symbol sf symbols" : "custom"].concat(icon.aliases || [], icon.tags || [], icon.categories || [], categoryLabels, icon.repositories || [], (icon.sources || []).map(function (item) { return item.symbol + " " + item.file; })).join(" ").toLowerCase()];
   }));
   const ICON_PAGE_SIZE = 120;
   let versionView = "released";
@@ -31,7 +34,7 @@
   const SHORTCUTS = [
     { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
     { keys: "Enter", label: "Show icon search results below", group: "Icon Library", chord: false },
-    { keys: "F", hintKey: "F", chordKey: "F", label: "Focus icon filters", group: "Icon Library" },
+    { keys: "F", hintKey: "F", chordKey: "F", label: "Focus icon categories and filters", group: "Icon Library" },
     { keys: "G", hintKey: "G", chordKey: "G", label: "Focus the first visible icon", group: "Icon Library" },
     { keys: "I", hintKey: "I", chordKey: "I", label: "Show details for the focused icon", group: "Icon Library" },
     { keys: "C", hintKey: "C", chordKey: "C", label: "Clear the icon search", group: "Icon Library" },
@@ -224,17 +227,29 @@
   function iconKindLabel(value) { return value === "sf-symbol" ? "Symbol" : "Custom"; }
 
   function iconMatches(icon, needle) {
-    return !needle || (iconSearchIndex.get(icon.id) || "").includes(needle);
+    if (!needle) return true;
+    const searchable = iconSearchIndex.get(icon.id) || "";
+    return needle.split(/\s+/).filter(Boolean).every(function (term) { return searchable.includes(term); });
   }
 
-  function filteredIcons() {
+  function selectedIconCategory() {
+    const category = state().modules.iconLibrary.category;
+    return iconCategoryById.has(category) ? category : "all";
+  }
+
+  function filteredIcons(options) {
+    const settings = options || {};
     const moduleState = state().modules.iconLibrary;
     const availableSources = new Set(App.iconLibrary && App.iconLibrary.sourceRepositories || []);
-    const source = availableSources.has(moduleState.source) ? moduleState.source : "all";
+    const sourceFilter = availableSources.has(moduleState.source) ? moduleState.source : "all";
     const kind = ["sf-symbol", "custom"].includes(moduleState.kind) ? moduleState.kind : "all";
+    const category = settings.ignoreCategory ? "all" : selectedIconCategory();
     const needle = String(state().ui.search || "").trim().toLowerCase();
     const filtered = iconCatalog.filter(function (icon) {
-      return (kind === "all" || icon.kind === kind) && (source === "all" || icon.repositories.includes(source)) && iconMatches(icon, needle);
+      return (kind === "all" || icon.kind === kind)
+        && (sourceFilter === "all" || icon.repositories.includes(sourceFilter))
+        && (category === "all" || (icon.categories || []).includes(category))
+        && iconMatches(icon, needle);
     });
     filtered.sort(function (a, b) {
       if (moduleState.sortBy === "nameDesc") return b.label.localeCompare(a.label, undefined, { numeric: true });
@@ -247,6 +262,25 @@
     return filtered;
   }
 
+  function renderIconCategories(baseMatches) {
+    const container = $("#iconCategoryFilters");
+    if (!container) return;
+    const selected = selectedIconCategory();
+    const counts = new Map(iconCategories.map(function (category) { return [category.id, 0]; }));
+    baseMatches.forEach(function (icon) {
+      (icon.categories || []).forEach(function (categoryId) { counts.set(categoryId, (counts.get(categoryId) || 0) + 1); });
+    });
+    const choices = [{ id: "all", label: "All", count: baseMatches.length }].concat(iconCategories.map(function (category) {
+      return { id: category.id, label: category.label, count: counts.get(category.id) || 0 };
+    }));
+    container.innerHTML = choices.map(function (choice) {
+      const active = choice.id === selected;
+      const disabled = choice.count === 0 && !active;
+      return '<button class="icon-category-chip" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(choice.label + ", " + choice.count + " icons") + '"' + (disabled ? ' disabled' : '') + (active ? ' aria-keyshortcuts="F Control+Alt+Shift+F" data-shortcut="F"' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
+    }).join("");
+    decorateShortcutControls(container);
+  }
+
   function sourceFileName(value) {
     const parts = String(value || "").split(/[\\/]/);
     return parts[parts.length - 1] || "Unknown file";
@@ -256,7 +290,7 @@
     const typeText = iconKindLabel(icon.kind);
     const label = u.escapeHtml(icon.label);
     const id = u.escapeHtml(icon.id);
-    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + label + '</strong><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div>';
+    return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + label + '</strong><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
   function openIconInfo(iconId, trigger) {
@@ -270,6 +304,8 @@
     $("#iconInfoIdentifier").textContent = icon.name || "—";
     $("#iconInfoAliases").textContent = aliases.join(", ");
     $("#iconInfoAliasesRow").hidden = aliases.length === 0;
+    $("#iconInfoCategories").textContent = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; }).join(", ") || "Other";
+    $("#iconInfoTags").textContent = (icon.tags || []).join(", ") || "No additional tags";
     $("#iconInfoPreview").innerHTML = icon.svg;
     $("#iconInfoSourceCount").textContent = sources.length + (sources.length === 1 ? " source" : " sources");
     $("#iconInfoSources").innerHTML = sources.length ? sources.map(function (source) {
@@ -337,6 +373,8 @@
     setInputValue(sourceSelect, selectedSource);
     setInputValue($("#iconKindFilter"), state().modules.iconLibrary.kind);
     setInputValue($("#iconSort"), state().modules.iconLibrary.sortBy);
+    const baseMatches = filteredIcons({ ignoreCategory: true });
+    renderIconCategories(baseMatches);
     const matches = filteredIcons();
     const shown = matches.slice(0, iconVisibleCount);
     grid.innerHTML = shown.map(iconCard).join("");
@@ -346,7 +384,9 @@
     $("#iconLoadMore").hidden = shown.length >= matches.length;
     $("#iconClearSearch").hidden = !state().ui.search;
     $("#iconLibraryCount").textContent = matches.length === iconCatalog.length ? iconCatalog.length + " icons" : matches.length + " of " + iconCatalog.length;
-    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons." : " icons.") : "No icons match the current search and filters.";
+    const category = iconCategoryById.get(selectedIconCategory());
+    const scope = category ? " in " + category.label : "";
+    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons" : " icons") + scope + "." : "No icons match the current search, category, and filters.";
   }
 
   function writeClipboard(text) {
@@ -428,7 +468,7 @@
 
   function activateGlobalSearchResult(type, id) {
     if (type === "icon") {
-      if (state().modules.iconLibrary.source !== "all" || state().modules.iconLibrary.kind !== "all") storage.mutate(function (next) { next.modules.iconLibrary.source = "all"; next.modules.iconLibrary.kind = "all"; }, { reason: "icon-filters" });
+      if (state().modules.iconLibrary.source !== "all" || state().modules.iconLibrary.kind !== "all" || state().modules.iconLibrary.category !== "all") storage.mutate(function (next) { next.modules.iconLibrary.source = "all"; next.modules.iconLibrary.kind = "all"; next.modules.iconLibrary.category = "all"; }, { reason: "icon-filters" });
       iconVisibleCount = ICON_PAGE_SIZE;
       renderIconLibrary();
       requestAnimationFrame(function () {
@@ -912,7 +952,7 @@
     else if (event.code === "Comma") runShortcut(event, function () { openSupport("settings", event.target); });
     else if (event.code === "Digit2" && activeModuleEnabled("roadmap")) runShortcut(event, function () { openSupport("roadmap", event.target); });
     else if (event.code === "KeyN") runShortcut(event, function () { openNotes(event.target); });
-    else if (event.code === "KeyF" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconKindFilter").focus(); });
+    else if (event.code === "KeyF" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("[data-icon-category][aria-pressed='true']")?.focus(); });
     else if (event.code === "KeyG" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, focusFirstIcon);
     else if (event.code === "KeyI" && iconPageActive && focusedIconId && shortcutModifiersAllowed(event)) runShortcut(event, function () { openIconInfo(focusedIconId, document.activeElement); });
     else if (event.code === "KeyC" && iconPageActive && !$("#iconClearSearch").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconClearSearch").click(); });
@@ -982,6 +1022,27 @@
       if (button) copyIcon(button.dataset.iconId, button);
     });
     $("#iconLibraryGrid").addEventListener("keydown", moveIconGridFocus);
+    $("#iconCategoryFilters").addEventListener("click", function (event) {
+      const button = event.target.closest("[data-icon-category]");
+      if (!button || button.disabled) return;
+      storage.mutate(function (next) { next.modules.iconLibrary.category = button.dataset.iconCategory; }, { reason: "icon-category" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+      requestAnimationFrame(function () { $("[data-icon-category][aria-pressed='true']")?.focus({ preventScroll: true }); });
+    });
+    $("#iconCategoryFilters").addEventListener("keydown", function (event) {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      const buttons = $$("[data-icon-category]:not(:disabled)", event.currentTarget);
+      const current = event.target.closest("[data-icon-category]");
+      const index = buttons.indexOf(current);
+      if (index < 0 || !buttons.length) return;
+      let next = index + (event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0);
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = buttons.length - 1;
+      next = (next + buttons.length) % buttons.length;
+      event.preventDefault();
+      buttons[next].focus();
+    });
     $("#iconInfoCopyButton").addEventListener("click", function (event) { copyIcon(event.currentTarget.dataset.iconInfoCopy, event.currentTarget); });
     $("#iconSourceFilter").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.iconLibrary.source = event.target.value; }, { reason: "icon-source" });

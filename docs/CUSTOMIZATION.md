@@ -13,9 +13,9 @@ Change `identity` in `assets/js/config.js`, then mirror user-visible fallback me
 
 ## Update the icon catalog
 
-Edit SVG template literals or standalone SVG files in their source apps, then run `node build/compile-icon-library.mjs` from this repository. The default scan discovers every non-hidden sibling directory beside `app-template`, including `mctree-mchome`; pass explicit directories as command arguments to use a narrower group. Commit the regenerated `assets/js/icon-library.js`; consumers do not need Node or a build step.
+Edit SVG template literals or standalone SVG files in their source apps, then run `node build/compile-icon-library.mjs` from this repository. The default scan discovers every non-hidden sibling directory beside `app-template`, including `mctree-mchome`; pass explicit directories as command arguments to use a narrower group. Commit the regenerated `assets/js/icon-library.js`; it contains the SVGs, multi-category assignments, semantic tags, aliases, and source metadata, so every app copied from the template retains the complete catalog without Node or a runtime build.
 
-The compiler accepts every complete SVG template literal ending with `</svg>` and a closing backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files up to 256 KB. It removes XML wrappers, rejects scripts, event handlers, foreign objects, JavaScript or external URLs, and dynamic template fragments, then deduplicates normalized artwork and labels it as SF Symbol or Custom.
+The compiler accepts every complete SVG template literal ending with `</svg>` and a closing backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files up to 256 KB. It removes XML wrappers, rejects scripts, event handlers, foreign objects, JavaScript or external URLs, and dynamic template fragments, then deduplicates normalized artwork, labels it as SF Symbol or Custom, assigns every icon to one or more quick-select categories, and expands common concepts such as delete/trash or settings/gear into searchable tags. Edit `ICON_CATEGORIES` and `TAG_GROUPS` in the compiler when a new app needs additional neutral taxonomy.
 
 ## Themes
 
