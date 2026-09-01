@@ -6,7 +6,7 @@ The application is a static page with ordered scripts and no module loader:
 
 1. `config.js` defines identity, feature flags, themes, help, releases, and demonstration Roadmap content.
 2. `icons.js` provides the small SF Symbol set used by the application shell.
-3. `icon-library.js` is the committed generated catalog of sanitized, deduplicated SVG symbols, categories, semantic tags, aliases, and source metadata.
+3. `icon-library.js` is the committed generated catalog of sanitized, deduplicated SVG symbols, categories, semantic tags, aliases, and source metadata; `build/icon-library-overrides.json` supplies permanent display-name and group overrides.
 4. `core/utils.js` provides escaping, sanitization, URL/color validation, ids, dates, and hashing.
 5. `core/state.js` owns defaults, normalization, migrations, validation, export envelopes, sync payloads, and collection merging.
 6. `core/storage.js` loads and autosaves browser state, stores the optional token separately, and manages one recovery copy.
@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules guarantee that SVG Converter’s `server:drive`, `shapes`, and `sparkles` collections remain in Cloud/Server, Shapes, and Sparkled after deduplication; name metadata adds Badged, Squared, Circled, Slashed, and Sparkled, while Plus, Minus, Checkmark, and Xmark are nested beneath Badged. The UI renders 120 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules guarantee that SVG Converter’s `server:drive`, `shapes`, `sparkles`, and `weather` collections remain in Cloud/Server, Shapes, Sparkled, and Weather after deduplication; name metadata adds Badged, Squared, Circled, Slashed, and Sparkled, while Plus, Minus, Checkmark, and Xmark are nested beneath Badged. Stable icon IDs let the compiler apply validated display-name and category changes from `build/icon-library-overrides.json` after deduplication. The UI renders 120 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.18",
-    "buildId": "0.0.1.18",
+    "appVersion": "0.0.1.19",
+    "buildId": "0.0.1.19",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -63,13 +63,15 @@ The current model is version 4:
     "supportTab": "settings"
   },
   "modules": {
-    "iconLibrary": { "category": "all", "kind": "all", "source": "all", "sidebarWidth": 204 },
+    "iconLibrary": { "category": "all", "kind": "all", "source": "all", "sidebarWidth": 204, "overrides": [] },
     "documents": {},
     "roadmap": {},
     "cloudSync": {}
   }
 }
 ```
+
+Icon-library overrides are normalized to stable icon ID, sanitized display name, and recognized category IDs. They are user-managed content: backup and sync include them, Reset Preferences preserves them, and Erase All removes them.
 
 The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. Fresh Notes are blank, and normalization removes the exact former demonstration sentence while preserving all other user text. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 
@@ -97,7 +99,7 @@ Merging chooses the newer note for each stable id, honors newer deletion tombsto
 
 ## Accessibility and responsive behavior
 
-The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. The icon catalog is an announced list of native copy buttons; its quick-select categories are native pressed buttons with labeled nested groups in a vertical filter rail, the resizable divider is an operable ARIA separator, and search results can move focus to the corresponding card. Copy success and errors use live toast messaging. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
+The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. The icon catalog is an announced list of native copy buttons; its quick-select categories are native pressed buttons with labeled nested groups in a vertical filter rail, the resizable divider is an operable ARIA separator, and search results can move focus to the corresponding card. The native metadata editor labels every group checkbox, manages badge parent/subgroup membership, validates the display name, and uses a custom confirmation before resetting an icon. Copy and save results use live toast messaging. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
 
 Notes uses one spacious modal on desktop and a full-screen editor on mobile. Settings also becomes a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
 

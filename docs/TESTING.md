@@ -11,9 +11,9 @@
 ## Desktop
 
 - [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
-- [ ] The full-width catalog reports 1,625 unique icons, renders shorter responsive cards with preview/name plus bottom-corner type/compact-info controls, wraps long names, keeps persistent category chips plus type/source controls in the compact vertical left rail, remains alphabetically ordered, and progressively reveals large result sets.
+- [ ] The full-width catalog reports 1,777 unique icons, renders shorter responsive cards with preview/name plus bottom-corner type/compact-info controls, wraps long names, keeps persistent category chips plus type/source controls in the compact vertical left rail, remains alphabetically ordered, and progressively reveals large result sets.
 - [ ] `/` focuses global search; Enter closes suggestions and moves to matching cards below; suggestion results still focus their corresponding copy button or route to Notes, Help, releases, and the Settings Roadmap.
-- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, all 65 `app-input/server:drive/` SVGs appear under Cloud/Server, all 110 `app-input/shapes/` SVGs appear under Shapes, and all 26 `app-input/sparkles/` SVGs appear under Sparkled; Badged exposes nested Plus, Minus, Checkmark, and Xmark counts without including unrelated action icons; name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
+- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, all 65 `app-input/server:drive/` SVGs appear under Cloud/Server, all 110 `app-input/shapes/` SVGs appear under Shapes, all 26 `app-input/sparkles/` SVGs appear under Sparkled, and all 173 `app-input/weather/` SVGs appear under Weather; Badged exposes nested Plus, Minus, Checkmark, and Xmark counts without including unrelated action icons; name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; Edit name & groups validates renames, adds/removes multiple groups, keeps badge subgroups hierarchical, resets one icon through custom confirmation, and downloads every saved override in compiler-ready JSON; focus returns to the opener when the dialog closes.
 - [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
@@ -26,7 +26,7 @@
 - [ ] At representative 768px and 390px widths, document and body scroll widths do not exceed the viewport; the rail remains vertical at tablet width and becomes a compact top filter surface on mobile.
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
 - [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
-- [ ] Icon details fills the mobile viewport, wraps long file paths, and keeps its single content panel scrollable.
+- [ ] Icon details and metadata editing fill the mobile viewport, wrap long content, keep one scrollable content panel, and present touch-sized group checkboxes and footer actions.
 - [ ] Settings fills the screen and uses one scrolling content surface.
 - [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
@@ -43,9 +43,9 @@
 
 ## Persistence, import, and migration
 
-- [ ] Icon category/type/source settings and filter-rail width, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
-- [ ] Reset Preferences preserves notes; Erase All removes content, preferences, token, and recovery data only after custom confirmation.
-- [ ] Export contains state-model version, notes, preferences, and module settings, but never the GitHub token.
+- [ ] Icon category/type/source settings, filter-rail width, icon name/group overrides, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
+- [ ] Reset Preferences preserves notes and icon metadata overrides; Erase All removes content, overrides, preferences, token, and recovery data only after custom confirmation.
+- [ ] Backup export contains state-model version, notes, preferences, icon metadata overrides, and module settings, but never the GitHub token; icon-update export contains only stable icon IDs, names, and group IDs.
 - [ ] A malformed or oversized import is rejected without replacing current data.
 - [ ] A valid import shows its preview, migrates and sanitizes, confirms replacement, and preserves a recovery copy.
 - [ ] `docs/examples/legacy-backup-v1.json` and `legacy-backup-v2.json` migrate without losing their user content.

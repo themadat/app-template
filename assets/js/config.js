@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.18",
-      buildId: "0.0.1.18",
+      version: "0.0.1.19",
+      buildId: "0.0.1.19",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -54,7 +54,8 @@
       maxRecords: 5000,
       maxDocuments: 500,
       maxTextLength: 20000,
-      maxDocumentHtmlLength: 250000
+      maxDocumentHtmlLength: 250000,
+      maxIconOverrides: 5000
     },
 
     statuses: [
@@ -72,6 +73,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.19",
+        date: "2026-09-01T18:34:26.000Z",
+        title: "Edit icon metadata and add Weather",
+        summary: "Icons can now be renamed and moved among groups locally, exported as compiler-ready updates, and browsed with the complete Weather source collection.",
+        features: ["An accessible icon metadata editor for display names and multi-group membership", "A downloadable update JSON that the catalog compiler consumes for permanent changes", "All 173 SVGs from SVG Converter’s weather source folder"],
+        improvements: ["Icon edits persist through reload, JSON backup, and GitHub Sync while Reset Preferences preserves them", "Source-aware Weather assignment survives icon deduplication", "The compiler reports applied and missing hardcoded overrides"],
+        fixes: ["Same-name SF Symbol merges are counted once in compiler diagnostics"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.18",
         date: "2026-09-01T14:59:12.000Z",

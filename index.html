@@ -12,23 +12,23 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.18">
-  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.18">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.18">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.18" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.18" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.18">
-  <script defer src="assets/js/config.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/icon-library.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.18"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.18"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.19">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.19">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.19">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.19" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.19" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.19">
+  <script defer src="assets/js/config.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/icon-library.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.19"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.19"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -36,12 +36,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T | Control+Alt+Shift+T Control+Alt+Shift+|" data-shortcut="T" data-shortcut-secondary="|">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.18" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.19" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.18</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.19</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -137,8 +137,30 @@
           <ul id="iconInfoSources" class="icon-source-list"></ul>
         </section>
       </div>
-      <footer class="dialog-footer"><button id="iconInfoCopyButton" class="button primary" type="button"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></button></footer>
+      <footer class="dialog-footer"><button id="iconInfoEditButton" class="button" type="button"><span aria-hidden="true" data-symbol="support"></span><span>Edit name &amp; groups</span></button><button id="iconInfoCopyButton" class="button primary" type="button"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></button></footer>
     </div>
+  </dialog>
+
+  <dialog id="iconEditDialog" class="app-dialog icon-edit-dialog" aria-labelledby="iconEditDialogTitle">
+    <form id="iconEditForm" class="dialog-shell" novalidate>
+      <header class="dialog-header"><div><span class="eyebrow">Icon metadata</span><h2 id="iconEditDialogTitle">Edit icon</h2></div><button type="button" class="icon-button" data-close-dialog="iconEditDialog" aria-label="Close icon editor"><span aria-hidden="true" data-symbol="close"></span></button></header>
+      <div class="dialog-body icon-edit-body">
+        <div class="icon-edit-hero">
+          <div id="iconEditPreview" class="icon-edit-preview" aria-hidden="true"></div>
+          <div><span id="iconEditType" class="count-pill"></span><p>Rename this icon and choose every quick-select group where it belongs.</p></div>
+        </div>
+        <label class="icon-edit-name" for="iconEditLabel"><span>Display name</span><input id="iconEditLabel" type="text" maxlength="120" autocomplete="off" required aria-describedby="iconEditValidation"></label>
+        <fieldset class="icon-edit-fieldset">
+          <legend>Groups</legend>
+          <p>Select any number of groups. Choosing a badge subtype also chooses Badged.</p>
+          <div id="iconEditGroups" class="icon-edit-groups"></div>
+          <small id="iconEditGroupCount" class="icon-edit-group-count"></small>
+        </fieldset>
+        <p id="iconEditValidation" class="inline-status warning" role="alert" hidden></p>
+        <p class="icon-edit-note">Changes save locally and are included in app backup and GitHub sync data. Download the update file to feed the changes back into this repository permanently.</p>
+      </div>
+      <footer class="dialog-footer icon-edit-footer"><button id="iconEditResetButton" class="button danger-text" type="button"><span aria-hidden="true" data-symbol="arrowClockwise"></span><span>Reset icon</span></button><span class="dialog-footer-spacer"></span><button id="iconEditExportButton" class="button" type="button"><span aria-hidden="true" data-symbol="down"></span><span>Download updates</span></button><button class="button primary" type="submit"><span aria-hidden="true" data-symbol="check"></span><span>Save changes</span></button></footer>
+    </form>
   </dialog>
 
   <dialog id="notesDialog" class="app-dialog notes-dialog" aria-labelledby="notesDialogTitle">
@@ -226,7 +248,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.18</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.19</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>

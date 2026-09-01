@@ -6,6 +6,22 @@
   const u = App.utils;
   const STATUS_IDS = new Set(config.statuses.map(function (status) { return status.id; }));
   const MODULE_IDS = ["roadmap"];
+  const ICON_CATEGORY_IDS = new Set((App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : []).map(function (category) { return category.id; }));
+
+  function normalizeIconOverrides(value) {
+    const overrides = new Map();
+    (Array.isArray(value) ? value : []).slice(0, config.controls.maxIconOverrides).forEach(function (item) {
+      const source = u.plainObject(item);
+      const iconId = u.cleanLine(source.iconId, 160);
+      const label = u.cleanLine(source.label, 120);
+      if (!iconId || !label) return;
+      const categories = Array.from(new Set((Array.isArray(source.categories) ? source.categories : []).map(function (categoryId) {
+        return u.cleanLine(categoryId, 80);
+      }).filter(function (categoryId) { return ICON_CATEGORY_IDS.has(categoryId); })));
+      overrides.set(iconId, { iconId: iconId, label: label, categories: categories });
+    });
+    return Array.from(overrides.values()).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
+  }
 
   function demoRecords(now) {
     return [];
@@ -102,7 +118,7 @@
         supportTab: "settings"
       },
       modules: {
-        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204 },
+        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204, overrides: [] },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -450,7 +466,8 @@
           category: u.cleanLine(sourceIconLibrary.category || "all", 80) || "all",
           kind: ["all", "sf-symbol", "custom"].includes(sourceIconLibrary.kind) ? sourceIconLibrary.kind : "all",
           source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
-          sidebarWidth: u.clamp(sourceIconLibrary.sidebarWidth, 156, 360, base.modules.iconLibrary.sidebarWidth)
+          sidebarWidth: u.clamp(sourceIconLibrary.sidebarWidth, 156, 360, base.modules.iconLibrary.sidebarWidth),
+          overrides: normalizeIconOverrides(sourceIconLibrary.overrides)
         },
         records: Object.assign({}, base.modules.records, u.plainObject(sourceModules.records)),
         documents: { enabled: config.features.documents && u.plainObject(sourceModules.documents).enabled !== false },
@@ -519,7 +536,9 @@
     next.ui.navigation = defaults.ui.navigation;
     next.ui.dismissedHints = [];
     next.ui.supportTab = "settings";
+    const iconOverrides = u.clone(next.modules.iconLibrary.overrides || []);
     next.modules.iconLibrary = defaults.modules.iconLibrary;
+    next.modules.iconLibrary.overrides = iconOverrides;
     next.modules.roadmap = defaults.modules.roadmap;
     next.modules.cloudSync.advancedOpen = false;
     return normalize(touch(next));

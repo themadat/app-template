@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceParent = path.dirname(projectRoot);
 const outputFile = path.join(projectRoot, "assets/js/icon-library.js");
+const overrideFile = path.join(projectRoot, "build/icon-library-overrides.json");
 const requestedRoots = process.argv.slice(2);
 
 function discoverDefaultSources() {
@@ -123,6 +124,36 @@ const ICON_CATEGORIES = [
   { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
 ];
 
+function loadIconOverrides() {
+  if (!fs.existsSync(overrideFile)) return [];
+  let parsed;
+  try {
+    parsed = JSON.parse(fs.readFileSync(overrideFile, "utf8"));
+  } catch (error) {
+    throw new Error("Could not parse " + path.relative(projectRoot, overrideFile) + ": " + error.message);
+  }
+  if (!parsed || parsed.format !== "app-template-icon-library-overrides" || parsed.formatVersion !== 1 || !Array.isArray(parsed.overrides)) {
+    throw new Error("The icon override file has an unsupported format.");
+  }
+  const categoryIds = new Set(ICON_CATEGORIES.map(function (category) { return category.id; }).concat(["other"]));
+  const seen = new Set();
+  return parsed.overrides.map(function (item, index) {
+    const source = item && typeof item === "object" && !Array.isArray(item) ? item : {};
+    const iconId = String(source.iconId || "").trim().slice(0, 160);
+    const label = String(source.label || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    if (!iconId || !label || !Array.isArray(source.categories)) throw new Error("Invalid icon override at position " + (index + 1) + ".");
+    if (seen.has(iconId)) throw new Error("Duplicate icon override for " + iconId + ".");
+    seen.add(iconId);
+    return {
+      iconId: iconId,
+      label: label,
+      categories: Array.from(new Set(source.categories.map(function (categoryId) {
+        return String(categoryId || "").trim();
+      }).filter(function (categoryId) { return categoryIds.has(categoryId); })))
+    };
+  });
+}
+
 const TAG_GROUPS = [
   ["plus", "add", "create", "new"],
   ["minus", "remove", "subtract"],
@@ -204,6 +235,10 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/sparkles\//i.test(source.file);
   });
   if (isSparklesSource && !categories.includes("sparkled")) categories.push("sparkled");
+  const isWeatherSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/weather\//i.test(source.file);
+  });
+  if (isWeatherSource && !categories.includes("weather")) categories.push("weather");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {
@@ -369,7 +404,19 @@ const records = Array.from(iconRecords).map(function (record) {
     sources: sourcesForIcon,
     svg: record.svg
   };
-}).sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }) || a.id.localeCompare(b.id); });
+});
+
+const hardcodedOverrides = loadIconOverrides();
+const recordById = new Map(records.map(function (record) { return [record.id, record]; }));
+let overridesApplied = 0;
+hardcodedOverrides.forEach(function (override) {
+  const record = recordById.get(override.iconId);
+  if (!record) return;
+  record.label = override.label;
+  record.categories = override.categories;
+  overridesApplied += 1;
+});
+records.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }) || a.id.localeCompare(b.id); });
 
 const contributingSources = Array.from(new Set(records.flatMap(function (record) { return record.repositories; }))).sort();
 const lines = [
@@ -427,6 +474,8 @@ process.stdout.write(JSON.stringify({
   skippedOversized: stats.skippedOversized,
   skippedGenerated: stats.skippedGenerated,
   mergedBySfName: stats.mergedBySfName,
+  overridesApplied: overridesApplied,
+  overridesMissing: hardcodedOverrides.length - overridesApplied,
   scannedSources: sources.filter(function (source) { return fs.existsSync(source.root); }).map(function (source) { return source.name; }),
   contributingSources: contributingSources
 }, null, 2) + "\n");

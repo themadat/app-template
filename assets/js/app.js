@@ -11,14 +11,13 @@
   const portability = App.portability;
   const sync = App.sync;
   const pwa = App.pwa;
-  const iconCatalog = App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : [];
+  const sourceIconCatalog = App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : [];
   const iconCategories = App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : [];
   const iconCategoryById = new Map(iconCategories.map(function (category) { return [category.id, category]; }));
-  const iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
-  const iconSearchIndex = new Map(iconCatalog.map(function (icon) {
-    const categoryLabels = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; });
-    return [icon.id, [icon.label, icon.name, icon.kind === "sf-symbol" ? "sf symbol sf symbols" : "custom"].concat(icon.aliases || [], icon.tags || [], icon.categories || [], categoryLabels, icon.repositories || [], (icon.sources || []).map(function (item) { return item.symbol + " " + item.file; })).join(" ").toLowerCase()];
-  }));
+  const sourceIconById = new Map(sourceIconCatalog.map(function (icon) { return [icon.id, icon]; }));
+  let iconCatalog = sourceIconCatalog;
+  let iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
+  let iconSearchIndex = new Map();
   const ICON_PAGE_SIZE = 120;
   const ICON_FILTER_MIN_WIDTH = 156;
   const ICON_FILTER_MAX_WIDTH = 360;
@@ -28,6 +27,7 @@
   let appIconHoldHandled = false;
   let iconVisibleCount = ICON_PAGE_SIZE;
   let copiedIconTimer = 0;
+  let iconInfoTrigger = null;
 
   const $ = function (selector, root) { return (root || document).querySelector(selector); };
   const $$ = function (selector, root) { return Array.from((root || document).querySelectorAll(selector)); };
@@ -58,6 +58,26 @@
 
   function state() {
     return storage.getState();
+  }
+
+  function buildIconSearchIndex(catalog) {
+    return new Map(catalog.map(function (icon) {
+      const categoryLabels = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; });
+      return [icon.id, [icon.label, icon.name, icon.kind === "sf-symbol" ? "sf symbol sf symbols" : "custom"].concat(icon.aliases || [], icon.tags || [], icon.categories || [], categoryLabels, icon.repositories || [], (icon.sources || []).map(function (item) { return item.symbol + " " + item.file; })).join(" ").toLowerCase()];
+    }));
+  }
+
+  function refreshIconCatalog() {
+    const overrides = state().modules.iconLibrary.overrides || [];
+    const overrideById = new Map(overrides.map(function (override) { return [override.iconId, override]; }));
+    iconCatalog = sourceIconCatalog.map(function (icon) {
+      const override = overrideById.get(icon.id);
+      return override ? Object.assign({}, icon, { label: override.label, categories: override.categories.slice() }) : icon;
+    }).sort(function (a, b) {
+      return a.label.localeCompare(b.label, undefined, { numeric: true }) || a.id.localeCompare(b.id);
+    });
+    iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
+    iconSearchIndex = buildIconSearchIndex(iconCatalog);
   }
 
   function setInputValue(input, value) {
@@ -299,9 +319,13 @@
     return '<div class="icon-card-item" role="listitem"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><strong class="icon-card-name">' + label + '</strong><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
-  function openIconInfo(iconId, trigger) {
+  function iconOverrideFor(iconId) {
+    return (state().modules.iconLibrary.overrides || []).find(function (override) { return override.iconId === iconId; }) || null;
+  }
+
+  function renderIconInfo(iconId) {
     const icon = iconById.get(iconId);
-    if (!icon) return;
+    if (!icon) return null;
     const aliases = Array.isArray(icon.aliases) ? icon.aliases.filter(Boolean) : [];
     const sources = Array.isArray(icon.sources) ? icon.sources : [];
     $("#iconInfoDialogTitle").textContent = icon.label;
@@ -310,7 +334,7 @@
     $("#iconInfoIdentifier").textContent = icon.name || "—";
     $("#iconInfoAliases").textContent = aliases.join(", ");
     $("#iconInfoAliasesRow").hidden = aliases.length === 0;
-    $("#iconInfoCategories").textContent = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; }).join(", ") || "Other";
+    $("#iconInfoCategories").textContent = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; }).join(", ") || "No groups";
     $("#iconInfoTags").textContent = (icon.tags || []).join(", ") || "No additional tags";
     $("#iconInfoPreview").innerHTML = icon.svg;
     $("#iconInfoSourceCount").textContent = sources.length + (sources.length === 1 ? " source" : " sources");
@@ -319,11 +343,166 @@
       const symbol = String(source.symbol || "");
       return '<li><div class="icon-source-heading"><strong>' + u.escapeHtml(repositoryLabel(source.repo)) + '</strong><span>' + u.escapeHtml(sourceFileName(file)) + '</span></div><dl><div><dt>File</dt><dd><code>' + u.escapeHtml(file || "Unknown file") + '</code></dd></div>' + (symbol ? '<div><dt>Source symbol</dt><dd><code>' + u.escapeHtml(symbol) + '</code></dd></div>' : "") + '</dl></li>';
     }).join("") : '<li class="icon-source-empty">No source metadata is available.</li>';
+    const editButton = $("#iconInfoEditButton");
+    editButton.dataset.iconEdit = icon.id;
+    editButton.setAttribute("aria-label", "Edit the name and groups for " + icon.label);
     const copyButton = $("#iconInfoCopyButton");
     copyButton.dataset.iconInfoCopy = icon.id;
     delete copyButton.dataset.copied;
     copyButton.querySelector("[data-icon-copy-text]").textContent = "Copy SVG";
+    return icon;
+  }
+
+  function openIconInfo(iconId, trigger) {
+    if (!renderIconInfo(iconId)) return;
+    iconInfoTrigger = trigger instanceof HTMLElement ? trigger : null;
     components.openDialog("#iconInfoDialog", { trigger: trigger, focus: "#iconInfoCopyButton" });
+  }
+
+  function iconEditChoice(category, selected) {
+    const id = u.escapeHtml(category.id);
+    return '<label class="icon-edit-group"><input type="checkbox" value="' + id + '" data-icon-edit-category' + (selected.has(category.id) ? " checked" : "") + '><span>' + u.escapeHtml(category.label) + '</span></label>';
+  }
+
+  function renderIconEditGroups(icon) {
+    const selected = new Set(icon.categories || []);
+    $("#iconEditGroups").innerHTML = iconCategories.filter(function (category) { return !category.parent; }).map(function (category) {
+      const children = iconCategories.filter(function (candidate) { return candidate.parent === category.id; });
+      return '<div class="icon-edit-group-cluster">' + iconEditChoice(category, selected) + (children.length ? '<div class="icon-edit-subgroups" role="group" aria-label="' + u.escapeHtml(category.label + " subgroups") + '">' + children.map(function (child) { return iconEditChoice(child, selected); }).join("") + '</div>' : "") + '</div>';
+    }).join("");
+    updateIconEditControls();
+  }
+
+  function updateIconEditControls() {
+    const selectedCount = $$("[data-icon-edit-category]:checked", $("#iconEditGroups")).length;
+    const overrideCount = (state().modules.iconLibrary.overrides || []).length;
+    $("#iconEditGroupCount").textContent = selectedCount + (selectedCount === 1 ? " group selected" : " groups selected") + " · " + overrideCount + (overrideCount === 1 ? " icon changed locally" : " icons changed locally");
+    const iconId = $("#iconEditForm").dataset.iconId || "";
+    $("#iconEditResetButton").disabled = !iconOverrideFor(iconId);
+    $("#iconEditExportButton").disabled = overrideCount === 0;
+  }
+
+  function populateIconEditor(iconId) {
+    const icon = iconById.get(iconId);
+    if (!icon) return false;
+    $("#iconEditForm").dataset.iconId = icon.id;
+    $("#iconEditDialogTitle").textContent = "Edit " + icon.label;
+    $("#iconEditPreview").innerHTML = icon.svg;
+    $("#iconEditType").textContent = iconKindLabel(icon.kind);
+    $("#iconEditLabel").value = icon.label;
+    $("#iconEditLabel").removeAttribute("aria-invalid");
+    $("#iconEditValidation").hidden = true;
+    renderIconEditGroups(icon);
+    return true;
+  }
+
+  function openIconEditor(iconId, trigger) {
+    if (!populateIconEditor(iconId)) return;
+    components.openDialog("#iconEditDialog", { trigger: trigger, focus: "#iconEditLabel" });
+  }
+
+  function exportIconUpdates() {
+    const overrides = (state().modules.iconLibrary.overrides || []).map(function (override) {
+      return { iconId: override.iconId, label: override.label, categories: override.categories.slice() };
+    }).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
+    if (!overrides.length) {
+      components.toast("Rename an icon or change its groups before downloading an update file.", { title: "No icon updates", kind: "warning" });
+      return;
+    }
+    const generatedAt = u.isoNow();
+    const payload = {
+      format: "app-template-icon-library-overrides",
+      formatVersion: 1,
+      generatedAt: generatedAt,
+      applicationVersion: config.identity.version,
+      overrides: overrides
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2) + "\n"], { type: "application/json" });
+    const href = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = href;
+    anchor.download = "app-template-icon-updates-" + generatedAt.slice(0, 10) + "-v" + config.identity.version + ".json";
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(function () { URL.revokeObjectURL(href); }, 0);
+    components.toast(overrides.length + (overrides.length === 1 ? " icon update is" : " icon updates are") + " ready to feed back into this repository.", { title: "Update file downloaded", kind: "success" });
+  }
+
+  function sameIconCategories(a, b) {
+    const normalized = function (values) { return Array.from(new Set(values || [])).sort().join("\u0000"); };
+    return normalized(a) === normalized(b);
+  }
+
+  function saveIconEdit(event) {
+    event.preventDefault();
+    const iconId = $("#iconEditForm").dataset.iconId || "";
+    const baseIcon = sourceIconById.get(iconId);
+    if (!baseIcon) return;
+    const input = $("#iconEditLabel");
+    const label = u.cleanLine(input.value, 120);
+    const validation = $("#iconEditValidation");
+    if (!label) {
+      input.setAttribute("aria-invalid", "true");
+      validation.textContent = "Enter a display name before saving.";
+      validation.hidden = false;
+      input.focus();
+      return;
+    }
+    input.removeAttribute("aria-invalid");
+    validation.hidden = true;
+    const selected = new Set($$("[data-icon-edit-category]:checked", $("#iconEditGroups")).map(function (checkbox) { return checkbox.value; }).filter(function (categoryId) {
+      return iconCategoryById.has(categoryId);
+    }));
+    Array.from(selected).forEach(function (categoryId) {
+      const parent = iconCategoryById.get(categoryId)?.parent;
+      if (parent) selected.add(parent);
+    });
+    const categories = iconCategories.map(function (category) { return category.id; }).filter(function (categoryId) { return selected.has(categoryId); });
+    const changed = label !== baseIcon.label || !sameIconCategories(categories, baseIcon.categories || []);
+    storage.mutate(function (next) {
+      const overrides = (next.modules.iconLibrary.overrides || []).filter(function (override) { return override.iconId !== iconId; });
+      if (changed) overrides.push({ iconId: iconId, label: label, categories: categories });
+      overrides.sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
+      next.modules.iconLibrary.overrides = overrides;
+    }, { reason: "icon-metadata" });
+    refreshIconCatalog();
+    renderIconLibrary();
+    renderGlobalSearchResults();
+    components.closeDialog("#iconEditDialog", "saved");
+    const overrideCount = state().modules.iconLibrary.overrides.length;
+    components.toast(changed ? label + " was saved with its selected groups." : "The compiled name and groups are already in use.", {
+      title: changed ? "Icon updated" : "Icon unchanged",
+      kind: "success",
+      actionLabel: overrideCount ? "Download updates" : "",
+      actionSymbol: overrideCount ? "down" : "",
+      onAction: overrideCount ? exportIconUpdates : null
+    });
+  }
+
+  async function resetIconEdit() {
+    const iconId = $("#iconEditForm").dataset.iconId || "";
+    if (!iconOverrideFor(iconId)) return;
+    const baseIcon = sourceIconById.get(iconId);
+    const confirmed = await components.confirm({
+      title: "Reset icon metadata?",
+      message: "Restore the compiled name and groups for " + (baseIcon ? baseIcon.label : "this icon") + "? Other icon changes will stay saved.",
+      confirmLabel: "Reset icon",
+      danger: true
+    });
+    if (!confirmed) {
+      $("#iconEditResetButton").focus();
+      return;
+    }
+    storage.mutate(function (next) {
+      next.modules.iconLibrary.overrides = (next.modules.iconLibrary.overrides || []).filter(function (override) { return override.iconId !== iconId; });
+    }, { reason: "reset-icon-metadata" });
+    refreshIconCatalog();
+    renderIconLibrary();
+    renderGlobalSearchResults();
+    populateIconEditor(iconId);
+    $("#iconEditLabel").focus();
+    components.toast("The compiled name and groups were restored.", { title: "Icon reset", kind: "success" });
   }
 
   function focusFirstIcon() {
@@ -1117,6 +1296,31 @@
       buttons[next].focus();
     });
     $("#iconInfoCopyButton").addEventListener("click", function (event) { copyIcon(event.currentTarget.dataset.iconInfoCopy, event.currentTarget); });
+    $("#iconInfoEditButton").addEventListener("click", function (event) {
+      const iconId = event.currentTarget.dataset.iconEdit;
+      components.closeDialog("#iconInfoDialog", "edit");
+      window.setTimeout(function () { openIconEditor(iconId, iconInfoTrigger || event.currentTarget); }, 0);
+    });
+    $("#iconEditForm").addEventListener("submit", saveIconEdit);
+    $("#iconEditResetButton").addEventListener("click", resetIconEdit);
+    $("#iconEditExportButton").addEventListener("click", exportIconUpdates);
+    $("#iconEditGroups").addEventListener("change", function (event) {
+      const checkbox = event.target.closest("[data-icon-edit-category]");
+      if (!checkbox) return;
+      const category = iconCategoryById.get(checkbox.value);
+      const categoryInputs = $$("[data-icon-edit-category]", event.currentTarget);
+      if (checkbox.checked && category?.parent) {
+        const parent = categoryInputs.find(function (input) { return input.value === category.parent; });
+        if (parent) parent.checked = true;
+      }
+      if (!checkbox.checked && category && !category.parent) {
+        iconCategories.filter(function (candidate) { return candidate.parent === category.id; }).forEach(function (child) {
+          const childInput = categoryInputs.find(function (input) { return input.value === child.id; });
+          if (childInput) childInput.checked = false;
+        });
+      }
+      updateIconEditControls();
+    });
     $("#iconSourceFilter").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.iconLibrary.source = event.target.value; }, { reason: "icon-source" });
       iconVisibleCount = ICON_PAGE_SIZE;
@@ -1145,6 +1349,7 @@
   }
 
   function renderAll() {
+    refreshIconCatalog();
     applyAppearance();
     renderHeader();
     renderNotesEditor();
