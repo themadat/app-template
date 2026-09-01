@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.16",
-      buildId: "0.0.1.16",
+      version: "0.0.1.17",
+      buildId: "0.0.1.17",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.17",
+        date: "2026-09-01T04:43:05.000Z",
+        title: "Expand icon categories and update controls",
+        summary: "The icon catalog adds a shape-focused source collection and five quick categories, while the New version available notice gains full shortcut support.",
+        features: ["Shapes category containing all 110 SVGs from SVG Converter’s shapes source folder", "Badged, Squared, Circled, Slashed, and Sparkled quick categories", "R to Force Refresh and X to close the New version available notice, directly or with Shift–Control–Option"],
+        improvements: ["Shorter desktop category controls fit more quick filters on screen", "Source-aware Shapes assignment survives icon deduplication", "Update buttons participate in shortcut hints and hover descriptions"],
+        fixes: ["Update-notice shortcuts remain inactive while a dialog owns keyboard focus", "Dynamic toast shortcuts are cleared before later notifications"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.16",
         date: "2026-08-31T18:56:38.000Z",
@@ -232,16 +242,16 @@
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories cloud server copy svg notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact vertical category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
-      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories cloud server drive quick select copy clipboard source filter catalog compiler", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The vertical rail keeps category chips, type, source, and result counts immediately available, including a dedicated Cloud/Server category. Results stay in alphabetical order. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories cloud server shapes badged squared circled slashed sparkled copy svg notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact vertical category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
+      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories cloud server drive shapes badged squared circled slashed sparkled quick select copy clipboard source filter catalog compiler", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact vertical rail keeps category chips, type, source, and result counts immediately available, including Cloud/Server, Shapes, Badged, Squared, Circled, Slashed, and Sparkled. Results stay in alphabetical order. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },
       { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. Configure a private repository, branch, JSON file path, and a fine-grained token with Contents access. Conflicts always ask whether to upload, download, merge, or cancel.</p>" },
-      { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline.</p>" },
+      { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline update refresh shortcut", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline. When a new version is ready, press <kbd>R</kbd> to Force Refresh or <kbd>X</kbd> to close its notice.</p>" },
       { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press shortcut pipe", html: "<p>Click or tap the app icon, or press <kbd>T</kbd>, to switch between light and dark themes. Press and hold the icon, or press <kbd>|</kbd> or <kbd>D</kbd>, to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },
-      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version pipe developer", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>|</kbd> or <kbd>D</kbd> for Developer Mode, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. On the main-page What’s New banner, use <kbd>V</kbd> to view release notes and <kbd>X</kbd> to dismiss the notice. In the icon library, use <kbd>F</kbd> for categories and filters plus <kbd>G</kbd>, <kbd>I</kbd>, <kbd>C</kbd>, and <kbd>L</kbd> for the visible module actions. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
+      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version update refresh pipe developer", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>|</kbd> or <kbd>D</kbd> for Developer Mode, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. On the main-page What’s New banner, use <kbd>V</kbd> to view release notes and <kbd>X</kbd> to dismiss the notice. When New version available is visible, use <kbd>R</kbd> to Force Refresh and <kbd>X</kbd> to close it. In the icon library, use <kbd>F</kbd> for categories and filters plus <kbd>G</kbd>, <kbd>I</kbd>, <kbd>C</kbd>, and <kbd>L</kbd> for the visible module actions. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
     ]
   };
 

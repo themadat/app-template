@@ -45,7 +45,8 @@
     { keys: "2", hintKey: "2", chordKey: "2", label: "Open Roadmap in Settings", group: "Navigation" },
     { keys: "N", hintKey: "N", chordKey: "N", label: "Open Notes", group: "Actions" },
     { keys: "V", hintKey: "V", chordKey: "V", label: "Open What’s New", group: "Actions" },
-    { keys: "X", hintKey: "X", chordKey: "X", label: "Dismiss the What’s New banner", group: "What’s New" },
+    { keys: "R", hintKey: "R", chordKey: "R", label: "Force refresh an available app update", group: "Updates" },
+    { keys: "X", hintKey: "X", chordKey: "X", label: "Dismiss the active update notice or What’s New banner", group: "Updates" },
     { keys: "S", hintKey: "S", chordKey: "S", label: "Run the primary sync action", group: "Actions" },
     { keys: "E", hintKey: "E", chordKey: "E", label: "Export a JSON backup", group: "Actions" },
     { keys: "T", hintKey: "T", chordKey: "T", label: "Switch color theme", group: "Actions" },
@@ -937,6 +938,8 @@
     }
     if (event.repeat) return;
     const iconPageActive = !$("dialog[open]");
+    const updateToast = $("#appToast");
+    const updateToastVisible = updateToast?.dataset.context === "pwa-update" && updateToast.classList.contains("visible");
     const focusedIconItem = document.activeElement.closest?.(".icon-card-item");
     const focusedIconId = focusedIconItem?.querySelector("[data-icon-id]")?.dataset.iconId;
     if ((event.code === "Backslash" && event.shiftKey) || event.key === "|") runShortcut(event, function () { toggleDeveloperMode(undefined, { openPanel: true }); });
@@ -950,6 +953,8 @@
     else if (event.code === "KeyC" && iconPageActive && !$("#iconClearSearch").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconClearSearch").click(); });
     else if (event.code === "KeyL" && iconPageActive && !$("#iconLoadMore").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconLoadMore").click(); });
     else if (event.code === "KeyV") runShortcut(event, function () { openSupport("releases", event.target); });
+    else if (event.code === "KeyR" && iconPageActive && updateToastVisible && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#appToast [data-toast-action]").click(); });
+    else if (event.code === "KeyX" && iconPageActive && updateToastVisible && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#appToast [data-toast-close]").click(); });
     else if (event.code === "KeyX" && !$("dialog[open]") && !$("#whatsNewBanner").hidden && shortcutModifiersAllowed(event)) runShortcut(event, dismissWhatsNew);
     else if (event.code === "KeyS") runShortcut(event, function () { sync.syncNow(event.target); });
     else if (event.code === "KeyE") runShortcut(event, portability.exportJson);
@@ -1076,6 +1081,10 @@
   }
 
   function bindRuntimeEvents() {
+    window.addEventListener("app:shortcutcontrols", function () {
+      decorateShortcutControls($("#appToast"));
+      refreshShortcutEligibility(hintModifierActive);
+    });
     window.addEventListener("app:syncchange", function () {
       renderSyncStatus();
       if ($("#supportDialog").open && state().ui.supportTab === "settings") renderSyncSettings();

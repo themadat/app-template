@@ -109,6 +109,11 @@ const ICON_CATEGORIES = [
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
   { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
+  { id: "badged", label: "Badged", terms: ["badge", "trianglebadge"] },
+  { id: "squared", label: "Squared", terms: ["square"] },
+  { id: "circled", label: "Circled", terms: ["circle"] },
+  { id: "slashed", label: "Slashed", terms: ["slash", "slashed"] },
+  { id: "sparkled", label: "Sparkled", terms: ["sparkle", "sparkles"] },
   { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
   { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
@@ -184,6 +189,10 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/server:drive\//i.test(source.file);
   });
   if (isCloudServerSource && !categories.includes("cloud-server")) categories.push("cloud-server");
+  const isShapesSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/shapes\//i.test(source.file);
+  });
+  if (isShapesSource && !categories.includes("shapes")) categories.push("shapes");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {

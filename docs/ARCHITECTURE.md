@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. The UI renders 120 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules guarantee that SVG Converter’s `server:drive` and `shapes` collections remain in Cloud/Server and Shapes after deduplication; name metadata adds Badged, Squared, Circled, Slashed, and Sparkled. The UI renders 120 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.16",
-    "buildId": "0.0.1.16",
+    "appVersion": "0.0.1.17",
+    "buildId": "0.0.1.17",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -103,4 +103,4 @@ Notes uses one spacious modal on desktop and a full-screen editor on mobile. Set
 
 ## PWA and offline strategy
 
-`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A waiting service worker triggers a persistent bottom **New version available** toast. Its accessible clockwise-arrow action activates the waiting worker and reloads through a cache-busting URL so installed PWAs can update immediately.
+`sw.js` precaches the application shell, all core scripts, manifests, and light/dark assets. Same-origin application requests use the network first with cache revalidation, then fall back to the cached shell when offline. Optional GitHub API traffic remains network-only. A waiting service worker triggers a persistent bottom **New version available** toast. Its accessible clockwise-arrow action activates the waiting worker and reloads through a cache-busting URL so installed PWAs can update immediately. Contextual R and X shortcuts run Force Refresh or close the notice, with plain and Shift–Control–Option commands registered through the shared shortcut system.

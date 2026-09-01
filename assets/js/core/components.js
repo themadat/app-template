@@ -97,10 +97,21 @@
     openDialog(dialog, { trigger: options && options.trigger, focus: "[data-message-close]" });
   }
 
+  function configureShortcut(control, key) {
+    if (key) {
+      control.dataset.shortcut = key;
+      control.setAttribute("aria-keyshortcuts", key + " Control+Alt+Shift+" + key);
+      return;
+    }
+    delete control.dataset.shortcut;
+    control.removeAttribute("aria-keyshortcuts");
+  }
+
   function toast(messageText, options) {
-    const settings = Object.assign({ title: "Saved", kind: "info", duration: 3200, actionLabel: "", actionSymbol: "", onAction: null }, options || {});
+    const settings = Object.assign({ title: "Saved", kind: "info", duration: 3200, actionLabel: "", actionSymbol: "", actionShortcut: "", closeShortcut: "", context: "", onAction: null }, options || {});
     const toastEl = document.querySelector("#appToast");
     toastEl.dataset.kind = settings.kind;
+    toastEl.dataset.context = settings.context;
     toastEl.querySelector("[data-toast-title]").textContent = settings.title;
     toastEl.querySelector("[data-toast-message]").textContent = messageText;
     const action = toastEl.querySelector("[data-toast-action]");
@@ -110,8 +121,11 @@
     action.title = settings.actionLabel || "";
     if (settings.actionSymbol && App.icons) App.icons.set(action, settings.actionSymbol);
     else action.textContent = settings.actionLabel || "";
+    configureShortcut(action, settings.actionShortcut);
     action.onclick = settings.onAction || null;
+    configureShortcut(toastEl.querySelector("[data-toast-close]"), settings.closeShortcut);
     toastEl.hidden = false;
+    window.dispatchEvent(new CustomEvent("app:shortcutcontrols"));
     requestAnimationFrame(function () { toastEl.classList.add("visible"); });
     clearTimeout(toastTimer);
     if (settings.duration > 0) toastTimer = window.setTimeout(hideToast, settings.duration);

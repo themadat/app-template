@@ -65,8 +65,11 @@
       title: "New version available",
       kind: "info",
       duration: 0,
+      context: "pwa-update",
       actionLabel: "Force refresh",
       actionSymbol: "arrowClockwise",
+      actionShortcut: "R",
+      closeShortcut: "X",
       onAction: function () { forceRefresh(worker); }
     });
   }

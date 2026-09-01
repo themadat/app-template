@@ -11,14 +11,14 @@
 ## Desktop
 
 - [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
-- [ ] The full-width catalog reports 1,378 unique icons, renders narrow responsive cards with preview/name plus bottom-corner type/info controls, wraps long names, keeps persistent category chips plus type/source controls in the compact vertical left rail, remains alphabetically ordered, and progressively reveals large result sets.
+- [ ] The full-width catalog reports 1,473 unique icons, renders narrow responsive cards with preview/name plus bottom-corner type/info controls, wraps long names, keeps persistent category chips plus type/source controls in the compact vertical left rail, remains alphabetically ordered, and progressively reveals large result sets.
 - [ ] `/` focuses global search; Enter closes suggestions and moves to matching cards below; suggestion results still focus their corresponding copy button or route to Notes, Help, releases, and the Settings Roadmap.
-- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, and all 65 `app-input/server:drive/` SVGs appear under Cloud/Server; name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
+- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, all 65 `app-input/server:drive/` SVGs appear under Cloud/Server, and all 110 `app-input/shapes/` SVGs appear under Shapes with applicable Badged, Squared, Circled, Slashed, and Sparkled assignments; name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
 - [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
 - [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work inside Settings.
-- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus; the main-page What’s New banner exposes V to view release notes and X to dismiss it, directly and with Shift–Control–Option.
+- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus; the main-page What’s New banner exposes V/X, and the New version available toast exposes R to Force Refresh and X to close, directly and with Shift–Control–Option.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
 
 ## Tablet and mobile
@@ -34,7 +34,7 @@
 
 - [ ] Visible focus, logical focus order, labels, roles, and ARIA state are correct.
 - [ ] Escape closes menus, popovers, and dialogs and returns focus to the trigger.
-- [ ] `/`, `H`/`?`, `,`, `2`, `N`, `V`, `S`, `E`, `T`, and `D`/`|` work outside editable fields; icon commands F/G/I/C/L work in their valid contexts, directly and with Shift–Control–Option.
+- [ ] `/`, `H`/`?`, `,`, `2`, `N`, `V`, `R`, `X`, `S`, `E`, `T`, and `D`/`|` work in their valid contexts outside editable fields; icon commands F/G/I/C/L work directly and with Shift–Control–Option.
 - [ ] Holding Shift–Control–Option reveals shortcut hints only for enabled controls in the active page or dialog, and releasing any chord key hides them.
 - [ ] Hovering a shortcut-enabled control shows both its plain key and Shift–Control–Option command.
 - [ ] Tabs and menu items support arrow-key movement; icon cards support Left/Right/Up/Down plus Home/End without hiding the separate information controls.
@@ -64,7 +64,7 @@
 
 - [ ] First online visit caches every `SHELL` entry, including the generated icon catalog, and a later offline reload supports icon search/copy, Notes, the Settings Roadmap, and Settings.
 - [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
-- [ ] A waiting service worker shows a bottom New version available toast; its arrow-only Force refresh action activates it and reloads the browser tab or installed PWA.
+- [ ] A waiting service worker shows a bottom New version available toast; its arrow-only Force refresh action and contextual R shortcut activate it and reload the browser tab or installed PWA, while X closes the notice. R/X also work with Shift–Control–Option, display shortcut hints, and stay inactive when a dialog owns focus.
 - [ ] The Safari favicon uses a fully opaque `#8E8E93` background with visible blue blueprint geometry and no inset outline; manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.
