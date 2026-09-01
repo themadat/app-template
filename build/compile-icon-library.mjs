@@ -115,6 +115,7 @@ const ICON_CATEGORIES = [
   { id: "maps-travel", label: "Maps & Travel", terms: ["map", "location", "pin", "globe", "compass", "car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "travel"] },
   { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
   { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish"] },
+  { id: "rays", label: "Rays", terms: ["ray", "rays", "laser", "burst"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
   { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
@@ -309,6 +310,18 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/(?:!Time|Time)\//i.test(source.file);
   });
   if (isTimeSource && !categories.includes("time")) categories.push("time");
+  const isHealthSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/!Health\//i.test(source.file);
+  });
+  if (isHealthSource && !categories.includes("health")) categories.push("health");
+  const isNatureSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/!Nature\//i.test(source.file);
+  });
+  if (isNatureSource && !categories.includes("nature")) categories.push("nature");
+  const isRaysSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/!Rays\//i.test(source.file);
+  });
+  if (isRaysSource && !categories.includes("rays")) categories.push("rays");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {

@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.21",
-      buildId: "0.0.1.21",
+      version: "0.0.1.22",
+      buildId: "0.0.1.22",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -73,6 +73,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.22",
+        date: "2026-09-01T21:38:33.000Z",
+        title: "Add Health, Nature, and Rays collections",
+        summary: "The icon catalog now guarantees complete Health, Nature, and Rays source coverage, with Rays available as its own quick category.",
+        features: ["All 133 SVGs from SVG Converter’s !Health collection", "All 159 SVGs from SVG Converter’s !Nature collection", "All 8 SVGs from SVG Converter’s !Rays collection and a dedicated Rays quick category"],
+        improvements: ["Source-aware Health and Nature assignments survive deduplication", "Rays search and filtering include semantic ray, laser, and burst terms"],
+        fixes: ["Icons from the three requested collections can no longer fall outside their intended quick category after merging with another source"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.21",
         date: "2026-09-01T21:11:36.000Z",
@@ -283,8 +293,8 @@
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories cloud server shapes badged plus minus checkmark xmark squared circled slashed sparkled copy svg resize divider notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. On desktop and tablet, drag the divider or use its arrow keys to resize the rail. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
-      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories cloud server drive shapes badged time weather plus minus checkmark xmark squared circled slashed sparkled quick select copy clipboard source filter resize divider catalog compiler arrows", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact rail keeps category chips, type, source, and result counts immediately available, including Cloud/Server, Shapes, Badged with 39 nested subtype choices (including plain Badge), Squared, Circled, Slashed, Sparkled, Time, and Weather. Use Up and Down Arrow while a category is focused to activate the adjacent category. Drag the divider to change the rail width, or focus it and use Left/Right, Home, or End; the width is remembered. Results stay in alphabetical order and appear 500 at a time. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories health nature rays cloud server shapes badged plus minus checkmark xmark squared circled slashed sparkled copy svg resize divider notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. On desktop and tablet, drag the divider or use its arrow keys to resize the rail. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
+      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories health nature rays cloud server drive shapes badged time weather plus minus checkmark xmark squared circled slashed sparkled quick select copy clipboard source filter resize divider catalog compiler arrows", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact rail keeps category chips, type, source, and result counts immediately available, including Health, Nature, Rays, Cloud/Server, Shapes, Badged with 39 nested subtype choices (including plain Badge), Squared, Circled, Slashed, Sparkled, Time, and Weather. Use Up and Down Arrow while a category is focused to activate the adjacent category. Drag the divider to change the rail width, or focus it and use Left/Right, Home, or End; the width is remembered. Results stay in alphabetical order and appear 500 at a time. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
       { id: "icon-overrides", title: "Icon overrides", section: "Features", keywords: "icon rename groups override export json compiler feed back developer", html: "<p>Rename an icon or change its groups from the information dialog, then choose <strong>Export overrides</strong> there or in Developer Mode. The download is a compact JSON array containing only icon IDs, labels, and category IDs. Attach that file in a future request to hard-code the changes, or use it directly as <code>build/icon-library-overrides.json</code>; the compiler also accepts the older wrapped format.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
