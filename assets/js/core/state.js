@@ -102,7 +102,7 @@
         supportTab: "settings"
       },
       modules: {
-        iconLibrary: { category: "all", kind: "all", source: "all" },
+        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204 },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -449,7 +449,8 @@
         iconLibrary: {
           category: u.cleanLine(sourceIconLibrary.category || "all", 80) || "all",
           kind: ["all", "sf-symbol", "custom"].includes(sourceIconLibrary.kind) ? sourceIconLibrary.kind : "all",
-          source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all"
+          source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
+          sidebarWidth: u.clamp(sourceIconLibrary.sidebarWidth, 156, 360, base.modules.iconLibrary.sidebarWidth)
         },
         records: Object.assign({}, base.modules.records, u.plainObject(sourceModules.records)),
         documents: { enabled: config.features.documents && u.plainObject(sourceModules.documents).enabled !== false },

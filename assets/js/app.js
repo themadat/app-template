@@ -20,6 +20,8 @@
     return [icon.id, [icon.label, icon.name, icon.kind === "sf-symbol" ? "sf symbol sf symbols" : "custom"].concat(icon.aliases || [], icon.tags || [], icon.categories || [], categoryLabels, icon.repositories || [], (icon.sources || []).map(function (item) { return item.symbol + " " + item.file; })).join(" ").toLowerCase()];
   }));
   const ICON_PAGE_SIZE = 120;
+  const ICON_FILTER_MIN_WIDTH = 156;
+  const ICON_FILTER_MAX_WIDTH = 360;
   let versionView = "released";
   let hintModifierActive = false;
   let appIconHoldTimer = 0;
@@ -264,13 +266,23 @@
     baseMatches.forEach(function (icon) {
       (icon.categories || []).forEach(function (categoryId) { counts.set(categoryId, (counts.get(categoryId) || 0) + 1); });
     });
-    const choices = [{ id: "all", label: "All", count: baseMatches.length }].concat(iconCategories.map(function (category) {
-      return { id: category.id, label: category.label, count: counts.get(category.id) || 0 };
-    }));
-    container.innerHTML = choices.map(function (choice) {
+
+    function choiceButton(choice, isSubcategory) {
       const active = choice.id === selected;
       const disabled = choice.count === 0 && !active;
-      return '<button class="icon-category-chip" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(choice.label + ", " + choice.count + " icons") + '"' + (disabled ? ' disabled' : '') + (active ? ' aria-keyshortcuts="F Control+Alt+Shift+F" data-shortcut="F"' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
+      const parent = choice.parent ? iconCategoryById.get(choice.parent) : null;
+      const ariaLabel = (parent ? parent.label + ": " : "") + choice.label + ", " + choice.count + " icons";
+      const className = "icon-category-chip" + (isSubcategory ? " is-subcategory" : "");
+      return '<button class="' + className + '" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(ariaLabel) + '"' + (disabled ? ' disabled' : '') + (active ? ' aria-keyshortcuts="F Control+Alt+Shift+F" data-shortcut="F"' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
+    }
+
+    const choices = iconCategories.map(function (category) {
+      return { id: category.id, label: category.label, parent: category.parent || "", count: counts.get(category.id) || 0 };
+    });
+    container.innerHTML = choiceButton({ id: "all", label: "All", parent: "", count: baseMatches.length }, false) + choices.filter(function (choice) { return !choice.parent; }).map(function (choice) {
+      const children = choices.filter(function (candidate) { return candidate.parent === choice.id; });
+      const childMarkup = children.map(function (child) { return choiceButton(child, true); }).join("");
+      return '<div class="icon-category-group">' + choiceButton(choice, false) + (childMarkup ? '<div class="icon-category-subcategories" role="group" aria-label="' + u.escapeHtml(choice.label + " subcategories") + '">' + childMarkup + '</div>' : "") + '</div>';
     }).join("");
     decorateShortcutControls(container);
   }
@@ -355,9 +367,72 @@
     cards[next].focus();
   }
 
+  function normalizeIconFilterWidth(value) {
+    return Math.round(u.clamp(value, ICON_FILTER_MIN_WIDTH, ICON_FILTER_MAX_WIDTH, 204));
+  }
+
+  function applyIconFilterWidth(value) {
+    const layout = $("#iconLibraryLayout");
+    const divider = $("#iconFilterDivider");
+    if (!layout || !divider) return;
+    const width = normalizeIconFilterWidth(value);
+    layout.style.setProperty("--icon-filter-width", width + "px");
+    divider.setAttribute("aria-valuenow", String(width));
+    divider.setAttribute("aria-valuetext", width + " pixels");
+  }
+
+  function persistIconFilterWidth(value) {
+    const width = normalizeIconFilterWidth(value);
+    applyIconFilterWidth(width);
+    if (width === state().modules.iconLibrary.sidebarWidth) return;
+    storage.mutate(function (next) { next.modules.iconLibrary.sidebarWidth = width; }, { reason: "icon-filter-width" });
+  }
+
+  function bindIconFilterDivider() {
+    const divider = $("#iconFilterDivider");
+    if (!divider) return;
+    let drag = null;
+
+    divider.addEventListener("pointerdown", function (event) {
+      if (event.button !== 0 || window.matchMedia("(max-width: 699px)").matches) return;
+      const startWidth = normalizeIconFilterWidth(state().modules.iconLibrary.sidebarWidth);
+      drag = { pointerId: event.pointerId, startX: event.clientX, width: startWidth };
+      event.preventDefault();
+      divider.setPointerCapture?.(event.pointerId);
+      document.documentElement.classList.add("resizing-icon-filters");
+    });
+    divider.addEventListener("pointermove", function (event) {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      drag.width = normalizeIconFilterWidth(drag.width + event.clientX - drag.startX);
+      drag.startX = event.clientX;
+      applyIconFilterWidth(drag.width);
+    });
+    function finishResize(event) {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      const width = drag.width;
+      drag = null;
+      document.documentElement.classList.remove("resizing-icon-filters");
+      if (divider.hasPointerCapture?.(event.pointerId)) divider.releasePointerCapture(event.pointerId);
+      persistIconFilterWidth(width);
+    }
+    divider.addEventListener("pointerup", finishResize);
+    divider.addEventListener("pointercancel", finishResize);
+    divider.addEventListener("keydown", function (event) {
+      let width = normalizeIconFilterWidth(state().modules.iconLibrary.sidebarWidth);
+      if (event.key === "ArrowLeft") width -= 12;
+      else if (event.key === "ArrowRight") width += 12;
+      else if (event.key === "Home") width = ICON_FILTER_MIN_WIDTH;
+      else if (event.key === "End") width = ICON_FILTER_MAX_WIDTH;
+      else return;
+      event.preventDefault();
+      persistIconFilterWidth(width);
+    });
+  }
+
   function renderIconLibrary() {
     const grid = $("#iconLibraryGrid");
     if (!grid) return;
+    applyIconFilterWidth(state().modules.iconLibrary.sidebarWidth);
     const sources = App.iconLibrary && App.iconLibrary.sourceRepositories || [];
     const sourceSelect = $("#iconSourceFilter");
     if (sourceSelect.options.length !== sources.length + 1) {
@@ -1131,6 +1206,7 @@
     components.init();
     portability.init();
     bindGeneralEvents();
+    bindIconFilterDivider();
     bindRuntimeEvents();
     pwa.init();
     sync.init();

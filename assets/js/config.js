@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.17",
-      buildId: "0.0.1.17",
+      version: "0.0.1.18",
+      buildId: "0.0.1.18",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -72,6 +72,16 @@
     ],
 
     releases: [
+      {
+        version: "0.0.1.18",
+        date: "2026-09-01T14:59:12.000Z",
+        title: "Refine icon browsing and add Sparkles",
+        summary: "The icon catalog adds nested badge categories, a resizable filter rail, denser cards, and the complete Sparkles source collection.",
+        features: ["Plus, Minus, Checkmark, and Xmark subcategories nested under Badged", "A draggable filter-rail divider with remembered width and keyboard resizing", "All 26 SVGs from SVG Converter’s sparkles source folder"],
+        improvements: ["Shorter icon cards and a smaller information control increase visible catalog density", "Source-aware Sparkled assignment survives icon deduplication", "The filter rail supports pointer, touch, Left and Right Arrow, Home, and End resizing"],
+        fixes: ["Badge subcategories require both badge and subtype metadata so unrelated action symbols are excluded"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.17",
         date: "2026-09-01T04:43:05.000Z",
@@ -242,8 +252,8 @@
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories cloud server shapes badged squared circled slashed sparkled copy svg notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact vertical category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
-      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories cloud server drive shapes badged squared circled slashed sparkled quick select copy clipboard source filter catalog compiler", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact vertical rail keeps category chips, type, source, and result counts immediately available, including Cloud/Server, Shapes, Badged, Squared, Circled, Slashed, and Sparkled. Results stay in alphabetical order. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories cloud server shapes badged plus minus checkmark xmark squared circled slashed sparkled copy svg resize divider notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. On desktop and tablet, drag the divider or use its arrow keys to resize the rail. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
+      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories cloud server drive shapes badged plus minus checkmark xmark squared circled slashed sparkled quick select copy clipboard source filter resize divider catalog compiler", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact rail keeps category chips, type, source, and result counts immediately available, including Cloud/Server, Shapes, Badged with nested Plus, Minus, Checkmark, and Xmark choices, Squared, Circled, Slashed, and Sparkled. Drag the divider to change the rail width, or focus it and use Left/Right, Home, or End; the width is remembered. Results stay in alphabetical order. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },

@@ -217,14 +217,22 @@ a { color: var(--accent-strong); }
 
 main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem + var(--safe-bottom)) max(.9rem, var(--safe-left)); }
 .icon-library { width: 100%; }
-.icon-library-layout { display: grid; grid-template-columns: minmax(176px, 204px) minmax(0, 1fr); align-items: start; gap: .7rem; }
-.icon-library-results { min-width: 0; }
+.icon-library-layout { --icon-filter-width: 204px; display: grid; grid-template-columns: minmax(156px, var(--icon-filter-width)) 10px minmax(0, 1fr); align-items: start; gap: 0; }
+.icon-library-results { min-width: 0; margin-left: .35rem; }
 .count-pill { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: .22rem .55rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface-2); color: var(--muted); font-size: .72rem; font-weight: 750; white-space: nowrap; }
-.icon-library-controls { position: sticky; z-index: 15; top: calc(84px + var(--safe-top)); display: flex; flex-direction: column; align-items: stretch; gap: .38rem; max-height: calc(100svh - 96px - var(--safe-top)); overflow-y: auto; padding: .45rem; border: 1px solid var(--line); border-radius: var(--radius); background: color-mix(in srgb, var(--bg) 92%, transparent); box-shadow: var(--shadow-small); backdrop-filter: blur(16px); scrollbar-width: thin; }
+.icon-library-controls { position: sticky; z-index: 15; top: calc(84px + var(--safe-top)); display: flex; flex-direction: column; align-items: stretch; gap: .38rem; max-height: calc(100svh - 96px - var(--safe-top)); margin-right: .35rem; overflow-y: auto; padding: .45rem; border: 1px solid var(--line); border-radius: var(--radius); background: color-mix(in srgb, var(--bg) 92%, transparent); box-shadow: var(--shadow-small); backdrop-filter: blur(16px); scrollbar-width: thin; }
+.icon-filter-divider { position: sticky; top: calc(84px + var(--safe-top)); align-self: start; width: 10px; height: calc(100svh - 96px - var(--safe-top)); min-height: 220px; padding: 0; border: 0; background: transparent; cursor: col-resize; touch-action: none; }
+.icon-filter-divider::after { content: ""; position: absolute; inset: 0 -8px; }
+.icon-filter-divider span { position: absolute; inset-block: 0; left: 50%; width: 2px; border-radius: 2px; background: var(--line); transform: translateX(-50%); transition: width var(--motion-fast), background var(--motion-fast); }
+.icon-filter-divider:hover span, .icon-filter-divider:focus-visible span, .resizing-icon-filters .icon-filter-divider span { width: 4px; background: var(--accent); }
+.resizing-icon-filters, .resizing-icon-filters * { cursor: col-resize !important; user-select: none !important; }
 .icon-library-controls > .count-pill { align-self: stretch; }
 .icon-category-row { display: block; min-width: 0; padding-top: .05rem; border-top: 1px solid var(--line); }
 .icon-category-filters { display: flex; flex-direction: column; min-width: 0; gap: .12rem; padding-top: .26rem; }
+.icon-category-group { display: grid; min-width: 0; gap: .12rem; }
+.icon-category-subcategories { display: grid; min-width: 0; gap: .1rem; margin-left: .5rem; padding-left: .34rem; border-left: 1px solid var(--line); }
 .icon-category-chip { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; min-height: 27px; padding: .12rem .46rem; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--muted); font-size: .62rem; font-weight: 760; line-height: 1.05; text-align: left; white-space: nowrap; }
+.icon-category-chip.is-subcategory { min-height: 25px; background: color-mix(in srgb, var(--surface) 72%, transparent); font-size: .59rem; }
 .icon-category-chip small { min-width: 1.65rem; color: var(--faint); font-size: .55rem; text-align: right; }
 .icon-category-chip:hover, .icon-category-chip:focus-visible { border-color: var(--accent); color: var(--text); }
 .icon-category-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-strong); }
@@ -235,18 +243,18 @@ main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem 
 .icon-library-controls .button { width: 100%; margin: 0; }
 .icon-library-status { min-height: 1.35rem; margin: .1rem 0 .38rem; color: var(--muted); font-size: .72rem; }
 .icon-library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 104px)); justify-content: start; align-items: stretch; gap: .45rem; }
-.icon-card-item { position: relative; min-width: 0; min-height: 148px; }
-.icon-card { appearance: none; display: grid; grid-template-rows: 72px auto; align-content: start; gap: .25rem; width: 100%; min-width: 0; min-height: 148px; height: 100%; padding: .48rem .4rem 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); text-align: center; box-shadow: 0 1px 0 color-mix(in srgb, #fff 36%, transparent); }
+.icon-card-item { position: relative; min-width: 0; min-height: 132px; }
+.icon-card { appearance: none; display: grid; grid-template-rows: 62px auto; align-content: start; gap: .22rem; width: 100%; min-width: 0; min-height: 132px; height: 100%; padding: .42rem .38rem 1.95rem; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); text-align: center; box-shadow: 0 1px 0 color-mix(in srgb, #fff 36%, transparent); }
 .icon-card:hover, .icon-card:focus-visible, .icon-card-item:focus-within .icon-card { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-1px); }
 .icon-card[data-copied="true"] { border-color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
-.icon-preview { display: grid; place-items: center; width: 100%; min-width: 0; height: 72px; color: currentColor; }
-.icon-preview .sf-symbol, .icon-preview > svg { display: block; width: 50px; height: 50px; max-width: 64px; max-height: 60px; fill: currentColor; }
+.icon-preview { display: grid; place-items: center; width: 100%; min-width: 0; height: 62px; color: currentColor; }
+.icon-preview .sf-symbol, .icon-preview > svg { display: block; width: 46px; height: 46px; max-width: 58px; max-height: 54px; fill: currentColor; }
 .icon-card-name { min-width: 0; font-size: .71rem; font-weight: 760; line-height: 1.13; overflow-wrap: anywhere; white-space: normal; }
-.icon-card-footer { position: absolute; z-index: 2; right: .28rem; bottom: .28rem; left: .42rem; display: flex; align-items: center; justify-content: space-between; gap: .25rem; pointer-events: none; }
+.icon-card-footer { position: absolute; z-index: 2; right: .24rem; bottom: .2rem; left: .4rem; display: flex; align-items: center; justify-content: space-between; gap: .25rem; pointer-events: none; }
 .icon-card-type { color: var(--muted); font-size: .58rem; font-weight: 700; line-height: 1.1; }
-.icon-info-button { display: grid; place-items: center; width: 36px; min-width: 36px; height: 36px; min-height: 36px; padding: .42rem; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted); box-shadow: none; pointer-events: auto; }
+.icon-info-button { display: grid; place-items: center; width: 28px; min-width: 28px; height: 28px; min-height: 28px; padding: .28rem; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted); box-shadow: none; pointer-events: auto; }
 .icon-info-button:hover, .icon-info-button:focus-visible { border-color: var(--line-strong); background: var(--surface); color: var(--accent-strong); }
-.icon-info-button .sf-symbol { width: 100%; height: 100%; }
+.icon-info-button .sf-symbol { width: 14px; height: 14px; }
 .icon-library-empty { display: grid; place-items: center; gap: .2rem; min-height: 240px; padding: 2rem; border: 1px dashed var(--line-strong); border-radius: var(--radius); color: var(--muted); text-align: center; }
 .icon-library-empty strong { color: var(--text); }
 .icon-library-more { display: flex; justify-content: center; padding: 1rem 0 0; }
@@ -560,8 +568,8 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .detail-header { flex-wrap: wrap; }
   .detail-header > div:first-of-type { flex: 1; }
   .floating-actions { z-index: 22; }
-  .icon-library-layout { grid-template-columns: 184px minmax(0, 1fr); }
   .icon-library-controls { top: calc(145px + var(--safe-top)); max-height: calc(100svh - 157px - var(--safe-top)); }
+  .icon-filter-divider { top: calc(145px + var(--safe-top)); height: calc(100svh - 157px - var(--safe-top)); }
 }
 
 @media (max-width: 699px) {
@@ -581,13 +589,16 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .banner-actions { align-self: flex-end; }
   main { padding: .55rem max(.55rem, var(--safe-right)) calc(5.5rem + var(--safe-bottom)) max(.55rem, var(--safe-left)); }
   .icon-library-layout { display: block; }
-  .icon-library-controls { position: static; display: grid; grid-template-columns: 1fr 1fr; max-height: none; overflow: visible; margin-bottom: .5rem; }
+  .icon-library-controls { position: static; display: grid; grid-template-columns: 1fr 1fr; max-height: none; margin-right: 0; overflow: visible; margin-bottom: .5rem; }
+  .icon-library-results { margin-left: 0; }
+  .icon-filter-divider { display: none; }
   .icon-library-controls > .count-pill, .icon-library-controls .button, .icon-category-row { grid-column: 1 / -1; }
   .icon-category-row { padding-top: .45rem; }
   .icon-category-filters { flex-direction: row; overflow-x: auto; padding: 0 0 .15rem; scrollbar-width: thin; }
+  .icon-category-group, .icon-category-subcategories { display: contents; }
   .icon-category-chip { flex: 0 0 auto; width: auto; min-width: 104px; min-height: 36px; padding: .3rem .55rem; border-radius: 999px; gap: .55rem; }
   .icon-library-grid { grid-template-columns: repeat(auto-fill, minmax(94px, 102px)); gap: .4rem; }
-  .icon-card-item, .icon-card { min-height: 146px; }
+  .icon-card-item, .icon-card { min-height: 132px; }
   .workspace-panel { min-height: calc(100svh - 13.2rem); border-radius: 12px; }
   .records-controls { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto auto; }
   .records-controls label:nth-child(3) { grid-column: 1 / 3; }

@@ -11,9 +11,9 @@
 ## Desktop
 
 - [ ] Header, version/Beta pills, centered global search, toolbar, icon catalog, and combined floating storage/sync status fit without horizontal overflow.
-- [ ] The full-width catalog reports 1,473 unique icons, renders narrow responsive cards with preview/name plus bottom-corner type/info controls, wraps long names, keeps persistent category chips plus type/source controls in the compact vertical left rail, remains alphabetically ordered, and progressively reveals large result sets.
+- [ ] The full-width catalog reports 1,625 unique icons, renders shorter responsive cards with preview/name plus bottom-corner type/compact-info controls, wraps long names, keeps persistent category chips plus type/source controls in the compact vertical left rail, remains alphabetically ordered, and progressively reveals large result sets.
 - [ ] `/` focuses global search; Enter closes suggestions and moves to matching cards below; suggestion results still focus their corresponding copy button or route to Notes, Help, releases, and the Settings Roadmap.
-- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, all 65 `app-input/server:drive/` SVGs appear under Cloud/Server, and all 110 `app-input/shapes/` SVGs appear under Shapes with applicable Badged, Squared, Circled, Slashed, and Sparkled assignments; name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
+- [ ] No retained source comes from SVG Converter’s generated output folders, no SF Symbol name appears more than once, all previews avoid unintended filled canvas rectangles, all 65 `app-input/server:drive/` SVGs appear under Cloud/Server, all 110 `app-input/shapes/` SVGs appear under Shapes, and all 26 `app-input/sparkles/` SVGs appear under Sparkled; Badged exposes nested Plus, Minus, Checkmark, and Xmark counts without including unrelated action icons; name, alias, semantic-tag, category, and multi-word searches return expected icons; selecting an icon copies complete SVG markup; each information button opens category, tag, identifier, alias, filename, repository, path, and source-symbol details; focus returns to the opener when the dialog closes.
 - [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
@@ -37,13 +37,13 @@
 - [ ] `/`, `H`/`?`, `,`, `2`, `N`, `V`, `R`, `X`, `S`, `E`, `T`, and `D`/`|` work in their valid contexts outside editable fields; icon commands F/G/I/C/L work directly and with Shift–Control–Option.
 - [ ] Holding Shift–Control–Option reveals shortcut hints only for enabled controls in the active page or dialog, and releasing any chord key hides them.
 - [ ] Hovering a shortcut-enabled control shows both its plain key and Shift–Control–Option command.
-- [ ] Tabs and menu items support arrow-key movement; icon cards support Left/Right/Up/Down plus Home/End without hiding the separate information controls.
+- [ ] Tabs and menu items support arrow-key movement; icon cards support Left/Right/Up/Down plus Home/End without hiding the separate information controls; the filter-rail separator supports drag/touch plus Left/Right/Home/End resizing and reports its current value.
 - [ ] Reduced-motion mode removes nonessential transitions and animations.
 - [ ] Light and dark themes meet contrast needs; status always includes text or an accessible label.
 
 ## Persistence, import, and migration
 
-- [ ] Icon category/type/source settings, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
+- [ ] Icon category/type/source settings and filter-rail width, Notes, Roadmap filters and sorting, hints, release state, and preferences persist after reload.
 - [ ] Reset Preferences preserves notes; Erase All removes content, preferences, token, and recovery data only after custom confirmation.
 - [ ] Export contains state-model version, notes, preferences, and module settings, but never the GitHub token.
 - [ ] A malformed or oversized import is rejected without replacing current data.

@@ -110,6 +110,10 @@ const ICON_CATEGORIES = [
   { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
   { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
   { id: "badged", label: "Badged", terms: ["badge", "trianglebadge"] },
+  { id: "badged-plus", label: "Plus", parent: "badged", terms: ["plus"] },
+  { id: "badged-minus", label: "Minus", parent: "badged", terms: ["minus"] },
+  { id: "badged-checkmark", label: "Checkmark", parent: "badged", terms: ["checkmark", "check"] },
+  { id: "badged-xmark", label: "Xmark", parent: "badged", terms: ["xmark"] },
   { id: "squared", label: "Squared", terms: ["square"] },
   { id: "circled", label: "Circled", terms: ["circle"] },
   { id: "slashed", label: "Slashed", terms: ["slash", "slashed"] },
@@ -183,7 +187,10 @@ function deriveMetadata(record) {
       const normalized = normalizedName(term);
       return record.name === normalized || record.name.startsWith(normalized + "_");
     });
-    return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
+    const matches = category.terms.some(function (term) { return keys.has(normalizedName(term)); });
+    if (!matches || !category.parent) return matches;
+    const parent = ICON_CATEGORIES.find(function (item) { return item.id === category.parent; });
+    return parent && parent.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
   const isCloudServerSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/server:drive\//i.test(source.file);
@@ -193,6 +200,10 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/shapes\//i.test(source.file);
   });
   if (isShapesSource && !categories.includes("shapes")) categories.push("shapes");
+  const isSparklesSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/sparkles\//i.test(source.file);
+  });
+  if (isSparklesSource && !categories.includes("sparkled")) categories.push("sparkled");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {
@@ -388,7 +399,9 @@ records.forEach(function (record) {
 lines.push("  ];");
 const exportedCategories = ICON_CATEGORIES.concat([{ id: "other", label: "Other", terms: [] }]).filter(function (category) {
   return records.some(function (record) { return record.categories.includes(category.id); });
-}).map(function (category) { return { id: category.id, label: category.label }; });
+}).map(function (category) {
+  return Object.assign({ id: category.id, label: category.label }, category.parent ? { parent: category.parent } : {});
+});
 
 lines.push("  window.LocalApp.iconLibrary = Object.freeze({");
 lines.push("    categories: Object.freeze(" + JSON.stringify(exportedCategories) + ".map(Object.freeze)),");
