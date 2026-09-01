@@ -541,6 +541,15 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .diagnostic-grid > div { padding: .6rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); }
 .diagnostic-grid dt { color: var(--muted); font-size: .68rem; font-weight: 800; text-transform: uppercase; }
 .diagnostic-grid dd { margin: .18rem 0 0; overflow-wrap: anywhere; }
+.developer-tool-card { display: grid; gap: .7rem; margin-top: .8rem; padding: .75rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); }
+.developer-tool-card h4 { margin: 0; }
+.developer-tool-card > div:first-child p { margin: .2rem 0 0; color: var(--muted); }
+.developer-icon-controls { display: flex; flex-wrap: wrap; align-items: end; gap: .45rem; }
+.developer-icon-controls label { display: grid; gap: .22rem; color: var(--muted); font-size: .7rem; font-weight: 750; }
+.developer-icon-controls input { width: 9rem; }
+.developer-icon-controls .button { display: inline-flex; align-items: center; gap: .35rem; }
+.developer-icon-controls .sf-symbol { width: 1rem; height: 1rem; }
+.developer-tool-card .inline-status { margin: 0; }
 .developer-json { max-height: 330px; overflow: auto; padding: .75rem; border: 1px solid var(--line); border-radius: 10px; background: #101514; color: #d7e7df; font: .72rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
 
 .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }

@@ -86,10 +86,18 @@ function normalizedName(rawName) {
 }
 
 function labelFor(name) {
-  return name.split("_").filter(Boolean).map(function (part) {
+  const label = name.split("_").filter(Boolean).map(function (part) {
     if (/^\d+x\d+$/.test(part)) return part;
     return part.charAt(0).toUpperCase() + part.slice(1);
   }).join(" ");
+  return cleanIconLabel(label) || "Icon";
+}
+
+function cleanIconLabel(value) {
+  return String(value || "")
+    .replace(/\bsvg\s*repo\s*com\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 const ICON_CATEGORIES = [
@@ -119,7 +127,6 @@ const ICON_CATEGORIES = [
   { id: "badged-camera", label: "Camera", parent: "badged", terms: ["camera"] },
   { id: "badged-checkmark", label: "Checkmark", parent: "badged", terms: ["checkmark"] },
   { id: "badged-chevron", label: "Chevron", parent: "badged", terms: ["chevron"] },
-  { id: "badged-circle", label: "Circle", parent: "badged", terms: ["circle"] },
   { id: "badged-clock", label: "Clock", parent: "badged", terms: ["clock"] },
   { id: "badged-creditcard", label: "Credit Card", parent: "badged", terms: ["creditcard"] },
   { id: "badged-ellipsis", label: "Ellipsis", parent: "badged", terms: ["ellipsis"] },
@@ -135,7 +142,6 @@ const ICON_CATEGORIES = [
   { id: "badged-microphone", label: "Microphone", parent: "badged", terms: ["microphone"] },
   { id: "badged-minus", label: "Minus", parent: "badged", terms: ["minus"] },
   { id: "badged-moon", label: "Moon", parent: "badged", terms: ["moon"] },
-  { id: "badged-multiple", label: "Multiple", parent: "badged", terms: ["2"] },
   { id: "badged-pause", label: "Pause", parent: "badged", terms: ["pause"] },
   { id: "badged-person", label: "Person", parent: "badged", terms: ["person"] },
   { id: "badged-play", label: "Play", parent: "badged", terms: ["play"] },
@@ -143,7 +149,6 @@ const ICON_CATEGORIES = [
   { id: "badged-questionmark", label: "Question Mark", parent: "badged", terms: ["questionmark"] },
   { id: "badged-record", label: "Record", parent: "badged", terms: ["record"] },
   { id: "badged-shield", label: "Shield", parent: "badged", terms: ["shield"] },
-  { id: "badged-slash", label: "Slash", parent: "badged", terms: ["slash"] },
   { id: "badged-snowflake", label: "Snowflake", parent: "badged", terms: ["snowflake"] },
   { id: "badged-sparkles", label: "Sparkles", parent: "badged", terms: ["sparkles"] },
   { id: "badged-star", label: "Star", parent: "badged", terms: ["star"] },
@@ -170,15 +175,17 @@ function loadIconOverrides() {
   } catch (error) {
     throw new Error("Could not parse " + path.relative(projectRoot, overrideFile) + ": " + error.message);
   }
-  if (!parsed || parsed.format !== "app-template-icon-library-overrides" || parsed.formatVersion !== 1 || !Array.isArray(parsed.overrides)) {
+  const overrideItems = Array.isArray(parsed) ? parsed : parsed && Array.isArray(parsed.overrides) ? parsed.overrides : null;
+  const wrappedFormatIsValid = !parsed || Array.isArray(parsed) || ((!parsed.format || parsed.format === "app-template-icon-library-overrides") && (!parsed.formatVersion || parsed.formatVersion === 1));
+  if (!overrideItems || !wrappedFormatIsValid) {
     throw new Error("The icon override file has an unsupported format.");
   }
   const categoryIds = new Set(ICON_CATEGORIES.map(function (category) { return category.id; }).concat(["other"]));
   const seen = new Set();
-  return parsed.overrides.map(function (item, index) {
+  return overrideItems.map(function (item, index) {
     const source = item && typeof item === "object" && !Array.isArray(item) ? item : {};
     const iconId = String(source.iconId || "").trim().slice(0, 160);
-    const label = String(source.label || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    const label = cleanIconLabel(source.label).slice(0, 120);
     if (!iconId || !label || !Array.isArray(source.categories)) throw new Error("Invalid icon override at position " + (index + 1) + ".");
     if (seen.has(iconId)) throw new Error("Duplicate icon override for " + iconId + ".");
     seen.add(iconId);
@@ -279,11 +286,11 @@ function deriveMetadata(record) {
     return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
   const isBadgeSource = record.sources.some(function (source) {
-    return source.repo === "svg-converter" && /^app-input\/!Badge\//i.test(source.file);
+    return source.repo === "svg-converter" && /^app-input\/(?:!Badge|Badge)\//i.test(source.file);
   });
   if (isBadgeSource && !categories.includes("badged")) categories.push("badged");
   const isCloudServerSource = record.sources.some(function (source) {
-    return source.repo === "svg-converter" && /^app-input\/server:drive\//i.test(source.file);
+    return source.repo === "svg-converter" && /^app-input\/(?:server:drive|Cloud:Drive)\//i.test(source.file);
   });
   if (isCloudServerSource && !categories.includes("cloud-server")) categories.push("cloud-server");
   const isShapesSource = record.sources.some(function (source) {
@@ -291,13 +298,17 @@ function deriveMetadata(record) {
   });
   if (isShapesSource && !categories.includes("shapes")) categories.push("shapes");
   const isSparklesSource = record.sources.some(function (source) {
-    return source.repo === "svg-converter" && /^app-input\/sparkles\//i.test(source.file);
+    return source.repo === "svg-converter" && /^app-input\/(?:sparkles|Sparkles:Rays)\//i.test(source.file);
   });
   if (isSparklesSource && !categories.includes("sparkled")) categories.push("sparkled");
   const isWeatherSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/weather\//i.test(source.file);
   });
   if (isWeatherSource && !categories.includes("weather")) categories.push("weather");
+  const isTimeSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/(?:!Time|Time)\//i.test(source.file);
+  });
+  if (isTimeSource && !categories.includes("time")) categories.push("time");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {
@@ -454,7 +465,7 @@ const records = Array.from(iconRecords).map(function (record) {
   return {
     id: preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6),
     name: preferred,
-    label: labelFor(preferred),
+    label: cleanIconLabel(labelFor(preferred)) || "Icon",
     kind: record.kinds.has("sf-symbol") ? "sf-symbol" : "custom",
     aliases: aliases,
     categories: metadata.categories,
@@ -471,7 +482,7 @@ let overridesApplied = 0;
 hardcodedOverrides.forEach(function (override) {
   const record = recordById.get(override.iconId);
   if (!record) return;
-  record.label = override.label;
+  record.label = cleanIconLabel(override.label) || record.label;
   record.categories = override.categories;
   overridesApplied += 1;
 });

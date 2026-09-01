@@ -28,6 +28,15 @@
     return cleanText(value, max).replace(/\s+/g, " ").trim();
   }
 
+  function cleanIconLabel(value, max = 120) {
+    return cleanText(value, config.controls.maxTextLength)
+      .replace(/\bsvg\s*repo\s*com\b/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, max)
+      .trim();
+  }
+
   function escapeHtml(value) {
     return String(value == null ? "" : value).replace(/[&<>"]/g, function (character) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[character];
@@ -231,6 +240,7 @@
     clamp,
     cleanText,
     cleanLine,
+    cleanIconLabel,
     escapeHtml,
     safeUrl,
     safeExternalOpen,

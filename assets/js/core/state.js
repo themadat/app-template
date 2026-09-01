@@ -13,7 +13,7 @@
     (Array.isArray(value) ? value : []).slice(0, config.controls.maxIconOverrides).forEach(function (item) {
       const source = u.plainObject(item);
       const iconId = u.cleanLine(source.iconId, 160);
-      const label = u.cleanLine(source.label, 120);
+      const label = u.cleanIconLabel(source.label, 120);
       if (!iconId || !label) return;
       const categories = Array.from(new Set((Array.isArray(source.categories) ? source.categories : []).map(function (categoryId) {
         return u.cleanLine(categoryId, 80);
@@ -118,7 +118,7 @@
         supportTab: "settings"
       },
       modules: {
-        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204, overrides: [] },
+        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204, minimumLabelLength: 0, overrides: [] },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -463,10 +463,14 @@
       },
       modules: {
         iconLibrary: {
-          category: u.cleanLine(sourceIconLibrary.category || "all", 80) || "all",
+          category: (function () {
+            const category = u.cleanLine(sourceIconLibrary.category || "all", 80) || "all";
+            return category === "all" || ICON_CATEGORY_IDS.has(category) ? category : "all";
+          })(),
           kind: ["all", "sf-symbol", "custom"].includes(sourceIconLibrary.kind) ? sourceIconLibrary.kind : "all",
           source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
           sidebarWidth: u.clamp(sourceIconLibrary.sidebarWidth, 156, 360, base.modules.iconLibrary.sidebarWidth),
+          minimumLabelLength: Math.round(u.clamp(sourceIconLibrary.minimumLabelLength, 0, 120, 0)),
           overrides: normalizeIconOverrides(sourceIconLibrary.overrides)
         },
         records: Object.assign({}, base.modules.records, u.plainObject(sourceModules.records)),

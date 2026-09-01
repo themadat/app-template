@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules guarantee that SVG Converter’s `!Badge`, `server:drive`, `shapes`, `sparkles`, and `weather` collections remain in Badged, Cloud/Server, Shapes, Sparkled, and Weather after deduplication. Badge subtype metadata is read only from content following the last badge token, producing 42 nested choices—including plain Badge—without confusing the base symbol with its badge artwork. Name metadata adds Squared, Circled, Slashed, and Sparkled. Stable icon IDs let the compiler apply validated display-name and category changes from `build/icon-library-overrides.json` after deduplication. The UI renders 120 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, removes the `Svgrepo Com` display-label suffix, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules support both earlier and reorganized SVG Converter collection names: `!Badge`/`Badge`, `!Time`/`Time`, `server:drive`/`Cloud:Drive`, `shapes`/`Shapes`, `sparkles`/`Sparkles:Rays`, and `weather`/`Weather` remain in Badged, Time, Cloud/Server, Shapes, Sparkled, and Weather after deduplication. Badge subtype metadata is read only from content following the last badge token, producing 39 nested choices—including plain Badge—without confusing the base symbol with its badge artwork; Circle, Multiple, and Slash are intentionally omitted as Badge children. Name metadata adds Squared, Circled, Slashed, and Sparkled. Stable icon IDs let the compiler apply validated display-name and category changes from `build/icon-library-overrides.json` after deduplication. The compiler accepts either the older wrapped override object or the simple exported override array. The UI renders 500 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.20",
-    "buildId": "0.0.1.20",
+    "appVersion": "0.0.1.21",
+    "buildId": "0.0.1.21",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -63,7 +63,7 @@ The current model is version 4:
     "supportTab": "settings"
   },
   "modules": {
-    "iconLibrary": { "category": "all", "kind": "all", "source": "all", "sidebarWidth": 204, "overrides": [] },
+    "iconLibrary": { "category": "all", "kind": "all", "source": "all", "sidebarWidth": 204, "minimumLabelLength": 0, "overrides": [] },
     "documents": {},
     "roadmap": {},
     "cloudSync": {}
@@ -71,7 +71,7 @@ The current model is version 4:
 }
 ```
 
-Icon-library overrides are normalized to stable icon ID, sanitized display name, and recognized category IDs. They are user-managed content: backup and sync include them, Reset Preferences preserves them, and Erase All removes them.
+Icon-library overrides are normalized to stable icon ID, sanitized display name, and recognized category IDs. They are user-managed content: backup and sync include them, Reset Preferences preserves them, and Erase All removes them. `minimumLabelLength` is a Developer Mode filter from 0 through 120; it persists locally but is ignored while Developer Mode is off.
 
 The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. Fresh Notes are blank, and normalization removes the exact former demonstration sentence while preserving all other user text. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 

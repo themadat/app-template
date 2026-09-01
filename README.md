@@ -2,18 +2,18 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.20` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.21` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
 - Sticky application header with version, Beta, centered icon search, Notes, and Settings controls.
-- Full-width responsive catalog of 2,296 deduplicated SVG icons gathered from the sibling local applications.
-- Dense Symbol/Custom cards beside a compact sticky, horizontally resizable category/filter rail, with Cloud/Server, Shapes, 42 nested Badged subcategories, Squared, Circled, Slashed, Sparkled, and Weather categories, semantic search tags, editable names/groups, compiler-ready update export, on-demand source details, module shortcuts, batched rendering, and one-click SVG copying.
+- Full-width responsive catalog of 2,380 deduplicated SVG icons gathered from the sibling local applications.
+- Dense Symbol/Custom cards beside a compact sticky, horizontally resizable category/filter rail, with Cloud/Server, Shapes, 39 nested Badged subcategories, Squared, Circled, Slashed, Sparkled, Time, and Weather categories, semantic search tags, editable names/groups, compact override export, on-demand source details, module shortcuts, 500-icon rendering batches, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
 - Replaceable Roadmap inside Settings with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
 - Optional GitHub Contents API synchronization with explicit conflict choices and manual JSON backup/restore.
-- Contextual hints, toast and live announcements, keyboard shortcuts, including V/X What’s New banner actions, shortcut-hint mode, and hidden Developer Mode.
+- Contextual hints, toast and live announcements, keyboard shortcuts, including V/X What’s New banner actions, shortcut-hint mode, and hidden Developer Mode with minimum-label-length filtering.
 - Installable offline PWA shell with light/dark assets and a bottom new-version toast with R/X Force Refresh and Close shortcuts.
 
 ## Run locally
@@ -60,7 +60,7 @@ context/                       Agent wish, plan, start, and cut workflow
 
 ## Rebuild the SVG icon catalog
 
-The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler discovers and scans every non-hidden sibling directory beside `app-template`, including `mctree-mchome`. It captures every complete SVG template literal that closes with `</svg>` and a backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files. It rejects dynamic, executable, or externally referenced SVG content, skips standalone canvases larger than 256 KB, deduplicates matching artwork, coalesces repeated SF Symbol names, classifies results as SF Symbols or Custom, assigns one or more reusable categories, generates semantic search tags, and preserves aliases plus source metadata. For `svg-converter`, it deliberately ignores the generated `output/` and `output-circle:square/` trees because those copies remove transparent-canvas opacity and duplicate the raw symbols. Every SVG in `app-input/!Badge/` is assigned to `Badged` and the subtype immediately following its badge token, every SVG in `app-input/server:drive/` is assigned to `Cloud/Server`, every SVG in `app-input/shapes/` is assigned to `Shapes`, every SVG in `app-input/sparkles/` is assigned to `Sparkled`, and every SVG in `app-input/weather/` is assigned to `Weather`; these assignments remain when symbols merge with existing sources. Badged exports 42 nested choices, including `Badge` for a plain badge with no suffix. Name metadata also drives Squared, Circled, Slashed, and Sparkled.
+The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler discovers and scans every non-hidden sibling directory beside `app-template`, including `mctree-mchome`. It captures every complete SVG template literal that closes with `</svg>` and a backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files. It rejects dynamic, executable, or externally referenced SVG content, skips standalone canvases larger than 256 KB, deduplicates matching artwork, coalesces repeated SF Symbol names, classifies results as SF Symbols or Custom, assigns one or more reusable categories, generates semantic search tags, removes the imported `Svgrepo Com` suffix from display labels, and preserves aliases plus source metadata. For `svg-converter`, it deliberately ignores the generated `output/` and `output-circle:square/` trees because those copies remove transparent-canvas opacity and duplicate the raw symbols. Source-aware rules accept both the earlier and reorganized collection names: `!Badge` or `Badge` maps to Badged, `!Time` or `Time` maps to Time, `server:drive` or `Cloud:Drive` maps to Cloud/Server, `shapes` or `Shapes` maps to Shapes, `sparkles` or `Sparkles:Rays` maps to Sparkled, and `weather` or `Weather` maps to Weather. These assignments remain when symbols merge with existing sources. Badged exports 39 nested choices, including `Badge` for a plain badge with no suffix; Circle, Multiple, and Slash remain searchable but are not nested Badge filters. Name metadata also drives Squared, Circled, Slashed, and Sparkled.
 
 Run it after adding or changing source symbols:
 
@@ -80,7 +80,7 @@ The compiler rewrites only `assets/js/icon-library.js` and reads optional perman
 
 Open an icon’s information dialog, select **Edit name & groups**, change its display name or group checkboxes, and save. These overrides autosave locally, participate in JSON backup and GitHub Sync, and survive **Reset preferences**. **Reset icon** restores only that icon’s compiled metadata.
 
-Select **Download updates** in the editor—or use the Download updates action in the save toast—to create `app-template-icon-updates-YYYY-MM-DD-vVERSION.json`. Attach that file in a future request and ask for it to be hard-coded. Its format matches `build/icon-library-overrides.json`; replace or merge the `overrides` array there, then run `node build/compile-icon-library.mjs`. Each entry is keyed by the stable generated `iconId`, so a changed display name still applies on later catalog rebuilds. The update file contains only icon IDs, display names, and group IDs; it contains no SVG content, tokens, or other secrets.
+Select **Export overrides** in the editor or Developer Mode—or use the Export overrides action in the save toast—to create `app-template-icon-overrides-YYYY-MM-DD.json`. Attach that file in a future request and ask for it to be hard-coded. The compact file is a plain array containing only `iconId`, `label`, and `categories`; it can also replace `build/icon-library-overrides.json` directly because the compiler accepts both the simple array and the older wrapped format. Each entry uses the stable generated icon id, so a changed display name still applies on later catalog rebuilds. The file contains no SVG content, tokens, or other secrets.
 
 ## Update the application icons
 
@@ -183,4 +183,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.20 - Add complete Badge subcategories`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.21 - Refine icon catalog controls`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

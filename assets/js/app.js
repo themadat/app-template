@@ -18,7 +18,7 @@
   let iconCatalog = sourceIconCatalog;
   let iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
   let iconSearchIndex = new Map();
-  const ICON_PAGE_SIZE = 120;
+  const ICON_PAGE_SIZE = 500;
   const ICON_FILTER_MIN_WIDTH = 156;
   const ICON_FILTER_MAX_WIDTH = 360;
   let versionView = "released";
@@ -268,10 +268,12 @@
     const kind = ["sf-symbol", "custom"].includes(moduleState.kind) ? moduleState.kind : "all";
     const category = settings.ignoreCategory ? "all" : selectedIconCategory();
     const needle = String(state().ui.search || "").trim().toLowerCase();
+    const minimumLabelLength = state().preferences.controls.developerMode ? Math.round(u.clamp(moduleState.minimumLabelLength, 0, 120, 0)) : 0;
     const filtered = iconCatalog.filter(function (icon) {
       return (kind === "all" || icon.kind === kind)
         && (sourceFilter === "all" || icon.repositories.includes(sourceFilter))
         && (category === "all" || (icon.categories || []).includes(category))
+        && (!minimumLabelLength || icon.label.length >= minimumLabelLength)
         && iconMatches(icon, needle);
     });
     filtered.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }); });
@@ -410,23 +412,16 @@
       return;
     }
     const generatedAt = u.isoNow();
-    const payload = {
-      format: "app-template-icon-library-overrides",
-      formatVersion: 1,
-      generatedAt: generatedAt,
-      applicationVersion: config.identity.version,
-      overrides: overrides
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2) + "\n"], { type: "application/json" });
+    const blob = new Blob([JSON.stringify(overrides, null, 2) + "\n"], { type: "application/json" });
     const href = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
     anchor.href = href;
-    anchor.download = "app-template-icon-updates-" + generatedAt.slice(0, 10) + "-v" + config.identity.version + ".json";
+    anchor.download = "app-template-icon-overrides-" + generatedAt.slice(0, 10) + ".json";
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();
     window.setTimeout(function () { URL.revokeObjectURL(href); }, 0);
-    components.toast(overrides.length + (overrides.length === 1 ? " icon update is" : " icon updates are") + " ready to feed back into this repository.", { title: "Update file downloaded", kind: "success" });
+    components.toast(overrides.length + (overrides.length === 1 ? " icon override is" : " icon overrides are") + " ready to feed back into this repository.", { title: "Overrides downloaded", kind: "success" });
   }
 
   function sameIconCategories(a, b) {
@@ -440,7 +435,7 @@
     const baseIcon = sourceIconById.get(iconId);
     if (!baseIcon) return;
     const input = $("#iconEditLabel");
-    const label = u.cleanLine(input.value, 120);
+    const label = u.cleanIconLabel(input.value, 120);
     const validation = $("#iconEditValidation");
     if (!label) {
       input.setAttribute("aria-invalid", "true");
@@ -474,7 +469,7 @@
     components.toast(changed ? label + " was saved with its selected groups." : "The compiled name and groups are already in use.", {
       title: changed ? "Icon updated" : "Icon unchanged",
       kind: "success",
-      actionLabel: overrideCount ? "Download updates" : "",
+      actionLabel: overrideCount ? "Export overrides" : "",
       actionSymbol: overrideCount ? "down" : "",
       onAction: overrideCount ? exportIconUpdates : null
     });
@@ -633,7 +628,9 @@
     $("#iconLibraryCount").textContent = matches.length === iconCatalog.length ? iconCatalog.length + " icons" : matches.length + " of " + iconCatalog.length;
     const category = iconCategoryById.get(selectedIconCategory());
     const scope = category ? " in " + category.label : "";
-    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons" : " icons") + scope + "." : "No icons match the current search, category, and filters.";
+    const minimumLabelLength = state().preferences.controls.developerMode ? Math.round(u.clamp(state().modules.iconLibrary.minimumLabelLength, 0, 120, 0)) : 0;
+    const lengthScope = minimumLabelLength ? " with labels of " + minimumLabelLength + "+ characters" : "";
+    $("#iconLibraryStatus").textContent = matches.length ? "Showing " + shown.length + " of " + matches.length + (state().ui.search ? " matching icons" : " icons") + scope + lengthScope + "." : "No icons match the current search, category, and filters" + lengthScope + ".";
   }
 
   function writeClipboard(text) {
@@ -888,6 +885,12 @@
     ];
     diagnostics.splice(2, 0, ["Notes", documentText(state().workspace.documents[0]).length + " characters"]);
     $("#developerDiagnostics").innerHTML = diagnostics.map(function (row) { return '<div><dt>' + u.escapeHtml(row[0]) + '</dt><dd>' + u.escapeHtml(row[1]) + "</dd></div>"; }).join("");
+    const minimumLabelLength = Math.round(u.clamp(state().modules.iconLibrary.minimumLabelLength, 0, 120, 0));
+    setInputValue($("#developerLabelLengthFilter"), minimumLabelLength || "");
+    const matchingLongLabels = minimumLabelLength ? iconCatalog.filter(function (icon) { return icon.label.length >= minimumLabelLength; }).length : iconCatalog.length;
+    $("#developerLabelLengthStatus").textContent = minimumLabelLength ? matchingLongLabels + " icons have labels of " + minimumLabelLength + " or more characters." : "Label-length filtering is off.";
+    $("#clearDeveloperLabelLengthFilter").disabled = minimumLabelLength === 0;
+    $("#developerExportIconOverrides").disabled = !(state().modules.iconLibrary.overrides || []).length;
     $("#developerState").textContent = JSON.stringify(model.exportEnvelope(state()), null, 2);
     $("#restoreRecoveryButton").disabled = !recovery;
   }
@@ -987,6 +990,8 @@
     storage.mutate(function (next) { next.preferences.controls.developerMode = typeof force === "boolean" ? force : !next.preferences.controls.developerMode; }, { reason: "developer-mode" });
     $("#developerTab").hidden = !state().preferences.controls.developerMode;
     renderHeader();
+    iconVisibleCount = ICON_PAGE_SIZE;
+    renderIconLibrary();
     if (state().preferences.controls.developerMode) {
       components.toast("Developer Mode is available in Settings & Help.", { title: "Developer Mode on", kind: "info" });
       if (options && options.openPanel) openSupport("developer");
@@ -1121,6 +1126,21 @@
     });
     $("#restoreRecoveryButton").addEventListener("click", restoreRecovery);
     $("#saveRecoveryButton").addEventListener("click", saveRecoveryCopy);
+    $("#developerLabelLengthFilter").addEventListener("change", function (event) {
+      const minimum = Math.round(u.clamp(event.target.value, 0, 120, 0));
+      event.target.value = minimum || "";
+      storage.mutate(function (next) { next.modules.iconLibrary.minimumLabelLength = minimum; }, { reason: "developer-icon-filter" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+      renderDeveloper();
+    });
+    $("#clearDeveloperLabelLengthFilter").addEventListener("click", function () {
+      storage.mutate(function (next) { next.modules.iconLibrary.minimumLabelLength = 0; }, { reason: "developer-icon-filter" });
+      iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+      renderDeveloper();
+    });
+    $("#developerExportIconOverrides").addEventListener("click", exportIconUpdates);
     $("#disableDeveloperButton").addEventListener("click", function () { toggleDeveloperMode(false); });
   }
 
@@ -1293,7 +1313,8 @@
       if (event.key === "End") next = buttons.length - 1;
       next = (next + buttons.length) % buttons.length;
       event.preventDefault();
-      buttons[next].focus();
+      if (event.key === "ArrowUp" || event.key === "ArrowDown") buttons[next].click();
+      else buttons[next].focus();
     });
     $("#iconInfoCopyButton").addEventListener("click", function (event) { copyIcon(event.currentTarget.dataset.iconInfoCopy, event.currentTarget); });
     $("#iconInfoEditButton").addEventListener("click", function (event) {
