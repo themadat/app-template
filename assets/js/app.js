@@ -368,7 +368,7 @@
     const selected = new Set(icon.categories || []);
     $("#iconEditGroups").innerHTML = iconCategories.filter(function (category) { return !category.parent; }).map(function (category) {
       const children = iconCategories.filter(function (candidate) { return candidate.parent === category.id; });
-      return '<div class="icon-edit-group-cluster">' + iconEditChoice(category, selected) + (children.length ? '<div class="icon-edit-subgroups" role="group" aria-label="' + u.escapeHtml(category.label + " subgroups") + '">' + children.map(function (child) { return iconEditChoice(child, selected); }).join("") + '</div>' : "") + '</div>';
+      return '<div class="icon-edit-group-cluster" data-icon-edit-group="' + u.escapeHtml(category.id) + '">' + iconEditChoice(category, selected) + (children.length ? '<div class="icon-edit-subgroups" role="group" aria-label="' + u.escapeHtml(category.label + " subgroups") + '">' + children.map(function (child) { return iconEditChoice(child, selected); }).join("") + '</div>' : "") + '</div>';
     }).join("");
     updateIconEditControls();
   }

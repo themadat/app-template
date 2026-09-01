@@ -2,13 +2,13 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.19` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.20` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
 - Sticky application header with version, Beta, centered icon search, Notes, and Settings controls.
-- Full-width responsive catalog of 1,777 deduplicated SVG icons gathered from the sibling local applications.
-- Dense Symbol/Custom cards beside a compact sticky, horizontally resizable category/filter rail, with Cloud/Server, Shapes, nested Badged subcategories, Squared, Circled, Slashed, Sparkled, and Weather categories, semantic search tags, editable names/groups, compiler-ready update export, on-demand source details, module shortcuts, batched rendering, and one-click SVG copying.
+- Full-width responsive catalog of 2,296 deduplicated SVG icons gathered from the sibling local applications.
+- Dense Symbol/Custom cards beside a compact sticky, horizontally resizable category/filter rail, with Cloud/Server, Shapes, 42 nested Badged subcategories, Squared, Circled, Slashed, Sparkled, and Weather categories, semantic search tags, editable names/groups, compiler-ready update export, on-demand source details, module shortcuts, batched rendering, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
 - Replaceable Roadmap inside Settings with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
@@ -60,7 +60,7 @@ context/                       Agent wish, plan, start, and cut workflow
 
 ## Rebuild the SVG icon catalog
 
-The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler discovers and scans every non-hidden sibling directory beside `app-template`, including `mctree-mchome`. It captures every complete SVG template literal that closes with `</svg>` and a backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files. It rejects dynamic, executable, or externally referenced SVG content, skips standalone canvases larger than 256 KB, deduplicates matching artwork, coalesces repeated SF Symbol names, classifies results as SF Symbols or Custom, assigns one or more reusable categories, generates semantic search tags, and preserves aliases plus source metadata. For `svg-converter`, it deliberately ignores the generated `output/` and `output-circle:square/` trees because those copies remove transparent-canvas opacity and duplicate the raw symbols. Every SVG in `app-input/server:drive/` is assigned to `Cloud/Server`, every SVG in `app-input/shapes/` is assigned to `Shapes`, every SVG in `app-input/sparkles/` is assigned to `Sparkled`, and every SVG in `app-input/weather/` is assigned to `Weather`; these assignments remain when symbols merge with existing sources. Name metadata also drives Badged, Squared, Circled, Slashed, and Sparkled, with Plus, Minus, Checkmark, and Xmark nested under Badged.
+The committed `assets/js/icon-library.js` file is sufficient at runtime; rebuilding it is an optional development task. By default, the compiler discovers and scans every non-hidden sibling directory beside `app-template`, including `mctree-mchome`. It captures every complete SVG template literal that closes with `</svg>` and a backtick, fixed SF Symbol markup embedded in source HTML, and standalone `.svg` files. It rejects dynamic, executable, or externally referenced SVG content, skips standalone canvases larger than 256 KB, deduplicates matching artwork, coalesces repeated SF Symbol names, classifies results as SF Symbols or Custom, assigns one or more reusable categories, generates semantic search tags, and preserves aliases plus source metadata. For `svg-converter`, it deliberately ignores the generated `output/` and `output-circle:square/` trees because those copies remove transparent-canvas opacity and duplicate the raw symbols. Every SVG in `app-input/!Badge/` is assigned to `Badged` and the subtype immediately following its badge token, every SVG in `app-input/server:drive/` is assigned to `Cloud/Server`, every SVG in `app-input/shapes/` is assigned to `Shapes`, every SVG in `app-input/sparkles/` is assigned to `Sparkled`, and every SVG in `app-input/weather/` is assigned to `Weather`; these assignments remain when symbols merge with existing sources. Badged exports 42 nested choices, including `Badge` for a plain badge with no suffix. Name metadata also drives Squared, Circled, Slashed, and Sparkled.
 
 Run it after adding or changing source symbols:
 
@@ -183,4 +183,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.19 - Edit icon metadata and add Weather`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.20 - Add complete Badge subcategories`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

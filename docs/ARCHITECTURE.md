@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules guarantee that SVG Converter’s `server:drive`, `shapes`, `sparkles`, and `weather` collections remain in Cloud/Server, Shapes, Sparkled, and Weather after deduplication; name metadata adds Badged, Squared, Circled, Slashed, and Sparkled, while Plus, Minus, Checkmark, and Xmark are nested beneath Badged. Stable icon IDs let the compiler apply validated display-name and category changes from `build/icon-library-overrides.json` after deduplication. The UI renders 120 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, excludes corrupted derived SVG Converter outputs, normalizes SF Symbol paint to currentColor, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Source-aware rules guarantee that SVG Converter’s `!Badge`, `server:drive`, `shapes`, `sparkles`, and `weather` collections remain in Badged, Cloud/Server, Shapes, Sparkled, and Weather after deduplication. Badge subtype metadata is read only from content following the last badge token, producing 42 nested choices—including plain Badge—without confusing the base symbol with its badge artwork. Name metadata adds Squared, Circled, Slashed, and Sparkled. Stable icon IDs let the compiler apply validated display-name and category changes from `build/icon-library-overrides.json` after deduplication. The UI renders 120 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.19",
-    "buildId": "0.0.1.19",
+    "appVersion": "0.0.1.20",
+    "buildId": "0.0.1.20",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",

@@ -110,10 +110,48 @@ const ICON_CATEGORIES = [
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
   { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
-  { id: "badged", label: "Badged", terms: ["badge", "trianglebadge"] },
-  { id: "badged-plus", label: "Plus", parent: "badged", terms: ["plus"] },
+  { id: "badged", label: "Badged", terms: ["badge", "trianglebadge", "circlebadge"] },
+  { id: "badged-badge", label: "Badge", parent: "badged", terms: ["badge"] },
+  { id: "badged-airplane", label: "Airplane", parent: "badged", terms: ["airplane"] },
+  { id: "badged-arrow", label: "Arrow", parent: "badged", terms: ["arrow"] },
+  { id: "badged-automatic", label: "Automatic", parent: "badged", terms: ["automatic"] },
+  { id: "badged-bolt", label: "Bolt", parent: "badged", terms: ["bolt"] },
+  { id: "badged-camera", label: "Camera", parent: "badged", terms: ["camera"] },
+  { id: "badged-checkmark", label: "Checkmark", parent: "badged", terms: ["checkmark"] },
+  { id: "badged-chevron", label: "Chevron", parent: "badged", terms: ["chevron"] },
+  { id: "badged-circle", label: "Circle", parent: "badged", terms: ["circle"] },
+  { id: "badged-clock", label: "Clock", parent: "badged", terms: ["clock"] },
+  { id: "badged-creditcard", label: "Credit Card", parent: "badged", terms: ["creditcard"] },
+  { id: "badged-ellipsis", label: "Ellipsis", parent: "badged", terms: ["ellipsis"] },
+  { id: "badged-exclamationmark", label: "Exclamation Mark", parent: "badged", terms: ["exclamationmark"] },
+  { id: "badged-eye", label: "Eye", parent: "badged", terms: ["eye"] },
+  { id: "badged-gauge", label: "Gauge", parent: "badged", terms: ["gauge"] },
+  { id: "badged-gearshape", label: "Gear", parent: "badged", terms: ["gearshape"] },
+  { id: "badged-icloud", label: "iCloud", parent: "badged", terms: ["icloud"] },
+  { id: "badged-key", label: "Key", parent: "badged", terms: ["key"] },
+  { id: "badged-location", label: "Location", parent: "badged", terms: ["location"] },
+  { id: "badged-lock", label: "Lock", parent: "badged", terms: ["lock"] },
+  { id: "badged-magnifyingglass", label: "Magnifying Glass", parent: "badged", terms: ["magnifyingglass"] },
+  { id: "badged-microphone", label: "Microphone", parent: "badged", terms: ["microphone"] },
   { id: "badged-minus", label: "Minus", parent: "badged", terms: ["minus"] },
-  { id: "badged-checkmark", label: "Checkmark", parent: "badged", terms: ["checkmark", "check"] },
+  { id: "badged-moon", label: "Moon", parent: "badged", terms: ["moon"] },
+  { id: "badged-multiple", label: "Multiple", parent: "badged", terms: ["2"] },
+  { id: "badged-pause", label: "Pause", parent: "badged", terms: ["pause"] },
+  { id: "badged-person", label: "Person", parent: "badged", terms: ["person"] },
+  { id: "badged-play", label: "Play", parent: "badged", terms: ["play"] },
+  { id: "badged-plus", label: "Plus", parent: "badged", terms: ["plus"] },
+  { id: "badged-questionmark", label: "Question Mark", parent: "badged", terms: ["questionmark"] },
+  { id: "badged-record", label: "Record", parent: "badged", terms: ["record"] },
+  { id: "badged-shield", label: "Shield", parent: "badged", terms: ["shield"] },
+  { id: "badged-slash", label: "Slash", parent: "badged", terms: ["slash"] },
+  { id: "badged-snowflake", label: "Snowflake", parent: "badged", terms: ["snowflake"] },
+  { id: "badged-sparkles", label: "Sparkles", parent: "badged", terms: ["sparkles"] },
+  { id: "badged-star", label: "Star", parent: "badged", terms: ["star"] },
+  { id: "badged-steeringwheel", label: "Steering Wheel", parent: "badged", terms: ["steeringwheel"] },
+  { id: "badged-timemachine", label: "Time Machine", parent: "badged", terms: ["timemachine"] },
+  { id: "badged-video", label: "Video", parent: "badged", terms: ["video"] },
+  { id: "badged-waveform", label: "Waveform", parent: "badged", terms: ["waveform"] },
+  { id: "badged-wifi", label: "Wi-Fi", parent: "badged", terms: ["wifi"] },
   { id: "badged-xmark", label: "Xmark", parent: "badged", terms: ["xmark"] },
   { id: "squared", label: "Squared", terms: ["square"] },
   { id: "circled", label: "Circled", terms: ["circle"] },
@@ -211,18 +249,39 @@ function metadataKeys(values) {
   return keys;
 }
 
+function badgeSubtypeKeys(record) {
+  const subtypes = new Set();
+  const values = [record.name].concat(Array.from(record.aliases), record.sources.flatMap(function (source) {
+    return [source.symbol, path.basename(source.file, path.extname(source.file))];
+  }));
+  values.forEach(function (value) {
+    const tokens = normalizedName(value).split("_");
+    let badgeIndex = -1;
+    tokens.forEach(function (token, index) {
+      if (token === "badge" || token.endsWith("badge")) badgeIndex = index;
+    });
+    if (badgeIndex < 0) return;
+    const trailing = tokens.slice(badgeIndex + 1).filter(function (token) { return token !== "fill" && token !== "filled"; });
+    subtypes.add(trailing[0] || "badge");
+  });
+  return subtypes;
+}
+
 function deriveMetadata(record) {
   const keys = metadataKeys([record.name].concat(Array.from(record.aliases), record.sources.map(function (item) { return item.symbol; })));
+  const badgeSubtypes = badgeSubtypeKeys(record);
   const categories = ICON_CATEGORIES.filter(function (category) {
     if (category.id === "shapes") return category.terms.some(function (term) {
       const normalized = normalizedName(term);
       return record.name === normalized || record.name.startsWith(normalized + "_");
     });
-    const matches = category.terms.some(function (term) { return keys.has(normalizedName(term)); });
-    if (!matches || !category.parent) return matches;
-    const parent = ICON_CATEGORIES.find(function (item) { return item.id === category.parent; });
-    return parent && parent.terms.some(function (term) { return keys.has(normalizedName(term)); });
+    if (category.parent === "badged") return category.terms.some(function (term) { return badgeSubtypes.has(normalizedName(term)); });
+    return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
+  const isBadgeSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/!Badge\//i.test(source.file);
+  });
+  if (isBadgeSource && !categories.includes("badged")) categories.push("badged");
   const isCloudServerSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/server:drive\//i.test(source.file);
   });
