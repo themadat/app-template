@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-02T19:56:27Z",
-  "applicationVersion": "0.0.1.29",
+  "generatedAt": "2026-09-02T23:25:46Z",
+  "applicationVersion": "0.0.1.30",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -575,14 +575,16 @@
       "iconId": "lock-square-stack-7f6268",
       "label": "Lock Square Stack",
       "categories": [
-        "security"
+        "security",
+        "objects-tools"
       ]
     },
     {
       "iconId": "lock-square-stack-fill-f3d108",
       "label": "Lock Square Stack Fill",
       "categories": [
-        "security"
+        "security",
+        "objects-tools"
       ]
     },
     {
@@ -699,7 +701,8 @@
       "label": "Rectangle And Pencil And Ellipsis",
       "categories": [
         "editing",
-        "interface"
+        "interface",
+        "objects-tools"
       ]
     },
     {
@@ -879,7 +882,8 @@
       "iconId": "rectangle-landscape-rotate-c6a65c",
       "label": "Rectangle Landscape Rotate",
       "categories": [
-        "editing"
+        "editing",
+        "objects-tools"
       ]
     },
     {
@@ -887,7 +891,8 @@
       "label": "Rectangle Landscape Rotate Slash",
       "categories": [
         "editing",
-        "slashed"
+        "slashed",
+        "objects-tools"
       ]
     },
     {
@@ -946,7 +951,8 @@
       "iconId": "rectangle-portrait-rotate-1cc6fe",
       "label": "Rectangle Portrait Rotate",
       "categories": [
-        "editing"
+        "editing",
+        "objects-tools"
       ]
     },
     {
@@ -954,7 +960,8 @@
       "label": "Rectangle Portrait Rotate Slash",
       "categories": [
         "editing",
-        "slashed"
+        "slashed",
+        "objects-tools"
       ]
     },
     {
@@ -1302,7 +1309,8 @@
       "iconId": "square-and-pencil-535890",
       "label": "Square And Pencil",
       "categories": [
-        "editing"
+        "editing",
+        "objects-tools"
       ]
     },
     {
@@ -1310,7 +1318,8 @@
       "label": "Square And Pencil Circle",
       "categories": [
         "editing",
-        "circled"
+        "circled",
+        "objects-tools"
       ]
     },
     {
@@ -1318,7 +1327,8 @@
       "label": "Square And Pencil Circle Fill",
       "categories": [
         "editing",
-        "circled"
+        "circled",
+        "objects-tools"
       ]
     },
     {
@@ -1402,7 +1412,8 @@
         "interface",
         "badged",
         "badged-plus",
-        "status"
+        "status",
+        "objects-tools"
       ]
     },
     {
@@ -1414,7 +1425,8 @@
         "interface",
         "badged",
         "badged-plus",
-        "status"
+        "status",
+        "objects-tools"
       ]
     },
     {
@@ -1426,7 +1438,8 @@
         "interface",
         "badged",
         "badged-plus",
-        "status"
+        "status",
+        "objects-tools"
       ]
     },
     {

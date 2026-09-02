@@ -280,6 +280,7 @@
 
   function repositoryLabel(value) {
     if (value === "mctree-mchome") return "McTree McHome";
+    if (value === "objects-tools") return "Objects & Tools";
     return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
   }
 
@@ -373,14 +374,15 @@
       return '<div class="icon-category-group" data-icon-category-depth="' + depth + '">' + branch + childMarkup + '</div>';
     }
 
-    const rootChoices = choices.filter(function (choice) { return !choice.parent; });
+    const otherChoice = choices.find(function (choice) { return choice.id === "other"; });
+    const rootChoices = choices.filter(function (choice) { return !choice.parent && choice.id !== "other"; });
     const sections = ICON_CATEGORY_SECTIONS.map(function (section) {
       const sectionChoices = categoryRootsForSection(rootChoices, section.id);
       if (!sectionChoices.length) return "";
       const headingId = "icon-category-section-" + section.id;
       return '<section class="icon-category-section" aria-labelledby="' + headingId + '"><h3 id="' + headingId + '" class="icon-category-section-title">' + u.escapeHtml(section.label) + '</h3><div class="icon-category-section-groups">' + sectionChoices.map(function (choice) { return categoryTree(choice, 0); }).join("") + '</div></section>';
     }).join("");
-    container.innerHTML = '<div class="icon-category-all">' + choiceButton({ id: "all", label: "All", parent: "", count: baseMatches.length }, false) + '</div>' + sections;
+    container.innerHTML = '<div class="icon-category-all">' + choiceButton({ id: "all", label: "All", parent: "", count: baseMatches.length }, false) + '</div>' + (otherChoice ? '<div class="icon-category-other">' + choiceButton(otherChoice, false) + '</div>' : "") + sections;
     icons.mount(container);
     decorateShortcutControls(container);
   }

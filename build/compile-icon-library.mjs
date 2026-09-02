@@ -3,6 +3,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -10,13 +11,37 @@ const sourceParent = path.dirname(projectRoot);
 const outputFile = path.join(projectRoot, "assets/js/icon-library.js");
 const overrideFile = path.join(projectRoot, "build/icon-library-overrides.json");
 const requestedRoots = process.argv.slice(2);
+const seedFile = process.env.APP_TEMPLATE_ICON_SEED || outputFile;
+
+function readExistingCatalog() {
+  if (!fs.existsSync(seedFile)) return [];
+  try {
+    const sandbox = { window: { LocalApp: {} } };
+    vm.runInNewContext(fs.readFileSync(seedFile, "utf8"), sandbox, { filename: seedFile });
+    return Array.isArray(sandbox.window.LocalApp.iconLibrary?.icons) ? sandbox.window.LocalApp.iconLibrary.icons : [];
+  } catch (error) {
+    process.stderr.write("Could not retain the existing compiled catalog: " + error.message + "\n");
+    return [];
+  }
+}
+
+const existingCatalog = readExistingCatalog();
+const existingIdByName = new Map();
+existingCatalog.forEach(function (icon) {
+  [icon.name].concat(Array.isArray(icon.aliases) ? icon.aliases : []).filter(Boolean).forEach(function (name) {
+    if (!existingIdByName.has(name)) existingIdByName.set(name, icon.id);
+  });
+});
 
 function discoverDefaultSources() {
-  return fs.readdirSync(sourceParent, { withFileTypes: true }).filter(function (entry) {
-    return entry.isDirectory() && !entry.name.startsWith(".") && entry.name !== "backups";
+  const discovered = fs.readdirSync(sourceParent, { withFileTypes: true }).filter(function (entry) {
+    return entry.isDirectory() && !entry.name.startsWith(".") && entry.name !== "backups" && entry.name !== "!backups:data";
   }).map(function (entry) {
     return { name: entry.name, root: path.join(sourceParent, entry.name) };
-  }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+  });
+  const objectsToolsRoot = path.join(sourceParent, "!backups:data", "icons", "app-input", "Objects & Tools");
+  if (fs.existsSync(objectsToolsRoot)) discovered.push({ name: "objects-tools", root: objectsToolsRoot });
+  return discovered.sort(function (a, b) { return a.name.localeCompare(b.name); });
 }
 
 const sources = requestedRoots.length ? requestedRoots.map(function (root) {
@@ -123,6 +148,7 @@ const ICON_CATEGORIES = [
   { id: "nature", label: "Nature", terms: ["nature", "mountain", "water", "volcano"] },
   { id: "animals-plants", label: "Animals & Plants", parent: "nature", terms: ["leaf", "tree", "flower", "plant", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor"] },
   { id: "weather", label: "Weather", parent: "nature", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] },
+  { id: "objects-tools", label: "Objects & Tools", terms: ["object", "tool", "hammer", "wrench", "screwdriver", "flashlight", "lamp", "chair", "sofa", "bed", "toilet", "key", "suitcase", "briefcase", "watch", "clock", "shoe", "scissors", "ruler", "paintbrush", "basket", "box", "shippingbox", "mug", "cup"] },
   { id: "rays-sparkles", label: "Rays & Sparkles", section: "appearance", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid", "eye off"] },
@@ -375,6 +401,8 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/(?:!Rays|Rays)\//i.test(source.file);
   });
   if (isRaysSource && !categories.includes("rays-sparkles")) categories.push("rays-sparkles");
+  const isObjectsToolsSource = record.sources.some(function (source) { return source.repo === "objects-tools"; });
+  if (isObjectsToolsSource && !categories.includes("objects-tools")) categories.push("objects-tools");
   const isLocationSource = record.sources.some(function (source) {
     return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents|earth)\//i.test(source.file);
   });
@@ -432,10 +460,15 @@ function templateLiteral(value) {
 function isSfSymbol(input) {
   const original = String(input.svg || "");
   const file = String(input.file || "");
-  return /\bclass=["'][^"']*\bsf-symbol\b/i.test(original)
+  return input.kind === "sf-symbol"
+    || /\bclass=["'][^"']*\bsf-symbol\b/i.test(original)
     || /Generator:\s*Apple Native CoreSVG/i.test(original)
     || input.repo === "svg-converter" && /(?:^|\/)(?:bulk-convert-format|bulk-convert-circle|output|output-circle)/i.test(file)
     || /(?:^|\/)build\/icon-sources\/source-material\//i.test(file);
+}
+
+function iconNameComesFirst(candidate, current) {
+  return candidate.length < current.length || (candidate.length === current.length && candidate.localeCompare(current) < 0);
 }
 
 function repairKnownSourceIcon(input, svg) {
@@ -455,6 +488,11 @@ function repairKnownSourceIcon(input, svg) {
 }
 
 function consolidateRecords(target, duplicate) {
+  if (iconNameComesFirst(duplicate.name, target.name)) {
+    target.name = duplicate.name;
+    target.hash = duplicate.hash;
+    target.svg = duplicate.svg;
+  }
   duplicate.aliases.forEach(function (alias) { target.aliases.add(alias); });
   target.sources.push.apply(target.sources, duplicate.sources);
   duplicate.kinds.forEach(function (kind) { target.kinds.add(kind); });
@@ -472,7 +510,7 @@ function addIcon(input) {
   const repaired = repairKnownSourceIcon(input, svg);
   svg = repaired.svg;
   const hash = crypto.createHash("sha256").update(canonicalSvg(svg)).digest("hex").slice(0, 12);
-  const name = normalizedName(repaired.symbol);
+  const name = normalizedName(input.preferredName || repaired.symbol);
   const source = { repo: input.repo, file: input.file, symbol: input.symbol };
   const matchingArtwork = recordsByHash.get(hash);
   const matchingSfName = kind === "sf-symbol" ? sfRecordsByName.get(name) : null;
@@ -489,7 +527,7 @@ function addIcon(input) {
     existing.kinds.add(kind);
     recordsByHash.set(hash, existing);
     if (kind === "sf-symbol") sfRecordsByName.set(name, existing);
-    if (!input.inline && name.length < existing.name.length) existing.name = name;
+    if (!input.inline && iconNameComesFirst(name, existing.name)) existing.name = name;
     return;
   }
   const record = { hash: hash, name: name, aliases: new Set([name]), sources: [source], kinds: new Set([kind]), svg: svg };
@@ -581,6 +619,13 @@ for (const source of sources) {
   }
 }
 
+existingCatalog.forEach(function (icon) {
+  const retainedSources = Array.isArray(icon.sources) && icon.sources.length ? icon.sources : [{ repo: "retained-catalog", file: "assets/js/icon-library.js", symbol: icon.name }];
+  retainedSources.forEach(function (source, index) {
+    addIcon({ repo: source.repo, file: source.file, symbol: source.symbol || icon.name, preferredName: index === 0 ? icon.name : "", kind: icon.kind, svg: icon.svg });
+  });
+});
+
 const compiledRecords = Array.from(iconRecords).map(function (record) {
   const aliases = Array.from(record.aliases).sort();
   const sourcesForIcon = Array.from(new Map(record.sources.map(function (source) {
@@ -591,7 +636,7 @@ const compiledRecords = Array.from(iconRecords).map(function (record) {
   const preferred = record.name;
   const metadata = deriveMetadata(record);
   return {
-    id: preferred === "x_square_fill" ? "x-square-fill-44b51b" : preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6),
+    id: existingIdByName.get(preferred) || (preferred === "x_square_fill" ? "x-square-fill-44b51b" : preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6)),
     name: preferred,
     label: cleanIconLabel(labelFor(preferred)) || "Icon",
     kind: record.kinds.has("sf-symbol") ? "sf-symbol" : "custom",
@@ -651,7 +696,7 @@ records.forEach(function (record) {
 
 lines.push("  ];");
 const exportedCategories = ICON_CATEGORIES.concat([{ id: "other", label: "Other", section: "meaning", terms: [] }]).filter(function (category) {
-  return records.some(function (record) { return record.categories.includes(category.id); });
+  return category.id === "other" || records.some(function (record) { return record.categories.includes(category.id); });
 }).map(function (category) {
   return Object.assign({ id: category.id, label: category.label }, category.parent ? { parent: category.parent } : { section: category.section || "meaning" });
 });
