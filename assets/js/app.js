@@ -355,8 +355,7 @@
     const typeText = iconKindLabel(icon.kind);
     const label = u.escapeHtml(icon.label);
     const id = u.escapeHtml(icon.id);
-    const nameClass = icon.label.length >= 60 ? " is-extra-long" : "";
-    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name' + nameClass + '" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
+    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
   function iconOverrideFor(iconId) {
@@ -909,10 +908,6 @@
     const preferences = state().preferences;
     const appearance = preferences.appearance;
     $$('[data-theme-mode]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.themeMode === appearance.mode)); });
-    ["accent", "accent2", "success", "warning", "danger"].forEach(function (key) {
-      setInputValue($("[data-color-setting='" + key + "']"), appearance[key]);
-      setInputValue($("[data-color-text='" + key + "']"), appearance[key]);
-    });
     renderTextSizeControl();
     $$('[data-button-style]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.buttonStyle === preferences.controls.buttonStyle)); });
     $("#hintsToggle").setAttribute("aria-pressed", String(preferences.hints.enabled));
@@ -1213,20 +1208,6 @@
       const target = event.key === "Home" ? tabs[0] : event.key === "End" ? tabs[tabs.length - 1] : tabs[(index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
       target.focus(); switchSupportTab(target.dataset.supportTab);
     });
-    dialog.addEventListener("change", function (event) {
-      if (event.target.matches("[data-color-setting]")) {
-        const key = event.target.dataset.colorSetting;
-        storage.mutate(function (next) { next.preferences.appearance[key] = u.normalizeColor(event.target.value, next.preferences.appearance[key]); }, { reason: "appearance" }); applyAppearance(); renderSettings();
-      }
-    });
-    dialog.addEventListener("blur", function (event) {
-      if (!event.target.matches("[data-color-text]")) return;
-      const key = event.target.dataset.colorText;
-      const previous = state().preferences.appearance[key];
-      const normalized = u.normalizeColor(event.target.value, "");
-      if (!normalized) { event.target.value = previous; components.toast("Use a six-digit hex value such as #315f73.", { title: "Color not changed", kind: "warning" }); return; }
-      storage.mutate(function (next) { next.preferences.appearance[key] = normalized; }, { reason: "appearance" }); applyAppearance(); renderSettings();
-    }, true);
     $("#textSizeSlider").addEventListener("input", function (event) { storage.mutate(function (next) { next.preferences.appearance.textScale = Number(event.target.value) / 100; }, { reason: "appearance" }); applyAppearance(); renderTextSizeControl(); });
     $("#hintsToggle").addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.enabled = !next.preferences.hints.enabled; }, { reason: "hints" }); renderHeader(); renderSettings(); });
     $("#restoreHintsButton").addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.dismissed = []; next.ui.dismissedHints = []; }, { reason: "hints" }); renderHeader(); renderSettings(); components.toast("All contextual hints are available again.", { title: "Hints restored", kind: "success" }); });

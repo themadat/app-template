@@ -125,7 +125,7 @@
         <div class="icon-info-hero">
           <div id="iconInfoPreview" class="icon-info-preview" aria-hidden="true"></div>
           <form id="iconInfoQuickEdit" class="icon-info-summary" novalidate>
-            <div class="icon-info-inline-fields">
+            <div class="icon-metadata-fields">
               <label for="iconInfoName"><span>Name</span><input id="iconInfoName" type="text" maxlength="120" autocomplete="off" required aria-describedby="iconInfoValidation"></label>
               <label for="iconInfoType"><span>Type</span><select id="iconInfoType"><option value="sf-symbol">Symbol</option><option value="custom">Custom</option></select></label>
             </div>
@@ -145,7 +145,7 @@
           <ul id="iconInfoSources" class="icon-source-list"></ul>
         </section>
       </div>
-      <footer class="dialog-footer"><button id="iconInfoEditButton" class="button" type="button"><span aria-hidden="true" data-symbol="support"></span><span>Edit groups &amp; source</span></button><button id="iconInfoCopyButton" class="button primary" type="button"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></button></footer>
+      <footer class="dialog-footer"><button id="iconInfoEditButton" class="button" type="button"><span aria-hidden="true" data-symbol="support"></span><span>Edit metadata</span></button><button id="iconInfoCopyButton" class="button primary" type="button"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></button></footer>
     </div>
   </dialog>
 
@@ -153,11 +153,11 @@
     <form id="iconEditForm" class="dialog-shell" novalidate>
       <header class="dialog-header"><div><span class="eyebrow">Icon metadata</span><h2 id="iconEditDialogTitle">Edit icon</h2></div><button type="button" class="icon-button" data-close-dialog="iconEditDialog" aria-label="Close icon editor"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body icon-edit-body">
-        <div class="icon-edit-hero">
-          <div id="iconEditPreview" class="icon-edit-preview" aria-hidden="true"></div>
-          <div><label class="icon-edit-inline-type" for="iconEditType"><span>Type</span><select id="iconEditType"><option value="sf-symbol">Symbol</option><option value="custom">Custom</option></select></label><p>Rename this icon, choose its type and source filter, and select every quick group where it belongs.</p></div>
+        <div class="icon-edit-hero"><div id="iconEditPreview" class="icon-edit-preview" aria-hidden="true"></div><p>Edit the same Name and Type fields shown in Icon details, then choose its filter source and groups.</p></div>
+        <div class="icon-metadata-fields">
+          <label for="iconEditLabel"><span>Name</span><input id="iconEditLabel" type="text" maxlength="120" autocomplete="off" required aria-describedby="iconEditValidation"></label>
+          <label for="iconEditType"><span>Type</span><select id="iconEditType"><option value="sf-symbol">Symbol</option><option value="custom">Custom</option></select></label>
         </div>
-        <label class="icon-edit-name" for="iconEditLabel"><span>Display name</span><input id="iconEditLabel" type="text" maxlength="120" autocomplete="off" required aria-describedby="iconEditValidation"></label>
         <label class="icon-edit-name" for="iconEditSource"><span>Source</span><select id="iconEditSource" aria-describedby="iconEditSourceHelp"></select><small id="iconEditSourceHelp">This changes source filtering while the original files remain listed in Icon details.</small></label>
         <fieldset class="icon-edit-fieldset">
           <legend>Groups</legend>
@@ -201,13 +201,6 @@
               <div class="setting-row"><div><strong>Color mode</strong><small>Use the device setting or choose a mode.</small></div><div class="segmented" aria-label="Color mode"><button type="button" data-theme-mode="system" aria-pressed="true">System</button><button type="button" data-theme-mode="light" aria-pressed="false">Light</button><button type="button" data-theme-mode="dark" aria-pressed="false">Dark</button></div></div>
               <div class="setting-row"><div><strong>Button presentation</strong><small>Choose symbols, text, or both.</small></div><div class="segmented" aria-label="Button presentation"><button type="button" data-button-style="icons" aria-pressed="false">Icons</button><button type="button" data-button-style="text" aria-pressed="false">Text</button><button type="button" data-button-style="both" aria-pressed="true">Both</button></div></div>
               <div class="setting-row"><div><strong>Text size</strong><small>Adjust application and reading text together.</small></div><div class="text-size-control" aria-label="Text size"><span class="size-letter small" aria-hidden="true">A</span><span class="text-size-slider-wrap"><input id="textSizeSlider" class="ios-range" type="range" min="85" max="130" step="5" value="100" aria-label="Text size"><output id="textSizeValue" class="text-size-value" for="textSizeSlider">100%</output></span><span class="size-letter large" aria-hidden="true">A</span></div></div>
-              <div class="color-settings">
-                <label><span>Primary</span><input type="color" data-color-setting="accent"><input type="text" data-color-text="accent" maxlength="7" aria-label="Primary color hex"></label>
-                <label><span>Secondary</span><input type="color" data-color-setting="accent2"><input type="text" data-color-text="accent2" maxlength="7" aria-label="Secondary color hex"></label>
-                <label><span>Success</span><input type="color" data-color-setting="success"><input type="text" data-color-text="success" maxlength="7" aria-label="Success color hex"></label>
-                <label><span>Warning</span><input type="color" data-color-setting="warning"><input type="text" data-color-text="warning" maxlength="7" aria-label="Warning color hex"></label>
-                <label><span>Danger</span><input type="color" data-color-setting="danger"><input type="text" data-color-text="danger" maxlength="7" aria-label="Danger color hex"></label>
-              </div>
             </div>
 
             <div class="settings-section">

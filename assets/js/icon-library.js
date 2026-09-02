@@ -408,7 +408,7 @@
       categories: ["arrows","media"],
       tags: ["5 arrow trianglehead clockwise","5_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/5.arrow.trianglehead.clockwise.svg","symbol":"5.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/5.arrow.trianglehead.clockwise.svg","symbol":"5.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -426,7 +426,7 @@
       categories: ["arrows","media"],
       tags: ["5 arrow trianglehead counterclockwise","5_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/5.arrow.trianglehead.counterclockwise.svg","symbol":"5.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/5.arrow.trianglehead.counterclockwise.svg","symbol":"5.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -672,7 +672,7 @@
       categories: ["arrows","media"],
       tags: ["10","10 arrow trianglehead clockwise","10_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/10.arrow.trianglehead.clockwise.svg","symbol":"10.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/10.arrow.trianglehead.clockwise.svg","symbol":"10.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -690,7 +690,7 @@
       categories: ["arrows","media"],
       tags: ["10","10 arrow trianglehead counterclockwise","10_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/10.arrow.trianglehead.counterclockwise.svg","symbol":"10.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/10.arrow.trianglehead.counterclockwise.svg","symbol":"10.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -815,7 +815,7 @@
       categories: ["arrows","media"],
       tags: ["15","15 arrow trianglehead clockwise","15_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/15.arrow.trianglehead.clockwise.svg","symbol":"15.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/15.arrow.trianglehead.clockwise.svg","symbol":"15.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -833,7 +833,7 @@
       categories: ["arrows","media"],
       tags: ["15","15 arrow trianglehead counterclockwise","15_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/15.arrow.trianglehead.counterclockwise.svg","symbol":"15.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/15.arrow.trianglehead.counterclockwise.svg","symbol":"15.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1121,7 +1121,7 @@
       categories: ["arrows","media"],
       tags: ["30","30 arrow trianglehead clockwise","30_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/30.arrow.trianglehead.clockwise.svg","symbol":"30.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/30.arrow.trianglehead.clockwise.svg","symbol":"30.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1139,7 +1139,7 @@
       categories: ["arrows","media"],
       tags: ["30","30 arrow trianglehead counterclockwise","30_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/30.arrow.trianglehead.counterclockwise.svg","symbol":"30.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/30.arrow.trianglehead.counterclockwise.svg","symbol":"30.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1427,7 +1427,7 @@
       categories: ["arrows","media"],
       tags: ["45","45 arrow trianglehead clockwise","45_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/45.arrow.trianglehead.clockwise.svg","symbol":"45.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/45.arrow.trianglehead.clockwise.svg","symbol":"45.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1445,7 +1445,7 @@
       categories: ["arrows","media"],
       tags: ["45","45 arrow trianglehead counterclockwise","45_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/45.arrow.trianglehead.counterclockwise.svg","symbol":"45.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/45.arrow.trianglehead.counterclockwise.svg","symbol":"45.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1571,7 +1571,7 @@
       categories: ["arrows","media"],
       tags: ["60","60 arrow trianglehead clockwise","60_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/60.arrow.trianglehead.clockwise.svg","symbol":"60.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/60.arrow.trianglehead.clockwise.svg","symbol":"60.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1589,7 +1589,7 @@
       categories: ["arrows","media"],
       tags: ["60","60 arrow trianglehead counterclockwise","60_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/60.arrow.trianglehead.counterclockwise.svg","symbol":"60.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/60.arrow.trianglehead.counterclockwise.svg","symbol":"60.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1607,7 +1607,7 @@
       categories: ["arrows","media"],
       tags: ["75","75 arrow trianglehead clockwise","75_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/75.arrow.trianglehead.clockwise.svg","symbol":"75.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/75.arrow.trianglehead.clockwise.svg","symbol":"75.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1625,7 +1625,7 @@
       categories: ["arrows","media"],
       tags: ["75","75 arrow trianglehead counterclockwise","75_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/75.arrow.trianglehead.counterclockwise.svg","symbol":"75.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/75.arrow.trianglehead.counterclockwise.svg","symbol":"75.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1643,7 +1643,7 @@
       categories: ["arrows","media"],
       tags: ["90","90 arrow trianglehead clockwise","90_arrow_trianglehead_clockwise","arrow","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/90.arrow.trianglehead.clockwise.svg","symbol":"90.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/90.arrow.trianglehead.clockwise.svg","symbol":"90.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1661,7 +1661,7 @@
       categories: ["arrows","media"],
       tags: ["90","90 arrow trianglehead counterclockwise","90_arrow_trianglehead_counterclockwise","arrow","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/90.arrow.trianglehead.counterclockwise.svg","symbol":"90.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/90.arrow.trianglehead.counterclockwise.svg","symbol":"90.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1751,7 +1751,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","people"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/accessibility.svg","symbol":"accessibility"},{"repo":"svg-converter","file":"bulk-convert-circle/accessibility.svg","symbol":"accessibility"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__ACCESSIBILITY"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/accessibility.svg","symbol":"accessibility"},{"repo":"svg-converter","file":"bulk-convert-circle/accessibility.svg","symbol":"accessibility"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__ACCESSIBILITY"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -1769,7 +1769,7 @@
       categories: ["accessibility","arrows","people","badged","badged-arrow","status"],
       tags: ["accessibility","accessibility badge arrow up right","accessibility_badge_arrow_up_right","arrow","arrows","back","badge","badged","direction","forward","navigate","people","right","status","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/accessibility.badge.arrow.up.right.svg","symbol":"accessibility.badge.arrow.up.right"},{"repo":"svg-converter","file":"app-input/Badge/accessibility.badge.arrow.up.right.svg","symbol":"accessibility.badge.arrow.up.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/accessibility.badge.arrow.up.right.svg","symbol":"accessibility.badge.arrow.up.right"},{"repo":"svg-converter","file":"app-input/Badge/accessibility.badge.arrow.up.right.svg","symbol":"accessibility.badge.arrow.up.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5791 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5791" x="0" y="0"/>
@@ -1787,7 +1787,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","accessibility fill","accessibility_fill","fill","people"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/accessibility.fill.svg","symbol":"accessibility.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/accessibility.fill.svg","symbol":"accessibility.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -2916,7 +2916,7 @@
       label: "Africa Map",
       kind: "custom",
       aliases: ["africa_map_svgrepo_com","africa_map_svgrepo_com_copy"],
-      categories: ["actions","maps-travel","maps"],
+      categories: ["maps-travel","maps"],
       tags: ["actions","africa","africa map svgrepo com","africa map svgrepo com copy","africa_map_svgrepo_com","africa_map_svgrepo_com_copy","com","copy","geography","location","map","maps","maps & travel","place","svgrepo","travel"],
       repositories: ["visit-tracker"],
       sources: [{"repo":"visit-tracker","file":"assets/svgs/!continents/africa-map-svgrepo-com copy.svg","symbol":"africa-map-svgrepo-com copy"},{"repo":"visit-tracker","file":"assets/svgs/!continents/africa-map-svgrepo-com.svg","symbol":"africa-map-svgrepo-com"}],
@@ -2975,7 +2975,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","flight","maps & travel","plane","transport","transportation","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.svg","symbol":"airplane"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__AIRPLANE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.svg","symbol":"airplane"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__AIRPLANE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.3672 25.9082" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9082" opacity="0" width="31.3672" x="0" y="0"/>
@@ -2992,7 +2992,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane arrival","airplane_arrival","arrival","flight","maps & travel","plane","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.arrival.svg","symbol":"airplane.arrival"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.arrival.svg","symbol":"airplane.arrival"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.9123 30.206" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.206" opacity="0" width="30.9123" x="0" y="0"/>
@@ -3010,7 +3010,7 @@
       categories: ["maps-travel","circled","transportation"],
       tags: ["airplane","airplane circle","airplane_circle","circle","circled","flight","maps & travel","plane","transport","transportation","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.circle.svg","symbol":"airplane.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/airplane.circle.svg","symbol":"airplane.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__AIRPLANE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.circle.svg","symbol":"airplane.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/airplane.circle.svg","symbol":"airplane.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__AIRPLANE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -3028,7 +3028,7 @@
       categories: ["maps-travel","circled","transportation"],
       tags: ["airplane","airplane circle fill","airplane_circle_fill","circle","circled","fill","flight","maps & travel","plane","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.circle.fill.svg","symbol":"airplane.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.circle.fill.svg","symbol":"airplane.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -3045,7 +3045,7 @@
       categories: ["cloud-server","maps-travel","transportation","weather"],
       tags: ["airplane","airplane cloud","airplane_cloud","cloud","cloud & drive","flight","maps & travel","online","plane","sync","transport","transportation","travel","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.cloud.svg","symbol":"airplane.cloud"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.cloud.svg","symbol":"airplane.cloud"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.6242 24.0332" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0332" opacity="0" width="33.6242" x="0" y="0"/>
@@ -3063,7 +3063,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane departure","airplane_departure","departure","flight","maps & travel","plane","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.departure.svg","symbol":"airplane.departure"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.departure.svg","symbol":"airplane.departure"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.184 23.3789" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.3789" opacity="0" width="33.184" x="0" y="0"/>
@@ -3081,7 +3081,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane landed","airplane_landed","flight","landed","maps & travel","plane","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.landed.svg","symbol":"airplane.landed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.landed.svg","symbol":"airplane.landed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.0434 17.5293" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.5293" opacity="0" width="33.0434" x="0" y="0"/>
@@ -3099,7 +3099,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane path dotted","airplane_path_dotted","dotted","flight","maps & travel","path","plane","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.path.dotted.svg","symbol":"airplane.path.dotted"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.path.dotted.svg","symbol":"airplane.path.dotted"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.751 23.3105" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.3105" opacity="0" width="39.751" x="0" y="0"/>
@@ -3117,7 +3117,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane ticket","airplane_ticket","flight","maps & travel","plane","ticket","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.ticket.svg","symbol":"airplane.ticket"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.ticket.svg","symbol":"airplane.ticket"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.5234 22.7637" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.7637" opacity="0" width="36.5234" x="0" y="0"/>
@@ -3135,7 +3135,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane ticket fill","airplane_ticket_fill","fill","flight","maps & travel","plane","ticket","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.ticket.fill.svg","symbol":"airplane.ticket.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.ticket.fill.svg","symbol":"airplane.ticket.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.499 22.7637" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.7637" opacity="0" width="36.499" x="0" y="0"/>
@@ -3152,7 +3152,7 @@
       categories: ["arrows","maps-travel","transportation"],
       tags: ["airplane","airplane up forward","airplane_up_forward","arrow","arrows","back","direction","flight","forward","maps & travel","navigate","plane","transport","transportation","travel","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.up.forward.svg","symbol":"airplane.up.forward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.up.forward.svg","symbol":"airplane.up.forward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.0431 26.131" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.131" opacity="0" width="26.0431" x="0" y="0"/>
@@ -3169,7 +3169,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["airplane","airplane up right","airplane_up_right","flight","maps & travel","plane","right","transport","transportation","travel","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.up.right.svg","symbol":"airplane.up.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.up.right.svg","symbol":"airplane.up.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.048 26.131" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.131" opacity="0" width="26.048" x="0" y="0"/>
@@ -3186,7 +3186,7 @@
       categories: ["arrows","maps-travel","transportation"],
       tags: ["airplane","airplane up forward app","airplane up right app","airplane_up_forward_app","airplane_up_right_app","app","arrow","arrows","back","direction","flight","forward","maps & travel","navigate","plane","right","transport","transportation","travel","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.up.forward.app.svg","symbol":"airplane.up.forward.app"},{"repo":"svg-converter","file":"app-input/!Transportation/airplane.up.right.app.svg","symbol":"airplane.up.right.app"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.up.forward.app.svg","symbol":"airplane.up.forward.app"},{"repo":"svg-converter","file":"app-input/Transportation/airplane.up.right.app.svg","symbol":"airplane.up.right.app"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -3204,7 +3204,7 @@
       categories: ["arrows","maps-travel","transportation"],
       tags: ["airplane","airplane up forward app fill","airplane up right app fill","airplane_up_forward_app_fill","airplane_up_right_app_fill","app","arrow","arrows","back","direction","fill","flight","forward","maps & travel","navigate","plane","right","transport","transportation","travel","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplane.up.forward.app.fill.svg","symbol":"airplane.up.forward.app.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/airplane.up.right.app.fill.svg","symbol":"airplane.up.right.app.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplane.up.forward.app.fill.svg","symbol":"airplane.up.forward.app.fill"},{"repo":"svg-converter","file":"app-input/Transportation/airplane.up.right.app.fill.svg","symbol":"airplane.up.right.app.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -3221,7 +3221,7 @@
       categories: ["transportation"],
       tags: ["airplaneseat","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/airplaneseat.svg","symbol":"airplaneseat"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/airplaneseat.svg","symbol":"airplaneseat"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1064 27.3535" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.3535" opacity="0" width="24.1064" x="0" y="0"/>
@@ -3501,7 +3501,7 @@
       categories: ["editing"],
       tags: ["align","align horizontal center","align_horizontal_center","center","editing","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.horizontal.center.svg","symbol":"align.horizontal.center"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.horizontal.center.svg","symbol":"align.horizontal.center"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.1035 30.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.752" opacity="0" width="26.1035" x="0" y="0"/>
@@ -3519,7 +3519,7 @@
       categories: ["editing"],
       tags: ["align","align horizontal center fill","align_horizontal_center_fill","center","editing","fill","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.horizontal.center.fill.svg","symbol":"align.horizontal.center.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.horizontal.center.fill.svg","symbol":"align.horizontal.center.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.1035 30.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.752" opacity="0" width="26.1035" x="0" y="0"/>
@@ -3537,7 +3537,7 @@
       categories: ["editing"],
       tags: ["align","align horizontal left","align_horizontal_left","editing","horizontal","left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.horizontal.left.svg","symbol":"align.horizontal.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.horizontal.left.svg","symbol":"align.horizontal.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.001 30.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.752" opacity="0" width="31.001" x="0" y="0"/>
@@ -3555,7 +3555,7 @@
       categories: ["editing"],
       tags: ["align","align horizontal left fill","align_horizontal_left_fill","editing","fill","horizontal","left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.horizontal.left.fill.svg","symbol":"align.horizontal.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.horizontal.left.fill.svg","symbol":"align.horizontal.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.001 30.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.752" opacity="0" width="31.001" x="0" y="0"/>
@@ -3573,7 +3573,7 @@
       categories: ["editing"],
       tags: ["align","align horizontal right","align_horizontal_right","editing","horizontal","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.horizontal.right.svg","symbol":"align.horizontal.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.horizontal.right.svg","symbol":"align.horizontal.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.001 30.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.752" opacity="0" width="31.001" x="0" y="0"/>
@@ -3591,7 +3591,7 @@
       categories: ["editing"],
       tags: ["align","align horizontal right fill","align_horizontal_right_fill","editing","fill","horizontal","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.horizontal.right.fill.svg","symbol":"align.horizontal.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.horizontal.right.fill.svg","symbol":"align.horizontal.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.001 30.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.752" opacity="0" width="31.001" x="0" y="0"/>
@@ -3609,7 +3609,7 @@
       categories: ["editing"],
       tags: ["align","align vertical bottom","align_vertical_bottom","bottom","editing","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.vertical.bottom.svg","symbol":"align.vertical.bottom"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.vertical.bottom.svg","symbol":"align.vertical.bottom"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.1133 30.4297" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4297" opacity="0" width="31.1133" x="0" y="0"/>
@@ -3627,7 +3627,7 @@
       categories: ["editing"],
       tags: ["align","align vertical bottom fill","align_vertical_bottom_fill","bottom","editing","fill","vertical"],
       repositories: ["cocktail-list","svg-converter"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ALIGN_VERTICAL_BOTTOM_FILL"},{"repo":"svg-converter","file":"app-input/!Editing/align.vertical.bottom.fill.svg","symbol":"align.vertical.bottom.fill"}],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__ALIGN_VERTICAL_BOTTOM_FILL"},{"repo":"svg-converter","file":"app-input/Editing/align.vertical.bottom.fill.svg","symbol":"align.vertical.bottom.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.1133 30.4297" aria-hidden="true" focusable="false"><g><rect height="30.4297" opacity="0" width="31.1133" x="0" y="0"/><path d="M6.39648 25.5078L11.123 25.5078C13.0713 25.5078 14.2432 24.3213 14.2432 22.3389L14.2432 3.16895C14.2432 1.19141 13.0713 0.00488281 11.123 0.00488281L6.39648 0.00488281C4.44824 0.00488281 3.27148 1.19141 3.27148 3.16895L3.27148 22.3389C3.27148 24.3213 4.44824 25.5078 6.39648 25.5078ZM19.6729 25.5078L24.4043 25.5078C26.3477 25.5078 27.5195 24.3213 27.5195 22.3389L27.5195 11.7041C27.5195 9.72656 26.3477 8.53516 24.4043 8.53516L19.6729 8.53516C17.7246 8.53516 16.5479 9.72656 16.5479 11.7041L16.5479 22.3389C16.5479 24.3213 17.7246 25.5078 19.6729 25.5078Z"/><path d="M1.32324 30.4297L29.4336 30.4297C30.1611 30.4297 30.752 29.8096 30.752 29.0723C30.752 28.3447 30.1611 27.7246 29.4336 27.7246L1.32324 27.7246C0.59082 27.7246 0 28.3447 0 29.0723C0 29.8096 0.59082 30.4297 1.32324 30.4297Z"/></g></svg>`
     },
     {
@@ -3639,7 +3639,7 @@
       categories: ["editing"],
       tags: ["align","align vertical center","align_vertical_center","center","editing","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.vertical.center.svg","symbol":"align.vertical.center"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.vertical.center.svg","symbol":"align.vertical.center"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.1133 25.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.7129" opacity="0" width="31.1133" x="0" y="0"/>
@@ -3657,7 +3657,7 @@
       categories: ["editing"],
       tags: ["align","align vertical center fill","align_vertical_center_fill","center","editing","fill","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.vertical.center.fill.svg","symbol":"align.vertical.center.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.vertical.center.fill.svg","symbol":"align.vertical.center.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.1133 25.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.7129" opacity="0" width="31.1133" x="0" y="0"/>
@@ -3675,7 +3675,7 @@
       categories: ["editing"],
       tags: ["align","align vertical top","align_vertical_top","editing","top","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.vertical.top.svg","symbol":"align.vertical.top"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.vertical.top.svg","symbol":"align.vertical.top"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.1133 30.4297" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4297" opacity="0" width="31.1133" x="0" y="0"/>
@@ -3693,7 +3693,7 @@
       categories: ["editing"],
       tags: ["align","align vertical top fill","align_vertical_top_fill","editing","fill","top","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/align.vertical.top.fill.svg","symbol":"align.vertical.top.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/align.vertical.top.fill.svg","symbol":"align.vertical.top.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.1133 30.4297" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4297" opacity="0" width="31.1133" x="0" y="0"/>
@@ -3746,7 +3746,7 @@
       categories: ["keyboard"],
       tags: ["alt","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/alt.svg","symbol":"alt"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/alt.svg","symbol":"alt"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6455 23.1543" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.1543" opacity="0" width="26.6455" x="0" y="0"/>
@@ -3799,7 +3799,7 @@
       categories: ["math"],
       tags: ["angle","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/angle.svg","symbol":"angle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/angle.svg","symbol":"angle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4346 22.8809" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.8809" opacity="0" width="30.4346" x="0" y="0"/>
@@ -4131,7 +4131,7 @@
       categories: ["maps"],
       tags: ["app","app connected to app below fill","app_connected_to_app_below_fill","below","connected","fill","maps","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/app.connected.to.app.below.fill.svg","symbol":"app.connected.to.app.below.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/app.connected.to.app.below.fill.svg","symbol":"app.connected.to.app.below.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.7061 28.623" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.623" opacity="0" width="23.7061" x="0" y="0"/>
@@ -5072,7 +5072,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow down to line","arrow_down_to_line","arrows","back","direction","down","forward","keyboard","line","navigate","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.down.to.line.svg","symbol":"arrow.down.to.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.down.to.line.svg","symbol":"arrow.down.to.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 27.1875" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.1875" opacity="0" width="20.2832" x="0" y="0"/>
@@ -5089,7 +5089,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow down to line circle","arrow_down_to_line_circle","arrows","back","circle","circled","direction","down","forward","keyboard","line","navigate","to"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.down.to.line.circle.svg","symbol":"arrow.down.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.down.to.line.circle.svg","symbol":"arrow.down.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_DOWN_TO_LINE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.down.to.line.circle.svg","symbol":"arrow.down.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.down.to.line.circle.svg","symbol":"arrow.down.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_DOWN_TO_LINE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5107,7 +5107,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow down to line circle fill","arrow_down_to_line_circle_fill","arrows","back","circle","circled","direction","down","fill","forward","keyboard","line","navigate","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.down.to.line.circle.fill.svg","symbol":"arrow.down.to.line.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.down.to.line.circle.fill.svg","symbol":"arrow.down.to.line.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5124,7 +5124,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow down to line compact","arrow_down_to_line_compact","arrows","back","compact","direction","down","forward","keyboard","line","navigate","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.down.to.line.compact.svg","symbol":"arrow.down.to.line.compact"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.down.to.line.compact.svg","symbol":"arrow.down.to.line.compact"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.6973 22.998" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.998" opacity="0" width="19.6973" x="0" y="0"/>
@@ -5141,7 +5141,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow down to line square","arrow_down_to_line_square","arrows","back","direction","down","forward","keyboard","line","navigate","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.down.to.line.square.svg","symbol":"arrow.down.to.line.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.down.to.line.square.svg","symbol":"arrow.down.to.line.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5159,7 +5159,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow down to line square fill","arrow_down_to_line_square_fill","arrows","back","direction","down","fill","forward","keyboard","line","navigate","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.down.to.line.square.fill.svg","symbol":"arrow.down.to.line.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.down.to.line.square.fill.svg","symbol":"arrow.down.to.line.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5176,7 +5176,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow forward to line square","arrow_forward_to_line_square","arrows","back","direction","forward","keyboard","line","navigate","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.forward.to.line.square.svg","symbol":"arrow.forward.to.line.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.forward.to.line.square.svg","symbol":"arrow.forward.to.line.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5272,7 +5272,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow backward to line","arrow left to line","arrow_backward_to_line","arrow_left_to_line","arrows","back","backward","direction","forward","keyboard","left","line","navigate","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.backward.to.line.svg","symbol":"arrow.backward.to.line"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.left.to.line.svg","symbol":"arrow.left.to.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.backward.to.line.svg","symbol":"arrow.backward.to.line"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.left.to.line.svg","symbol":"arrow.left.to.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5195 19.9316" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.9316" opacity="0" width="27.5195" x="0" y="0"/>
@@ -5289,7 +5289,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow backward to line circle","arrow left to line circle","arrow_backward_to_line_circle","arrow_left_to_line_circle","arrows","back","backward","circle","circled","direction","forward","keyboard","left","line","navigate","to"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.backward.to.line.circle.svg","symbol":"arrow.backward.to.line.circle"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.left.to.line.circle.svg","symbol":"arrow.left.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.backward.to.line.circle.svg","symbol":"arrow.backward.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.left.to.line.circle.svg","symbol":"arrow.left.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_BACKWARD_TO_LINE_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_LEFT_TO_LINE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.backward.to.line.circle.svg","symbol":"arrow.backward.to.line.circle"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.left.to.line.circle.svg","symbol":"arrow.left.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.backward.to.line.circle.svg","symbol":"arrow.backward.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.left.to.line.circle.svg","symbol":"arrow.left.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_BACKWARD_TO_LINE_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_LEFT_TO_LINE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5307,7 +5307,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow backward to line circle fill","arrow left to line circle fill","arrow_backward_to_line_circle_fill","arrow_left_to_line_circle_fill","arrows","back","backward","circle","circled","direction","fill","forward","keyboard","left","line","navigate","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.backward.to.line.circle.fill.svg","symbol":"arrow.backward.to.line.circle.fill"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.left.to.line.circle.fill.svg","symbol":"arrow.left.to.line.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.backward.to.line.circle.fill.svg","symbol":"arrow.backward.to.line.circle.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.left.to.line.circle.fill.svg","symbol":"arrow.left.to.line.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5324,7 +5324,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow backward to line compact","arrow left to line compact","arrow_backward_to_line_compact","arrow_left_to_line_compact","arrows","back","backward","compact","direction","forward","keyboard","left","line","navigate","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.backward.to.line.compact.svg","symbol":"arrow.backward.to.line.compact"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.left.to.line.compact.svg","symbol":"arrow.left.to.line.compact"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.backward.to.line.compact.svg","symbol":"arrow.backward.to.line.compact"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.left.to.line.compact.svg","symbol":"arrow.left.to.line.compact"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.3545 19.3457" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.3457" opacity="0" width="23.3545" x="0" y="0"/>
@@ -5341,7 +5341,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow backward to line square","arrow left to line square","arrow_backward_to_line_square","arrow_left_to_line_square","arrows","back","backward","direction","forward","keyboard","left","line","navigate","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.backward.to.line.square.svg","symbol":"arrow.backward.to.line.square"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.left.to.line.square.svg","symbol":"arrow.left.to.line.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.backward.to.line.square.svg","symbol":"arrow.backward.to.line.square"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.left.to.line.square.svg","symbol":"arrow.left.to.line.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5359,7 +5359,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow backward to line square fill","arrow left to line square fill","arrow_backward_to_line_square_fill","arrow_left_to_line_square_fill","arrows","back","backward","direction","fill","forward","keyboard","left","line","navigate","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.backward.to.line.square.fill.svg","symbol":"arrow.backward.to.line.square.fill"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.left.to.line.square.fill.svg","symbol":"arrow.left.to.line.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.backward.to.line.square.fill.svg","symbol":"arrow.backward.to.line.square.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.left.to.line.square.fill.svg","symbol":"arrow.left.to.line.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5406,7 +5406,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow forward to line","arrow right to line","arrow_forward_to_line","arrow_right_to_line","arrows","back","direction","forward","keyboard","line","navigate","right","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.forward.to.line.svg","symbol":"arrow.forward.to.line"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.right.to.line.svg","symbol":"arrow.right.to.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.forward.to.line.svg","symbol":"arrow.forward.to.line"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.right.to.line.svg","symbol":"arrow.right.to.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5195 19.9316" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.9316" opacity="0" width="27.5195" x="0" y="0"/>
@@ -5423,7 +5423,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow forward to line circle","arrow right to line circle","arrow_forward_to_line_circle","arrow_right_to_line_circle","arrows","back","circle","circled","direction","forward","keyboard","line","navigate","right","to"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.forward.to.line.circle.svg","symbol":"arrow.forward.to.line.circle"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.right.to.line.circle.svg","symbol":"arrow.right.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.forward.to.line.circle.svg","symbol":"arrow.forward.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.right.to.line.circle.svg","symbol":"arrow.right.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_FORWARD_TO_LINE_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_RIGHT_TO_LINE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.forward.to.line.circle.svg","symbol":"arrow.forward.to.line.circle"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.right.to.line.circle.svg","symbol":"arrow.right.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.forward.to.line.circle.svg","symbol":"arrow.forward.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.right.to.line.circle.svg","symbol":"arrow.right.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_FORWARD_TO_LINE_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_RIGHT_TO_LINE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5441,7 +5441,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow forward to line circle fill","arrow right to line circle fill","arrow_forward_to_line_circle_fill","arrow_right_to_line_circle_fill","arrows","back","circle","circled","direction","fill","forward","keyboard","line","navigate","right","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.forward.to.line.circle.fill.svg","symbol":"arrow.forward.to.line.circle.fill"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.right.to.line.circle.fill.svg","symbol":"arrow.right.to.line.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.forward.to.line.circle.fill.svg","symbol":"arrow.forward.to.line.circle.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.right.to.line.circle.fill.svg","symbol":"arrow.right.to.line.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5458,7 +5458,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow forward to line compact","arrow right to line compact","arrow_forward_to_line_compact","arrow_right_to_line_compact","arrows","back","compact","direction","forward","keyboard","line","navigate","right","to"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.forward.to.line.compact.svg","symbol":"arrow.forward.to.line.compact"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.right.to.line.compact.svg","symbol":"arrow.right.to.line.compact"},{"repo":"svg-converter","file":"bulk-convert-format/arrow.right.to.line.compact.svg","symbol":"arrow.right.to.line.compact"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__ARROW_RIGHT_TO_LINE_COMPACT"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.forward.to.line.compact.svg","symbol":"arrow.forward.to.line.compact"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.right.to.line.compact.svg","symbol":"arrow.right.to.line.compact"},{"repo":"svg-converter","file":"bulk-convert-format/arrow.right.to.line.compact.svg","symbol":"arrow.right.to.line.compact"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__ARROW_RIGHT_TO_LINE_COMPACT"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.3545 19.3457" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.3457" opacity="0" width="23.3545" x="0" y="0"/>
@@ -5475,7 +5475,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow right to line square","arrow_right_to_line_square","arrows","back","direction","forward","keyboard","line","navigate","right","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.right.to.line.square.svg","symbol":"arrow.right.to.line.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.right.to.line.square.svg","symbol":"arrow.right.to.line.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5493,7 +5493,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow forward to line square fill","arrow right to line square fill","arrow_forward_to_line_square_fill","arrow_right_to_line_square_fill","arrows","back","direction","fill","forward","keyboard","line","navigate","right","square","squared","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.forward.to.line.square.fill.svg","symbol":"arrow.forward.to.line.square.fill"},{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.right.to.line.square.fill.svg","symbol":"arrow.right.to.line.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.forward.to.line.square.fill.svg","symbol":"arrow.forward.to.line.square.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/arrow.right.to.line.square.fill.svg","symbol":"arrow.right.to.line.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -5582,7 +5582,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow trianglehead branch","arrow_trianglehead_branch","arrows","back","branch","direction","forward","maps","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.trianglehead.branch.svg","symbol":"arrow.trianglehead.branch"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.trianglehead.branch.svg","symbol":"arrow.trianglehead.branch"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.095 26.3867" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3867" opacity="0" width="25.095" x="0" y="0"/>
@@ -5599,7 +5599,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrow trianglehead clockwise","arrow_trianglehead_clockwise","arrows","back","clockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.clockwise.svg","symbol":"arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.clockwise.svg","symbol":"arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5616,7 +5616,7 @@
       categories: ["arrows","cloud-server","media"],
       tags: ["arrow","arrow trianglehead clockwise icloud","arrow_trianglehead_clockwise_icloud","arrows","back","clockwise","cloud & drive","direction","forward","icloud","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.clockwise.icloud.svg","symbol":"arrow.trianglehead.clockwise.icloud"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.clockwise.icloud.svg","symbol":"arrow.trianglehead.clockwise.icloud"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.clockwise.icloud.svg","symbol":"arrow.trianglehead.clockwise.icloud"},{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.clockwise.icloud.svg","symbol":"arrow.trianglehead.clockwise.icloud"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
@@ -5634,7 +5634,7 @@
       categories: ["arrows","cloud-server","media"],
       tags: ["arrow","arrow trianglehead clockwise icloud fill","arrow_trianglehead_clockwise_icloud_fill","arrows","back","clockwise","cloud & drive","direction","fill","forward","icloud","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.clockwise.icloud.fill.svg","symbol":"arrow.trianglehead.clockwise.icloud.fill"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.clockwise.icloud.fill.svg","symbol":"arrow.trianglehead.clockwise.icloud.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.clockwise.icloud.fill.svg","symbol":"arrow.trianglehead.clockwise.icloud.fill"},{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.clockwise.icloud.fill.svg","symbol":"arrow.trianglehead.clockwise.icloud.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
@@ -5668,7 +5668,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrow trianglehead counterclockwise","arrow_trianglehead_counterclockwise","arrows","back","counterclockwise","direction","forward","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.counterclockwise.svg","symbol":"arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.counterclockwise.svg","symbol":"arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -5685,7 +5685,7 @@
       categories: ["arrows","cloud-server","media"],
       tags: ["arrow","arrow trianglehead counterclockwise icloud","arrow_trianglehead_counterclockwise_icloud","arrows","back","cloud & drive","counterclockwise","direction","forward","icloud","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.counterclockwise.icloud.svg","symbol":"arrow.trianglehead.counterclockwise.icloud"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.counterclockwise.icloud.svg","symbol":"arrow.trianglehead.counterclockwise.icloud"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.counterclockwise.icloud.svg","symbol":"arrow.trianglehead.counterclockwise.icloud"},{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.counterclockwise.icloud.svg","symbol":"arrow.trianglehead.counterclockwise.icloud"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
@@ -5703,7 +5703,7 @@
       categories: ["arrows","cloud-server","media"],
       tags: ["arrow","arrow trianglehead counterclockwise icloud fill","arrow_trianglehead_counterclockwise_icloud_fill","arrows","back","cloud & drive","counterclockwise","direction","fill","forward","icloud","media","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.counterclockwise.icloud.fill.svg","symbol":"arrow.trianglehead.counterclockwise.icloud.fill"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.counterclockwise.icloud.fill.svg","symbol":"arrow.trianglehead.counterclockwise.icloud.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/arrow.trianglehead.counterclockwise.icloud.fill.svg","symbol":"arrow.trianglehead.counterclockwise.icloud.fill"},{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.counterclockwise.icloud.fill.svg","symbol":"arrow.trianglehead.counterclockwise.icloud.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
@@ -5737,7 +5737,7 @@
       categories: ["arrows","editing"],
       tags: ["and","arrow","arrow trianglehead left and right righttriangle left righttriangle right","arrow_trianglehead_left_and_right_righttriangle_left_righttriangle_right","arrows","back","direction","editing","forward","left","navigate","right","righttriangle","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right.svg","symbol":"arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right.svg","symbol":"arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.46 33.2382" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2382" opacity="0" width="31.46" x="0" y="0"/>
@@ -5755,7 +5755,7 @@
       categories: ["arrows","editing"],
       tags: ["and","arrow","arrow trianglehead left and right righttriangle left righttriangle right fill","arrow_trianglehead_left_and_right_righttriangle_left_righttriangle_right_fill","arrows","back","direction","editing","fill","forward","left","navigate","right","righttriangle","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right.fill.svg","symbol":"arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right.fill.svg","symbol":"arrow.trianglehead.left.and.right.righttriangle.left.righttriangle.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.46 33.2382" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2382" opacity="0" width="31.46" x="0" y="0"/>
@@ -5773,7 +5773,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow trianglehead merge","arrow_trianglehead_merge","arrows","back","direction","forward","maps","merge","navigate","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.trianglehead.merge.svg","symbol":"arrow.trianglehead.merge"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.trianglehead.merge.svg","symbol":"arrow.trianglehead.merge"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16.1816 26.3049" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3049" opacity="0" width="16.1816" x="0" y="0"/>
@@ -5792,7 +5792,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow trianglehead pull","arrow_trianglehead_pull","arrows","back","direction","forward","maps","navigate","pull","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.trianglehead.pull.svg","symbol":"arrow.trianglehead.pull"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.trianglehead.pull.svg","symbol":"arrow.trianglehead.pull"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14.9939 26.3867" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3867" opacity="0" width="14.9939" x="0" y="0"/>
@@ -5809,7 +5809,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrow trianglehead rectanglepath","arrow_trianglehead_rectanglepath","arrows","back","direction","forward","media","navigate","rectanglepath","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/arrow.trianglehead.rectanglepath.svg","symbol":"arrow.trianglehead.rectanglepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/arrow.trianglehead.rectanglepath.svg","symbol":"arrow.trianglehead.rectanglepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 28.9072" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9072" opacity="0" width="30.3223" x="0" y="0"/>
@@ -5826,7 +5826,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow trianglehead swap","arrow_trianglehead_swap","arrows","back","direction","forward","maps","navigate","swap","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.trianglehead.swap.svg","symbol":"arrow.trianglehead.swap"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.trianglehead.swap.svg","symbol":"arrow.trianglehead.swap"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0935 26.3318" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3318" opacity="0" width="27.0935" x="0" y="0"/>
@@ -5861,7 +5861,7 @@
       categories: ["arrows","editing"],
       tags: ["and","arrow","arrow trianglehead up and down righttriangle up righttriangle down","arrow_trianglehead_up_and_down_righttriangle_up_righttriangle_down","arrows","back","direction","down","editing","forward","navigate","righttriangle","trianglehead","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down.svg","symbol":"arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down.svg","symbol":"arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3186 31.1133" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.1133" opacity="0" width="29.3186" x="0" y="0"/>
@@ -5879,7 +5879,7 @@
       categories: ["arrows","editing"],
       tags: ["and","arrow","arrow trianglehead up and down righttriangle up righttriangle down fill","arrow_trianglehead_up_and_down_righttriangle_up_righttriangle_down_fill","arrows","back","direction","down","editing","fill","forward","navigate","righttriangle","trianglehead","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down.fill.svg","symbol":"arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down.fill.svg","symbol":"arrow.trianglehead.up.and.down.righttriangle.up.righttriangle.down.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.1916 31.1133" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.1133" opacity="0" width="29.1916" x="0" y="0"/>
@@ -5897,7 +5897,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn down left","arrow_turn_down_left","arrows","back","direction","down","forward","left","maps","navigate","turn"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.down.left.svg","symbol":"arrow.turn.down.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.down.left.svg","symbol":"arrow.turn.down.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3115 21.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.1621" opacity="0" width="24.3115" x="0" y="0"/>
@@ -5914,7 +5914,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn down right","arrow_turn_down_right","arrows","back","direction","down","forward","maps","navigate","right","turn"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.down.right.svg","symbol":"arrow.turn.down.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.down.right.svg","symbol":"arrow.turn.down.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3115 21.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.1621" opacity="0" width="24.3115" x="0" y="0"/>
@@ -5931,7 +5931,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn left down","arrow_turn_left_down","arrows","back","direction","down","forward","left","maps","navigate","turn"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.left.down.svg","symbol":"arrow.turn.left.down"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.left.down.svg","symbol":"arrow.turn.left.down"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6006 24.0332" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0332" opacity="0" width="20.6006" x="0" y="0"/>
@@ -5948,7 +5948,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn left up","arrow_turn_left_up","arrows","back","direction","forward","left","maps","navigate","turn","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.left.up.svg","symbol":"arrow.turn.left.up"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.left.up.svg","symbol":"arrow.turn.left.up"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6006 24.0332" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0332" opacity="0" width="20.6006" x="0" y="0"/>
@@ -5965,7 +5965,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn right down","arrow_turn_right_down","arrows","back","direction","down","forward","maps","navigate","right","turn"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.right.down.svg","symbol":"arrow.turn.right.down"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.right.down.svg","symbol":"arrow.turn.right.down"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6006 24.0332" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0332" opacity="0" width="20.6006" x="0" y="0"/>
@@ -5982,7 +5982,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn right up","arrow_turn_right_up","arrows","back","direction","forward","maps","navigate","right","turn","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.right.up.svg","symbol":"arrow.turn.right.up"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.right.up.svg","symbol":"arrow.turn.right.up"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6006 24.0332" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0332" opacity="0" width="20.6006" x="0" y="0"/>
@@ -5999,7 +5999,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn up left","arrow_turn_up_left","arrows","back","direction","forward","left","maps","navigate","turn","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.up.left.svg","symbol":"arrow.turn.up.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.up.left.svg","symbol":"arrow.turn.up.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3115 20.3613" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.3613" opacity="0" width="24.3115" x="0" y="0"/>
@@ -6016,7 +6016,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrow turn up right","arrow_turn_up_right","arrows","back","direction","forward","maps","navigate","right","turn","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/arrow.turn.up.right.svg","symbol":"arrow.turn.up.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/arrow.turn.up.right.svg","symbol":"arrow.turn.up.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3115 20.3613" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.3613" opacity="0" width="24.3115" x="0" y="0"/>
@@ -6033,7 +6033,7 @@
       categories: ["accessibility","arrows","maps"],
       tags: ["accessibility","and","arrow","arrow up and down and arrow left and right","arrow_up_and_down_and_arrow_left_and_right","arrows","back","direction","down","forward","left","maps","navigate","right","up"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/arrow.up.and.down.and.arrow.left.and.right.svg","symbol":"arrow.up.and.down.and.arrow.left.and.right"},{"repo":"svg-converter","file":"app-input/!Maps/arrow.up.and.down.and.arrow.left.and.right.svg","symbol":"arrow.up.and.down.and.arrow.left.and.right"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__ARROW_UP_AND_DOWN_AND_ARROW_LEFT_AND_RIGHT"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/arrow.up.and.down.and.arrow.left.and.right.svg","symbol":"arrow.up.and.down.and.arrow.left.and.right"},{"repo":"svg-converter","file":"app-input/Maps/arrow.up.and.down.and.arrow.left.and.right.svg","symbol":"arrow.up.and.down.and.arrow.left.and.right"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__ARROW_UP_AND_DOWN_AND_ARROW_LEFT_AND_RIGHT"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0768 29.8129" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8129" opacity="0" width="30.0768" x="0" y="0"/>
@@ -6050,7 +6050,7 @@
       categories: ["accessibility","arrows","rays-sparkles"],
       tags: ["accessibility","and","arrow","arrow up and down and sparkles","arrow_up_and_down_and_sparkles","arrows","back","direction","down","forward","navigate","rays & sparkles","sparkles","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/arrow.up.and.down.and.sparkles.svg","symbol":"arrow.up.and.down.and.sparkles"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/arrow.up.and.down.and.sparkles.svg","symbol":"arrow.up.and.down.and.sparkles"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/arrow.up.and.down.and.sparkles.svg","symbol":"arrow.up.and.down.and.sparkles"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/arrow.up.and.down.and.sparkles.svg","symbol":"arrow.up.and.down.and.sparkles"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7998 25.2832" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2832" opacity="0" width="34.7998" x="0" y="0"/>
@@ -6183,7 +6183,7 @@
       categories: ["accessibility","arrows","maps"],
       tags: ["accessibility","and","arrow","arrow up left and down right and arrow up right and down left","arrow_up_left_and_down_right_and_arrow_up_right_and_down_left","arrows","back","direction","down","forward","left","maps","navigate","right","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/arrow.up.left.and.down.right.and.arrow.up.right.and.down.left.svg","symbol":"arrow.up.left.and.down.right.and.arrow.up.right.and.down.left"},{"repo":"svg-converter","file":"app-input/!Maps/arrow.up.left.and.down.right.and.arrow.up.right.and.down.left.svg","symbol":"arrow.up.left.and.down.right.and.arrow.up.right.and.down.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/arrow.up.left.and.down.right.and.arrow.up.right.and.down.left.svg","symbol":"arrow.up.left.and.down.right.and.arrow.up.right.and.down.left"},{"repo":"svg-converter","file":"app-input/Maps/arrow.up.left.and.down.right.and.arrow.up.right.and.down.left.svg","symbol":"arrow.up.left.and.down.right.and.arrow.up.right.and.down.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5078 25.2148" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2148" opacity="0" width="25.5078" x="0" y="0"/>
@@ -6309,7 +6309,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow up to line","arrow_up_to_line","arrows","back","direction","forward","keyboard","line","navigate","to","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.up.to.line.svg","symbol":"arrow.up.to.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.up.to.line.svg","symbol":"arrow.up.to.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 27.1875" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.1875" opacity="0" width="20.2832" x="0" y="0"/>
@@ -6326,7 +6326,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow up to line circle","arrow_up_to_line_circle","arrows","back","circle","circled","direction","forward","keyboard","line","navigate","to","up"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.up.to.line.circle.svg","symbol":"arrow.up.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.up.to.line.circle.svg","symbol":"arrow.up.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_UP_TO_LINE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.up.to.line.circle.svg","symbol":"arrow.up.to.line.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrow.up.to.line.circle.svg","symbol":"arrow.up.to.line.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROW_UP_TO_LINE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -6344,7 +6344,7 @@
       categories: ["arrows","keyboard","circled"],
       tags: ["arrow","arrow up to line circle fill","arrow_up_to_line_circle_fill","arrows","back","circle","circled","direction","fill","forward","keyboard","line","navigate","to","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.up.to.line.circle.fill.svg","symbol":"arrow.up.to.line.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.up.to.line.circle.fill.svg","symbol":"arrow.up.to.line.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -6361,7 +6361,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrow up to line compact","arrow_up_to_line_compact","arrows","back","compact","direction","forward","keyboard","line","navigate","to","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.up.to.line.compact.svg","symbol":"arrow.up.to.line.compact"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.up.to.line.compact.svg","symbol":"arrow.up.to.line.compact"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.6973 22.998" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.998" opacity="0" width="19.6973" x="0" y="0"/>
@@ -6378,7 +6378,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow up to line square","arrow_up_to_line_square","arrows","back","direction","forward","keyboard","line","navigate","square","squared","to","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.up.to.line.square.svg","symbol":"arrow.up.to.line.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.up.to.line.square.svg","symbol":"arrow.up.to.line.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -6396,7 +6396,7 @@
       categories: ["arrows","keyboard","squared"],
       tags: ["arrow","arrow up to line square fill","arrow_up_to_line_square_fill","arrows","back","direction","fill","forward","keyboard","line","navigate","square","squared","to","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/arrow.up.to.line.square.fill.svg","symbol":"arrow.up.to.line.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/arrow.up.to.line.square.fill.svg","symbol":"arrow.up.to.line.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -7935,7 +7935,7 @@
       categories: ["editing"],
       tags: ["aspectratio","editing"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/aspectratio.svg","symbol":"aspectratio"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/aspectratio.svg","symbol":"aspectratio"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -7952,7 +7952,7 @@
       categories: ["editing"],
       tags: ["aspectratio","aspectratio fill","aspectratio_fill","editing","fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/aspectratio.fill.svg","symbol":"aspectratio.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/aspectratio.fill.svg","symbol":"aspectratio.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="30.3223" x="0" y="0"/>
@@ -8195,7 +8195,7 @@
       categories: ["arrows","media"],
       tags: ["arrows","backward","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.svg","symbol":"backward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.svg","symbol":"backward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.8975 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="39.8975" x="0" y="0"/>
@@ -8212,7 +8212,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrows","backward","backward circle","backward_circle","circle","circled","media"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.circle.svg","symbol":"backward.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/backward.circle.svg","symbol":"backward.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BACKWARD_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.circle.svg","symbol":"backward.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/backward.circle.svg","symbol":"backward.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BACKWARD_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -8230,7 +8230,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrows","backward","backward circle fill","backward_circle_fill","circle","circled","fill","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.circle.fill.svg","symbol":"backward.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.circle.fill.svg","symbol":"backward.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -8247,7 +8247,7 @@
       categories: ["arrows","media"],
       tags: ["arrows","backward","backward end","backward_end","end","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.end.svg","symbol":"backward.end"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.end.svg","symbol":"backward.end"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.085 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="22.085" x="0" y="0"/>
@@ -8264,7 +8264,7 @@
       categories: ["arrows","media"],
       tags: ["alt","arrows","backward","backward end alt","backward_end_alt","end","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.end.alt.svg","symbol":"backward.end.alt"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.end.alt.svg","symbol":"backward.end.alt"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.4688 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="40.4688" x="0" y="0"/>
@@ -8281,7 +8281,7 @@
       categories: ["arrows","media"],
       tags: ["alt","arrows","backward","backward end alt fill","backward_end_alt_fill","end","fill","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.end.alt.fill.svg","symbol":"backward.end.alt.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.end.alt.fill.svg","symbol":"backward.end.alt.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.9502 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="43.9502" x="0" y="0"/>
@@ -8298,7 +8298,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrows","backward","backward end circle","backward_end_circle","circle","circled","end","media"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.end.circle.svg","symbol":"backward.end.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/backward.end.circle.svg","symbol":"backward.end.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BACKWARD_END_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.end.circle.svg","symbol":"backward.end.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/backward.end.circle.svg","symbol":"backward.end.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BACKWARD_END_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -8316,7 +8316,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrows","backward","backward end circle fill","backward_end_circle_fill","circle","circled","end","fill","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.end.circle.fill.svg","symbol":"backward.end.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.end.circle.fill.svg","symbol":"backward.end.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -8333,7 +8333,7 @@
       categories: ["arrows","media"],
       tags: ["arrows","backward","backward end fill","backward_end_fill","end","fill","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.end.fill.svg","symbol":"backward.end.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.end.fill.svg","symbol":"backward.end.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5664 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="25.5664" x="0" y="0"/>
@@ -8350,7 +8350,7 @@
       categories: ["arrows","media"],
       tags: ["arrows","backward","backward fill","backward_fill","fill","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.fill.svg","symbol":"backward.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.fill.svg","symbol":"backward.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.8975 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="39.8975" x="0" y="0"/>
@@ -8367,7 +8367,7 @@
       categories: ["arrows","media"],
       tags: ["arrows","backward","backward frame","backward_frame","frame","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.frame.svg","symbol":"backward.frame"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.frame.svg","symbol":"backward.frame"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.1377 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="31.1377" x="0" y="0"/>
@@ -8384,7 +8384,7 @@
       categories: ["arrows","media"],
       tags: ["arrows","backward","backward frame fill","backward_frame_fill","fill","frame","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/backward.frame.fill.svg","symbol":"backward.frame.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/backward.frame.fill.svg","symbol":"backward.frame.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3447 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="33.3447" x="0" y="0"/>
@@ -8589,7 +8589,7 @@
       categories: ["editing","health"],
       tags: ["bandage","editing","health"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/bandage.svg","symbol":"bandage"},{"repo":"svg-converter","file":"app-input/Health/bandage.svg","symbol":"bandage"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/bandage.svg","symbol":"bandage"},{"repo":"svg-converter","file":"app-input/Health/bandage.svg","symbol":"bandage"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.2121 26.984" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.984" opacity="0" width="27.2121" x="0" y="0"/>
@@ -8607,7 +8607,7 @@
       categories: ["editing","health"],
       tags: ["bandage","bandage fill","bandage_fill","editing","fill","health"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/bandage.fill.svg","symbol":"bandage.fill"},{"repo":"svg-converter","file":"app-input/Health/bandage.fill.svg","symbol":"bandage.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/bandage.fill.svg","symbol":"bandage.fill"},{"repo":"svg-converter","file":"app-input/Health/bandage.fill.svg","symbol":"bandage.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.8138 26.5336" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.5336" opacity="0" width="26.8138" x="0" y="0"/>
@@ -8624,7 +8624,7 @@
       categories: ["maps"],
       tags: ["base","base unit","base_unit","maps","unit"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/base.unit.svg","symbol":"base.unit"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/base.unit.svg","symbol":"base.unit"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.6631 17.5293" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.5293" opacity="0" width="24.6631" x="0" y="0"/>
@@ -9136,7 +9136,7 @@
       categories: ["editing"],
       tags: ["beziercurve","editing"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/beziercurve.svg","symbol":"beziercurve"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/beziercurve.svg","symbol":"beziercurve"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.5664 30.2344" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.2344" opacity="0" width="30.5664" x="0" y="0"/>
@@ -9153,7 +9153,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["bicycle","maps","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bicycle.svg","symbol":"bicycle"},{"repo":"svg-converter","file":"app-input/!Transportation/bicycle.svg","symbol":"bicycle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bicycle.svg","symbol":"bicycle"},{"repo":"svg-converter","file":"app-input/Transportation/bicycle.svg","symbol":"bicycle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.208 26.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9141" opacity="0" width="43.208" x="0" y="0"/>
@@ -9170,7 +9170,7 @@
       categories: ["maps-travel","maps","circled","transportation"],
       tags: ["bicycle","bicycle circle","bicycle_circle","circle","circled","maps","maps & travel","transportation"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bicycle.circle.svg","symbol":"bicycle.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/bicycle.circle.svg","symbol":"bicycle.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/bicycle.circle.svg","symbol":"bicycle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BICYCLE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bicycle.circle.svg","symbol":"bicycle.circle"},{"repo":"svg-converter","file":"app-input/Transportation/bicycle.circle.svg","symbol":"bicycle.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/bicycle.circle.svg","symbol":"bicycle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BICYCLE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -9188,7 +9188,7 @@
       categories: ["maps-travel","maps","circled","transportation"],
       tags: ["bicycle","bicycle circle fill","bicycle_circle_fill","circle","circled","fill","maps","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bicycle.circle.fill.svg","symbol":"bicycle.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/bicycle.circle.fill.svg","symbol":"bicycle.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bicycle.circle.fill.svg","symbol":"bicycle.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/bicycle.circle.fill.svg","symbol":"bicycle.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -9205,7 +9205,7 @@
       categories: ["maps"],
       tags: ["binoculars","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/binoculars.svg","symbol":"binoculars"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/binoculars.svg","symbol":"binoculars"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.501 25.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.0391" opacity="0" width="33.501" x="0" y="0"/>
@@ -9222,7 +9222,7 @@
       categories: ["maps","circled"],
       tags: ["binoculars","binoculars circle","binoculars_circle","circle","circled","maps"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/binoculars.circle.svg","symbol":"binoculars.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/binoculars.circle.svg","symbol":"binoculars.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BINOCULARS_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/binoculars.circle.svg","symbol":"binoculars.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/binoculars.circle.svg","symbol":"binoculars.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BINOCULARS_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -9240,7 +9240,7 @@
       categories: ["maps","circled"],
       tags: ["binoculars","binoculars circle fill","binoculars_circle_fill","circle","circled","fill","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/binoculars.circle.fill.svg","symbol":"binoculars.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/binoculars.circle.fill.svg","symbol":"binoculars.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -9257,7 +9257,7 @@
       categories: ["maps"],
       tags: ["binoculars","binoculars fill","binoculars_fill","fill","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/binoculars.fill.svg","symbol":"binoculars.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/binoculars.fill.svg","symbol":"binoculars.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.501 25.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.0391" opacity="0" width="33.501" x="0" y="0"/>
@@ -9648,7 +9648,7 @@
       categories: ["maps-travel","transportation","weather"],
       tags: ["bolt","bolt car","bolt_car","car","drive","energy","lightning","maps & travel","power","transport","transportation","travel","vehicle","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/bolt.car.svg","symbol":"bolt.car"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/bolt.car.svg","symbol":"bolt.car"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2988 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="31.2988" x="0" y="0"/>
@@ -9666,7 +9666,7 @@
       categories: ["maps-travel","circled","transportation","weather"],
       tags: ["bolt","bolt car circle","bolt_car_circle","car","circle","circled","drive","energy","lightning","maps & travel","power","transport","transportation","travel","vehicle","weather"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/bolt.car.circle.svg","symbol":"bolt.car.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/bolt.car.circle.svg","symbol":"bolt.car.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BOLT_CAR_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/bolt.car.circle.svg","symbol":"bolt.car.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/bolt.car.circle.svg","symbol":"bolt.car.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__BOLT_CAR_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -9684,7 +9684,7 @@
       categories: ["maps-travel","circled","transportation","weather"],
       tags: ["bolt","bolt car circle fill","bolt_car_circle_fill","car","circle","circled","drive","energy","fill","lightning","maps & travel","power","transport","transportation","travel","vehicle","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/bolt.car.circle.fill.svg","symbol":"bolt.car.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/bolt.car.circle.fill.svg","symbol":"bolt.car.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -9701,7 +9701,7 @@
       categories: ["maps-travel","transportation","weather"],
       tags: ["bolt","bolt car fill","bolt_car_fill","car","drive","energy","fill","lightning","maps & travel","power","transport","transportation","travel","vehicle","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/bolt.car.fill.svg","symbol":"bolt.car.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/bolt.car.fill.svg","symbol":"bolt.car.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2988 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="31.2988" x="0" y="0"/>
@@ -10460,7 +10460,7 @@
       categories: ["communication","editing"],
       tags: ["and","bubble","bubble and pencil","bubble_and_pencil","communication","compose","edit","editing","pencil","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/bubble.and.pencil.svg","symbol":"bubble.and.pencil"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/bubble.and.pencil.svg","symbol":"bubble.and.pencil"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.2583 38.7839" aria-hidden="true" focusable="false">
  <g>
   <rect height="38.7839" opacity="0" width="38.2583" x="0" y="0"/>
@@ -10496,7 +10496,7 @@
       categories: ["communication","security"],
       tags: ["and","bubble","bubble left and exclamationmark bubble right","bubble_left_and_exclamationmark_bubble_right","communication","exclamationmark","left","privacy & security","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/bubble.left.and.exclamationmark.bubble.right.svg","symbol":"bubble.left.and.exclamationmark.bubble.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/bubble.left.and.exclamationmark.bubble.right.svg","symbol":"bubble.left.and.exclamationmark.bubble.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.8027 29.3555" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.3555" opacity="0" width="37.8027" x="0" y="0"/>
@@ -10515,7 +10515,7 @@
       categories: ["communication","security"],
       tags: ["and","bubble","bubble left and exclamationmark bubble right fill","bubble_left_and_exclamationmark_bubble_right_fill","communication","exclamationmark","fill","left","privacy & security","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/bubble.left.and.exclamationmark.bubble.right.fill.svg","symbol":"bubble.left.and.exclamationmark.bubble.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/bubble.left.and.exclamationmark.bubble.right.fill.svg","symbol":"bubble.left.and.exclamationmark.bubble.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.918 33.2031" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2031" opacity="0" width="40.918" x="0" y="0"/>
@@ -10642,7 +10642,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["bus","maps","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bus.svg","symbol":"bus"},{"repo":"svg-converter","file":"app-input/!Transportation/bus.svg","symbol":"bus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bus.svg","symbol":"bus"},{"repo":"svg-converter","file":"app-input/Transportation/bus.svg","symbol":"bus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3271 31.6504" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.6504" opacity="0" width="30.3271" x="0" y="0"/>
@@ -10659,7 +10659,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["bus","bus doubledecker","bus_doubledecker","doubledecker","maps","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bus.doubledecker.svg","symbol":"bus.doubledecker"},{"repo":"svg-converter","file":"app-input/!Transportation/bus.doubledecker.svg","symbol":"bus.doubledecker"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bus.doubledecker.svg","symbol":"bus.doubledecker"},{"repo":"svg-converter","file":"app-input/Transportation/bus.doubledecker.svg","symbol":"bus.doubledecker"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2188 33.8086" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.8086" opacity="0" width="29.2188" x="0" y="0"/>
@@ -10676,7 +10676,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["bus","bus doubledecker fill","bus_doubledecker_fill","doubledecker","fill","maps","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bus.doubledecker.fill.svg","symbol":"bus.doubledecker.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/bus.doubledecker.fill.svg","symbol":"bus.doubledecker.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bus.doubledecker.fill.svg","symbol":"bus.doubledecker.fill"},{"repo":"svg-converter","file":"app-input/Transportation/bus.doubledecker.fill.svg","symbol":"bus.doubledecker.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9307 33.5352" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.5352" opacity="0" width="28.9307" x="0" y="0"/>
@@ -10693,7 +10693,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["bus","bus fill","bus_fill","fill","maps","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/bus.fill.svg","symbol":"bus.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/bus.fill.svg","symbol":"bus.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/bus.fill.svg","symbol":"bus.fill"},{"repo":"svg-converter","file":"app-input/Transportation/bus.fill.svg","symbol":"bus.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0391 31.4746" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.4746" opacity="0" width="30.0391" x="0" y="0"/>
@@ -10983,7 +10983,7 @@
       categories: ["transportation"],
       tags: ["cablecar","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/cablecar.svg","symbol":"cablecar"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/cablecar.svg","symbol":"cablecar"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.2129 32.6855" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.6855" opacity="0" width="28.2129" x="0" y="0"/>
@@ -11000,7 +11000,7 @@
       categories: ["transportation"],
       tags: ["cablecar","cablecar fill","cablecar_fill","fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/cablecar.fill.svg","symbol":"cablecar.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/cablecar.fill.svg","symbol":"cablecar.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.2129 32.6855" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.6855" opacity="0" width="28.2129" x="0" y="0"/>
@@ -11316,7 +11316,7 @@
       categories: ["editing","media"],
       tags: ["camera","camera filters","camera_filters","editing","filters","image","media","photo","picture"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/camera.filters.svg","symbol":"camera.filters"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/camera.filters.svg","symbol":"camera.filters"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.7061 27.041" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.041" opacity="0" width="28.7061" x="0" y="0"/>
@@ -11471,7 +11471,7 @@
       categories: ["keyboard"],
       tags: ["capslock","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/capslock.svg","symbol":"capslock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/capslock.svg","symbol":"capslock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5781 28.0371" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.0371" opacity="0" width="27.5781" x="0" y="0"/>
@@ -11488,7 +11488,7 @@
       categories: ["keyboard"],
       tags: ["capslock","capslock fill","capslock_fill","fill","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/capslock.fill.svg","symbol":"capslock.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/capslock.fill.svg","symbol":"capslock.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5781 28.0371" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.0371" opacity="0" width="27.5781" x="0" y="0"/>
@@ -11573,7 +11573,7 @@
       categories: ["accessibility","communication"],
       tags: ["accessibility","bubble","captions","captions bubble","captions_bubble","communication"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/captions.bubble.svg","symbol":"captions.bubble"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/captions.bubble.svg","symbol":"captions.bubble"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.3984" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.3984" opacity="0" width="29.0381" x="0" y="0"/>
@@ -11591,7 +11591,7 @@
       categories: ["accessibility","communication"],
       tags: ["accessibility","bubble","captions","captions bubble fill","captions_bubble_fill","communication","fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/captions.bubble.fill.svg","symbol":"captions.bubble.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/captions.bubble.fill.svg","symbol":"captions.bubble.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.4863" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4863" opacity="0" width="29.0381" x="0" y="0"/>
@@ -11608,7 +11608,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["car","drive","maps","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/car.svg","symbol":"car"},{"repo":"svg-converter","file":"app-input/!Transportation/car.svg","symbol":"car"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/car.svg","symbol":"car"},{"repo":"svg-converter","file":"app-input/Transportation/car.svg","symbol":"car"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2988 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="31.2988" x="0" y="0"/>
@@ -11625,7 +11625,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car 2","car_2","drive","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.2.svg","symbol":"car.2"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.2.svg","symbol":"car.2"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.5244 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="42.5244" x="0" y="0"/>
@@ -11643,7 +11643,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car 2 fill","car_2_fill","drive","fill","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.2.fill.svg","symbol":"car.2.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.2.fill.svg","symbol":"car.2.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.5957 28.75" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.75" opacity="0" width="45.5957" x="0" y="0"/>
@@ -11661,7 +11661,7 @@
       categories: ["maps-travel","maps","badged","badged-gearshape","status","transportation"],
       tags: ["badge","badged","car","car badge gearshape","car_badge_gearshape","drive","gear","gearshape","maps","maps & travel","status","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/car.badge.gearshape.svg","symbol":"car.badge.gearshape"},{"repo":"svg-converter","file":"app-input/!Transportation/car.badge.gearshape.svg","symbol":"car.badge.gearshape"},{"repo":"svg-converter","file":"app-input/Badge/car.badge.gearshape.svg","symbol":"car.badge.gearshape"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/car.badge.gearshape.svg","symbol":"car.badge.gearshape"},{"repo":"svg-converter","file":"app-input/Maps/car.badge.gearshape.svg","symbol":"car.badge.gearshape"},{"repo":"svg-converter","file":"app-input/Transportation/car.badge.gearshape.svg","symbol":"car.badge.gearshape"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.9746 43.9062" aria-hidden="true" focusable="false">
  <g>
   <rect height="43.9062" opacity="0" width="38.9746" x="0" y="0"/>
@@ -11679,7 +11679,7 @@
       categories: ["maps-travel","maps","badged","badged-gearshape","status","transportation"],
       tags: ["badge","badged","car","car badge gearshape fill","car_badge_gearshape_fill","drive","fill","gear","gearshape","maps","maps & travel","status","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/car.badge.gearshape.fill.svg","symbol":"car.badge.gearshape.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/car.badge.gearshape.fill.svg","symbol":"car.badge.gearshape.fill"},{"repo":"svg-converter","file":"app-input/Badge/car.badge.gearshape.fill.svg","symbol":"car.badge.gearshape.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/car.badge.gearshape.fill.svg","symbol":"car.badge.gearshape.fill"},{"repo":"svg-converter","file":"app-input/Maps/car.badge.gearshape.fill.svg","symbol":"car.badge.gearshape.fill"},{"repo":"svg-converter","file":"app-input/Transportation/car.badge.gearshape.fill.svg","symbol":"car.badge.gearshape.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.9746 43.9062" aria-hidden="true" focusable="false">
  <g>
   <rect height="43.9062" opacity="0" width="38.9746" x="0" y="0"/>
@@ -11697,7 +11697,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car card","car_card","card","drive","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.card.svg","symbol":"car.card"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.card.svg","symbol":"car.card"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3467 22.0508" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.0508" opacity="0" width="30.3467" x="0" y="0"/>
@@ -11715,7 +11715,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car card fill","car_card_fill","card","drive","fill","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.card.fill.svg","symbol":"car.card.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.card.fill.svg","symbol":"car.card.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3467 22.0508" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.0508" opacity="0" width="30.3467" x="0" y="0"/>
@@ -11732,7 +11732,7 @@
       categories: ["maps-travel","maps","circled","transportation"],
       tags: ["car","car circle","car_circle","circle","circled","drive","maps","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/car.circle.svg","symbol":"car.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/car.circle.svg","symbol":"car.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/car.circle.svg","symbol":"car.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CAR_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/car.circle.svg","symbol":"car.circle"},{"repo":"svg-converter","file":"app-input/Transportation/car.circle.svg","symbol":"car.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/car.circle.svg","symbol":"car.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CAR_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -11750,7 +11750,7 @@
       categories: ["maps-travel","maps","circled","transportation"],
       tags: ["car","car circle fill","car_circle_fill","circle","circled","drive","fill","maps","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/car.circle.fill.svg","symbol":"car.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/car.circle.fill.svg","symbol":"car.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/car.circle.fill.svg","symbol":"car.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/car.circle.fill.svg","symbol":"car.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -11767,7 +11767,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car ferry","car_ferry","drive","ferry","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.ferry.svg","symbol":"car.ferry"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.ferry.svg","symbol":"car.ferry"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.1373 30.7715" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.7715" opacity="0" width="29.1373" x="0" y="0"/>
@@ -11784,7 +11784,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car ferry fill","car_ferry_fill","drive","ferry","fill","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.ferry.fill.svg","symbol":"car.ferry.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.ferry.fill.svg","symbol":"car.ferry.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.1401 30.7617" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.7617" opacity="0" width="29.1401" x="0" y="0"/>
@@ -11801,7 +11801,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["car","car fill","car_fill","drive","fill","maps","maps & travel","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/car.fill.svg","symbol":"car.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/car.fill.svg","symbol":"car.fill"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__CAR_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/car.fill.svg","symbol":"car.fill"},{"repo":"svg-converter","file":"app-input/Transportation/car.fill.svg","symbol":"car.fill"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__CAR_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2988 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="31.2988" x="0" y="0"/>
@@ -11818,7 +11818,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car front waves down","car_front_waves_down","down","drive","front","maps & travel","transport","transportation","travel","vehicle","waves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.front.waves.down.svg","symbol":"car.front.waves.down"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.front.waves.down.svg","symbol":"car.front.waves.down"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.3027 34.7164" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.7164" opacity="0" width="25.3027" x="0" y="0"/>
@@ -11837,7 +11837,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car front waves down fill","car_front_waves_down_fill","down","drive","fill","front","maps & travel","transport","transportation","travel","vehicle","waves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.front.waves.down.fill.svg","symbol":"car.front.waves.down.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.front.waves.down.fill.svg","symbol":"car.front.waves.down.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.3516 34.7164" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.7164" opacity="0" width="25.3516" x="0" y="0"/>
@@ -11856,7 +11856,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["and","car","car front waves left and right and up","car_front_waves_left_and_right_and_up","drive","front","left","maps & travel","right","transport","transportation","travel","up","vehicle","waves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.front.waves.left.and.right.and.up.svg","symbol":"car.front.waves.left.and.right.and.up"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.front.waves.left.and.right.and.up.svg","symbol":"car.front.waves.left.and.right.and.up"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.3262 35.8008" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.8008" opacity="0" width="49.3262" x="0" y="0"/>
@@ -11875,7 +11875,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["and","car","car front waves left and right and up fill","car_front_waves_left_and_right_and_up_fill","drive","fill","front","left","maps & travel","right","transport","transportation","travel","up","vehicle","waves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.front.waves.left.and.right.and.up.fill.svg","symbol":"car.front.waves.left.and.right.and.up.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.front.waves.left.and.right.and.up.fill.svg","symbol":"car.front.waves.left.and.right.and.up.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.3262 35.8008" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.8008" opacity="0" width="49.3262" x="0" y="0"/>
@@ -11894,7 +11894,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car front waves up","car_front_waves_up","drive","front","maps & travel","transport","transportation","travel","up","vehicle","waves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.front.waves.up.svg","symbol":"car.front.waves.up"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.front.waves.up.svg","symbol":"car.front.waves.up"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.3027 34.375" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.375" opacity="0" width="25.3027" x="0" y="0"/>
@@ -11913,7 +11913,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car front waves up fill","car_front_waves_up_fill","drive","fill","front","maps & travel","transport","transportation","travel","up","vehicle","waves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.front.waves.up.fill.svg","symbol":"car.front.waves.up.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.front.waves.up.fill.svg","symbol":"car.front.waves.up.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.3516 34.375" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.375" opacity="0" width="25.3516" x="0" y="0"/>
@@ -11932,7 +11932,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car rear","car_rear","drive","maps & travel","rear","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.rear.svg","symbol":"car.rear"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.rear.svg","symbol":"car.rear"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2988 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="31.2988" x="0" y="0"/>
@@ -11949,7 +11949,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","car rear fill","car_rear_fill","drive","fill","maps & travel","rear","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/car.rear.fill.svg","symbol":"car.rear.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/car.rear.fill.svg","symbol":"car.rear.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2988 24.9121" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.9121" opacity="0" width="31.2988" x="0" y="0"/>
@@ -12779,7 +12779,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","character","character duployan","character_duployan","duployan"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/character.duployan.svg","symbol":"character.duployan"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.duployan.svg","symbol":"character.duployan"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/character.duployan.svg","symbol":"character.duployan"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.duployan.svg","symbol":"character.duployan"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -12796,7 +12796,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","character","character magnify","character_magnify","magnify"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/character.magnify.svg","symbol":"character.magnify"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.magnify.svg","symbol":"character.magnify"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/character.magnify.svg","symbol":"character.magnify"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.magnify.svg","symbol":"character.magnify"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5771 25.0586" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.0586" opacity="0" width="31.5771" x="0" y="0"/>
@@ -12831,7 +12831,7 @@
       categories: ["accessibility","editing","squared"],
       tags: ["accessibility","character","character square","character_square","editing","larger","size","square","squared","textformat","textformat size larger","textformat_size_larger"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/textformat.size.larger.svg","symbol":"textformat.size.larger"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.square.svg","symbol":"character.square"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.svg","symbol":"character"},{"repo":"svg-converter","file":"app-input/Text Formatting/textformat.size.larger.svg","symbol":"textformat.size.larger"},{"repo":"svg-converter","file":"bulk-convert-format/character.svg","symbol":"character"},{"repo":"svg-converter","file":"bulk-convert-format/textformat.size.larger.svg","symbol":"textformat.size.larger"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHARACTER"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TEXTFORMAT_SIZE_LARGER"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_BUTTON_ICONTEXT__CHARACTER_SQUARE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_BUTTON_TEXT__CHARACTER_SQUARE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/textformat.size.larger.svg","symbol":"textformat.size.larger"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.square.svg","symbol":"character.square"},{"repo":"svg-converter","file":"app-input/Text Formatting/character.svg","symbol":"character"},{"repo":"svg-converter","file":"app-input/Text Formatting/textformat.size.larger.svg","symbol":"textformat.size.larger"},{"repo":"svg-converter","file":"bulk-convert-format/character.svg","symbol":"character"},{"repo":"svg-converter","file":"bulk-convert-format/textformat.size.larger.svg","symbol":"textformat.size.larger"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHARACTER"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TEXTFORMAT_SIZE_LARGER"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_BUTTON_ICONTEXT__CHARACTER_SQUARE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_BUTTON_TEXT__CHARACTER_SQUARE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -13178,7 +13178,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","confirm","done","privacy & security","status","success"],
       repositories: ["pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__CHECKMARK"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.svg","symbol":"checkmark"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHECKMARK"}],
+      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__CHECKMARK"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.svg","symbol":"checkmark"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHECKMARK"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6797 21.8262" aria-hidden="true" focusable="false"><g><rect height="21.8262" opacity="0" width="21.6797" x="0" y="0"/><path d="M7.90039 21.8262C8.35938 21.8262 8.70117 21.6211 8.95508 21.25L21.0449 2.29492C21.2402 1.99219 21.3184 1.75781 21.3184 1.52344C21.3184 0.927734 20.9277 0.537109 20.332 0.537109C19.9219 0.537109 19.6777 0.683594 19.4336 1.08398L7.85156 19.3848L1.93359 11.8652C1.66992 11.5039 1.41602 11.3477 1.01562 11.3477C0.419922 11.3477 0 11.7578 0 12.3438C0 12.5977 0.0976562 12.8613 0.3125 13.125L6.80664 21.2305C7.12891 21.6406 7.45117 21.8262 7.90039 21.8262Z" /></g></svg>`
     },
     {
@@ -13190,7 +13190,7 @@
       categories: ["security","status"],
       tags: ["app","check","checkmark","checkmark app","checkmark_app","confirm","done","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.app.svg","symbol":"checkmark.app"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.app.svg","symbol":"checkmark.app"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -13208,7 +13208,7 @@
       categories: ["security","status"],
       tags: ["app","check","checkmark","checkmark app fill","checkmark_app_fill","confirm","done","fill","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.app.fill.svg","symbol":"checkmark.app.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.app.fill.svg","symbol":"checkmark.app.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -13225,7 +13225,7 @@
       categories: ["arrows","security","status"],
       tags: ["arrow","arrows","back","check","checkmark","checkmark arrow trianglehead clockwise","checkmark_arrow_trianglehead_clockwise","clockwise","confirm","direction","done","forward","navigate","privacy & security","status","success","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.arrow.trianglehead.clockwise.svg","symbol":"checkmark.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.arrow.trianglehead.clockwise.svg","symbol":"checkmark.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -13243,7 +13243,7 @@
       categories: ["arrows","security","status"],
       tags: ["arrow","arrows","back","check","checkmark","checkmark arrow trianglehead counterclockwise","checkmark_arrow_trianglehead_counterclockwise","confirm","counterclockwise","direction","done","forward","navigate","privacy & security","status","success","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.arrow.trianglehead.counterclockwise.svg","symbol":"checkmark.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.arrow.trianglehead.counterclockwise.svg","symbol":"checkmark.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -13261,7 +13261,7 @@
       categories: ["communication","security","status"],
       tags: ["bubble","check","checkmark","checkmark bubble","checkmark_bubble","communication","confirm","done","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.bubble.svg","symbol":"checkmark.bubble"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.bubble.svg","symbol":"checkmark.bubble"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.3984" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.3984" opacity="0" width="29.0381" x="0" y="0"/>
@@ -13279,7 +13279,7 @@
       categories: ["communication","security","status"],
       tags: ["bubble","check","checkmark","checkmark bubble fill","checkmark_bubble_fill","communication","confirm","done","fill","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.bubble.fill.svg","symbol":"checkmark.bubble.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.bubble.fill.svg","symbol":"checkmark.bubble.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.4863" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4863" opacity="0" width="29.0381" x="0" y="0"/>
@@ -13296,7 +13296,7 @@
       categories: ["security","circled","status"],
       tags: ["check","checkmark","checkmark circle","checkmark_circle","circle","circled","confirm","done","privacy & security","status","success"],
       repositories: ["app-template","mctree-mchome","svg-converter","visit-tracker"],
-      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.svg","symbol":"checkmark.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/checkmark.circle.svg","symbol":"checkmark.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE"}],
+      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.svg","symbol":"checkmark.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/checkmark.circle.svg","symbol":"checkmark.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false"><g><rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/><path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z"/><path d="M11.3379 18.7012C11.6992 18.7012 11.9922 18.5352 12.207 18.2031L18.1934 8.81836C18.3203 8.62305 18.4473 8.37891 18.4473 8.14453C18.4473 7.66602 18.0176 7.34375 17.5781 7.34375C17.2949 7.34375 17.0215 7.51953 16.8262 7.83203L11.2988 16.6113L8.54492 13.1641C8.29102 12.832 8.04688 12.7344 7.75391 12.7344C7.28516 12.7344 6.91406 13.1152 6.91406 13.5938C6.91406 13.8281 7.01172 14.0625 7.16797 14.2676L10.4297 18.2031C10.7031 18.5547 10.9766 18.7012 11.3379 18.7012Z"/></g></svg>`
     },
     {
@@ -13308,7 +13308,7 @@
       categories: ["maps-travel","maps","badged","badged-airplane","circled","status","transportation"],
       tags: ["airplane","badge","badged","check","checkmark","checkmark circle badge airplane","checkmark_circle_badge_airplane","circle","circled","confirm","done","flight","maps","maps & travel","plane","status","success","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/checkmark.circle.badge.airplane.svg","symbol":"checkmark.circle.badge.airplane"},{"repo":"svg-converter","file":"app-input/!Transportation/checkmark.circle.badge.airplane.svg","symbol":"checkmark.circle.badge.airplane"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.airplane.svg","symbol":"checkmark.circle.badge.airplane"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.airplane.svg","symbol":"checkmark.circle.badge.airplane"},{"repo":"svg-converter","file":"app-input/Maps/checkmark.circle.badge.airplane.svg","symbol":"checkmark.circle.badge.airplane"},{"repo":"svg-converter","file":"app-input/Transportation/checkmark.circle.badge.airplane.svg","symbol":"checkmark.circle.badge.airplane"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.1475 36.1035" aria-hidden="true" focusable="false">
  <g>
   <rect height="36.1035" opacity="0" width="41.1475" x="0" y="0"/>
@@ -13326,7 +13326,7 @@
       categories: ["maps-travel","maps","badged","badged-airplane","circled","status","transportation"],
       tags: ["airplane","badge","badged","check","checkmark","checkmark circle badge airplane fill","checkmark_circle_badge_airplane_fill","circle","circled","confirm","done","fill","flight","maps","maps & travel","plane","status","success","transport","transportation","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/checkmark.circle.badge.airplane.fill.svg","symbol":"checkmark.circle.badge.airplane.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/checkmark.circle.badge.airplane.fill.svg","symbol":"checkmark.circle.badge.airplane.fill"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.airplane.fill.svg","symbol":"checkmark.circle.badge.airplane.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.airplane.fill.svg","symbol":"checkmark.circle.badge.airplane.fill"},{"repo":"svg-converter","file":"app-input/Maps/checkmark.circle.badge.airplane.fill.svg","symbol":"checkmark.circle.badge.airplane.fill"},{"repo":"svg-converter","file":"app-input/Transportation/checkmark.circle.badge.airplane.fill.svg","symbol":"checkmark.circle.badge.airplane.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.1475 36.1035" aria-hidden="true" focusable="false">
  <g>
   <rect height="36.1035" opacity="0" width="41.1475" x="0" y="0"/>
@@ -13344,7 +13344,7 @@
       categories: ["actions","security","badged","badged-plus","circled","status"],
       tags: ["actions","add","badge","badged","check","checkmark","checkmark circle badge plus","checkmark_circle_badge_plus","circle","circled","confirm","create","done","new","plus","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.badge.plus.svg","symbol":"checkmark.circle.badge.plus"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.plus.svg","symbol":"checkmark.circle.badge.plus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.plus.svg","symbol":"checkmark.circle.badge.plus"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.badge.plus.svg","symbol":"checkmark.circle.badge.plus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5986 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5986" x="0" y="0"/>
@@ -13363,7 +13363,7 @@
       categories: ["actions","security","badged","badged-plus","circled","status"],
       tags: ["actions","add","badge","badged","check","checkmark","checkmark circle badge plus fill","checkmark_circle_badge_plus_fill","circle","circled","confirm","create","done","fill","new","plus","privacy & security","status","success"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.badge.plus.fill.svg","symbol":"checkmark.circle.badge.plus.fill"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.plus.fill.svg","symbol":"checkmark.circle.badge.plus.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE_BADGE_PLUS_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.plus.fill.svg","symbol":"checkmark.circle.badge.plus.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.badge.plus.fill.svg","symbol":"checkmark.circle.badge.plus.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CHECKMARK_CIRCLE_BADGE_PLUS_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5986 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5986" x="0" y="0"/>
@@ -13381,7 +13381,7 @@
       categories: ["security","badged","badged-questionmark","circled","status"],
       tags: ["badge","badged","check","checkmark","checkmark circle badge questionmark","checkmark_circle_badge_questionmark","circle","circled","confirm","done","privacy & security","question mark","questionmark","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.badge.questionmark.svg","symbol":"checkmark.circle.badge.questionmark"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.questionmark.svg","symbol":"checkmark.circle.badge.questionmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.questionmark.svg","symbol":"checkmark.circle.badge.questionmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.badge.questionmark.svg","symbol":"checkmark.circle.badge.questionmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5986 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5986" x="0" y="0"/>
@@ -13400,7 +13400,7 @@
       categories: ["security","badged","badged-questionmark","circled","status"],
       tags: ["badge","badged","check","checkmark","checkmark circle badge questionmark fill","checkmark_circle_badge_questionmark_fill","circle","circled","confirm","done","fill","privacy & security","question mark","questionmark","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.badge.questionmark.fill.svg","symbol":"checkmark.circle.badge.questionmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.questionmark.fill.svg","symbol":"checkmark.circle.badge.questionmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.questionmark.fill.svg","symbol":"checkmark.circle.badge.questionmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.badge.questionmark.fill.svg","symbol":"checkmark.circle.badge.questionmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5986 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5986" x="0" y="0"/>
@@ -13418,7 +13418,7 @@
       categories: ["security","badged","badged-xmark","circled","status"],
       tags: ["badge","badged","cancel","check","checkmark","checkmark circle badge xmark","checkmark_circle_badge_xmark","circle","circled","close","confirm","dismiss","done","privacy & security","status","success","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.badge.xmark.svg","symbol":"checkmark.circle.badge.xmark"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.xmark.svg","symbol":"checkmark.circle.badge.xmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.xmark.svg","symbol":"checkmark.circle.badge.xmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.badge.xmark.svg","symbol":"checkmark.circle.badge.xmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5986 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5986" x="0" y="0"/>
@@ -13437,7 +13437,7 @@
       categories: ["security","badged","badged-xmark","circled","status"],
       tags: ["badge","badged","cancel","check","checkmark","checkmark circle badge xmark fill","checkmark_circle_badge_xmark_fill","circle","circled","close","confirm","dismiss","done","fill","privacy & security","status","success","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.badge.xmark.fill.svg","symbol":"checkmark.circle.badge.xmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.xmark.fill.svg","symbol":"checkmark.circle.badge.xmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.badge.xmark.fill.svg","symbol":"checkmark.circle.badge.xmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.badge.xmark.fill.svg","symbol":"checkmark.circle.badge.xmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5986 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5986" x="0" y="0"/>
@@ -13455,7 +13455,7 @@
       categories: ["security","circled","status"],
       tags: ["check","checkmark","checkmark circle dotted","checkmark_circle_dotted","circle","circled","confirm","done","dotted","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.dotted.svg","symbol":"checkmark.circle.dotted"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.dotted.svg","symbol":"checkmark.circle.dotted"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6553 26.1816" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1816" opacity="0" width="26.6553" x="0" y="0"/>
@@ -13473,7 +13473,7 @@
       categories: ["security","circled","status"],
       tags: ["check","checkmark","checkmark circle fill","checkmark_circle_fill","circle","circled","confirm","done","fill","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.fill.svg","symbol":"checkmark.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.fill.svg","symbol":"checkmark.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -13490,7 +13490,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle","circled","status"],
       tags: ["badged","check","checkmark","checkmark circle trianglebadge exclamationmark","checkmark_circle_trianglebadge_exclamationmark","circle","circled","confirm","done","exclamation mark","exclamationmark","privacy & security","shapes","status","success","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.trianglebadge.exclamationmark.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.trianglebadge.exclamationmark.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.trianglebadge.exclamationmark.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.trianglebadge.exclamationmark.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.7178 31.084" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.084" opacity="0" width="40.7178" x="0" y="0"/>
@@ -13509,7 +13509,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle","circled","status"],
       tags: ["badged","check","checkmark","checkmark circle trianglebadge exclamationmark fill","checkmark_circle_trianglebadge_exclamationmark_fill","circle","circled","confirm","done","exclamation mark","exclamationmark","fill","privacy & security","shapes","status","success","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.circle.trianglebadge.exclamationmark.fill.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.trianglebadge.exclamationmark.fill.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/checkmark.circle.trianglebadge.exclamationmark.fill.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.circle.trianglebadge.exclamationmark.fill.svg","symbol":"checkmark.circle.trianglebadge.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.7178 31.084" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.084" opacity="0" width="40.7178" x="0" y="0"/>
@@ -13527,7 +13527,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark diamond","checkmark_diamond","confirm","diamond","done","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.diamond.svg","symbol":"checkmark.diamond"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.diamond.svg","symbol":"checkmark.diamond"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -13545,7 +13545,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark diamond fill","checkmark_diamond_fill","confirm","diamond","done","fill","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.diamond.fill.svg","symbol":"checkmark.diamond.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.diamond.fill.svg","symbol":"checkmark.diamond.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -13562,7 +13562,7 @@
       categories: ["cloud-server","security","status"],
       tags: ["check","checkmark","checkmark icloud","checkmark_icloud","cloud & drive","confirm","done","icloud","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.icloud.svg","symbol":"checkmark.icloud"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/checkmark.icloud.svg","symbol":"checkmark.icloud"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/checkmark.icloud.svg","symbol":"checkmark.icloud"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.icloud.svg","symbol":"checkmark.icloud"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
@@ -13580,7 +13580,7 @@
       categories: ["cloud-server","security","status"],
       tags: ["check","checkmark","checkmark icloud fill","checkmark_icloud_fill","cloud & drive","confirm","done","fill","icloud","privacy & security","status","success"],
       repositories: ["cocktail-list","svg-converter"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__CHECKMARK_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.icloud.fill.svg","symbol":"checkmark.icloud.fill"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/checkmark.icloud.fill.svg","symbol":"checkmark.icloud.fill"}],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__CHECKMARK_ICLOUD_FILL"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/checkmark.icloud.fill.svg","symbol":"checkmark.icloud.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.icloud.fill.svg","symbol":"checkmark.icloud.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false"><g><rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/><path d="M28.5107 9.90234C31.0547 10.9424 32.5684 13.3887 32.5684 16.0889C32.5684 19.7949 29.375 22.749 25.3516 22.749L7.9248 22.7441C3.44727 22.7441 0 19.4873 0 15.5322C0 12.3242 1.80176 9.70703 4.70215 9.15527C4.87793 5.59082 8.21289 3.19336 11.4844 4.01855C13.1201 1.64062 15.7031 0 19.0039 0C24.375 0 28.5303 4.15039 28.5107 9.90234ZM19.5068 7.55371L15.2734 14.541L13.1055 11.8506C12.8564 11.5332 12.5439 11.3623 12.1484 11.3623C11.5039 11.3623 10.9668 11.8652 10.9668 12.5293C10.9668 12.8271 11.0693 13.0957 11.2988 13.3838L14.1504 16.8311C14.4727 17.2314 14.8438 17.4316 15.3076 17.4316C15.7568 17.4316 16.167 17.2119 16.4209 16.8018L21.4648 8.82324C21.6162 8.58398 21.7432 8.2959 21.7432 8.00781C21.7432 7.37793 21.1865 6.89941 20.5469 6.89941C20.1221 6.89941 19.7607 7.11914 19.5068 7.55371Z"/></g></svg>`
     },
     {
@@ -13592,7 +13592,7 @@
       categories: ["communication","security","status"],
       tags: ["chat","check","checkmark","checkmark message","checkmark_message","communication","confirm","conversation","done","email","envelope","mail","message","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.message.svg","symbol":"checkmark.message"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.message.svg","symbol":"checkmark.message"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.918 27.627" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.627" opacity="0" width="30.918" x="0" y="0"/>
@@ -13610,7 +13610,7 @@
       categories: ["communication","security","status"],
       tags: ["chat","check","checkmark","checkmark message fill","checkmark_message_fill","communication","confirm","conversation","done","email","envelope","fill","mail","message","privacy & security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.message.fill.svg","symbol":"checkmark.message.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.message.fill.svg","symbol":"checkmark.message.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7812 27.4902" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.4902" opacity="0" width="30.7812" x="0" y="0"/>
@@ -13627,7 +13627,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark rectangle","checkmark_rectangle","confirm","done","privacy & security","rectangle","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.rectangle.svg","symbol":"checkmark.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.rectangle.svg","symbol":"checkmark.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -13645,7 +13645,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark rectangle fill","checkmark_rectangle_fill","confirm","done","fill","privacy & security","rectangle","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.rectangle.fill.svg","symbol":"checkmark.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.rectangle.fill.svg","symbol":"checkmark.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -13662,7 +13662,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark rectangle portrait","checkmark_rectangle_portrait","confirm","done","portrait","privacy & security","rectangle","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.rectangle.portrait.svg","symbol":"checkmark.rectangle.portrait"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.rectangle.portrait.svg","symbol":"checkmark.rectangle.portrait"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -13680,7 +13680,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark rectangle portrait fill","checkmark_rectangle_portrait_fill","confirm","done","fill","portrait","privacy & security","rectangle","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.rectangle.portrait.fill.svg","symbol":"checkmark.rectangle.portrait.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.rectangle.portrait.fill.svg","symbol":"checkmark.rectangle.portrait.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -13697,7 +13697,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark rectangle stack","checkmark_rectangle_stack","confirm","done","privacy & security","rectangle","stack","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.rectangle.stack.svg","symbol":"checkmark.rectangle.stack"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.rectangle.stack.svg","symbol":"checkmark.rectangle.stack"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4697 33.3203" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3203" opacity="0" width="31.4697" x="0" y="0"/>
@@ -13717,7 +13717,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark rectangle stack fill","checkmark_rectangle_stack_fill","confirm","done","fill","privacy & security","rectangle","stack","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.rectangle.stack.fill.svg","symbol":"checkmark.rectangle.stack.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.rectangle.stack.fill.svg","symbol":"checkmark.rectangle.stack.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4697 33.3203" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3203" opacity="0" width="31.4697" x="0" y="0"/>
@@ -13736,7 +13736,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark seal","checkmark_seal","confirm","done","privacy & security","seal","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.seal.svg","symbol":"checkmark.seal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.seal.svg","symbol":"checkmark.seal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2883 29.0113" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.0113" opacity="0" width="29.2883" x="0" y="0"/>
@@ -13754,7 +13754,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark seal fill","checkmark_seal_fill","confirm","done","fill","privacy & security","seal","status","success"],
       repositories: ["mctree-mchome","soccer-charts","svg-converter"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__CHECKMARK_SEAL_FILL"},{"repo":"soccer-charts","file":"index.html","symbol":"CHECKMARK_SEAL_FILL"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.seal.fill.svg","symbol":"checkmark.seal.fill"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__CHECKMARK_SEAL_FILL"},{"repo":"soccer-charts","file":"index.html","symbol":"CHECKMARK_SEAL_FILL"},{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.seal.fill.svg","symbol":"checkmark.seal.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.2908 28.9539" aria-hidden="true" focusable="false"><g><rect height="28.9539" opacity="0" width="29.2908" x="0" y="0"/><path d="M16.9061 1.2494L18.8251 3.15858C18.996 3.32459 19.1571 3.38807 19.3817 3.38807L22.0868 3.38807C24.4354 3.38807 25.5487 4.50623 25.5487 6.8451L25.5487 9.55506C25.5487 9.77967 25.6073 9.93592 25.7733 10.1068L27.6825 12.0258C29.3427 13.681 29.3524 15.2533 27.6825 16.9135L25.7733 18.8275C25.6122 18.9984 25.5487 19.1596 25.5487 19.389L25.5487 22.0892C25.5487 24.4379 24.4305 25.5512 22.0868 25.5512L19.3817 25.5512C19.1571 25.5512 19.0009 25.6097 18.8251 25.7806L16.9061 27.6849C15.2509 29.3451 13.6786 29.35 12.0233 27.6849L10.1044 25.7806C9.93347 25.6097 9.77722 25.5512 9.55261 25.5512L6.84265 25.5512C4.50378 25.5512 3.38562 24.433 3.38562 22.0892L3.38562 19.389C3.38562 19.1596 3.32214 18.9984 3.15613 18.8275L1.24695 16.9135C-0.413207 15.2533-0.41809 13.681 1.24695 12.0258L3.15613 10.1068C3.32214 9.94568 3.38562 9.77967 3.38562 9.55506L3.38562 6.8451C3.38562 4.4867 4.4989 3.38807 6.84265 3.38807L9.55261 3.38807C9.77722 3.38807 9.94324 3.32459 10.1044 3.15858L12.0184 1.25916C13.6786-0.415643 15.246-0.420526 16.9061 1.2494ZM18.1512 9.53553L13.0487 17.6312L10.6854 14.7357C10.3729 14.3451 10.0507 14.184 9.63562 14.184C8.9325 14.184 8.36609 14.7504 8.36609 15.4535C8.36609 15.7904 8.47839 16.0883 8.73718 16.4056L11.7938 20.0629C12.16 20.5121 12.5702 20.7416 13.0829 20.7416C13.5809 20.7416 14.0155 20.4877 14.3182 20.0433L20.2606 10.9271C20.4559 10.6342 20.5829 10.3119 20.5829 10.0189C20.5829 9.31092 19.9579 8.81776 19.2743 8.81776C18.8251 8.81776 18.454 9.05701 18.1512 9.53553Z"/></g></svg>`
     },
     {
@@ -13790,7 +13790,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark shield","checkmark_shield","confirm","done","privacy & security","shield","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.shield.svg","symbol":"checkmark.shield"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.shield.svg","symbol":"checkmark.shield"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/>
@@ -13808,7 +13808,7 @@
       categories: ["security","status"],
       tags: ["check","checkmark","checkmark shield fill","checkmark_shield_fill","confirm","done","fill","privacy & security","shield","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.shield.fill.svg","symbol":"checkmark.shield.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.shield.fill.svg","symbol":"checkmark.shield.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.5918 25.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.752" opacity="0" width="21.5918" x="0" y="0"/>
@@ -13825,7 +13825,7 @@
       categories: ["security","squared","status"],
       tags: ["check","checkmark","checkmark square","checkmark_square","confirm","done","privacy & security","square","squared","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.square.svg","symbol":"checkmark.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.square.svg","symbol":"checkmark.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -13843,7 +13843,7 @@
       categories: ["security","squared","status"],
       tags: ["check","checkmark","checkmark square fill","checkmark_square_fill","confirm","done","fill","privacy & security","square","squared","status","success"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/checkmark.square.fill.svg","symbol":"checkmark.square.fill"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__CHECKMARK_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/checkmark.square.fill.svg","symbol":"checkmark.square.fill"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__CHECKMARK_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -13950,7 +13950,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrows","backward","chevron","chevron backward to line","chevron left to line","chevron_backward_to_line","chevron_left_to_line","keyboard","left","line","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/chevron.backward.to.line.svg","symbol":"chevron.backward.to.line"},{"repo":"svg-converter","file":"app-input/!Keyboard/chevron.left.to.line.svg","symbol":"chevron.left.to.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/chevron.backward.to.line.svg","symbol":"chevron.backward.to.line"},{"repo":"svg-converter","file":"app-input/Keyboard/chevron.left.to.line.svg","symbol":"chevron.left.to.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.2607 22.4609" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.4609" opacity="0" width="17.2607" x="0" y="0"/>
@@ -13985,7 +13985,7 @@
       categories: ["arrows","keyboard"],
       tags: ["arrow","arrows","back","chevron","chevron forward to line","chevron right to line","chevron_forward_to_line","chevron_right_to_line","direction","forward","keyboard","line","navigate","right","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/chevron.forward.to.line.svg","symbol":"chevron.forward.to.line"},{"repo":"svg-converter","file":"app-input/!Keyboard/chevron.right.to.line.svg","symbol":"chevron.right.to.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/chevron.forward.to.line.svg","symbol":"chevron.forward.to.line"},{"repo":"svg-converter","file":"app-input/Keyboard/chevron.right.to.line.svg","symbol":"chevron.right.to.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.2607 22.4609" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.4609" opacity="0" width="17.2607" x="0" y="0"/>
@@ -14105,7 +14105,7 @@
       categories: ["editing","shapes","circled"],
       tags: ["and","circle","circle and line horizontal","circle_and_line_horizontal","circled","editing","horizontal","line","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/circle.and.line.horizontal.svg","symbol":"circle.and.line.horizontal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/circle.and.line.horizontal.svg","symbol":"circle.and.line.horizontal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.6162 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="36.6162" x="0" y="0"/>
@@ -14123,7 +14123,7 @@
       categories: ["editing","shapes","circled"],
       tags: ["and","circle","circle and line horizontal fill","circle_and_line_horizontal_fill","circled","editing","fill","horizontal","line","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/circle.and.line.horizontal.fill.svg","symbol":"circle.and.line.horizontal.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/circle.and.line.horizontal.fill.svg","symbol":"circle.and.line.horizontal.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.6162 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="36.6162" x="0" y="0"/>
@@ -14391,7 +14391,7 @@
       categories: ["editing","shapes","circled"],
       tags: ["circle","circle dashed","circle_dashed","circled","dashed","editing","shapes"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/circle.dashed.svg","symbol":"circle.dashed"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CIRCLE_DASHED"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__CIRCLE_DASHED"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/circle.dashed.svg","symbol":"circle.dashed"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CIRCLE_DASHED"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__CIRCLE_DASHED"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -14408,7 +14408,7 @@
       categories: ["editing","shapes","circled"],
       tags: ["circle","circle dashed rectangle","circle_dashed_rectangle","circled","dashed","editing","rectangle","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/circle.dashed.rectangle.svg","symbol":"circle.dashed.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/circle.dashed.rectangle.svg","symbol":"circle.dashed.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -14509,7 +14509,7 @@
       categories: ["accessibility","shapes","circled"],
       tags: ["accessibility","circle","circle hexagonpath","circle_hexagonpath","circled","hexagonpath","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/circle.hexagonpath.svg","symbol":"circle.hexagonpath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/circle.hexagonpath.svg","symbol":"circle.hexagonpath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.7744 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="28.7744" x="0" y="0"/>
@@ -14531,7 +14531,7 @@
       categories: ["accessibility","shapes","circled"],
       tags: ["accessibility","circle","circle hexagonpath fill","circle_hexagonpath_fill","circled","fill","hexagonpath","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/circle.hexagonpath.fill.svg","symbol":"circle.hexagonpath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/circle.hexagonpath.fill.svg","symbol":"circle.hexagonpath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.7744 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="28.7744" x="0" y="0"/>
@@ -14553,7 +14553,7 @@
       categories: ["editing","shapes","circled"],
       tags: ["circle","circle lefthalf filled","circle righthalf filled inverse","circle_lefthalf_filled","circle_righthalf_filled_inverse","circled","editing","filled","inverse","lefthalf","righthalf","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/circle.lefthalf.filled.svg","symbol":"circle.lefthalf.filled"},{"repo":"svg-converter","file":"app-input/!Editing/circle.righthalf.filled.inverse.svg","symbol":"circle.righthalf.filled.inverse"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/circle.lefthalf.filled.svg","symbol":"circle.lefthalf.filled"},{"repo":"svg-converter","file":"app-input/Editing/circle.righthalf.filled.inverse.svg","symbol":"circle.righthalf.filled.inverse"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -14570,7 +14570,7 @@
       categories: ["editing","shapes","circled"],
       tags: ["circle","circle lefthalf filled inverse","circle righthalf filled","circle_lefthalf_filled_inverse","circle_righthalf_filled","circled","editing","filled","inverse","lefthalf","righthalf","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/circle.lefthalf.filled.inverse.svg","symbol":"circle.lefthalf.filled.inverse"},{"repo":"svg-converter","file":"app-input/!Editing/circle.righthalf.filled.svg","symbol":"circle.righthalf.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/circle.lefthalf.filled.inverse.svg","symbol":"circle.lefthalf.filled.inverse"},{"repo":"svg-converter","file":"app-input/Editing/circle.righthalf.filled.svg","symbol":"circle.righthalf.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -14728,7 +14728,7 @@
       categories: ["keyboard","math","squared"],
       tags: ["clear","keyboard","math","multiply","multiply square","multiply_square","square","squared"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/clear.svg","symbol":"clear"},{"repo":"svg-converter","file":"app-input/!Math/multiply.square.svg","symbol":"multiply.square"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLEAR"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/clear.svg","symbol":"clear"},{"repo":"svg-converter","file":"app-input/Math/multiply.square.svg","symbol":"multiply.square"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__CLEAR"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -14746,7 +14746,7 @@
       categories: ["keyboard"],
       tags: ["clear","clear fill","clear_fill","fill","keyboard"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/clear.fill.svg","symbol":"clear.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_CLEAR__CLEAR_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/clear.fill.svg","symbol":"clear.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_CLEAR__CLEAR_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -16394,7 +16394,7 @@
       categories: ["keyboard"],
       tags: ["command","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/command.svg","symbol":"command"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/command.svg","symbol":"command"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.5996 24.209" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.209" opacity="0" width="24.5996" x="0" y="0"/>
@@ -16411,7 +16411,7 @@
       categories: ["keyboard","circled"],
       tags: ["circle","circled","command","command circle","command_circle","keyboard"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/command.circle.svg","symbol":"command.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/command.circle.svg","symbol":"command.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__COMMAND_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/command.circle.svg","symbol":"command.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/command.circle.svg","symbol":"command.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__COMMAND_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -16429,7 +16429,7 @@
       categories: ["keyboard","circled"],
       tags: ["circle","circled","command","command circle fill","command_circle_fill","fill","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/command.circle.fill.svg","symbol":"command.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/command.circle.fill.svg","symbol":"command.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -16446,7 +16446,7 @@
       categories: ["keyboard","squared"],
       tags: ["command","command square","command_square","keyboard","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/command.square.svg","symbol":"command.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/command.square.svg","symbol":"command.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -16464,7 +16464,7 @@
       categories: ["keyboard","squared"],
       tags: ["command","command square fill","command_square_fill","fill","keyboard","square","squared"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/command.square.fill.svg","symbol":"command.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/command.square.fill.svg","symbol":"command.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__COMMAND_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/command.square.fill.svg","symbol":"command.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/command.square.fill.svg","symbol":"command.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__COMMAND_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -16481,7 +16481,7 @@
       categories: ["maps-travel","maps","math"],
       tags: ["compass","compass drawing","compass_drawing","drawing","maps","maps & travel","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/compass.drawing.svg","symbol":"compass.drawing"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/compass.drawing.svg","symbol":"compass.drawing"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.3369 30.6152" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.6152" opacity="0" width="20.3369" x="0" y="0"/>
@@ -16510,7 +16510,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","and","arrow","arrows","back","contextualmenu","contextualmenu and pointer arrow","contextualmenu_and_pointer_arrow","direction","forward","navigate","pointer"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/contextualmenu.and.pointer.arrow.svg","symbol":"contextualmenu.and.pointer.arrow"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/contextualmenu.and.pointer.arrow.svg","symbol":"contextualmenu.and.pointer.arrow"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.4383 38.256" aria-hidden="true" focusable="false">
  <g>
   <rect height="38.256" opacity="0" width="33.4383" x="0" y="0"/>
@@ -16624,7 +16624,7 @@
       categories: ["keyboard"],
       tags: ["control","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/control.svg","symbol":"control"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/control.svg","symbol":"control"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.9932 23.916" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.916" opacity="0" width="22.9932" x="0" y="0"/>
@@ -16737,7 +16737,7 @@
       categories: ["editing"],
       tags: ["crop","editing"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/crop.svg","symbol":"crop"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/crop.svg","symbol":"crop"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.457 28.9355" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9355" opacity="0" width="28.457" x="0" y="0"/>
@@ -16754,7 +16754,7 @@
       categories: ["editing"],
       tags: ["crop","crop rotate","crop_rotate","editing","rotate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/crop.rotate.svg","symbol":"crop.rotate"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/crop.rotate.svg","symbol":"crop.rotate"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9727 32.5273" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.5273" opacity="0" width="26.9727" x="0" y="0"/>
@@ -17156,7 +17156,7 @@
       categories: ["actions","arrows","keyboard"],
       tags: ["actions","arrows","backward","delete","delete backward","delete left","delete_backward","delete_left","discard","keyboard","left","remove","trash"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/delete.backward.svg","symbol":"delete.backward"},{"repo":"svg-converter","file":"app-input/!Keyboard/delete.left.svg","symbol":"delete.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/delete.backward.svg","symbol":"delete.backward"},{"repo":"svg-converter","file":"app-input/Keyboard/delete.left.svg","symbol":"delete.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.5742 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="28.5742" x="0" y="0"/>
@@ -17174,7 +17174,7 @@
       categories: ["actions","arrows","keyboard"],
       tags: ["actions","arrows","backward","delete","delete backward fill","delete left fill","delete_backward_fill","delete_left_fill","discard","fill","keyboard","left","remove","trash"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/delete.backward.fill.svg","symbol":"delete.backward.fill"},{"repo":"svg-converter","file":"app-input/!Keyboard/delete.left.fill.svg","symbol":"delete.left.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__DELETE_LEFT_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/delete.backward.fill.svg","symbol":"delete.backward.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/delete.left.fill.svg","symbol":"delete.left.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__DELETE_LEFT_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.5742 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="28.5742" x="0" y="0"/>
@@ -17191,7 +17191,7 @@
       categories: ["actions","arrows","keyboard"],
       tags: ["actions","arrow","arrows","back","delete","delete forward","delete right","delete_forward","delete_right","direction","discard","forward","keyboard","navigate","remove","right","trash"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/delete.forward.svg","symbol":"delete.forward"},{"repo":"svg-converter","file":"app-input/!Keyboard/delete.right.svg","symbol":"delete.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/delete.forward.svg","symbol":"delete.forward"},{"repo":"svg-converter","file":"app-input/Keyboard/delete.right.svg","symbol":"delete.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.8613 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="27.8613" x="0" y="0"/>
@@ -17209,7 +17209,7 @@
       categories: ["actions","arrows","keyboard"],
       tags: ["actions","arrow","arrows","back","delete","delete forward fill","delete right fill","delete_forward_fill","delete_right_fill","direction","discard","fill","forward","keyboard","navigate","remove","right","trash"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/delete.forward.fill.svg","symbol":"delete.forward.fill"},{"repo":"svg-converter","file":"app-input/!Keyboard/delete.right.fill.svg","symbol":"delete.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/delete.forward.fill.svg","symbol":"delete.forward.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/delete.right.fill.svg","symbol":"delete.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.8613 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="27.8613" x="0" y="0"/>
@@ -17315,7 +17315,7 @@
       categories: ["editing"],
       tags: ["dial","dial high","dial_high","editing","high"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/dial.high.svg","symbol":"dial.high"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/dial.high.svg","symbol":"dial.high"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2295 25.9375" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9375" opacity="0" width="30.2295" x="0" y="0"/>
@@ -17333,7 +17333,7 @@
       categories: ["editing"],
       tags: ["dial","dial high fill","dial_high_fill","editing","fill","high"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/dial.high.fill.svg","symbol":"dial.high.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/dial.high.fill.svg","symbol":"dial.high.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2295 25.9375" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9375" opacity="0" width="30.2295" x="0" y="0"/>
@@ -17351,7 +17351,7 @@
       categories: ["editing"],
       tags: ["dial","dial low","dial_low","editing","low"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/dial.low.svg","symbol":"dial.low"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/dial.low.svg","symbol":"dial.low"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2295 25.9375" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9375" opacity="0" width="30.2295" x="0" y="0"/>
@@ -17369,7 +17369,7 @@
       categories: ["editing"],
       tags: ["dial","dial low fill","dial_low_fill","editing","fill","low"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/dial.low.fill.svg","symbol":"dial.low.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/dial.low.fill.svg","symbol":"dial.low.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2295 25.9375" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9375" opacity="0" width="30.2295" x="0" y="0"/>
@@ -17387,7 +17387,7 @@
       categories: ["editing"],
       tags: ["dial","dial medium","dial_medium","editing","medium"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/dial.medium.svg","symbol":"dial.medium"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/dial.medium.svg","symbol":"dial.medium"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2295 25.9375" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9375" opacity="0" width="30.2295" x="0" y="0"/>
@@ -17405,7 +17405,7 @@
       categories: ["editing"],
       tags: ["dial","dial medium fill","dial_medium_fill","editing","fill","medium"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/dial.medium.fill.svg","symbol":"dial.medium.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/dial.medium.fill.svg","symbol":"dial.medium.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2295 25.9375" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9375" opacity="0" width="30.2295" x="0" y="0"/>
@@ -17492,7 +17492,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","digitalcrown"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.svg","symbol":"digitalcrown"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.svg","symbol":"digitalcrown"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.0684 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="20.0684" x="0" y="0"/>
@@ -17509,7 +17509,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","clockwise","digitalcrown","digitalcrown arrow clockwise","digitalcrown_arrow_clockwise","direction","forward","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.arrow.clockwise.svg","symbol":"digitalcrown.arrow.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.arrow.clockwise.svg","symbol":"digitalcrown.arrow.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7609 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="30.7609" x="0" y="0"/>
@@ -17527,7 +17527,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","clockwise","digitalcrown","digitalcrown arrow clockwise fill","digitalcrown_arrow_clockwise_fill","direction","fill","forward","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.arrow.clockwise.fill.svg","symbol":"digitalcrown.arrow.clockwise.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.arrow.clockwise.fill.svg","symbol":"digitalcrown.arrow.clockwise.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.1799 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="30.1799" x="0" y="0"/>
@@ -17545,7 +17545,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","counterclockwise","digitalcrown","digitalcrown arrow counterclockwise","digitalcrown_arrow_counterclockwise","direction","forward","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.arrow.counterclockwise.svg","symbol":"digitalcrown.arrow.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.arrow.counterclockwise.svg","symbol":"digitalcrown.arrow.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7609 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="30.7609" x="0" y="0"/>
@@ -17563,7 +17563,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","counterclockwise","digitalcrown","digitalcrown arrow counterclockwise fill","digitalcrown_arrow_counterclockwise_fill","direction","fill","forward","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.arrow.counterclockwise.fill.svg","symbol":"digitalcrown.arrow.counterclockwise.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.arrow.counterclockwise.fill.svg","symbol":"digitalcrown.arrow.counterclockwise.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.1799 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="30.1799" x="0" y="0"/>
@@ -17581,7 +17581,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","digitalcrown","digitalcrown fill","digitalcrown_fill","fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.fill.svg","symbol":"digitalcrown.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.fill.svg","symbol":"digitalcrown.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.4824 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="19.4824" x="0" y="0"/>
@@ -17598,7 +17598,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","digitalcrown","digitalcrown horizontal","digitalcrown_horizontal","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.horizontal.svg","symbol":"digitalcrown.horizontal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.horizontal.svg","symbol":"digitalcrown.horizontal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.7236 19.707" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.707" opacity="0" width="26.7236" x="0" y="0"/>
@@ -17615,7 +17615,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","digitalcrown","digitalcrown horizontal fill","digitalcrown_horizontal_fill","fill","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.horizontal.fill.svg","symbol":"digitalcrown.horizontal.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.horizontal.fill.svg","symbol":"digitalcrown.horizontal.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.7236 19.1211" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.1211" opacity="0" width="26.7236" x="0" y="0"/>
@@ -17632,7 +17632,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","digitalcrown","digitalcrown press","digitalcrown_press","press"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.press.svg","symbol":"digitalcrown.press"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.press.svg","symbol":"digitalcrown.press"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7988 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="33.7988" x="0" y="0"/>
@@ -17650,7 +17650,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","digitalcrown","digitalcrown press fill","digitalcrown_press_fill","fill","press"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/digitalcrown.press.fill.svg","symbol":"digitalcrown.press.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/digitalcrown.press.fill.svg","symbol":"digitalcrown.press.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7988 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="33.7988" x="0" y="0"/>
@@ -17720,7 +17720,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute horizontal","distribute_horizontal","editing","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.svg","symbol":"distribute.horizontal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.svg","symbol":"distribute.horizontal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.3184 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="26.3184" x="0" y="0"/>
@@ -17738,7 +17738,7 @@
       categories: ["editing"],
       tags: ["center","distribute","distribute horizontal center","distribute_horizontal_center","editing","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.center.svg","symbol":"distribute.horizontal.center"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.center.svg","symbol":"distribute.horizontal.center"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9004 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="27.9004" x="0" y="0"/>
@@ -17756,7 +17756,7 @@
       categories: ["editing"],
       tags: ["center","distribute","distribute horizontal center fill","distribute_horizontal_center_fill","editing","fill","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.center.fill.svg","symbol":"distribute.horizontal.center.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.center.fill.svg","symbol":"distribute.horizontal.center.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9004 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="27.9004" x="0" y="0"/>
@@ -17774,7 +17774,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute horizontal fill","distribute_horizontal_fill","editing","fill","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.fill.svg","symbol":"distribute.horizontal.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.fill.svg","symbol":"distribute.horizontal.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.3184 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="26.3184" x="0" y="0"/>
@@ -17792,7 +17792,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute horizontal left","distribute_horizontal_left","editing","horizontal","left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.left.svg","symbol":"distribute.horizontal.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.left.svg","symbol":"distribute.horizontal.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7715 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="35.7715" x="0" y="0"/>
@@ -17810,7 +17810,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute horizontal left fill","distribute_horizontal_left_fill","editing","fill","horizontal","left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.left.fill.svg","symbol":"distribute.horizontal.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.left.fill.svg","symbol":"distribute.horizontal.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7715 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="35.7715" x="0" y="0"/>
@@ -17828,7 +17828,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute horizontal right","distribute_horizontal_right","editing","horizontal","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.right.svg","symbol":"distribute.horizontal.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.right.svg","symbol":"distribute.horizontal.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7715 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="35.7715" x="0" y="0"/>
@@ -17846,7 +17846,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute horizontal right fill","distribute_horizontal_right_fill","editing","fill","horizontal","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.horizontal.right.fill.svg","symbol":"distribute.horizontal.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.horizontal.right.fill.svg","symbol":"distribute.horizontal.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7715 31.416" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.416" opacity="0" width="35.7715" x="0" y="0"/>
@@ -17864,7 +17864,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute vertical","distribute_vertical","editing","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.svg","symbol":"distribute.vertical"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.svg","symbol":"distribute.vertical"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.002 25.9766" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9766" opacity="0" width="32.002" x="0" y="0"/>
@@ -17882,7 +17882,7 @@
       categories: ["editing"],
       tags: ["bottom","distribute","distribute vertical bottom","distribute_vertical_bottom","editing","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.bottom.svg","symbol":"distribute.vertical.bottom"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.bottom.svg","symbol":"distribute.vertical.bottom"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.002 32.9883" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9883" opacity="0" width="32.002" x="0" y="0"/>
@@ -17900,7 +17900,7 @@
       categories: ["editing"],
       tags: ["bottom","distribute","distribute vertical bottom fill","distribute_vertical_bottom_fill","editing","fill","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.bottom.fill.svg","symbol":"distribute.vertical.bottom.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.bottom.fill.svg","symbol":"distribute.vertical.bottom.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.002 32.9883" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9883" opacity="0" width="32.002" x="0" y="0"/>
@@ -17918,7 +17918,7 @@
       categories: ["editing"],
       tags: ["center","distribute","distribute vertical center","distribute_vertical_center","editing","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.center.svg","symbol":"distribute.vertical.center"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.center.svg","symbol":"distribute.vertical.center"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.1055 27.2461" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.2461" opacity="0" width="33.1055" x="0" y="0"/>
@@ -17936,7 +17936,7 @@
       categories: ["editing"],
       tags: ["center","distribute","distribute vertical center fill","distribute_vertical_center_fill","editing","fill","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.center.fill.svg","symbol":"distribute.vertical.center.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.center.fill.svg","symbol":"distribute.vertical.center.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.1055 27.2461" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.2461" opacity="0" width="33.1055" x="0" y="0"/>
@@ -17954,7 +17954,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute vertical fill","distribute_vertical_fill","editing","fill","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.fill.svg","symbol":"distribute.vertical.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.fill.svg","symbol":"distribute.vertical.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.002 25.9766" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9766" opacity="0" width="32.002" x="0" y="0"/>
@@ -17972,7 +17972,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute vertical top","distribute_vertical_top","editing","top","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.top.svg","symbol":"distribute.vertical.top"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.top.svg","symbol":"distribute.vertical.top"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.002 32.9883" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9883" opacity="0" width="32.002" x="0" y="0"/>
@@ -17990,7 +17990,7 @@
       categories: ["editing"],
       tags: ["distribute","distribute vertical top fill","distribute_vertical_top_fill","editing","fill","top","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/distribute.vertical.top.fill.svg","symbol":"distribute.vertical.top.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/distribute.vertical.top.fill.svg","symbol":"distribute.vertical.top.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.002 32.9883" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9883" opacity="0" width="32.002" x="0" y="0"/>
@@ -18008,7 +18008,7 @@
       categories: ["math"],
       tags: ["divide","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/divide.svg","symbol":"divide"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/divide.svg","symbol":"divide"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.6797 19.5508" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.5508" opacity="0" width="21.6797" x="0" y="0"/>
@@ -18025,7 +18025,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","divide","divide circle","divide_circle","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/divide.circle.svg","symbol":"divide.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/divide.circle.svg","symbol":"divide.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__DIVIDE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/divide.circle.svg","symbol":"divide.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/divide.circle.svg","symbol":"divide.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__DIVIDE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -18043,7 +18043,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","divide","divide circle fill","divide_circle_fill","fill","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/divide.circle.fill.svg","symbol":"divide.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/divide.circle.fill.svg","symbol":"divide.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -18060,7 +18060,7 @@
       categories: ["math","squared"],
       tags: ["divide","divide square","divide_square","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/divide.square.svg","symbol":"divide.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/divide.square.svg","symbol":"divide.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -18078,7 +18078,7 @@
       categories: ["math","squared"],
       tags: ["divide","divide square fill","divide_square_fill","fill","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/divide.square.fill.svg","symbol":"divide.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/divide.square.fill.svg","symbol":"divide.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -18510,7 +18510,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","arrowtriangles","circle","circled","dot","dot arrowtriangles up right down left circle","dot_arrowtriangles_up_right_down_left_circle","down","left","right","up"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/dot.arrowtriangles.up.right.down.left.circle.svg","symbol":"dot.arrowtriangles.up.right.down.left.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/dot.arrowtriangles.up.right.down.left.circle.svg","symbol":"dot.arrowtriangles.up.right.down.left.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__DOT_ARROWTRIANGLES_UP_RIGHT_DOWN_LEFT_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/dot.arrowtriangles.up.right.down.left.circle.svg","symbol":"dot.arrowtriangles.up.right.down.left.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/dot.arrowtriangles.up.right.down.left.circle.svg","symbol":"dot.arrowtriangles.up.right.down.left.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__DOT_ARROWTRIANGLES_UP_RIGHT_DOWN_LEFT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -18528,7 +18528,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","and","circle","circled","dot","dot circle and hand point up left fill","dot_circle_and_hand_point_up_left_fill","fill","hand","left","people","point","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/dot.circle.and.hand.point.up.left.fill.svg","symbol":"dot.circle.and.hand.point.up.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/dot.circle.and.hand.point.up.left.fill.svg","symbol":"dot.circle.and.hand.point.up.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.4388 32.118" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.118" opacity="0" width="38.4388" x="0" y="0"/>
@@ -18547,7 +18547,7 @@
       categories: ["accessibility","arrows","circled"],
       tags: ["accessibility","and","arrow","arrows","back","circle","circled","direction","dot","dot circle and pointer arrow","dot_circle_and_pointer_arrow","forward","navigate","pointer"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/dot.circle.and.pointer.arrow.svg","symbol":"dot.circle.and.pointer.arrow"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/dot.circle.and.pointer.arrow.svg","symbol":"dot.circle.and.pointer.arrow"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.0005 33.2087" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2087" opacity="0" width="31.0005" x="0" y="0"/>
@@ -18670,7 +18670,7 @@
       id: "drink-beer-c1ded2",
       name: "drink_beer",
       label: "Drink Beer",
-      kind: "sf-symbol",
+      kind: "custom",
       aliases: ["drink_beer"],
       categories: ["food-drink"],
       tags: ["bar","beer","beverage","cocktail","drink","drink beer","drink_beer","food & drink"],
@@ -18694,7 +18694,7 @@
       id: "drink-fancy-cocktail-c5221f",
       name: "drink_fancy_cocktail",
       label: "Drink Fancy Cocktail",
-      kind: "sf-symbol",
+      kind: "custom",
       aliases: ["drink_fancy_cocktail"],
       categories: ["food-drink"],
       tags: ["bar","beverage","cocktail","drink","drink fancy cocktail","drink_fancy_cocktail","fancy","food & drink"],
@@ -18706,7 +18706,7 @@
       id: "drink-house-rail-4fbb2d",
       name: "drink_house_rail",
       label: "Drink House Rail",
-      kind: "sf-symbol",
+      kind: "custom",
       aliases: ["drink_house_rail"],
       categories: ["food-drink"],
       tags: ["bar","beverage","cocktail","drink","drink house rail","drink_house_rail","food & drink","home","house","rail","start"],
@@ -18718,7 +18718,7 @@
       id: "drink-neat-pour-89b01d",
       name: "drink_neat_pour",
       label: "Drink Neat Pour",
-      kind: "sf-symbol",
+      kind: "custom",
       aliases: ["drink_neat_pour"],
       categories: ["food-drink"],
       tags: ["bar","beverage","cocktail","drink","drink neat pour","drink_neat_pour","food & drink","neat","pour"],
@@ -18730,7 +18730,7 @@
       id: "drink-next-round-c0b38a",
       name: "drink_next_round",
       label: "Drink Next Round",
-      kind: "sf-symbol",
+      kind: "custom",
       aliases: ["drink_next_round"],
       categories: ["food-drink"],
       tags: ["bar","beverage","cocktail","drink","drink next round","drink_next_round","food & drink","next","round"],
@@ -18742,7 +18742,7 @@
       id: "drink-something-nice-b93f55",
       name: "drink_something_nice",
       label: "Drink Something Nice",
-      kind: "sf-symbol",
+      kind: "custom",
       aliases: ["drink_something_nice"],
       categories: ["food-drink"],
       tags: ["bar","beverage","cocktail","drink","drink something nice","drink_something_nice","food & drink","nice","something"],
@@ -18976,7 +18976,7 @@
       categories: ["accessibility","health"],
       tags: ["accessibility","ear","health"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/ear.svg","symbol":"ear"},{"repo":"svg-converter","file":"app-input/Health/ear.svg","symbol":"ear"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/ear.svg","symbol":"ear"},{"repo":"svg-converter","file":"app-input/Health/ear.svg","symbol":"ear"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6445 28.1543" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.1543" opacity="0" width="20.6445" x="0" y="0"/>
@@ -18993,7 +18993,7 @@
       categories: ["accessibility","health","badged","badged-checkmark","status"],
       tags: ["accessibility","badge","badged","check","checkmark","confirm","done","ear","ear badge checkmark","ear_badge_checkmark","health","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/ear.badge.checkmark.svg","symbol":"ear.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Badge/ear.badge.checkmark.svg","symbol":"ear.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Health/ear.badge.checkmark.svg","symbol":"ear.badge.checkmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/ear.badge.checkmark.svg","symbol":"ear.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Badge/ear.badge.checkmark.svg","symbol":"ear.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Health/ear.badge.checkmark.svg","symbol":"ear.badge.checkmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.043 31.6309" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.6309" opacity="0" width="34.043" x="0" y="0"/>
@@ -19011,7 +19011,7 @@
       categories: ["accessibility","health","media","badged","badged-waveform","status"],
       tags: ["accessibility","badge","badged","ear","ear badge waveform","ear_badge_waveform","health","media","status","waveform"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/ear.badge.waveform.svg","symbol":"ear.badge.waveform"},{"repo":"svg-converter","file":"app-input/Badge/ear.badge.waveform.svg","symbol":"ear.badge.waveform"},{"repo":"svg-converter","file":"app-input/Health/ear.badge.waveform.svg","symbol":"ear.badge.waveform"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/ear.badge.waveform.svg","symbol":"ear.badge.waveform"},{"repo":"svg-converter","file":"app-input/Badge/ear.badge.waveform.svg","symbol":"ear.badge.waveform"},{"repo":"svg-converter","file":"app-input/Health/ear.badge.waveform.svg","symbol":"ear.badge.waveform"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.6641 35.3027" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.3027" opacity="0" width="30.6641" x="0" y="0"/>
@@ -19033,7 +19033,7 @@
       categories: ["accessibility","health"],
       tags: ["accessibility","ear","ear fill","ear_fill","fill","health"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/ear.fill.svg","symbol":"ear.fill"},{"repo":"svg-converter","file":"app-input/Health/ear.fill.svg","symbol":"ear.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/ear.fill.svg","symbol":"ear.fill"},{"repo":"svg-converter","file":"app-input/Health/ear.fill.svg","symbol":"ear.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6445 28.1543" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.1543" opacity="0" width="20.6445" x="0" y="0"/>
@@ -19050,7 +19050,7 @@
       categories: ["accessibility","health","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["accessibility","badged","ear","ear trianglebadge exclamationmark","ear_trianglebadge_exclamationmark","exclamation mark","exclamationmark","health","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/ear.trianglebadge.exclamationmark.svg","symbol":"ear.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/ear.trianglebadge.exclamationmark.svg","symbol":"ear.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Health/ear.trianglebadge.exclamationmark.svg","symbol":"ear.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/ear.trianglebadge.exclamationmark.svg","symbol":"ear.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/ear.trianglebadge.exclamationmark.svg","symbol":"ear.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Health/ear.trianglebadge.exclamationmark.svg","symbol":"ear.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.207 32.002" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.002" opacity="0" width="32.207" x="0" y="0"/>
@@ -19291,7 +19291,7 @@
       categories: ["keyboard"],
       tags: ["eject","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/eject.svg","symbol":"eject"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/eject.svg","symbol":"eject"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.2295 24.6094" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.6094" opacity="0" width="25.2295" x="0" y="0"/>
@@ -19308,7 +19308,7 @@
       categories: ["keyboard","circled"],
       tags: ["circle","circled","eject","eject circle","eject_circle","keyboard"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/eject.circle.svg","symbol":"eject.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/eject.circle.svg","symbol":"eject.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EJECT_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/eject.circle.svg","symbol":"eject.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/eject.circle.svg","symbol":"eject.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EJECT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -19326,7 +19326,7 @@
       categories: ["keyboard","circled"],
       tags: ["circle","circled","eject","eject circle fill","eject_circle_fill","fill","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/eject.circle.fill.svg","symbol":"eject.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/eject.circle.fill.svg","symbol":"eject.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -19343,7 +19343,7 @@
       categories: ["keyboard"],
       tags: ["eject","eject fill","eject_fill","fill","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/eject.fill.svg","symbol":"eject.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/eject.fill.svg","symbol":"eject.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.8486 24.2773" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.2773" opacity="0" width="24.8486" x="0" y="0"/>
@@ -19544,7 +19544,7 @@
       categories: ["communication","people","security"],
       tags: ["and","communication","email","envelope","envelope and hand raised","envelope_and_hand_raised","hand","mail","message","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/envelope.and.hand.raised.svg","symbol":"envelope.and.hand.raised"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/envelope.and.hand.raised.svg","symbol":"envelope.and.hand.raised"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.2214 30.1855" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.1855" opacity="0" width="47.2214" x="0" y="0"/>
@@ -19562,7 +19562,7 @@
       categories: ["communication","people","security"],
       tags: ["and","communication","email","envelope","envelope and hand raised fill","envelope_and_hand_raised_fill","fill","hand","mail","message","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/envelope.and.hand.raised.fill.svg","symbol":"envelope.and.hand.raised.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/envelope.and.hand.raised.fill.svg","symbol":"envelope.and.hand.raised.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.2778 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="48.2778" x="0" y="0"/>
@@ -19957,7 +19957,7 @@
       categories: ["math"],
       tags: ["equal","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/equal.svg","symbol":"equal"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EQUAL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/equal.svg","symbol":"equal"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EQUAL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.7842 11.9531" aria-hidden="true" focusable="false">
  <g>
   <rect height="11.9531" opacity="0" width="18.7842" x="0" y="0"/>
@@ -19974,7 +19974,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","equal","equal circle","equal_circle","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/equal.circle.svg","symbol":"equal.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/equal.circle.svg","symbol":"equal.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EQUAL_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/equal.circle.svg","symbol":"equal.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/equal.circle.svg","symbol":"equal.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EQUAL_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -19992,7 +19992,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","equal","equal circle fill","equal_circle_fill","fill","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/equal.circle.fill.svg","symbol":"equal.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/equal.circle.fill.svg","symbol":"equal.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -20009,7 +20009,7 @@
       categories: ["math","squared"],
       tags: ["equal","equal square","equal_square","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/equal.square.svg","symbol":"equal.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/equal.square.svg","symbol":"equal.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -20027,7 +20027,7 @@
       categories: ["math","squared"],
       tags: ["equal","equal square fill","equal_square_fill","fill","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/equal.square.fill.svg","symbol":"equal.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/equal.square.fill.svg","symbol":"equal.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -20044,7 +20044,7 @@
       categories: ["editing"],
       tags: ["editing","eraser"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.svg","symbol":"eraser"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eraser.svg","symbol":"eraser"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0723 26.9045" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9045" opacity="0" width="27.0723" x="0" y="0"/>
@@ -20061,7 +20061,7 @@
       categories: ["editing","badged","badged-xmark","status"],
       tags: ["badge","badged","cancel","close","dismiss","editing","eraser","eraser badge xmark","eraser_badge_xmark","status","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.badge.xmark.svg","symbol":"eraser.badge.xmark"},{"repo":"svg-converter","file":"app-input/Badge/eraser.badge.xmark.svg","symbol":"eraser.badge.xmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/eraser.badge.xmark.svg","symbol":"eraser.badge.xmark"},{"repo":"svg-converter","file":"app-input/Editing/eraser.badge.xmark.svg","symbol":"eraser.badge.xmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.0908 30.6055" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.6055" opacity="0" width="38.0908" x="0" y="0"/>
@@ -20079,7 +20079,7 @@
       categories: ["editing","badged","badged-xmark","status"],
       tags: ["badge","badged","cancel","close","dismiss","editing","eraser","eraser badge xmark fill","eraser_badge_xmark_fill","fill","status","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.badge.xmark.fill.svg","symbol":"eraser.badge.xmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/eraser.badge.xmark.fill.svg","symbol":"eraser.badge.xmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/eraser.badge.xmark.fill.svg","symbol":"eraser.badge.xmark.fill"},{"repo":"svg-converter","file":"app-input/Editing/eraser.badge.xmark.fill.svg","symbol":"eraser.badge.xmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6182 30.6055" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.6055" opacity="0" width="38.6182" x="0" y="0"/>
@@ -20097,7 +20097,7 @@
       categories: ["editing"],
       tags: ["editing","eraser","eraser fill","eraser_fill","fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.fill.svg","symbol":"eraser.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eraser.fill.svg","symbol":"eraser.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.5474 26.4041" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.4041" opacity="0" width="26.5474" x="0" y="0"/>
@@ -20114,7 +20114,7 @@
       categories: ["editing"],
       tags: ["dashed","editing","eraser","eraser line dashed","eraser_line_dashed","line"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.line.dashed.svg","symbol":"eraser.line.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eraser.line.dashed.svg","symbol":"eraser.line.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.561 30.5153" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.5153" opacity="0" width="36.561" x="0" y="0"/>
@@ -20133,7 +20133,7 @@
       categories: ["editing"],
       tags: ["dashed","editing","eraser","eraser line dashed fill","eraser_line_dashed_fill","fill","line"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.line.dashed.fill.svg","symbol":"eraser.line.dashed.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eraser.line.dashed.fill.svg","symbol":"eraser.line.dashed.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.542 30.3688" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.3688" opacity="0" width="36.542" x="0" y="0"/>
@@ -20152,7 +20152,7 @@
       categories: ["editing","slashed"],
       tags: ["editing","eraser","eraser slash","eraser_slash","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.slash.svg","symbol":"eraser.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eraser.slash.svg","symbol":"eraser.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4846 30.0012" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0012" opacity="0" width="30.4846" x="0" y="0"/>
@@ -20170,7 +20170,7 @@
       categories: ["editing","slashed"],
       tags: ["editing","eraser","eraser slash fill","eraser_slash_fill","fill","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.slash.fill.svg","symbol":"eraser.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eraser.slash.fill.svg","symbol":"eraser.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.012 30.0012" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0012" opacity="0" width="31.012" x="0" y="0"/>
@@ -20188,7 +20188,7 @@
       categories: ["editing","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","editing","eraser","eraser trianglebadge exclamationmark","eraser_trianglebadge_exclamationmark","exclamation mark","exclamationmark","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.trianglebadge.exclamationmark.svg","symbol":"eraser.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/eraser.trianglebadge.exclamationmark.svg","symbol":"eraser.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/eraser.trianglebadge.exclamationmark.svg","symbol":"eraser.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Editing/eraser.trianglebadge.exclamationmark.svg","symbol":"eraser.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6904 30.5273" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.5273" opacity="0" width="37.6904" x="0" y="0"/>
@@ -20206,7 +20206,7 @@
       categories: ["editing","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","editing","eraser","eraser trianglebadge exclamationmark fill","eraser_trianglebadge_exclamationmark_fill","exclamation mark","exclamationmark","fill","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eraser.trianglebadge.exclamationmark.fill.svg","symbol":"eraser.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/eraser.trianglebadge.exclamationmark.fill.svg","symbol":"eraser.trianglebadge.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/eraser.trianglebadge.exclamationmark.fill.svg","symbol":"eraser.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Editing/eraser.trianglebadge.exclamationmark.fill.svg","symbol":"eraser.trianglebadge.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.2178 30.5273" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.5273" opacity="0" width="38.2178" x="0" y="0"/>
@@ -20224,7 +20224,7 @@
       categories: ["keyboard"],
       tags: ["escape","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/escape.svg","symbol":"escape"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/escape.svg","symbol":"escape"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -21508,7 +21508,7 @@
       categories: ["transportation"],
       tags: ["charger","ev","ev charger","ev_charger","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.svg","symbol":"ev.charger"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.svg","symbol":"ev.charger"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.5752 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="34.5752" x="0" y="0"/>
@@ -21525,7 +21525,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","charger","ev","ev charger arrowtriangle left","ev_charger_arrowtriangle_left","left","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.arrowtriangle.left.svg","symbol":"ev.charger.arrowtriangle.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.arrowtriangle.left.svg","symbol":"ev.charger.arrowtriangle.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.3272 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="40.3272" x="0" y="0"/>
@@ -21543,7 +21543,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","charger","ev","ev charger arrowtriangle left fill","ev_charger_arrowtriangle_left_fill","fill","left","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.arrowtriangle.left.fill.svg","symbol":"ev.charger.arrowtriangle.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.arrowtriangle.left.fill.svg","symbol":"ev.charger.arrowtriangle.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.795 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="39.795" x="0" y="0"/>
@@ -21561,7 +21561,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","charger","ev","ev charger arrowtriangle right","ev_charger_arrowtriangle_right","right","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.arrowtriangle.right.svg","symbol":"ev.charger.arrowtriangle.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.arrowtriangle.right.svg","symbol":"ev.charger.arrowtriangle.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.0205 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="41.0205" x="0" y="0"/>
@@ -21579,7 +21579,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","charger","ev","ev charger arrowtriangle right fill","ev_charger_arrowtriangle_right_fill","fill","right","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.arrowtriangle.right.fill.svg","symbol":"ev.charger.arrowtriangle.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.arrowtriangle.right.fill.svg","symbol":"ev.charger.arrowtriangle.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.4932 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="40.4932" x="0" y="0"/>
@@ -21597,7 +21597,7 @@
       categories: ["transportation"],
       tags: ["charger","ev","ev charger exclamationmark","ev_charger_exclamationmark","exclamationmark","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.exclamationmark.svg","symbol":"ev.charger.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.exclamationmark.svg","symbol":"ev.charger.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.7002 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="37.7002" x="0" y="0"/>
@@ -21615,7 +21615,7 @@
       categories: ["transportation"],
       tags: ["charger","ev","ev charger exclamationmark fill","ev_charger_exclamationmark_fill","exclamationmark","fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.exclamationmark.fill.svg","symbol":"ev.charger.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.exclamationmark.fill.svg","symbol":"ev.charger.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.1826 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="37.1826" x="0" y="0"/>
@@ -21633,7 +21633,7 @@
       categories: ["transportation"],
       tags: ["charger","ev","ev charger fill","ev_charger_fill","fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.fill.svg","symbol":"ev.charger.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.fill.svg","symbol":"ev.charger.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.5205 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="33.5205" x="0" y="0"/>
@@ -21650,7 +21650,7 @@
       categories: ["slashed","transportation"],
       tags: ["charger","ev","ev charger slash","ev_charger_slash","slash","slashed","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.slash.svg","symbol":"ev.charger.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.slash.svg","symbol":"ev.charger.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.5752 35.166" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.166" opacity="0" width="34.5752" x="0" y="0"/>
@@ -21668,7 +21668,7 @@
       categories: ["slashed","transportation"],
       tags: ["charger","ev","ev charger slash fill","ev_charger_slash_fill","fill","slash","slashed","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ev.charger.slash.fill.svg","symbol":"ev.charger.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ev.charger.slash.fill.svg","symbol":"ev.charger.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1492 35.166" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.166" opacity="0" width="34.1492" x="0" y="0"/>
@@ -21686,7 +21686,7 @@
       categories: ["maps"],
       tags: ["ac","ev","ev plug ac gb t","ev_plug_ac_gb_t","gb","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.ac.gb.t.svg","symbol":"ev.plug.ac.gb.t"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.ac.gb.t.svg","symbol":"ev.plug.ac.gb.t"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.1738 28.9746" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9746" opacity="0" width="33.1738" x="0" y="0"/>
@@ -21704,7 +21704,7 @@
       categories: ["maps"],
       tags: ["ac","ev","ev plug ac gb t fill","ev_plug_ac_gb_t_fill","fill","gb","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.ac.gb.t.fill.svg","symbol":"ev.plug.ac.gb.t.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.ac.gb.t.fill.svg","symbol":"ev.plug.ac.gb.t.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9727 27.9395" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.9395" opacity="0" width="31.9727" x="0" y="0"/>
@@ -21721,7 +21721,7 @@
       categories: ["maps"],
       tags: ["ac","ev","ev plug ac type 1","ev_plug_ac_type_1","maps","plug","type"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.ac.type.1.svg","symbol":"ev.plug.ac.type.1"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.ac.type.1.svg","symbol":"ev.plug.ac.type.1"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -21739,7 +21739,7 @@
       categories: ["maps"],
       tags: ["ac","ev","ev plug ac type 1 fill","ev_plug_ac_type_1_fill","fill","maps","plug","type"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.ac.type.1.fill.svg","symbol":"ev.plug.ac.type.1.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.ac.type.1.fill.svg","symbol":"ev.plug.ac.type.1.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -21756,7 +21756,7 @@
       categories: ["maps"],
       tags: ["ac","ev","ev plug ac type 2","ev_plug_ac_type_2","maps","plug","type"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.ac.type.2.svg","symbol":"ev.plug.ac.type.2"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.ac.type.2.svg","symbol":"ev.plug.ac.type.2"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.4756 23.9844" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.9844" opacity="0" width="27.4756" x="0" y="0"/>
@@ -21774,7 +21774,7 @@
       categories: ["maps"],
       tags: ["ac","ev","ev plug ac type 2 fill","ev_plug_ac_type_2_fill","fill","maps","plug","type"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.ac.type.2.fill.svg","symbol":"ev.plug.ac.type.2.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.ac.type.2.fill.svg","symbol":"ev.plug.ac.type.2.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.4756 23.9844" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.9844" opacity="0" width="27.4756" x="0" y="0"/>
@@ -21791,7 +21791,7 @@
       categories: ["maps"],
       tags: ["ccs1","dc","ev","ev plug dc ccs1","ev_plug_dc_ccs1","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.ccs1.svg","symbol":"ev.plug.dc.ccs1"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.ccs1.svg","symbol":"ev.plug.dc.ccs1"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5244 33.3691" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3691" opacity="0" width="22.5244" x="0" y="0"/>
@@ -21809,7 +21809,7 @@
       categories: ["maps"],
       tags: ["ccs1","dc","ev","ev plug dc ccs1 fill","ev_plug_dc_ccs1_fill","fill","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.ccs1.fill.svg","symbol":"ev.plug.dc.ccs1.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.ccs1.fill.svg","symbol":"ev.plug.dc.ccs1.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5244 33.3691" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3691" opacity="0" width="22.5244" x="0" y="0"/>
@@ -21826,7 +21826,7 @@
       categories: ["maps"],
       tags: ["ccs2","dc","ev","ev plug dc ccs2","ev_plug_dc_ccs2","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.ccs2.svg","symbol":"ev.plug.dc.ccs2"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.ccs2.svg","symbol":"ev.plug.dc.ccs2"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5244 33.3398" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3398" opacity="0" width="22.5244" x="0" y="0"/>
@@ -21844,7 +21844,7 @@
       categories: ["maps"],
       tags: ["ccs2","dc","ev","ev plug dc ccs2 fill","ev_plug_dc_ccs2_fill","fill","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.ccs2.fill.svg","symbol":"ev.plug.dc.ccs2.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.ccs2.fill.svg","symbol":"ev.plug.dc.ccs2.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5244 33.3398" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3398" opacity="0" width="22.5244" x="0" y="0"/>
@@ -21861,7 +21861,7 @@
       categories: ["maps"],
       tags: ["chademo","dc","ev","ev plug dc chademo","ev_plug_dc_chademo","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.chademo.svg","symbol":"ev.plug.dc.chademo"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.chademo.svg","symbol":"ev.plug.dc.chademo"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -21879,7 +21879,7 @@
       categories: ["maps"],
       tags: ["chademo","dc","ev","ev plug dc chademo fill","ev_plug_dc_chademo_fill","fill","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.chademo.fill.svg","symbol":"ev.plug.dc.chademo.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.chademo.fill.svg","symbol":"ev.plug.dc.chademo.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -21896,7 +21896,7 @@
       categories: ["maps"],
       tags: ["dc","ev","ev plug dc gb t","ev_plug_dc_gb_t","gb","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.gb.t.svg","symbol":"ev.plug.dc.gb.t"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.gb.t.svg","symbol":"ev.plug.dc.gb.t"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 27.8809" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.8809" opacity="0" width="29.6729" x="0" y="0"/>
@@ -21914,7 +21914,7 @@
       categories: ["maps"],
       tags: ["dc","ev","ev plug dc gb t fill","ev_plug_dc_gb_t_fill","fill","gb","maps","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.gb.t.fill.svg","symbol":"ev.plug.dc.gb.t.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.gb.t.fill.svg","symbol":"ev.plug.dc.gb.t.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 27.8809" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.8809" opacity="0" width="29.6729" x="0" y="0"/>
@@ -21931,7 +21931,7 @@
       categories: ["maps"],
       tags: ["dc","ev","ev plug dc nacs","ev_plug_dc_nacs","maps","nacs","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.nacs.svg","symbol":"ev.plug.dc.nacs"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.nacs.svg","symbol":"ev.plug.dc.nacs"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.668 25.4004" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.4004" opacity="0" width="29.668" x="0" y="0"/>
@@ -21949,7 +21949,7 @@
       categories: ["maps"],
       tags: ["dc","ev","ev plug dc nacs fill","ev_plug_dc_nacs_fill","fill","maps","nacs","plug"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/ev.plug.dc.nacs.fill.svg","symbol":"ev.plug.dc.nacs.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/ev.plug.dc.nacs.fill.svg","symbol":"ev.plug.dc.nacs.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.668 25.4004" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.4004" opacity="0" width="29.668" x="0" y="0"/>
@@ -22033,7 +22033,7 @@
       categories: ["security"],
       tags: ["exclamationmark","exclamationmark lock","exclamationmark_lock","lock","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/exclamationmark.lock.svg","symbol":"exclamationmark.lock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/exclamationmark.lock.svg","symbol":"exclamationmark.lock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.4912 26.1523" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1523" opacity="0" width="18.4912" x="0" y="0"/>
@@ -22051,7 +22051,7 @@
       categories: ["security"],
       tags: ["exclamationmark","exclamationmark lock fill","exclamationmark_lock_fill","fill","lock","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/exclamationmark.lock.fill.svg","symbol":"exclamationmark.lock.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/exclamationmark.lock.fill.svg","symbol":"exclamationmark.lock.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.4912 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="18.4912" x="0" y="0"/>
@@ -22544,7 +22544,7 @@
       categories: ["accessibility","health","security"],
       tags: ["accessibility","eye","health","privacy & security","show","view","visibility","visible"],
       repositories: ["cocktail-list","svg-converter","visit-tracker"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__EYE"},{"repo":"svg-converter","file":"app-input/!Accessibility/eye.svg","symbol":"eye"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.svg","symbol":"eye"},{"repo":"svg-converter","file":"app-input/Health/eye.svg","symbol":"eye"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__EYE"}],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__EYE"},{"repo":"svg-converter","file":"app-input/Accessibility/eye.svg","symbol":"eye"},{"repo":"svg-converter","file":"app-input/Health/eye.svg","symbol":"eye"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.svg","symbol":"eye"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__EYE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>`
     },
     {
@@ -22556,7 +22556,7 @@
       categories: ["accessibility","health","security","circled"],
       tags: ["accessibility","circle","circled","eye","eye circle","eye_circle","health","privacy & security","show","view","visibility","visible"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.circle.svg","symbol":"eye.circle"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.circle.svg","symbol":"eye.circle"},{"repo":"svg-converter","file":"app-input/Health/eye.circle.svg","symbol":"eye.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/eye.circle.svg","symbol":"eye.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EYE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.circle.svg","symbol":"eye.circle"},{"repo":"svg-converter","file":"app-input/Health/eye.circle.svg","symbol":"eye.circle"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.circle.svg","symbol":"eye.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/eye.circle.svg","symbol":"eye.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EYE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -22574,7 +22574,7 @@
       categories: ["accessibility","health","security","circled"],
       tags: ["accessibility","circle","circled","eye","eye circle fill","eye_circle_fill","fill","health","privacy & security","show","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.circle.fill.svg","symbol":"eye.circle.fill"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.circle.fill.svg","symbol":"eye.circle.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.circle.fill.svg","symbol":"eye.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.circle.fill.svg","symbol":"eye.circle.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.circle.fill.svg","symbol":"eye.circle.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.circle.fill.svg","symbol":"eye.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -22591,7 +22591,7 @@
       categories: ["accessibility","health","security"],
       tags: ["accessibility","eye","eye fill","eye_fill","fill","health","privacy & security","show","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.fill.svg","symbol":"eye.fill"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.fill.svg","symbol":"eye.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.fill.svg","symbol":"eye.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.fill.svg","symbol":"eye.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.fill.svg","symbol":"eye.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.fill.svg","symbol":"eye.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.6484 21.7676" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.7676" opacity="0" width="34.6484" x="0" y="0"/>
@@ -22608,7 +22608,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","closed","eye","eye half closed","eye_half_closed","half","show","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.half.closed.svg","symbol":"eye.half.closed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.half.closed.svg","symbol":"eye.half.closed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.0684 22.041" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.041" opacity="0" width="35.0684" x="0" y="0"/>
@@ -22625,7 +22625,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","closed","eye","eye half closed fill","eye_half_closed_fill","fill","half","show","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.half.closed.fill.svg","symbol":"eye.half.closed.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.half.closed.fill.svg","symbol":"eye.half.closed.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.96 21.7676" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.7676" opacity="0" width="33.96" x="0" y="0"/>
@@ -22654,7 +22654,7 @@
       categories: ["accessibility","health","security","slashed"],
       tags: ["accessibility","eye","eye slash","eye_slash","health","hidden","hide","invisible","privacy & security","show","slash","slashed","view","visibility","visible"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.slash.svg","symbol":"eye.slash"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.slash.svg","symbol":"eye.slash"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.svg","symbol":"eye.slash"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__EYE_SLASH"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.slash.svg","symbol":"eye.slash"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.svg","symbol":"eye.slash"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.slash.svg","symbol":"eye.slash"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__EYE_SLASH"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.0684 27.5391" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5391" opacity="0" width="35.0684" x="0" y="0"/>
@@ -22672,7 +22672,7 @@
       categories: ["accessibility","health","security","circled","slashed"],
       tags: ["accessibility","circle","circled","eye","eye slash circle","eye_slash_circle","health","privacy & security","show","slash","slashed","view","visibility","visible"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EYE_SLASH_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/eye.slash.circle.svg","symbol":"eye.slash.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EYE_SLASH_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -22691,7 +22691,7 @@
       categories: ["accessibility","health","security","circled","slashed"],
       tags: ["accessibility","circle","circled","eye","eye slash circle fill","eye_slash_circle_fill","fill","health","privacy & security","show","slash","slashed","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.slash.circle.fill.svg","symbol":"eye.slash.circle.fill"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.slash.circle.fill.svg","symbol":"eye.slash.circle.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.circle.fill.svg","symbol":"eye.slash.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.slash.circle.fill.svg","symbol":"eye.slash.circle.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.circle.fill.svg","symbol":"eye.slash.circle.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.slash.circle.fill.svg","symbol":"eye.slash.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -22708,7 +22708,7 @@
       categories: ["accessibility","health","security","slashed"],
       tags: ["accessibility","eye","eye slash fill","eye_slash_fill","fill","health","privacy & security","show","slash","slashed","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.slash.fill.svg","symbol":"eye.slash.fill"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.slash.fill.svg","symbol":"eye.slash.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.fill.svg","symbol":"eye.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.slash.fill.svg","symbol":"eye.slash.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.slash.fill.svg","symbol":"eye.slash.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.slash.fill.svg","symbol":"eye.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.6484 27.2498" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.2498" opacity="0" width="34.6484" x="0" y="0"/>
@@ -22726,7 +22726,7 @@
       categories: ["accessibility","health","security","squared"],
       tags: ["accessibility","eye","eye square","eye_square","health","privacy & security","show","square","squared","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.square.svg","symbol":"eye.square"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.square.svg","symbol":"eye.square"},{"repo":"svg-converter","file":"app-input/Health/eye.square.svg","symbol":"eye.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.square.svg","symbol":"eye.square"},{"repo":"svg-converter","file":"app-input/Health/eye.square.svg","symbol":"eye.square"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.square.svg","symbol":"eye.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -22744,7 +22744,7 @@
       categories: ["accessibility","health","security","squared"],
       tags: ["accessibility","eye","eye square fill","eye_square_fill","fill","health","privacy & security","show","square","squared","view","visibility","visible"],
       repositories: ["pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__EYE_SQUARE_FILL"},{"repo":"svg-converter","file":"app-input/!Accessibility/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EYE_SQUARE_FILL"}],
+      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__EYE_SQUARE_FILL"},{"repo":"svg-converter","file":"app-input/Accessibility/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/eye.square.fill.svg","symbol":"eye.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__EYE_SQUARE_FILL"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.3203 22.959" aria-hidden="true" focusable="false"><g><rect height="22.959" opacity="0" width="23.3203" x="0" y="0"/><path d="M22.959 3.76953L22.959 19.1992C22.959 21.6797 21.6797 22.959 19.1504 22.959L3.79883 22.959C1.2793 22.959 0 21.6992 0 19.1992L0 3.76953C0 1.26953 1.2793 0 3.79883 0L19.1504 0C21.6797 0 22.959 1.2793 22.959 3.76953ZM2.94922 11.4746C2.94922 12.7441 6.51367 16.8555 11.4844 16.8555C16.4941 16.8555 20.0195 12.7441 20.0195 11.4746C20.0195 10.2051 16.4746 6.09375 11.4844 6.09375C6.46484 6.09375 2.94922 10.2051 2.94922 11.4746ZM15.0195 11.4746C15.0195 13.3887 13.4277 15 11.4844 15C9.52148 15 7.94922 13.3887 7.93945 11.4746C7.93945 9.51172 9.52148 7.94922 11.4844 7.94922C13.4277 7.94922 15.0195 9.51172 15.0195 11.4746ZM9.99023 11.4746C9.99023 12.2656 10.6836 12.959 11.5039 12.959C12.2949 12.959 12.9785 12.2656 12.9785 11.4746C12.9785 10.6738 12.2949 9.99023 11.5039 9.99023C10.6836 9.99023 9.99023 10.6738 9.99023 11.4746Z"/></g></svg>`
     },
     {
@@ -22756,7 +22756,7 @@
       categories: ["accessibility","health","security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["accessibility","badged","exclamation mark","exclamationmark","eye","eye trianglebadge exclamationmark","eye_trianglebadge_exclamationmark","health","privacy & security","shapes","show","triangle","trianglebadge","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Health/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Health/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.trianglebadge.exclamationmark.svg","symbol":"eye.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.334 26.8066" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.8066" opacity="0" width="47.334" x="0" y="0"/>
@@ -22774,7 +22774,7 @@
       categories: ["accessibility","health","security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["accessibility","badged","exclamation mark","exclamationmark","eye","eye trianglebadge exclamationmark fill","eye_trianglebadge_exclamationmark_fill","fill","health","privacy & security","shapes","show","triangle","trianglebadge","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Health/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/eye.trianglebadge.exclamationmark.fill.svg","symbol":"eye.trianglebadge.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.5977 26.8066" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.8066" opacity="0" width="47.5977" x="0" y="0"/>
@@ -22792,7 +22792,7 @@
       categories: ["editing"],
       tags: ["editing","eyedropper"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eyedropper.svg","symbol":"eyedropper"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eyedropper.svg","symbol":"eyedropper"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.335 28.4473" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4473" opacity="0" width="28.335" x="0" y="0"/>
@@ -22809,7 +22809,7 @@
       categories: ["editing"],
       tags: ["editing","eyedropper","eyedropper full","eyedropper_full","full"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eyedropper.full.svg","symbol":"eyedropper.full"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eyedropper.full.svg","symbol":"eyedropper.full"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.335 28.4375" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4375" opacity="0" width="28.335" x="0" y="0"/>
@@ -22826,7 +22826,7 @@
       categories: ["editing"],
       tags: ["editing","eyedropper","eyedropper halffull","eyedropper_halffull","halffull"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/eyedropper.halffull.svg","symbol":"eyedropper.halffull"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/eyedropper.halffull.svg","symbol":"eyedropper.halffull"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.335 28.4375" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4375" opacity="0" width="28.335" x="0" y="0"/>
@@ -22879,7 +22879,7 @@
       categories: ["security"],
       tags: ["faceid","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/faceid.svg","symbol":"faceid"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/faceid.svg","symbol":"faceid"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5469 25.2246" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2246" opacity="0" width="25.5469" x="0" y="0"/>
@@ -23207,7 +23207,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["ferry","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ferry.svg","symbol":"ferry"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ferry.svg","symbol":"ferry"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9535 32.2852" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.2852" opacity="0" width="27.9535" x="0" y="0"/>
@@ -23224,7 +23224,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["ferry","ferry fill","ferry_fill","fill","maps & travel","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/ferry.fill.svg","symbol":"ferry.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/ferry.fill.svg","symbol":"ferry.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.7393 32.0215" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.0215" opacity="0" width="27.7393" x="0" y="0"/>
@@ -23241,7 +23241,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","figure","people"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.svg","symbol":"figure"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.svg","symbol":"figure"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.8906 28.6523" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.6523" opacity="0" width="22.8906" x="0" y="0"/>
@@ -23258,7 +23258,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","figure","figure 2","figure_2","people"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.2.svg","symbol":"figure.2"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.2.svg","symbol":"figure.2"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.334 28.6719" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.6719" opacity="0" width="37.334" x="0" y="0"/>
@@ -23275,7 +23275,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","circle","circled","figure","figure 2 circle","figure_2_circle","people"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.2.circle.svg","symbol":"figure.2.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.2.circle.svg","symbol":"figure.2.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_2_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.2.circle.svg","symbol":"figure.2.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.2.circle.svg","symbol":"figure.2.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_2_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -23293,7 +23293,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","circle","circled","figure","figure 2 circle fill","figure_2_circle_fill","fill","people"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.2.circle.fill.svg","symbol":"figure.2.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.2.circle.fill.svg","symbol":"figure.2.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -24622,7 +24622,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","figure","figure roll","figure_roll","people","roll"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.roll.svg","symbol":"figure.roll"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.roll.svg","symbol":"figure.roll"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.166 28.418" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.418" opacity="0" width="21.166" x="0" y="0"/>
@@ -24639,7 +24639,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","circle","circled","figure","figure roll circle","figure_roll_circle","people","roll"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.roll.circle.svg","symbol":"figure.roll.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.roll.circle.svg","symbol":"figure.roll.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_ROLL_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.roll.circle.svg","symbol":"figure.roll.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.roll.circle.svg","symbol":"figure.roll.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_ROLL_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -24657,7 +24657,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","circle","circled","figure","figure roll circle fill","figure_roll_circle_fill","fill","people","roll"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.roll.circle.fill.svg","symbol":"figure.roll.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.roll.circle.fill.svg","symbol":"figure.roll.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -24674,7 +24674,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","figure","figure roll runningpace","figure_roll_runningpace","people","roll","runningpace"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.roll.runningpace.svg","symbol":"figure.roll.runningpace"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.roll.runningpace.svg","symbol":"figure.roll.runningpace"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9004 26.7578" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.7578" opacity="0" width="32.9004" x="0" y="0"/>
@@ -24692,7 +24692,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","circle","circled","figure","figure roll runningpace circle","figure_roll_runningpace_circle","people","roll","runningpace"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.roll.runningpace.circle.svg","symbol":"figure.roll.runningpace.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.roll.runningpace.circle.svg","symbol":"figure.roll.runningpace.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_ROLL_RUNNINGPACE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.roll.runningpace.circle.svg","symbol":"figure.roll.runningpace.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.roll.runningpace.circle.svg","symbol":"figure.roll.runningpace.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_ROLL_RUNNINGPACE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -24710,7 +24710,7 @@
       categories: ["accessibility","people","circled"],
       tags: ["accessibility","circle","circled","figure","figure roll runningpace circle fill","figure_roll_runningpace_circle_fill","fill","people","roll","runningpace"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.roll.runningpace.circle.fill.svg","symbol":"figure.roll.runningpace.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.roll.runningpace.circle.fill.svg","symbol":"figure.roll.runningpace.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25259,7 +25259,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","dotted","figure","figure stand line dotted figure stand","figure_stand_line_dotted_figure_stand","line","people","stand"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/figure.stand.line.dotted.figure.stand.svg","symbol":"figure.stand.line.dotted.figure.stand"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/figure.stand.line.dotted.figure.stand.svg","symbol":"figure.stand.line.dotted.figure.stand"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6562 25.4492" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.4492" opacity="0" width="37.6562" x="0" y="0"/>
@@ -25439,7 +25439,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","figure","figure walk","figure_walk","maps","people","transportation","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.svg","symbol":"figure.walk"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.svg","symbol":"figure.walk"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.svg","symbol":"figure.walk"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.svg","symbol":"figure.walk"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.7543 30.4102" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4102" opacity="0" width="18.7543" x="0" y="0"/>
@@ -25456,7 +25456,7 @@
       categories: ["accessibility","maps","people","circled","transportation"],
       tags: ["accessibility","circle","circled","figure","figure walk circle","figure_walk_circle","maps","people","transportation","walk"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.circle.svg","symbol":"figure.walk.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.circle.svg","symbol":"figure.walk.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.walk.circle.svg","symbol":"figure.walk.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_WALK_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.circle.svg","symbol":"figure.walk.circle"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.circle.svg","symbol":"figure.walk.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.walk.circle.svg","symbol":"figure.walk.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_WALK_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25474,7 +25474,7 @@
       categories: ["accessibility","maps","people","circled","transportation"],
       tags: ["accessibility","circle","circled","figure","figure walk circle fill","figure_walk_circle_fill","fill","maps","people","transportation","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.circle.fill.svg","symbol":"figure.walk.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.circle.fill.svg","symbol":"figure.walk.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.circle.fill.svg","symbol":"figure.walk.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.circle.fill.svg","symbol":"figure.walk.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25491,7 +25491,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","diamond","figure","figure walk diamond","figure_walk_diamond","maps","people","transportation","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.diamond.svg","symbol":"figure.walk.diamond"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.diamond.svg","symbol":"figure.walk.diamond"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.diamond.svg","symbol":"figure.walk.diamond"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.diamond.svg","symbol":"figure.walk.diamond"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -25509,7 +25509,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","diamond","figure","figure walk diamond fill","figure_walk_diamond_fill","fill","maps","people","transportation","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.diamond.fill.svg","symbol":"figure.walk.diamond.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.diamond.fill.svg","symbol":"figure.walk.diamond.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.diamond.fill.svg","symbol":"figure.walk.diamond.fill"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.diamond.fill.svg","symbol":"figure.walk.diamond.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -25545,7 +25545,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","figure","figure walk suitcase rolling","figure_walk_suitcase_rolling","maps","people","rolling","suitcase","transportation","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.suitcase.rolling.svg","symbol":"figure.walk.suitcase.rolling"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.suitcase.rolling.svg","symbol":"figure.walk.suitcase.rolling"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.suitcase.rolling.svg","symbol":"figure.walk.suitcase.rolling"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.suitcase.rolling.svg","symbol":"figure.walk.suitcase.rolling"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5385 30.4102" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4102" opacity="0" width="27.5385" x="0" y="0"/>
@@ -25562,7 +25562,7 @@
       categories: ["accessibility","maps","people","circled","transportation"],
       tags: ["accessibility","circle","circled","figure","figure walk suitcase rolling circle","figure_walk_suitcase_rolling_circle","maps","people","rolling","suitcase","transportation","walk"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.suitcase.rolling.circle.svg","symbol":"figure.walk.suitcase.rolling.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.suitcase.rolling.circle.svg","symbol":"figure.walk.suitcase.rolling.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.walk.suitcase.rolling.circle.svg","symbol":"figure.walk.suitcase.rolling.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_WALK_SUITCASE_ROLLING_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.suitcase.rolling.circle.svg","symbol":"figure.walk.suitcase.rolling.circle"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.suitcase.rolling.circle.svg","symbol":"figure.walk.suitcase.rolling.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.walk.suitcase.rolling.circle.svg","symbol":"figure.walk.suitcase.rolling.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_WALK_SUITCASE_ROLLING_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25580,7 +25580,7 @@
       categories: ["accessibility","maps","people","circled","transportation"],
       tags: ["accessibility","circle","circled","figure","figure walk suitcase rolling circle fill","figure_walk_suitcase_rolling_circle_fill","fill","maps","people","rolling","suitcase","transportation","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.suitcase.rolling.circle.fill.svg","symbol":"figure.walk.suitcase.rolling.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.suitcase.rolling.circle.fill.svg","symbol":"figure.walk.suitcase.rolling.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.suitcase.rolling.circle.fill.svg","symbol":"figure.walk.suitcase.rolling.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.suitcase.rolling.circle.fill.svg","symbol":"figure.walk.suitcase.rolling.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25615,7 +25615,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","figure","figure walk triangle","figure_walk_triangle","maps","people","transportation","triangle","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.triangle.svg","symbol":"figure.walk.triangle"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.triangle.svg","symbol":"figure.walk.triangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.triangle.svg","symbol":"figure.walk.triangle"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.triangle.svg","symbol":"figure.walk.triangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.2168 24.5312" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.5312" opacity="0" width="27.2168" x="0" y="0"/>
@@ -25633,7 +25633,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","figure","figure walk triangle fill","figure_walk_triangle_fill","fill","maps","people","transportation","triangle","walk"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.walk.triangle.fill.svg","symbol":"figure.walk.triangle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.walk.triangle.fill.svg","symbol":"figure.walk.triangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.walk.triangle.fill.svg","symbol":"figure.walk.triangle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/figure.walk.triangle.fill.svg","symbol":"figure.walk.triangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.2168 24.5312" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.5312" opacity="0" width="27.2168" x="0" y="0"/>
@@ -25686,7 +25686,7 @@
       categories: ["accessibility","maps","people","transportation"],
       tags: ["accessibility","figure","figure wave","figure_wave","maps","people","transportation","wave"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.wave.svg","symbol":"figure.wave"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.wave.svg","symbol":"figure.wave"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.wave.svg","symbol":"figure.wave"},{"repo":"svg-converter","file":"app-input/Transportation/figure.wave.svg","symbol":"figure.wave"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14.1878 29.0039" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.0039" opacity="0" width="14.1878" x="0" y="0"/>
@@ -25703,7 +25703,7 @@
       categories: ["accessibility","maps","people","circled","transportation"],
       tags: ["accessibility","circle","circled","figure","figure wave circle","figure_wave_circle","maps","people","transportation","wave"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.wave.circle.svg","symbol":"figure.wave.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.wave.circle.svg","symbol":"figure.wave.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.wave.circle.svg","symbol":"figure.wave.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_WAVE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.wave.circle.svg","symbol":"figure.wave.circle"},{"repo":"svg-converter","file":"app-input/Transportation/figure.wave.circle.svg","symbol":"figure.wave.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/figure.wave.circle.svg","symbol":"figure.wave.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FIGURE_WAVE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25721,7 +25721,7 @@
       categories: ["accessibility","maps","people","circled","transportation"],
       tags: ["accessibility","circle","circled","figure","figure wave circle fill","figure_wave_circle_fill","fill","maps","people","transportation","wave"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/figure.wave.circle.fill.svg","symbol":"figure.wave.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/figure.wave.circle.fill.svg","symbol":"figure.wave.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/figure.wave.circle.fill.svg","symbol":"figure.wave.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/figure.wave.circle.fill.svg","symbol":"figure.wave.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -25786,7 +25786,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","and","arrow","arrows","back","direction","filemenu","filemenu and pointer arrow","filemenu_and_pointer_arrow","forward","navigate","pointer"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/filemenu.and.pointer.arrow.svg","symbol":"filemenu.and.pointer.arrow"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/filemenu.and.pointer.arrow.svg","symbol":"filemenu.and.pointer.arrow"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.3248 33.9552" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.9552" opacity="0" width="35.3248" x="0" y="0"/>
@@ -25825,7 +25825,7 @@
       categories: ["security"],
       tags: ["firewall","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/firewall.svg","symbol":"firewall"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/firewall.svg","symbol":"firewall"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/>
@@ -25843,7 +25843,7 @@
       categories: ["security"],
       tags: ["fill","firewall","firewall fill","firewall_fill","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/firewall.fill.svg","symbol":"firewall.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/firewall.fill.svg","symbol":"firewall.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.5918 25.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.752" opacity="0" width="21.5918" x="0" y="0"/>
@@ -26459,7 +26459,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrows","back","direction","forward","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.svg","symbol":"forward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.svg","symbol":"forward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1846 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="39.1846" x="0" y="0"/>
@@ -26476,7 +26476,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrow","arrows","back","circle","circled","direction","forward","forward circle","forward_circle","media","navigate"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.circle.svg","symbol":"forward.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/forward.circle.svg","symbol":"forward.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FORWARD_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.circle.svg","symbol":"forward.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/forward.circle.svg","symbol":"forward.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FORWARD_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -26494,7 +26494,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrow","arrows","back","circle","circled","direction","fill","forward","forward circle fill","forward_circle_fill","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.circle.fill.svg","symbol":"forward.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.circle.fill.svg","symbol":"forward.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -26511,7 +26511,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrows","back","direction","end","forward","forward end","forward_end","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.end.svg","symbol":"forward.end"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.end.svg","symbol":"forward.end"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.085 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="22.085" x="0" y="0"/>
@@ -26528,7 +26528,7 @@
       categories: ["arrows","media"],
       tags: ["alt","arrow","arrows","back","direction","end","forward","forward end alt","forward_end_alt","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.end.alt.svg","symbol":"forward.end.alt"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.end.alt.svg","symbol":"forward.end.alt"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.4688 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="40.4688" x="0" y="0"/>
@@ -26545,7 +26545,7 @@
       categories: ["arrows","media"],
       tags: ["alt","arrow","arrows","back","direction","end","fill","forward","forward end alt fill","forward_end_alt_fill","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.end.alt.fill.svg","symbol":"forward.end.alt.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.end.alt.fill.svg","symbol":"forward.end.alt.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.9502 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="43.9502" x="0" y="0"/>
@@ -26562,7 +26562,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrow","arrows","back","circle","circled","direction","end","forward","forward end circle","forward_end_circle","media","navigate"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.end.circle.svg","symbol":"forward.end.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/forward.end.circle.svg","symbol":"forward.end.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FORWARD_END_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.end.circle.svg","symbol":"forward.end.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/forward.end.circle.svg","symbol":"forward.end.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FORWARD_END_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -26580,7 +26580,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrow","arrows","back","circle","circled","direction","end","fill","forward","forward end circle fill","forward_end_circle_fill","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.end.circle.fill.svg","symbol":"forward.end.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.end.circle.fill.svg","symbol":"forward.end.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -26597,7 +26597,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrows","back","direction","end","fill","forward","forward end fill","forward_end_fill","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.end.fill.svg","symbol":"forward.end.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.end.fill.svg","symbol":"forward.end.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5664 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="25.5664" x="0" y="0"/>
@@ -26614,7 +26614,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrows","back","direction","fill","forward","forward fill","forward_fill","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.fill.svg","symbol":"forward.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.fill.svg","symbol":"forward.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1846 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="39.1846" x="0" y="0"/>
@@ -26631,7 +26631,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrows","back","direction","forward","forward frame","forward_frame","frame","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.frame.svg","symbol":"forward.frame"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.frame.svg","symbol":"forward.frame"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.415 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="30.415" x="0" y="0"/>
@@ -26648,7 +26648,7 @@
       categories: ["arrows","media"],
       tags: ["arrow","arrows","back","direction","fill","forward","forward frame fill","forward_frame_fill","frame","media","navigate"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/forward.frame.fill.svg","symbol":"forward.frame.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/forward.frame.fill.svg","symbol":"forward.frame.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6221 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="32.6221" x="0" y="0"/>
@@ -26717,7 +26717,7 @@
       categories: ["maps","transportation"],
       tags: ["fuelpump","maps","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/fuelpump.svg","symbol":"fuelpump"},{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.svg","symbol":"fuelpump"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/fuelpump.svg","symbol":"fuelpump"},{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.svg","symbol":"fuelpump"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.7412 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="29.7412" x="0" y="0"/>
@@ -26734,7 +26734,7 @@
       categories: ["interface","transportation"],
       tags: ["and","filter","fuelpump","fuelpump and filter","fuelpump_and_filter","interface","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.and.filter.svg","symbol":"fuelpump.and.filter"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.and.filter.svg","symbol":"fuelpump.and.filter"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.4668 33.9062" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.9062" opacity="0" width="23.4668" x="0" y="0"/>
@@ -26752,7 +26752,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","fuelpump","fuelpump arrowtriangle left","fuelpump_arrowtriangle_left","left","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.arrowtriangle.left.svg","symbol":"fuelpump.arrowtriangle.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.arrowtriangle.left.svg","symbol":"fuelpump.arrowtriangle.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.9053 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="37.9053" x="0" y="0"/>
@@ -26770,7 +26770,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","fill","fuelpump","fuelpump arrowtriangle left fill","fuelpump_arrowtriangle_left_fill","left","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.arrowtriangle.left.fill.svg","symbol":"fuelpump.arrowtriangle.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.arrowtriangle.left.fill.svg","symbol":"fuelpump.arrowtriangle.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.3829 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="37.3829" x="0" y="0"/>
@@ -26788,7 +26788,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","fuelpump","fuelpump arrowtriangle right","fuelpump_arrowtriangle_right","right","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.arrowtriangle.right.svg","symbol":"fuelpump.arrowtriangle.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.arrowtriangle.right.svg","symbol":"fuelpump.arrowtriangle.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.5068 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="39.5068" x="0" y="0"/>
@@ -26806,7 +26806,7 @@
       categories: ["transportation"],
       tags: ["arrowtriangle","fill","fuelpump","fuelpump arrowtriangle right fill","fuelpump_arrowtriangle_right_fill","right","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.arrowtriangle.right.fill.svg","symbol":"fuelpump.arrowtriangle.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.arrowtriangle.right.fill.svg","symbol":"fuelpump.arrowtriangle.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.9844 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="38.9844" x="0" y="0"/>
@@ -26824,7 +26824,7 @@
       categories: ["maps","circled","transportation"],
       tags: ["circle","circled","fuelpump","fuelpump circle","fuelpump_circle","maps","transportation"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/fuelpump.circle.svg","symbol":"fuelpump.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.circle.svg","symbol":"fuelpump.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/fuelpump.circle.svg","symbol":"fuelpump.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FUELPUMP_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/fuelpump.circle.svg","symbol":"fuelpump.circle"},{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.circle.svg","symbol":"fuelpump.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/fuelpump.circle.svg","symbol":"fuelpump.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__FUELPUMP_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -26842,7 +26842,7 @@
       categories: ["maps","circled","transportation"],
       tags: ["circle","circled","fill","fuelpump","fuelpump circle fill","fuelpump_circle_fill","maps","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/fuelpump.circle.fill.svg","symbol":"fuelpump.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.circle.fill.svg","symbol":"fuelpump.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/fuelpump.circle.fill.svg","symbol":"fuelpump.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.circle.fill.svg","symbol":"fuelpump.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.377" opacity="0" width="26.6943" x="0" y="0"/>
@@ -26859,7 +26859,7 @@
       categories: ["transportation"],
       tags: ["exclamationmark","fuelpump","fuelpump exclamationmark","fuelpump_exclamationmark","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.exclamationmark.svg","symbol":"fuelpump.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.exclamationmark.svg","symbol":"fuelpump.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.0352 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="36.0352" x="0" y="0"/>
@@ -26877,7 +26877,7 @@
       categories: ["transportation"],
       tags: ["exclamationmark","fill","fuelpump","fuelpump exclamationmark fill","fuelpump_exclamationmark_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.exclamationmark.fill.svg","symbol":"fuelpump.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.exclamationmark.fill.svg","symbol":"fuelpump.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5078 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="35.5078" x="0" y="0"/>
@@ -26895,7 +26895,7 @@
       categories: ["maps","transportation"],
       tags: ["fill","fuelpump","fuelpump fill","fuelpump_fill","maps","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/fuelpump.fill.svg","symbol":"fuelpump.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.fill.svg","symbol":"fuelpump.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/fuelpump.fill.svg","symbol":"fuelpump.fill"},{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.fill.svg","symbol":"fuelpump.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.6768 28.7109" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.7109" opacity="0" width="28.6768" x="0" y="0"/>
@@ -26912,7 +26912,7 @@
       categories: ["maps","slashed","transportation"],
       tags: ["fuelpump","fuelpump slash","fuelpump_slash","maps","slash","slashed","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/fuelpump.slash.svg","symbol":"fuelpump.slash"},{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.slash.svg","symbol":"fuelpump.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/fuelpump.slash.svg","symbol":"fuelpump.slash"},{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.slash.svg","symbol":"fuelpump.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1492 35.166" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.166" opacity="0" width="34.1492" x="0" y="0"/>
@@ -26930,7 +26930,7 @@
       categories: ["maps","slashed","transportation"],
       tags: ["fill","fuelpump","fuelpump slash fill","fuelpump_slash_fill","maps","slash","slashed","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/fuelpump.slash.fill.svg","symbol":"fuelpump.slash.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.slash.fill.svg","symbol":"fuelpump.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/fuelpump.slash.fill.svg","symbol":"fuelpump.slash.fill"},{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.slash.fill.svg","symbol":"fuelpump.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1492 35.166" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.166" opacity="0" width="34.1492" x="0" y="0"/>
@@ -26948,7 +26948,7 @@
       categories: ["transportation"],
       tags: ["fuelpump","fuelpump thermometer","fuelpump_thermometer","thermometer","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.thermometer.svg","symbol":"fuelpump.thermometer"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.thermometer.svg","symbol":"fuelpump.thermometer"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.5225 24.8535" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.8535" opacity="0" width="40.5225" x="0" y="0"/>
@@ -26966,7 +26966,7 @@
       categories: ["transportation"],
       tags: ["fill","fuelpump","fuelpump thermometer fill","fuelpump_thermometer_fill","thermometer","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/fuelpump.thermometer.fill.svg","symbol":"fuelpump.thermometer.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/fuelpump.thermometer.fill.svg","symbol":"fuelpump.thermometer.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.5957 24.8535" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.8535" opacity="0" width="40.5957" x="0" y="0"/>
@@ -26984,7 +26984,7 @@
       categories: ["math"],
       tags: ["function","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/function.svg","symbol":"function"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/function.svg","symbol":"function"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5107 19.1504" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.1504" opacity="0" width="38.5107" x="0" y="0"/>
@@ -27400,7 +27400,7 @@
       categories: ["keyboard","maps-travel","maps"],
       tags: ["globe","keyboard","maps","maps & travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/globe.svg","symbol":"globe"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GLOBE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/globe.svg","symbol":"globe"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GLOBE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -27487,7 +27487,7 @@
       categories: ["arrows","keyboard","maps-travel","maps","badged","badged-chevron","status"],
       tags: ["arrows","backward","badge","badged","chevron","globe","globe badge chevron backward","globe_badge_chevron_backward","keyboard","maps","maps & travel","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/globe.badge.chevron.backward.svg","symbol":"globe.badge.chevron.backward"},{"repo":"svg-converter","file":"app-input/Badge/globe.badge.chevron.backward.svg","symbol":"globe.badge.chevron.backward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/globe.badge.chevron.backward.svg","symbol":"globe.badge.chevron.backward"},{"repo":"svg-converter","file":"app-input/Keyboard/globe.badge.chevron.backward.svg","symbol":"globe.badge.chevron.backward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.3408 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="39.3408" x="0" y="0"/>
@@ -27505,7 +27505,7 @@
       categories: ["keyboard","maps-travel","maps","badged","badged-clock","status","time"],
       tags: ["badge","badged","clock","globe","globe badge clock","globe_badge_clock","history","keyboard","maps","maps & travel","recent","status","time"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/globe.badge.clock.svg","symbol":"globe.badge.clock"},{"repo":"svg-converter","file":"app-input/Badge/globe.badge.clock.svg","symbol":"globe.badge.clock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/globe.badge.clock.svg","symbol":"globe.badge.clock"},{"repo":"svg-converter","file":"app-input/Keyboard/globe.badge.clock.svg","symbol":"globe.badge.clock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6279 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.6279" x="0" y="0"/>
@@ -27525,7 +27525,7 @@
       categories: ["keyboard","maps-travel","maps","badged","badged-clock","status","time"],
       tags: ["badge","badged","clock","fill","globe","globe badge clock fill","globe_badge_clock_fill","history","keyboard","maps","maps & travel","recent","status","time"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/globe.badge.clock.fill.svg","symbol":"globe.badge.clock.fill"},{"repo":"svg-converter","file":"app-input/Badge/globe.badge.clock.fill.svg","symbol":"globe.badge.clock.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/globe.badge.clock.fill.svg","symbol":"globe.badge.clock.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/globe.badge.clock.fill.svg","symbol":"globe.badge.clock.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6279 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.6279" x="0" y="0"/>
@@ -27611,7 +27611,7 @@
       categories: ["keyboard","maps-travel","maps"],
       tags: ["fill","globe","globe fill","globe_fill","keyboard","maps","maps & travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/globe.fill.svg","symbol":"globe.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GLOBE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/globe.fill.svg","symbol":"globe.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GLOBE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6309 25.9082" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9082" opacity="0" width="26.6309" x="0" y="0"/>
@@ -27686,7 +27686,7 @@
       categories: ["math"],
       tags: ["2d","graph","graph 2d","graph_2d","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/graph.2d.svg","symbol":"graph.2d"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/graph.2d.svg","symbol":"graph.2d"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.292 23.9453" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.9453" opacity="0" width="24.292" x="0" y="0"/>
@@ -27704,7 +27704,7 @@
       categories: ["math"],
       tags: ["3d","graph","graph 3d","graph_3d","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/graph.3d.svg","symbol":"graph.3d"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/graph.3d.svg","symbol":"graph.3d"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.2804 24.1048" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.1048" opacity="0" width="27.2804" x="0" y="0"/>
@@ -27722,7 +27722,7 @@
       categories: ["math"],
       tags: ["greaterthan","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthan.svg","symbol":"greaterthan"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthan.svg","symbol":"greaterthan"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.7451 17.7734" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.7734" opacity="0" width="18.7451" x="0" y="0"/>
@@ -27739,7 +27739,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","greaterthan","greaterthan circle","greaterthan_circle","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthan.circle.svg","symbol":"greaterthan.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/greaterthan.circle.svg","symbol":"greaterthan.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GREATERTHAN_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthan.circle.svg","symbol":"greaterthan.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/greaterthan.circle.svg","symbol":"greaterthan.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GREATERTHAN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -27757,7 +27757,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","greaterthan","greaterthan circle fill","greaterthan_circle_fill","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthan.circle.fill.svg","symbol":"greaterthan.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthan.circle.fill.svg","symbol":"greaterthan.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -27774,7 +27774,7 @@
       categories: ["math","squared"],
       tags: ["greaterthan","greaterthan square","greaterthan_square","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthan.square.svg","symbol":"greaterthan.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthan.square.svg","symbol":"greaterthan.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -27792,7 +27792,7 @@
       categories: ["math","squared"],
       tags: ["fill","greaterthan","greaterthan square fill","greaterthan_square_fill","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthan.square.fill.svg","symbol":"greaterthan.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthan.square.fill.svg","symbol":"greaterthan.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -27809,7 +27809,7 @@
       categories: ["math"],
       tags: ["greaterthanorequalto","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthanorequalto.svg","symbol":"greaterthanorequalto"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GREATERTHANOREQUALTO"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthanorequalto.svg","symbol":"greaterthanorequalto"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GREATERTHANOREQUALTO"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16.5283 22.7637" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.7637" opacity="0" width="16.5283" x="0" y="0"/>
@@ -27826,7 +27826,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","greaterthanorequalto","greaterthanorequalto circle","greaterthanorequalto_circle","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthanorequalto.circle.svg","symbol":"greaterthanorequalto.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/greaterthanorequalto.circle.svg","symbol":"greaterthanorequalto.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GREATERTHANOREQUALTO_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthanorequalto.circle.svg","symbol":"greaterthanorequalto.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/greaterthanorequalto.circle.svg","symbol":"greaterthanorequalto.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__GREATERTHANOREQUALTO_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -27844,7 +27844,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","greaterthanorequalto","greaterthanorequalto circle fill","greaterthanorequalto_circle_fill","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthanorequalto.circle.fill.svg","symbol":"greaterthanorequalto.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthanorequalto.circle.fill.svg","symbol":"greaterthanorequalto.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -27861,7 +27861,7 @@
       categories: ["math","squared"],
       tags: ["greaterthanorequalto","greaterthanorequalto square","greaterthanorequalto_square","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthanorequalto.square.svg","symbol":"greaterthanorequalto.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthanorequalto.square.svg","symbol":"greaterthanorequalto.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -27879,7 +27879,7 @@
       categories: ["math","squared"],
       tags: ["fill","greaterthanorequalto","greaterthanorequalto square fill","greaterthanorequalto_square_fill","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/greaterthanorequalto.square.fill.svg","symbol":"greaterthanorequalto.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/greaterthanorequalto.square.fill.svg","symbol":"greaterthanorequalto.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -27932,7 +27932,7 @@
       categories: ["editing"],
       tags: ["editing","guidepoint","guidepoint horizontal","guidepoint_horizontal","horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/guidepoint.horizontal.svg","symbol":"guidepoint.horizontal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/guidepoint.horizontal.svg","symbol":"guidepoint.horizontal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9385 9.75586" aria-hidden="true" focusable="false">
  <g>
   <rect height="9.75586" opacity="0" width="36.9385" x="0" y="0"/>
@@ -27949,7 +27949,7 @@
       categories: ["editing"],
       tags: ["editing","guidepoint","guidepoint vertical","guidepoint_vertical","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/guidepoint.vertical.svg","symbol":"guidepoint.vertical"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/guidepoint.vertical.svg","symbol":"guidepoint.vertical"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 9.35059 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="9.35059" x="0" y="0"/>
@@ -27966,7 +27966,7 @@
       categories: ["arrows","editing"],
       tags: ["arrow","arrows","arrowtriangle","back","direction","editing","forward","guidepoint","guidepoint vertical arrowtriangle forward","guidepoint_vertical_arrowtriangle_forward","navigate","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/guidepoint.vertical.arrowtriangle.forward.svg","symbol":"guidepoint.vertical.arrowtriangle.forward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/guidepoint.vertical.arrowtriangle.forward.svg","symbol":"guidepoint.vertical.arrowtriangle.forward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.335 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="23.335" x="0" y="0"/>
@@ -27984,7 +27984,7 @@
       categories: ["editing"],
       tags: ["editing","guidepoint","guidepoint vertical numbers","guidepoint_vertical_numbers","numbers","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/guidepoint.vertical.numbers.svg","symbol":"guidepoint.vertical.numbers"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/guidepoint.vertical.numbers.svg","symbol":"guidepoint.vertical.numbers"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3271 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="30.3271" x="0" y="0"/>
@@ -28076,7 +28076,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","hand","hand point up","hand_point_up","people","point","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.point.up.svg","symbol":"hand.point.up"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.point.up.svg","symbol":"hand.point.up"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5733 27.8906" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.8906" opacity="0" width="22.5733" x="0" y="0"/>
@@ -28093,7 +28093,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","braille","hand","hand point up braille","hand_point_up_braille","people","point","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.point.up.braille.svg","symbol":"hand.point.up.braille"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.point.up.braille.svg","symbol":"hand.point.up.braille"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6671 30.0293" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0293" opacity="0" width="20.6671" x="0" y="0"/>
@@ -28111,7 +28111,7 @@
       categories: ["accessibility","interface","people","badged","badged-ellipsis","status"],
       tags: ["accessibility","badge","badged","braille","ellipsis","hand","hand point up braille badge ellipsis","hand_point_up_braille_badge_ellipsis","interface","people","point","status","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.point.up.braille.badge.ellipsis.svg","symbol":"hand.point.up.braille.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Badge/hand.point.up.braille.badge.ellipsis.svg","symbol":"hand.point.up.braille.badge.ellipsis"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.point.up.braille.badge.ellipsis.svg","symbol":"hand.point.up.braille.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Badge/hand.point.up.braille.badge.ellipsis.svg","symbol":"hand.point.up.braille.badge.ellipsis"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3301 40.0293" aria-hidden="true" focusable="false">
  <g>
   <rect height="40.0293" opacity="0" width="33.3301" x="0" y="0"/>
@@ -28130,7 +28130,7 @@
       categories: ["accessibility","interface","people","badged","badged-ellipsis","status"],
       tags: ["accessibility","badge","badged","braille","ellipsis","fill","hand","hand point up braille badge ellipsis fill","hand_point_up_braille_badge_ellipsis_fill","interface","people","point","status","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.point.up.braille.badge.ellipsis.fill.svg","symbol":"hand.point.up.braille.badge.ellipsis.fill"},{"repo":"svg-converter","file":"app-input/Badge/hand.point.up.braille.badge.ellipsis.fill.svg","symbol":"hand.point.up.braille.badge.ellipsis.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.point.up.braille.badge.ellipsis.fill.svg","symbol":"hand.point.up.braille.badge.ellipsis.fill"},{"repo":"svg-converter","file":"app-input/Badge/hand.point.up.braille.badge.ellipsis.fill.svg","symbol":"hand.point.up.braille.badge.ellipsis.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6006 40.0879" aria-hidden="true" focusable="false">
  <g>
   <rect height="40.0879" opacity="0" width="35.6006" x="0" y="0"/>
@@ -28149,7 +28149,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","braille","fill","hand","hand point up braille fill","hand_point_up_braille_fill","people","point","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.point.up.braille.fill.svg","symbol":"hand.point.up.braille.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.point.up.braille.fill.svg","symbol":"hand.point.up.braille.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.4492 29.541" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.541" opacity="0" width="20.4492" x="0" y="0"/>
@@ -28167,7 +28167,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","fill","hand","hand point up fill","hand_point_up_fill","people","point","up"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.point.up.fill.svg","symbol":"hand.point.up.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.point.up.fill.svg","symbol":"hand.point.up.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.626 26.9531" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9531" opacity="0" width="21.626" x="0" y="0"/>
@@ -28184,7 +28184,7 @@
       categories: ["people","security"],
       tags: ["hand","hand raised","hand_raised","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.svg","symbol":"hand.raised"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.svg","symbol":"hand.raised"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.7549 30" aria-hidden="true" focusable="false">
  <g>
   <rect height="30" opacity="0" width="23.7549" x="0" y="0"/>
@@ -28201,7 +28201,7 @@
       categories: ["people","security"],
       tags: ["app","hand","hand raised app","hand_raised_app","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.app.svg","symbol":"hand.raised.app"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.app.svg","symbol":"hand.raised.app"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.9746" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.9746" opacity="0" width="24.0576" x="0" y="0"/>
@@ -28219,7 +28219,7 @@
       categories: ["people","security"],
       tags: ["app","fill","hand","hand raised app fill","hand_raised_app_fill","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.app.fill.svg","symbol":"hand.raised.app.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.app.fill.svg","symbol":"hand.raised.app.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -28236,7 +28236,7 @@
       categories: ["people","security","circled"],
       tags: ["circle","circled","hand","hand raised circle","hand_raised_circle","people","privacy & security","raised"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.circle.svg","symbol":"hand.raised.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/hand.raised.circle.svg","symbol":"hand.raised.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HAND_RAISED_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.circle.svg","symbol":"hand.raised.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/hand.raised.circle.svg","symbol":"hand.raised.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HAND_RAISED_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -28254,7 +28254,7 @@
       categories: ["people","security","circled"],
       tags: ["circle","circled","fill","hand","hand raised circle fill","hand_raised_circle_fill","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.circle.fill.svg","symbol":"hand.raised.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.circle.fill.svg","symbol":"hand.raised.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -28271,7 +28271,7 @@
       categories: ["people","security"],
       tags: ["fill","hand","hand raised fill","hand_raised_fill","people","privacy & security","raised"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.fill.svg","symbol":"hand.raised.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.fill.svg","symbol":"hand.raised.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3441 28.9258" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9258" opacity="0" width="22.3441" x="0" y="0"/>
@@ -28288,7 +28288,7 @@
       categories: ["people","security","slashed"],
       tags: ["hand","hand raised slash","hand_raised_slash","people","privacy & security","raised","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.slash.svg","symbol":"hand.raised.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.slash.svg","symbol":"hand.raised.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9531 31.7053" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.7053" opacity="0" width="31.9531" x="0" y="0"/>
@@ -28306,7 +28306,7 @@
       categories: ["people","security","slashed"],
       tags: ["fill","hand","hand raised slash fill","hand_raised_slash_fill","people","privacy & security","raised","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.slash.fill.svg","symbol":"hand.raised.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.slash.fill.svg","symbol":"hand.raised.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9531 31.7053" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.7053" opacity="0" width="31.9531" x="0" y="0"/>
@@ -28324,7 +28324,7 @@
       categories: ["people","security","squared"],
       tags: ["hand","hand raised square","hand_raised_square","people","privacy & security","raised","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.square.svg","symbol":"hand.raised.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.square.svg","symbol":"hand.raised.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -28342,7 +28342,7 @@
       categories: ["people","security","squared"],
       tags: ["fill","hand","hand raised square fill","hand_raised_square_fill","people","privacy & security","raised","square","squared"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.square.fill.svg","symbol":"hand.raised.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/hand.raised.square.fill.svg","symbol":"hand.raised.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HAND_RAISED_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.square.fill.svg","symbol":"hand.raised.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/hand.raised.square.fill.svg","symbol":"hand.raised.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HAND_RAISED_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -28359,7 +28359,7 @@
       categories: ["people","security","squared"],
       tags: ["hand","hand raised square on square","hand_raised_square_on_square","on","people","privacy & security","raised","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.square.on.square.svg","symbol":"hand.raised.square.on.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.square.on.square.svg","symbol":"hand.raised.square.on.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.2959 27.5977" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5977" opacity="0" width="28.2959" x="0" y="0"/>
@@ -28378,7 +28378,7 @@
       categories: ["people","security","squared"],
       tags: ["fill","hand","hand raised square on square fill","hand_raised_square_on_square_fill","on","people","privacy & security","raised","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/hand.raised.square.on.square.fill.svg","symbol":"hand.raised.square.on.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/hand.raised.square.on.square.fill.svg","symbol":"hand.raised.square.on.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4111 31.4355" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.4355" opacity="0" width="31.4111" x="0" y="0"/>
@@ -28396,7 +28396,7 @@
       categories: ["accessibility","rays-sparkles","people"],
       tags: ["accessibility","hand","hand rays","hand_rays","people","rays","rays & sparkles"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.rays.svg","symbol":"hand.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/hand.rays.svg","symbol":"hand.rays"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.rays.svg","symbol":"hand.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/hand.rays.svg","symbol":"hand.rays"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.9658 34.6484" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.6484" opacity="0" width="29.9658" x="0" y="0"/>
@@ -28414,7 +28414,7 @@
       categories: ["accessibility","rays-sparkles","people"],
       tags: ["accessibility","fill","hand","hand rays fill","hand_rays_fill","people","rays","rays & sparkles"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.rays.fill.svg","symbol":"hand.rays.fill"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/hand.rays.fill.svg","symbol":"hand.rays.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.rays.fill.svg","symbol":"hand.rays.fill"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/hand.rays.fill.svg","symbol":"hand.rays.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.1025 34.6484" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.6484" opacity="0" width="30.1025" x="0" y="0"/>
@@ -28432,7 +28432,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","hand","hand tap","hand_tap","people","tap"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.tap.svg","symbol":"hand.tap"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.tap.svg","symbol":"hand.tap"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.1865 34.5508" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.5508" opacity="0" width="26.1865" x="0" y="0"/>
@@ -28450,7 +28450,7 @@
       categories: ["accessibility","people"],
       tags: ["accessibility","fill","hand","hand tap fill","hand_tap_fill","people","tap"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hand.tap.fill.svg","symbol":"hand.tap.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hand.tap.fill.svg","symbol":"hand.tap.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.2842 34.5508" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.5508" opacity="0" width="26.2842" x="0" y="0"/>
@@ -28572,7 +28572,7 @@
       categories: ["accessibility","nature"],
       tags: ["accessibility","hare","nature"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hare.svg","symbol":"hare"},{"repo":"svg-converter","file":"app-input/Nature/hare.svg","symbol":"hare"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hare.svg","symbol":"hare"},{"repo":"svg-converter","file":"app-input/Nature/hare.svg","symbol":"hare"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.1367 30.3516" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.3516" opacity="0" width="40.1367" x="0" y="0"/>
@@ -28589,7 +28589,7 @@
       categories: ["accessibility","nature","circled"],
       tags: ["accessibility","circle","circled","hare","hare circle","hare_circle","nature"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hare.circle.svg","symbol":"hare.circle"},{"repo":"svg-converter","file":"app-input/Nature/hare.circle.svg","symbol":"hare.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/hare.circle.svg","symbol":"hare.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HARE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hare.circle.svg","symbol":"hare.circle"},{"repo":"svg-converter","file":"app-input/Nature/hare.circle.svg","symbol":"hare.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/hare.circle.svg","symbol":"hare.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HARE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -28607,7 +28607,7 @@
       categories: ["accessibility","nature","circled"],
       tags: ["accessibility","circle","circled","fill","hare","hare circle fill","hare_circle_fill","nature"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hare.circle.fill.svg","symbol":"hare.circle.fill"},{"repo":"svg-converter","file":"app-input/Nature/hare.circle.fill.svg","symbol":"hare.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hare.circle.fill.svg","symbol":"hare.circle.fill"},{"repo":"svg-converter","file":"app-input/Nature/hare.circle.fill.svg","symbol":"hare.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -28624,7 +28624,7 @@
       categories: ["accessibility","nature"],
       tags: ["accessibility","fill","hare","hare fill","hare_fill","nature"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hare.fill.svg","symbol":"hare.fill"},{"repo":"svg-converter","file":"app-input/Nature/hare.fill.svg","symbol":"hare.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hare.fill.svg","symbol":"hare.fill"},{"repo":"svg-converter","file":"app-input/Nature/hare.fill.svg","symbol":"hare.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.3799 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="39.3799" x="0" y="0"/>
@@ -28677,7 +28677,7 @@
       categories: ["accessibility","health"],
       tags: ["accessibility","and","health","hearingdevice","hearingdevice and signal meter","hearingdevice_and_signal_meter","meter","signal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hearingdevice.and.signal.meter.svg","symbol":"hearingdevice.and.signal.meter"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.and.signal.meter.svg","symbol":"hearingdevice.and.signal.meter"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hearingdevice.and.signal.meter.svg","symbol":"hearingdevice.and.signal.meter"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.and.signal.meter.svg","symbol":"hearingdevice.and.signal.meter"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2773 28.1836" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.1836" opacity="0" width="29.2773" x="0" y="0"/>
@@ -28698,7 +28698,7 @@
       categories: ["accessibility","health"],
       tags: ["accessibility","and","fill","health","hearingdevice","hearingdevice and signal meter fill","hearingdevice_and_signal_meter_fill","meter","signal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hearingdevice.and.signal.meter.fill.svg","symbol":"hearingdevice.and.signal.meter.fill"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.and.signal.meter.fill.svg","symbol":"hearingdevice.and.signal.meter.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hearingdevice.and.signal.meter.fill.svg","symbol":"hearingdevice.and.signal.meter.fill"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.and.signal.meter.fill.svg","symbol":"hearingdevice.and.signal.meter.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2773 28.1445" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.1445" opacity="0" width="29.2773" x="0" y="0"/>
@@ -28719,7 +28719,7 @@
       categories: ["accessibility","health"],
       tags: ["accessibility","ear","health","hearingdevice","hearingdevice ear","hearingdevice_ear"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hearingdevice.ear.svg","symbol":"hearingdevice.ear"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.ear.svg","symbol":"hearingdevice.ear"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hearingdevice.ear.svg","symbol":"hearingdevice.ear"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.ear.svg","symbol":"hearingdevice.ear"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6445 28.1543" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.1543" opacity="0" width="20.6445" x="0" y="0"/>
@@ -28737,7 +28737,7 @@
       categories: ["accessibility","health"],
       tags: ["accessibility","ear","fill","health","hearingdevice","hearingdevice ear fill","hearingdevice_ear_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/hearingdevice.ear.fill.svg","symbol":"hearingdevice.ear.fill"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.ear.fill.svg","symbol":"hearingdevice.ear.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/hearingdevice.ear.fill.svg","symbol":"hearingdevice.ear.fill"},{"repo":"svg-converter","file":"app-input/Health/hearingdevice.ear.fill.svg","symbol":"hearingdevice.ear.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.6445 28.1543" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.1543" opacity="0" width="20.6445" x="0" y="0"/>
@@ -29839,7 +29839,7 @@
       categories: ["editing"],
       tags: ["editing","highlighter"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/highlighter.svg","symbol":"highlighter"},{"repo":"svg-converter","file":"bulk-convert-format/highlighter.svg","symbol":"highlighter"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HIGHLIGHTER"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/highlighter.svg","symbol":"highlighter"},{"repo":"svg-converter","file":"bulk-convert-format/highlighter.svg","symbol":"highlighter"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__HIGHLIGHTER"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0312 27.5" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5" opacity="0" width="27.0312" x="0" y="0"/>
@@ -29857,7 +29857,7 @@
       categories: ["editing","interface","badged","badged-ellipsis","status"],
       tags: ["badge","badged","editing","ellipsis","highlighter","highlighter badge ellipsis","highlighter_badge_ellipsis","interface","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/highlighter.badge.ellipsis.svg","symbol":"highlighter.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Badge/highlighter.badge.ellipsis.svg","symbol":"highlighter.badge.ellipsis"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/highlighter.badge.ellipsis.svg","symbol":"highlighter.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Editing/highlighter.badge.ellipsis.svg","symbol":"highlighter.badge.ellipsis"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.7324 34.4043" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.4043" opacity="0" width="40.7324" x="0" y="0"/>
@@ -31414,7 +31414,7 @@
       categories: ["media"],
       tags: ["infinity","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/infinity.svg","symbol":"infinity"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/infinity.svg","symbol":"infinity"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.2051 16.3379" aria-hidden="true" focusable="false">
  <g>
   <rect height="16.3379" opacity="0" width="35.2051" x="0" y="0"/>
@@ -31431,7 +31431,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","infinity","infinity circle","infinity_circle","media"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/infinity.circle.svg","symbol":"infinity.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/infinity.circle.svg","symbol":"infinity.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__INFINITY_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/infinity.circle.svg","symbol":"infinity.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/infinity.circle.svg","symbol":"infinity.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__INFINITY_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -31449,7 +31449,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","infinity","infinity circle fill","infinity_circle_fill","media"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/infinity.circle.fill.svg","symbol":"infinity.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/infinity.circle.fill.svg","symbol":"infinity.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -31563,7 +31563,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","dashed","editing","filled","inset","inset filled circle dashed","inset_filled_circle_dashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/inset.filled.circle.dashed.svg","symbol":"inset.filled.circle.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/inset.filled.circle.dashed.svg","symbol":"inset.filled.circle.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -31656,7 +31656,7 @@
       categories: ["editing","squared"],
       tags: ["dashed","editing","filled","inset","inset filled square dashed","inset_filled_square_dashed","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/inset.filled.square.dashed.svg","symbol":"inset.filled.square.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/inset.filled.square.dashed.svg","symbol":"inset.filled.square.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -31674,7 +31674,7 @@
       categories: ["editing","squared"],
       tags: ["dashed","editing","filled","inset","inset filled square dashed micro","inset_filled_square_dashed_micro","micro","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/inset.filled.square.dashed.micro.svg","symbol":"inset.filled.square.dashed.micro"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/inset.filled.square.dashed.micro.svg","symbol":"inset.filled.square.dashed.micro"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -31716,7 +31716,7 @@
       categories: ["editing","squared"],
       tags: ["dashed","editing","filled","half","inset","inset left half filled square dashed micro","inset_left_half_filled_square_dashed_micro","left","micro","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/inset.left.half.filled.square.dashed.micro.svg","symbol":"inset.left.half.filled.square.dashed.micro"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/inset.left.half.filled.square.dashed.micro.svg","symbol":"inset.left.half.filled.square.dashed.micro"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -31734,7 +31734,7 @@
       categories: ["editing","squared"],
       tags: ["dashed","editing","half","inset","inset left half square dashed micro","inset_left_half_square_dashed_micro","left","micro","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/inset.left.half.square.dashed.micro.svg","symbol":"inset.left.half.square.dashed.micro"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/inset.left.half.square.dashed.micro.svg","symbol":"inset.left.half.square.dashed.micro"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -31752,7 +31752,7 @@
       categories: ["editing","squared"],
       tags: ["dashed","editing","inset","inset square dashed micro","inset_square_dashed_micro","micro","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/inset.square.dashed.micro.svg","symbol":"inset.square.dashed.micro"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/inset.square.dashed.micro.svg","symbol":"inset.square.dashed.micro"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -32620,7 +32620,7 @@
       categories: ["security"],
       tags: ["key","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.svg","symbol":"key"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.svg","symbol":"key"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.6172 31.9727" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.9727" opacity="0" width="17.6172" x="0" y="0"/>
@@ -32637,7 +32637,7 @@
       categories: ["security","circled"],
       tags: ["circle","circled","key","key circle","key_circle","privacy & security"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.circle.svg","symbol":"key.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/key.circle.svg","symbol":"key.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__KEY_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.circle.svg","symbol":"key.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/key.circle.svg","symbol":"key.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__KEY_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -32655,7 +32655,7 @@
       categories: ["security","circled"],
       tags: ["circle","circled","fill","key","key circle fill","key_circle_fill","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.circle.fill.svg","symbol":"key.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.circle.fill.svg","symbol":"key.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -32672,7 +32672,7 @@
       categories: ["security"],
       tags: ["fill","key","key fill","key_fill","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.fill.svg","symbol":"key.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.fill.svg","symbol":"key.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 31.6322" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.6322" opacity="0" width="17.1875" x="0" y="0"/>
@@ -32689,7 +32689,7 @@
       categories: ["security"],
       tags: ["horizontal","key","key horizontal","key_horizontal","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.horizontal.svg","symbol":"key.horizontal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.horizontal.svg","symbol":"key.horizontal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.1677 17.2754" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.2754" opacity="0" width="32.1677" x="0" y="0"/>
@@ -32706,7 +32706,7 @@
       categories: ["security"],
       tags: ["fill","horizontal","key","key horizontal fill","key_horizontal_fill","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.horizontal.fill.svg","symbol":"key.horizontal.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.horizontal.fill.svg","symbol":"key.horizontal.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9753 16.8359" aria-hidden="true" focusable="false">
  <g>
   <rect height="16.8359" opacity="0" width="31.9753" x="0" y="0"/>
@@ -32723,7 +32723,7 @@
       categories: ["cloud-server","security"],
       tags: ["cloud & drive","icloud","key","key icloud","key_icloud","privacy & security"],
       repositories: ["mctree-mchome","svg-converter"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__KEY_ICLOUD"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.icloud.svg","symbol":"key.icloud"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/key.icloud.svg","symbol":"key.icloud"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__KEY_ICLOUD"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/key.icloud.svg","symbol":"key.icloud"},{"repo":"svg-converter","file":"app-input/Privacy & Security/key.icloud.svg","symbol":"key.icloud"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false"><g><rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/><path d="M25.3516 22.749C29.375 22.749 32.5684 19.7949 32.5684 16.0938C32.5684 13.3887 31.0547 10.9424 28.5107 9.90723C28.5303 4.15527 24.375 0 19.0039 0C15.7031 0 13.1201 1.64062 11.4844 4.01855C8.21289 3.19336 4.87793 5.5957 4.70215 9.16016C1.80176 9.71191 0 12.3242 0 15.5322C0 19.4922 3.44727 22.7441 7.9248 22.7441ZM25.3516 19.8633L7.92969 19.8584C5.08301 19.8584 2.94434 17.8857 2.94434 15.5322C2.94434 13.0273 4.53125 11.2891 7.01172 11.2891C7.19238 11.2891 7.28027 11.1865 7.27051 11.001C7.10449 7.40723 9.69727 5.95703 12.5391 6.84082C12.7002 6.88965 12.8076 6.85547 12.8955 6.70898C14.165 4.50684 15.9619 2.89062 18.9697 2.89062C22.7686 2.89062 25.5469 5.88867 25.7422 9.5166C25.7812 10.2637 25.7227 11.04 25.6592 11.6602C25.6396 11.8359 25.7129 11.9434 25.8838 11.9678C28.1689 12.3584 29.6191 13.9209 29.6191 16.0938C29.6191 18.1934 27.7539 19.8633 25.3516 19.8633Z"/><path d="M22.9053 12.8662C22.9053 10.835 21.2744 9.20898 19.2627 9.20898C17.7686 9.20898 16.4502 10.0732 15.8838 11.4355L10.6299 11.4355C10.459 11.4355 10.293 11.5039 10.1611 11.6455L9.22852 12.6074C9.08691 12.7588 9.07227 13.0176 9.24805 13.1934L10.957 14.917C11.1475 15.1074 11.4258 15.0879 11.6064 14.9121L12.5391 13.9746L13.8818 15.3174C14.0479 15.4932 14.3262 15.4883 14.5166 15.3027L15.8057 14.0332C16.5234 15.625 17.7686 16.5234 19.2627 16.5234C21.2695 16.5234 22.9053 14.8926 22.9053 12.8662ZM21.084 12.8613C21.084 13.457 20.5957 13.9502 19.9902 13.9502C19.3896 13.9502 18.9014 13.457 18.9014 12.8613C18.9014 12.2656 19.3896 11.7773 19.9902 11.7773C20.5957 11.7773 21.084 12.2607 21.084 12.8613Z"/></g></svg>`
     },
     {
@@ -32735,7 +32735,7 @@
       categories: ["cloud-server","security"],
       tags: ["cloud & drive","fill","icloud","key","key icloud fill","key_icloud_fill","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.icloud.fill.svg","symbol":"key.icloud.fill"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/key.icloud.fill.svg","symbol":"key.icloud.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/key.icloud.fill.svg","symbol":"key.icloud.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/key.icloud.fill.svg","symbol":"key.icloud.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
@@ -32752,7 +32752,7 @@
       categories: ["arrows","security"],
       tags: ["arrow","arrows","back","direction","forward","key","key radiowaves forward","key_radiowaves_forward","navigate","privacy & security","radiowaves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.radiowaves.forward.svg","symbol":"key.radiowaves.forward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.radiowaves.forward.svg","symbol":"key.radiowaves.forward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2432 32.6063" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.6063" opacity="0" width="29.2432" x="0" y="0"/>
@@ -32771,7 +32771,7 @@
       categories: ["arrows","security"],
       tags: ["arrow","arrows","back","direction","fill","forward","key","key radiowaves forward fill","key_radiowaves_forward_fill","navigate","privacy & security","radiowaves"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.radiowaves.forward.fill.svg","symbol":"key.radiowaves.forward.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.radiowaves.forward.fill.svg","symbol":"key.radiowaves.forward.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.8135 32.6063" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.6063" opacity="0" width="28.8135" x="0" y="0"/>
@@ -32790,7 +32790,7 @@
       categories: ["arrows","security","slashed"],
       tags: ["arrow","arrows","back","direction","forward","key","key radiowaves forward slash","key_radiowaves_forward_slash","navigate","privacy & security","radiowaves","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.radiowaves.forward.slash.svg","symbol":"key.radiowaves.forward.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.radiowaves.forward.slash.svg","symbol":"key.radiowaves.forward.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.3547 32.6063" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.6063" opacity="0" width="42.3547" x="0" y="0"/>
@@ -32810,7 +32810,7 @@
       categories: ["arrows","security","slashed"],
       tags: ["arrow","arrows","back","direction","fill","forward","key","key radiowaves forward slash fill","key_radiowaves_forward_slash_fill","navigate","privacy & security","radiowaves","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.radiowaves.forward.slash.fill.svg","symbol":"key.radiowaves.forward.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.radiowaves.forward.slash.fill.svg","symbol":"key.radiowaves.forward.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.9543 32.6063" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.6063" opacity="0" width="41.9543" x="0" y="0"/>
@@ -32830,7 +32830,7 @@
       categories: ["security"],
       tags: ["key","key shield","key_shield","privacy & security","shield"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.shield.svg","symbol":"key.shield"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.shield.svg","symbol":"key.shield"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/>
@@ -32848,7 +32848,7 @@
       categories: ["security"],
       tags: ["fill","key","key shield fill","key_shield_fill","privacy & security","shield"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.shield.fill.svg","symbol":"key.shield.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.shield.fill.svg","symbol":"key.shield.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.5918 25.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.752" opacity="0" width="21.5918" x="0" y="0"/>
@@ -32865,7 +32865,7 @@
       categories: ["security","slashed"],
       tags: ["key","key slash","key_slash","privacy & security","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.slash.svg","symbol":"key.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.slash.svg","symbol":"key.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7239 31.9727" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.9727" opacity="0" width="30.7239" x="0" y="0"/>
@@ -32883,7 +32883,7 @@
       categories: ["security","slashed"],
       tags: ["fill","key","key slash fill","key_slash_fill","privacy & security","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.slash.fill.svg","symbol":"key.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.slash.fill.svg","symbol":"key.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3284 31.6322" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.6322" opacity="0" width="30.3284" x="0" y="0"/>
@@ -32901,7 +32901,7 @@
       categories: ["security"],
       tags: ["key","key viewfinder","key_viewfinder","privacy & security","viewfinder"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/key.viewfinder.svg","symbol":"key.viewfinder"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/key.viewfinder.svg","symbol":"key.viewfinder"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5469 25.2246" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2246" opacity="0" width="25.5469" x="0" y="0"/>
@@ -32919,7 +32919,7 @@
       categories: ["devices","keyboard"],
       tags: ["devices","keyboard"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.svg","symbol":"keyboard"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.svg","symbol":"keyboard"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="32.8076" x="0" y="0"/>
@@ -32936,7 +32936,7 @@
       categories: ["devices","interface","keyboard","badged","badged-ellipsis","status"],
       tags: ["badge","badged","devices","ellipsis","interface","keyboard","keyboard badge ellipsis","keyboard_badge_ellipsis","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.badge.ellipsis.svg","symbol":"keyboard.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.ellipsis.svg","symbol":"keyboard.badge.ellipsis"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.ellipsis.svg","symbol":"keyboard.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.badge.ellipsis.svg","symbol":"keyboard.badge.ellipsis"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.2939 28.8672" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.8672" opacity="0" width="46.2939" x="0" y="0"/>
@@ -32954,7 +32954,7 @@
       categories: ["devices","interface","keyboard","badged","badged-ellipsis","status"],
       tags: ["badge","badged","devices","ellipsis","fill","interface","keyboard","keyboard badge ellipsis fill","keyboard_badge_ellipsis_fill","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.badge.ellipsis.fill.svg","symbol":"keyboard.badge.ellipsis.fill"},{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.ellipsis.fill.svg","symbol":"keyboard.badge.ellipsis.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.ellipsis.fill.svg","symbol":"keyboard.badge.ellipsis.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.badge.ellipsis.fill.svg","symbol":"keyboard.badge.ellipsis.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.2939 28.8672" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.8672" opacity="0" width="46.2939" x="0" y="0"/>
@@ -32972,7 +32972,7 @@
       categories: ["devices","keyboard","badged","badged-eye","status"],
       tags: ["badge","badged","devices","eye","keyboard","keyboard badge eye","keyboard_badge_eye","show","status","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.badge.eye.svg","symbol":"keyboard.badge.eye"},{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.eye.svg","symbol":"keyboard.badge.eye"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.eye.svg","symbol":"keyboard.badge.eye"},{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.badge.eye.svg","symbol":"keyboard.badge.eye"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.3154 25.9082" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9082" opacity="0" width="48.3154" x="0" y="0"/>
@@ -32990,7 +32990,7 @@
       categories: ["devices","keyboard","badged","badged-eye","status"],
       tags: ["badge","badged","devices","eye","fill","keyboard","keyboard badge eye fill","keyboard_badge_eye_fill","show","status","view","visibility","visible"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.badge.eye.fill.svg","symbol":"keyboard.badge.eye.fill"},{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.eye.fill.svg","symbol":"keyboard.badge.eye.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/keyboard.badge.eye.fill.svg","symbol":"keyboard.badge.eye.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.badge.eye.fill.svg","symbol":"keyboard.badge.eye.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.3154 25.9082" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.9082" opacity="0" width="48.3154" x="0" y="0"/>
@@ -33008,7 +33008,7 @@
       categories: ["arrows","devices","keyboard"],
       tags: ["arrows","chevron","compact","devices","down","keyboard","keyboard chevron compact down","keyboard_chevron_compact_down"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.chevron.compact.down.svg","symbol":"keyboard.chevron.compact.down"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.chevron.compact.down.svg","symbol":"keyboard.chevron.compact.down"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 34.9219" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.9219" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33026,7 +33026,7 @@
       categories: ["arrows","devices","keyboard"],
       tags: ["arrows","chevron","compact","devices","down","fill","keyboard","keyboard chevron compact down fill","keyboard_chevron_compact_down_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.chevron.compact.down.fill.svg","symbol":"keyboard.chevron.compact.down.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.chevron.compact.down.fill.svg","symbol":"keyboard.chevron.compact.down.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 34.9219" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.9219" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33044,7 +33044,7 @@
       categories: ["arrows","devices","keyboard"],
       tags: ["arrows","chevron","compact","devices","keyboard","keyboard chevron compact left","keyboard_chevron_compact_left","left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.chevron.compact.left.svg","symbol":"keyboard.chevron.compact.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.chevron.compact.left.svg","symbol":"keyboard.chevron.compact.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.9849 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="41.9849" x="0" y="0"/>
@@ -33062,7 +33062,7 @@
       categories: ["arrows","devices","keyboard"],
       tags: ["arrows","chevron","compact","devices","fill","keyboard","keyboard chevron compact left fill","keyboard_chevron_compact_left_fill","left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.chevron.compact.left.fill.svg","symbol":"keyboard.chevron.compact.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.chevron.compact.left.fill.svg","symbol":"keyboard.chevron.compact.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.9849 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="41.9849" x="0" y="0"/>
@@ -33080,7 +33080,7 @@
       categories: ["devices","keyboard"],
       tags: ["devices","fill","keyboard","keyboard fill","keyboard_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.fill.svg","symbol":"keyboard.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.fill.svg","symbol":"keyboard.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33097,7 +33097,7 @@
       categories: ["devices","keyboard"],
       tags: ["devices","keyboard","keyboard onehanded left","keyboard_onehanded_left","left","onehanded"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.onehanded.left.svg","symbol":"keyboard.onehanded.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.onehanded.left.svg","symbol":"keyboard.onehanded.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33115,7 +33115,7 @@
       categories: ["devices","keyboard"],
       tags: ["devices","fill","keyboard","keyboard onehanded left fill","keyboard_onehanded_left_fill","left","onehanded"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.onehanded.left.fill.svg","symbol":"keyboard.onehanded.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.onehanded.left.fill.svg","symbol":"keyboard.onehanded.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33132,7 +33132,7 @@
       categories: ["devices","keyboard"],
       tags: ["devices","keyboard","keyboard onehanded right","keyboard_onehanded_right","onehanded","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.onehanded.right.svg","symbol":"keyboard.onehanded.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.onehanded.right.svg","symbol":"keyboard.onehanded.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33150,7 +33150,7 @@
       categories: ["devices","keyboard"],
       tags: ["devices","fill","keyboard","keyboard onehanded right fill","keyboard_onehanded_right_fill","onehanded","right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/keyboard.onehanded.right.fill.svg","symbol":"keyboard.onehanded.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/keyboard.onehanded.right.fill.svg","symbol":"keyboard.onehanded.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8076 20.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.8887" opacity="0" width="32.8076" x="0" y="0"/>
@@ -33504,7 +33504,7 @@
       categories: ["editing"],
       tags: ["editing","lasso"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/lasso.svg","symbol":"lasso"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/lasso.svg","symbol":"lasso"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5098 29.4434" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.4434" opacity="0" width="27.5098" x="0" y="0"/>
@@ -33521,7 +33521,7 @@
       categories: ["editing","rays-sparkles","badged","badged-sparkles","status"],
       tags: ["badge","badged","editing","lasso","lasso badge sparkles","lasso_badge_sparkles","rays & sparkles","sparkles","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/lasso.badge.sparkles.svg","symbol":"lasso.badge.sparkles"},{"repo":"svg-converter","file":"app-input/Badge/lasso.badge.sparkles.svg","symbol":"lasso.badge.sparkles"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/lasso.badge.sparkles.svg","symbol":"lasso.badge.sparkles"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lasso.badge.sparkles.svg","symbol":"lasso.badge.sparkles"},{"repo":"svg-converter","file":"app-input/Editing/lasso.badge.sparkles.svg","symbol":"lasso.badge.sparkles"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/lasso.badge.sparkles.svg","symbol":"lasso.badge.sparkles"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.3906 37.5977" aria-hidden="true" focusable="false">
  <g>
   <rect height="37.5977" opacity="0" width="35.3906" x="0" y="0"/>
@@ -33678,7 +33678,7 @@
       categories: ["math"],
       tags: ["lessthan","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthan.svg","symbol":"lessthan"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthan.svg","symbol":"lessthan"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.7451 17.7734" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.7734" opacity="0" width="18.7451" x="0" y="0"/>
@@ -33695,7 +33695,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","lessthan","lessthan circle","lessthan_circle","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthan.circle.svg","symbol":"lessthan.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/lessthan.circle.svg","symbol":"lessthan.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LESSTHAN_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthan.circle.svg","symbol":"lessthan.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/lessthan.circle.svg","symbol":"lessthan.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LESSTHAN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -33713,7 +33713,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","lessthan","lessthan circle fill","lessthan_circle_fill","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthan.circle.fill.svg","symbol":"lessthan.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthan.circle.fill.svg","symbol":"lessthan.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -33730,7 +33730,7 @@
       categories: ["math","squared"],
       tags: ["lessthan","lessthan square","lessthan_square","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthan.square.svg","symbol":"lessthan.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthan.square.svg","symbol":"lessthan.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -33748,7 +33748,7 @@
       categories: ["math","squared"],
       tags: ["fill","lessthan","lessthan square fill","lessthan_square_fill","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthan.square.fill.svg","symbol":"lessthan.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthan.square.fill.svg","symbol":"lessthan.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -33765,7 +33765,7 @@
       categories: ["math"],
       tags: ["lessthanorequalto","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthanorequalto.svg","symbol":"lessthanorequalto"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LESSTHANOREQUALTO"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthanorequalto.svg","symbol":"lessthanorequalto"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LESSTHANOREQUALTO"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16.5283 22.7637" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.7637" opacity="0" width="16.5283" x="0" y="0"/>
@@ -33782,7 +33782,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","lessthanorequalto","lessthanorequalto circle","lessthanorequalto_circle","math"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthanorequalto.circle.svg","symbol":"lessthanorequalto.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/lessthanorequalto.circle.svg","symbol":"lessthanorequalto.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LESSTHANOREQUALTO_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthanorequalto.circle.svg","symbol":"lessthanorequalto.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/lessthanorequalto.circle.svg","symbol":"lessthanorequalto.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LESSTHANOREQUALTO_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -33800,7 +33800,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","lessthanorequalto","lessthanorequalto circle fill","lessthanorequalto_circle_fill","math"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthanorequalto.circle.fill.svg","symbol":"lessthanorequalto.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthanorequalto.circle.fill.svg","symbol":"lessthanorequalto.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -33817,7 +33817,7 @@
       categories: ["math","squared"],
       tags: ["lessthanorequalto","lessthanorequalto square","lessthanorequalto_square","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthanorequalto.square.svg","symbol":"lessthanorequalto.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthanorequalto.square.svg","symbol":"lessthanorequalto.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -33835,7 +33835,7 @@
       categories: ["math","squared"],
       tags: ["fill","lessthanorequalto","lessthanorequalto square fill","lessthanorequalto_square_fill","math","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/lessthanorequalto.square.fill.svg","symbol":"lessthanorequalto.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/lessthanorequalto.square.fill.svg","symbol":"lessthanorequalto.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -33852,7 +33852,7 @@
       categories: ["maps"],
       tags: ["licenseplate","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/licenseplate.svg","symbol":"licenseplate"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/licenseplate.svg","symbol":"licenseplate"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.1543 21.4258" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.4258" opacity="0" width="33.1543" x="0" y="0"/>
@@ -33870,7 +33870,7 @@
       categories: ["maps"],
       tags: ["fill","licenseplate","licenseplate fill","licenseplate_fill","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/licenseplate.fill.svg","symbol":"licenseplate.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/licenseplate.fill.svg","symbol":"licenseplate.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.1543 21.4258" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.4258" opacity="0" width="33.1543" x="0" y="0"/>
@@ -33887,7 +33887,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","light","light max","light_max","max"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/light.max.svg","symbol":"light.max"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/light.max.svg","symbol":"light.max"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7314 18.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="18.8379" opacity="0" width="34.7314" x="0" y="0"/>
@@ -33905,7 +33905,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","light","light min","light_min","min"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/light.min.svg","symbol":"light.min"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/light.min.svg","symbol":"light.min"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7285 17.6367" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.6367" opacity="0" width="31.7285" x="0" y="0"/>
@@ -34047,7 +34047,7 @@
       categories: ["transportation"],
       tags: ["lightrail","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/lightrail.svg","symbol":"lightrail"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/lightrail.svg","symbol":"lightrail"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0723 34.4141" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.4141" opacity="0" width="24.0723" x="0" y="0"/>
@@ -34064,7 +34064,7 @@
       categories: ["transportation"],
       tags: ["fill","lightrail","lightrail fill","lightrail_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/lightrail.fill.svg","symbol":"lightrail.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/lightrail.fill.svg","symbol":"lightrail.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.6709 34.4141" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.4141" opacity="0" width="22.6709" x="0" y="0"/>
@@ -34659,7 +34659,7 @@
       categories: ["maps-travel","maps"],
       tags: ["geography","location","map","maps","maps & travel","marker","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.svg","symbol":"location"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.svg","symbol":"location"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3902 25.3641" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3641" opacity="0" width="27.3902" x="0" y="0"/>
@@ -34676,7 +34676,7 @@
       categories: ["maps-travel","maps"],
       tags: ["app","geography","location","location app","location_app","map","maps","maps & travel","marker","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.app.svg","symbol":"location.app"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.app.svg","symbol":"location.app"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -34694,7 +34694,7 @@
       categories: ["maps-travel","maps"],
       tags: ["app","fill","geography","location","location app fill","location_app_fill","map","maps","maps & travel","marker","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.app.fill.svg","symbol":"location.app.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.app.fill.svg","symbol":"location.app.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -34711,7 +34711,7 @@
       categories: ["maps-travel","maps","circled"],
       tags: ["circle","circled","geography","location","location circle","location_circle","map","maps","maps & travel","marker","pin","place","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.circle.svg","symbol":"location.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/location.circle.svg","symbol":"location.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.circle.svg","symbol":"location.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/location.circle.svg","symbol":"location.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -34729,7 +34729,7 @@
       categories: ["maps-travel","maps","circled"],
       tags: ["circle","circled","fill","geography","location","location circle fill","location_circle_fill","map","maps","maps & travel","marker","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.circle.fill.svg","symbol":"location.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.circle.fill.svg","symbol":"location.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -34746,7 +34746,7 @@
       categories: ["maps-travel","maps"],
       tags: ["fill","geography","location","location fill","location_fill","map","maps","maps & travel","marker","pin","place","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.fill.svg","symbol":"location.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.fill.svg","symbol":"location.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3072 25.3055" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3055" opacity="0" width="27.3072" x="0" y="0"/>
@@ -34763,7 +34763,7 @@
       categories: ["maps-travel","maps"],
       tags: ["fill","geography","location","location fill viewfinder","location_fill_viewfinder","map","maps","maps & travel","marker","pin","place","travel","viewfinder"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.fill.viewfinder.svg","symbol":"location.fill.viewfinder"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.fill.viewfinder.svg","symbol":"location.fill.viewfinder"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5469 25.2246" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2246" opacity="0" width="25.5469" x="0" y="0"/>
@@ -34781,7 +34781,7 @@
       categories: ["maps-travel","maps"],
       tags: ["geography","location","location north","location_north","map","maps","maps & travel","marker","north","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.north.svg","symbol":"location.north"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.north.svg","symbol":"location.north"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.3672 27.832" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.832" opacity="0" width="21.3672" x="0" y="0"/>
@@ -34798,7 +34798,7 @@
       categories: ["maps-travel","maps","circled"],
       tags: ["circle","circled","geography","location","location north circle","location_north_circle","map","maps","maps & travel","marker","north","pin","place","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.north.circle.svg","symbol":"location.north.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/location.north.circle.svg","symbol":"location.north.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_NORTH_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.north.circle.svg","symbol":"location.north.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/location.north.circle.svg","symbol":"location.north.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_NORTH_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -34816,7 +34816,7 @@
       categories: ["maps-travel","maps","circled"],
       tags: ["circle","circled","fill","geography","location","location north circle fill","location_north_circle_fill","map","maps","maps & travel","marker","north","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.north.circle.fill.svg","symbol":"location.north.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.north.circle.fill.svg","symbol":"location.north.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -34833,7 +34833,7 @@
       categories: ["maps-travel","maps"],
       tags: ["fill","geography","location","location north fill","location_north_fill","map","maps","maps & travel","marker","north","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.north.fill.svg","symbol":"location.north.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.north.fill.svg","symbol":"location.north.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.3672 27.832" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.832" opacity="0" width="21.3672" x="0" y="0"/>
@@ -34850,7 +34850,7 @@
       categories: ["maps-travel","maps"],
       tags: ["geography","line","location","location north line","location_north_line","map","maps","maps & travel","marker","north","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.north.line.svg","symbol":"location.north.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.north.line.svg","symbol":"location.north.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.5596 32.9883" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9883" opacity="0" width="18.5596" x="0" y="0"/>
@@ -34867,7 +34867,7 @@
       categories: ["maps-travel","maps"],
       tags: ["fill","geography","line","location","location north line fill","location_north_line_fill","map","maps","maps & travel","marker","north","pin","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.north.line.fill.svg","symbol":"location.north.line.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.north.line.fill.svg","symbol":"location.north.line.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.5596 32.9883" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9883" opacity="0" width="18.5596" x="0" y="0"/>
@@ -34884,7 +34884,7 @@
       categories: ["maps-travel","maps","slashed"],
       tags: ["geography","location","location slash","location_slash","map","maps","maps & travel","marker","pin","place","slash","slashed","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.slash.svg","symbol":"location.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.slash.svg","symbol":"location.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3902 28.4143" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4143" opacity="0" width="27.3902" x="0" y="0"/>
@@ -34902,7 +34902,7 @@
       categories: ["maps-travel","maps","circled","slashed"],
       tags: ["circle","circled","geography","location","location slash circle","location_slash_circle","map","maps","maps & travel","marker","pin","place","slash","slashed","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.slash.circle.svg","symbol":"location.slash.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/location.slash.circle.svg","symbol":"location.slash.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_SLASH_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.slash.circle.svg","symbol":"location.slash.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/location.slash.circle.svg","symbol":"location.slash.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_SLASH_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -34921,7 +34921,7 @@
       categories: ["maps-travel","maps","circled","slashed"],
       tags: ["circle","circled","fill","geography","location","location slash circle fill","location_slash_circle_fill","map","maps","maps & travel","marker","pin","place","slash","slashed","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.slash.circle.fill.svg","symbol":"location.slash.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.slash.circle.fill.svg","symbol":"location.slash.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -34938,7 +34938,7 @@
       categories: ["maps-travel","maps","slashed"],
       tags: ["fill","geography","location","location slash fill","location_slash_fill","map","maps","maps & travel","marker","pin","place","slash","slashed","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.slash.fill.svg","symbol":"location.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.slash.fill.svg","symbol":"location.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3072 28.3228" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.3228" opacity="0" width="27.3072" x="0" y="0"/>
@@ -34956,7 +34956,7 @@
       categories: ["maps-travel","maps","squared"],
       tags: ["geography","location","location square","location_square","map","maps","maps & travel","marker","pin","place","square","squared","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.square.svg","symbol":"location.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.square.svg","symbol":"location.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -34974,7 +34974,7 @@
       categories: ["maps-travel","maps","squared"],
       tags: ["fill","geography","location","location square fill","location_square_fill","map","maps","maps & travel","marker","pin","place","square","squared","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.square.fill.svg","symbol":"location.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/location.square.fill.svg","symbol":"location.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.square.fill.svg","symbol":"location.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/location.square.fill.svg","symbol":"location.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCATION_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -34991,7 +34991,7 @@
       categories: ["maps-travel","maps"],
       tags: ["geography","location","location viewfinder","location_viewfinder","map","maps","maps & travel","marker","pin","place","travel","viewfinder"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/location.viewfinder.svg","symbol":"location.viewfinder"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/location.viewfinder.svg","symbol":"location.viewfinder"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5469 25.2246" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2246" opacity="0" width="25.5469" x="0" y="0"/>
@@ -35009,7 +35009,7 @@
       categories: ["security"],
       tags: ["lock","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.svg","symbol":"lock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.svg","symbol":"lock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.4912 26.1523" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1523" opacity="0" width="18.4912" x="0" y="0"/>
@@ -35026,7 +35026,7 @@
       categories: ["security"],
       tags: ["applewatch","lock","lock applewatch","lock_applewatch","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.applewatch.svg","symbol":"lock.applewatch"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.applewatch.svg","symbol":"lock.applewatch"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2686 28.252" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.252" opacity="0" width="20.2686" x="0" y="0"/>
@@ -35044,7 +35044,7 @@
       categories: ["security","badged","badged-checkmark","status"],
       tags: ["badge","badged","check","checkmark","confirm","done","lock","lock badge checkmark","lock_badge_checkmark","privacy","privacy & security","private","secure","security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.badge.checkmark.svg","symbol":"lock.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Badge/lock.badge.checkmark.svg","symbol":"lock.badge.checkmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.badge.checkmark.svg","symbol":"lock.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.badge.checkmark.svg","symbol":"lock.badge.checkmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.665 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="31.665" x="0" y="0"/>
@@ -35062,7 +35062,7 @@
       categories: ["security","badged","badged-checkmark","status"],
       tags: ["badge","badged","check","checkmark","confirm","done","fill","lock","lock badge checkmark fill","lock_badge_checkmark_fill","privacy","privacy & security","private","secure","security","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.badge.checkmark.fill.svg","symbol":"lock.badge.checkmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/lock.badge.checkmark.fill.svg","symbol":"lock.badge.checkmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.badge.checkmark.fill.svg","symbol":"lock.badge.checkmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.badge.checkmark.fill.svg","symbol":"lock.badge.checkmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4873 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="34.4873" x="0" y="0"/>
@@ -35080,7 +35080,7 @@
       categories: ["security","badged","badged-clock","status","time"],
       tags: ["badge","badged","clock","history","lock","lock badge clock","lock_badge_clock","privacy","privacy & security","private","recent","secure","security","status","time"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.badge.clock.svg","symbol":"lock.badge.clock"},{"repo":"svg-converter","file":"app-input/Badge/lock.badge.clock.svg","symbol":"lock.badge.clock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.badge.clock.svg","symbol":"lock.badge.clock"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.badge.clock.svg","symbol":"lock.badge.clock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.665 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="31.665" x="0" y="0"/>
@@ -35098,7 +35098,7 @@
       categories: ["security","badged","badged-clock","status","time"],
       tags: ["badge","badged","clock","fill","history","lock","lock badge clock fill","lock_badge_clock_fill","privacy","privacy & security","private","recent","secure","security","status","time"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.badge.clock.fill.svg","symbol":"lock.badge.clock.fill"},{"repo":"svg-converter","file":"app-input/Badge/lock.badge.clock.fill.svg","symbol":"lock.badge.clock.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.badge.clock.fill.svg","symbol":"lock.badge.clock.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.badge.clock.fill.svg","symbol":"lock.badge.clock.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4873 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="34.4873" x="0" y="0"/>
@@ -35116,7 +35116,7 @@
       categories: ["security","badged","badged-xmark","status"],
       tags: ["badge","badged","cancel","close","dismiss","lock","lock badge xmark","lock_badge_xmark","privacy","privacy & security","private","secure","security","status","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.badge.xmark.svg","symbol":"lock.badge.xmark"},{"repo":"svg-converter","file":"app-input/Badge/lock.badge.xmark.svg","symbol":"lock.badge.xmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.badge.xmark.svg","symbol":"lock.badge.xmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.badge.xmark.svg","symbol":"lock.badge.xmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.665 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="31.665" x="0" y="0"/>
@@ -35134,7 +35134,7 @@
       categories: ["security","badged","badged-xmark","status"],
       tags: ["badge","badged","cancel","close","dismiss","fill","lock","lock badge xmark fill","lock_badge_xmark_fill","privacy","privacy & security","private","secure","security","status","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.badge.xmark.fill.svg","symbol":"lock.badge.xmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/lock.badge.xmark.fill.svg","symbol":"lock.badge.xmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.badge.xmark.fill.svg","symbol":"lock.badge.xmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.badge.xmark.fill.svg","symbol":"lock.badge.xmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4873 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="34.4873" x="0" y="0"/>
@@ -35152,7 +35152,7 @@
       categories: ["security","circled"],
       tags: ["circle","circled","lock","lock circle","lock_circle","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.circle.svg","symbol":"lock.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/lock.circle.svg","symbol":"lock.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCK_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.circle.svg","symbol":"lock.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/lock.circle.svg","symbol":"lock.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCK_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -35170,7 +35170,7 @@
       categories: ["security","circled"],
       tags: ["circle","circled","dotted","lock","lock circle dotted","lock_circle_dotted","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.circle.dotted.svg","symbol":"lock.circle.dotted"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.circle.dotted.svg","symbol":"lock.circle.dotted"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6553 26.1816" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1816" opacity="0" width="26.6553" x="0" y="0"/>
@@ -35188,7 +35188,7 @@
       categories: ["security","circled"],
       tags: ["circle","circled","fill","lock","lock circle fill","lock_circle_fill","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.circle.fill.svg","symbol":"lock.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.circle.fill.svg","symbol":"lock.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -35205,7 +35205,7 @@
       categories: ["security"],
       tags: ["desktopcomputer","lock","lock desktopcomputer","lock_desktopcomputer","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.desktopcomputer.svg","symbol":"lock.desktopcomputer"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.desktopcomputer.svg","symbol":"lock.desktopcomputer"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4502 27.207" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.207" opacity="0" width="31.4502" x="0" y="0"/>
@@ -35223,7 +35223,7 @@
       categories: ["devices","security"],
       tags: ["devices","display","lock","lock display","lock_display","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.display.svg","symbol":"lock.display"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.display.svg","symbol":"lock.display"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4502 27.207" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.207" opacity="0" width="31.4502" x="0" y="0"/>
@@ -35241,7 +35241,7 @@
       categories: ["documents","security"],
       tags: ["document","documents","file","lock","lock document","lock_document","notes","page","paper","privacy","privacy & security","private","secure","security","text"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.document.svg","symbol":"lock.document"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.document.svg","symbol":"lock.document"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -35259,7 +35259,7 @@
       categories: ["documents","security"],
       tags: ["document","documents","file","fill","lock","lock document fill","lock_document_fill","notes","page","paper","privacy","privacy & security","private","secure","security","text"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.document.fill.svg","symbol":"lock.document.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.document.fill.svg","symbol":"lock.document.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -35276,7 +35276,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock fill","lock_fill","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.fill.svg","symbol":"lock.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.fill.svg","symbol":"lock.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.4912 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="18.4912" x="0" y="0"/>
@@ -35293,7 +35293,7 @@
       categories: ["health","security"],
       tags: ["favorite","health","heart","lock","lock heart","lock_heart","love","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.heart.svg","symbol":"lock.heart"},{"repo":"svg-converter","file":"app-input/Health/lock.heart.svg","symbol":"lock.heart"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Health/lock.heart.svg","symbol":"lock.heart"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.heart.svg","symbol":"lock.heart"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.2256 24.6973" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.6973" opacity="0" width="26.2256" x="0" y="0"/>
@@ -35311,7 +35311,7 @@
       categories: ["health","security"],
       tags: ["favorite","fill","health","heart","lock","lock heart fill","lock_heart_fill","love","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.heart.fill.svg","symbol":"lock.heart.fill"},{"repo":"svg-converter","file":"app-input/Health/lock.heart.fill.svg","symbol":"lock.heart.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Health/lock.heart.fill.svg","symbol":"lock.heart.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.heart.fill.svg","symbol":"lock.heart.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.2256 24.6973" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.6973" opacity="0" width="26.2256" x="0" y="0"/>
@@ -35328,7 +35328,7 @@
       categories: ["cloud-server","security"],
       tags: ["cloud & drive","icloud","lock","lock icloud","lock_icloud","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.icloud.svg","symbol":"lock.icloud"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/lock.icloud.svg","symbol":"lock.icloud"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/lock.icloud.svg","symbol":"lock.icloud"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.icloud.svg","symbol":"lock.icloud"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3027" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3027" opacity="0" width="32.9297" x="0" y="0"/>
@@ -35346,7 +35346,7 @@
       categories: ["cloud-server","security"],
       tags: ["cloud & drive","fill","icloud","lock","lock icloud fill","lock_icloud_fill","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.icloud.fill.svg","symbol":"lock.icloud.fill"},{"repo":"svg-converter","file":"app-input/Cloud:Drive/lock.icloud.fill.svg","symbol":"lock.icloud.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Cloud:Drive/lock.icloud.fill.svg","symbol":"lock.icloud.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.icloud.fill.svg","symbol":"lock.icloud.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.9297 25.3223" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.3223" opacity="0" width="32.9297" x="0" y="0"/>
@@ -35363,7 +35363,7 @@
       categories: ["devices","security"],
       tags: ["devices","ipad","lock","lock ipad","lock_ipad","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.ipad.svg","symbol":"lock.ipad"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.ipad.svg","symbol":"lock.ipad"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.6123 29.5312" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5312" opacity="0" width="22.6123" x="0" y="0"/>
@@ -35381,7 +35381,7 @@
       categories: ["devices","security"],
       tags: ["devices","iphone","lock","lock iphone","lock_iphone","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.iphone.svg","symbol":"lock.iphone"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.iphone.svg","symbol":"lock.iphone"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.3545 28.4961" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4961" opacity="0" width="18.3545" x="0" y="0"/>
@@ -35399,7 +35399,7 @@
       categories: ["security"],
       tags: ["laptopcomputer","lock","lock laptopcomputer","lock_laptopcomputer","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.laptopcomputer.svg","symbol":"lock.laptopcomputer"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.laptopcomputer.svg","symbol":"lock.laptopcomputer"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.1299 21.6016" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.6016" opacity="0" width="38.1299" x="0" y="0"/>
@@ -35417,7 +35417,7 @@
       categories: ["security"],
       tags: ["lock","lock open","lock_open","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.svg","symbol":"lock.open"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.svg","symbol":"lock.open"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.7529 26.2793" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.2793" opacity="0" width="26.7529" x="0" y="0"/>
@@ -35434,7 +35434,7 @@
       categories: ["security"],
       tags: ["applewatch","lock","lock open applewatch","lock_open_applewatch","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.applewatch.svg","symbol":"lock.open.applewatch"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.applewatch.svg","symbol":"lock.open.applewatch"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2686 28.252" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.252" opacity="0" width="20.2686" x="0" y="0"/>
@@ -35452,7 +35452,7 @@
       categories: ["security"],
       tags: ["desktopcomputer","lock","lock open desktopcomputer","lock_open_desktopcomputer","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.desktopcomputer.svg","symbol":"lock.open.desktopcomputer"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.desktopcomputer.svg","symbol":"lock.open.desktopcomputer"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4502 27.207" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.207" opacity="0" width="31.4502" x="0" y="0"/>
@@ -35470,7 +35470,7 @@
       categories: ["devices","security"],
       tags: ["devices","display","lock","lock open display","lock_open_display","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.display.svg","symbol":"lock.open.display"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.display.svg","symbol":"lock.open.display"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4502 27.207" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.207" opacity="0" width="31.4502" x="0" y="0"/>
@@ -35488,7 +35488,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock open fill","lock_open_fill","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.fill.svg","symbol":"lock.open.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.fill.svg","symbol":"lock.open.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.7529 26.2793" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.2793" opacity="0" width="26.7529" x="0" y="0"/>
@@ -35505,7 +35505,7 @@
       categories: ["devices","security"],
       tags: ["devices","ipad","lock","lock open ipad","lock_open_ipad","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.ipad.svg","symbol":"lock.open.ipad"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.ipad.svg","symbol":"lock.open.ipad"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.6123 29.5312" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5312" opacity="0" width="22.6123" x="0" y="0"/>
@@ -35523,7 +35523,7 @@
       categories: ["devices","security"],
       tags: ["devices","iphone","lock","lock open iphone","lock_open_iphone","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.iphone.svg","symbol":"lock.open.iphone"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.iphone.svg","symbol":"lock.open.iphone"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.3545 28.4961" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4961" opacity="0" width="18.3545" x="0" y="0"/>
@@ -35541,7 +35541,7 @@
       categories: ["security"],
       tags: ["laptopcomputer","lock","lock open laptopcomputer","lock_open_laptopcomputer","open","privacy","privacy & security","private","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.laptopcomputer.svg","symbol":"lock.open.laptopcomputer"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.laptopcomputer.svg","symbol":"lock.open.laptopcomputer"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.1299 21.6016" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.6016" opacity="0" width="38.1299" x="0" y="0"/>
@@ -35559,7 +35559,7 @@
       categories: ["security"],
       tags: ["lock","lock open rotation","lock_open_rotation","open","privacy","privacy & security","private","rotation","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.rotation.svg","symbol":"lock.open.rotation"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.rotation.svg","symbol":"lock.open.rotation"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.5762 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="30.5762" x="0" y="0"/>
@@ -35577,7 +35577,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","exclamation mark","exclamationmark","lock","lock open trianglebadge exclamationmark","lock_open_trianglebadge_exclamationmark","open","privacy","privacy & security","private","secure","security","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.trianglebadge.exclamationmark.svg","symbol":"lock.open.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/lock.open.trianglebadge.exclamationmark.svg","symbol":"lock.open.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.open.trianglebadge.exclamationmark.svg","symbol":"lock.open.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.trianglebadge.exclamationmark.svg","symbol":"lock.open.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.6553 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="41.6553" x="0" y="0"/>
@@ -35595,7 +35595,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","exclamation mark","exclamationmark","fill","lock","lock open trianglebadge exclamationmark fill","lock_open_trianglebadge_exclamationmark_fill","open","privacy","privacy & security","private","secure","security","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.open.trianglebadge.exclamationmark.fill.svg","symbol":"lock.open.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/lock.open.trianglebadge.exclamationmark.fill.svg","symbol":"lock.open.trianglebadge.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.open.trianglebadge.exclamationmark.fill.svg","symbol":"lock.open.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.open.trianglebadge.exclamationmark.fill.svg","symbol":"lock.open.trianglebadge.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.6143 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="44.6143" x="0" y="0"/>
@@ -35613,7 +35613,7 @@
       categories: ["security"],
       tags: ["lock","lock rectangle","lock_rectangle","privacy","privacy & security","private","rectangle","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rectangle.svg","symbol":"lock.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rectangle.svg","symbol":"lock.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -35631,7 +35631,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock rectangle fill","lock_rectangle_fill","privacy","privacy & security","private","rectangle","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rectangle.fill.svg","symbol":"lock.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rectangle.fill.svg","symbol":"lock.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -35648,7 +35648,7 @@
       categories: ["security"],
       tags: ["lock","lock rectangle on rectangle","lock_rectangle_on_rectangle","on","privacy","privacy & security","private","rectangle","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rectangle.on.rectangle.svg","symbol":"lock.rectangle.on.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rectangle.on.rectangle.svg","symbol":"lock.rectangle.on.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6758 26.7285" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.7285" opacity="0" width="32.6758" x="0" y="0"/>
@@ -35667,7 +35667,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock rectangle on rectangle fill","lock_rectangle_on_rectangle_fill","on","privacy","privacy & security","private","rectangle","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rectangle.on.rectangle.fill.svg","symbol":"lock.rectangle.on.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rectangle.on.rectangle.fill.svg","symbol":"lock.rectangle.on.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7861 30.5566" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.5566" opacity="0" width="35.7861" x="0" y="0"/>
@@ -35685,7 +35685,7 @@
       categories: ["security"],
       tags: ["lock","lock rectangle stack","lock_rectangle_stack","privacy","privacy & security","private","rectangle","secure","security","stack"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rectangle.stack.svg","symbol":"lock.rectangle.stack"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rectangle.stack.svg","symbol":"lock.rectangle.stack"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4697 33.3203" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3203" opacity="0" width="31.4697" x="0" y="0"/>
@@ -35705,7 +35705,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock rectangle stack fill","lock_rectangle_stack_fill","privacy","privacy & security","private","rectangle","secure","security","stack"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rectangle.stack.fill.svg","symbol":"lock.rectangle.stack.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rectangle.stack.fill.svg","symbol":"lock.rectangle.stack.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4697 33.3203" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3203" opacity="0" width="31.4697" x="0" y="0"/>
@@ -35724,7 +35724,7 @@
       categories: ["security"],
       tags: ["lock","lock rotation","lock_rotation","privacy","privacy & security","private","rotation","secure","security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.rotation.svg","symbol":"lock.rotation"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.rotation.svg","symbol":"lock.rotation"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.5762 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="30.5762" x="0" y="0"/>
@@ -35742,7 +35742,7 @@
       categories: ["security"],
       tags: ["lock","lock shield","lock_shield","privacy","privacy & security","private","secure","security","shield"],
       repositories: ["mctree-mchome","svg-converter"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__LOCK_SHIELD"},{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.shield.svg","symbol":"lock.shield"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__LOCK_SHIELD"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.shield.svg","symbol":"lock.shield"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false"><g><rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/><path d="M10.7861 26.3184C11.04 26.3184 11.3965 26.2158 11.7139 26.0449C19.0283 22.1582 21.5771 20.2539 21.5771 15.7227L21.5771 6.34277C21.5771 4.63867 20.9961 3.96973 19.5117 3.33984C18.1445 2.77344 13.7109 1.25 12.4023 0.820312C11.8994 0.65918 11.2891 0.556641 10.7861 0.556641C10.2881 0.556641 9.68262 0.678711 9.17969 0.820312C7.87109 1.20605 3.42773 2.7832 2.06543 3.33984C0.581055 3.95996 0 4.63867 0 6.34277L0 15.7227C0 20.2539 2.56348 22.1387 9.8584 26.0449C10.1807 26.2158 10.542 26.3184 10.7861 26.3184ZM10.7861 23.3643C10.6299 23.3643 10.4688 23.3057 10.1367 23.0957C4.44336 19.5801 2.69531 18.7354 2.69531 15.2832L2.69531 6.73828C2.69531 6.22559 2.80762 6.01562 3.19336 5.85938C4.94141 5.15625 8.54492 3.94043 9.92188 3.41797C10.3125 3.28613 10.5566 3.22754 10.7861 3.22754C11.0205 3.22754 11.2646 3.28613 11.6553 3.41797C13.0322 3.94043 16.6162 5.20508 18.3887 5.85938C18.7695 6.00586 18.8818 6.22559 18.8818 6.73828L18.8818 15.2832C18.8818 18.7842 16.9873 19.7559 11.4404 23.0957C11.1084 23.3008 10.9473 23.3643 10.7861 23.3643Z"/><path d="M6.31348 17.5146C6.31348 18.4961 6.75781 18.9502 7.6709 18.9502L13.9307 18.9502C14.834 18.9502 15.2734 18.4961 15.2734 17.5146L15.2734 12.6953C15.2734 11.8506 14.9316 11.4014 14.248 11.3135L14.248 9.93652C14.248 7.6416 12.8516 6.09863 10.7959 6.09863C8.74023 6.09863 7.34863 7.6416 7.34863 9.93652L7.34863 11.3086C6.66016 11.4014 6.31348 11.8506 6.31348 12.6953ZM8.95996 11.2744L8.95996 9.83398C8.95996 8.52539 9.6875 7.6709 10.7959 7.6709C11.9141 7.6709 12.6367 8.52051 12.6367 9.83398L12.6367 11.2744Z"/></g></svg>`
     },
     {
@@ -35754,7 +35754,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock shield fill","lock_shield_fill","privacy","privacy & security","private","secure","security","shield"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.shield.fill.svg","symbol":"lock.shield.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.shield.fill.svg","symbol":"lock.shield.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.5918 25.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.752" opacity="0" width="21.5918" x="0" y="0"/>
@@ -35771,7 +35771,7 @@
       categories: ["security","slashed"],
       tags: ["lock","lock slash","lock_slash","privacy","privacy & security","private","secure","security","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.slash.svg","symbol":"lock.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.slash.svg","symbol":"lock.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.5486 30.3284" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.3284" opacity="0" width="28.5486" x="0" y="0"/>
@@ -35789,7 +35789,7 @@
       categories: ["security","slashed"],
       tags: ["fill","lock","lock slash fill","lock_slash_fill","privacy","privacy & security","private","secure","security","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.slash.fill.svg","symbol":"lock.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.slash.fill.svg","symbol":"lock.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.5486 30.3284" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.3284" opacity="0" width="28.5486" x="0" y="0"/>
@@ -35807,7 +35807,7 @@
       categories: ["security","squared"],
       tags: ["lock","lock square","lock_square","privacy","privacy & security","private","secure","security","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.square.svg","symbol":"lock.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.square.svg","symbol":"lock.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -35825,7 +35825,7 @@
       categories: ["security","squared"],
       tags: ["dashed","lock","lock square dashed","lock_square_dashed","privacy","privacy & security","private","secure","security","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.square.dashed.svg","symbol":"lock.square.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.square.dashed.svg","symbol":"lock.square.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -35843,7 +35843,7 @@
       categories: ["security","squared"],
       tags: ["fill","lock","lock square fill","lock_square_fill","privacy","privacy & security","private","secure","security","square","squared"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.square.fill.svg","symbol":"lock.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/lock.square.fill.svg","symbol":"lock.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCK_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.square.fill.svg","symbol":"lock.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/lock.square.fill.svg","symbol":"lock.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__LOCK_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -35860,7 +35860,7 @@
       categories: ["security"],
       tags: ["lock","lock square stack","lock_square_stack","privacy","privacy & security","private","secure","security","square","squared","stack"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.square.stack.svg","symbol":"lock.square.stack"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.square.stack.svg","symbol":"lock.square.stack"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3145 34.541" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.541" opacity="0" width="27.3145" x="0" y="0"/>
@@ -35880,7 +35880,7 @@
       categories: ["security"],
       tags: ["fill","lock","lock square stack fill","lock_square_stack_fill","privacy","privacy & security","private","secure","security","square","squared","stack"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.square.stack.fill.svg","symbol":"lock.square.stack.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.square.stack.fill.svg","symbol":"lock.square.stack.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3145 34.541" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.541" opacity="0" width="27.3145" x="0" y="0"/>
@@ -35899,7 +35899,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","exclamation mark","exclamationmark","lock","lock trianglebadge exclamationmark","lock_trianglebadge_exclamationmark","privacy","privacy & security","private","secure","security","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.trianglebadge.exclamationmark.svg","symbol":"lock.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/lock.trianglebadge.exclamationmark.svg","symbol":"lock.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.trianglebadge.exclamationmark.svg","symbol":"lock.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.trianglebadge.exclamationmark.svg","symbol":"lock.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.4717 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="33.4717" x="0" y="0"/>
@@ -35917,7 +35917,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","exclamation mark","exclamationmark","fill","lock","lock trianglebadge exclamationmark fill","lock_trianglebadge_exclamationmark_fill","privacy","privacy & security","private","secure","security","shapes","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/lock.trianglebadge.exclamationmark.fill.svg","symbol":"lock.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/lock.trianglebadge.exclamationmark.fill.svg","symbol":"lock.trianglebadge.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/lock.trianglebadge.exclamationmark.fill.svg","symbol":"lock.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Privacy & Security/lock.trianglebadge.exclamationmark.fill.svg","symbol":"lock.trianglebadge.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.3525 32.9004" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.9004" opacity="0" width="36.3525" x="0" y="0"/>
@@ -35947,7 +35947,7 @@
       categories: ["editing"],
       tags: ["editing","loupe"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/loupe.svg","symbol":"loupe"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/loupe.svg","symbol":"loupe"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.178 25.625" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.625" opacity="0" width="23.178" x="0" y="0"/>
@@ -36301,7 +36301,7 @@
       categories: ["maps-travel","maps"],
       tags: ["geography","location","map","maps","maps & travel","place","travel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/map.svg","symbol":"map"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/map.svg","symbol":"map"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9141 25.6738" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.6738" opacity="0" width="26.9141" x="0" y="0"/>
@@ -36318,7 +36318,7 @@
       categories: ["maps-travel","maps","circled"],
       tags: ["circle","circled","geography","location","map","map circle","map_circle","maps","maps & travel","place","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/map.circle.svg","symbol":"map.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/map.circle.svg","symbol":"map.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAP_CIRCLE"},{"repo":"visit-tracker","file":"build/icon-sources/source-material/map.circle.svg","symbol":"map.circle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/map.circle.svg","symbol":"map.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/map.circle.svg","symbol":"map.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAP_CIRCLE"},{"repo":"visit-tracker","file":"build/icon-sources/source-material/map.circle.svg","symbol":"map.circle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36336,7 +36336,7 @@
       categories: ["maps-travel","maps","circled"],
       tags: ["circle","circled","fill","geography","location","map","map circle fill","map_circle_fill","maps","maps & travel","place","travel"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/map.circle.fill.svg","symbol":"map.circle.fill"},{"repo":"visit-tracker","file":"build/icon-sources/source-material/map.circle.fill.svg","symbol":"map.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/map.circle.fill.svg","symbol":"map.circle.fill"},{"repo":"visit-tracker","file":"build/icon-sources/source-material/map.circle.fill.svg","symbol":"map.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36353,7 +36353,7 @@
       categories: ["maps-travel","maps"],
       tags: ["fill","geography","location","map","map fill","map_fill","maps","maps & travel","place","travel"],
       repositories: ["app-template","mctree-mchome","svg-converter","visit-tracker"],
-      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__MAP_FILL"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__MAP_FILL"},{"repo":"svg-converter","file":"app-input/!Maps/map.fill.svg","symbol":"map.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAP_FILL"},{"repo":"visit-tracker","file":"build/icon-sources/source-material/map.fill.svg","symbol":"map.fill"}],
+      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__MAP_FILL"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__MAP_FILL"},{"repo":"svg-converter","file":"app-input/Maps/map.fill.svg","symbol":"map.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAP_FILL"},{"repo":"visit-tracker","file":"build/icon-sources/source-material/map.fill.svg","symbol":"map.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.0352 24.4434" aria-hidden="true" focusable="false"><g><rect height="24.4434" opacity="0" width="26.0352" x="0" y="0"/><path d="M0 22.6562C0 23.4961 0.488281 23.9746 1.30859 23.9746C1.60156 23.9746 1.9043 23.8867 2.26562 23.6816L7.74414 20.7031L7.74414 0.15625C7.50977 0.253906 7.25586 0.380859 7.01172 0.517578L1.01562 4.01367C0.332031 4.39453 0 4.92188 0 5.70312ZM9.29688 20.5371L15.6152 24.1602C15.8105 24.2676 16.0059 24.3555 16.1914 24.4043L16.1914 4.07227L10.0293 0.302734C9.80469 0.166016 9.55078 0.0585938 9.29688 0ZM17.7539 24.3652C17.8906 24.3164 18.0371 24.2578 18.1738 24.1699L24.668 20.4492C25.3418 20.0586 25.6738 19.541 25.6738 18.75L25.6738 1.78711C25.6738 0.9375 25.1758 0.46875 24.375 0.46875C24.082 0.46875 23.7793 0.556641 23.418 0.761719L17.7539 3.88672Z"/></g></svg>`
     },
     {
@@ -36377,7 +36377,7 @@
       categories: ["maps"],
       tags: ["mappin","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.svg","symbol":"mappin"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.svg","symbol":"mappin"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.6934 28.8086" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.8086" opacity="0" width="10.6934" x="0" y="0"/>
@@ -36394,7 +36394,7 @@
       categories: ["maps"],
       tags: ["and","ellipse","mappin","mappin and ellipse","mappin_and_ellipse","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.and.ellipse.svg","symbol":"mappin.and.ellipse"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.and.ellipse.svg","symbol":"mappin.and.ellipse"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5146 33.3691" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.3691" opacity="0" width="27.5146" x="0" y="0"/>
@@ -36412,7 +36412,7 @@
       categories: ["maps","circled"],
       tags: ["and","circle","circled","ellipse","mappin","mappin and ellipse circle","mappin_and_ellipse_circle","maps"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.and.ellipse.circle.svg","symbol":"mappin.and.ellipse.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/mappin.and.ellipse.circle.svg","symbol":"mappin.and.ellipse.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_AND_ELLIPSE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.and.ellipse.circle.svg","symbol":"mappin.and.ellipse.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/mappin.and.ellipse.circle.svg","symbol":"mappin.and.ellipse.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_AND_ELLIPSE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36430,7 +36430,7 @@
       categories: ["maps","circled"],
       tags: ["and","circle","circled","ellipse","fill","mappin","mappin and ellipse circle fill","mappin_and_ellipse_circle_fill","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.and.ellipse.circle.fill.svg","symbol":"mappin.and.ellipse.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.and.ellipse.circle.fill.svg","symbol":"mappin.and.ellipse.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36447,7 +36447,7 @@
       categories: ["maps","circled"],
       tags: ["circle","circled","mappin","mappin circle","mappin_circle","maps"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.circle.svg","symbol":"mappin.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/mappin.circle.svg","symbol":"mappin.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.circle.svg","symbol":"mappin.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/mappin.circle.svg","symbol":"mappin.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36465,7 +36465,7 @@
       categories: ["maps","circled"],
       tags: ["circle","circled","fill","mappin","mappin circle fill","mappin_circle_fill","maps"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.circle.fill.svg","symbol":"mappin.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.circle.fill.svg","symbol":"mappin.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36482,7 +36482,7 @@
       categories: ["maps","slashed"],
       tags: ["mappin","mappin slash","mappin_slash","maps","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.slash.svg","symbol":"mappin.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.slash.svg","symbol":"mappin.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3872 28.8086" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.8086" opacity="0" width="24.3872" x="0" y="0"/>
@@ -36500,7 +36500,7 @@
       categories: ["maps","circled","slashed"],
       tags: ["circle","circled","mappin","mappin slash circle","mappin_slash_circle","maps","slash","slashed"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.slash.circle.svg","symbol":"mappin.slash.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/mappin.slash.circle.svg","symbol":"mappin.slash.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_SLASH_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.slash.circle.svg","symbol":"mappin.slash.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/mappin.slash.circle.svg","symbol":"mappin.slash.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_SLASH_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36519,7 +36519,7 @@
       categories: ["maps","circled","slashed"],
       tags: ["circle","circled","fill","mappin","mappin slash circle fill","mappin_slash_circle_fill","maps","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.slash.circle.fill.svg","symbol":"mappin.slash.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.slash.circle.fill.svg","symbol":"mappin.slash.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -36536,7 +36536,7 @@
       categories: ["maps","squared"],
       tags: ["mappin","mappin square","mappin_square","maps","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.square.svg","symbol":"mappin.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.square.svg","symbol":"mappin.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -36554,7 +36554,7 @@
       categories: ["maps","squared"],
       tags: ["fill","mappin","mappin square fill","mappin_square_fill","maps","square","squared"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mappin.square.fill.svg","symbol":"mappin.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/mappin.square.fill.svg","symbol":"mappin.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mappin.square.fill.svg","symbol":"mappin.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/mappin.square.fill.svg","symbol":"mappin.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MAPPIN_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -36571,7 +36571,7 @@
       categories: ["maps"],
       tags: ["maps","mecca"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/mecca.svg","symbol":"mecca"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/mecca.svg","symbol":"mecca"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.2305 29.6826" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.6826" opacity="0" width="26.2305" x="0" y="0"/>
@@ -37225,7 +37225,7 @@
       categories: ["actions","math"],
       tags: ["actions","math","minus","remove","subtract"],
       repositories: ["pickle-score","svg-converter"],
-      sources: [{"repo":"pickle-score","file":"build/icon-sources/source-material/minus.svg","symbol":"minus"},{"repo":"svg-converter","file":"app-input/!Math/minus.svg","symbol":"minus"}],
+      sources: [{"repo":"pickle-score","file":"build/icon-sources/source-material/minus.svg","symbol":"minus"},{"repo":"svg-converter","file":"app-input/Math/minus.svg","symbol":"minus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.6797 3.39844" aria-hidden="true" focusable="false">
  <g>
   <rect height="3.39844" opacity="0" width="21.6797" x="0" y="0"/>
@@ -37242,7 +37242,7 @@
       categories: ["actions","arrows","math"],
       tags: ["actions","arrow","arrows","back","clockwise","direction","forward","math","minus","minus arrow trianglehead clockwise","minus_arrow_trianglehead_clockwise","navigate","remove","subtract","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.arrow.trianglehead.clockwise.svg","symbol":"minus.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.arrow.trianglehead.clockwise.svg","symbol":"minus.arrow.trianglehead.clockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -37260,7 +37260,7 @@
       categories: ["actions","arrows","math"],
       tags: ["actions","arrow","arrows","back","counterclockwise","direction","forward","math","minus","minus arrow trianglehead counterclockwise","minus_arrow_trianglehead_counterclockwise","navigate","remove","subtract","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.arrow.trianglehead.counterclockwise.svg","symbol":"minus.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.arrow.trianglehead.counterclockwise.svg","symbol":"minus.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -37278,7 +37278,7 @@
       categories: ["actions","math","circled"],
       tags: ["actions","circle","circled","math","minus","minus circle","minus_circle","remove","subtract"],
       repositories: ["mctree-mchome","svg-converter","visit-tracker"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__MINUS_CIRCLE"},{"repo":"svg-converter","file":"app-input/!Math/minus.circle.svg","symbol":"minus.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/minus.circle.svg","symbol":"minus.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MINUS_CIRCLE"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__MINUS_CIRCLE"},{"repo":"svg-converter","file":"app-input/Math/minus.circle.svg","symbol":"minus.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/minus.circle.svg","symbol":"minus.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MINUS_CIRCLE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" aria-hidden="true" focusable="false"><circle cx="13" cy="13" r="11.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 13h11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`
     },
     {
@@ -37290,7 +37290,7 @@
       categories: ["actions","math","circled"],
       tags: ["actions","circle","circled","fill","math","minus","minus circle fill","minus_circle_fill","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.circle.fill.svg","symbol":"minus.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.circle.fill.svg","symbol":"minus.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -37307,7 +37307,7 @@
       categories: ["actions","math"],
       tags: ["actions","diamond","math","minus","minus diamond","minus_diamond","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.diamond.svg","symbol":"minus.diamond"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.diamond.svg","symbol":"minus.diamond"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -37325,7 +37325,7 @@
       categories: ["actions","math"],
       tags: ["actions","diamond","fill","math","minus","minus diamond fill","minus_diamond_fill","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.diamond.fill.svg","symbol":"minus.diamond.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.diamond.fill.svg","symbol":"minus.diamond.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -37342,7 +37342,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","forwardslash","math","minus","minus forwardslash plus","minus_forwardslash_plus","new","plus","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.forwardslash.plus.svg","symbol":"minus.forwardslash.plus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.forwardslash.plus.svg","symbol":"minus.forwardslash.plus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.6387 23.8574" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8574" opacity="0" width="24.6387" x="0" y="0"/>
@@ -37359,7 +37359,7 @@
       categories: ["actions","accessibility","interface"],
       tags: ["accessibility","actions","discover","find","interface","lookup","magnifyingglass","minus","minus magnifyingglass","minus_magnifyingglass","remove","search","subtract"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/minus.magnifyingglass.svg","symbol":"minus.magnifyingglass"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__MINUS_MAGNIFYINGGLASS"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/minus.magnifyingglass.svg","symbol":"minus.magnifyingglass"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__MINUS_MAGNIFYINGGLASS"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4688 25.332" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.332" opacity="0" width="25.4688" x="0" y="0"/>
@@ -37377,7 +37377,7 @@
       categories: ["actions","math"],
       tags: ["actions","math","minus","minus rectangle","minus_rectangle","rectangle","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.rectangle.svg","symbol":"minus.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.rectangle.svg","symbol":"minus.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -37395,7 +37395,7 @@
       categories: ["actions","math"],
       tags: ["actions","fill","math","minus","minus rectangle fill","minus_rectangle_fill","rectangle","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.rectangle.fill.svg","symbol":"minus.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.rectangle.fill.svg","symbol":"minus.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -37412,7 +37412,7 @@
       categories: ["actions","math"],
       tags: ["actions","math","minus","minus rectangle portrait","minus_rectangle_portrait","portrait","rectangle","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.rectangle.portrait.svg","symbol":"minus.rectangle.portrait"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.rectangle.portrait.svg","symbol":"minus.rectangle.portrait"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -37430,7 +37430,7 @@
       categories: ["actions","math"],
       tags: ["actions","fill","math","minus","minus rectangle portrait fill","minus_rectangle_portrait_fill","portrait","rectangle","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.rectangle.portrait.fill.svg","symbol":"minus.rectangle.portrait.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.rectangle.portrait.fill.svg","symbol":"minus.rectangle.portrait.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -37447,7 +37447,7 @@
       categories: ["actions","math","squared"],
       tags: ["actions","math","minus","minus square","minus_square","remove","square","squared","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.square.svg","symbol":"minus.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.square.svg","symbol":"minus.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -37465,7 +37465,7 @@
       categories: ["actions","math","squared"],
       tags: ["actions","fill","math","minus","minus square fill","minus_square_fill","remove","square","squared","subtract"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/minus.square.fill.svg","symbol":"minus.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MINUS_SQUARE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/minus.square.fill.svg","symbol":"minus.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MINUS_SQUARE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -37913,7 +37913,7 @@
       categories: ["transportation"],
       tags: ["moped","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/moped.svg","symbol":"moped"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/moped.svg","symbol":"moped"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.8315 26.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9141" opacity="0" width="38.8315" x="0" y="0"/>
@@ -37930,7 +37930,7 @@
       categories: ["transportation"],
       tags: ["fill","moped","moped fill","moped_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/moped.fill.svg","symbol":"moped.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/moped.fill.svg","symbol":"moped.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.8315 26.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9141" opacity="0" width="38.8315" x="0" y="0"/>
@@ -37947,7 +37947,7 @@
       categories: ["transportation"],
       tags: ["motorcycle","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/motorcycle.svg","symbol":"motorcycle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/motorcycle.svg","symbol":"motorcycle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.4336 26.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9141" opacity="0" width="44.4336" x="0" y="0"/>
@@ -37964,7 +37964,7 @@
       categories: ["transportation"],
       tags: ["fill","motorcycle","motorcycle fill","motorcycle_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/motorcycle.fill.svg","symbol":"motorcycle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/motorcycle.fill.svg","symbol":"motorcycle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.4336 26.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9141" opacity="0" width="44.4336" x="0" y="0"/>
@@ -37981,7 +37981,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","mount"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/mount.svg","symbol":"mount"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/mount.svg","symbol":"mount"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5127 30.8521" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.8521" opacity="0" width="25.5127" x="0" y="0"/>
@@ -37998,7 +37998,7 @@
       categories: ["keyboard"],
       tags: ["fill","keyboard","mount","mount fill","mount_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/mount.fill.svg","symbol":"mount.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/mount.fill.svg","symbol":"mount.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.1025 30.8887" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.8887" opacity="0" width="25.1025" x="0" y="0"/>
@@ -38086,7 +38086,7 @@
       categories: ["editing"],
       tags: ["3d","editing","move","move 3d","move_3d"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/move.3d.svg","symbol":"move.3d"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/move.3d.svg","symbol":"move.3d"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.1383 25.4663" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.4663" opacity="0" width="28.1383" x="0" y="0"/>
@@ -38145,7 +38145,7 @@
       categories: ["math"],
       tags: ["math","multiply"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/multiply.svg","symbol":"multiply"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/multiply.svg","symbol":"multiply"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.7319 17.3987" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.3987" opacity="0" width="17.7319" x="0" y="0"/>
@@ -38162,7 +38162,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","math","multiply","multiply circle fill","multiply_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/multiply.circle.fill.svg","symbol":"multiply.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/multiply.circle.fill.svg","symbol":"multiply.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -38179,7 +38179,7 @@
       categories: ["math","squared"],
       tags: ["fill","math","multiply","multiply square fill","multiply_square_fill","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/multiply.square.fill.svg","symbol":"multiply.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/multiply.square.fill.svg","symbol":"multiply.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -38214,7 +38214,7 @@
       categories: ["documents","media"],
       tags: ["documents","home","house","media","music","music note house","music_note_house","note","start"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/music.note.house.svg","symbol":"music.note.house"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/music.note.house.svg","symbol":"music.note.house"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7188 27.5" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5" opacity="0" width="31.7188" x="0" y="0"/>
@@ -38232,7 +38232,7 @@
       categories: ["documents","media"],
       tags: ["documents","fill","home","house","media","music","music note house fill","music_note_house_fill","note","start"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/music.note.house.fill.svg","symbol":"music.note.house.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/music.note.house.fill.svg","symbol":"music.note.house.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7188 27.5" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5" opacity="0" width="31.7188" x="0" y="0"/>
@@ -39018,7 +39018,7 @@
       categories: ["security"],
       tags: ["nosign","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/nosign.svg","symbol":"nosign"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/nosign.svg","symbol":"nosign"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -39035,7 +39035,7 @@
       categories: ["security"],
       tags: ["app","nosign","nosign app","nosign_app","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/nosign.app.svg","symbol":"nosign.app"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/nosign.app.svg","symbol":"nosign.app"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -39053,7 +39053,7 @@
       categories: ["security"],
       tags: ["app","fill","nosign","nosign app fill","nosign_app_fill","privacy & security"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/nosign.app.fill.svg","symbol":"nosign.app.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/nosign.app.fill.svg","symbol":"nosign.app.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -39070,7 +39070,7 @@
       categories: ["security","badged","badged-clock","status","time"],
       tags: ["badge","badged","clock","history","nosign","nosign badge clock","nosign_badge_clock","privacy & security","recent","status","time"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/nosign.badge.clock.svg","symbol":"nosign.badge.clock"},{"repo":"svg-converter","file":"app-input/Badge/nosign.badge.clock.svg","symbol":"nosign.badge.clock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/nosign.badge.clock.svg","symbol":"nosign.badge.clock"},{"repo":"svg-converter","file":"app-input/Privacy & Security/nosign.badge.clock.svg","symbol":"nosign.badge.clock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6377 29.9414" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.9414" opacity="0" width="38.6377" x="0" y="0"/>
@@ -39088,7 +39088,7 @@
       categories: ["math"],
       tags: ["math","notequal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/notequal.svg","symbol":"notequal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/notequal.svg","symbol":"notequal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.7842 20.6071" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.6071" opacity="0" width="18.7842" x="0" y="0"/>
@@ -39105,7 +39105,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","math","notequal","notequal circle","notequal_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/notequal.circle.svg","symbol":"notequal.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/notequal.circle.svg","symbol":"notequal.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__NOTEQUAL_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/notequal.circle.svg","symbol":"notequal.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/notequal.circle.svg","symbol":"notequal.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__NOTEQUAL_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -39123,7 +39123,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","math","notequal","notequal circle fill","notequal_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/notequal.circle.fill.svg","symbol":"notequal.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/notequal.circle.fill.svg","symbol":"notequal.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -39140,7 +39140,7 @@
       categories: ["math","squared"],
       tags: ["math","notequal","notequal square","notequal_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/notequal.square.svg","symbol":"notequal.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/notequal.square.svg","symbol":"notequal.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -39158,7 +39158,7 @@
       categories: ["math","squared"],
       tags: ["fill","math","notequal","notequal square fill","notequal_square_fill","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/notequal.square.fill.svg","symbol":"notequal.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/notequal.square.fill.svg","symbol":"notequal.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -39205,7 +39205,7 @@
       categories: ["math"],
       tags: ["math","number","number sign","number_sign","sign"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/number.sign.svg","symbol":"number.sign"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/number.sign.svg","symbol":"number.sign"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.1641 24.8145" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.8145" opacity="0" width="23.1641" x="0" y="0"/>
@@ -39222,7 +39222,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","math","number","number sign circle","number_sign_circle","sign"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/number.sign.circle.svg","symbol":"number.sign.circle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/number.sign.circle.svg","symbol":"number.sign.circle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -39240,7 +39240,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","math","number","number sign circle fill","number_sign_circle_fill","sign"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/number.sign.circle.fill.svg","symbol":"number.sign.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/number.sign.circle.fill.svg","symbol":"number.sign.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -39257,7 +39257,7 @@
       categories: ["math","squared"],
       tags: ["math","number","number sign square","number_sign_square","sign","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/number.sign.square.svg","symbol":"number.sign.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/number.sign.square.svg","symbol":"number.sign.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -39275,7 +39275,7 @@
       categories: ["math","squared"],
       tags: ["fill","math","number","number sign square fill","number_sign_square_fill","sign","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/number.sign.square.fill.svg","symbol":"number.sign.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/number.sign.square.fill.svg","symbol":"number.sign.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -39589,7 +39589,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","option"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/option.svg","symbol":"option"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/option.svg","symbol":"option"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6455 23.1543" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.1543" opacity="0" width="26.6455" x="0" y="0"/>
@@ -40187,7 +40187,7 @@
       categories: ["editing"],
       tags: ["editing","paintbrush"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/paintbrush.svg","symbol":"paintbrush"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/paintbrush.svg","symbol":"paintbrush"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9323 30.9964" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9964" opacity="0" width="27.9323" x="0" y="0"/>
@@ -40204,7 +40204,7 @@
       categories: ["editing"],
       tags: ["editing","fill","paintbrush","paintbrush fill","paintbrush_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/paintbrush.fill.svg","symbol":"paintbrush.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/paintbrush.fill.svg","symbol":"paintbrush.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5028 30.4757" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4757" opacity="0" width="27.5028" x="0" y="0"/>
@@ -40221,7 +40221,7 @@
       categories: ["editing"],
       tags: ["editing","paintbrush","paintbrush pointed","paintbrush_pointed","pointed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/paintbrush.pointed.svg","symbol":"paintbrush.pointed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/paintbrush.pointed.svg","symbol":"paintbrush.pointed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6408 27.3394" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.3394" opacity="0" width="29.6408" x="0" y="0"/>
@@ -40238,7 +40238,7 @@
       categories: ["editing"],
       tags: ["editing","fill","paintbrush","paintbrush pointed fill","paintbrush_pointed_fill","pointed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/paintbrush.pointed.fill.svg","symbol":"paintbrush.pointed.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/paintbrush.pointed.fill.svg","symbol":"paintbrush.pointed.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3665 26.9878" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.9878" opacity="0" width="29.3665" x="0" y="0"/>
@@ -40255,7 +40255,7 @@
       categories: ["editing","slashed"],
       tags: ["editing","paintbrush","paintbrush slash","paintbrush_slash","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/paintbrush.slash.svg","symbol":"paintbrush.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/paintbrush.slash.svg","symbol":"paintbrush.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9942 30.9964" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9964" opacity="0" width="28.9942" x="0" y="0"/>
@@ -40273,7 +40273,7 @@
       categories: ["editing","slashed"],
       tags: ["editing","fill","paintbrush","paintbrush slash fill","paintbrush_slash_fill","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/paintbrush.slash.fill.svg","symbol":"paintbrush.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/paintbrush.slash.fill.svg","symbol":"paintbrush.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.6719 30.4757" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.4757" opacity="0" width="28.6719" x="0" y="0"/>
@@ -40410,7 +40410,7 @@
       categories: ["media"],
       tags: ["media","pause"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/pause.svg","symbol":"pause"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/pause.svg","symbol":"pause"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.6465 22.2363" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.2363" opacity="0" width="12.6465" x="0" y="0"/>
@@ -40427,7 +40427,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","media","pause","pause circle","pause_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/pause.circle.svg","symbol":"pause.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pause.circle.svg","symbol":"pause.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PAUSE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/pause.circle.svg","symbol":"pause.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pause.circle.svg","symbol":"pause.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PAUSE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -40445,7 +40445,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","media","pause","pause circle fill","pause_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/pause.circle.fill.svg","symbol":"pause.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/pause.circle.fill.svg","symbol":"pause.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -40462,7 +40462,7 @@
       categories: ["media"],
       tags: ["fill","media","pause","pause fill","pause_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/pause.fill.svg","symbol":"pause.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/pause.fill.svg","symbol":"pause.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1045 22.2363" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.2363" opacity="0" width="17.1045" x="0" y="0"/>
@@ -40479,7 +40479,7 @@
       categories: ["media"],
       tags: ["media","pause","pause rectangle","pause_rectangle","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/pause.rectangle.svg","symbol":"pause.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/pause.rectangle.svg","symbol":"pause.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -40497,7 +40497,7 @@
       categories: ["media"],
       tags: ["fill","media","pause","pause rectangle fill","pause_rectangle_fill","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/pause.rectangle.fill.svg","symbol":"pause.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/pause.rectangle.fill.svg","symbol":"pause.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -40621,7 +40621,7 @@
       categories: ["editing"],
       tags: ["compose","edit","editing","pencil","write"],
       repositories: ["cocktail-list","pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__PENCIL"},{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__PENCIL"},{"repo":"svg-converter","file":"app-input/!Editing/pencil.svg","symbol":"pencil"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PENCIL"}],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__PENCIL"},{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__PENCIL"},{"repo":"svg-converter","file":"app-input/Editing/pencil.svg","symbol":"pencil"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PENCIL"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.5703 24.2188" aria-hidden="true" focusable="false"><g><rect height="24.2188" opacity="0" width="24.5703" x="0" y="0"/><path d="M2.80762 24.1992L6.61621 22.8027L21.2842 8.13477L16.0791 2.92969L1.41113 17.5977L0.0634766 21.4697C-0.273438 22.4463 0.74707 24.541 2.80762 24.1992ZM17.4512 1.55762L22.6562 6.7627L23.5547 5.86426C24.9121 4.50684 24.9951 3.19336 23.7402 1.93848L22.2705 0.46875C21.0498-0.756836 19.6973-0.654297 18.3496 0.693359Z"/></g></svg>`
     },
     {
@@ -40652,7 +40652,7 @@
       categories: ["editing"],
       tags: ["and","compose","edit","editing","outline","pencil","pencil and outline","pencil_and_outline","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.and.outline.svg","symbol":"pencil.and.outline"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.and.outline.svg","symbol":"pencil.and.outline"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.5161 32.0618" aria-hidden="true" focusable="false">
  <g>
   <rect height="32.0618" opacity="0" width="29.5161" x="0" y="0"/>
@@ -40670,7 +40670,7 @@
       categories: ["editing"],
       tags: ["and","compose","edit","editing","pencil","pencil and scribble","pencil_and_scribble","scribble","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.and.scribble.svg","symbol":"pencil.and.scribble"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.and.scribble.svg","symbol":"pencil.and.scribble"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0549 25.5" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.5" opacity="0" width="37.0549" x="0" y="0"/>
@@ -40688,7 +40688,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","compose","edit","editing","pencil","pencil circle","pencil_circle","write"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.circle.svg","symbol":"pencil.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pencil.circle.svg","symbol":"pencil.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PENCIL_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.circle.svg","symbol":"pencil.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pencil.circle.svg","symbol":"pencil.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PENCIL_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -40706,7 +40706,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","compose","edit","editing","fill","pencil","pencil circle fill","pencil_circle_fill","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.circle.fill.svg","symbol":"pencil.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.circle.fill.svg","symbol":"pencil.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -40723,7 +40723,7 @@
       categories: ["editing"],
       tags: ["compose","edit","editing","line","pencil","pencil line","pencil_line","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.line.svg","symbol":"pencil.line"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.line.svg","symbol":"pencil.line"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3837 25.8126" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.8126" opacity="0" width="30.3837" x="0" y="0"/>
@@ -40741,7 +40741,7 @@
       categories: ["editing","slashed"],
       tags: ["compose","edit","editing","pencil","pencil slash","pencil_slash","slash","slashed","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.slash.svg","symbol":"pencil.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.slash.svg","symbol":"pencil.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.4449 23.2547" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.2547" opacity="0" width="23.4449" x="0" y="0"/>
@@ -40759,7 +40759,7 @@
       categories: ["editing"],
       tags: ["compose","edit","editing","pencil","pencil tip","pencil_tip","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.svg","symbol":"pencil.tip"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.svg","symbol":"pencil.tip"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.4212 24.0332" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0332" opacity="0" width="17.4212" x="0" y="0"/>
@@ -40776,7 +40776,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","compose","crop","edit","editing","pencil","pencil tip crop circle","pencil_tip_crop_circle","tip","write"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.svg","symbol":"pencil.tip.crop.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pencil.tip.crop.circle.svg","symbol":"pencil.tip.crop.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PENCIL_TIP_CROP_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.svg","symbol":"pencil.tip.crop.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pencil.tip.crop.circle.svg","symbol":"pencil.tip.crop.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PENCIL_TIP_CROP_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -40794,7 +40794,7 @@
       categories: ["arrows","editing","badged","badged-arrow","circled","status"],
       tags: ["arrow","arrows","back","badge","badged","circle","circled","compose","crop","direction","edit","editing","forward","navigate","pencil","pencil tip crop circle badge arrow forward","pencil_tip_crop_circle_badge_arrow_forward","status","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.badge.arrow.forward.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward"},{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.arrow.forward.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.arrow.forward.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward"},{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.badge.arrow.forward.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6279 29.8828" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8828" opacity="0" width="38.6279" x="0" y="0"/>
@@ -40813,7 +40813,7 @@
       categories: ["arrows","editing","badged","badged-arrow","circled","status"],
       tags: ["arrow","arrows","back","badge","badged","circle","circled","compose","crop","direction","edit","editing","fill","forward","navigate","pencil","pencil tip crop circle badge arrow forward fill","pencil_tip_crop_circle_badge_arrow_forward_fill","status","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.badge.arrow.forward.fill.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward.fill"},{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.arrow.forward.fill.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.arrow.forward.fill.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward.fill"},{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.badge.arrow.forward.fill.svg","symbol":"pencil.tip.crop.circle.badge.arrow.forward.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5693 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="38.5693" x="0" y="0"/>
@@ -40831,7 +40831,7 @@
       categories: ["actions","editing","badged","badged-minus","circled","status"],
       tags: ["actions","badge","badged","circle","circled","compose","crop","edit","editing","minus","pencil","pencil tip crop circle badge minus","pencil_tip_crop_circle_badge_minus","remove","status","subtract","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.badge.minus.svg","symbol":"pencil.tip.crop.circle.badge.minus"},{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.minus.svg","symbol":"pencil.tip.crop.circle.badge.minus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.minus.svg","symbol":"pencil.tip.crop.circle.badge.minus"},{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.badge.minus.svg","symbol":"pencil.tip.crop.circle.badge.minus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.2725 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="39.2725" x="0" y="0"/>
@@ -40850,7 +40850,7 @@
       categories: ["actions","editing","badged","badged-minus","circled","status"],
       tags: ["actions","badge","badged","circle","circled","compose","crop","edit","editing","fill","minus","pencil","pencil tip crop circle badge minus fill","pencil_tip_crop_circle_badge_minus_fill","remove","status","subtract","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.badge.minus.fill.svg","symbol":"pencil.tip.crop.circle.badge.minus.fill"},{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.minus.fill.svg","symbol":"pencil.tip.crop.circle.badge.minus.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.minus.fill.svg","symbol":"pencil.tip.crop.circle.badge.minus.fill"},{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.badge.minus.fill.svg","symbol":"pencil.tip.crop.circle.badge.minus.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.2432 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="39.2432" x="0" y="0"/>
@@ -40868,7 +40868,7 @@
       categories: ["actions","editing","badged","badged-plus","circled","status"],
       tags: ["actions","add","badge","badged","circle","circled","compose","create","crop","edit","editing","new","pencil","pencil tip crop circle badge plus","pencil_tip_crop_circle_badge_plus","plus","status","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.badge.plus.svg","symbol":"pencil.tip.crop.circle.badge.plus"},{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.plus.svg","symbol":"pencil.tip.crop.circle.badge.plus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.plus.svg","symbol":"pencil.tip.crop.circle.badge.plus"},{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.badge.plus.svg","symbol":"pencil.tip.crop.circle.badge.plus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.292 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="39.292" x="0" y="0"/>
@@ -40887,7 +40887,7 @@
       categories: ["actions","editing","badged","badged-plus","circled","status"],
       tags: ["actions","add","badge","badged","circle","circled","compose","create","crop","edit","editing","fill","new","pencil","pencil tip crop circle badge plus fill","pencil_tip_crop_circle_badge_plus_fill","plus","status","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.badge.plus.fill.svg","symbol":"pencil.tip.crop.circle.badge.plus.fill"},{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.plus.fill.svg","symbol":"pencil.tip.crop.circle.badge.plus.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/pencil.tip.crop.circle.badge.plus.fill.svg","symbol":"pencil.tip.crop.circle.badge.plus.fill"},{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.badge.plus.fill.svg","symbol":"pencil.tip.crop.circle.badge.plus.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.2627 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="39.2627" x="0" y="0"/>
@@ -40905,7 +40905,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","compose","crop","edit","editing","fill","pencil","pencil tip crop circle fill","pencil_tip_crop_circle_fill","tip","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/pencil.tip.crop.circle.fill.svg","symbol":"pencil.tip.crop.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/pencil.tip.crop.circle.fill.svg","symbol":"pencil.tip.crop.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -40956,7 +40956,7 @@
       categories: ["math"],
       tags: ["math","percent"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/percent.svg","symbol":"percent"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/percent.svg","symbol":"percent"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.0938 24.11" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.11" opacity="0" width="26.0938" x="0" y="0"/>
@@ -42293,7 +42293,7 @@
       categories: ["editing"],
       tags: ["editing","perspective"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/perspective.svg","symbol":"perspective"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/perspective.svg","symbol":"perspective"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2021 31.1328" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.1328" opacity="0" width="32.2021" x="0" y="0"/>
@@ -42583,7 +42583,7 @@
       categories: ["communication","media"],
       tags: ["communication","media","pause","phone","phone pause","phone_pause"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/phone.pause.svg","symbol":"phone.pause"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/phone.pause.svg","symbol":"phone.pause"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.7959 27.998" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.998" opacity="0" width="25.7959" x="0" y="0"/>
@@ -42601,7 +42601,7 @@
       categories: ["communication","media","circled"],
       tags: ["circle","circled","communication","media","pause","phone","phone pause circle","phone_pause_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/phone.pause.circle.svg","symbol":"phone.pause.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/phone.pause.circle.svg","symbol":"phone.pause.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PHONE_PAUSE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/phone.pause.circle.svg","symbol":"phone.pause.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/phone.pause.circle.svg","symbol":"phone.pause.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PHONE_PAUSE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -42619,7 +42619,7 @@
       categories: ["communication","media","circled"],
       tags: ["circle","circled","communication","fill","media","pause","phone","phone pause circle fill","phone_pause_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/phone.pause.circle.fill.svg","symbol":"phone.pause.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/phone.pause.circle.fill.svg","symbol":"phone.pause.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -42636,7 +42636,7 @@
       categories: ["communication","media"],
       tags: ["communication","fill","media","pause","phone","phone pause fill","phone_pause_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/phone.pause.fill.svg","symbol":"phone.pause.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/phone.pause.fill.svg","symbol":"phone.pause.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.6924 27.998" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.998" opacity="0" width="24.6924" x="0" y="0"/>
@@ -43009,7 +43009,7 @@
       categories: ["math"],
       tags: ["math","pi"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/pi.svg","symbol":"pi"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/pi.svg","symbol":"pi"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9922 18.7988" aria-hidden="true" focusable="false">
  <g>
   <rect height="18.7988" opacity="0" width="21.9922" x="0" y="0"/>
@@ -43026,7 +43026,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","math","pi","pi circle","pi_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/pi.circle.svg","symbol":"pi.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pi.circle.svg","symbol":"pi.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PI_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/pi.circle.svg","symbol":"pi.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/pi.circle.svg","symbol":"pi.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PI_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -43044,7 +43044,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","math","pi","pi circle fill","pi_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/pi.circle.fill.svg","symbol":"pi.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/pi.circle.fill.svg","symbol":"pi.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -43061,7 +43061,7 @@
       categories: ["math","squared"],
       tags: ["math","pi","pi square","pi_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/pi.square.svg","symbol":"pi.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/pi.square.svg","symbol":"pi.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -43079,7 +43079,7 @@
       categories: ["math","squared"],
       tags: ["fill","math","pi","pi square fill","pi_square_fill","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/pi.square.fill.svg","symbol":"pi.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/pi.square.fill.svg","symbol":"pi.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -43944,7 +43944,7 @@
       categories: ["media"],
       tags: ["audio","media","play","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.svg","symbol":"play"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.svg","symbol":"play"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5391 22.666" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.666" opacity="0" width="22.5391" x="0" y="0"/>
@@ -43961,7 +43961,7 @@
       categories: ["arrows","media","circled"],
       tags: ["arrow","arrows","arrowtriangle","arrowtriangle forward circle","arrowtriangle right circle","arrowtriangle_forward_circle","arrowtriangle_right_circle","audio","back","circle","circled","direction","forward","media","navigate","play","play circle","play_circle","right","start","video"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.circle.svg","symbol":"play.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrowtriangle.forward.circle.svg","symbol":"arrowtriangle.forward.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrowtriangle.right.circle.svg","symbol":"arrowtriangle.right.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/play.circle.svg","symbol":"play.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROWTRIANGLE_FORWARD_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROWTRIANGLE_RIGHT_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAY_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.circle.svg","symbol":"play.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrowtriangle.forward.circle.svg","symbol":"arrowtriangle.forward.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/arrowtriangle.right.circle.svg","symbol":"arrowtriangle.right.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/play.circle.svg","symbol":"play.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROWTRIANGLE_FORWARD_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__ARROWTRIANGLE_RIGHT_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAY_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -43979,7 +43979,7 @@
       categories: ["media","circled"],
       tags: ["audio","circle","circled","fill","media","play","play circle fill","play_circle_fill","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.circle.fill.svg","symbol":"play.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.circle.fill.svg","symbol":"play.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -43996,7 +43996,7 @@
       categories: ["media"],
       tags: ["audio","diamond","media","play","play diamond","play_diamond","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.diamond.svg","symbol":"play.diamond"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.diamond.svg","symbol":"play.diamond"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6632 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6632" x="0" y="0"/>
@@ -44014,7 +44014,7 @@
       categories: ["media"],
       tags: ["audio","diamond","fill","media","play","play diamond fill","play_diamond_fill","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.diamond.fill.svg","symbol":"play.diamond.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.diamond.fill.svg","symbol":"play.diamond.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -44031,7 +44031,7 @@
       categories: ["media"],
       tags: ["audio","fill","media","play","play fill","play_fill","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.fill.svg","symbol":"play.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.fill.svg","symbol":"play.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.5391 22.666" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.666" opacity="0" width="22.5391" x="0" y="0"/>
@@ -44048,7 +44048,7 @@
       categories: ["media"],
       tags: ["audio","home","house","media","play","play house","play_house","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.house.svg","symbol":"play.house"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.house.svg","symbol":"play.house"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7188 27.5" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5" opacity="0" width="31.7188" x="0" y="0"/>
@@ -44066,7 +44066,7 @@
       categories: ["media"],
       tags: ["audio","fill","home","house","media","play","play house fill","play_house_fill","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.house.fill.svg","symbol":"play.house.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.house.fill.svg","symbol":"play.house.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7188 27.5" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5" opacity="0" width="31.7188" x="0" y="0"/>
@@ -44083,7 +44083,7 @@
       categories: ["media"],
       tags: ["audio","media","play","play rectangle","play_rectangle","rectangle","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.rectangle.svg","symbol":"play.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.rectangle.svg","symbol":"play.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -44101,7 +44101,7 @@
       categories: ["media"],
       tags: ["audio","fill","media","play","play rectangle fill","play_rectangle_fill","rectangle","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.rectangle.fill.svg","symbol":"play.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.rectangle.fill.svg","symbol":"play.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -44118,7 +44118,7 @@
       categories: ["media"],
       tags: ["audio","media","on","play","play rectangle on rectangle","play_rectangle_on_rectangle","rectangle","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.rectangle.on.rectangle.svg","symbol":"play.rectangle.on.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.rectangle.on.rectangle.svg","symbol":"play.rectangle.on.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6758 26.7285" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.7285" opacity="0" width="32.6758" x="0" y="0"/>
@@ -44137,7 +44137,7 @@
       categories: ["media","circled"],
       tags: ["audio","circle","circled","media","on","play","play rectangle on rectangle circle","play_rectangle_on_rectangle_circle","rectangle","start","video"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.rectangle.on.rectangle.circle.svg","symbol":"play.rectangle.on.rectangle.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/play.rectangle.on.rectangle.circle.svg","symbol":"play.rectangle.on.rectangle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAY_RECTANGLE_ON_RECTANGLE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.rectangle.on.rectangle.circle.svg","symbol":"play.rectangle.on.rectangle.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/play.rectangle.on.rectangle.circle.svg","symbol":"play.rectangle.on.rectangle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAY_RECTANGLE_ON_RECTANGLE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44156,7 +44156,7 @@
       categories: ["media","circled"],
       tags: ["audio","circle","circled","fill","media","on","play","play rectangle on rectangle circle fill","play_rectangle_on_rectangle_circle_fill","rectangle","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.rectangle.on.rectangle.circle.fill.svg","symbol":"play.rectangle.on.rectangle.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.rectangle.on.rectangle.circle.fill.svg","symbol":"play.rectangle.on.rectangle.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44173,7 +44173,7 @@
       categories: ["media"],
       tags: ["audio","fill","media","on","play","play rectangle on rectangle fill","play_rectangle_on_rectangle_fill","rectangle","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.rectangle.on.rectangle.fill.svg","symbol":"play.rectangle.on.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.rectangle.on.rectangle.fill.svg","symbol":"play.rectangle.on.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7861 30.5566" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.5566" opacity="0" width="35.7861" x="0" y="0"/>
@@ -44191,7 +44191,7 @@
       categories: ["media","slashed"],
       tags: ["audio","media","play","play slash","play_slash","slash","slashed","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.slash.svg","symbol":"play.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.slash.svg","symbol":"play.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3877 26.1462" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1462" opacity="0" width="27.3877" x="0" y="0"/>
@@ -44209,7 +44209,7 @@
       categories: ["media","slashed"],
       tags: ["audio","fill","media","play","play slash fill","play_slash_fill","slash","slashed","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.slash.fill.svg","symbol":"play.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.slash.fill.svg","symbol":"play.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3877 26.1462" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1462" opacity="0" width="27.3877" x="0" y="0"/>
@@ -44227,7 +44227,7 @@
       categories: ["media","squared"],
       tags: ["audio","media","play","play square","play_square","square","squared","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.square.svg","symbol":"play.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.square.svg","symbol":"play.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -44245,7 +44245,7 @@
       categories: ["media","squared"],
       tags: ["audio","fill","media","play","play square fill","play_square_fill","square","squared","start","video"],
       repositories: ["pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__PLAY_SQUARE_FILL"},{"repo":"svg-converter","file":"app-input/!Media/play.square.fill.svg","symbol":"play.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/play.square.fill.svg","symbol":"play.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAY_SQUARE_FILL"}],
+      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__PLAY_SQUARE_FILL"},{"repo":"svg-converter","file":"app-input/Media/play.square.fill.svg","symbol":"play.square.fill"},{"repo":"svg-converter","file":"bulk-convert-square/play.square.fill.svg","symbol":"play.square.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAY_SQUARE_FILL"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.3203 22.959" aria-hidden="true" focusable="false"><g><rect height="22.959" opacity="0" width="23.3203" x="0" y="0"/><path d="M22.959 3.76953L22.959 19.1992C22.959 21.6797 21.6797 22.959 19.1504 22.959L3.79883 22.959C1.2793 22.959 0 21.6992 0 19.1992L0 3.76953C0 1.26953 1.2793 0 3.79883 0L19.1504 0C21.6797 0 22.959 1.2793 22.959 3.76953ZM7.86133 6.95312L7.86133 16.0059C7.86133 16.582 8.51562 16.8652 9.07227 16.5234L16.4355 12.1484C16.9531 11.8457 16.9434 11.1328 16.4355 10.8301L9.07227 6.44531C8.55469 6.13281 7.86133 6.37695 7.86133 6.95312Z"/></g></svg>`
     },
     {
@@ -44257,7 +44257,7 @@
       categories: ["media"],
       tags: ["audio","media","play","play square stack","play_square_stack","square","squared","stack","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.square.stack.svg","symbol":"play.square.stack"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.square.stack.svg","symbol":"play.square.stack"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3145 34.541" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.541" opacity="0" width="27.3145" x="0" y="0"/>
@@ -44277,7 +44277,7 @@
       categories: ["media"],
       tags: ["audio","fill","media","play","play square stack fill","play_square_stack_fill","square","squared","stack","start","video"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/play.square.stack.fill.svg","symbol":"play.square.stack.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/play.square.stack.fill.svg","symbol":"play.square.stack.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3145 34.541" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.541" opacity="0" width="27.3145" x="0" y="0"/>
@@ -44296,7 +44296,7 @@
       categories: ["media"],
       tags: ["media","playpause"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/playpause.svg","symbol":"playpause"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/playpause.svg","symbol":"playpause"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5664 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="35.5664" x="0" y="0"/>
@@ -44313,7 +44313,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","media","playpause","playpause circle","playpause_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/playpause.circle.svg","symbol":"playpause.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/playpause.circle.svg","symbol":"playpause.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAYPAUSE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/playpause.circle.svg","symbol":"playpause.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/playpause.circle.svg","symbol":"playpause.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLAYPAUSE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44331,7 +44331,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","media","playpause","playpause circle fill","playpause_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/playpause.circle.fill.svg","symbol":"playpause.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/playpause.circle.fill.svg","symbol":"playpause.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44348,7 +44348,7 @@
       categories: ["media"],
       tags: ["fill","media","playpause","playpause fill","playpause_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/playpause.fill.svg","symbol":"playpause.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/playpause.fill.svg","symbol":"playpause.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.4434 20.7129" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7129" opacity="0" width="39.4434" x="0" y="0"/>
@@ -44365,7 +44365,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","math","new","plus"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.svg","symbol":"plus"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__PLUS"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.svg","symbol":"plus"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__PLUS"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.7285 21.377" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.377" opacity="0" width="21.7285" x="0" y="0"/>
@@ -44382,7 +44382,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","app","create","math","new","plus","plus app","plus_app"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.app.svg","symbol":"plus.app"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.app.svg","symbol":"plus.app"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/>
@@ -44400,7 +44400,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","app","create","fill","math","new","plus","plus app fill","plus_app_fill"],
       repositories: ["app-template","mctree-mchome","pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"},{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"},{"repo":"svg-converter","file":"app-input/!Math/plus.app.fill.svg","symbol":"plus.app.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"}],
+      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"},{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"},{"repo":"svg-converter","file":"app-input/Math/plus.app.fill.svg","symbol":"plus.app.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLUS_APP_FILL"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.0576 23.7305" aria-hidden="true" focusable="false"><g><rect height="23.7305" opacity="0" width="24.0576" x="0" y="0"/><path d="M21.8799 1.81152C23.0664 2.9834 23.6963 4.7168 23.6963 6.92383L23.6963 16.7822C23.6963 18.9893 23.0615 20.7275 21.8799 21.8994C20.7227 23.0615 18.9844 23.7061 16.7725 23.7061L6.92383 23.7061C4.7168 23.7061 2.97852 23.0664 1.81641 21.8994C0.629883 20.7227 0 18.9893 0 16.7822L0 6.92383C0 4.7168 0.634766 2.97852 1.81641 1.81152C2.97363 0.649414 4.7168 0 6.92383 0L16.7725 0C18.9844 0 20.7178 0.634766 21.8799 1.81152ZM10.4932 7.12891L10.4932 10.498L7.12402 10.498C6.35254 10.498 5.79102 11.0645 5.79102 11.8506C5.79102 12.6221 6.35742 13.1836 7.12402 13.1836L10.4932 13.1836L10.4932 16.5625C10.4932 17.3291 11.0596 17.8955 11.8311 17.8955C12.6123 17.8955 13.1836 17.334 13.1836 16.5625L13.1836 13.1836L16.5625 13.1836C17.3291 13.1836 17.8955 12.6221 17.8955 11.8506C17.8955 11.0645 17.3291 10.498 16.5625 10.498L13.1836 10.498L13.1836 7.12891C13.1836 6.35254 12.6123 5.78613 11.8311 5.78613C11.0596 5.78613 10.4932 6.35742 10.4932 7.12891Z" /></g></svg>`
     },
     {
@@ -44412,7 +44412,7 @@
       categories: ["actions","arrows","math"],
       tags: ["actions","add","arrow","arrows","back","clockwise","create","direction","forward","math","navigate","new","plus","plus arrow trianglehead clockwise","plus_arrow_trianglehead_clockwise","trianglehead"],
       repositories: ["mctree-mchome","svg-converter"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PLUS_ARROW_TRIANGLEHEAD_CLOCKWISE"},{"repo":"svg-converter","file":"app-input/!Math/plus.arrow.trianglehead.clockwise.svg","symbol":"plus.arrow.trianglehead.clockwise"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PLUS_ARROW_TRIANGLEHEAD_CLOCKWISE"},{"repo":"svg-converter","file":"app-input/Math/plus.arrow.trianglehead.clockwise.svg","symbol":"plus.arrow.trianglehead.clockwise"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false"><g><rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/><path d="M10.5371 0.938802L10.5371 7.07161C10.5371 8.00423 11.3184 8.24349 12.002 7.73568L16.123 4.70833C16.6455 4.32259 16.6553 3.69271 16.123 3.30208L12.0117 0.264974C11.3184-0.252604 10.5371-0.00358084 10.5371 0.938802ZM13.1641 28.639C20.4346 28.639 26.333 22.7357 26.333 15.4749C26.333 11.5101 24.5166 7.82845 21.5088 5.39681C20.7617 4.70833 19.8096 4.80599 19.292 5.44076C18.7305 6.12923 18.9404 6.98861 19.5898 7.61849C21.9141 9.50326 23.374 12.2767 23.374 15.4749C23.374 21.1195 18.8086 25.6849 13.1641 25.6849C7.51953 25.6849 2.9541 21.1195 2.9541 15.4749C2.9541 9.8304 7.51953 5.26009 13.1787 5.26009C13.9941 5.26009 14.6533 4.59115 14.6533 3.7806C14.6533 2.97493 14.0039 2.31087 13.1885 2.30599C5.88867 2.31087 0 8.20443 0 15.4749C0 22.7357 5.89355 28.639 13.1641 28.639Z"/><path d="M14.3848 19.8695L14.3848 11.0658C14.3848 10.3529 13.8672 9.84017 13.1543 9.84017C12.4512 9.84017 11.9336 10.3529 11.9336 11.0658L11.9336 19.8695C11.9336 20.5726 12.4512 21.0804 13.1543 21.0804C13.8672 21.0804 14.3848 20.5775 14.3848 19.8695ZM8.75977 16.6859L17.5684 16.6859C18.2666 16.6859 18.7793 16.1781 18.7793 15.4749C18.7793 14.7572 18.2715 14.2396 17.5684 14.2396L8.75977 14.2396C8.05176 14.2396 7.54395 14.7572 7.54395 15.4749C7.54395 16.1781 8.05176 16.6859 8.75977 16.6859Z"/></g></svg>`
     },
     {
@@ -44424,7 +44424,7 @@
       categories: ["actions","arrows","math"],
       tags: ["actions","add","arrow","arrows","back","counterclockwise","create","direction","forward","math","navigate","new","plus","plus arrow trianglehead counterclockwise","plus_arrow_trianglehead_counterclockwise","trianglehead"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.arrow.trianglehead.counterclockwise.svg","symbol":"plus.arrow.trianglehead.counterclockwise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.arrow.trianglehead.counterclockwise.svg","symbol":"plus.arrow.trianglehead.counterclockwise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44442,7 +44442,7 @@
       categories: ["actions","communication","math"],
       tags: ["actions","add","bubble","communication","create","math","new","plus","plus bubble","plus_bubble"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.bubble.svg","symbol":"plus.bubble"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.bubble.svg","symbol":"plus.bubble"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.3984" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.3984" opacity="0" width="29.0381" x="0" y="0"/>
@@ -44460,7 +44460,7 @@
       categories: ["actions","communication","math"],
       tags: ["actions","add","bubble","communication","create","fill","math","new","plus","plus bubble fill","plus_bubble_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.bubble.fill.svg","symbol":"plus.bubble.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.bubble.fill.svg","symbol":"plus.bubble.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.4863" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4863" opacity="0" width="29.0381" x="0" y="0"/>
@@ -44477,7 +44477,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","capsule","create","math","new","plus","plus capsule","plus_capsule"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.capsule.svg","symbol":"plus.capsule"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.capsule.svg","symbol":"plus.capsule"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3691 24.5703" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.5703" opacity="0" width="33.3691" x="0" y="0"/>
@@ -44495,7 +44495,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","capsule","create","fill","math","new","plus","plus capsule fill","plus_capsule_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.capsule.fill.svg","symbol":"plus.capsule.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.capsule.fill.svg","symbol":"plus.capsule.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3691 24.5703" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.5703" opacity="0" width="33.3691" x="0" y="0"/>
@@ -44512,7 +44512,7 @@
       categories: ["actions","math","circled"],
       tags: ["actions","add","circle","circled","create","math","new","plus","plus circle","plus_circle"],
       repositories: ["app-template","mctree-mchome","svg-converter","visit-tracker"],
-      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__PLUS_CIRCLE"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PLUS_CIRCLE"},{"repo":"svg-converter","file":"app-input/!Math/plus.circle.svg","symbol":"plus.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/plus.circle.svg","symbol":"plus.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLUS_CIRCLE"}],
+      sources: [{"repo":"app-template","file":"assets/js/icons.js","symbol":"__PLUS_CIRCLE"},{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__PLUS_CIRCLE"},{"repo":"svg-converter","file":"app-input/Math/plus.circle.svg","symbol":"plus.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/plus.circle.svg","symbol":"plus.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLUS_CIRCLE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false"><g><rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/><path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z"/><path d="M13.6035 17.5586L13.6035 7.86133C13.6035 7.31445 13.2324 6.93359 12.6953 6.93359C12.1777 6.93359 11.8066 7.31445 11.8066 7.86133L11.8066 17.5586C11.8066 18.0957 12.1777 18.4766 12.6953 18.4766C13.2324 18.4766 13.6035 18.1055 13.6035 17.5586ZM7.86133 13.6035L17.5586 13.6035C18.0957 13.6035 18.4766 13.2422 18.4766 12.7246C18.4766 12.1777 18.1055 11.8066 17.5586 11.8066L7.86133 11.8066C7.31445 11.8066 6.94336 12.1777 6.94336 12.7246C6.94336 13.2422 7.31445 13.6035 7.86133 13.6035Z"/></g></svg>`
     },
     {
@@ -44524,7 +44524,7 @@
       categories: ["actions","math","circled"],
       tags: ["actions","add","circle","circled","create","fill","math","new","plus","plus circle fill","plus_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.circle.fill.svg","symbol":"plus.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.circle.fill.svg","symbol":"plus.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44541,7 +44541,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","diamond","math","new","plus","plus diamond","plus_diamond"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.diamond.svg","symbol":"plus.diamond"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.diamond.svg","symbol":"plus.diamond"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -44559,7 +44559,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","diamond","fill","math","new","plus","plus diamond fill","plus_diamond_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.diamond.fill.svg","symbol":"plus.diamond.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.diamond.fill.svg","symbol":"plus.diamond.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6729 29.325" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.325" opacity="0" width="29.6729" x="0" y="0"/>
@@ -44576,7 +44576,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","forwardslash","math","minus","new","plus","plus forwardslash minus","plus_forwardslash_minus","remove","subtract"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.forwardslash.minus.svg","symbol":"plus.forwardslash.minus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.forwardslash.minus.svg","symbol":"plus.forwardslash.minus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.6387 23.8574" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8574" opacity="0" width="24.6387" x="0" y="0"/>
@@ -44593,7 +44593,7 @@
       categories: ["actions","accessibility","interface"],
       tags: ["accessibility","actions","add","create","discover","find","interface","lookup","magnifyingglass","new","plus","plus magnifyingglass","plus_magnifyingglass","search"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/plus.magnifyingglass.svg","symbol":"plus.magnifyingglass"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__PLUS_MAGNIFYINGGLASS"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/plus.magnifyingglass.svg","symbol":"plus.magnifyingglass"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__PLUS_MAGNIFYINGGLASS"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4688 25.332" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.332" opacity="0" width="25.4688" x="0" y="0"/>
@@ -44611,7 +44611,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","math","new","plus","plus rectangle","plus_rectangle","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.rectangle.svg","symbol":"plus.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.rectangle.svg","symbol":"plus.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -44629,7 +44629,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","fill","math","new","plus","plus rectangle fill","plus_rectangle_fill","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.rectangle.fill.svg","symbol":"plus.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.rectangle.fill.svg","symbol":"plus.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="30.3223" x="0" y="0"/>
@@ -44646,7 +44646,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","fill","math","new","on","plus","plus rectangle fill on rectangle fill","plus_rectangle_fill_on_rectangle_fill","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.rectangle.fill.on.rectangle.fill.svg","symbol":"plus.rectangle.fill.on.rectangle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.rectangle.fill.on.rectangle.fill.svg","symbol":"plus.rectangle.fill.on.rectangle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7861 30.5566" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.5566" opacity="0" width="35.7861" x="0" y="0"/>
@@ -44664,7 +44664,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","math","new","on","plus","plus rectangle on rectangle","plus_rectangle_on_rectangle","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.rectangle.on.rectangle.svg","symbol":"plus.rectangle.on.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.rectangle.on.rectangle.svg","symbol":"plus.rectangle.on.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6758 26.7285" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.7285" opacity="0" width="32.6758" x="0" y="0"/>
@@ -44683,7 +44683,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","math","new","plus","plus rectangle portrait","plus_rectangle_portrait","portrait","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.rectangle.portrait.svg","symbol":"plus.rectangle.portrait"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.rectangle.portrait.svg","symbol":"plus.rectangle.portrait"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -44701,7 +44701,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","fill","math","new","plus","plus rectangle portrait fill","plus_rectangle_portrait_fill","portrait","rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.rectangle.portrait.fill.svg","symbol":"plus.rectangle.portrait.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.rectangle.portrait.fill.svg","symbol":"plus.rectangle.portrait.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.3828 27.5586" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5586" opacity="0" width="22.3828" x="0" y="0"/>
@@ -44718,7 +44718,7 @@
       categories: ["actions","math","squared"],
       tags: ["actions","add","create","math","new","plus","plus square","plus_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.square.svg","symbol":"plus.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.square.svg","symbol":"plus.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -44736,7 +44736,7 @@
       categories: ["actions","math","squared"],
       tags: ["actions","add","create","fill","math","new","plus","plus square fill","plus_square_fill","square","squared"],
       repositories: ["cocktail-list","svg-converter"],
-      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__PLUS_SQUARE_FILL"},{"repo":"svg-converter","file":"app-input/!Math/plus.square.fill.svg","symbol":"plus.square.fill"}],
+      sources: [{"repo":"cocktail-list","file":"index.html","symbol":"__PLUS_SQUARE_FILL"},{"repo":"svg-converter","file":"app-input/Math/plus.square.fill.svg","symbol":"plus.square.fill"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false"><g><rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/><path d="M23.8232 4.26758L23.8232 19.5605C23.8232 22.3193 22.3145 23.8232 19.5264 23.8232L4.29199 23.8232C1.50879 23.8232 0 22.3291 0 19.5605L0 4.26758C0 1.49902 1.50879 0 4.29199 0L19.5264 0C22.3145 0 23.8232 1.50391 23.8232 4.26758ZM10.6299 7.18262L10.6299 10.5518L7.26074 10.5518C6.48438 10.5518 5.92285 11.1182 5.92285 11.9092C5.92285 12.6807 6.48926 13.2373 7.26074 13.2373L10.6299 13.2373L10.6299 16.6162C10.6299 17.3828 11.1963 17.9492 11.9629 17.9492C12.749 17.9492 13.3154 17.3877 13.3154 16.6162L13.3154 13.2373L16.6992 13.2373C17.4609 13.2373 18.0273 12.6807 18.0273 11.9092C18.0273 11.1182 17.4658 10.5518 16.6992 10.5518L13.3154 10.5518L13.3154 7.18262C13.3154 6.40625 12.749 5.84473 11.9629 5.84473C11.1963 5.84473 10.6299 6.41113 10.6299 7.18262Z"/></g></svg>`
     },
     {
@@ -44748,7 +44748,7 @@
       categories: ["actions","math","squared"],
       tags: ["actions","add","create","fill","math","new","on","plus","plus square fill on square fill","plus_square_fill_on_square_fill","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.square.fill.on.square.fill.svg","symbol":"plus.square.fill.on.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.square.fill.on.square.fill.svg","symbol":"plus.square.fill.on.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4111 31.4355" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.4355" opacity="0" width="31.4111" x="0" y="0"/>
@@ -44766,7 +44766,7 @@
       categories: ["actions","math","squared"],
       tags: ["actions","add","create","math","new","on","plus","plus square on square","plus_square_on_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.square.on.square.svg","symbol":"plus.square.on.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.square.on.square.svg","symbol":"plus.square.on.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.2959 27.5977" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5977" opacity="0" width="28.2959" x="0" y="0"/>
@@ -44785,7 +44785,7 @@
       categories: ["actions","math"],
       tags: ["actions","add","create","math","new","plus","plus viewfinder","plus_viewfinder","viewfinder"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plus.viewfinder.svg","symbol":"plus.viewfinder"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plus.viewfinder.svg","symbol":"plus.viewfinder"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.5469 25.2246" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.2246" opacity="0" width="25.5469" x="0" y="0"/>
@@ -44803,7 +44803,7 @@
       categories: ["math"],
       tags: ["math","plusminus"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plusminus.svg","symbol":"plusminus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plusminus.svg","symbol":"plusminus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16.5283 22.7441" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.7441" opacity="0" width="16.5283" x="0" y="0"/>
@@ -44821,7 +44821,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","math","plusminus","plusminus circle","plusminus_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plusminus.circle.svg","symbol":"plusminus.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/plusminus.circle.svg","symbol":"plusminus.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLUSMINUS_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plusminus.circle.svg","symbol":"plusminus.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/plusminus.circle.svg","symbol":"plusminus.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__PLUSMINUS_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44839,7 +44839,7 @@
       categories: ["math","circled"],
       tags: ["circle","circled","fill","math","plusminus","plusminus circle fill","plusminus_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/plusminus.circle.fill.svg","symbol":"plusminus.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/plusminus.circle.fill.svg","symbol":"plusminus.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -44856,7 +44856,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","filled","forward","maps","navigate","point","point bottomleft filled forward to point topright scurvepath","point_bottomleft_filled_forward_to_point_topright_scurvepath","scurvepath","to","topright"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.filled.forward.to.point.topright.scurvepath.svg","symbol":"point.bottomleft.filled.forward.to.point.topright.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.filled.forward.to.point.topright.scurvepath.svg","symbol":"point.bottomleft.filled.forward.to.point.topright.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -44874,7 +44874,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","forward","maps","navigate","point","point bottomleft forward to arrow triangle scurvepath","point_bottomleft_forward_to_arrow_triangle_scurvepath","scurvepath","to","triangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.arrow.triangle.scurvepath.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.arrow.triangle.scurvepath.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -44892,7 +44892,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","fill","forward","maps","navigate","point","point bottomleft forward to arrow triangle scurvepath fill","point_bottomleft_forward_to_arrow_triangle_scurvepath_fill","scurvepath","to","triangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.arrow.triangle.scurvepath.fill.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.scurvepath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.arrow.triangle.scurvepath.fill.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.scurvepath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -44910,7 +44910,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","forward","maps","navigate","point","point bottomleft forward to arrow triangle uturn scurvepath","point_bottomleft_forward_to_arrow_triangle_uturn_scurvepath","scurvepath","to","triangle","uturn"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3018 33.395" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.395" opacity="0" width="24.3018" x="0" y="0"/>
@@ -44929,7 +44929,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","fill","forward","maps","navigate","point","point bottomleft forward to arrow triangle uturn scurvepath fill","point_bottomleft_forward_to_arrow_triangle_uturn_scurvepath_fill","scurvepath","to","triangle","uturn"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath.fill.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath.fill.svg","symbol":"point.bottomleft.forward.to.arrow.triangle.uturn.scurvepath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3018 33.395" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.395" opacity="0" width="24.3018" x="0" y="0"/>
@@ -44948,7 +44948,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","filled","forward","maps","navigate","point","point bottomleft forward to point topright filled scurvepath","point_bottomleft_forward_to_point_topright_filled_scurvepath","scurvepath","to","topright"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.point.topright.filled.scurvepath.svg","symbol":"point.bottomleft.forward.to.point.topright.filled.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.point.topright.filled.scurvepath.svg","symbol":"point.bottomleft.forward.to.point.topright.filled.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -44966,7 +44966,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","forward","maps","navigate","point","point bottomleft forward to point topright scurvepath","point_bottomleft_forward_to_point_topright_scurvepath","scurvepath","to","topright"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.point.topright.scurvepath.svg","symbol":"point.bottomleft.forward.to.point.topright.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.point.topright.scurvepath.svg","symbol":"point.bottomleft.forward.to.point.topright.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -44984,7 +44984,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","bottomleft","direction","fill","forward","maps","navigate","point","point bottomleft forward to point topright scurvepath fill","point_bottomleft_forward_to_point_topright_scurvepath_fill","scurvepath","to","topright"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.bottomleft.forward.to.point.topright.scurvepath.fill.svg","symbol":"point.bottomleft.forward.to.point.topright.scurvepath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.bottomleft.forward.to.point.topright.scurvepath.fill.svg","symbol":"point.bottomleft.forward.to.point.topright.scurvepath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -45002,7 +45002,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","capsulepath","direction","forward","maps","navigate","point","point forward to point capsulepath","point_forward_to_point_capsulepath","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.forward.to.point.capsulepath.svg","symbol":"point.forward.to.point.capsulepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.forward.to.point.capsulepath.svg","symbol":"point.forward.to.point.capsulepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3545 24.4727" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.4727" opacity="0" width="33.3545" x="0" y="0"/>
@@ -45020,7 +45020,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","capsulepath","direction","fill","forward","maps","navigate","point","point forward to point capsulepath fill","point_forward_to_point_capsulepath_fill","to"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.forward.to.point.capsulepath.fill.svg","symbol":"point.forward.to.point.capsulepath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.forward.to.point.capsulepath.fill.svg","symbol":"point.forward.to.point.capsulepath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3545 24.4727" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.4727" opacity="0" width="33.3545" x="0" y="0"/>
@@ -45038,7 +45038,7 @@
       categories: ["maps"],
       tags: ["bottomright","curvepath","down","maps","point","point topleft down to point bottomright curvepath","point_topleft_down_to_point_bottomright_curvepath","to","topleft"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topleft.down.to.point.bottomright.curvepath.svg","symbol":"point.topleft.down.to.point.bottomright.curvepath"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__POINT_TOPLEFT_DOWN_TO_POINT_BOTTOMRIGHT_CURVEPATH"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topleft.down.to.point.bottomright.curvepath.svg","symbol":"point.topleft.down.to.point.bottomright.curvepath"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__POINT_TOPLEFT_DOWN_TO_POINT_BOTTOMRIGHT_CURVEPATH"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.6523 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="23.6523" x="0" y="0"/>
@@ -45056,7 +45056,7 @@
       categories: ["maps"],
       tags: ["bottomright","curvepath","down","fill","maps","point","point topleft down to point bottomright curvepath fill","point_topleft_down_to_point_bottomright_curvepath_fill","to","topleft"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topleft.down.to.point.bottomright.curvepath.fill.svg","symbol":"point.topleft.down.to.point.bottomright.curvepath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topleft.down.to.point.bottomright.curvepath.fill.svg","symbol":"point.topleft.down.to.point.bottomright.curvepath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.6523 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="23.6523" x="0" y="0"/>
@@ -45074,7 +45074,7 @@
       categories: ["maps"],
       tags: ["bottomright","curvepath","down","filled","maps","point","point topleft down to point bottomright filled curvepath","point_topleft_down_to_point_bottomright_filled_curvepath","to","topleft"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topleft.down.to.point.bottomright.filled.curvepath.svg","symbol":"point.topleft.down.to.point.bottomright.filled.curvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topleft.down.to.point.bottomright.filled.curvepath.svg","symbol":"point.topleft.down.to.point.bottomright.filled.curvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.6523 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="23.6523" x="0" y="0"/>
@@ -45092,7 +45092,7 @@
       categories: ["maps"],
       tags: ["bottomright","curvepath","down","filled","maps","point","point topleft filled down to point bottomright curvepath","point_topleft_filled_down_to_point_bottomright_curvepath","to","topleft"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topleft.filled.down.to.point.bottomright.curvepath.svg","symbol":"point.topleft.filled.down.to.point.bottomright.curvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topleft.filled.down.to.point.bottomright.curvepath.svg","symbol":"point.topleft.filled.down.to.point.bottomright.curvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.6523 28.5547" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5547" opacity="0" width="23.6523" x="0" y="0"/>
@@ -45110,7 +45110,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","backward","bottomleft","direction","filled","forward","maps","navigate","point","point topright arrow triangle backward to point bottomleft filled scurvepath","point_topright_arrow_triangle_backward_to_point_bottomleft_filled_scurvepath","scurvepath","to","topright","triangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topright.arrow.triangle.backward.to.point.bottomleft.filled.scurvepath.svg","symbol":"point.topright.arrow.triangle.backward.to.point.bottomleft.filled.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topright.arrow.triangle.backward.to.point.bottomleft.filled.scurvepath.svg","symbol":"point.topright.arrow.triangle.backward.to.point.bottomleft.filled.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -45129,7 +45129,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","backward","bottomleft","direction","forward","maps","navigate","point","point topright arrow triangle backward to point bottomleft scurvepath","point_topright_arrow_triangle_backward_to_point_bottomleft_scurvepath","scurvepath","to","topright","triangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath.svg","symbol":"point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath.svg","symbol":"point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -45148,7 +45148,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","backward","bottomleft","direction","fill","forward","maps","navigate","point","point topright arrow triangle backward to point bottomleft scurvepath fill","point_topright_arrow_triangle_backward_to_point_bottomleft_scurvepath_fill","scurvepath","to","topright","triangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath.fill.svg","symbol":"point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath.fill.svg","symbol":"point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -45167,7 +45167,7 @@
       categories: ["arrows","maps"],
       tags: ["arrow","arrows","back","backward","bottomleft","direction","filled","forward","maps","navigate","point","point topright filled arrow triangle backward to point bottomleft scurvepath","point_topright_filled_arrow_triangle_backward_to_point_bottomleft_scurvepath","scurvepath","to","topright","triangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/point.topright.filled.arrow.triangle.backward.to.point.bottomleft.scurvepath.svg","symbol":"point.topright.filled.arrow.triangle.backward.to.point.bottomleft.scurvepath"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/point.topright.filled.arrow.triangle.backward.to.point.bottomleft.scurvepath.svg","symbol":"point.topright.filled.arrow.triangle.backward.to.point.bottomleft.scurvepath"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.2969 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="24.2969" x="0" y="0"/>
@@ -45186,7 +45186,7 @@
       categories: ["accessibility","arrows","squared"],
       tags: ["accessibility","and","arrow","arrows","back","dashed","direction","forward","navigate","on","pointer","pointer arrow and square on square dashed","pointer_arrow_and_square_on_square_dashed","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.and.square.on.square.dashed.svg","symbol":"pointer.arrow.and.square.on.square.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.and.square.on.square.dashed.svg","symbol":"pointer.arrow.and.square.on.square.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.3052 37.7093" aria-hidden="true" focusable="false">
  <g>
   <rect height="37.7093" opacity="0" width="33.3052" x="0" y="0"/>
@@ -45205,7 +45205,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","click","direction","forward","navigate","pointer","pointer arrow click","pointer_arrow_click"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.click.svg","symbol":"pointer.arrow.click"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.click.svg","symbol":"pointer.arrow.click"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.8747" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.8747" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45223,7 +45223,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","click","direction","forward","navigate","pointer","pointer arrow click 2","pointer_arrow_click_2"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.click.2.svg","symbol":"pointer.arrow.click.2"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.click.2.svg","symbol":"pointer.arrow.click.2"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.8747" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.8747" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45242,7 +45242,7 @@
       categories: ["accessibility","arrows","badged","badged-clock","status","time"],
       tags: ["accessibility","arrow","arrows","back","badge","badged","click","clock","direction","forward","history","navigate","pointer","pointer arrow click badge clock","pointer_arrow_click_badge_clock","recent","status","time"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.click.badge.clock.svg","symbol":"pointer.arrow.click.badge.clock"},{"repo":"svg-converter","file":"app-input/Badge/pointer.arrow.click.badge.clock.svg","symbol":"pointer.arrow.click.badge.clock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.click.badge.clock.svg","symbol":"pointer.arrow.click.badge.clock"},{"repo":"svg-converter","file":"app-input/Badge/pointer.arrow.click.badge.clock.svg","symbol":"pointer.arrow.click.badge.clock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.5713 36.3086" aria-hidden="true" focusable="false">
  <g>
   <rect height="36.3086" opacity="0" width="30.5713" x="0" y="0"/>
@@ -45261,7 +45261,7 @@
       categories: ["accessibility","arrows","devices","squared"],
       tags: ["accessibility","and","arrow","arrows","back","dashed","devices","direction","forward","ipad","navigate","on","pointer","pointer arrow ipad and square on square dashed","pointer_arrow_ipad_and_square_on_square_dashed","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.ipad.and.square.on.square.dashed.svg","symbol":"pointer.arrow.ipad.and.square.on.square.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.ipad.and.square.on.square.dashed.svg","symbol":"pointer.arrow.ipad.and.square.on.square.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.2815 36.4792" aria-hidden="true" focusable="false">
  <g>
   <rect height="36.4792" opacity="0" width="37.2815" x="0" y="0"/>
@@ -45280,7 +45280,7 @@
       categories: ["accessibility","arrows","devices","rays-sparkles"],
       tags: ["accessibility","arrow","arrows","back","devices","direction","forward","ipad","navigate","pointer","pointer arrow ipad rays","pointer_arrow_ipad_rays","rays","rays & sparkles"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.ipad.rays.svg","symbol":"pointer.arrow.ipad.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/pointer.arrow.ipad.rays.svg","symbol":"pointer.arrow.ipad.rays"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.ipad.rays.svg","symbol":"pointer.arrow.ipad.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/pointer.arrow.ipad.rays.svg","symbol":"pointer.arrow.ipad.rays"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2773 28.9355" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9355" opacity="0" width="29.2773" x="0" y="0"/>
@@ -45315,7 +45315,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","direction","forward","motionlines","navigate","pointer","pointer arrow motionlines","pointer_arrow_motionlines"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.motionlines.svg","symbol":"pointer.arrow.motionlines"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.motionlines.svg","symbol":"pointer.arrow.motionlines"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4206 30.8145" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.8145" opacity="0" width="30.4206" x="0" y="0"/>
@@ -45336,7 +45336,7 @@
       categories: ["accessibility","arrows"],
       tags: ["accessibility","arrow","arrows","back","click","direction","forward","motionlines","navigate","pointer","pointer arrow motionlines click","pointer_arrow_motionlines_click"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.motionlines.click.svg","symbol":"pointer.arrow.motionlines.click"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.motionlines.click.svg","symbol":"pointer.arrow.motionlines.click"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.1162 31.9661" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.9661" opacity="0" width="29.1162" x="0" y="0"/>
@@ -45358,7 +45358,7 @@
       categories: ["accessibility","arrows","rays-sparkles"],
       tags: ["accessibility","arrow","arrows","back","direction","forward","navigate","pointer","pointer arrow rays","pointer_arrow_rays","rays","rays & sparkles"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/pointer.arrow.rays.svg","symbol":"pointer.arrow.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/pointer.arrow.rays.svg","symbol":"pointer.arrow.rays"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/pointer.arrow.rays.svg","symbol":"pointer.arrow.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/pointer.arrow.rays.svg","symbol":"pointer.arrow.rays"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3164 28.9355" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9355" opacity="0" width="29.3164" x="0" y="0"/>
@@ -45429,7 +45429,7 @@
       categories: ["keyboard"],
       tags: ["bolt","energy","keyboard","lightning","power","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/power.svg","symbol":"power"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/power.svg","symbol":"power"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 27.9395" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.9395" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45446,7 +45446,7 @@
       categories: ["keyboard","circled"],
       tags: ["bolt","circle","circled","energy","keyboard","lightning","power","power circle","power_circle","weather"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/power.circle.svg","symbol":"power.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/power.circle.svg","symbol":"power.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__POWER_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/power.circle.svg","symbol":"power.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/power.circle.svg","symbol":"power.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__POWER_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45464,7 +45464,7 @@
       categories: ["keyboard","circled"],
       tags: ["bolt","circle","circled","energy","fill","keyboard","lightning","power","power circle fill","power_circle_fill","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/power.circle.fill.svg","symbol":"power.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/power.circle.fill.svg","symbol":"power.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45481,7 +45481,7 @@
       categories: ["keyboard"],
       tags: ["bolt","dotted","energy","keyboard","lightning","power","power dotted","power_dotted","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/power.dotted.svg","symbol":"power.dotted"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/power.dotted.svg","symbol":"power.dotted"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8789 27.1094" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.1094" opacity="0" width="25.8789" x="0" y="0"/>
@@ -45513,7 +45513,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","projective"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/projective.svg","symbol":"projective"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/projective.svg","symbol":"projective"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.8125 24.1504" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.1504" opacity="0" width="22.8125" x="0" y="0"/>
@@ -45596,7 +45596,7 @@
       categories: ["security"],
       tags: ["filled","key","privacy & security","questionmark","questionmark key filled","questionmark_key_filled"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/questionmark.key.filled.svg","symbol":"questionmark.key.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/questionmark.key.filled.svg","symbol":"questionmark.key.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9044 24.2188" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.2188" opacity="0" width="36.9044" x="0" y="0"/>
@@ -45643,7 +45643,7 @@
       categories: ["accessibility","communication"],
       tags: ["accessibility","bubble","communication","quote","quote bubble","quote_bubble"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/quote.bubble.svg","symbol":"quote.bubble"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/quote.bubble.svg","symbol":"quote.bubble"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.3984" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.3984" opacity="0" width="29.0381" x="0" y="0"/>
@@ -45661,7 +45661,7 @@
       categories: ["accessibility","communication"],
       tags: ["accessibility","bubble","communication","fill","quote","quote bubble fill","quote_bubble_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/quote.bubble.fill.svg","symbol":"quote.bubble.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/quote.bubble.fill.svg","symbol":"quote.bubble.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0381 28.4863" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4863" opacity="0" width="29.0381" x="0" y="0"/>
@@ -45751,7 +45751,7 @@
       categories: ["math"],
       tags: ["math","radicand","radicand squareroot","radicand_squareroot","squareroot"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/radicand.squareroot.svg","symbol":"radicand.squareroot"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/radicand.squareroot.svg","symbol":"radicand.squareroot"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9346 22.5293" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.5293" opacity="0" width="27.9346" x="0" y="0"/>
@@ -45856,7 +45856,7 @@
       categories: ["media","circled"],
       tags: ["audio","circle","circled","media","mic","microphone","record","record circle","record_circle","voice"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/record.circle.svg","symbol":"record.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/record.circle.svg","symbol":"record.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__RECORD_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/record.circle.svg","symbol":"record.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/record.circle.svg","symbol":"record.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__RECORD_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45874,7 +45874,7 @@
       categories: ["media","circled"],
       tags: ["audio","circle","circled","fill","media","mic","microphone","record","record circle fill","record_circle_fill","voice"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/record.circle.fill.svg","symbol":"record.circle.fill"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__RECORD_CIRCLE_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/record.circle.fill.svg","symbol":"record.circle.fill"},{"repo":"visit-tracker","file":"build/icon-sources/parked-icon-consts.js","symbol":"__RECORD_CIRCLE_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -45956,7 +45956,7 @@
       categories: ["editing","interface","shapes"],
       tags: ["and","compose","edit","editing","ellipsis","interface","pencil","rectangle","rectangle and pencil and ellipsis","rectangle_and_pencil_and_ellipsis","shapes","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.and.pencil.and.ellipsis.svg","symbol":"rectangle.and.pencil.and.ellipsis"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rectangle.and.pencil.and.ellipsis.svg","symbol":"rectangle.and.pencil.and.ellipsis"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.9739 30.7952" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.7952" opacity="0" width="43.9739" x="0" y="0"/>
@@ -45977,7 +45977,7 @@
       categories: ["accessibility","documents","interface","shapes"],
       tags: ["accessibility","and","discover","document","documents","file","find","interface","lookup","magnifyingglass","notes","page","paper","rectangle","rectangle and text magnifyingglass","rectangle_and_text_magnifyingglass","search","shapes","text"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/rectangle.and.text.magnifyingglass.svg","symbol":"rectangle.and.text.magnifyingglass"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/rectangle.and.text.magnifyingglass.svg","symbol":"rectangle.and.text.magnifyingglass"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5449 29.5996" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.5996" opacity="0" width="38.5449" x="0" y="0"/>
@@ -46134,7 +46134,7 @@
       categories: ["editing","shapes"],
       tags: ["dashed","editing","rectangle","rectangle dashed","rectangle_dashed","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.dashed.svg","symbol":"rectangle.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rectangle.dashed.svg","symbol":"rectangle.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3223 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="30.3223" x="0" y="0"/>
@@ -46151,7 +46151,7 @@
       categories: ["editing","media","shapes","badged","badged-record","status"],
       tags: ["audio","badge","badged","dashed","editing","media","mic","microphone","record","rectangle","rectangle dashed badge record","rectangle_dashed_badge_record","shapes","status","voice"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.dashed.badge.record.svg","symbol":"rectangle.dashed.badge.record"},{"repo":"svg-converter","file":"app-input/Badge/rectangle.dashed.badge.record.svg","symbol":"rectangle.dashed.badge.record"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/rectangle.dashed.badge.record.svg","symbol":"rectangle.dashed.badge.record"},{"repo":"svg-converter","file":"app-input/Editing/rectangle.dashed.badge.record.svg","symbol":"rectangle.dashed.badge.record"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3984 31.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.9141" opacity="0" width="43.3984" x="0" y="0"/>
@@ -46324,7 +46324,7 @@
       categories: ["editing","shapes"],
       tags: ["editing","landscape","rectangle","rectangle landscape rotate","rectangle_landscape_rotate","rotate","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.landscape.rotate.svg","symbol":"rectangle.landscape.rotate"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rectangle.landscape.rotate.svg","symbol":"rectangle.landscape.rotate"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9531 34.2753" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.2753" opacity="0" width="31.9531" x="0" y="0"/>
@@ -46342,7 +46342,7 @@
       categories: ["editing","shapes","slashed"],
       tags: ["editing","landscape","rectangle","rectangle landscape rotate slash","rectangle_landscape_rotate_slash","rotate","shapes","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.landscape.rotate.slash.svg","symbol":"rectangle.landscape.rotate.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rectangle.landscape.rotate.slash.svg","symbol":"rectangle.landscape.rotate.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9531 34.2753" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.2753" opacity="0" width="31.9531" x="0" y="0"/>
@@ -46501,7 +46501,7 @@
       categories: ["editing","shapes"],
       tags: ["editing","portrait","rectangle","rectangle portrait rotate","rectangle_portrait_rotate","rotate","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.portrait.rotate.svg","symbol":"rectangle.portrait.rotate"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rectangle.portrait.rotate.svg","symbol":"rectangle.portrait.rotate"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3682 38.8628" aria-hidden="true" focusable="false">
  <g>
   <rect height="38.8628" opacity="0" width="27.3682" x="0" y="0"/>
@@ -46519,7 +46519,7 @@
       categories: ["editing","shapes","slashed"],
       tags: ["editing","portrait","rectangle","rectangle portrait rotate slash","rectangle_portrait_rotate_slash","rotate","shapes","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rectangle.portrait.rotate.slash.svg","symbol":"rectangle.portrait.rotate.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rectangle.portrait.rotate.slash.svg","symbol":"rectangle.portrait.rotate.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.4448 38.8628" aria-hidden="true" focusable="false">
  <g>
   <rect height="38.8628" opacity="0" width="28.4448" x="0" y="0"/>
@@ -46794,7 +46794,7 @@
       categories: ["media"],
       tags: ["media","repeat"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.svg","symbol":"repeat"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/repeat.svg","symbol":"repeat"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.7695 25.1465" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.1465" opacity="0" width="28.7695" x="0" y="0"/>
@@ -46812,7 +46812,7 @@
       categories: ["media"],
       tags: ["media","repeat","repeat 1","repeat_1"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.1.svg","symbol":"repeat.1"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/repeat.1.svg","symbol":"repeat.1"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.8037 25.6348" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.6348" opacity="0" width="28.8037" x="0" y="0"/>
@@ -46830,7 +46830,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","media","repeat","repeat 1 circle","repeat_1_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.1.circle.svg","symbol":"repeat.1.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/repeat.1.circle.svg","symbol":"repeat.1.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__REPEAT_1_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/repeat.1.circle.svg","symbol":"repeat.1.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/repeat.1.circle.svg","symbol":"repeat.1.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__REPEAT_1_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -46848,7 +46848,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","media","repeat","repeat 1 circle fill","repeat_1_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.1.circle.fill.svg","symbol":"repeat.1.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/repeat.1.circle.fill.svg","symbol":"repeat.1.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -46865,7 +46865,7 @@
       categories: ["media","badged","badged-xmark","status"],
       tags: ["badge","badged","cancel","close","dismiss","media","repeat","repeat badge xmark","repeat_badge_xmark","status","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.badge.xmark.svg","symbol":"repeat.badge.xmark"},{"repo":"svg-converter","file":"app-input/Badge/repeat.badge.xmark.svg","symbol":"repeat.badge.xmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/repeat.badge.xmark.svg","symbol":"repeat.badge.xmark"},{"repo":"svg-converter","file":"app-input/Media/repeat.badge.xmark.svg","symbol":"repeat.badge.xmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.002 31.6602" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.6602" opacity="0" width="42.002" x="0" y="0"/>
@@ -46883,7 +46883,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","media","repeat","repeat circle","repeat_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.circle.svg","symbol":"repeat.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/repeat.circle.svg","symbol":"repeat.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__REPEAT_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/repeat.circle.svg","symbol":"repeat.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/repeat.circle.svg","symbol":"repeat.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__REPEAT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -46901,7 +46901,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","media","repeat","repeat circle fill","repeat_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/repeat.circle.fill.svg","symbol":"repeat.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/repeat.circle.fill.svg","symbol":"repeat.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -47057,7 +47057,7 @@
       categories: ["editing"],
       tags: ["3d","editing","rotate","rotate 3d","rotate_3d"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.3d.svg","symbol":"rotate.3d"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.3d.svg","symbol":"rotate.3d"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -47074,7 +47074,7 @@
       categories: ["editing","circled"],
       tags: ["3d","circle","circled","editing","rotate","rotate 3d circle","rotate_3d_circle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.3d.circle.svg","symbol":"rotate.3d.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/rotate.3d.circle.svg","symbol":"rotate.3d.circle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.3d.circle.svg","symbol":"rotate.3d.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/rotate.3d.circle.svg","symbol":"rotate.3d.circle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -47092,7 +47092,7 @@
       categories: ["editing","circled"],
       tags: ["3d","circle","circled","editing","fill","rotate","rotate 3d circle fill","rotate_3d_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.3d.circle.fill.svg","symbol":"rotate.3d.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.3d.circle.fill.svg","symbol":"rotate.3d.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -47109,7 +47109,7 @@
       categories: ["editing"],
       tags: ["3d","editing","fill","rotate","rotate 3d fill","rotate_3d_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.3d.fill.svg","symbol":"rotate.3d.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.3d.fill.svg","symbol":"rotate.3d.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3379" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3379" opacity="0" width="26.6943" x="0" y="0"/>
@@ -47126,7 +47126,7 @@
       categories: ["editing"],
       tags: ["editing","left","rotate","rotate left","rotate_left"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.left.svg","symbol":"rotate.left"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.left.svg","symbol":"rotate.left"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9092 33.2664" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2664" opacity="0" width="31.9092" x="0" y="0"/>
@@ -47144,7 +47144,7 @@
       categories: ["editing"],
       tags: ["editing","fill","left","rotate","rotate left fill","rotate_left_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.left.fill.svg","symbol":"rotate.left.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.left.fill.svg","symbol":"rotate.left.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9092 33.2664" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2664" opacity="0" width="31.9092" x="0" y="0"/>
@@ -47162,7 +47162,7 @@
       categories: ["editing"],
       tags: ["editing","right","rotate","rotate right","rotate_right"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.right.svg","symbol":"rotate.right"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.right.svg","symbol":"rotate.right"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6318 33.2664" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2664" opacity="0" width="32.6318" x="0" y="0"/>
@@ -47180,7 +47180,7 @@
       categories: ["editing"],
       tags: ["editing","fill","right","rotate","rotate right fill","rotate_right_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/rotate.right.fill.svg","symbol":"rotate.right.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/rotate.right.fill.svg","symbol":"rotate.right.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6318 33.2664" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.2664" opacity="0" width="32.6318" x="0" y="0"/>
@@ -47932,7 +47932,7 @@
       categories: ["transportation"],
       tags: ["sailboat","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/sailboat.svg","symbol":"sailboat"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/sailboat.svg","symbol":"sailboat"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9697 35.4688" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.4688" opacity="0" width="28.9697" x="0" y="0"/>
@@ -47949,7 +47949,7 @@
       categories: ["circled","transportation"],
       tags: ["circle","circled","sailboat","sailboat circle","sailboat_circle","transportation"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/sailboat.circle.svg","symbol":"sailboat.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/sailboat.circle.svg","symbol":"sailboat.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SAILBOAT_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/sailboat.circle.svg","symbol":"sailboat.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/sailboat.circle.svg","symbol":"sailboat.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SAILBOAT_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -47967,7 +47967,7 @@
       categories: ["circled","transportation"],
       tags: ["circle","circled","fill","sailboat","sailboat circle fill","sailboat_circle_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/sailboat.circle.fill.svg","symbol":"sailboat.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/sailboat.circle.fill.svg","symbol":"sailboat.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -48054,7 +48054,7 @@
       categories: ["transportation"],
       tags: ["fill","sailboat","sailboat fill","sailboat_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/sailboat.fill.svg","symbol":"sailboat.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/sailboat.fill.svg","symbol":"sailboat.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9697 35.4688" aria-hidden="true" focusable="false">
  <g>
   <rect height="35.4688" opacity="0" width="28.9697" x="0" y="0"/>
@@ -48105,7 +48105,7 @@
       categories: ["editing"],
       tags: ["3d","editing","scale","scale 3d","scale_3d"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scale.3d.svg","symbol":"scale.3d"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/scale.3d.svg","symbol":"scale.3d"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3926 24.5753" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.5753" opacity="0" width="27.3926" x="0" y="0"/>
@@ -48122,7 +48122,7 @@
       categories: ["editing"],
       tags: ["editing","scissors"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scissors.svg","symbol":"scissors"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/scissors.svg","symbol":"scissors"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5322 27.7637" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.7637" opacity="0" width="35.5322" x="0" y="0"/>
@@ -48140,7 +48140,7 @@
       categories: ["editing","interface","badged","badged-ellipsis","status"],
       tags: ["badge","badged","editing","ellipsis","interface","scissors","scissors badge ellipsis","scissors_badge_ellipsis","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scissors.badge.ellipsis.svg","symbol":"scissors.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Badge/scissors.badge.ellipsis.svg","symbol":"scissors.badge.ellipsis"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/scissors.badge.ellipsis.svg","symbol":"scissors.badge.ellipsis"},{"repo":"svg-converter","file":"app-input/Editing/scissors.badge.ellipsis.svg","symbol":"scissors.badge.ellipsis"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.5752 29.9219" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.9219" opacity="0" width="49.5752" x="0" y="0"/>
@@ -48159,7 +48159,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","editing","scissors","scissors circle","scissors_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scissors.circle.svg","symbol":"scissors.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/scissors.circle.svg","symbol":"scissors.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SCISSORS_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/scissors.circle.svg","symbol":"scissors.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/scissors.circle.svg","symbol":"scissors.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SCISSORS_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -48178,7 +48178,7 @@
       categories: ["editing","circled"],
       tags: ["circle","circled","editing","fill","scissors","scissors circle fill","scissors_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scissors.circle.fill.svg","symbol":"scissors.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/scissors.circle.fill.svg","symbol":"scissors.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3379" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3379" opacity="0" width="26.6943" x="0" y="0"/>
@@ -48195,7 +48195,7 @@
       categories: ["transportation"],
       tags: ["scooter","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/scooter.svg","symbol":"scooter"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/scooter.svg","symbol":"scooter"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.9902 26.8848" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.8848" opacity="0" width="34.9902" x="0" y="0"/>
@@ -48224,7 +48224,7 @@
       categories: ["editing"],
       tags: ["editing","scribble"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scribble.svg","symbol":"scribble"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/scribble.svg","symbol":"scribble"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.72 24.6927" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.6927" opacity="0" width="26.72" x="0" y="0"/>
@@ -48241,7 +48241,7 @@
       categories: ["editing"],
       tags: ["editing","scribble","scribble variable","scribble_variable","variable"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/scribble.variable.svg","symbol":"scribble.variable"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/scribble.variable.svg","symbol":"scribble.variable"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.5498 26.4285" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.4285" opacity="0" width="27.5498" x="0" y="0"/>
@@ -48258,7 +48258,7 @@
       categories: ["security","shapes"],
       tags: ["privacy & security","seal","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/seal.svg","symbol":"seal"},{"repo":"svg-converter","file":"app-input/Shapes/seal.svg","symbol":"seal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/seal.svg","symbol":"seal"},{"repo":"svg-converter","file":"app-input/Shapes/seal.svg","symbol":"seal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2883 28.9575" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9575" opacity="0" width="29.2883" x="0" y="0"/>
@@ -48275,7 +48275,7 @@
       categories: ["security","shapes"],
       tags: ["fill","privacy & security","seal","seal fill","seal_fill","shapes"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/seal.fill.svg","symbol":"seal.fill"},{"repo":"svg-converter","file":"app-input/Shapes/seal.fill.svg","symbol":"seal.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/seal.fill.svg","symbol":"seal.fill"},{"repo":"svg-converter","file":"app-input/Shapes/seal.fill.svg","symbol":"seal.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2908 28.9539" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9539" opacity="0" width="29.2908" x="0" y="0"/>
@@ -48292,7 +48292,7 @@
       categories: ["editing","maps-travel","maps"],
       tags: ["editing","in","location","maps","maps & travel","marker","out","pin","place","selection","selection pin in out","selection_pin_in_out"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/selection.pin.in.out.svg","symbol":"selection.pin.in.out"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/selection.pin.in.out.svg","symbol":"selection.pin.in.out"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.7578 34.6289" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.6289" opacity="0" width="21.7578" x="0" y="0"/>
@@ -48309,7 +48309,7 @@
       categories: ["accessibility","nature"],
       tags: ["accessibility","dog","nature","service","service dog","service_dog"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/service.dog.svg","symbol":"service.dog"},{"repo":"svg-converter","file":"app-input/Nature/service.dog.svg","symbol":"service.dog"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/service.dog.svg","symbol":"service.dog"},{"repo":"svg-converter","file":"app-input/Nature/service.dog.svg","symbol":"service.dog"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.0205 30.0879" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0879" opacity="0" width="36.0205" x="0" y="0"/>
@@ -48326,7 +48326,7 @@
       categories: ["accessibility","nature"],
       tags: ["accessibility","dog","fill","nature","service","service dog fill","service_dog_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/service.dog.fill.svg","symbol":"service.dog.fill"},{"repo":"svg-converter","file":"app-input/Nature/service.dog.fill.svg","symbol":"service.dog.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/service.dog.fill.svg","symbol":"service.dog.fill"},{"repo":"svg-converter","file":"app-input/Nature/service.dog.fill.svg","symbol":"service.dog.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5176 29.7754" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.7754" opacity="0" width="35.5176" x="0" y="0"/>
@@ -48427,7 +48427,7 @@
       categories: ["security","shapes"],
       tags: ["privacy & security","shapes","shield"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.svg","symbol":"shield"},{"repo":"svg-converter","file":"app-input/Shapes/shield.svg","symbol":"shield"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.svg","symbol":"shield"},{"repo":"svg-converter","file":"app-input/Shapes/shield.svg","symbol":"shield"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/>
@@ -48444,7 +48444,7 @@
       categories: ["security","shapes"],
       tags: ["fill","privacy & security","shapes","shield","shield fill","shield_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.fill.svg","symbol":"shield.fill"},{"repo":"svg-converter","file":"app-input/Shapes/shield.fill.svg","symbol":"shield.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.fill.svg","symbol":"shield.fill"},{"repo":"svg-converter","file":"app-input/Shapes/shield.fill.svg","symbol":"shield.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.5918 25.752" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.752" opacity="0" width="21.5918" x="0" y="0"/>
@@ -48461,7 +48461,7 @@
       categories: ["security"],
       tags: ["filled","lefthalf","privacy & security","shield","shield lefthalf filled","shield_lefthalf_filled"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.lefthalf.filled.svg","symbol":"shield.lefthalf.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.lefthalf.filled.svg","symbol":"shield.lefthalf.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/>
@@ -48478,7 +48478,7 @@
       categories: ["security","badged","badged-checkmark","status"],
       tags: ["badge","badged","check","checkmark","confirm","done","filled","lefthalf","privacy & security","shield","shield lefthalf filled badge checkmark","shield_lefthalf_filled_badge_checkmark","status","success"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.lefthalf.filled.badge.checkmark.svg","symbol":"shield.lefthalf.filled.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Badge/shield.lefthalf.filled.badge.checkmark.svg","symbol":"shield.lefthalf.filled.badge.checkmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/shield.lefthalf.filled.badge.checkmark.svg","symbol":"shield.lefthalf.filled.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.lefthalf.filled.badge.checkmark.svg","symbol":"shield.lefthalf.filled.badge.checkmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.2393 34.5215" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.5215" opacity="0" width="35.2393" x="0" y="0"/>
@@ -48496,7 +48496,7 @@
       categories: ["security","slashed"],
       tags: ["filled","lefthalf","privacy & security","shield","shield lefthalf filled slash","shield_lefthalf_filled_slash","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.lefthalf.filled.slash.svg","symbol":"shield.lefthalf.filled.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.lefthalf.filled.slash.svg","symbol":"shield.lefthalf.filled.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0892 28.5633" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5633" opacity="0" width="30.0892" x="0" y="0"/>
@@ -48514,7 +48514,7 @@
       categories: ["security","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle"],
       tags: ["badged","exclamation mark","exclamationmark","filled","lefthalf","privacy & security","shapes","shield","shield lefthalf filled trianglebadge exclamationmark","shield_lefthalf_filled_trianglebadge_exclamationmark","triangle","trianglebadge"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.lefthalf.filled.trianglebadge.exclamationmark.svg","symbol":"shield.lefthalf.filled.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/shield.lefthalf.filled.trianglebadge.exclamationmark.svg","symbol":"shield.lefthalf.filled.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/shield.lefthalf.filled.trianglebadge.exclamationmark.svg","symbol":"shield.lefthalf.filled.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.lefthalf.filled.trianglebadge.exclamationmark.svg","symbol":"shield.lefthalf.filled.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.3623 34.541" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.541" opacity="0" width="36.3623" x="0" y="0"/>
@@ -48532,7 +48532,7 @@
       categories: ["security"],
       tags: ["filled","privacy & security","righthalf","shield","shield righthalf filled","shield_righthalf_filled"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.righthalf.filled.svg","symbol":"shield.righthalf.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.righthalf.filled.svg","symbol":"shield.righthalf.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.9385 26.3184" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3184" opacity="0" width="21.9385" x="0" y="0"/>
@@ -48549,7 +48549,7 @@
       categories: ["security","shapes","slashed"],
       tags: ["privacy & security","shapes","shield","shield slash","shield_slash","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.slash.svg","symbol":"shield.slash"},{"repo":"svg-converter","file":"app-input/Shapes/shield.slash.svg","symbol":"shield.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.slash.svg","symbol":"shield.slash"},{"repo":"svg-converter","file":"app-input/Shapes/shield.slash.svg","symbol":"shield.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0892 28.5633" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5633" opacity="0" width="30.0892" x="0" y="0"/>
@@ -48567,7 +48567,7 @@
       categories: ["security","shapes","slashed"],
       tags: ["fill","privacy & security","shapes","shield","shield slash fill","shield_slash_fill","slash","slashed"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/shield.slash.fill.svg","symbol":"shield.slash.fill"},{"repo":"svg-converter","file":"app-input/Shapes/shield.slash.fill.svg","symbol":"shield.slash.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/shield.slash.fill.svg","symbol":"shield.slash.fill"},{"repo":"svg-converter","file":"app-input/Shapes/shield.slash.fill.svg","symbol":"shield.slash.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.8939 28.5633" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.5633" opacity="0" width="29.8939" x="0" y="0"/>
@@ -48585,7 +48585,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","shift"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/shift.svg","symbol":"shift"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/shift.svg","symbol":"shift"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.3057 24.3945" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.3945" opacity="0" width="28.3057" x="0" y="0"/>
@@ -48602,7 +48602,7 @@
       categories: ["keyboard"],
       tags: ["fill","keyboard","shift","shift fill","shift_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/shift.fill.svg","symbol":"shift.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/shift.fill.svg","symbol":"shift.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.3057 24.3945" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.3945" opacity="0" width="28.3057" x="0" y="0"/>
@@ -48734,7 +48734,7 @@
       categories: ["media"],
       tags: ["media","shuffle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/shuffle.svg","symbol":"shuffle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/shuffle.svg","symbol":"shuffle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.2354 25.0098" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.0098" opacity="0" width="31.2354" x="0" y="0"/>
@@ -48751,7 +48751,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","media","shuffle","shuffle circle","shuffle_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/shuffle.circle.svg","symbol":"shuffle.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/shuffle.circle.svg","symbol":"shuffle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SHUFFLE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/shuffle.circle.svg","symbol":"shuffle.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/shuffle.circle.svg","symbol":"shuffle.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SHUFFLE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -48769,7 +48769,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","media","shuffle","shuffle circle fill","shuffle_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/shuffle.circle.fill.svg","symbol":"shuffle.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/shuffle.circle.fill.svg","symbol":"shuffle.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -48786,7 +48786,7 @@
       categories: ["editing"],
       tags: ["editing","signature"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/signature.svg","symbol":"signature"},{"repo":"svg-converter","file":"app-input/Text Formatting/signature.svg","symbol":"signature"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/signature.svg","symbol":"signature"},{"repo":"svg-converter","file":"app-input/Text Formatting/signature.svg","symbol":"signature"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.126 33.7207" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.7207" opacity="0" width="39.126" x="0" y="0"/>
@@ -48895,7 +48895,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","siri"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/siri.svg","symbol":"siri"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/siri.svg","symbol":"siri"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3672" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3672" opacity="0" width="26.6943" x="0" y="0"/>
@@ -48912,7 +48912,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","gen1","siri","siri gen1","siri_gen1"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/siri.gen1.svg","symbol":"siri.gen1"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/siri.gen1.svg","symbol":"siri.gen1"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6992 26.3672" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3672" opacity="0" width="26.6992" x="0" y="0"/>
@@ -48929,7 +48929,7 @@
       categories: ["editing"],
       tags: ["editing","skew"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/skew.svg","symbol":"skew"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/skew.svg","symbol":"skew"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2266 29.8633" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8633" opacity="0" width="32.2266" x="0" y="0"/>
@@ -48982,7 +48982,7 @@
       categories: ["arrows","editing"],
       tags: ["arrow","arrows","back","counterclockwise","direction","editing","forward","horizontal","navigate","slider","slider horizontal 2 arrow trianglehead counterclockwise","slider_horizontal_2_arrow_trianglehead_counterclockwise","trianglehead"],
       repositories: ["pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__SLIDER_HORIZONTAL_2_ARROW_TRIANGLEHEAD_COUNTERCLOCKWISE"},{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.2.arrow.trianglehead.counterclockwise.svg","symbol":"slider.horizontal.2.arrow.trianglehead.counterclockwise"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SLIDER_HORIZONTAL_2_ARROW_TRIANGLEHEAD_COUNTERCLOCKWISE"}],
+      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__SLIDER_HORIZONTAL_2_ARROW_TRIANGLEHEAD_COUNTERCLOCKWISE"},{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.2.arrow.trianglehead.counterclockwise.svg","symbol":"slider.horizontal.2.arrow.trianglehead.counterclockwise"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SLIDER_HORIZONTAL_2_ARROW_TRIANGLEHEAD_COUNTERCLOCKWISE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.6943 30.9596" aria-hidden="true" focusable="false"><g><rect height="30.9596" opacity="0" width="26.6943" x="0" y="0"/><path d="M7.9248 19.0687C7.9248 19.4134 7.98209 19.7338 8.09052 20.0208L7.43164 20.0208C6.94336 20.0208 6.51367 19.6009 6.51367 19.0687C6.51367 18.5511 6.94336 18.1263 7.43164 18.1263L8.08813 18.1263C7.98117 18.4108 7.9248 18.7279 7.9248 19.0687ZM19.8096 19.0687C19.8096 19.6009 19.3848 20.0208 18.8428 20.0208L14.1625 20.0208C14.2727 19.7338 14.3311 19.4134 14.3311 19.0687C14.3311 18.7279 14.2736 18.4108 14.1649 18.1263L18.8428 18.1263C19.3848 18.1263 19.8096 18.5511 19.8096 19.0687Z"/><path d="M14.3311 19.0687C14.3311 20.5238 13.291 21.5443 11.8359 21.5443L10.3955 21.5443C8.94531 21.5443 7.9248 20.5238 7.9248 19.0687C7.9248 17.6185 8.94531 16.598 10.3955 16.598L11.8359 16.598C13.291 16.598 14.3311 17.6185 14.3311 19.0687ZM10.3955 17.9896C9.75098 17.9896 9.32129 18.4242 9.32129 19.0687C9.32129 19.7132 9.75098 20.1478 10.3955 20.1478L11.8359 20.1478C12.4951 20.1478 12.9346 19.7132 12.9346 19.0687C12.9346 18.4242 12.4951 17.9896 11.8359 17.9896Z"/><path d="M11.9922 12.6771C11.9922 13.0259 12.0517 13.3495 12.1636 13.639L7.47559 13.639C6.93848 13.639 6.51367 13.2191 6.51367 12.6771C6.51367 12.1644 6.93848 11.7396 7.47559 11.7396L12.1557 11.7396C12.0486 12.023 11.9922 12.3384 11.9922 12.6771ZM19.8096 12.6771C19.8096 13.2191 19.3799 13.639 18.8867 13.639L18.2291 13.639C18.3398 13.3495 18.3984 13.0259 18.3984 12.6771C18.3984 12.3384 18.3428 12.023 18.2369 11.7396L18.8867 11.7396C19.3799 11.7396 19.8096 12.1644 19.8096 12.6771Z"/><path d="M18.3984 12.6771C18.3984 14.1322 17.3779 15.1478 15.9229 15.1478L14.4824 15.1478C13.0273 15.1478 11.9922 14.1322 11.9922 12.6771C11.9922 11.2269 13.0273 10.2015 14.4824 10.2015L15.9229 10.2015C17.3779 10.2015 18.3984 11.2269 18.3984 12.6771ZM14.4824 11.6029C13.8232 11.6029 13.3887 12.0326 13.3887 12.6771C13.3887 13.3216 13.8232 13.7562 14.4824 13.7562L15.9229 13.7562C16.5674 13.7562 17.002 13.3216 17.002 12.6771C17.002 12.0326 16.5674 11.6029 15.9229 11.6029Z"/><path d="M15.7959 0.938802L15.7959 2.57355C14.9397 2.39853 14.053 2.3066 13.1445 2.30599C12.3291 2.31087 11.6748 2.97493 11.6748 3.7806C11.6748 4.59115 12.334 5.26009 13.1494 5.26009C14.0668 5.26009 14.9554 5.38019 15.7959 5.61685L15.7959 7.07161C15.7959 8.00423 15.0146 8.24349 14.3311 7.73568L10.2051 4.70833C9.67773 4.32259 9.67285 3.69271 10.2051 3.30208L14.3213 0.264974C15.0146-0.252604 15.7959-0.00358084 15.7959 0.938802Z"/><path d="M13.1641 28.639C20.4346 28.639 26.333 22.7357 26.333 15.4749C26.333 8.20443 20.4395 2.31087 13.1445 2.30599C12.3291 2.31087 11.6748 2.97493 11.6748 3.7806C11.6748 4.59115 12.334 5.26009 13.1494 5.26009C18.8086 5.26009 23.374 9.8304 23.374 15.4749C23.374 21.1195 18.8086 25.6849 13.1641 25.6849C7.51953 25.6849 2.9541 21.1195 2.9541 15.4749C2.9541 12.2767 4.41895 9.50326 6.74316 7.61849C7.39258 6.98861 7.60254 6.12923 7.03613 5.44076C6.52344 4.80599 5.57129 4.70833 4.81445 5.39681C1.81152 7.82845 0 11.5101 0 15.4749C0 22.7357 5.89355 28.639 13.1641 28.639Z"/></g></svg>`
     },
     {
@@ -48994,7 +48994,7 @@
       categories: ["editing","squared"],
       tags: ["editing","horizontal","slider","slider horizontal 2 square","slider_horizontal_2_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.2.square.svg","symbol":"slider.horizontal.2.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.2.square.svg","symbol":"slider.horizontal.2.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8281" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8281" opacity="0" width="24.1846" x="0" y="0"/>
@@ -49015,7 +49015,7 @@
       categories: ["arrows","editing","badged","badged-arrow","squared","status"],
       tags: ["arrow","arrows","back","badge","badged","direction","down","editing","forward","horizontal","navigate","slider","slider horizontal 2 square badge arrow down","slider_horizontal_2_square_badge_arrow_down","square","squared","status"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.2.square.badge.arrow.down.svg","symbol":"slider.horizontal.2.square.badge.arrow.down"},{"repo":"svg-converter","file":"app-input/Badge/slider.horizontal.2.square.badge.arrow.down.svg","symbol":"slider.horizontal.2.square.badge.arrow.down"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/slider.horizontal.2.square.badge.arrow.down.svg","symbol":"slider.horizontal.2.square.badge.arrow.down"},{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.2.square.badge.arrow.down.svg","symbol":"slider.horizontal.2.square.badge.arrow.down"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.3145 31.9141" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.9141" opacity="0" width="37.3145" x="0" y="0"/>
@@ -49037,7 +49037,7 @@
       categories: ["editing","squared"],
       tags: ["editing","horizontal","on","slider","slider horizontal 2 square on square","slider_horizontal_2_square_on_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.2.square.on.square.svg","symbol":"slider.horizontal.2.square.on.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.2.square.on.square.svg","symbol":"slider.horizontal.2.square.on.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.2959 27.5977" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.5977" opacity="0" width="28.2959" x="0" y="0"/>
@@ -49059,7 +49059,7 @@
       categories: ["editing"],
       tags: ["editing","horizontal","slider","slider horizontal 3","slider_horizontal_3"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.3.svg","symbol":"slider.horizontal.3"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.3.svg","symbol":"slider.horizontal.3"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9531 22.8613" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.8613" opacity="0" width="26.9531" x="0" y="0"/>
@@ -49081,7 +49081,7 @@
       categories: ["editing","circled"],
       tags: ["below","circle","circled","editing","filled","horizontal","lefthalf","righthalf","slider","slider horizontal below circle lefthalf filled","slider horizontal below circle righthalf filled","slider_horizontal_below_circle_lefthalf_filled","slider_horizontal_below_circle_righthalf_filled"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.circle.lefthalf.filled.svg","symbol":"slider.horizontal.below.circle.lefthalf.filled"},{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.circle.righthalf.filled.svg","symbol":"slider.horizontal.below.circle.righthalf.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.circle.lefthalf.filled.svg","symbol":"slider.horizontal.below.circle.lefthalf.filled"},{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.circle.righthalf.filled.svg","symbol":"slider.horizontal.below.circle.righthalf.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8887 30.2637" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.2637" opacity="0" width="25.8887" x="0" y="0"/>
@@ -49100,7 +49100,7 @@
       categories: ["editing","circled"],
       tags: ["below","circle","circled","editing","filled","horizontal","inverse","lefthalf","righthalf","slider","slider horizontal below circle lefthalf filled inverse","slider horizontal below circle righthalf filled inverse","slider_horizontal_below_circle_lefthalf_filled_inverse","slider_horizontal_below_circle_righthalf_filled_inverse"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.circle.lefthalf.filled.inverse.svg","symbol":"slider.horizontal.below.circle.lefthalf.filled.inverse"},{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.circle.righthalf.filled.inverse.svg","symbol":"slider.horizontal.below.circle.righthalf.filled.inverse"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.circle.lefthalf.filled.inverse.svg","symbol":"slider.horizontal.below.circle.lefthalf.filled.inverse"},{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.circle.righthalf.filled.inverse.svg","symbol":"slider.horizontal.below.circle.righthalf.filled.inverse"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8887 30.2637" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.2637" opacity="0" width="25.8887" x="0" y="0"/>
@@ -49119,7 +49119,7 @@
       categories: ["editing"],
       tags: ["below","editing","horizontal","rectangle","slider","slider horizontal below rectangle","slider_horizontal_below_rectangle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.rectangle.svg","symbol":"slider.horizontal.below.rectangle"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.rectangle.svg","symbol":"slider.horizontal.below.rectangle"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8887 29.1113" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.1113" opacity="0" width="25.8887" x="0" y="0"/>
@@ -49138,7 +49138,7 @@
       categories: ["editing"],
       tags: ["and","below","editing","filled","horizontal","slider","slider horizontal below square and square filled","slider_horizontal_below_square_and_square_filled","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.square.and.square.filled.svg","symbol":"slider.horizontal.below.square.and.square.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.square.and.square.filled.svg","symbol":"slider.horizontal.below.square.and.square.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1406 29.1113" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.1113" opacity="0" width="34.1406" x="0" y="0"/>
@@ -49158,7 +49158,7 @@
       categories: ["editing"],
       tags: ["and","below","editing","filled","horizontal","slider","slider horizontal below square filled and square","slider_horizontal_below_square_filled_and_square","square","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.square.filled.and.square.svg","symbol":"slider.horizontal.below.square.filled.and.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.square.filled.and.square.svg","symbol":"slider.horizontal.below.square.filled.and.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1406 29.1113" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.1113" opacity="0" width="34.1406" x="0" y="0"/>
@@ -49178,7 +49178,7 @@
       categories: ["editing","weather"],
       tags: ["below","editing","horizontal","max","slider","slider horizontal below sun max","slider_horizontal_below_sun_max","sun","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.sun.max.svg","symbol":"slider.horizontal.below.sun.max"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.sun.max.svg","symbol":"slider.horizontal.below.sun.max"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8887 30.9668" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.9668" opacity="0" width="25.8887" x="0" y="0"/>
@@ -49197,7 +49197,7 @@
       categories: ["editing","weather"],
       tags: ["below","editing","horizontal","min","slider","slider horizontal below sun min","slider_horizontal_below_sun_min","sun","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.horizontal.below.sun.min.svg","symbol":"slider.horizontal.below.sun.min"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.horizontal.below.sun.min.svg","symbol":"slider.horizontal.below.sun.min"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.8887 29.1113" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.1113" opacity="0" width="25.8887" x="0" y="0"/>
@@ -49216,7 +49216,7 @@
       categories: ["editing"],
       tags: ["editing","slider","slider vertical 3","slider_vertical_3","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/slider.vertical.3.svg","symbol":"slider.vertical.3"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/slider.vertical.3.svg","symbol":"slider.vertical.3"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.7998 24.5312" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.5312" opacity="0" width="24.7998" x="0" y="0"/>
@@ -49256,7 +49256,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","circle","circled","filled","smallcircle","smallcircle filled circle","smallcircle_filled_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/smallcircle.filled.circle.svg","symbol":"smallcircle.filled.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/smallcircle.filled.circle.svg","symbol":"smallcircle.filled.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SMALLCIRCLE_FILLED_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/smallcircle.filled.circle.svg","symbol":"smallcircle.filled.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/smallcircle.filled.circle.svg","symbol":"smallcircle.filled.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SMALLCIRCLE_FILLED_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -49274,7 +49274,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","circle","circled","fill","filled","smallcircle","smallcircle filled circle fill","smallcircle_filled_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/smallcircle.filled.circle.fill.svg","symbol":"smallcircle.filled.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/smallcircle.filled.circle.fill.svg","symbol":"smallcircle.filled.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -49577,7 +49577,7 @@
       categories: ["keyboard"],
       tags: ["keyboard","space"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/space.svg","symbol":"space"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/space.svg","symbol":"space"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.875 17.8516" aria-hidden="true" focusable="false">
  <g>
   <rect height="17.8516" opacity="0" width="31.875" x="0" y="0"/>
@@ -50406,7 +50406,7 @@
       categories: ["editing","shapes"],
       tags: ["and","compose","edit","editing","pencil","shapes","square","square and pencil","square_and_pencil","squared","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/square.and.pencil.svg","symbol":"square.and.pencil"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/square.and.pencil.svg","symbol":"square.and.pencil"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.3393 30.7261" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.7261" opacity="0" width="31.3393" x="0" y="0"/>
@@ -50424,7 +50424,7 @@
       categories: ["editing","shapes","squared","circled"],
       tags: ["and","circle","circled","compose","edit","editing","pencil","shapes","square","square and pencil circle","square_and_pencil_circle","squared","write"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/square.and.pencil.circle.svg","symbol":"square.and.pencil.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/square.and.pencil.circle.svg","symbol":"square.and.pencil.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SQUARE_AND_PENCIL_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/square.and.pencil.circle.svg","symbol":"square.and.pencil.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/square.and.pencil.circle.svg","symbol":"square.and.pencil.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SQUARE_AND_PENCIL_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -50442,7 +50442,7 @@
       categories: ["editing","shapes","squared","circled"],
       tags: ["and","circle","circled","compose","edit","editing","fill","pencil","shapes","square","square and pencil circle fill","square_and_pencil_circle_fill","squared","write"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/square.and.pencil.circle.fill.svg","symbol":"square.and.pencil.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/square.and.pencil.circle.fill.svg","symbol":"square.and.pencil.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -50542,7 +50542,7 @@
       categories: ["editing","shapes","squared"],
       tags: ["dashed","editing","shapes","square","square dashed","square_dashed","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/square.dashed.svg","symbol":"square.dashed"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/square.dashed.svg","symbol":"square.dashed"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -50559,7 +50559,7 @@
       categories: ["editing","shapes","squared"],
       tags: ["dashed","editing","micro","shapes","square","square dashed micro","square_dashed_micro","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/square.dashed.micro.svg","symbol":"square.dashed.micro"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/square.dashed.micro.svg","symbol":"square.dashed.micro"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.1846 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="24.1846" x="0" y="0"/>
@@ -50702,7 +50702,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","bottomleft","filled","grid","interface","shapes","square","square grid 3x3 bottomleft filled","square_grid_3x3_bottomleft_filled","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.bottomleft.filled.svg","symbol":"square.grid.3x3.bottomleft.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.bottomleft.filled.svg","symbol":"square.grid.3x3.bottomleft.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50727,7 +50727,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","bottommiddle","filled","grid","interface","shapes","square","square grid 3x3 bottommiddle filled","square_grid_3x3_bottommiddle_filled","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.bottommiddle.filled.svg","symbol":"square.grid.3x3.bottommiddle.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.bottommiddle.filled.svg","symbol":"square.grid.3x3.bottommiddle.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50752,7 +50752,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","bottomright","filled","grid","interface","shapes","square","square grid 3x3 bottomright filled","square_grid_3x3_bottomright_filled","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.bottomright.filled.svg","symbol":"square.grid.3x3.bottomright.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.bottomright.filled.svg","symbol":"square.grid.3x3.bottomright.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50777,7 +50777,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","filled","grid","interface","middle","shapes","square","square grid 3x3 middle filled","square_grid_3x3_middle_filled","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.middle.filled.svg","symbol":"square.grid.3x3.middle.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.middle.filled.svg","symbol":"square.grid.3x3.middle.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50802,7 +50802,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","filled","grid","interface","middleleft","shapes","square","square grid 3x3 middleleft filled","square_grid_3x3_middleleft_filled","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.middleleft.filled.svg","symbol":"square.grid.3x3.middleleft.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.middleleft.filled.svg","symbol":"square.grid.3x3.middleleft.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50827,7 +50827,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","filled","grid","interface","middleright","shapes","square","square grid 3x3 middleright filled","square_grid_3x3_middleright_filled","squared"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.middleright.filled.svg","symbol":"square.grid.3x3.middleright.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.middleright.filled.svg","symbol":"square.grid.3x3.middleright.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50871,7 +50871,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","filled","grid","interface","shapes","square","square grid 3x3 topleft filled","square_grid_3x3_topleft_filled","squared","topleft"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.topleft.filled.svg","symbol":"square.grid.3x3.topleft.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.topleft.filled.svg","symbol":"square.grid.3x3.topleft.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50896,7 +50896,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","filled","grid","interface","shapes","square","square grid 3x3 topmiddle filled","square_grid_3x3_topmiddle_filled","squared","topmiddle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.topmiddle.filled.svg","symbol":"square.grid.3x3.topmiddle.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.topmiddle.filled.svg","symbol":"square.grid.3x3.topmiddle.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -50921,7 +50921,7 @@
       categories: ["interface","shapes"],
       tags: ["3x3","accessibility","filled","grid","interface","shapes","square","square grid 3x3 topright filled","square_grid_3x3_topright_filled","squared","topright"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/square.grid.3x3.topright.filled.svg","symbol":"square.grid.3x3.topright.filled"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/square.grid.3x3.topright.filled.svg","symbol":"square.grid.3x3.topright.filled"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.0801 26.1621" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.1621" opacity="0" width="27.0801" x="0" y="0"/>
@@ -51112,7 +51112,7 @@
       categories: ["math"],
       tags: ["math","squareroot"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/squareroot.svg","symbol":"squareroot"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/squareroot.svg","symbol":"squareroot"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.7168 22.5293" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.5293" opacity="0" width="24.7168" x="0" y="0"/>
@@ -51420,7 +51420,7 @@
       categories: ["media"],
       tags: ["media","stop"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/stop.svg","symbol":"stop"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/stop.svg","symbol":"stop"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.6748 21.3281" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.3281" opacity="0" width="21.6748" x="0" y="0"/>
@@ -51437,7 +51437,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","media","stop","stop circle","stop_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/stop.circle.svg","symbol":"stop.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/stop.circle.svg","symbol":"stop.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__STOP_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/stop.circle.svg","symbol":"stop.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/stop.circle.svg","symbol":"stop.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__STOP_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -51455,7 +51455,7 @@
       categories: ["media","circled"],
       tags: ["circle","circled","fill","media","stop","stop circle fill","stop_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/stop.circle.fill.svg","symbol":"stop.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/stop.circle.fill.svg","symbol":"stop.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -51472,7 +51472,7 @@
       categories: ["media"],
       tags: ["fill","media","stop","stop fill","stop_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/stop.fill.svg","symbol":"stop.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/stop.fill.svg","symbol":"stop.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.6748 21.3281" aria-hidden="true" focusable="false">
  <g>
   <rect height="21.3281" opacity="0" width="21.6748" x="0" y="0"/>
@@ -51651,7 +51651,7 @@
       categories: ["math"],
       tags: ["math","sum"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Math/sum.svg","symbol":"sum"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SUM"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Math/sum.svg","symbol":"sum"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SUM"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.7471 23.2129" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.2129" opacity="0" width="15.7471" x="0" y="0"/>
@@ -51881,7 +51881,7 @@
       categories: ["keyboard","weather"],
       tags: ["keyboard","max","sun","sun max","sun_max","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.max.svg","symbol":"sun.max"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.svg","symbol":"sun.max"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/sun.max.svg","symbol":"sun.max"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.svg","symbol":"sun.max"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2578 28.9258" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9258" opacity="0" width="29.2578" x="0" y="0"/>
@@ -51899,7 +51899,7 @@
       categories: ["keyboard","circled","weather"],
       tags: ["circle","circled","keyboard","max","sun","sun max circle","sun_max_circle","weather"],
       repositories: ["pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__SUN_MAX_CIRCLE"},{"repo":"svg-converter","file":"app-input/!Keyboard/sun.max.circle.svg","symbol":"sun.max.circle"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.circle.svg","symbol":"sun.max.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/sun.max.circle.svg","symbol":"sun.max.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SUN_MAX_CIRCLE"}],
+      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__SUN_MAX_CIRCLE"},{"repo":"svg-converter","file":"app-input/Keyboard/sun.max.circle.svg","symbol":"sun.max.circle"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.circle.svg","symbol":"sun.max.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/sun.max.circle.svg","symbol":"sun.max.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__SUN_MAX_CIRCLE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false"><g><rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/><path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z"/><path d="M12.7148 4.7168C12.3535 4.7168 12.0312 5.03906 12.0312 5.39062L12.0312 6.97266C12.0312 7.32422 12.3535 7.63672 12.7148 7.63672C13.0762 7.63672 13.3887 7.32422 13.3887 6.97266L13.3887 5.39062C13.3887 5.03906 13.0762 4.7168 12.7148 4.7168ZM18.3691 7.06055C18.0957 6.80664 17.666 6.80664 17.4121 7.06055L16.2988 8.19336C16.0352 8.4668 16.0449 8.88672 16.2988 9.13086C16.5527 9.4043 16.9824 9.39453 17.2461 9.13086L18.3691 8.01758C18.623 7.76367 18.623 7.32422 18.3691 7.06055ZM20.6934 12.7246C20.6934 12.3535 20.3906 12.041 20.0293 12.041L18.457 12.041C18.0957 12.041 17.7832 12.3633 17.7832 12.7246C17.7832 13.0762 18.0957 13.3984 18.457 13.3984L20.0293 13.3984C20.3906 13.3984 20.6934 13.0859 20.6934 12.7246ZM18.3691 18.3789C18.6328 18.1055 18.623 17.6758 18.3691 17.4219L17.2363 16.3086C16.9824 16.0547 16.5527 16.0547 16.2988 16.3086C16.0352 16.5723 16.0352 16.9922 16.2988 17.2559L17.4121 18.3789C17.6758 18.6328 18.0957 18.6328 18.3691 18.3789ZM12.7148 20.7227C13.0762 20.7227 13.3887 20.4102 13.3887 20.0488L13.3887 18.4766C13.3887 18.1152 13.0762 17.8027 12.7148 17.8027C12.3535 17.8027 12.0312 18.1152 12.0312 18.4766L12.0312 20.0488C12.0312 20.4102 12.3535 20.7227 12.7148 20.7227ZM7.05078 18.3691C7.31445 18.6328 7.74414 18.6328 8.00781 18.3789L9.13086 17.2656C9.375 17.0117 9.38477 16.582 9.13086 16.3086C8.86719 16.0547 8.42773 16.0547 8.17383 16.3086L7.05078 17.4219C6.79688 17.6855 6.79688 18.1055 7.05078 18.3691ZM4.72656 12.7246C4.72656 13.0859 5.03906 13.3984 5.40039 13.3984L6.97266 13.3984C7.32422 13.3984 7.64648 13.0762 7.64648 12.7246C7.64648 12.3633 7.32422 12.041 6.97266 12.041L5.40039 12.041C5.03906 12.041 4.72656 12.3535 4.72656 12.7246ZM7.07031 7.06055C6.81641 7.32422 6.79688 7.76367 7.06055 8.01758L8.17383 9.13086C8.4375 9.4043 8.85742 9.39453 9.13086 9.13086C9.375 8.88672 9.375 8.45703 9.13086 8.19336L8.00781 7.06055C7.76367 6.81641 7.32422 6.81641 7.07031 7.06055Z"/><path d="M12.7051 16.4941C14.7949 16.4941 16.4746 14.8047 16.4746 12.7246C16.4746 10.6348 14.7949 8.95508 12.7051 8.95508C10.6152 8.95508 8.93555 10.6348 8.93555 12.7246C8.93555 14.8047 10.6152 16.4941 12.7051 16.4941Z"/></g></svg>`
     },
     {
@@ -51911,7 +51911,7 @@
       categories: ["keyboard","circled","weather"],
       tags: ["circle","circled","fill","keyboard","max","sun","sun max circle fill","sun_max_circle_fill","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.max.circle.fill.svg","symbol":"sun.max.circle.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.circle.fill.svg","symbol":"sun.max.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/sun.max.circle.fill.svg","symbol":"sun.max.circle.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.circle.fill.svg","symbol":"sun.max.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -51928,7 +51928,7 @@
       categories: ["keyboard","weather"],
       tags: ["fill","keyboard","max","sun","sun max fill","sun_max_fill","weather"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.max.fill.svg","symbol":"sun.max.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.fill.svg","symbol":"sun.max.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_THEME__SUN_MAX_FILL"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/sun.max.fill.svg","symbol":"sun.max.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.fill.svg","symbol":"sun.max.fill"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"ICON_SETTINGS_THEME__SUN_MAX_FILL"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2578 28.9258" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9258" opacity="0" width="29.2578" x="0" y="0"/>
@@ -51946,7 +51946,7 @@
       categories: ["keyboard","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle","weather"],
       tags: ["badged","exclamation mark","exclamationmark","keyboard","max","shapes","sun","sun max trianglebadge exclamationmark","sun_max_trianglebadge_exclamationmark","triangle","trianglebadge","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.max.trianglebadge.exclamationmark.svg","symbol":"sun.max.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/sun.max.trianglebadge.exclamationmark.svg","symbol":"sun.max.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.trianglebadge.exclamationmark.svg","symbol":"sun.max.trianglebadge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/sun.max.trianglebadge.exclamationmark.svg","symbol":"sun.max.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Keyboard/sun.max.trianglebadge.exclamationmark.svg","symbol":"sun.max.trianglebadge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.trianglebadge.exclamationmark.svg","symbol":"sun.max.trianglebadge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0586 29.4922" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.4922" opacity="0" width="30.0586" x="0" y="0"/>
@@ -51965,7 +51965,7 @@
       categories: ["keyboard","badged","badged-exclamationmark","badged-exclamationmark-triangle","badged-shapes","badged-shapes-triangle","weather"],
       tags: ["badged","exclamation mark","exclamationmark","fill","keyboard","max","shapes","sun","sun max trianglebadge exclamationmark fill","sun_max_trianglebadge_exclamationmark_fill","triangle","trianglebadge","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.max.trianglebadge.exclamationmark.fill.svg","symbol":"sun.max.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Badge/sun.max.trianglebadge.exclamationmark.fill.svg","symbol":"sun.max.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.trianglebadge.exclamationmark.fill.svg","symbol":"sun.max.trianglebadge.exclamationmark.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/sun.max.trianglebadge.exclamationmark.fill.svg","symbol":"sun.max.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Keyboard/sun.max.trianglebadge.exclamationmark.fill.svg","symbol":"sun.max.trianglebadge.exclamationmark.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.max.trianglebadge.exclamationmark.fill.svg","symbol":"sun.max.trianglebadge.exclamationmark.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0586 29.4922" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.4922" opacity="0" width="30.0586" x="0" y="0"/>
@@ -51984,7 +51984,7 @@
       categories: ["keyboard","weather"],
       tags: ["keyboard","min","sun","sun min","sun_min","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.min.svg","symbol":"sun.min"},{"repo":"svg-converter","file":"app-input/Weather/sun.min.svg","symbol":"sun.min"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/sun.min.svg","symbol":"sun.min"},{"repo":"svg-converter","file":"app-input/Weather/sun.min.svg","symbol":"sun.min"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.123 25.7715" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.7715" opacity="0" width="26.123" x="0" y="0"/>
@@ -52002,7 +52002,7 @@
       categories: ["keyboard","weather"],
       tags: ["fill","keyboard","min","sun","sun min fill","sun_min_fill","weather"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Keyboard/sun.min.fill.svg","symbol":"sun.min.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.min.fill.svg","symbol":"sun.min.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Keyboard/sun.min.fill.svg","symbol":"sun.min.fill"},{"repo":"svg-converter","file":"app-input/Weather/sun.min.fill.svg","symbol":"sun.min.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.123 25.7715" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.7715" opacity="0" width="26.123" x="0" y="0"/>
@@ -52638,7 +52638,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","teletype"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/teletype.svg","symbol":"teletype"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/teletype.svg","symbol":"teletype"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.6143 24.4434" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.4434" opacity="0" width="29.6143" x="0" y="0"/>
@@ -52655,7 +52655,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","answer","teletype","teletype answer","teletype_answer"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/teletype.answer.svg","symbol":"teletype.answer"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/teletype.answer.svg","symbol":"teletype.answer"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.3535 24.3164" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.3164" opacity="0" width="37.3535" x="0" y="0"/>
@@ -52672,7 +52672,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","answer","circle","circled","teletype","teletype answer circle","teletype_answer_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/teletype.answer.circle.svg","symbol":"teletype.answer.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/teletype.answer.circle.svg","symbol":"teletype.answer.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TELETYPE_ANSWER_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/teletype.answer.circle.svg","symbol":"teletype.answer.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/teletype.answer.circle.svg","symbol":"teletype.answer.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TELETYPE_ANSWER_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -52690,7 +52690,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","answer","circle","circled","fill","teletype","teletype answer circle fill","teletype_answer_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/teletype.answer.circle.fill.svg","symbol":"teletype.answer.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/teletype.answer.circle.fill.svg","symbol":"teletype.answer.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -52707,7 +52707,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","circle","circled","teletype","teletype circle","teletype_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/teletype.circle.svg","symbol":"teletype.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/teletype.circle.svg","symbol":"teletype.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TELETYPE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/teletype.circle.svg","symbol":"teletype.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/teletype.circle.svg","symbol":"teletype.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TELETYPE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -52725,7 +52725,7 @@
       categories: ["accessibility","circled"],
       tags: ["accessibility","circle","circled","fill","teletype","teletype circle fill","teletype_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/teletype.circle.fill.svg","symbol":"teletype.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/teletype.circle.fill.svg","symbol":"teletype.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -52916,7 +52916,7 @@
       categories: ["documents","media"],
       tags: ["append","document","documents","file","media","notes","page","paper","text","text append","text_append"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/text.append.svg","symbol":"text.append"},{"repo":"svg-converter","file":"app-input/Text Formatting/text.append.svg","symbol":"text.append"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/text.append.svg","symbol":"text.append"},{"repo":"svg-converter","file":"app-input/Text Formatting/text.append.svg","symbol":"text.append"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9531 22.6465" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.6465" opacity="0" width="26.9531" x="0" y="0"/>
@@ -53075,7 +53075,7 @@
       categories: ["documents","media"],
       tags: ["document","documents","file","insert","media","notes","page","paper","text","text insert","text_insert"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Media/text.insert.svg","symbol":"text.insert"},{"repo":"svg-converter","file":"app-input/Text Formatting/text.insert.svg","symbol":"text.insert"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Media/text.insert.svg","symbol":"text.insert"},{"repo":"svg-converter","file":"app-input/Text Formatting/text.insert.svg","symbol":"text.insert"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9531 22.5195" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.5195" opacity="0" width="26.9531" x="0" y="0"/>
@@ -53214,7 +53214,7 @@
       categories: ["arrows","documents","media"],
       tags: ["and","arrow","arrows","arrowtriangle","back","direction","document","documents","file","first","forward","line","media","navigate","notes","page","paper","text","text line first and arrowtriangle forward","text_line_first_and_arrowtriangle_forward"],
       repositories: ["mctree-mchome","svg-converter"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__TEXT_LINE_FIRST_AND_ARROWTRIANGLE_FORWARD"},{"repo":"svg-converter","file":"app-input/!Media/text.line.first.and.arrowtriangle.forward.svg","symbol":"text.line.first.and.arrowtriangle.forward"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__TEXT_LINE_FIRST_AND_ARROWTRIANGLE_FORWARD"},{"repo":"svg-converter","file":"app-input/Media/text.line.first.and.arrowtriangle.forward.svg","symbol":"text.line.first.and.arrowtriangle.forward"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.6299 27.4134" aria-hidden="true" focusable="false"><g><rect height="27.4134" opacity="0" width="40.6299" x="0" y="0"/><path d="M9.77051 24.947L33.7012 24.947C34.4482 24.947 35.0342 24.3268 35.0342 23.5944C35.0342 22.8376 34.4531 22.2321 33.7012 22.2321L9.77051 22.2321C9.02344 22.2321 8.44727 22.8473 8.44727 23.5944C8.44727 24.3122 9.0332 24.947 9.77051 24.947Z"/><path d="M9.77051 18.3552L33.7012 18.3552C34.4482 18.3552 35.0342 17.7302 35.0342 16.9929C35.0342 16.2409 34.4531 15.6403 33.7012 15.6403L9.77051 15.6403C9.02344 15.6403 8.44727 16.2555 8.44727 16.9929C8.44727 17.7155 9.0332 18.3552 9.77051 18.3552Z"/><path d="M9.77051 11.7585L33.7012 11.7585C34.4482 11.7585 35.0342 11.1335 35.0342 10.4011C35.0342 9.6491 34.4531 9.04364 33.7012 9.04364L9.77051 9.04364C9.02344 9.04364 8.44727 9.66375 8.44727 10.4011C8.44727 11.1237 9.0332 11.7585 9.77051 11.7585Z"/><path d="M10.0635 6.03582L33.4229 6.03582C34.4775 6.03582 35.0342 5.48406 35.0342 4.42938L35.0342 3.17938C35.0342 2.13934 34.4775 1.57781 33.4229 1.57781L10.0635 1.57781C9.01367 1.57781 8.45215 2.13934 8.45215 3.17938L8.45215 4.42938C8.45215 5.48406 9.01367 6.03582 10.0635 6.03582Z"/><path d="M1.4209 7.45184L6.0791 4.65399C6.75293 4.24871 6.73828 3.38446 6.0791 2.98895L1.4209 0.176448C0.722656-0.248357 0 0.12762 0 0.943049L0 6.69012C0 7.5202 0.727539 7.87176 1.4209 7.45184Z"/></g></svg>`
     },
     {
@@ -53226,7 +53226,7 @@
       categories: ["arrows","documents","media"],
       tags: ["and","arrow","arrows","arrowtriangle","back","direction","document","documents","file","forward","last","line","media","navigate","notes","page","paper","text","text line last and arrowtriangle forward","text_line_last_and_arrowtriangle_forward"],
       repositories: ["mctree-mchome","svg-converter"],
-      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__TEXT_LINE_LAST_AND_ARROWTRIANGLE_FORWARD"},{"repo":"svg-converter","file":"app-input/!Media/text.line.last.and.arrowtriangle.forward.svg","symbol":"text.line.last.and.arrowtriangle.forward"}],
+      sources: [{"repo":"mctree-mchome","file":"assets/js/icons.js","symbol":"__TEXT_LINE_LAST_AND_ARROWTRIANGLE_FORWARD"},{"repo":"svg-converter","file":"app-input/Media/text.line.last.and.arrowtriangle.forward.svg","symbol":"text.line.last.and.arrowtriangle.forward"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.6299 27.3744" aria-hidden="true" focusable="false"><g><rect height="27.3744" opacity="0" width="40.6299" x="0" y="0"/><path d="M9.77051 2.42742C9.0332 2.42742 8.44727 3.06707 8.44727 3.78973C8.44727 4.52703 9.02344 5.14227 9.77051 5.14227L33.7012 5.14227C34.4531 5.14227 35.0342 4.54168 35.0342 3.78973C35.0342 3.05242 34.4482 2.42742 33.7012 2.42742Z"/><path d="M9.77051 9.0241C9.0332 9.0241 8.44727 9.65887 8.44727 10.3815C8.44727 11.1237 9.02344 11.7389 9.77051 11.7389L33.7012 11.7389C34.4531 11.7389 35.0342 11.1335 35.0342 10.3815C35.0342 9.6491 34.4482 9.0241 33.7012 9.0241Z"/><path d="M9.77051 15.6208C9.0332 15.6208 8.44727 16.2507 8.44727 16.9733C8.44727 17.7155 9.02344 18.3356 9.77051 18.3356L33.7012 18.3356C34.4531 18.3356 35.0342 17.7253 35.0342 16.9733C35.0342 16.2409 34.4482 15.6208 33.7012 15.6208Z"/><path d="M10.0635 21.3434C9.01367 21.3434 8.45215 21.9001 8.45215 22.9499L8.45215 24.1999C8.45215 25.2399 9.01367 25.8014 10.0635 25.8014L33.4229 25.8014C34.4775 25.8014 35.0342 25.2399 35.0342 24.1999L35.0342 22.9499C35.0342 21.9001 34.4775 21.3434 33.4229 21.3434Z"/><path d="M1.4209 19.9225C0.727539 19.5075 0 19.8591 0 20.6891L0 26.4313C0 27.2468 0.722656 27.6227 1.4209 27.1979L6.0791 24.3854C6.73828 23.9899 6.75293 23.1257 6.0791 22.7253Z"/></g></svg>`
     },
     {
@@ -53535,7 +53535,7 @@
       categories: ["accessibility","editing"],
       tags: ["accessibility","editing","size","textformat","textformat size","textformat_size"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/textformat.size.svg","symbol":"textformat.size"},{"repo":"svg-converter","file":"app-input/Text Formatting/textformat.size.svg","symbol":"textformat.size"},{"repo":"svg-converter","file":"bulk-convert-format/textformat.size.svg","symbol":"textformat.size"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TEXTFORMAT_SIZE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/textformat.size.svg","symbol":"textformat.size"},{"repo":"svg-converter","file":"app-input/Text Formatting/textformat.size.svg","symbol":"textformat.size"},{"repo":"svg-converter","file":"bulk-convert-format/textformat.size.svg","symbol":"textformat.size"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TEXTFORMAT_SIZE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8018 19.248" aria-hidden="true" focusable="false">
  <g>
   <rect height="19.248" opacity="0" width="31.8018" x="0" y="0"/>
@@ -53553,7 +53553,7 @@
       categories: ["accessibility","editing"],
       tags: ["accessibility","editing","size","smaller","textformat","textformat size smaller","textformat_size_smaller"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/textformat.size.smaller.svg","symbol":"textformat.size.smaller"},{"repo":"svg-converter","file":"app-input/Text Formatting/textformat.size.smaller.svg","symbol":"textformat.size.smaller"},{"repo":"svg-converter","file":"bulk-convert-format/textformat.size.smaller.svg","symbol":"textformat.size.smaller"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TEXTFORMAT_SIZE_SMALLER"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/textformat.size.smaller.svg","symbol":"textformat.size.smaller"},{"repo":"svg-converter","file":"app-input/Text Formatting/textformat.size.smaller.svg","symbol":"textformat.size.smaller"},{"repo":"svg-converter","file":"bulk-convert-format/textformat.size.smaller.svg","symbol":"textformat.size.smaller"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TEXTFORMAT_SIZE_SMALLER"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.9932 14.3945" aria-hidden="true" focusable="false">
  <g>
   <rect height="14.3945" opacity="0" width="12.9932" x="0" y="0"/>
@@ -53980,7 +53980,7 @@
       categories: ["editing"],
       tags: ["editing","selection","timeline","timeline selection","timeline_selection"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/timeline.selection.svg","symbol":"timeline.selection"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/timeline.selection.svg","symbol":"timeline.selection"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.9951 23.8379" aria-hidden="true" focusable="false">
  <g>
   <rect height="23.8379" opacity="0" width="44.9951" x="0" y="0"/>
@@ -54157,7 +54157,7 @@
       categories: ["accessibility","nature"],
       tags: ["accessibility","nature","tortoise"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/tortoise.svg","symbol":"tortoise"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.svg","symbol":"tortoise"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/tortoise.svg","symbol":"tortoise"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.svg","symbol":"tortoise"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.374 25.6543" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.6543" opacity="0" width="43.374" x="0" y="0"/>
@@ -54174,7 +54174,7 @@
       categories: ["accessibility","nature","circled"],
       tags: ["accessibility","circle","circled","nature","tortoise","tortoise circle","tortoise_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/tortoise.circle.svg","symbol":"tortoise.circle"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.circle.svg","symbol":"tortoise.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/tortoise.circle.svg","symbol":"tortoise.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TORTOISE_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/tortoise.circle.svg","symbol":"tortoise.circle"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.circle.svg","symbol":"tortoise.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/tortoise.circle.svg","symbol":"tortoise.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TORTOISE_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -54192,7 +54192,7 @@
       categories: ["accessibility","nature","circled"],
       tags: ["accessibility","circle","circled","fill","nature","tortoise","tortoise circle fill","tortoise_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/tortoise.circle.fill.svg","symbol":"tortoise.circle.fill"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.circle.fill.svg","symbol":"tortoise.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/tortoise.circle.fill.svg","symbol":"tortoise.circle.fill"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.circle.fill.svg","symbol":"tortoise.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -54209,7 +54209,7 @@
       categories: ["accessibility","nature"],
       tags: ["accessibility","fill","nature","tortoise","tortoise fill","tortoise_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/tortoise.fill.svg","symbol":"tortoise.fill"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.fill.svg","symbol":"tortoise.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/tortoise.fill.svg","symbol":"tortoise.fill"},{"repo":"svg-converter","file":"app-input/Nature/tortoise.fill.svg","symbol":"tortoise.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.8271 25.1367" aria-hidden="true" focusable="false">
  <g>
   <rect height="25.1367" opacity="0" width="42.8271" x="0" y="0"/>
@@ -54227,7 +54227,7 @@
       categories: ["security"],
       tags: ["privacy & security","touchid"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Privacy & Security/touchid.svg","symbol":"touchid"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Privacy & Security/touchid.svg","symbol":"touchid"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.8786 28.0762" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.0762" opacity="0" width="28.8786" x="0" y="0"/>
@@ -54249,7 +54249,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","drive","front","maps & travel","side","train","train side front car","train_side_front_car","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/train.side.front.car.svg","symbol":"train.side.front.car"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/train.side.front.car.svg","symbol":"train.side.front.car"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.1084 20.7422" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7422" opacity="0" width="36.1084" x="0" y="0"/>
@@ -54266,7 +54266,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","drive","maps & travel","middle","side","train","train side middle car","train_side_middle_car","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/train.side.middle.car.svg","symbol":"train.side.middle.car"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/train.side.middle.car.svg","symbol":"train.side.middle.car"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8662 20.7422" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7422" opacity="0" width="32.8662" x="0" y="0"/>
@@ -54283,7 +54283,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["car","drive","maps & travel","rear","side","train","train side rear car","train_side_rear_car","transport","transportation","travel","vehicle"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/train.side.rear.car.svg","symbol":"train.side.rear.car"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/train.side.rear.car.svg","symbol":"train.side.rear.car"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8662 20.7422" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.7422" opacity="0" width="32.8662" x="0" y="0"/>
@@ -54300,7 +54300,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["maps","maps & travel","tram","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/tram.svg","symbol":"tram"},{"repo":"svg-converter","file":"app-input/!Transportation/tram.svg","symbol":"tram"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/tram.svg","symbol":"tram"},{"repo":"svg-converter","file":"app-input/Transportation/tram.svg","symbol":"tram"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.79 33.7988" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.7988" opacity="0" width="24.79" x="0" y="0"/>
@@ -54317,7 +54317,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["card","maps & travel","tram","tram card","tram_card","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/tram.card.svg","symbol":"tram.card"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/tram.card.svg","symbol":"tram.card"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3467 22.0508" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.0508" opacity="0" width="30.3467" x="0" y="0"/>
@@ -54335,7 +54335,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["card","fill","maps & travel","tram","tram card fill","tram_card_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/tram.card.fill.svg","symbol":"tram.card.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/tram.card.fill.svg","symbol":"tram.card.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3467 22.0508" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.0508" opacity="0" width="30.3467" x="0" y="0"/>
@@ -54352,7 +54352,7 @@
       categories: ["maps-travel","maps","circled","transportation"],
       tags: ["circle","circled","maps","maps & travel","tram","tram circle","tram_circle","transportation"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/tram.circle.svg","symbol":"tram.circle"},{"repo":"svg-converter","file":"app-input/!Transportation/tram.circle.svg","symbol":"tram.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/tram.circle.svg","symbol":"tram.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TRAM_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/tram.circle.svg","symbol":"tram.circle"},{"repo":"svg-converter","file":"app-input/Transportation/tram.circle.svg","symbol":"tram.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/tram.circle.svg","symbol":"tram.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__TRAM_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -54370,7 +54370,7 @@
       categories: ["maps-travel","maps","circled","transportation"],
       tags: ["circle","circled","fill","maps","maps & travel","tram","tram circle fill","tram_circle_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/tram.circle.fill.svg","symbol":"tram.circle.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/tram.circle.fill.svg","symbol":"tram.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/tram.circle.fill.svg","symbol":"tram.circle.fill"},{"repo":"svg-converter","file":"app-input/Transportation/tram.circle.fill.svg","symbol":"tram.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -54387,7 +54387,7 @@
       categories: ["maps-travel","maps","transportation"],
       tags: ["fill","maps","maps & travel","tram","tram fill","tram_fill","transportation"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/tram.fill.svg","symbol":"tram.fill"},{"repo":"svg-converter","file":"app-input/!Transportation/tram.fill.svg","symbol":"tram.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/tram.fill.svg","symbol":"tram.fill"},{"repo":"svg-converter","file":"app-input/Transportation/tram.fill.svg","symbol":"tram.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.8281 33.5645" aria-hidden="true" focusable="false">
  <g>
   <rect height="33.5645" opacity="0" width="23.8281" x="0" y="0"/>
@@ -54404,7 +54404,7 @@
       categories: ["maps-travel","transportation"],
       tags: ["fill","maps & travel","tram","tram fill tunnel","tram_fill_tunnel","transportation","tunnel"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/tram.fill.tunnel.svg","symbol":"tram.fill.tunnel"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/tram.fill.tunnel.svg","symbol":"tram.fill.tunnel"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.9805 34.2676" aria-hidden="true" focusable="false">
  <g>
   <rect height="34.2676" opacity="0" width="29.9805" x="0" y="0"/>
@@ -54421,7 +54421,7 @@
       categories: ["editing"],
       tags: ["and","editing","horizontal","line","trapezoid","trapezoid and line horizontal","trapezoid_and_line_horizontal"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/trapezoid.and.line.horizontal.svg","symbol":"trapezoid.and.line.horizontal"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/trapezoid.and.line.horizontal.svg","symbol":"trapezoid.and.line.horizontal"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2021 22.4828" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.4828" opacity="0" width="32.2021" x="0" y="0"/>
@@ -54439,7 +54439,7 @@
       categories: ["editing"],
       tags: ["and","editing","fill","horizontal","line","trapezoid","trapezoid and line horizontal fill","trapezoid_and_line_horizontal_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/trapezoid.and.line.horizontal.fill.svg","symbol":"trapezoid.and.line.horizontal.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/trapezoid.and.line.horizontal.fill.svg","symbol":"trapezoid.and.line.horizontal.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2021 22.3961" aria-hidden="true" focusable="false">
  <g>
   <rect height="22.3961" opacity="0" width="32.2021" x="0" y="0"/>
@@ -54456,7 +54456,7 @@
       categories: ["editing"],
       tags: ["and","editing","line","trapezoid","trapezoid and line vertical","trapezoid_and_line_vertical","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/trapezoid.and.line.vertical.svg","symbol":"trapezoid.and.line.vertical"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/trapezoid.and.line.vertical.svg","symbol":"trapezoid.and.line.vertical"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.2449 31.1816" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.1816" opacity="0" width="26.2449" x="0" y="0"/>
@@ -54474,7 +54474,7 @@
       categories: ["editing"],
       tags: ["and","editing","fill","line","trapezoid","trapezoid and line vertical fill","trapezoid_and_line_vertical_fill","vertical"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/trapezoid.and.line.vertical.fill.svg","symbol":"trapezoid.and.line.vertical.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/trapezoid.and.line.vertical.fill.svg","symbol":"trapezoid.and.line.vertical.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.2848 31.1816" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.1816" opacity="0" width="26.2848" x="0" y="0"/>
@@ -54808,7 +54808,7 @@
       categories: ["transportation"],
       tags: ["box","transportation","truck","truck box","truck_box"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/truck.box.svg","symbol":"truck.box"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/truck.box.svg","symbol":"truck.box"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.4043 28.9355" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.9355" opacity="0" width="39.4043" x="0" y="0"/>
@@ -54825,7 +54825,7 @@
       categories: ["badged","badged-clock","status","time","transportation"],
       tags: ["badge","badged","box","clock","history","recent","status","time","transportation","truck","truck box badge clock","truck_box_badge_clock"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/truck.box.badge.clock.svg","symbol":"truck.box.badge.clock"},{"repo":"svg-converter","file":"app-input/Badge/truck.box.badge.clock.svg","symbol":"truck.box.badge.clock"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/truck.box.badge.clock.svg","symbol":"truck.box.badge.clock"},{"repo":"svg-converter","file":"app-input/Transportation/truck.box.badge.clock.svg","symbol":"truck.box.badge.clock"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.5703 37.3633" aria-hidden="true" focusable="false">
  <g>
   <rect height="37.3633" opacity="0" width="49.5703" x="0" y="0"/>
@@ -54843,7 +54843,7 @@
       categories: ["badged","badged-clock","status","time","transportation"],
       tags: ["badge","badged","box","clock","fill","history","recent","status","time","transportation","truck","truck box badge clock fill","truck_box_badge_clock_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/truck.box.badge.clock.fill.svg","symbol":"truck.box.badge.clock.fill"},{"repo":"svg-converter","file":"app-input/Badge/truck.box.badge.clock.fill.svg","symbol":"truck.box.badge.clock.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/truck.box.badge.clock.fill.svg","symbol":"truck.box.badge.clock.fill"},{"repo":"svg-converter","file":"app-input/Transportation/truck.box.badge.clock.fill.svg","symbol":"truck.box.badge.clock.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.5703 37.2949" aria-hidden="true" focusable="false">
  <g>
   <rect height="37.2949" opacity="0" width="49.5703" x="0" y="0"/>
@@ -54861,7 +54861,7 @@
       categories: ["transportation"],
       tags: ["box","fill","transportation","truck","truck box fill","truck_box_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/truck.box.fill.svg","symbol":"truck.box.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Transportation/truck.box.fill.svg","symbol":"truck.box.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.4043 28.4668" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.4668" opacity="0" width="39.4043" x="0" y="0"/>
@@ -60387,7 +60387,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","voiceover"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/voiceover.svg","symbol":"voiceover"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/voiceover.svg","symbol":"voiceover"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.3213 29.8926" aria-hidden="true" focusable="false">
  <g>
   <rect height="29.8926" opacity="0" width="39.3213" x="0" y="0"/>
@@ -60499,7 +60499,7 @@
       categories: ["editing"],
       tags: ["and","editing","outline","wand","wand and outline","wand_and_outline"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/wand.and.outline.svg","symbol":"wand.and.outline"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/wand.and.outline.svg","symbol":"wand.and.outline"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.4739 31.4809" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.4809" opacity="0" width="29.4739" x="0" y="0"/>
@@ -60517,7 +60517,7 @@
       categories: ["editing"],
       tags: ["and","editing","inverse","outline","wand","wand and outline inverse","wand_and_outline_inverse"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/wand.and.outline.inverse.svg","symbol":"wand.and.outline.inverse"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/wand.and.outline.inverse.svg","symbol":"wand.and.outline.inverse"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.4739 31.4809" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.4809" opacity="0" width="29.4739" x="0" y="0"/>
@@ -60535,7 +60535,7 @@
       categories: ["editing","rays-sparkles"],
       tags: ["and","editing","rays","rays & sparkles","wand","wand and rays","wand_and_rays"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/wand.and.rays.svg","symbol":"wand.and.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.rays.svg","symbol":"wand.and.rays"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/wand.and.rays.svg","symbol":"wand.and.rays"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.rays.svg","symbol":"wand.and.rays"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0332 28.75" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.75" opacity="0" width="29.0332" x="0" y="0"/>
@@ -60559,7 +60559,7 @@
       categories: ["editing","rays-sparkles"],
       tags: ["and","editing","inverse","rays","rays & sparkles","wand","wand and rays inverse","wand_and_rays_inverse"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/wand.and.rays.inverse.svg","symbol":"wand.and.rays.inverse"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.rays.inverse.svg","symbol":"wand.and.rays.inverse"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/wand.and.rays.inverse.svg","symbol":"wand.and.rays.inverse"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.rays.inverse.svg","symbol":"wand.and.rays.inverse"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.0332 28.75" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.75" opacity="0" width="29.0332" x="0" y="0"/>
@@ -60583,7 +60583,7 @@
       categories: ["editing","rays-sparkles"],
       tags: ["and","editing","rays & sparkles","sparkles","wand","wand and sparkles","wand_and_sparkles"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/wand.and.sparkles.svg","symbol":"wand.and.sparkles"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.sparkles.svg","symbol":"wand.and.sparkles"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/wand.and.sparkles.svg","symbol":"wand.and.sparkles"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.sparkles.svg","symbol":"wand.and.sparkles"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3584 28.0566" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.0566" opacity="0" width="27.3584" x="0" y="0"/>
@@ -60601,7 +60601,7 @@
       categories: ["editing","rays-sparkles"],
       tags: ["and","editing","inverse","rays & sparkles","sparkles","wand","wand and sparkles inverse","wand_and_sparkles_inverse"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Editing/wand.and.sparkles.inverse.svg","symbol":"wand.and.sparkles.inverse"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.sparkles.inverse.svg","symbol":"wand.and.sparkles.inverse"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__WAND_AND_SPARKLES_INVERSE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Editing/wand.and.sparkles.inverse.svg","symbol":"wand.and.sparkles.inverse"},{"repo":"svg-converter","file":"app-input/Sparkles:Rays/wand.and.sparkles.inverse.svg","symbol":"wand.and.sparkles.inverse"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__WAND_AND_SPARKLES_INVERSE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3584 28.0566" aria-hidden="true" focusable="false">
  <g>
   <rect height="28.0566" opacity="0" width="27.3584" x="0" y="0"/>
@@ -60958,7 +60958,7 @@
       categories: ["maps","media"],
       tags: ["maps","media","waveform"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.svg","symbol":"waveform"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/waveform.svg","symbol":"waveform"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.8486 27.4121" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.4121" opacity="0" width="24.8486" x="0" y="0"/>
@@ -60980,7 +60980,7 @@
       categories: ["maps","media","badged","badged-checkmark","status"],
       tags: ["badge","badged","check","checkmark","confirm","done","maps","media","status","success","waveform","waveform badge checkmark","waveform_badge_checkmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.badge.checkmark.svg","symbol":"waveform.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.checkmark.svg","symbol":"waveform.badge.checkmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.checkmark.svg","symbol":"waveform.badge.checkmark"},{"repo":"svg-converter","file":"app-input/Maps/waveform.badge.checkmark.svg","symbol":"waveform.badge.checkmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.8545 30.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0391" opacity="0" width="40.8545" x="0" y="0"/>
@@ -61003,7 +61003,7 @@
       categories: ["maps","media","badged","badged-exclamationmark","status"],
       tags: ["badge","badged","exclamation mark","exclamationmark","maps","media","status","waveform","waveform badge exclamationmark","waveform_badge_exclamationmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.badge.exclamationmark.svg","symbol":"waveform.badge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.exclamationmark.svg","symbol":"waveform.badge.exclamationmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.exclamationmark.svg","symbol":"waveform.badge.exclamationmark"},{"repo":"svg-converter","file":"app-input/Maps/waveform.badge.exclamationmark.svg","symbol":"waveform.badge.exclamationmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.8545 30.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0391" opacity="0" width="40.8545" x="0" y="0"/>
@@ -61026,7 +61026,7 @@
       categories: ["accessibility","interface","media","badged","badged-magnifyingglass","status"],
       tags: ["accessibility","badge","badged","discover","find","interface","lookup","magnifying glass","magnifyingglass","media","search","status","waveform","waveform badge magnifyingglass","waveform_badge_magnifyingglass"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/waveform.badge.magnifyingglass.svg","symbol":"waveform.badge.magnifyingglass"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.magnifyingglass.svg","symbol":"waveform.badge.magnifyingglass"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/waveform.badge.magnifyingglass.svg","symbol":"waveform.badge.magnifyingglass"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.magnifyingglass.svg","symbol":"waveform.badge.magnifyingglass"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.542 31.6797" aria-hidden="true" focusable="false">
  <g>
   <rect height="31.6797" opacity="0" width="40.542" x="0" y="0"/>
@@ -61071,7 +61071,7 @@
       categories: ["actions","maps","media","badged","badged-minus","status"],
       tags: ["actions","badge","badged","maps","media","minus","remove","status","subtract","waveform","waveform badge minus","waveform_badge_minus"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.badge.minus.svg","symbol":"waveform.badge.minus"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.minus.svg","symbol":"waveform.badge.minus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.minus.svg","symbol":"waveform.badge.minus"},{"repo":"svg-converter","file":"app-input/Maps/waveform.badge.minus.svg","symbol":"waveform.badge.minus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.8545 30.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0391" opacity="0" width="40.8545" x="0" y="0"/>
@@ -61094,7 +61094,7 @@
       categories: ["actions","maps","media","badged","badged-plus","status"],
       tags: ["actions","add","badge","badged","create","maps","media","new","plus","status","waveform","waveform badge plus","waveform_badge_plus"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.badge.plus.svg","symbol":"waveform.badge.plus"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.plus.svg","symbol":"waveform.badge.plus"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.plus.svg","symbol":"waveform.badge.plus"},{"repo":"svg-converter","file":"app-input/Maps/waveform.badge.plus.svg","symbol":"waveform.badge.plus"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.8545 30.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0391" opacity="0" width="40.8545" x="0" y="0"/>
@@ -61117,7 +61117,7 @@
       categories: ["maps","media","badged","badged-xmark","status"],
       tags: ["badge","badged","cancel","close","dismiss","maps","media","status","waveform","waveform badge xmark","waveform_badge_xmark","xmark"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.badge.xmark.svg","symbol":"waveform.badge.xmark"},{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.xmark.svg","symbol":"waveform.badge.xmark"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/waveform.badge.xmark.svg","symbol":"waveform.badge.xmark"},{"repo":"svg-converter","file":"app-input/Maps/waveform.badge.xmark.svg","symbol":"waveform.badge.xmark"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.8545 30.0391" aria-hidden="true" focusable="false">
  <g>
   <rect height="30.0391" opacity="0" width="40.8545" x="0" y="0"/>
@@ -61140,7 +61140,7 @@
       categories: ["maps","media","circled"],
       tags: ["circle","circled","maps","media","waveform","waveform circle","waveform_circle"],
       repositories: ["svg-converter","visit-tracker"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.circle.svg","symbol":"waveform.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/waveform.circle.svg","symbol":"waveform.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__WAVEFORM_CIRCLE"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/waveform.circle.svg","symbol":"waveform.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/waveform.circle.svg","symbol":"waveform.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__WAVEFORM_CIRCLE"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -61163,7 +61163,7 @@
       categories: ["maps","media","circled"],
       tags: ["circle","circled","fill","maps","media","waveform","waveform circle fill","waveform_circle_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.circle.fill.svg","symbol":"waveform.circle.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/waveform.circle.fill.svg","symbol":"waveform.circle.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.6943 26.3477" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.3477" opacity="0" width="26.6943" x="0" y="0"/>
@@ -61180,7 +61180,7 @@
       categories: ["maps","media"],
       tags: ["low","maps","media","waveform","waveform low","waveform_low"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.low.svg","symbol":"waveform.low"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/waveform.low.svg","symbol":"waveform.low"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.8486 11.8652" aria-hidden="true" focusable="false">
  <g>
   <rect height="11.8652" opacity="0" width="24.8486" x="0" y="0"/>
@@ -61202,7 +61202,7 @@
       categories: ["maps","media"],
       tags: ["maps","media","mid","waveform","waveform mid","waveform_mid"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.mid.svg","symbol":"waveform.mid"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/waveform.mid.svg","symbol":"waveform.mid"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.8486 20.6543" aria-hidden="true" focusable="false">
  <g>
   <rect height="20.6543" opacity="0" width="24.8486" x="0" y="0"/>
@@ -61359,7 +61359,7 @@
       categories: ["maps","media","slashed"],
       tags: ["maps","media","slash","slashed","waveform","waveform slash","waveform_slash"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Maps/waveform.slash.svg","symbol":"waveform.slash"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Maps/waveform.slash.svg","symbol":"waveform.slash"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.5496 27.9724" aria-hidden="true" focusable="false">
  <g>
   <rect height="27.9724" opacity="0" width="29.5496" x="0" y="0"/>
@@ -61382,7 +61382,7 @@
       categories: ["accessibility"],
       tags: ["accessibility","wheelchair"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/wheelchair.svg","symbol":"wheelchair"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/wheelchair.svg","symbol":"wheelchair"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.1172 26.8555" aria-hidden="true" focusable="false">
  <g>
   <rect height="26.8555" opacity="0" width="30.1172" x="0" y="0"/>
@@ -62304,7 +62304,7 @@
       categories: ["math","circled","status"],
       tags: ["cancel","circle","circled","close","dismiss","math","multiply","multiply circle","multiply_circle","status","xmark","xmark circle","xmark_circle"],
       repositories: ["pickle-score","svg-converter","visit-tracker"],
-      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__XMARK_CIRCLE"},{"repo":"svg-converter","file":"app-input/!Math/multiply.circle.svg","symbol":"multiply.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/multiply.circle.svg","symbol":"multiply.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/xmark.circle.svg","symbol":"xmark.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MULTIPLY_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__XMARK_CIRCLE"}],
+      sources: [{"repo":"pickle-score","file":"assets/js/icons.js","symbol":"__XMARK_CIRCLE"},{"repo":"svg-converter","file":"app-input/Math/multiply.circle.svg","symbol":"multiply.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/multiply.circle.svg","symbol":"multiply.circle"},{"repo":"svg-converter","file":"bulk-convert-circle/xmark.circle.svg","symbol":"xmark.circle"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__MULTIPLY_CIRCLE"},{"repo":"visit-tracker","file":"assets/js/icons.js","symbol":"__XMARK_CIRCLE"}],
       svg: `<svg class="sf-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8008 25.459" aria-hidden="true" focusable="false"><g><rect height="25.459" opacity="0" width="25.8008" x="0" y="0"/><path d="M12.7148 25.4395C19.7363 25.4395 25.4395 19.7461 25.4395 12.7246C25.4395 5.70312 19.7363 0 12.7148 0C5.69336 0 0 5.70312 0 12.7246C0 19.7461 5.69336 25.4395 12.7148 25.4395ZM12.7148 23.623C6.68945 23.623 1.81641 18.75 1.81641 12.7246C1.81641 6.69922 6.68945 1.82617 12.7148 1.82617C18.7402 1.82617 23.6133 6.69922 23.6133 12.7246C23.6133 18.75 18.7402 23.623 12.7148 23.623Z"/><path d="M8.98438 17.6953L17.6758 8.99414C17.8516 8.82812 17.9492 8.61328 17.9492 8.37891C17.9492 7.89062 17.5586 7.51953 17.0703 7.51953C16.8359 7.51953 16.6309 7.60742 16.4648 7.7832L7.74414 16.4746C7.56836 16.6504 7.48047 16.8457 7.48047 17.0996C7.48047 17.5781 7.86133 17.9688 8.34961 17.9688C8.60352 17.9688 8.80859 17.8711 8.98438 17.6953ZM16.4453 17.6953C16.6113 17.8711 16.8164 17.9688 17.0703 17.9688C17.5586 17.9688 17.9492 17.5781 17.9492 17.0996C17.9492 16.8457 17.8516 16.6504 17.6758 16.4746L8.96484 7.7832C8.78906 7.60742 8.59375 7.51953 8.34961 7.51953C7.86133 7.51953 7.48047 7.89062 7.48047 8.37891C7.48047 8.61328 7.56836 8.82812 7.74414 8.99414Z"/></g></svg>`
     },
     {
@@ -62316,7 +62316,7 @@
       categories: ["maps-travel","badged","badged-airplane","circled","status","transportation"],
       tags: ["airplane","badge","badged","cancel","circle","circled","close","dismiss","flight","maps & travel","plane","status","transport","transportation","travel","xmark","xmark circle badge airplane","xmark_circle_badge_airplane"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/xmark.circle.badge.airplane.svg","symbol":"xmark.circle.badge.airplane"},{"repo":"svg-converter","file":"app-input/Badge/xmark.circle.badge.airplane.svg","symbol":"xmark.circle.badge.airplane"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/xmark.circle.badge.airplane.svg","symbol":"xmark.circle.badge.airplane"},{"repo":"svg-converter","file":"app-input/Transportation/xmark.circle.badge.airplane.svg","symbol":"xmark.circle.badge.airplane"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.1475 36.1035" aria-hidden="true" focusable="false">
  <g>
   <rect height="36.1035" opacity="0" width="41.1475" x="0" y="0"/>
@@ -62334,7 +62334,7 @@
       categories: ["maps-travel","badged","badged-airplane","circled","status","transportation"],
       tags: ["airplane","badge","badged","cancel","circle","circled","close","dismiss","fill","flight","maps & travel","plane","status","transport","transportation","travel","xmark","xmark circle badge airplane fill","xmark_circle_badge_airplane_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Transportation/xmark.circle.badge.airplane.fill.svg","symbol":"xmark.circle.badge.airplane.fill"},{"repo":"svg-converter","file":"app-input/Badge/xmark.circle.badge.airplane.fill.svg","symbol":"xmark.circle.badge.airplane.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Badge/xmark.circle.badge.airplane.fill.svg","symbol":"xmark.circle.badge.airplane.fill"},{"repo":"svg-converter","file":"app-input/Transportation/xmark.circle.badge.airplane.fill.svg","symbol":"xmark.circle.badge.airplane.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.1475 36.1035" aria-hidden="true" focusable="false">
  <g>
   <rect height="36.1035" opacity="0" width="41.1475" x="0" y="0"/>
@@ -62394,7 +62394,7 @@
       categories: ["shapes","circled","status"],
       tags: ["accessibility","cancel","circle","circled","close","dismiss","shapes","square","squared","status","triangle","xmark","xmark triangle circle square","xmark_triangle_circle_square"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/xmark.triangle.circle.square.svg","symbol":"xmark.triangle.circle.square"},{"repo":"svg-converter","file":"app-input/Shapes/xmark.triangle.circle.square.svg","symbol":"xmark.triangle.circle.square"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/xmark.triangle.circle.square.svg","symbol":"xmark.triangle.circle.square"},{"repo":"svg-converter","file":"app-input/Shapes/xmark.triangle.circle.square.svg","symbol":"xmark.triangle.circle.square"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.5312 24.0137" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0137" opacity="0" width="24.5312" x="0" y="0"/>
@@ -62414,7 +62414,7 @@
       categories: ["shapes","circled","status"],
       tags: ["accessibility","cancel","circle","circled","close","dismiss","fill","shapes","square","squared","status","triangle","xmark","xmark triangle circle square fill","xmark_triangle_circle_square_fill"],
       repositories: ["svg-converter"],
-      sources: [{"repo":"svg-converter","file":"app-input/!Accessibility/xmark.triangle.circle.square.fill.svg","symbol":"xmark.triangle.circle.square.fill"},{"repo":"svg-converter","file":"app-input/Shapes/xmark.triangle.circle.square.fill.svg","symbol":"xmark.triangle.circle.square.fill"}],
+      sources: [{"repo":"svg-converter","file":"app-input/Accessibility/xmark.triangle.circle.square.fill.svg","symbol":"xmark.triangle.circle.square.fill"},{"repo":"svg-converter","file":"app-input/Shapes/xmark.triangle.circle.square.fill.svg","symbol":"xmark.triangle.circle.square.fill"}],
       svg: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.5312 24.0137" aria-hidden="true" focusable="false">
  <g>
   <rect height="24.0137" opacity="0" width="24.5312" x="0" y="0"/>

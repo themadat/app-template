@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-02T04:23:06Z",
-  "applicationVersion": "0.0.1.25",
+  "generatedAt": "2026-09-02T04:46:13Z",
+  "applicationVersion": "0.0.1.26",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -142,6 +142,14 @@
       ]
     },
     {
+      "iconId": "africa-map-svgrepo-com-d6ad37",
+      "label": "Africa Map",
+      "categories": [
+        "maps-travel",
+        "maps"
+      ]
+    },
+    {
       "iconId": "apple-meditate-square-stack-a536b2",
       "label": "Apple Meditate Square Stack",
       "categories": [
@@ -156,6 +164,54 @@
         "health",
         "nature"
       ]
+    },
+    {
+      "iconId": "drink-beer-c1ded2",
+      "label": "Drink Beer",
+      "categories": [
+        "food-drink"
+      ],
+      "kind": "custom"
+    },
+    {
+      "iconId": "drink-fancy-cocktail-c5221f",
+      "label": "Drink Fancy Cocktail",
+      "categories": [
+        "food-drink"
+      ],
+      "kind": "custom"
+    },
+    {
+      "iconId": "drink-house-rail-4fbb2d",
+      "label": "Drink House Rail",
+      "categories": [
+        "food-drink"
+      ],
+      "kind": "custom"
+    },
+    {
+      "iconId": "drink-neat-pour-89b01d",
+      "label": "Drink Neat Pour",
+      "categories": [
+        "food-drink"
+      ],
+      "kind": "custom"
+    },
+    {
+      "iconId": "drink-next-round-c0b38a",
+      "label": "Drink Next Round",
+      "categories": [
+        "food-drink"
+      ],
+      "kind": "custom"
+    },
+    {
+      "iconId": "drink-something-nice-b93f55",
+      "label": "Drink Something Nice",
+      "categories": [
+        "food-drink"
+      ],
+      "kind": "custom"
     },
     {
       "iconId": "lock-square-stack-7f6268",
