@@ -14,6 +14,11 @@
   const sourceIconCatalog = App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : [];
   const iconCategories = App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : [];
   const iconCategoryById = new Map(iconCategories.map(function (category) { return [category.id, category]; }));
+  const ICON_CATEGORY_SECTIONS = Object.freeze([
+    Object.freeze({ id: "meaning", label: "What it is" }),
+    Object.freeze({ id: "appearance", label: "How it looks" })
+  ]);
+  const ICON_APPEARANCE_ORDER = Object.freeze(["badged", "circled", "squared", "slashed", "shapes", "rays-sparkles"]);
   const sourceIconById = new Map(sourceIconCatalog.map(function (icon) { return [icon.id, icon]; }));
   let iconCatalog = sourceIconCatalog;
   let iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
@@ -32,6 +37,16 @@
   const $ = function (selector, root) { return (root || document).querySelector(selector); };
   const $$ = function (selector, root) { return Array.from((root || document).querySelectorAll(selector)); };
   const versionedAsset = function (path) { return path + "?v=" + encodeURIComponent(config.identity.buildId); };
+
+  function categoryRootsForSection(roots, sectionId) {
+    const matches = roots.filter(function (category) { return (category.section || "meaning") === sectionId; });
+    if (sectionId !== "appearance") return matches;
+    return matches.sort(function (a, b) {
+      const aIndex = ICON_APPEARANCE_ORDER.indexOf(a.id);
+      const bIndex = ICON_APPEARANCE_ORDER.indexOf(b.id);
+      return (aIndex < 0 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex < 0 ? Number.MAX_SAFE_INTEGER : bIndex);
+    });
+  }
 
   const SHORTCUTS = [
     { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
@@ -328,7 +343,7 @@
     }
 
     const choices = iconCategories.map(function (category) {
-      return { id: category.id, label: category.label, parent: category.parent || "", count: counts.get(category.id) || 0 };
+      return { id: category.id, label: category.label, parent: category.parent || "", section: category.section || "meaning", count: counts.get(category.id) || 0 };
     });
 
     function categoryTree(choice, depth) {
@@ -341,7 +356,14 @@
       return '<div class="icon-category-group" data-icon-category-depth="' + depth + '">' + branch + childMarkup + '</div>';
     }
 
-    container.innerHTML = choiceButton({ id: "all", label: "All", parent: "", count: baseMatches.length }, false) + choices.filter(function (choice) { return !choice.parent; }).map(function (choice) { return categoryTree(choice, 0); }).join("");
+    const rootChoices = choices.filter(function (choice) { return !choice.parent; });
+    const sections = ICON_CATEGORY_SECTIONS.map(function (section) {
+      const sectionChoices = categoryRootsForSection(rootChoices, section.id);
+      if (!sectionChoices.length) return "";
+      const headingId = "icon-category-section-" + section.id;
+      return '<section class="icon-category-section" aria-labelledby="' + headingId + '"><h3 id="' + headingId + '" class="icon-category-section-title">' + u.escapeHtml(section.label) + '</h3><div class="icon-category-section-groups">' + sectionChoices.map(function (choice) { return categoryTree(choice, 0); }).join("") + '</div></section>';
+    }).join("");
+    container.innerHTML = '<div class="icon-category-all">' + choiceButton({ id: "all", label: "All", parent: "", count: baseMatches.length }, false) + '</div>' + sections;
     icons.mount(container);
     decorateShortcutControls(container);
   }
@@ -413,7 +435,12 @@
       const children = iconCategoryChildren(category.id);
       return '<div class="icon-edit-group-cluster" data-icon-edit-group="' + u.escapeHtml(category.id) + '">' + iconEditChoice(category, selected) + (children.length ? '<div class="icon-edit-subgroups" role="group" aria-label="' + u.escapeHtml(category.label + " subgroups") + '">' + children.map(categoryTree).join("") + '</div>' : "") + '</div>';
     }
-    $("#iconEditGroups").innerHTML = iconCategories.filter(function (category) { return !category.parent; }).map(categoryTree).join("");
+    const roots = iconCategories.filter(function (category) { return !category.parent; });
+    $("#iconEditGroups").innerHTML = ICON_CATEGORY_SECTIONS.map(function (section) {
+      const categories = categoryRootsForSection(roots, section.id);
+      if (!categories.length) return "";
+      return '<section class="icon-edit-category-section" aria-label="' + u.escapeHtml(section.label) + '"><h4 class="icon-edit-category-section-title">' + u.escapeHtml(section.label) + '</h4>' + categories.map(categoryTree).join("") + '</section>';
+    }).join("");
     updateIconEditControls();
   }
 

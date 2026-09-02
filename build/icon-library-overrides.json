@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-02T18:13:36Z",
-  "applicationVersion": "0.0.1.27",
+  "generatedAt": "2026-09-02T19:13:56Z",
+  "applicationVersion": "0.0.1.28",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -11,35 +11,41 @@
       "iconId": "0-boat-holiday-sea-sky-travel-vacation-svgrepo-com-2c6640",
       "label": "Sailboat Double",
       "categories": [
-        "maps-travel"
+        "games",
+        "locations",
+        "transportation"
       ]
     },
     {
       "iconId": "0-boat-svgrepo-com-53e070",
       "label": "Sailboat Single",
       "categories": [
-        "maps-travel"
+        "games",
+        "locations",
+        "transportation"
       ]
     },
     {
       "iconId": "0-piece-ferry-2-b1f8d7",
       "label": "Brick",
       "categories": [
-        "maps-travel"
+        "games"
       ]
     },
     {
       "iconId": "0-piece-ferry-e095f7",
       "label": "Brick Top Fill",
       "categories": [
-        "maps-travel"
+        "games"
       ]
     },
     {
       "iconId": "0-roofless-speed-boat-svgrepo-com-9d7e16",
       "label": "Roofless Speed Boat",
       "categories": [
-        "maps-travel"
+        "games",
+        "locations",
+        "transportation"
       ]
     },
     {
@@ -47,106 +53,121 @@
       "label": "Sailboat Ferry",
       "categories": [
         "actions",
-        "maps-travel"
+        "games",
+        "locations",
+        "transportation"
       ]
     },
     {
       "iconId": "3-fairy-svgrepo-com-23d4d5",
       "label": "Fairy",
       "categories": [
-        "other"
+        "games"
       ]
     },
     {
       "iconId": "3-piece-fairy-elf-5f22b3",
       "label": "Elf",
       "categories": [
-        "other"
+        "games",
+        "people"
       ]
     },
     {
       "iconId": "3-princess-da1cac",
       "label": "Princess Castle",
       "categories": [
-        "other"
+        "games",
+        "locations",
+        "people"
       ]
     },
     {
       "iconId": "3-volcano-svgrepo-com-e09dda",
       "label": "Volcano",
       "categories": [
-        "other"
+        "games",
+        "locations",
+        "nature"
       ]
     },
     {
       "iconId": "4-castle-tower-svgrepo-com-dc53de",
       "label": "Castle Tower",
       "categories": [
-        "other"
+        "games",
+        "locations"
       ]
     },
     {
       "iconId": "5-wagon-transportation-svgrepo-com-57bbcf",
       "label": "Wagon",
       "categories": [
-        "other"
+        "games",
+        "transportation"
       ]
     },
     {
       "iconId": "6-medieval-crown-svgrepo-com-fb1842",
       "label": "Medieval Crown",
       "categories": [
-        "other"
+        "games"
       ]
     },
     {
       "iconId": "6-medieval-gate-svgrepo-com-0bf3c9",
       "label": "Medieval Gate",
       "categories": [
-        "other"
+        "games",
+        "locations"
       ]
     },
     {
       "iconId": "6-shrine-2-410de4",
       "label": "Shrine Rocks",
       "categories": [
-        "other"
+        "games",
+        "locations",
+        "nature"
       ]
     },
     {
       "iconId": "6-shrine-e280b3",
       "label": "Shrine Building",
       "categories": [
-        "other"
+        "games",
+        "locations"
       ]
     },
     {
       "iconId": "6-stonehedge-svgrepo-com-06c755",
       "label": "Stonehedge",
       "categories": [
-        "other"
+        "games",
+        "locations"
       ]
     },
     {
       "iconId": "9-medieval-pavilion-svgrepo-com-01bed4",
       "label": "Medieval Pavilion",
       "categories": [
-        "other"
+        "games",
+        "locations"
       ]
     },
     {
       "iconId": "9-medieval-tent-svgrepo-com-7c9d63",
       "label": "Medieval Tent",
       "categories": [
-        "other"
+        "games",
+        "locations"
       ]
     },
     {
       "iconId": "africa-map-svgrepo-com-d6ad37",
       "label": "Africa Map",
       "categories": [
-        "maps-travel",
-        "maps"
+        "locations"
       ]
     },
     {
@@ -499,6 +520,8 @@
       "label": "Square Fill Text Grid 1x2",
       "categories": [
         "documents",
+        "editing",
+        "text-formatting",
         "interface",
         "shapes"
       ]
@@ -686,7 +709,9 @@
       "iconId": "text-square-filled-645a87",
       "label": "Text Square Filled",
       "categories": [
-        "documents"
+        "documents",
+        "editing",
+        "text-formatting"
       ]
     },
     {

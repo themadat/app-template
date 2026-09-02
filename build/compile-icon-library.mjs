@@ -25,7 +25,7 @@ const sources = requestedRoots.length ? requestedRoots.map(function (root) {
 }) : discoverDefaultSources();
 
 const TEXT_EXTENSIONS = new Set([".cjs", ".html", ".htm", ".js", ".jsx", ".md", ".mjs", ".ts", ".tsx"]);
-const SKIP_DIRECTORIES = new Set([".git", "node_modules"]);
+const SKIP_DIRECTORIES = new Set([".git", "dist", "node_modules"]);
 const MAX_STANDALONE_SVG_BYTES = 256 * 1024;
 const FORBIDDEN_SVG = /<(?:script|foreignObject)\b|javascript\s*:|\son[a-z]+\s*=/i;
 const FORBIDDEN_REFERENCE = /(?:href|xlink:href)\s*=\s*["'](?!#)|@import\b|url\(\s*["']?(?:https?:|\/\/)/i;
@@ -101,29 +101,31 @@ function cleanIconLabel(value) {
 }
 
 const ICON_CATEGORIES = [
-  { id: "actions", label: "Actions", terms: ["add", "plus", "minus", "copy", "duplicate", "delete", "trash", "download", "upload", "share", "export", "import", "refresh", "reload", "undo", "redo", "save", "print", "scan"] },
+  { id: "actions", label: "Actions", terms: ["add", "plus", "minus", "copy", "duplicate", "delete", "trash", "download", "upload", "share", "export", "import", "refresh", "reload", "undo", "redo", "save", "print", "scan", "bake", "dismiss", "hide", "manage", "wrench"] },
   { id: "accessibility", label: "Accessibility", terms: ["accessibility", "assistive", "braille", "ear", "figure", "voiceover", "wheelchair"] },
-  { id: "arrows", label: "Arrows", terms: ["arrow", "chevron", "caret", "direction", "forward", "backward"] },
-  { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "phone", "call", "megaphone", "bell", "notification", "mention"] },
+  { id: "arrows", label: "Arrows", terms: ["arrow", "arrowshape", "arrowtriangle", "chevron", "caret", "direction", "forward", "backward"] },
+  { id: "branding", label: "Apps & Branding", terms: ["favicon", "logo", "splash", "safari"] },
+  { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "paperplane", "phone", "call", "megaphone", "bell", "notification", "mention"] },
   { id: "commerce", label: "Commerce", terms: ["cart", "bag", "basket", "credit", "currency", "dollar", "bank", "wallet", "gift", "receipt", "tag"] },
-  { id: "devices", label: "Devices", terms: ["desktop", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "watch", "keyboard", "mouse", "printer", "display", "monitor", "television", "tv"] },
+  { id: "devices", label: "Devices & Connectivity", terms: ["desktop", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "watch", "keyboard", "mouse", "printer", "display", "monitor", "television", "tv", "antenna", "bonjour", "cellularbars", "hotspot", "personalhotspot", "radiowaves", "wifi"] },
   { id: "cloud-server", label: "Cloud & Drive", terms: ["cloud", "icloud", "server", "drive", "externaldrive", "internaldrive", "opticaldiscdrive", "storage", "database", "network"] },
-  { id: "documents", label: "Documents", terms: ["document", "doc", "file", "folder", "page", "paper", "note", "clipboard", "book", "text", "list", "archive"] },
-  { id: "editing", label: "Editing", terms: ["pencil", "pen", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat"] },
-  { id: "food-drink", label: "Food & Drink", terms: ["cocktail", "drink", "glass", "wine", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
+  { id: "documents", label: "Documents", terms: ["document", "doc", "file", "folder", "page", "paper", "note", "clipboard", "book", "text", "list", "archive", "archivebox", "bookmark", "data", "json"] },
+  { id: "editing", label: "Editing", terms: ["pencil", "pen", "highlight", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat", "editor", "legend"] },
+  { id: "text-formatting", label: "Text Formatting", parent: "editing", terms: ["abc", "a z", "bold", "italic", "underline", "strikethrough", "paragraphsign", "quotelevel", "indent", "kashida", "fleuron", "textbox", "uppercase", "lowercase", "phonetic"] },
+  { id: "food-drink", label: "Food & Drink", terms: ["bar", "cocktail", "drink", "glass", "wine", "wineglass", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
+  { id: "games", label: "Games", terms: ["game", "meeple", "dice", "castle", "abbey", "wizard", "witch", "mage", "fairy", "elf", "dragon", "sheep", "wolf", "robber", "princess", "knight", "spartan", "crown", "medieval", "ringmaster", "pigsty", "baazar", "vineyard"] },
   { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
-  { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "settings", "magnifyingglass", "search", "filter", "sort"] },
+  { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "gearshape", "settings", "magnifyingglass", "search", "filter", "sort", "terminal", "curlybraces", "widget", "dock", "menubar", "inset", "gauge", "target", "swatchpalette", "chart", "table", "fit", "mode", "lightbulb", "line", "link", "pip", "view"] },
   { id: "keyboard", label: "Keyboard", terms: ["keyboard", "command", "control", "option", "shift", "capslock", "escape", "return", "delete", "fn"] },
-  { id: "maps-travel", label: "Maps & Travel", terms: ["map", "location", "pin", "globe", "compass", "car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "travel"] },
-  { id: "maps", label: "Maps", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope"] },
-  { id: "math", label: "Math", terms: ["function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
+  { id: "locations", label: "Locations", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope", "country", "continent", "earth", "landmark", "monument", "building", "cathedral", "church", "lighthouse", "stadium", "university", "campus", "bridge", "tower", "road", "park", "backpack", "obelisk", "wall"] },
+  { id: "math", label: "Math", terms: ["123", "function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
   { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
-  { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish"] },
-  { id: "rays-sparkles", label: "Rays & Sparkles", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
+  { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor", "volcano"] },
+  { id: "rays-sparkles", label: "Rays & Sparkles", section: "appearance", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
-  { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
-  { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
-  { id: "badged", label: "Badged", terms: ["badge", "trianglebadge", "circlebadge"] },
+  { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid", "eye off"] },
+  { id: "shapes", label: "Shapes", section: "appearance", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape", "ring"] },
+  { id: "badged", label: "Badged", section: "appearance", terms: ["badge", "trianglebadge", "circlebadge"] },
   { id: "badged-badge", label: "Badge", parent: "badged", terms: ["badge"] },
   { id: "badged-airplane", label: "Airplane", parent: "badged", terms: ["airplane"] },
   { id: "badged-arrow", label: "Arrow", parent: "badged", terms: ["arrow"] },
@@ -167,16 +169,18 @@ const ICON_CATEGORIES = [
   { id: "badged-waveform", label: "Waveform", parent: "badged", terms: ["waveform"] },
   { id: "badged-wifi", label: "Wi-Fi", parent: "badged", terms: ["wifi"] },
   { id: "badged-xmark", label: "Xmark", parent: "badged", terms: ["xmark"] },
-  { id: "squared", label: "Squared", terms: ["square"] },
-  { id: "circled", label: "Circled", terms: ["circle"] },
-  { id: "slashed", label: "Slashed", terms: ["slash", "slashed"] },
-  { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge"] },
+  { id: "squared", label: "Squared", section: "appearance", terms: ["square"] },
+  { id: "circled", label: "Circled", section: "appearance", terms: ["circle"] },
+  { id: "slashed", label: "Slashed", section: "appearance", terms: ["slash", "slashed"] },
+  { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge", "medal"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
   { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] },
   { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
 ];
 
 const ICON_CATEGORY_ALIASES = new Map([
+  ["maps-travel", "locations"],
+  ["maps", "locations"],
   ["rays", "rays-sparkles"],
   ["sparkled", "rays-sparkles"],
   ["badged-shield", "badged-shapes-shield"]
@@ -370,11 +374,31 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/(?:!Rays|Rays)\//i.test(source.file);
   });
   if (isRaysSource && !categories.includes("rays-sparkles")) categories.push("rays-sparkles");
+  const isLocationSource = record.sources.some(function (source) {
+    return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents|earth)\//i.test(source.file);
+  });
+  if (isLocationSource && !categories.includes("locations")) categories.push("locations");
+  const isTextFormattingSource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/Text Formatting\//i.test(source.file);
+  });
+  if (isTextFormattingSource && !categories.includes("text-formatting")) categories.push("text-formatting");
+  const isConnectivitySource = record.sources.some(function (source) {
+    return source.repo === "svg-converter" && /^app-input\/Connectivity\//i.test(source.file);
+  });
+  if (isConnectivitySource && !categories.includes("devices")) categories.push("devices");
+  const isGameSource = record.sources.some(function (source) {
+    return source.repo === "carcassone-cheatsheet" && /^assets\/(?:unused\/)?[^/]+\.svg$/i.test(source.file);
+  });
+  if (isGameSource && !categories.includes("games")) categories.push("games");
+  const isBrandingSource = record.sources.some(function (source) {
+    return /(?:^|\/)(?:app[ -]?icon|apple[ -]?touch[ -]?icon|favicon|splash)[^/]*\.svg$/i.test(source.file);
+  });
+  if (isBrandingSource && !categories.includes("branding")) categories.push("branding");
   [
     { id: "accessibility", folder: "Accessibility" },
     { id: "editing", folder: "Editing" },
     { id: "keyboard", folder: "Keyboard" },
-    { id: "maps", folder: "Maps" },
+    { id: "locations", folder: "Maps" },
     { id: "math", folder: "Math" },
     { id: "media", folder: "Media" },
     { id: "security", folder: "Privacy & Security" },
@@ -573,7 +597,8 @@ hardcodedOverrides.forEach(function (override) {
   if (!record) return;
   record.label = cleanIconLabel(override.label) || record.label;
   record.kind = override.kind || record.kind;
-  record.categories = override.categories;
+  const overrideCategories = override.categories.filter(function (categoryId) { return categoryId !== "other"; });
+  record.categories = overrideCategories.length ? normalizeCategoryIds(overrideCategories) : record.categories;
   record.source = override.source;
   overridesApplied += 1;
 });
@@ -606,10 +631,10 @@ records.forEach(function (record) {
 });
 
 lines.push("  ];");
-const exportedCategories = ICON_CATEGORIES.concat([{ id: "other", label: "Other", terms: [] }]).filter(function (category) {
+const exportedCategories = ICON_CATEGORIES.concat([{ id: "other", label: "Other", section: "meaning", terms: [] }]).filter(function (category) {
   return records.some(function (record) { return record.categories.includes(category.id); });
 }).map(function (category) {
-  return Object.assign({ id: category.id, label: category.label }, category.parent ? { parent: category.parent } : {});
+  return Object.assign({ id: category.id, label: category.label }, category.parent ? { parent: category.parent } : { section: category.section || "meaning" });
 });
 
 lines.push("  window.LocalApp.iconLibrary = Object.freeze({");

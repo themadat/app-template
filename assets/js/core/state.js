@@ -10,7 +10,8 @@
   const ICON_CATEGORY_IDS = new Set(ICON_CATEGORIES.map(function (category) { return category.id; }));
   const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
   const ICON_CATEGORY_PARENT_IDS = new Set(ICON_CATEGORIES.map(function (category) { return category.parent || ""; }).filter(Boolean));
-  const ICON_CATEGORY_ALIASES = new Map([["rays", "rays-sparkles"], ["sparkled", "rays-sparkles"], ["badged-shield", "badged-shapes-shield"]]);
+  const ICON_BY_ID = new Map((App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : []).map(function (icon) { return [icon.id, icon]; }));
+  const ICON_CATEGORY_ALIASES = new Map([["maps-travel", "locations"], ["maps", "locations"], ["rays", "rays-sparkles"], ["sparkled", "rays-sparkles"], ["badged-shield", "badged-shapes-shield"]]);
   const ICON_SOURCE_IDS = new Set(App.iconLibrary && Array.isArray(App.iconLibrary.sourceRepositories) ? App.iconLibrary.sourceRepositories : []);
 
   function normalizeIconCategoryId(value) {
@@ -26,6 +27,9 @@
       const label = u.cleanIconLabel(source.label, 120);
       if (!iconId || !label) return;
       const selected = new Set((Array.isArray(source.categories) ? source.categories : []).map(normalizeIconCategoryId).filter(function (categoryId) { return ICON_CATEGORY_IDS.has(categoryId); }));
+      if ((Array.isArray(source.categories) ? source.categories : []).includes("other")) {
+        (ICON_BY_ID.get(iconId)?.categories || []).forEach(function (categoryId) { if (ICON_CATEGORY_IDS.has(categoryId)) selected.add(categoryId); });
+      }
       Array.from(selected).forEach(function (categoryId) {
         let parent = ICON_CATEGORY_BY_ID.get(categoryId)?.parent;
         while (parent) {
