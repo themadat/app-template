@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.25",
-      buildId: "0.0.1.25",
+      version: "0.0.1.27",
+      buildId: "0.0.1.27",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -68,6 +68,26 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.27",
+        date: "2026-09-02T18:13:36.000Z",
+        title: "Show Developer Mode divider feedback",
+        summary: "Developer Mode now exposes live proportional feedback while resizing the icon filter rail.",
+        features: ["Live filter-rail percentage shown only while pointer dragging in Developer Mode"],
+        improvements: ["The readout follows the divider and updates against the available catalog width"],
+        fixes: ["Normal mode remains uncluttered and keyboard resizing retains its accessible pixel value", "SVG Converter’s aggregate !All folder is skipped so duplicate provenance does not churn the compiled catalog"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
+      {
+        version: "0.0.1.26",
+        date: "2026-09-02T04:46:13.000Z",
+        title: "Widen icon cards and unify metadata editing",
+        summary: "The catalog keeps its normal label size on wider cards, metadata fields are consistent, and Appearance settings are simpler.",
+        features: ["All 82 supplied icon metadata overrides baked into the catalog"],
+        improvements: ["Every icon card is wider so the long Arrow Trianglehead label fits four lines without shrinking", "Icon details and the complete metadata editor use the same Name and Type field layout", "The Icon details Edit metadata action and icon-name action continue to open the same complete editor"],
+        fixes: ["Removed Primary, Secondary, Success, Warning, and Danger color controls from Settings"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.25",
         date: "2026-09-02T04:23:06.000Z",

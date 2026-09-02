@@ -674,6 +674,8 @@
     layout.style.setProperty("--icon-filter-width", width + "px");
     divider.setAttribute("aria-valuenow", String(width));
     divider.setAttribute("aria-valuetext", width + " pixels");
+    const availableWidth = Math.max(1, layout.getBoundingClientRect().width);
+    $("#iconFilterDividerValue").textContent = Math.round(width / availableWidth * 100) + "%";
   }
 
   function persistIconFilterWidth(value) {

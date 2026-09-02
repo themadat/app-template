@@ -19,9 +19,11 @@ The compiler accepts every complete SVG template literal ending with `</svg>` an
 
 The in-app editor writes sanitized name/type/group/filter-source overrides into local state. Name and Type are available directly in Icon details; the complete editor adds groups and the repository-filter source without discarding the compiled original-source list. **Export overrides** downloads a plain JSON array containing `iconId`, `label`, `categories`, plus optional `kind` and `source` values when they differ from the compiled metadata. Attach it to a future request, merge its entries into the committed override file, or replace `build/icon-library-overrides.json` with it and rebuild the catalog. The compiler accepts both this simple array and the wrapped `app-template-icon-library-overrides` format. The wrapped format may include `excludedIconIds` to permanently omit unwanted extractions. Unknown icon IDs are reported as missing, invalid file formats fail the compiler, and unrecognized category, type, or source IDs are discarded. Every recognized child group gains its required ancestors automatically.
 
+The aggregate `svg-converter/app-input/!All/` roll-up is intentionally skipped because its copies add redundant aliases and provenance without unique artwork.
+
 ## Appearance
 
-Base theme variables live at the top of `assets/css/app.css`, while the editable fallback colors live in `config.themeDefaults`. User colors and the single application-wide text scale are normalized in `state.js` and applied in `app.js`. Settings intentionally has no preset chooser or manual motion override; reduced motion follows the device preference.
+Base theme variables live at the top of `assets/css/app.css`, with fallback colors in `config.themeDefaults`. Settings exposes color mode, button presentation, and one application-wide text scale; it intentionally omits individual color editors, preset themes, and a manual motion override. Reduced motion follows the device preference.
 
 ## Keyboard shortcuts
 

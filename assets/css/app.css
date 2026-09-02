@@ -224,6 +224,8 @@ main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem 
 .icon-filter-divider::after { content: ""; position: absolute; inset: 0 -8px; }
 .icon-filter-divider span { position: absolute; inset-block: 0; left: 50%; width: 2px; border-radius: 2px; background: var(--line); transform: translateX(-50%); transition: width var(--motion-fast), background var(--motion-fast); }
 .icon-filter-divider:hover span, .icon-filter-divider:focus-visible span, .resizing-icon-filters .icon-filter-divider span { width: 4px; background: var(--accent); }
+.icon-filter-divider-value { position: absolute; z-index: 4; top: .5rem; left: 50%; display: none; min-width: 3rem; padding: .28rem .42rem; border: 1px solid var(--accent); border-radius: 999px; background: var(--surface); color: var(--accent-strong); box-shadow: var(--shadow-small); font-size: .68rem; font-weight: 800; line-height: 1; text-align: center; transform: translateX(-50%); pointer-events: none; }
+:root[data-developer="on"].resizing-icon-filters .icon-filter-divider-value { display: block; }
 .resizing-icon-filters, .resizing-icon-filters * { cursor: col-resize !important; user-select: none !important; }
 .icon-library-controls > .count-pill { align-self: stretch; }
 .icon-category-row { display: block; min-width: 0; padding-top: .05rem; border-top: 1px solid var(--line); }
@@ -246,7 +248,7 @@ main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem 
 .icon-library-controls select { width: 100%; min-height: var(--control-height); padding: .36rem 2rem .36rem .58rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); color: var(--text); }
 .icon-library-controls .button { width: 100%; margin: 0; }
 .icon-library-status { min-height: 1.35rem; margin: .1rem 0 .38rem; color: var(--muted); font-size: .72rem; }
-.icon-library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 156px)); justify-content: start; align-items: stretch; gap: .45rem; }
+.icon-library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(156px, 164px)); justify-content: start; align-items: stretch; gap: .45rem; }
 .icon-card-item { position: relative; display: grid; grid-template-rows: 62px minmax(1.7rem, auto); align-content: start; gap: .22rem; min-width: 0; min-height: 132px; padding: .42rem .38rem 1.95rem; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); text-align: center; box-shadow: 0 1px 0 color-mix(in srgb, #fff 36%, transparent); }
 .icon-card-item:hover, .icon-card-item:focus-within { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-1px); }
 .icon-card-item[data-copied="true"] { border-color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
@@ -645,7 +647,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .icon-category-subcategories { display: flex; flex: 0 0 auto; align-items: center; gap: .18rem; margin-left: 0; padding-left: 0; border-left: 0; }
   .icon-category-chip { flex: 0 0 auto; width: auto; min-width: 104px; min-height: 36px; padding: .3rem .55rem; border-radius: 999px; gap: .55rem; }
   .icon-category-collapse { flex: 0 0 auto; width: 36px; min-width: 36px; height: 36px; min-height: 36px; border-radius: 999px; }
-  .icon-library-grid { grid-template-columns: repeat(auto-fill, minmax(148px, 156px)); gap: .4rem; }
+  .icon-library-grid { grid-template-columns: repeat(auto-fill, minmax(156px, 164px)); gap: .4rem; }
   .icon-card-item { min-height: 132px; }
   .icon-info-hero { grid-template-columns: 84px minmax(0, 1fr); align-items: start; gap: .7rem; }
   .icon-info-preview { width: 84px; height: 84px; padding: .55rem; }

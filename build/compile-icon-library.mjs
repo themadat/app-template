@@ -512,11 +512,18 @@ for (const source of sources) {
   for (const absolute of walk(source.root)) {
     const relative = path.relative(source.root, absolute).split(path.sep).join("/");
     if (path.resolve(absolute) === path.resolve(outputFile)) continue;
-    if (source.name === "svg-converter" && /^(?:output|output-circle:square)\//i.test(relative)) {
+    if (source.name === "svg-converter" && /^(?:output|output-circle:square|app-input\/!All)\//i.test(relative)) {
       stats.skippedGenerated += 1;
       continue;
     }
     const extension = path.extname(absolute).toLowerCase();
+    if (source.name === "svg-converter" && extension === ".svg" && / \d+\.svg$/i.test(relative)) {
+      const unsuffixed = absolute.replace(/ \d+(\.svg)$/i, "$1");
+      if (fs.existsSync(unsuffixed)) {
+        stats.skippedGenerated += 1;
+        continue;
+      }
+    }
     if (TEXT_EXTENSIONS.has(extension)) {
       stats.files += 1;
       const text = fs.readFileSync(absolute, "utf8");
