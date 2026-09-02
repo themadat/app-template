@@ -2,12 +2,12 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.24` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.25` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
 - Sticky application header with version, Beta, centered icon search, Notes, and Settings controls.
-- Full-width responsive catalog of 3,130 deduplicated SVG icons gathered from the sibling local applications.
+- Full-width responsive catalog of 3,129 deduplicated SVG icons gathered from the sibling local applications.
 - Dense Symbol/Custom cards beside a compact sticky, horizontally resizable category/filter rail, with Accessibility, Cloud & Drive, Editing, Health, Keyboard, Maps, Math, Media, Nature, Privacy & Security, Rays & Sparkles, Shapes, 39 primary Badged subcategories plus nested shape variants, Squared, Circled, Slashed, Time, Transportation, and Weather categories, semantic search tags, persistently collapsible category branches, directly editable names/groups/filter sources, right-click group removal with Undo, compact override export, on-demand original source details, module shortcuts, 500-icon rendering batches, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
 - Replaceable Roadmap inside Settings with search, view filters, and sorting.
@@ -76,11 +76,11 @@ node build/compile-icon-library.mjs /path/to/first-app /path/to/second-app
 
 The compiler rewrites only `assets/js/icon-library.js` and reads optional permanent metadata changes from `build/icon-library-overrides.json`. Pass explicit directory arguments when you want a narrower scan than the default sibling-directory discovery. After rebuilding, advance the app build version and test tag/name search, multi-word queries, nested categories, pointer and keyboard rail resizing plus width persistence, SVG rendering, absence of same-name SF Symbol duplicates, Enter-to-results focus, module shortcuts, type/source filters, compact previews, metadata editing, update-file export, details, clipboard copying, and offline loading. The generated file is committed, so apps copied from this template have the complete catalog without Node or a runtime build.
 
-## Rename icons and change groups
+## Edit icon metadata
 
-Select an icon’s displayed name to open **Edit icon metadata** directly, change its display name or group checkboxes, and save. Open the information button and choose **Edit** to change the source used by the repository filter; the complete original repository, file, path, and source-symbol list remains visible in Icon details. When a category is selected, right-click an icon to remove it from that group; the confirmation toast provides Undo. Category branches can be collapsed independently and remember that state. These overrides autosave locally, participate in JSON backup and GitHub Sync, and survive **Reset preferences**. **Reset icon** restores only that icon’s compiled metadata.
+Open an icon’s information button to edit its **Name** and **Type** directly while viewing provenance. Select the displayed icon name to open the complete metadata editor for Name, Type, groups, and the source used by repository filtering; the original repository, file, path, and source-symbol list remains unchanged in Icon details. When a category is selected, right-click an icon to remove it from that group; the confirmation toast provides Undo. Category branches can be collapsed independently and remember that state. These overrides autosave locally, participate in JSON backup and GitHub Sync, and survive **Reset preferences**. **Reset icon** restores only that icon’s compiled metadata.
 
-Select **Export overrides** in the editor or Developer Mode—or use the Export overrides action in the save toast—to create `app-template-icon-overrides-YYYY-MM-DD.json`. Attach that file in a future request and ask for it to be hard-coded. The compact file is a plain array containing `iconId`, `label`, `categories`, and `source` only when a filter source was explicitly selected; it can also replace `build/icon-library-overrides.json` directly because the compiler accepts both the simple array and the older wrapped format. Each entry uses the stable generated icon id, so changed metadata still applies on later catalog rebuilds. The file contains no SVG content, tokens, or other secrets.
+Select **Export overrides** in the editor or Developer Mode—or use the Export overrides action in the save toast—to create `app-template-icon-overrides-YYYY-MM-DD.json`. Attach that file in a future request and ask for it to be hard-coded. The compact file is a plain array containing `iconId`, `label`, `categories`, plus `kind` and `source` only when those values differ from the compiled metadata; it can also replace `build/icon-library-overrides.json` directly because the compiler accepts both the simple array and wrapped format. The wrapped format may include `excludedIconIds` when a bad extraction must remain absent from later rebuilds. Each entry uses the stable generated icon id, so changed metadata still applies on later catalog rebuilds. The file contains no SVG content, tokens, or other secrets.
 
 ## Update the application icons
 
@@ -183,4 +183,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.24 - Add curated icon collections`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.25 - Refine icon details and overrides`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

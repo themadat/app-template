@@ -34,8 +34,9 @@
         }
       });
       const categories = ICON_CATEGORIES.map(function (category) { return category.id; }).filter(function (categoryId) { return selected.has(categoryId); });
+      const kind = ["sf-symbol", "custom"].includes(source.kind) ? source.kind : "";
       const sourceId = u.cleanLine(source.source, 100);
-      overrides.set(iconId, { iconId: iconId, label: label, categories: categories, source: ICON_SOURCE_IDS.has(sourceId) ? sourceId : "" });
+      overrides.set(iconId, { iconId: iconId, label: label, kind: kind, categories: categories, source: ICON_SOURCE_IDS.has(sourceId) ? sourceId : "" });
     });
     return Array.from(overrides.values()).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
   }

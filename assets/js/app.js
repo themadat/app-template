@@ -75,6 +75,7 @@
       if (!override) return icon;
       return Object.assign({}, icon, {
         label: override.label,
+        kind: override.kind || icon.kind,
         categories: override.categories.slice(),
         source: override.source,
         repositories: override.source ? [override.source] : icon.repositories.slice()
@@ -354,7 +355,8 @@
     const typeText = iconKindLabel(icon.kind);
     const label = u.escapeHtml(icon.label);
     const id = u.escapeHtml(icon.id);
-    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
+    const nameClass = icon.label.length >= 60 ? " is-extra-long" : "";
+    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name' + nameClass + '" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
   function iconOverrideFor(iconId) {
@@ -367,8 +369,11 @@
     const aliases = Array.isArray(icon.aliases) ? icon.aliases.filter(Boolean) : [];
     const sources = Array.isArray(icon.sources) ? icon.sources : [];
     $("#iconInfoDialogTitle").textContent = icon.label;
-    $("#iconInfoName").textContent = icon.label;
-    $("#iconInfoType").textContent = iconKindLabel(icon.kind);
+    $("#iconInfoQuickEdit").dataset.iconId = icon.id;
+    $("#iconInfoName").value = icon.label;
+    $("#iconInfoType").value = icon.kind;
+    $("#iconInfoName").removeAttribute("aria-invalid");
+    $("#iconInfoValidation").hidden = true;
     $("#iconInfoIdentifier").textContent = icon.name || "—";
     $("#iconInfoAliases").textContent = aliases.join(", ");
     $("#iconInfoAliasesRow").hidden = aliases.length === 0;
@@ -428,7 +433,7 @@
     $("#iconEditForm").dataset.iconId = icon.id;
     $("#iconEditDialogTitle").textContent = "Edit " + icon.label;
     $("#iconEditPreview").innerHTML = icon.svg;
-    $("#iconEditType").textContent = iconKindLabel(icon.kind);
+    $("#iconEditType").value = icon.kind;
     $("#iconEditLabel").value = icon.label;
     const sourceSelect = $("#iconEditSource");
     sourceSelect.innerHTML = '<option value="">Compiled sources</option>' + (App.iconLibrary.sourceRepositories || []).map(function (source) { return '<option value="' + u.escapeHtml(source) + '">' + u.escapeHtml(repositoryLabel(source)) + '</option>'; }).join("");
@@ -447,11 +452,12 @@
   function exportIconUpdates() {
     const overrides = (state().modules.iconLibrary.overrides || []).map(function (override) {
       const exported = { iconId: override.iconId, label: override.label, categories: override.categories.slice() };
+      if (override.kind) exported.kind = override.kind;
       if (override.source) exported.source = override.source;
       return exported;
     }).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
     if (!overrides.length) {
-      components.toast("Change an icon’s name, groups, or filter source before downloading an update file.", { title: "No icon updates", kind: "warning" });
+      components.toast("Change an icon’s name, type, groups, or filter source before downloading an update file.", { title: "No icon updates", kind: "warning" });
       return;
     }
     const generatedAt = u.isoNow();
@@ -472,18 +478,20 @@
     return normalized(a) === normalized(b);
   }
 
-  function persistIconMetadata(iconId, label, categories, source, reason) {
+  function persistIconMetadata(iconId, label, kind, categories, source, reason) {
     const baseIcon = sourceIconById.get(iconId);
     if (!baseIcon) return false;
     const cleanLabel = u.cleanIconLabel(label, 120);
     if (!cleanLabel) return false;
     const requested = new Set(Array.isArray(categories) ? categories : []);
     const normalizedCategories = iconCategories.map(function (category) { return category.id; }).filter(function (categoryId) { return requested.has(categoryId); });
+    const kindId = ["sf-symbol", "custom"].includes(kind) ? kind : baseIcon.kind;
+    const kindOverride = kindId !== baseIcon.kind ? kindId : "";
     const sourceId = (App.iconLibrary.sourceRepositories || []).includes(source) ? source : "";
-    const changed = cleanLabel !== baseIcon.label || !sameIconCategories(normalizedCategories, baseIcon.categories || []) || sourceId !== (baseIcon.source || "");
+    const changed = cleanLabel !== baseIcon.label || Boolean(kindOverride) || !sameIconCategories(normalizedCategories, baseIcon.categories || []) || sourceId !== (baseIcon.source || "");
     storage.mutate(function (next) {
       const overrides = (next.modules.iconLibrary.overrides || []).filter(function (override) { return override.iconId !== iconId; });
-      if (changed) overrides.push({ iconId: iconId, label: cleanLabel, categories: normalizedCategories, source: sourceId });
+      if (changed) overrides.push({ iconId: iconId, label: cleanLabel, kind: kindOverride, categories: normalizedCategories, source: sourceId });
       overrides.sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
       next.modules.iconLibrary.overrides = overrides;
     }, { reason: reason || "icon-metadata" });
@@ -491,6 +499,34 @@
     renderIconLibrary();
     renderGlobalSearchResults();
     return changed;
+  }
+
+  function saveIconInfoQuickEdit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const iconId = form.dataset.iconId || "";
+    const icon = iconById.get(iconId);
+    if (!icon) return;
+    const input = $("#iconInfoName");
+    const label = u.cleanIconLabel(input.value, 120);
+    const validation = $("#iconInfoValidation");
+    if (!label) {
+      input.setAttribute("aria-invalid", "true");
+      validation.textContent = "Enter a display name before saving.";
+      validation.hidden = false;
+      input.focus();
+      return;
+    }
+    input.removeAttribute("aria-invalid");
+    validation.hidden = true;
+    const changed = persistIconMetadata(iconId, label, $("#iconInfoType").value, icon.categories || [], icon.source || "", "icon-info-metadata");
+    renderIconInfo(iconId);
+    $("#iconInfoName").focus();
+    $("#iconInfoName").select();
+    components.toast(changed ? label + " name and type were saved." : "The compiled name and type are already in use.", {
+      title: changed ? "Icon updated" : "Icon unchanged",
+      kind: "success"
+    });
   }
 
   function removeIconFromSelectedGroup(iconId) {
@@ -507,7 +543,7 @@
     iconCategoryDescendants(categoryId).forEach(function (child) { removedIds.add(child.id); });
     const previousCategories = (icon.categories || []).slice();
     const nextCategories = previousCategories.filter(function (candidate) { return !removedIds.has(candidate); });
-    persistIconMetadata(icon.id, icon.label, nextCategories, icon.source || "", "remove-icon-group");
+    persistIconMetadata(icon.id, icon.label, icon.kind, nextCategories, icon.source || "", "remove-icon-group");
     components.toast(icon.label + " was removed from " + category.label + ".", {
       title: "Group updated",
       kind: "success",
@@ -515,7 +551,7 @@
       actionLabel: "Undo",
       actionSymbol: "arrowClockwise",
       onAction: function () {
-        persistIconMetadata(icon.id, icon.label, previousCategories, icon.source || "", "undo-remove-icon-group");
+        persistIconMetadata(icon.id, icon.label, icon.kind, previousCategories, icon.source || "", "undo-remove-icon-group");
         components.toast(icon.label + " is back in " + category.label + ".", { title: "Removal undone", kind: "success" });
       }
     });
@@ -549,7 +585,7 @@
       }
     });
     const categories = iconCategories.map(function (category) { return category.id; }).filter(function (categoryId) { return selected.has(categoryId); });
-    const changed = persistIconMetadata(iconId, label, categories, $("#iconEditSource").value, "icon-metadata");
+    const changed = persistIconMetadata(iconId, label, $("#iconEditType").value, categories, $("#iconEditSource").value, "icon-metadata");
     components.closeDialog("#iconEditDialog", "saved");
     const overrideCount = state().modules.iconLibrary.overrides.length;
     components.toast(changed ? label + " metadata was saved." : "The compiled icon metadata is already in use.", {
@@ -567,7 +603,7 @@
     const baseIcon = sourceIconById.get(iconId);
     const confirmed = await components.confirm({
       title: "Reset icon metadata?",
-      message: "Restore the compiled name, groups, and filter source for " + (baseIcon ? baseIcon.label : "this icon") + "? Other icon changes will stay saved.",
+      message: "Restore the compiled name, type, groups, and filter source for " + (baseIcon ? baseIcon.label : "this icon") + "? Other icon changes will stay saved.",
       confirmLabel: "Reset icon",
       danger: true
     });
@@ -1434,6 +1470,7 @@
       else buttons[next].focus();
     });
     $("#iconInfoCopyButton").addEventListener("click", function (event) { copyIcon(event.currentTarget.dataset.iconInfoCopy, event.currentTarget); });
+    $("#iconInfoQuickEdit").addEventListener("submit", saveIconInfoQuickEdit);
     $("#iconInfoEditButton").addEventListener("click", function (event) {
       const iconId = event.currentTarget.dataset.iconEdit;
       components.closeDialog("#iconInfoDialog", "edit");

@@ -255,6 +255,7 @@ main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem 
 .icon-preview { display: grid; place-items: center; width: 100%; min-width: 0; height: 62px; color: currentColor; }
 .icon-preview .sf-symbol, .icon-preview > svg { display: block; width: 46px; height: 46px; max-width: 58px; max-height: 54px; fill: currentColor; }
 .icon-card-name { appearance: none; min-width: 0; min-height: 1.7rem; padding: .05rem .1rem; border: 0; border-radius: 6px; background: transparent; color: inherit; font-size: .71rem; font-weight: 760; line-height: 1.13; overflow-wrap: anywhere; white-space: normal; cursor: text; }
+.icon-card-name.is-extra-long { font-size: .6rem; line-height: 1.05; overflow-wrap: normal; word-break: normal; }
 .icon-card-name:hover { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 2px; }
 .icon-card-footer { position: absolute; z-index: 2; right: .24rem; bottom: .2rem; left: .4rem; display: flex; align-items: center; justify-content: space-between; gap: .25rem; pointer-events: none; }
 .icon-card-type { color: var(--muted); font-size: .58rem; font-weight: 700; line-height: 1.1; }
@@ -270,8 +271,13 @@ main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem 
 .icon-info-preview { display: grid; place-items: center; width: 112px; height: 112px; padding: .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); color: var(--text); }
 .icon-info-preview .sf-symbol, .icon-info-preview > svg { display: block; width: 76px; height: 76px; max-width: 88px; max-height: 88px; fill: currentColor; }
 .icon-info-summary { min-width: 0; }
-.icon-info-summary h3 { margin: .45rem 0 .2rem; font-size: 1.1rem; overflow-wrap: anywhere; }
-.icon-info-summary p { margin: 0; color: var(--muted); }
+.icon-info-inline-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(118px, .34fr); gap: .55rem; }
+.icon-info-inline-fields label, .icon-edit-inline-type { display: grid; gap: .24rem; color: var(--muted); font-size: .68rem; font-weight: 800; }
+.icon-info-inline-fields input, .icon-info-inline-fields select, .icon-edit-inline-type select { width: 100%; color: var(--text); font-size: .88rem; }
+.icon-info-inline-actions { display: flex; align-items: center; justify-content: space-between; gap: .55rem; margin-top: .55rem; }
+.icon-info-inline-actions p { min-width: 0; margin: 0; color: var(--muted); font-size: .7rem; }
+.icon-info-inline-actions .button { flex: 0 0 auto; min-height: 36px; }
+.icon-info-inline-actions .sf-symbol { width: .9rem; height: .9rem; }
 .icon-info-facts { display: grid; gap: .45rem; margin: 0; }
 .icon-info-facts > div { display: grid; grid-template-columns: minmax(88px, .28fr) minmax(0, 1fr); gap: .65rem; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface-2); }
 .icon-info-facts dt, .icon-source-list dt { color: var(--muted); font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
@@ -292,6 +298,7 @@ main { min-width: 0; padding: .75rem max(.9rem, var(--safe-right)) calc(5.25rem 
 .icon-edit-body { display: grid; gap: 1rem; }
 .icon-edit-hero { display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: center; gap: .8rem; }
 .icon-edit-hero p { margin: .45rem 0 0; color: var(--muted); }
+.icon-edit-inline-type { width: min(180px, 100%); }
 .icon-edit-preview { display: grid; place-items: center; width: 84px; height: 84px; padding: .7rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); color: var(--text); }
 .icon-edit-preview .sf-symbol, .icon-edit-preview > svg { display: block; width: 56px; height: 56px; max-width: 64px; max-height: 64px; fill: currentColor; }
 .icon-edit-name { display: grid; gap: .3rem; color: var(--muted); font-size: .72rem; font-weight: 800; }
@@ -648,6 +655,12 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .icon-category-collapse { flex: 0 0 auto; width: 36px; min-width: 36px; height: 36px; min-height: 36px; border-radius: 999px; }
   .icon-library-grid { grid-template-columns: repeat(auto-fill, minmax(116px, 124px)); gap: .4rem; }
   .icon-card-item { min-height: 132px; }
+  .icon-info-hero { grid-template-columns: 84px minmax(0, 1fr); align-items: start; gap: .7rem; }
+  .icon-info-preview { width: 84px; height: 84px; padding: .55rem; }
+  .icon-info-preview .sf-symbol, .icon-info-preview > svg { width: 56px; height: 56px; }
+  .icon-info-inline-fields { grid-template-columns: 1fr; }
+  .icon-info-inline-actions { align-items: stretch; flex-direction: column; }
+  .icon-info-inline-actions .button { justify-content: center; width: 100%; }
   .icon-edit-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .icon-edit-group-cluster[data-icon-edit-group="badged"] > .icon-edit-subgroups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .icon-edit-footer { flex-wrap: wrap; }

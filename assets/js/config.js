@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.24",
-      buildId: "0.0.1.24",
+      version: "0.0.1.25",
+      buildId: "0.0.1.25",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -68,6 +68,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.25",
+        date: "2026-09-02T04:23:06.000Z",
+        title: "Refine icon details and overrides",
+        summary: "Icon details now edits names and types directly, while the supplied metadata changes are permanent in the compiled catalog.",
+        features: ["Direct Name and Type fields in Icon details", "Portable Custom/Symbol type overrides in local state and exported update files", "All 75 supplied icon metadata overrides baked into the catalog"],
+        improvements: ["Very long icon names use a compact four-line presentation", "The advanced icon editor is clearly reserved for groups and filter source"],
+        fixes: ["Removed the malformed E Push T Segment Prefix T I To String 16 E Push T E Push extraction at compile time"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.24",
         date: "2026-09-02T04:08:33.000Z",
@@ -310,7 +320,7 @@
     help: [
       { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories health nature rays cloud server shapes badged plus minus checkmark xmark squared circled slashed sparkled copy svg resize divider rename right click notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact category and filter rail for instant narrowing, select a preview to copy its complete SVG markup, or select its name to edit it directly. On desktop and tablet, drag the divider or use its arrow keys to resize the rail. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
       { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories accessibility editing health keyboard maps math media nature privacy security rays sparkles cloud drive shapes badged time transportation weather plus minus checkmark xmark squared circled slashed quick select collapse copy clipboard rename right click remove undo source filter resize divider catalog compiler arrows", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact rail keeps category chips, type, source, and result counts immediately available, including Accessibility, Editing, Health, Keyboard, Maps, Math, Media, Nature, Privacy &amp; Security, Rays &amp; Sparkles, Cloud &amp; Drive, Shapes, Badged with 39 primary subtype choices (including plain Badge), Squared, Circled, Slashed, Time, Transportation, and Weather. Category branches can be collapsed and their state is remembered; Shapes and Exclamation Mark contain their own nested choices. Use Up and Down Arrow while a category is focused to activate the adjacent category. Drag the divider to change the rail width, or focus it and use Left/Right, Home, or End; the width is remembered. Results stay in alphabetical order and appear 500 at a time. Press <kbd>Enter</kbd> to move to the grid, choose a preview to copy its sanitized SVG, select its name to edit metadata, right-click it to remove it from the selected category with Undo, or use the information button for tags, original source details, and the editable filter source. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
-      { id: "icon-overrides", title: "Icon overrides", section: "Features", keywords: "icon rename groups source right click remove undo override export json compiler feed back developer", html: "<p>Select an icon name to edit its display name and groups directly, or open Icon details to change the source used by the repository filter while retaining every original file reference. When a category is selected, right-click an icon to remove it from that group and use Undo if needed. Choose <strong>Export overrides</strong> in the editor or Developer Mode to download a compact array containing icon IDs, labels, category IDs, and an optional source. Attach that file in a future request to hard-code the changes, or use it directly as <code>build/icon-library-overrides.json</code>; the compiler also accepts the older wrapped format.</p>" },
+      { id: "icon-overrides", title: "Icon overrides", section: "Features", keywords: "icon rename type custom symbol groups source right click remove undo override export json compiler feed back developer", html: "<p>Open Icon details to edit Name and Type immediately, or select an icon name to edit Name, Type, groups, and the source used by repository filtering while retaining every original file reference. When a category is selected, right-click an icon to remove it from that group and use Undo if needed. Choose <strong>Export overrides</strong> in the editor or Developer Mode to download a compact array containing icon IDs, labels, category IDs, and optional type and source values. Attach that file in a future request to hard-code the changes, or use it directly as <code>build/icon-library-overrides.json</code>; the compiler also accepts the wrapped format, whose optional <code>excludedIconIds</code> list permanently rejects unwanted extractions.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },

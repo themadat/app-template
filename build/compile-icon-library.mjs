@@ -199,7 +199,7 @@ function normalizeCategoryIds(values) {
 }
 
 function loadIconOverrides() {
-  if (!fs.existsSync(overrideFile)) return [];
+  if (!fs.existsSync(overrideFile)) return { overrides: [], excludedIconIds: [] };
   let parsed;
   try {
     parsed = JSON.parse(fs.readFileSync(overrideFile, "utf8"));
@@ -211,9 +211,12 @@ function loadIconOverrides() {
   if (!overrideItems || !wrappedFormatIsValid) {
     throw new Error("The icon override file has an unsupported format.");
   }
+  const excludedIconIds = Array.isArray(parsed) ? [] : Array.from(new Set((Array.isArray(parsed.excludedIconIds) ? parsed.excludedIconIds : []).map(function (iconId) {
+    return String(iconId || "").trim().slice(0, 160);
+  }).filter(Boolean)));
   const sourceIds = new Set(sources.map(function (source) { return source.name; }));
   const seen = new Set();
-  return overrideItems.map(function (item, index) {
+  const overrides = overrideItems.map(function (item, index) {
     const source = item && typeof item === "object" && !Array.isArray(item) ? item : {};
     const iconId = String(source.iconId || "").trim().slice(0, 160);
     const label = cleanIconLabel(source.label).slice(0, 120);
@@ -223,10 +226,12 @@ function loadIconOverrides() {
     return {
       iconId: iconId,
       label: label,
+      kind: ["sf-symbol", "custom"].includes(String(source.kind || "").trim()) ? String(source.kind || "").trim() : "",
       categories: normalizeCategoryIds(source.categories),
       source: sourceIds.has(String(source.source || "").trim()) ? String(source.source || "").trim() : ""
     };
   });
+  return { overrides: overrides, excludedIconIds: excludedIconIds };
 }
 
 const TAG_GROUPS = [
@@ -526,7 +531,7 @@ for (const source of sources) {
   }
 }
 
-const records = Array.from(iconRecords).map(function (record) {
+const compiledRecords = Array.from(iconRecords).map(function (record) {
   const aliases = Array.from(record.aliases).sort();
   const sourcesForIcon = Array.from(new Map(record.sources.map(function (source) {
     return [[source.repo, source.file, source.symbol].join("\u0000"), source];
@@ -550,13 +555,17 @@ const records = Array.from(iconRecords).map(function (record) {
   };
 });
 
-const hardcodedOverrides = loadIconOverrides();
+const hardcodedMetadata = loadIconOverrides();
+const hardcodedOverrides = hardcodedMetadata.overrides;
+const excludedIconIds = new Set(hardcodedMetadata.excludedIconIds);
+const records = compiledRecords.filter(function (record) { return !excludedIconIds.has(record.id); });
 const recordById = new Map(records.map(function (record) { return [record.id, record]; }));
 let overridesApplied = 0;
 hardcodedOverrides.forEach(function (override) {
   const record = recordById.get(override.iconId);
   if (!record) return;
   record.label = cleanIconLabel(override.label) || record.label;
+  record.kind = override.kind || record.kind;
   record.categories = override.categories;
   record.source = override.source;
   overridesApplied += 1;
@@ -614,6 +623,7 @@ process.stdout.write(JSON.stringify({
   inlineMarkup: stats.inlineMarkup,
   standalone: stats.standalone,
   uniqueIcons: records.length,
+  excludedIcons: compiledRecords.length - records.length,
   sfSymbols: records.filter(function (record) { return record.kind === "sf-symbol"; }).length,
   customIcons: records.filter(function (record) { return record.kind === "custom"; }).length,
   rejected: stats.rejected,

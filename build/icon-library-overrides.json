@@ -1,38 +1,655 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-01T22:16:37.000Z",
-  "applicationVersion": "0.0.1.24",
+  "generatedAt": "2026-09-02T04:23:06Z",
+  "applicationVersion": "0.0.1.25",
+  "excludedIconIds": [
+    "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
+  ],
   "overrides": [
     {
       "iconId": "0-boat-holiday-sea-sky-travel-vacation-svgrepo-com-2c6640",
       "label": "Sailboat Double",
-      "categories": ["maps-travel"]
+      "categories": [
+        "maps-travel"
+      ]
     },
     {
       "iconId": "0-boat-svgrepo-com-53e070",
       "label": "Sailboat Single",
-      "categories": ["maps-travel"]
+      "categories": [
+        "maps-travel"
+      ]
     },
     {
       "iconId": "0-piece-ferry-2-b1f8d7",
       "label": "Brick",
-      "categories": ["maps-travel"]
+      "categories": [
+        "maps-travel"
+      ]
     },
     {
       "iconId": "0-piece-ferry-e095f7",
       "label": "Brick Top Fill",
-      "categories": ["maps-travel"]
+      "categories": [
+        "maps-travel"
+      ]
     },
     {
       "iconId": "0-roofless-speed-boat-svgrepo-com-9d7e16",
       "label": "Roofless Speed Boat",
-      "categories": ["maps-travel"]
+      "categories": [
+        "maps-travel"
+      ]
     },
     {
       "iconId": "0-sailboat-boat-sail-travel-ship-transportation-svgrepo-com-copy-3a56f7",
       "label": "Sailboat Ferry",
-      "categories": ["actions", "maps-travel"]
+      "categories": [
+        "actions",
+        "maps-travel"
+      ]
+    },
+    {
+      "iconId": "3-fairy-svgrepo-com-23d4d5",
+      "label": "Fairy",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "3-piece-fairy-elf-5f22b3",
+      "label": "Elf",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "3-princess-da1cac",
+      "label": "Princess Castle",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "3-volcano-svgrepo-com-e09dda",
+      "label": "Volcano",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "4-castle-tower-svgrepo-com-dc53de",
+      "label": "Castle Tower",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "5-wagon-transportation-svgrepo-com-57bbcf",
+      "label": "Wagon",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "6-medieval-crown-svgrepo-com-fb1842",
+      "label": "Medieval Crown",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "6-medieval-gate-svgrepo-com-0bf3c9",
+      "label": "Medieval Gate",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "6-shrine-2-410de4",
+      "label": "Shrine Rocks",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "6-shrine-e280b3",
+      "label": "Shrine Building",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "6-stonehedge-svgrepo-com-06c755",
+      "label": "Stonehedge",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "9-medieval-pavilion-svgrepo-com-01bed4",
+      "label": "Medieval Pavilion",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "9-medieval-tent-svgrepo-com-7c9d63",
+      "label": "Medieval Tent",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "iconId": "apple-meditate-square-stack-a536b2",
+      "label": "Apple Meditate Square Stack",
+      "categories": [
+        "health",
+        "nature"
+      ]
+    },
+    {
+      "iconId": "apple-meditate-square-stack-fill-99124e",
+      "label": "Apple Meditate Square Stack Fill",
+      "categories": [
+        "health",
+        "nature"
+      ]
+    },
+    {
+      "iconId": "lock-square-stack-7f6268",
+      "label": "Lock Square Stack",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "iconId": "lock-square-stack-fill-f3d108",
+      "label": "Lock Square Stack Fill",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "iconId": "play-square-stack-162148",
+      "label": "Play Square Stack",
+      "categories": [
+        "media"
+      ]
+    },
+    {
+      "iconId": "play-square-stack-fill-9f6226",
+      "label": "Play Square Stack Fill",
+      "categories": [
+        "media"
+      ]
+    },
+    {
+      "iconId": "slider-horizontal-below-square-and-square-filled-0044ec",
+      "label": "Slider Horizontal Below Square And Square Filled",
+      "categories": [
+        "editing"
+      ]
+    },
+    {
+      "iconId": "slider-horizontal-below-square-filled-and-square-814eac",
+      "label": "Slider Horizontal Below Square Filled And Square",
+      "categories": [
+        "editing"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3-d-48b0b1",
+      "label": "Square 3 Layers 3 D",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3-d-bottom-filled-9f9e69",
+      "label": "Square 3 Layers 3 D Bottom Filled",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3-d-middle-filled-532a8f",
+      "label": "Square 3 Layers 3 D Middle Filled",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3-d-top-filled-414dfd",
+      "label": "Square 3 Layers 3 D Top Filled",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3d-bottom-filled-fb6352",
+      "label": "Square 3 Layers 3d Bottom Filled",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3d-middle-filled-b6d6d1",
+      "label": "Square 3 Layers 3d Middle Filled",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-3-layers-3d-top-filled-9e19b3",
+      "label": "Square 3 Layers 3d Top Filled",
+      "categories": [
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-b9f92f",
+      "label": "Square And Arrow Down",
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-badge-checkmark-314970",
+      "label": "Square And Arrow Down Badge Checkmark",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-badge-checkmark-fill-2713f5",
+      "label": "Square And Arrow Down Badge Checkmark Fill",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-badge-clock-740de6",
+      "label": "Square And Arrow Down Badge Clock",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-badge-clock-fill-3fb9e8",
+      "label": "Square And Arrow Down Badge Clock Fill",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-badge-xmark-8d6863",
+      "label": "Square And Arrow Down Badge Xmark",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-xmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-down-badge-xmark-fill-f01646",
+      "label": "Square And Arrow Down Badge Xmark Fill",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-xmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-49f1cd",
+      "label": "Square And Arrow Up",
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-badge-checkmark-51c6a8",
+      "label": "Square And Arrow Up Badge Checkmark",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-badge-checkmark-fill-412b98",
+      "label": "Square And Arrow Up Badge Checkmark Fill",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-badge-clock-d738af",
+      "label": "Square And Arrow Up Badge Clock",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-badge-clock-fill-f8013a",
+      "label": "Square And Arrow Up Badge Clock Fill",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-circle-344dd6",
+      "label": "Square And Arrow Up Circle",
+      "categories": [
+        "arrows",
+        "shapes",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-fill-f3d109",
+      "label": "Square And Arrow Up Fill",
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-trianglebadge-exclamationmark-4b0aae",
+      "label": "Square And Arrow Up Trianglebadge Exclamationmark",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-triangle",
+        "badged-shapes",
+        "badged-shapes-triangle"
+      ]
+    },
+    {
+      "iconId": "square-and-arrow-up-trianglebadge-exclamationmark-fill-576533",
+      "label": "Square And Arrow Up Trianglebadge Exclamationmark Fill",
+      "categories": [
+        "arrows",
+        "shapes",
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-triangle",
+        "badged-shapes",
+        "badged-shapes-triangle"
+      ]
+    },
+    {
+      "iconId": "square-and-pencil-535890",
+      "label": "Square And Pencil",
+      "categories": [
+        "editing",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-fill-text-grid-1-x2-2b1bdd",
+      "label": "Square Fill Text Grid 1 X2",
+      "categories": [
+        "documents",
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-fill-text-grid-1x2-015ff8",
+      "label": "Square Fill Text Grid 1x2",
+      "categories": [
+        "documents",
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-2-x2-121f8f",
+      "label": "Square Grid 2 X2",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3-x1-below-line-grid-1-x2-fill-54c210",
+      "label": "Square Grid 3 X1 Below Line Grid 1 X2 Fill",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3-x1-folder-fill-badge-plus-54487a",
+      "label": "Square Grid 3 X1 Folder Fill Badge Plus",
+      "categories": [
+        "actions",
+        "documents",
+        "interface",
+        "shapes",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x1-folder-badge-plus-10c45d",
+      "label": "Square Grid 3x1 Folder Badge Plus",
+      "categories": [
+        "actions",
+        "documents",
+        "interface",
+        "shapes",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x1-folder-fill-badge-plus-ea344f",
+      "label": "Square Grid 3x1 Folder Fill Badge Plus",
+      "categories": [
+        "actions",
+        "documents",
+        "interface",
+        "shapes",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-bottomleft-filled-e4b1c5",
+      "label": "Square Grid 3x3 Bottomleft Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-bottommiddle-filled-099e1b",
+      "label": "Square Grid 3x3 Bottommiddle Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-bottomright-filled-0434e4",
+      "label": "Square Grid 3x3 Bottomright Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-middle-filled-b41d30",
+      "label": "Square Grid 3x3 Middle Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-middleleft-filled-e79e0a",
+      "label": "Square Grid 3x3 Middleleft Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-middleright-filled-df2541",
+      "label": "Square Grid 3x3 Middleright Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-topleft-filled-e1297e",
+      "label": "Square Grid 3x3 Topleft Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-topmiddle-filled-e80299",
+      "label": "Square Grid 3x3 Topmiddle Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-3x3-topright-filled-99e6ca",
+      "label": "Square Grid 3x3 Topright Filled",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-grid-4-x3-fill-92d749",
+      "label": "Square Grid 4 X3 Fill",
+      "categories": [
+        "interface",
+        "shapes"
+      ]
+    },
+    {
+      "iconId": "square-stack-3d-up-badge-automatic-6c5845",
+      "label": "Square Stack 3d Up Badge Automatic",
+      "categories": [
+        "shapes",
+        "badged",
+        "badged-automatic",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-stack-3d-up-badge-automatic-fill-ae95ae",
+      "label": "Square Stack 3d Up Badge Automatic Fill",
+      "categories": [
+        "shapes",
+        "badged",
+        "badged-automatic",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-stack-3d-up-trianglebadge-exclamationmark-54ff61",
+      "label": "Square Stack 3d Up Trianglebadge Exclamationmark",
+      "categories": [
+        "shapes",
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-triangle",
+        "badged-shapes",
+        "badged-shapes-triangle"
+      ]
+    },
+    {
+      "iconId": "square-stack-3d-up-trianglebadge-exclamationmark-fill-68415e",
+      "label": "Square Stack 3d Up Trianglebadge Exclamationmark Fill",
+      "categories": [
+        "shapes",
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-triangle",
+        "badged-shapes",
+        "badged-shapes-triangle"
+      ]
+    },
+    {
+      "iconId": "text-square-filled-645a87",
+      "label": "Text Square Filled",
+      "categories": [
+        "documents"
+      ]
+    },
+    {
+      "iconId": "xmark-triangle-circle-square-5e0108",
+      "label": "Xmark Triangle Circle Square",
+      "categories": [
+        "shapes",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "xmark-triangle-circle-square-fill-5bdc52",
+      "label": "Xmark Triangle Circle Square Fill",
+      "categories": [
+        "shapes",
+        "circled",
+        "status"
+      ]
     }
   ]
 }
