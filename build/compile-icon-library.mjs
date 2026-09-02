@@ -102,6 +102,7 @@ function cleanIconLabel(value) {
 
 const ICON_CATEGORIES = [
   { id: "actions", label: "Actions", terms: ["add", "plus", "minus", "copy", "duplicate", "delete", "trash", "download", "upload", "share", "export", "import", "refresh", "reload", "undo", "redo", "save", "print", "scan"] },
+  { id: "accessibility", label: "Accessibility", terms: ["accessibility", "assistive", "braille", "ear", "figure", "voiceover", "wheelchair"] },
   { id: "arrows", label: "Arrows", terms: ["arrow", "chevron", "caret", "direction", "forward", "backward"] },
   { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "phone", "call", "megaphone", "bell", "notification", "mention"] },
   { id: "commerce", label: "Commerce", terms: ["cart", "bag", "basket", "credit", "currency", "dollar", "bank", "wallet", "gift", "receipt", "tag"] },
@@ -112,12 +113,15 @@ const ICON_CATEGORIES = [
   { id: "food-drink", label: "Food & Drink", terms: ["cocktail", "drink", "glass", "wine", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
   { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
   { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "settings", "magnifyingglass", "search", "filter", "sort"] },
+  { id: "keyboard", label: "Keyboard", terms: ["keyboard", "command", "control", "option", "shift", "capslock", "escape", "return", "delete", "fn"] },
   { id: "maps-travel", label: "Maps & Travel", terms: ["map", "location", "pin", "globe", "compass", "car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "travel"] },
+  { id: "maps", label: "Maps", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope"] },
+  { id: "math", label: "Math", terms: ["function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
   { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
   { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish"] },
   { id: "rays-sparkles", label: "Rays & Sparkles", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
-  { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
+  { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
   { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
   { id: "badged", label: "Badged", terms: ["badge", "trianglebadge", "circlebadge"] },
   { id: "badged-badge", label: "Badge", parent: "badged", terms: ["badge"] },
@@ -168,6 +172,7 @@ const ICON_CATEGORIES = [
   { id: "slashed", label: "Slashed", terms: ["slash", "slashed"] },
   { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
+  { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] },
   { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
 ];
 
@@ -360,6 +365,23 @@ function deriveMetadata(record) {
     return source.repo === "svg-converter" && /^app-input\/(?:!Rays|Rays)\//i.test(source.file);
   });
   if (isRaysSource && !categories.includes("rays-sparkles")) categories.push("rays-sparkles");
+  [
+    { id: "accessibility", folder: "Accessibility" },
+    { id: "editing", folder: "Editing" },
+    { id: "keyboard", folder: "Keyboard" },
+    { id: "maps", folder: "Maps" },
+    { id: "math", folder: "Math" },
+    { id: "media", folder: "Media" },
+    { id: "security", folder: "Privacy & Security" },
+    { id: "transportation", folder: "Transportation" }
+  ].forEach(function (rule) {
+    const escapedFolder = rule.folder.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pattern = new RegExp("^app-input/(?:!" + escapedFolder + "|" + escapedFolder + ")/", "i");
+    const isRequestedSource = record.sources.some(function (source) {
+      return source.repo === "svg-converter" && pattern.test(source.file);
+    });
+    if (isRequestedSource && !categories.includes(rule.id)) categories.push(rule.id);
+  });
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {
