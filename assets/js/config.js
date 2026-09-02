@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.28",
-      buildId: "0.0.1.28",
+      version: "0.0.1.29",
+      buildId: "0.0.1.29",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -68,6 +68,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.29",
+        date: "2026-09-02T19:56:27.000Z",
+        title: "Fix icon rendering and baked override cleanup",
+        summary: "The category rail now stays fixed while browsing, Nature has useful child filters, and baked metadata automatically leaves the pending override set.",
+        features: ["Animals & Plants and Weather subcategories nested under Nature", "All 191 supplied icon metadata overrides baked into the catalog"],
+        improvements: ["A dedicated sticky wrapper keeps the filter rail in view while its own long contents remain scrollable", "Device-local overrides are automatically removed after their values match the compiled catalog"],
+        fixes: ["X Square Fill now uses the actual X artwork on a transparent canvas", "Metadata edits that would leave an icon ungrouped fall back to Interface"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.28",
         date: "2026-09-02T19:13:56.000Z",

@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-02T19:13:56Z",
-  "applicationVersion": "0.0.1.28",
+  "generatedAt": "2026-09-02T19:56:27Z",
+  "applicationVersion": "0.0.1.29",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -11,41 +11,35 @@
       "iconId": "0-boat-holiday-sea-sky-travel-vacation-svgrepo-com-2c6640",
       "label": "Sailboat Double",
       "categories": [
-        "games",
-        "locations",
-        "transportation"
+        "locations"
       ]
     },
     {
       "iconId": "0-boat-svgrepo-com-53e070",
       "label": "Sailboat Single",
       "categories": [
-        "games",
-        "locations",
-        "transportation"
+        "locations"
       ]
     },
     {
       "iconId": "0-piece-ferry-2-b1f8d7",
       "label": "Brick",
       "categories": [
-        "games"
+        "locations"
       ]
     },
     {
       "iconId": "0-piece-ferry-e095f7",
       "label": "Brick Top Fill",
       "categories": [
-        "games"
+        "locations"
       ]
     },
     {
       "iconId": "0-roofless-speed-boat-svgrepo-com-9d7e16",
       "label": "Roofless Speed Boat",
       "categories": [
-        "games",
-        "locations",
-        "transportation"
+        "locations"
       ]
     },
     {
@@ -53,9 +47,7 @@
       "label": "Sailboat Ferry",
       "categories": [
         "actions",
-        "games",
-        "locations",
-        "transportation"
+        "locations"
       ]
     },
     {
@@ -171,6 +163,76 @@
       ]
     },
     {
+      "iconId": "app-badge-369d0b",
+      "label": "App Badge",
+      "categories": [
+        "badged",
+        "badged-badge",
+        "status"
+      ]
+    },
+    {
+      "iconId": "app-badge-checkmark-a9555e",
+      "label": "App Badge Checkmark",
+      "categories": [
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "app-badge-checkmark-fill-ec78ac",
+      "label": "App Badge Checkmark Fill",
+      "categories": [
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "app-badge-clock-55face",
+      "label": "App Badge Clock",
+      "categories": [
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "app-badge-clock-fill-e65e52",
+      "label": "App Badge Clock Fill",
+      "categories": [
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "app-badge-fill-bd6731",
+      "label": "App Badge Fill",
+      "categories": [
+        "badged",
+        "badged-badge",
+        "status"
+      ]
+    },
+    {
+      "iconId": "apple-image-playground-55e1dd",
+      "label": "Apple Image Playground",
+      "categories": [
+        "media"
+      ]
+    },
+    {
+      "iconId": "apple-image-playground-fill-746583",
+      "label": "Apple Image Playground Fill",
+      "categories": [
+        "media"
+      ]
+    },
+    {
       "iconId": "apple-meditate-square-stack-a536b2",
       "label": "Apple Meditate Square Stack",
       "categories": [
@@ -184,6 +246,257 @@
       "categories": [
         "health",
         "nature"
+      ]
+    },
+    {
+      "iconId": "chart-bar-xaxis-22bea8",
+      "label": "Chart Bar Xaxis",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "chart-bar-xaxis-ascending-badge-clock-823c18",
+      "label": "Chart Bar Xaxis Ascending Badge Clock",
+      "categories": [
+        "interface",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ]
+    },
+    {
+      "iconId": "chart-bar-xaxis-ascending-c057dd",
+      "label": "Chart Bar Xaxis Ascending",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "chart-bar-xaxis-descending-810e69",
+      "label": "Chart Bar Xaxis Descending",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "circle-badge-checkmark-dd3db4",
+      "label": "Circle Badge Checkmark",
+      "categories": [
+        "badged",
+        "badged-checkmark",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-checkmark-fill-67e71a",
+      "label": "Circle Badge Checkmark Fill",
+      "categories": [
+        "badged",
+        "badged-checkmark",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-exclamationmark-5ff9c9",
+      "label": "Circle Badge Exclamationmark",
+      "categories": [
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-circle",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-exclamationmark-fill-1c07df",
+      "label": "Circle Badge Exclamationmark Fill",
+      "categories": [
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-circle",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-minus-1cf8a0",
+      "label": "Circle Badge Minus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-minus",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-minus-fill-452e46",
+      "label": "Circle Badge Minus Fill",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-minus",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-plus-56c09e",
+      "label": "Circle Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-plus-fill-76d69d",
+      "label": "Circle Badge Plus Fill",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-questionmark-45feb0",
+      "label": "Circle Badge Questionmark",
+      "categories": [
+        "badged",
+        "badged-questionmark",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-questionmark-fill-6569eb",
+      "label": "Circle Badge Questionmark Fill",
+      "categories": [
+        "badged",
+        "badged-questionmark",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-xmark-1e4174",
+      "label": "Circle Badge Xmark",
+      "categories": [
+        "badged",
+        "badged-xmark",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-badge-xmark-fill-d24235",
+      "label": "Circle Badge Xmark Fill",
+      "categories": [
+        "badged",
+        "badged-xmark",
+        "circled",
+        "status"
+      ]
+    },
+    {
+      "iconId": "circle-circle-2fa271",
+      "label": "Circle Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-circle-fill-c06fb0",
+      "label": "Circle Circle Fill",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-dashed-rectangle-52d2b1",
+      "label": "Circle Dashed Rectangle",
+      "categories": [
+        "editing"
+      ]
+    },
+    {
+      "iconId": "circle-dotted-circle-f63f6d",
+      "label": "Circle Dotted Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-grid-3-x3-circle-8beede",
+      "label": "Circle Grid 3 X3 Circle",
+      "categories": [
+        "interface",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-grid-3x3-circle-85677a",
+      "label": "Circle Grid 3x3 Circle",
+      "categories": [
+        "interface",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-hexagongrid-circle-5f5cf1",
+      "label": "Circle Hexagongrid Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-hexagonpath-4d04e9",
+      "label": "Circle Hexagonpath",
+      "categories": [
+        "accessibility"
+      ]
+    },
+    {
+      "iconId": "circle-hexagonpath-fill-a9dd50",
+      "label": "Circle Hexagonpath Fill",
+      "categories": [
+        "accessibility"
+      ]
+    },
+    {
+      "iconId": "circle-square-54eff9",
+      "label": "Circle Square",
+      "categories": [
+        "squared"
+      ]
+    },
+    {
+      "iconId": "circle-square-fill-eb71d0",
+      "label": "Circle Square Fill",
+      "categories": [
+        "squared"
+      ]
+    },
+    {
+      "iconId": "diamond-circle-a1c541",
+      "label": "Diamond Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "diamond-circle-fill-96e9d0",
+      "label": "Diamond Circle Fill",
+      "categories": [
+        "circled"
       ]
     },
     {
@@ -235,6 +548,30 @@
       "kind": "custom"
     },
     {
+      "iconId": "hand-raised-square-on-square-2cdde8",
+      "label": "Hand Raised Square On Square",
+      "categories": [
+        "people",
+        "security"
+      ]
+    },
+    {
+      "iconId": "hand-raised-square-on-square-fill-13a202",
+      "label": "Hand Raised Square On Square Fill",
+      "categories": [
+        "people",
+        "security"
+      ]
+    },
+    {
+      "iconId": "info-circle-text-page-bdbb27",
+      "label": "Info Circle Text Page",
+      "categories": [
+        "documents",
+        "status"
+      ]
+    },
+    {
       "iconId": "lock-square-stack-7f6268",
       "label": "Lock Square Stack",
       "categories": [
@@ -246,6 +583,61 @@
       "label": "Lock Square Stack Fill",
       "categories": [
         "security"
+      ]
+    },
+    {
+      "iconId": "meeple-circle-svgrepo-com-30069d",
+      "label": "Meeple Circle",
+      "categories": [
+        "games"
+      ]
+    },
+    {
+      "iconId": "person-crop-square-badge-camera-cd29c9",
+      "label": "Person Crop Square Badge Camera",
+      "categories": [
+        "editing",
+        "media",
+        "people",
+        "badged",
+        "badged-camera",
+        "status"
+      ]
+    },
+    {
+      "iconId": "person-crop-square-badge-camera-fill-af527c",
+      "label": "Person Crop Square Badge Camera Fill",
+      "categories": [
+        "editing",
+        "media",
+        "people",
+        "badged",
+        "badged-camera",
+        "status"
+      ]
+    },
+    {
+      "iconId": "person-crop-square-badge-video-537cc0",
+      "label": "Person Crop Square Badge Video",
+      "categories": [
+        "editing",
+        "media",
+        "people",
+        "badged",
+        "badged-video",
+        "status"
+      ]
+    },
+    {
+      "iconId": "person-crop-square-badge-video-fill-13c782",
+      "label": "Person Crop Square Badge Video Fill",
+      "categories": [
+        "editing",
+        "media",
+        "people",
+        "badged",
+        "badged-video",
+        "status"
       ]
     },
     {
@@ -263,6 +655,423 @@
       ]
     },
     {
+      "iconId": "plus-square-fill-on-square-fill-da60d1",
+      "label": "Plus Square Fill On Square Fill",
+      "categories": [
+        "actions",
+        "math"
+      ]
+    },
+    {
+      "iconId": "plus-square-on-square-8d74fb",
+      "label": "Plus Square On Square",
+      "categories": [
+        "actions",
+        "math"
+      ]
+    },
+    {
+      "iconId": "pointer-arrow-and-square-on-square-dashed-e82a2a",
+      "label": "Pointer Arrow And Square On Square Dashed",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ]
+    },
+    {
+      "iconId": "pointer-arrow-ipad-and-square-on-square-dashed-0eafab",
+      "label": "Pointer Arrow Ipad And Square On Square Dashed",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "devices"
+      ]
+    },
+    {
+      "iconId": "rectangle-3-group-fill-fc2f3e",
+      "label": "Rectangle 3 Group Fill",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-and-pencil-and-ellipsis-9650f3",
+      "label": "Rectangle And Pencil And Ellipsis",
+      "categories": [
+        "editing",
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-and-text-magnifyingglass-0bee8e",
+      "label": "Rectangle And Text Magnifyingglass",
+      "categories": [
+        "accessibility",
+        "documents",
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-checkmark-5c3851",
+      "label": "Rectangle Badge Checkmark",
+      "categories": [
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-minus-5a1044",
+      "label": "Rectangle Badge Minus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-minus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-person-crop-82f357",
+      "label": "Rectangle Badge Person Crop",
+      "categories": [
+        "editing",
+        "people",
+        "badged",
+        "badged-person",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-plus-a290a5",
+      "label": "Rectangle Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-sparkles-42cf10",
+      "label": "Rectangle Badge Sparkles",
+      "categories": [
+        "rays-sparkles",
+        "badged",
+        "badged-sparkles",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-sparkles-fill-bd0c01",
+      "label": "Rectangle Badge Sparkles Fill",
+      "categories": [
+        "rays-sparkles",
+        "badged",
+        "badged-sparkles",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-badge-xmark-0fc19c",
+      "label": "Rectangle Badge Xmark",
+      "categories": [
+        "badged",
+        "badged-xmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-compress-vertical-96d3aa",
+      "label": "Rectangle Compress Vertical",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-dashed-badge-record-1858ee",
+      "label": "Rectangle Dashed Badge Record",
+      "categories": [
+        "editing",
+        "media",
+        "badged",
+        "badged-record",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-expand-diagonal-99d988",
+      "label": "Rectangle Expand Diagonal",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-expand-vertical-c0f50b",
+      "label": "Rectangle Expand Vertical",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-fill-badge-checkmark-c45676",
+      "label": "Rectangle Fill Badge Checkmark",
+      "categories": [
+        "badged",
+        "badged-checkmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-fill-badge-minus-14c5b8",
+      "label": "Rectangle Fill Badge Minus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-minus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-fill-badge-person-crop-813006",
+      "label": "Rectangle Fill Badge Person Crop",
+      "categories": [
+        "editing",
+        "people",
+        "badged",
+        "badged-person",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-fill-badge-plus-cdea74",
+      "label": "Rectangle Fill Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-fill-badge-xmark-db95f0",
+      "label": "Rectangle Fill Badge Xmark",
+      "categories": [
+        "badged",
+        "badged-xmark",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-grid-1-x2-fill-fb98a9",
+      "label": "Rectangle Grid 1 X2 Fill",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-grid-1-x3-fill-e43741",
+      "label": "Rectangle Grid 1 X3 Fill",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-landscape-rotate-c6a65c",
+      "label": "Rectangle Landscape Rotate",
+      "categories": [
+        "editing"
+      ]
+    },
+    {
+      "iconId": "rectangle-landscape-rotate-slash-48067d",
+      "label": "Rectangle Landscape Rotate Slash",
+      "categories": [
+        "editing",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "rectangle-on-rectangle-badge-gearshape-346c56",
+      "label": "Rectangle On Rectangle Badge Gearshape",
+      "categories": [
+        "interface",
+        "badged",
+        "badged-gearshape",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-on-rectangle-circle-7d98fa",
+      "label": "Rectangle On Rectangle Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "rectangle-on-rectangle-slash-circle-189fb3",
+      "label": "Rectangle On Rectangle Slash Circle",
+      "categories": [
+        "circled",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "rectangle-on-rectangle-square-fill-5bc687",
+      "label": "Rectangle On Rectangle Square Fill",
+      "categories": [
+        "squared"
+      ]
+    },
+    {
+      "iconId": "rectangle-portrait-badge-plus-b1d9b7",
+      "label": "Rectangle Portrait Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-portrait-badge-plus-fill-4b3109",
+      "label": "Rectangle Portrait Badge Plus Fill",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-portrait-rotate-1cc6fe",
+      "label": "Rectangle Portrait Rotate",
+      "categories": [
+        "editing"
+      ]
+    },
+    {
+      "iconId": "rectangle-portrait-rotate-slash-74a9c0",
+      "label": "Rectangle Portrait Rotate Slash",
+      "categories": [
+        "editing",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "rectangle-split-3-x1-1aff1c",
+      "label": "Rectangle Split 3 X1",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-badge-minus-8250ef",
+      "label": "Rectangle Stack Badge Minus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-minus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-badge-person-crop-90f731",
+      "label": "Rectangle Stack Badge Person Crop",
+      "categories": [
+        "editing",
+        "people",
+        "badged",
+        "badged-person",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-badge-person-crop-fill-3a576a",
+      "label": "Rectangle Stack Badge Person Crop Fill",
+      "categories": [
+        "editing",
+        "people",
+        "badged",
+        "badged-person",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-badge-play-a2a488",
+      "label": "Rectangle Stack Badge Play",
+      "categories": [
+        "media",
+        "badged",
+        "badged-play",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-badge-play-fill-43470f",
+      "label": "Rectangle Stack Badge Play Fill",
+      "categories": [
+        "media",
+        "badged",
+        "badged-play",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-badge-plus-ec3b7e",
+      "label": "Rectangle Stack Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-efdc04",
+      "label": "Rectangle Stack",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-fill-badge-minus-8c635e",
+      "label": "Rectangle Stack Fill Badge Minus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-minus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "rectangle-stack-fill-badge-plus-8abb92",
+      "label": "Rectangle Stack Fill Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "slider-horizontal-2-square-badge-arrow-down-24e0ef",
+      "label": "Slider Horizontal 2 Square Badge Arrow Down",
+      "categories": [
+        "arrows",
+        "editing",
+        "badged",
+        "badged-arrow",
+        "status"
+      ]
+    },
+    {
+      "iconId": "slider-horizontal-2-square-on-square-6b9859",
+      "label": "Slider Horizontal 2 Square On Square",
+      "categories": [
+        "editing"
+      ]
+    },
+    {
       "iconId": "slider-horizontal-below-square-and-square-filled-0044ec",
       "label": "Slider Horizontal Below Square And Square Filled",
       "categories": [
@@ -277,60 +1086,66 @@
       ]
     },
     {
+      "iconId": "sparkles-square-filled-on-square-24b4e1",
+      "label": "Sparkles Square Filled On Square",
+      "categories": [
+        "rays-sparkles"
+      ]
+    },
+    {
       "iconId": "square-3-layers-3-d-48b0b1",
       "label": "Square 3 Layers 3 D",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-3-layers-3-d-bottom-filled-9f9e69",
       "label": "Square 3 Layers 3 D Bottom Filled",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-3-layers-3-d-middle-filled-532a8f",
       "label": "Square 3 Layers 3 D Middle Filled",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-3-layers-3-d-top-filled-414dfd",
       "label": "Square 3 Layers 3 D Top Filled",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-3-layers-3d-bottom-filled-fb6352",
       "label": "Square 3 Layers 3d Bottom Filled",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-3-layers-3d-middle-filled-b6d6d1",
       "label": "Square 3 Layers 3d Middle Filled",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-3-layers-3d-top-filled-9e19b3",
       "label": "Square 3 Layers 3d Top Filled",
       "categories": [
-        "shapes"
+        "interface"
       ]
     },
     {
       "iconId": "square-and-arrow-down-b9f92f",
       "label": "Square And Arrow Down",
       "categories": [
-        "arrows",
-        "shapes"
+        "arrows"
       ]
     },
     {
@@ -338,7 +1153,6 @@
       "label": "Square And Arrow Down Badge Checkmark",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-checkmark",
         "status"
@@ -349,7 +1163,6 @@
       "label": "Square And Arrow Down Badge Checkmark Fill",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-checkmark",
         "status"
@@ -360,7 +1173,6 @@
       "label": "Square And Arrow Down Badge Clock",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-clock",
         "status",
@@ -372,7 +1184,6 @@
       "label": "Square And Arrow Down Badge Clock Fill",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-clock",
         "status",
@@ -384,7 +1195,6 @@
       "label": "Square And Arrow Down Badge Xmark",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-xmark",
         "status"
@@ -395,7 +1205,6 @@
       "label": "Square And Arrow Down Badge Xmark Fill",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-xmark",
         "status"
@@ -405,8 +1214,7 @@
       "iconId": "square-and-arrow-up-49f1cd",
       "label": "Square And Arrow Up",
       "categories": [
-        "arrows",
-        "shapes"
+        "arrows"
       ]
     },
     {
@@ -414,7 +1222,6 @@
       "label": "Square And Arrow Up Badge Checkmark",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-checkmark",
         "status"
@@ -425,7 +1232,6 @@
       "label": "Square And Arrow Up Badge Checkmark Fill",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-checkmark",
         "status"
@@ -436,7 +1242,6 @@
       "label": "Square And Arrow Up Badge Clock",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-clock",
         "status",
@@ -448,7 +1253,6 @@
       "label": "Square And Arrow Up Badge Clock Fill",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-clock",
         "status",
@@ -460,7 +1264,6 @@
       "label": "Square And Arrow Up Circle",
       "categories": [
         "arrows",
-        "shapes",
         "circled"
       ]
     },
@@ -468,8 +1271,7 @@
       "iconId": "square-and-arrow-up-fill-f3d109",
       "label": "Square And Arrow Up Fill",
       "categories": [
-        "arrows",
-        "shapes"
+        "arrows"
       ]
     },
     {
@@ -477,7 +1279,6 @@
       "label": "Square And Arrow Up Trianglebadge Exclamationmark",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-exclamationmark",
         "badged-exclamationmark-triangle",
@@ -490,7 +1291,6 @@
       "label": "Square And Arrow Up Trianglebadge Exclamationmark Fill",
       "categories": [
         "arrows",
-        "shapes",
         "badged",
         "badged-exclamationmark",
         "badged-exclamationmark-triangle",
@@ -502,8 +1302,64 @@
       "iconId": "square-and-pencil-535890",
       "label": "Square And Pencil",
       "categories": [
+        "editing"
+      ]
+    },
+    {
+      "iconId": "square-and-pencil-circle-58cae7",
+      "label": "Square And Pencil Circle",
+      "categories": [
         "editing",
-        "shapes"
+        "circled"
+      ]
+    },
+    {
+      "iconId": "square-and-pencil-circle-fill-d31772",
+      "label": "Square And Pencil Circle Fill",
+      "categories": [
+        "editing",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "square-arrowtriangle-4-outward-85eb81",
+      "label": "Square Arrowtriangle 4 Outward",
+      "categories": [
+        "arrows"
+      ]
+    },
+    {
+      "iconId": "square-badge-plus-c9c26d",
+      "label": "Square Badge Plus",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-badge-plus-fill-c0b7b4",
+      "label": "Square Badge Plus Fill",
+      "categories": [
+        "actions",
+        "badged",
+        "badged-plus",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-circle-d66d1a",
+      "label": "Square Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "square-circle-fill-94b9d6",
+      "label": "Square Circle Fill",
+      "categories": [
+        "circled"
       ]
     },
     {
@@ -511,8 +1367,7 @@
       "label": "Square Fill Text Grid 1 X2",
       "categories": [
         "documents",
-        "interface",
-        "shapes"
+        "interface"
       ]
     },
     {
@@ -520,10 +1375,7 @@
       "label": "Square Fill Text Grid 1x2",
       "categories": [
         "documents",
-        "editing",
-        "text-formatting",
-        "interface",
-        "shapes"
+        "interface"
       ]
     },
     {
@@ -538,8 +1390,7 @@
       "iconId": "square-grid-3-x1-below-line-grid-1-x2-fill-54c210",
       "label": "Square Grid 3 X1 Below Line Grid 1 X2 Fill",
       "categories": [
-        "interface",
-        "shapes"
+        "interface"
       ]
     },
     {
@@ -549,7 +1400,6 @@
         "actions",
         "documents",
         "interface",
-        "shapes",
         "badged",
         "badged-plus",
         "status"
@@ -562,7 +1412,6 @@
         "actions",
         "documents",
         "interface",
-        "shapes",
         "badged",
         "badged-plus",
         "status"
@@ -575,7 +1424,6 @@
         "actions",
         "documents",
         "interface",
-        "shapes",
         "badged",
         "badged-plus",
         "status"
@@ -630,6 +1478,16 @@
       ]
     },
     {
+      "iconId": "square-grid-3x3-square-badge-ellipsis-953535",
+      "label": "Square Grid 3x3 Square Badge Ellipsis",
+      "categories": [
+        "interface",
+        "badged",
+        "badged-ellipsis",
+        "status"
+      ]
+    },
+    {
       "iconId": "square-grid-3x3-topleft-filled-e1297e",
       "label": "Square Grid 3x3 Topleft Filled",
       "categories": [
@@ -662,10 +1520,31 @@
       ]
     },
     {
+      "iconId": "square-on-square-badge-person-crop-2faf2d",
+      "label": "Square On Square Badge Person Crop",
+      "categories": [
+        "editing",
+        "people",
+        "badged",
+        "badged-person",
+        "status"
+      ]
+    },
+    {
+      "iconId": "square-on-square-badge-person-crop-fill-49c63b",
+      "label": "Square On Square Badge Person Crop Fill",
+      "categories": [
+        "editing",
+        "people",
+        "badged",
+        "badged-person",
+        "status"
+      ]
+    },
+    {
       "iconId": "square-stack-3d-up-badge-automatic-6c5845",
       "label": "Square Stack 3d Up Badge Automatic",
       "categories": [
-        "shapes",
         "badged",
         "badged-automatic",
         "status"
@@ -675,7 +1554,6 @@
       "iconId": "square-stack-3d-up-badge-automatic-fill-ae95ae",
       "label": "Square Stack 3d Up Badge Automatic Fill",
       "categories": [
-        "shapes",
         "badged",
         "badged-automatic",
         "status"
@@ -685,7 +1563,6 @@
       "iconId": "square-stack-3d-up-trianglebadge-exclamationmark-54ff61",
       "label": "Square Stack 3d Up Trianglebadge Exclamationmark",
       "categories": [
-        "shapes",
         "badged",
         "badged-exclamationmark",
         "badged-exclamationmark-triangle",
@@ -697,7 +1574,6 @@
       "iconId": "square-stack-3d-up-trianglebadge-exclamationmark-fill-68415e",
       "label": "Square Stack 3d Up Trianglebadge Exclamationmark Fill",
       "categories": [
-        "shapes",
         "badged",
         "badged-exclamationmark",
         "badged-exclamationmark-triangle",
@@ -709,9 +1585,53 @@
       "iconId": "text-square-filled-645a87",
       "label": "Text Square Filled",
       "categories": [
-        "documents",
-        "editing",
-        "text-formatting"
+        "documents"
+      ]
+    },
+    {
+      "iconId": "triangle-circle-00870b",
+      "label": "Triangle Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "triangle-circle-fill-c10f8c",
+      "label": "Triangle Circle Fill",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "viewfinder-701b50",
+      "label": "Viewfinder",
+      "categories": [
+        "interface"
+      ]
+    },
+    {
+      "iconId": "viewfinder-circle-771c82",
+      "label": "Viewfinder Circle",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "viewfinder-circle-fill-a2eeab",
+      "label": "Viewfinder Circle Fill",
+      "categories": [
+        "circled"
+      ]
+    },
+    {
+      "iconId": "viewfinder-trianglebadge-exclamationmark-3b26ed",
+      "label": "Viewfinder Trianglebadge Exclamationmark",
+      "categories": [
+        "badged",
+        "badged-exclamationmark",
+        "badged-exclamationmark-triangle",
+        "badged-shapes",
+        "badged-shapes-triangle"
       ]
     },
     {
@@ -719,7 +1639,6 @@
       "label": "Xmark Triangle Circle Square",
       "categories": [
         "shapes",
-        "circled",
         "status"
       ]
     },
@@ -728,7 +1647,6 @@
       "label": "Xmark Triangle Circle Square Fill",
       "categories": [
         "shapes",
-        "circled",
         "status"
       ]
     }

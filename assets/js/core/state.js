@@ -30,6 +30,7 @@
       if ((Array.isArray(source.categories) ? source.categories : []).includes("other")) {
         (ICON_BY_ID.get(iconId)?.categories || []).forEach(function (categoryId) { if (ICON_CATEGORY_IDS.has(categoryId)) selected.add(categoryId); });
       }
+      if (!selected.size && ICON_CATEGORY_IDS.has("interface")) selected.add("interface");
       Array.from(selected).forEach(function (categoryId) {
         let parent = ICON_CATEGORY_BY_ID.get(categoryId)?.parent;
         while (parent) {

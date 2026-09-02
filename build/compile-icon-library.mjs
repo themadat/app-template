@@ -120,7 +120,9 @@ const ICON_CATEGORIES = [
   { id: "locations", label: "Locations", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope", "country", "continent", "earth", "landmark", "monument", "building", "cathedral", "church", "lighthouse", "stadium", "university", "campus", "bridge", "tower", "road", "park", "backpack", "obelisk", "wall"] },
   { id: "math", label: "Math", terms: ["123", "function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
   { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
-  { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor", "volcano"] },
+  { id: "nature", label: "Nature", terms: ["nature", "mountain", "water", "volcano"] },
+  { id: "animals-plants", label: "Animals & Plants", parent: "nature", terms: ["leaf", "tree", "flower", "plant", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor"] },
+  { id: "weather", label: "Weather", parent: "nature", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] },
   { id: "rays-sparkles", label: "Rays & Sparkles", section: "appearance", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid", "eye off"] },
@@ -174,8 +176,7 @@ const ICON_CATEGORIES = [
   { id: "slashed", label: "Slashed", section: "appearance", terms: ["slash", "slashed"] },
   { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge", "medal"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
-  { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] },
-  { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
+  { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] }
 ];
 
 const ICON_CATEGORY_ALIASES = new Map([
@@ -437,6 +438,22 @@ function isSfSymbol(input) {
     || /(?:^|\/)build\/icon-sources\/source-material\//i.test(file);
 }
 
+function repairKnownSourceIcon(input, svg) {
+  if (input.repo !== "visit-tracker" || input.file !== "build/icon-sources/parked-icon-consts.js") {
+    return { symbol: input.symbol, svg: svg };
+  }
+  const transposedSquareSymbols = {
+    __CHECKMARK_SQUARE_FILL: "x_square_fill",
+    __X_SQUARE_FILL: "checkmark_square_fill"
+  };
+  const symbol = transposedSquareSymbols[input.symbol] || input.symbol;
+  if (symbol === input.symbol) return { symbol: symbol, svg: svg };
+  return {
+    symbol: symbol,
+    svg: svg.replace('<rect height="22.959" width="23.3203" x="0" y="0"/>', '<rect height="22.959" opacity="0" width="23.3203" x="0" y="0"/>')
+  };
+}
+
 function consolidateRecords(target, duplicate) {
   duplicate.aliases.forEach(function (alias) { target.aliases.add(alias); });
   target.sources.push.apply(target.sources, duplicate.sources);
@@ -452,8 +469,10 @@ function addIcon(input) {
   let svg = cleanSvg(input.svg);
   if (!svg) { stats.rejected += 1; return; }
   if (kind === "sf-symbol") svg = normalizeSfSymbolPaint(svg);
+  const repaired = repairKnownSourceIcon(input, svg);
+  svg = repaired.svg;
   const hash = crypto.createHash("sha256").update(canonicalSvg(svg)).digest("hex").slice(0, 12);
-  const name = normalizedName(input.symbol);
+  const name = normalizedName(repaired.symbol);
   const source = { repo: input.repo, file: input.file, symbol: input.symbol };
   const matchingArtwork = recordsByHash.get(hash);
   const matchingSfName = kind === "sf-symbol" ? sfRecordsByName.get(name) : null;
@@ -572,7 +591,7 @@ const compiledRecords = Array.from(iconRecords).map(function (record) {
   const preferred = record.name;
   const metadata = deriveMetadata(record);
   return {
-    id: preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6),
+    id: preferred === "x_square_fill" ? "x-square-fill-44b51b" : preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6),
     name: preferred,
     label: cleanIconLabel(labelFor(preferred)) || "Icon",
     kind: record.kinds.has("sf-symbol") ? "sf-symbol" : "custom",
