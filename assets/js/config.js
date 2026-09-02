@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.22",
-      buildId: "0.0.1.22",
+      version: "0.0.1.23",
+      buildId: "0.0.1.23",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -65,14 +65,19 @@
       { id: "idea", label: "Idea", icon: "◇", color: "#7058a3" }
     ],
 
-    themes: [
-      { id: "harbor", label: "Harbor", accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
-      { id: "forest", label: "Forest", accent: "#356859", accent2: "#a76f3f", success: "#4d744e", warning: "#9a7028", danger: "#a04c48" },
-      { id: "plum", label: "Plum", accent: "#6a4c79", accent2: "#b76b65", success: "#547158", warning: "#9c6c25", danger: "#a74650" },
-      { id: "slate", label: "Slate", accent: "#49627c", accent2: "#9b664b", success: "#52715c", warning: "#916c2e", danger: "#9e4850" }
-    ],
+    themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.23",
+        date: "2026-09-01T22:16:37.000Z",
+        title: "Streamline icon metadata and categories",
+        summary: "Icon names and filter sources are editable, category branches collapse persistently, the Badge taxonomy gains nested shape variants, and Appearance is more compact.",
+        features: ["Direct name and group editing from every icon label plus editable filter source from Icon details", "Persistent collapsible category branches with Badged → Shapes and Exclamation Mark variants", "Right-click removal from the selected category with Undo", "Six supplied icon metadata overrides baked into the compiled catalog"],
+        improvements: ["The refreshed sibling-source scan adds 750 SF Symbols for a 3,130-icon catalog", "Cloud/Server is now Cloud & Drive, while Rays and Sparkled are combined as Rays & Sparkles", "Wider icon cards fit Counterclockwise on one line at the default size", "One sliding text-size control adjusts application and reading text together", "Button presentation now follows color mode in Appearance"],
+        fixes: ["Theme presets and the manual motion override no longer clutter Settings", "Nested group parents are preserved automatically in local and compiled overrides", "Reduced-motion behavior continues to follow the device preference"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.22",
         date: "2026-09-01T21:38:33.000Z",
@@ -293,9 +298,9 @@
     ],
 
     help: [
-      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories health nature rays cloud server shapes badged plus minus checkmark xmark squared circled slashed sparkled copy svg resize divider notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact category and filter rail for instant narrowing, and select any icon card to copy its complete SVG markup. On desktop and tablet, drag the divider or use its arrow keys to resize the rail. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
-      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories health nature rays cloud server drive shapes badged time weather plus minus checkmark xmark squared circled slashed sparkled quick select copy clipboard source filter resize divider catalog compiler arrows", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact rail keeps category chips, type, source, and result counts immediately available, including Health, Nature, Rays, Cloud/Server, Shapes, Badged with 39 nested subtype choices (including plain Badge), Squared, Circled, Slashed, Sparkled, Time, and Weather. Use Up and Down Arrow while a category is focused to activate the adjacent category. Drag the divider to change the rail width, or focus it and use Left/Right, Home, or End; the width is remembered. Results stay in alphabetical order and appear 500 at a time. Press <kbd>Enter</kbd> to move to the grid, choose a card to copy its sanitized SVG, or use the information button for categories, tags, identifiers, aliases, repositories, filenames, paths, and source symbols. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
-      { id: "icon-overrides", title: "Icon overrides", section: "Features", keywords: "icon rename groups override export json compiler feed back developer", html: "<p>Rename an icon or change its groups from the information dialog, then choose <strong>Export overrides</strong> there or in Developer Mode. The download is a compact JSON array containing only icon IDs, labels, and category IDs. Attach that file in a future request to hard-code the changes, or use it directly as <code>build/icon-library-overrides.json</code>; the compiler also accepts the older wrapped format.</p>" },
+      { id: "start", title: "Getting started", section: "Basics", keywords: "start icons search tags categories health nature rays cloud server shapes badged plus minus checkmark xmark squared circled slashed sparkled copy svg resize divider rename right click notes roadmap", html: "<p>Press <kbd>/</kbd> to search the icon catalog by name or meaning, use the compact category and filter rail for instant narrowing, select a preview to copy its complete SVG markup, or select its name to edit it directly. On desktop and tablet, drag the divider or use its arrow keys to resize the rail. Notes and the replaceable Roadmap remain available from the application shell.</p>" },
+      { id: "icons", title: "Finding and copying icons", section: "Features", keywords: "icons svg symbol search semantic tags categories health nature rays sparkles cloud drive shapes badged time weather plus minus checkmark xmark squared circled slashed quick select collapse copy clipboard rename right click remove undo source filter resize divider catalog compiler arrows", html: "<p>Search by name, alias, semantic tag, category, Symbol/Custom type, repository, or source metadata; multiple search words must all match. The compact rail keeps category chips, type, source, and result counts immediately available, including Health, Nature, Rays &amp; Sparkles, Cloud &amp; Drive, Shapes, Badged with 39 primary subtype choices (including plain Badge), Squared, Circled, Slashed, Time, and Weather. Category branches can be collapsed and their state is remembered; Shapes and Exclamation Mark contain their own nested choices. Use Up and Down Arrow while a category is focused to activate the adjacent category. Drag the divider to change the rail width, or focus it and use Left/Right, Home, or End; the width is remembered. Results stay in alphabetical order and appear 500 at a time. Press <kbd>Enter</kbd> to move to the grid, choose a preview to copy its sanitized SVG, select its name to edit metadata, right-click it to remove it from the selected category with Undo, or use the information button for tags, original source details, and the editable filter source. Use <kbd>F</kbd> for categories and filters, <kbd>G</kbd> for the first result, <kbd>I</kbd> for focused-icon details, <kbd>C</kbd> to clear search, and <kbd>L</kbd> to show more. The committed catalog is rebuilt with <code>build/compile-icon-library.mjs</code>.</p>" },
+      { id: "icon-overrides", title: "Icon overrides", section: "Features", keywords: "icon rename groups source right click remove undo override export json compiler feed back developer", html: "<p>Select an icon name to edit its display name and groups directly, or open Icon details to change the source used by the repository filter while retaining every original file reference. When a category is selected, right-click an icon to remove it from that group and use Undo if needed. Choose <strong>Export overrides</strong> in the editor or Developer Mode to download a compact array containing icon IDs, labels, category IDs, and an optional source. Attach that file in a future request to hard-code the changes, or use it directly as <code>build/icon-library-overrides.json</code>; the compiler also accepts the older wrapped format.</p>" },
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort", html: "<p>Search Roadmap, filter its state, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },

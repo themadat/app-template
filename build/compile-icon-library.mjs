@@ -106,7 +106,7 @@ const ICON_CATEGORIES = [
   { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "phone", "call", "megaphone", "bell", "notification", "mention"] },
   { id: "commerce", label: "Commerce", terms: ["cart", "bag", "basket", "credit", "currency", "dollar", "bank", "wallet", "gift", "receipt", "tag"] },
   { id: "devices", label: "Devices", terms: ["desktop", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "watch", "keyboard", "mouse", "printer", "display", "monitor", "television", "tv"] },
-  { id: "cloud-server", label: "Cloud/Server", terms: ["cloud", "icloud", "server", "drive", "externaldrive", "internaldrive", "opticaldiscdrive", "storage", "database", "network"] },
+  { id: "cloud-server", label: "Cloud & Drive", terms: ["cloud", "icloud", "server", "drive", "externaldrive", "internaldrive", "opticaldiscdrive", "storage", "database", "network"] },
   { id: "documents", label: "Documents", terms: ["document", "doc", "file", "folder", "page", "paper", "note", "clipboard", "book", "text", "list", "archive"] },
   { id: "editing", label: "Editing", terms: ["pencil", "pen", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat"] },
   { id: "food-drink", label: "Food & Drink", terms: ["cocktail", "drink", "glass", "wine", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
@@ -115,7 +115,7 @@ const ICON_CATEGORIES = [
   { id: "maps-travel", label: "Maps & Travel", terms: ["map", "location", "pin", "globe", "compass", "car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "travel"] },
   { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
   { id: "nature", label: "Nature", terms: ["leaf", "tree", "flower", "plant", "mountain", "water", "animal", "dog", "cat", "bird", "fish"] },
-  { id: "rays", label: "Rays", terms: ["ray", "rays", "laser", "burst"] },
+  { id: "rays-sparkles", label: "Rays & Sparkles", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid"] },
   { id: "shapes", label: "Shapes", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape"] },
@@ -132,6 +132,8 @@ const ICON_CATEGORIES = [
   { id: "badged-creditcard", label: "Credit Card", parent: "badged", terms: ["creditcard"] },
   { id: "badged-ellipsis", label: "Ellipsis", parent: "badged", terms: ["ellipsis"] },
   { id: "badged-exclamationmark", label: "Exclamation Mark", parent: "badged", terms: ["exclamationmark"] },
+  { id: "badged-exclamationmark-circle", label: "Circle", parent: "badged-exclamationmark", terms: ["circle"] },
+  { id: "badged-exclamationmark-triangle", label: "Triangle", parent: "badged-exclamationmark", terms: ["triangle"] },
   { id: "badged-eye", label: "Eye", parent: "badged", terms: ["eye"] },
   { id: "badged-gauge", label: "Gauge", parent: "badged", terms: ["gauge"] },
   { id: "badged-gearshape", label: "Gear", parent: "badged", terms: ["gearshape"] },
@@ -149,7 +151,9 @@ const ICON_CATEGORIES = [
   { id: "badged-plus", label: "Plus", parent: "badged", terms: ["plus"] },
   { id: "badged-questionmark", label: "Question Mark", parent: "badged", terms: ["questionmark"] },
   { id: "badged-record", label: "Record", parent: "badged", terms: ["record"] },
-  { id: "badged-shield", label: "Shield", parent: "badged", terms: ["shield"] },
+  { id: "badged-shapes", label: "Shapes", parent: "badged", terms: [] },
+  { id: "badged-shapes-shield", label: "Shield", parent: "badged-shapes", terms: ["shield"] },
+  { id: "badged-shapes-triangle", label: "Triangle", parent: "badged-shapes", terms: ["triangle"] },
   { id: "badged-snowflake", label: "Snowflake", parent: "badged", terms: ["snowflake"] },
   { id: "badged-sparkles", label: "Sparkles", parent: "badged", terms: ["sparkles"] },
   { id: "badged-star", label: "Star", parent: "badged", terms: ["star"] },
@@ -162,11 +166,32 @@ const ICON_CATEGORIES = [
   { id: "squared", label: "Squared", terms: ["square"] },
   { id: "circled", label: "Circled", terms: ["circle"] },
   { id: "slashed", label: "Slashed", terms: ["slash", "slashed"] },
-  { id: "sparkled", label: "Sparkled", terms: ["sparkle", "sparkles"] },
   { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
   { id: "weather", label: "Weather", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] }
 ];
+
+const ICON_CATEGORY_ALIASES = new Map([
+  ["rays", "rays-sparkles"],
+  ["sparkled", "rays-sparkles"],
+  ["badged-shield", "badged-shapes-shield"]
+]);
+const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
+
+function normalizeCategoryIds(values) {
+  const selected = new Set((Array.isArray(values) ? values : []).map(function (categoryId) {
+    const value = String(categoryId || "").trim();
+    return ICON_CATEGORY_ALIASES.get(value) || value;
+  }).filter(function (categoryId) { return categoryId === "other" || ICON_CATEGORY_BY_ID.has(categoryId); }));
+  Array.from(selected).forEach(function (categoryId) {
+    let parent = ICON_CATEGORY_BY_ID.get(categoryId)?.parent || "";
+    while (parent) {
+      selected.add(parent);
+      parent = ICON_CATEGORY_BY_ID.get(parent)?.parent || "";
+    }
+  });
+  return ICON_CATEGORIES.map(function (category) { return category.id; }).concat(["other"]).filter(function (categoryId) { return selected.has(categoryId); });
+}
 
 function loadIconOverrides() {
   if (!fs.existsSync(overrideFile)) return [];
@@ -181,7 +206,7 @@ function loadIconOverrides() {
   if (!overrideItems || !wrappedFormatIsValid) {
     throw new Error("The icon override file has an unsupported format.");
   }
-  const categoryIds = new Set(ICON_CATEGORIES.map(function (category) { return category.id; }).concat(["other"]));
+  const sourceIds = new Set(sources.map(function (source) { return source.name; }));
   const seen = new Set();
   return overrideItems.map(function (item, index) {
     const source = item && typeof item === "object" && !Array.isArray(item) ? item : {};
@@ -193,9 +218,8 @@ function loadIconOverrides() {
     return {
       iconId: iconId,
       label: label,
-      categories: Array.from(new Set(source.categories.map(function (categoryId) {
-        return String(categoryId || "").trim();
-      }).filter(function (categoryId) { return categoryIds.has(categoryId); })))
+      categories: normalizeCategoryIds(source.categories),
+      source: sourceIds.has(String(source.source || "").trim()) ? String(source.source || "").trim() : ""
     };
   });
 }
@@ -257,8 +281,10 @@ function metadataKeys(values) {
   return keys;
 }
 
-function badgeSubtypeKeys(record) {
+function badgeMetadata(record) {
   const subtypes = new Set();
+  const shapes = new Set();
+  const exclamationShapes = new Set();
   const values = [record.name].concat(Array.from(record.aliases), record.sources.flatMap(function (source) {
     return [source.symbol, path.basename(source.file, path.extname(source.file))];
   }));
@@ -269,21 +295,33 @@ function badgeSubtypeKeys(record) {
       if (token === "badge" || token.endsWith("badge")) badgeIndex = index;
     });
     if (badgeIndex < 0) return;
+    const badgeToken = tokens[badgeIndex];
     const trailing = tokens.slice(badgeIndex + 1).filter(function (token) { return token !== "fill" && token !== "filled"; });
-    subtypes.add(trailing[0] || "badge");
+    const subtype = trailing[0] || "badge";
+    subtypes.add(subtype);
+    if (badgeToken.includes("trianglebadge")) {
+      shapes.add("triangle");
+      if (subtype === "exclamationmark") exclamationShapes.add("triangle");
+    } else if (subtype === "exclamationmark" && tokens.slice(0, badgeIndex).includes("circle")) {
+      exclamationShapes.add("circle");
+    }
+    if (subtype === "shield") shapes.add("shield");
   });
-  return subtypes;
+  return { subtypes: subtypes, shapes: shapes, exclamationShapes: exclamationShapes };
 }
 
 function deriveMetadata(record) {
   const keys = metadataKeys([record.name].concat(Array.from(record.aliases), record.sources.map(function (item) { return item.symbol; })));
-  const badgeSubtypes = badgeSubtypeKeys(record);
+  const badge = badgeMetadata(record);
   const categories = ICON_CATEGORIES.filter(function (category) {
     if (category.id === "shapes") return category.terms.some(function (term) {
       const normalized = normalizedName(term);
       return record.name === normalized || record.name.startsWith(normalized + "_");
     });
-    if (category.parent === "badged") return category.terms.some(function (term) { return badgeSubtypes.has(normalizedName(term)); });
+    if (category.id === "badged-shapes") return badge.shapes.size > 0;
+    if (category.parent === "badged-shapes") return category.terms.some(function (term) { return badge.shapes.has(normalizedName(term)); });
+    if (category.parent === "badged-exclamationmark") return badge.subtypes.has("exclamationmark") && category.terms.some(function (term) { return badge.exclamationShapes.has(normalizedName(term)); });
+    if (category.parent === "badged") return category.terms.some(function (term) { return badge.subtypes.has(normalizedName(term)); });
     return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
   const isBadgeSource = record.sources.some(function (source) {
@@ -301,7 +339,7 @@ function deriveMetadata(record) {
   const isSparklesSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/(?:sparkles|Sparkles:Rays)\//i.test(source.file);
   });
-  if (isSparklesSource && !categories.includes("sparkled")) categories.push("sparkled");
+  if (isSparklesSource && !categories.includes("rays-sparkles")) categories.push("rays-sparkles");
   const isWeatherSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/weather\//i.test(source.file);
   });
@@ -311,17 +349,17 @@ function deriveMetadata(record) {
   });
   if (isTimeSource && !categories.includes("time")) categories.push("time");
   const isHealthSource = record.sources.some(function (source) {
-    return source.repo === "svg-converter" && /^app-input\/!Health\//i.test(source.file);
+    return source.repo === "svg-converter" && /^app-input\/(?:!Health|Health)\//i.test(source.file);
   });
   if (isHealthSource && !categories.includes("health")) categories.push("health");
   const isNatureSource = record.sources.some(function (source) {
-    return source.repo === "svg-converter" && /^app-input\/!Nature\//i.test(source.file);
+    return source.repo === "svg-converter" && /^app-input\/(?:!Nature|Nature)\//i.test(source.file);
   });
   if (isNatureSource && !categories.includes("nature")) categories.push("nature");
   const isRaysSource = record.sources.some(function (source) {
-    return source.repo === "svg-converter" && /^app-input\/!Rays\//i.test(source.file);
+    return source.repo === "svg-converter" && /^app-input\/(?:!Rays|Rays)\//i.test(source.file);
   });
-  if (isRaysSource && !categories.includes("rays")) categories.push("rays");
+  if (isRaysSource && !categories.includes("rays-sparkles")) categories.push("rays-sparkles");
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {
@@ -332,7 +370,7 @@ function deriveMetadata(record) {
     const category = ICON_CATEGORIES.find(function (item) { return item.id === categoryId; });
     tags.add(category ? category.label.toLowerCase() : "other");
   });
-  return { categories: categories, tags: Array.from(tags).filter(Boolean).sort().slice(0, 120) };
+  return { categories: normalizeCategoryIds(categories), tags: Array.from(tags).filter(Boolean).sort().slice(0, 120) };
 }
 
 function templateLiteral(value) {
@@ -484,6 +522,7 @@ const records = Array.from(iconRecords).map(function (record) {
     categories: metadata.categories,
     tags: metadata.tags,
     repositories: Array.from(new Set(sourcesForIcon.map(function (source) { return source.repo; }))).sort(),
+    source: "",
     sources: sourcesForIcon,
     svg: record.svg
   };
@@ -497,11 +536,12 @@ hardcodedOverrides.forEach(function (override) {
   if (!record) return;
   record.label = cleanIconLabel(override.label) || record.label;
   record.categories = override.categories;
+  record.source = override.source;
   overridesApplied += 1;
 });
 records.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }) || a.id.localeCompare(b.id); });
 
-const contributingSources = Array.from(new Set(records.flatMap(function (record) { return record.repositories; }))).sort();
+const contributingSources = Array.from(new Set(records.flatMap(function (record) { return record.repositories.concat(record.source || []); }))).sort();
 const lines = [
   "/* Generated by build/compile-icon-library.mjs. Edit source icons, then run the compiler again. */",
   "(function () {",
@@ -521,6 +561,7 @@ records.forEach(function (record) {
   lines.push("      categories: " + JSON.stringify(record.categories) + ",");
   lines.push("      tags: " + JSON.stringify(record.tags) + ",");
   lines.push("      repositories: " + JSON.stringify(record.repositories) + ",");
+  if (record.source) lines.push("      source: " + JSON.stringify(record.source) + ",");
   lines.push("      sources: " + JSON.stringify(record.sources) + ",");
   lines.push("      svg: " + templateLiteral(record.svg));
   lines.push("    },");

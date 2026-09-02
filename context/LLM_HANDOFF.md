@@ -6,7 +6,7 @@ Start a new session with:
 Continue work in /Users/stripes/Documents/GitHub/app-template. Read AGENTS.md and context/LLM_HANDOFF.md first. Preserve manual edits and run git status --short before editing.
 ```
 
-This repository is a focused SVG icon-library application. It includes the reusable top bar with centered icon search, a searchable and copyable 2,380-icon main catalog with SF Symbols/Custom and source filters, 500-icon batches, editable icon names/groups with compact override export, 39 nested Badged subtype filters including plain Badge, explicit Health, Nature, Rays, and Time source coverage with a dedicated Rays quick category, a Developer Mode minimum-label-length filter, a single plain-text Notes modal, a replaceable demonstration Roadmap inside Settings, combined floating storage/sync status, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface, multi-note workspace, rich-text editor, and app-space Roadmap are not part of the template.
+This repository is a focused SVG icon-library application. It includes the reusable top bar with centered icon search, a searchable and copyable 3,130-icon main catalog with SF Symbols/Custom and editable source filters, 500-icon batches, directly editable icon names/groups, selected-category right-click removal with Undo, compact override export, persistent collapsible categories, 39 primary Badged subtype filters including plain Badge plus nested Shapes and Exclamation Mark variants, explicit Health, Nature, Rays & Sparkles, and Time source coverage, a simplified Appearance panel with one Visit Tracker-style text-size slider, a Developer Mode minimum-label-length filter, a single plain-text Notes modal, a replaceable demonstration Roadmap inside Settings, combined floating storage/sync status, local persistence/recovery, optional GitHub Sync, install assets, and the offline shell. The removed Records interface, multi-note workspace, rich-text editor, and app-space Roadmap are not part of the template.
 
 ## Workflows
 
@@ -52,7 +52,7 @@ Do not silently move from one lifecycle stage to another.
 
 - `index.html`: sticky shell, icon catalog, Notes, Settings, dialogs, and live regions.
 - `assets/css/app.css`: themes, safe areas, components, module layouts, and responsive behavior.
-- `assets/js/config.js`: identity, version/build id, assets, themes, Help, releases, and Roadmap data.
+- `assets/js/config.js`: identity, version/build id, assets, theme defaults, Help, releases, and Roadmap data.
 - `assets/js/icons.js`: inline SF Symbol SVG catalog.
 - `assets/js/app.js`: rendering, event wiring, shortcuts, theme, Developer Mode, and Beta detection.
 - `assets/js/core/`: state, storage, reusable components, portability, GitHub Sync, and PWA behavior.
@@ -84,7 +84,7 @@ git diff --check
 python3 -m http.server 8000
 ```
 
-Check desktop and mobile layout, no horizontal overflow, centered global search, 500-icon batches, category Up/Down activation, compact override export, Developer Mode minimum-label filtering and toggle-back, Notes editing and persistence, Settings Roadmap filtering/sorting, Settings tabs, combined floating storage/sync status, sync setup, modified and unmodified shortcuts, contextual hints, SVG controls, theme click/T shortcut, Beta detection, fresh online reloads, bottom new-version toast with its arrow-only Force refresh action, and offline reload. Stop the server afterward.
+Check desktop and mobile layout, no horizontal overflow, centered global search, 500-icon batches, category Up/Down activation, recursive category collapse/persistence, nested Badged Shapes and Exclamation Mark filters, editable filter-source overrides with retained provenance, compact override export, Developer Mode minimum-label filtering and toggle-back, Notes editing and persistence, Settings Roadmap filtering/sorting, Settings tabs, combined floating storage/sync status, sync setup, modified and unmodified shortcuts, contextual hints, SVG controls, theme click/T shortcut, Beta detection, fresh online reloads, bottom new-version toast with its arrow-only Force refresh action, and offline reload. Stop the server afterward.
 
 ## End of turn
 

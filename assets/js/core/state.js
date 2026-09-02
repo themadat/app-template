@@ -6,7 +6,17 @@
   const u = App.utils;
   const STATUS_IDS = new Set(config.statuses.map(function (status) { return status.id; }));
   const MODULE_IDS = ["roadmap"];
-  const ICON_CATEGORY_IDS = new Set((App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : []).map(function (category) { return category.id; }));
+  const ICON_CATEGORIES = App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : [];
+  const ICON_CATEGORY_IDS = new Set(ICON_CATEGORIES.map(function (category) { return category.id; }));
+  const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
+  const ICON_CATEGORY_PARENT_IDS = new Set(ICON_CATEGORIES.map(function (category) { return category.parent || ""; }).filter(Boolean));
+  const ICON_CATEGORY_ALIASES = new Map([["rays", "rays-sparkles"], ["sparkled", "rays-sparkles"], ["badged-shield", "badged-shapes-shield"]]);
+  const ICON_SOURCE_IDS = new Set(App.iconLibrary && Array.isArray(App.iconLibrary.sourceRepositories) ? App.iconLibrary.sourceRepositories : []);
+
+  function normalizeIconCategoryId(value) {
+    const categoryId = u.cleanLine(value, 80);
+    return ICON_CATEGORY_ALIASES.get(categoryId) || categoryId;
+  }
 
   function normalizeIconOverrides(value) {
     const overrides = new Map();
@@ -15,10 +25,17 @@
       const iconId = u.cleanLine(source.iconId, 160);
       const label = u.cleanIconLabel(source.label, 120);
       if (!iconId || !label) return;
-      const categories = Array.from(new Set((Array.isArray(source.categories) ? source.categories : []).map(function (categoryId) {
-        return u.cleanLine(categoryId, 80);
-      }).filter(function (categoryId) { return ICON_CATEGORY_IDS.has(categoryId); })));
-      overrides.set(iconId, { iconId: iconId, label: label, categories: categories });
+      const selected = new Set((Array.isArray(source.categories) ? source.categories : []).map(normalizeIconCategoryId).filter(function (categoryId) { return ICON_CATEGORY_IDS.has(categoryId); }));
+      Array.from(selected).forEach(function (categoryId) {
+        let parent = ICON_CATEGORY_BY_ID.get(categoryId)?.parent;
+        while (parent) {
+          selected.add(parent);
+          parent = ICON_CATEGORY_BY_ID.get(parent)?.parent;
+        }
+      });
+      const categories = ICON_CATEGORIES.map(function (category) { return category.id; }).filter(function (categoryId) { return selected.has(categoryId); });
+      const sourceId = u.cleanLine(source.source, 100);
+      overrides.set(iconId, { iconId: iconId, label: label, categories: categories, source: ICON_SOURCE_IDS.has(sourceId) ? sourceId : "" });
     });
     return Array.from(overrides.values()).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
   }
@@ -34,7 +51,7 @@
   }
 
   function defaultTheme() {
-    return config.themes[0];
+    return config.themeDefaults;
   }
 
   function createDefaultState(options) {
@@ -60,15 +77,12 @@
       preferences: {
         appearance: {
           mode: "system",
-          preset: defaultTheme().id,
           accent: defaultTheme().accent,
           accent2: defaultTheme().accent2,
           success: defaultTheme().success,
           warning: defaultTheme().warning,
           danger: defaultTheme().danger,
-          textScale: 1,
-          readingScale: 1,
-          reducedMotion: "system"
+          textScale: 1
         },
         controls: {
           buttonStyle: "both",
@@ -118,7 +132,7 @@
         supportTab: "settings"
       },
       modules: {
-        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204, minimumLabelLength: 0, overrides: [] },
+        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204, minimumLabelLength: 0, collapsedCategories: ["badged"], overrides: [] },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -365,7 +379,7 @@
     const sourceIconLibrary = u.plainObject(sourceModules.iconLibrary);
     const sourceRoadmap = u.plainObject(sourceModules.roadmap);
     const sourceCloud = u.plainObject(sourceModules.cloudSync);
-    const theme = config.themes.find(function (item) { return item.id === sourceAppearance.preset; }) || defaultTheme();
+    const theme = defaultTheme();
     const recordIds = new Set();
     const normalizedDocumentIds = new Set();
     const records = (Array.isArray(sourceWorkspace.records) ? sourceWorkspace.records : []).slice(0, config.controls.maxRecords).map(function (record, index) {
@@ -404,15 +418,12 @@
       preferences: {
         appearance: {
           mode: mode,
-          preset: theme.id,
           accent: u.normalizeColor(sourceAppearance.accent, theme.accent),
           accent2: u.normalizeColor(sourceAppearance.accent2, theme.accent2),
           success: u.normalizeColor(sourceAppearance.success, theme.success),
           warning: u.normalizeColor(sourceAppearance.warning, theme.warning),
           danger: u.normalizeColor(sourceAppearance.danger, theme.danger),
-          textScale: u.clamp(sourceAppearance.textScale, 0.85, 1.3, 1),
-          readingScale: u.clamp(sourceAppearance.readingScale, 0.85, 1.6, 1),
-          reducedMotion: ["system", "reduce", "full"].includes(sourceAppearance.reducedMotion) ? sourceAppearance.reducedMotion : "system"
+          textScale: u.clamp(sourceAppearance.textScale, 0.85, 1.3, u.clamp(sourceAppearance.readingScale, 0.85, 1.3, 1))
         },
         controls: {
           buttonStyle: ["icons", "text", "both"].includes(sourceControls.buttonStyle) ? sourceControls.buttonStyle : "both",
@@ -464,13 +475,14 @@
       modules: {
         iconLibrary: {
           category: (function () {
-            const category = u.cleanLine(sourceIconLibrary.category || "all", 80) || "all";
+            const category = normalizeIconCategoryId(sourceIconLibrary.category || "all") || "all";
             return category === "all" || ICON_CATEGORY_IDS.has(category) ? category : "all";
           })(),
           kind: ["all", "sf-symbol", "custom"].includes(sourceIconLibrary.kind) ? sourceIconLibrary.kind : "all",
           source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
           sidebarWidth: u.clamp(sourceIconLibrary.sidebarWidth, 156, 360, base.modules.iconLibrary.sidebarWidth),
           minimumLabelLength: Math.round(u.clamp(sourceIconLibrary.minimumLabelLength, 0, 120, 0)),
+          collapsedCategories: Array.from(new Set((Array.isArray(sourceIconLibrary.collapsedCategories) ? sourceIconLibrary.collapsedCategories : base.modules.iconLibrary.collapsedCategories).map(normalizeIconCategoryId).filter(function (categoryId) { return ICON_CATEGORY_PARENT_IDS.has(categoryId); }))).slice(0, 100),
           overrides: normalizeIconOverrides(sourceIconLibrary.overrides)
         },
         records: Object.assign({}, base.modules.records, u.plainObject(sourceModules.records)),

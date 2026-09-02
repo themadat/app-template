@@ -12,23 +12,23 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.22">
-  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.22">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.22">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.22" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.22" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.22">
-  <script defer src="assets/js/config.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/icon-library.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.22"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.22"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.23">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.23">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.23">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.23" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.23" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.23">
+  <script defer src="assets/js/config.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/icon-library.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.23"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.23"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -36,12 +36,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T | Control+Alt+Shift+T Control+Alt+Shift+|" data-shortcut="T" data-shortcut-secondary="|">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.22" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.23" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.22</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.23</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -81,7 +81,7 @@
 
   <aside id="contextHint" class="context-hint" data-hint-key="icon-library-basics" hidden>
     <span class="context-hint-icon" aria-hidden="true" data-symbol="info"></span>
-    <p>Press <kbd>/</kbd> to search, <kbd>Enter</kbd> to move to results, and <kbd>I</kbd> on a focused icon for details.</p>
+    <p>Press <kbd>/</kbd> to search, select an icon name to edit it, or right-click a card to remove it from the selected category.</p>
     <button type="button" class="icon-button" data-dismiss-hint="icon-library-basics" aria-label="Dismiss hint"><span aria-hidden="true" data-symbol="close"></span></button>
   </aside>
 
@@ -129,6 +129,7 @@
         <dl class="icon-info-facts">
           <div><dt>Identifier</dt><dd><code id="iconInfoIdentifier"></code></dd></div>
           <div id="iconInfoAliasesRow"><dt>Aliases</dt><dd id="iconInfoAliases"></dd></div>
+          <div><dt>Source</dt><dd id="iconInfoSource"></dd></div>
           <div><dt>Categories</dt><dd id="iconInfoCategories"></dd></div>
           <div><dt>Search tags</dt><dd id="iconInfoTags"></dd></div>
         </dl>
@@ -137,7 +138,7 @@
           <ul id="iconInfoSources" class="icon-source-list"></ul>
         </section>
       </div>
-      <footer class="dialog-footer"><button id="iconInfoEditButton" class="button" type="button"><span aria-hidden="true" data-symbol="support"></span><span>Edit name &amp; groups</span></button><button id="iconInfoCopyButton" class="button primary" type="button"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></button></footer>
+      <footer class="dialog-footer"><button id="iconInfoEditButton" class="button" type="button"><span aria-hidden="true" data-symbol="support"></span><span>Edit metadata</span></button><button id="iconInfoCopyButton" class="button primary" type="button"><span aria-hidden="true" data-symbol="detail"></span><span data-icon-copy-text>Copy SVG</span></button></footer>
     </div>
   </dialog>
 
@@ -147,9 +148,10 @@
       <div class="dialog-body icon-edit-body">
         <div class="icon-edit-hero">
           <div id="iconEditPreview" class="icon-edit-preview" aria-hidden="true"></div>
-          <div><span id="iconEditType" class="count-pill"></span><p>Rename this icon and choose every quick-select group where it belongs.</p></div>
+          <div><span id="iconEditType" class="count-pill"></span><p>Rename this icon, choose its source filter, and select every quick group where it belongs.</p></div>
         </div>
         <label class="icon-edit-name" for="iconEditLabel"><span>Display name</span><input id="iconEditLabel" type="text" maxlength="120" autocomplete="off" required aria-describedby="iconEditValidation"></label>
+        <label class="icon-edit-name" for="iconEditSource"><span>Source</span><select id="iconEditSource" aria-describedby="iconEditSourceHelp"></select><small id="iconEditSourceHelp">This changes source filtering while the original files remain listed in Icon details.</small></label>
         <fieldset class="icon-edit-fieldset">
           <legend>Groups</legend>
           <p>Select any number of groups. Choosing a badge subtype also chooses Badged.</p>
@@ -190,7 +192,8 @@
             <div class="settings-section">
               <div class="section-heading"><div><span class="eyebrow">Personalization</span><h3>Appearance</h3></div></div>
               <div class="setting-row"><div><strong>Color mode</strong><small>Use the device setting or choose a mode.</small></div><div class="segmented" aria-label="Color mode"><button type="button" data-theme-mode="system" aria-pressed="true">System</button><button type="button" data-theme-mode="light" aria-pressed="false">Light</button><button type="button" data-theme-mode="dark" aria-pressed="false">Dark</button></div></div>
-              <div class="setting-row stacked"><div><strong>Theme presets</strong><small>Apply a coordinated set of editable colors.</small></div><div id="themePresets" class="theme-presets"></div></div>
+              <div class="setting-row"><div><strong>Button presentation</strong><small>Choose symbols, text, or both.</small></div><div class="segmented" aria-label="Button presentation"><button type="button" data-button-style="icons" aria-pressed="false">Icons</button><button type="button" data-button-style="text" aria-pressed="false">Text</button><button type="button" data-button-style="both" aria-pressed="true">Both</button></div></div>
+              <div class="setting-row"><div><strong>Text size</strong><small>Adjust application and reading text together.</small></div><div class="text-size-control" aria-label="Text size"><span class="size-letter small" aria-hidden="true">A</span><span class="text-size-slider-wrap"><input id="textSizeSlider" class="ios-range" type="range" min="85" max="130" step="5" value="100" aria-label="Text size"><output id="textSizeValue" class="text-size-value" for="textSizeSlider">100%</output></span><span class="size-letter large" aria-hidden="true">A</span></div></div>
               <div class="color-settings">
                 <label><span>Primary</span><input type="color" data-color-setting="accent"><input type="text" data-color-text="accent" maxlength="7" aria-label="Primary color hex"></label>
                 <label><span>Secondary</span><input type="color" data-color-setting="accent2"><input type="text" data-color-text="accent2" maxlength="7" aria-label="Secondary color hex"></label>
@@ -198,10 +201,6 @@
                 <label><span>Warning</span><input type="color" data-color-setting="warning"><input type="text" data-color-text="warning" maxlength="7" aria-label="Warning color hex"></label>
                 <label><span>Danger</span><input type="color" data-color-setting="danger"><input type="text" data-color-text="danger" maxlength="7" aria-label="Danger color hex"></label>
               </div>
-              <div class="setting-row"><label for="appTextScale"><strong>Application text size</strong><small id="appTextScaleValue">100%</small></label><input id="appTextScale" type="range" min="85" max="130" step="5"></div>
-              <div class="setting-row"><label for="readingTextScale"><strong>Reading text size</strong><small id="readingTextScaleValue">100%</small></label><input id="readingTextScale" type="range" min="85" max="160" step="5"></div>
-              <div class="setting-row"><div><strong>Button presentation</strong><small>Choose symbols, text, or both.</small></div><div class="segmented" aria-label="Button presentation"><button type="button" data-button-style="icons" aria-pressed="false">Icons</button><button type="button" data-button-style="text" aria-pressed="false">Text</button><button type="button" data-button-style="both" aria-pressed="true">Both</button></div></div>
-              <div class="setting-row"><label for="motionPreference"><strong>Motion</strong><small>Respect the system setting or override it.</small></label><select id="motionPreference"><option value="system">System preference</option><option value="reduce">Reduce motion</option><option value="full">Allow motion</option></select></div>
             </div>
 
             <div class="settings-section">
@@ -248,7 +247,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.22</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.23</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>

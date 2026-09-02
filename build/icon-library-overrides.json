@@ -1,7 +1,38 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "",
-  "applicationVersion": "",
-  "overrides": []
+  "generatedAt": "2026-09-01T22:16:37.000Z",
+  "applicationVersion": "0.0.1.23",
+  "overrides": [
+    {
+      "iconId": "0-boat-holiday-sea-sky-travel-vacation-svgrepo-com-2c6640",
+      "label": "Sailboat Double",
+      "categories": ["maps-travel"]
+    },
+    {
+      "iconId": "0-boat-svgrepo-com-53e070",
+      "label": "Sailboat Single",
+      "categories": ["maps-travel"]
+    },
+    {
+      "iconId": "0-piece-ferry-2-b1f8d7",
+      "label": "Brick",
+      "categories": ["maps-travel"]
+    },
+    {
+      "iconId": "0-piece-ferry-e095f7",
+      "label": "Brick Top Fill",
+      "categories": ["maps-travel"]
+    },
+    {
+      "iconId": "0-roofless-speed-boat-svgrepo-com-9d7e16",
+      "label": "Roofless Speed Boat",
+      "categories": ["maps-travel"]
+    },
+    {
+      "iconId": "0-sailboat-boat-sail-travel-ship-transportation-svgrepo-com-copy-3a56f7",
+      "label": "Sailboat Ferry",
+      "categories": ["actions", "maps-travel"]
+    }
+  ]
 }
