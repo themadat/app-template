@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.35",
-      buildId: "0.0.1.35",
+      version: "0.0.1.36",
+      buildId: "0.0.1.36",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.36",
+        date: "2026-09-03T21:49:22.000Z",
+        title: "Compact category navigation",
+        summary: "The desktop category rail fits more choices on screen with shorter rows and single-line labels.",
+        features: [],
+        improvements: ["Category rows and the spacing between them use less vertical space", "Long category labels stay on one line and truncate until the sidebar is widened"],
+        fixes: [],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.35",
         date: "2026-09-03T21:26:13.000Z",
