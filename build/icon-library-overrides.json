@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-02T23:49:36Z",
-  "applicationVersion": "0.0.1.31",
+  "generatedAt": "2026-09-03T00:04:13Z",
+  "applicationVersion": "0.0.1.32",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -127,7 +127,8 @@
       "label": "Shrine Building",
       "categories": [
         "games",
-        "locations"
+        "locations",
+        "building"
       ]
     },
     {
@@ -348,6 +349,73 @@
       "label": "Bolt Car Fill",
       "categories": [
         "transportation"
+      ]
+    },
+    {
+      "iconId": "building-2-31b299",
+      "label": "Building 2",
+      "categories": [
+        "locations",
+        "objects-tools",
+        "building"
+      ]
+    },
+    {
+      "iconId": "building-2-crop-circle-b50463",
+      "label": "Building 2 Crop Circle",
+      "categories": [
+        "editing",
+        "locations",
+        "objects-tools",
+        "circled",
+        "building"
+      ]
+    },
+    {
+      "iconId": "building-2-crop-circle-fill-fc2230",
+      "label": "Building 2 Crop Circle Fill",
+      "categories": [
+        "editing",
+        "locations",
+        "objects-tools",
+        "circled",
+        "building"
+      ]
+    },
+    {
+      "iconId": "building-2-fill-37b76c",
+      "label": "Building 2 Fill",
+      "categories": [
+        "locations",
+        "objects-tools",
+        "building"
+      ]
+    },
+    {
+      "iconId": "building-5f8ef1",
+      "label": "Building",
+      "categories": [
+        "locations",
+        "objects-tools",
+        "building"
+      ]
+    },
+    {
+      "iconId": "building-columns-circle-4d48e5",
+      "label": "Building Columns Circle",
+      "categories": [
+        "locations",
+        "circled",
+        "building"
+      ]
+    },
+    {
+      "iconId": "building-fill-dd1c96",
+      "label": "Building Fill",
+      "categories": [
+        "locations",
+        "objects-tools",
+        "building"
       ]
     },
     {
@@ -716,7 +784,8 @@
       "iconId": "drink-house-rail-4fbb2d",
       "label": "Drink House Rail",
       "categories": [
-        "food-drink"
+        "food-drink",
+        "home-appliances"
       ],
       "kind": "custom"
     },
@@ -2198,6 +2267,16 @@
       "label": "Triangle Circle Fill",
       "categories": [
         "circled"
+      ]
+    },
+    {
+      "iconId": "university-campus-building-house-business-svgrepo-com-1a9cb7",
+      "label": "University Campus Building House Business",
+      "categories": [
+        "locations",
+        "education-science",
+        "home-appliances",
+        "building"
       ]
     },
     {
