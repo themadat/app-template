@@ -42,8 +42,14 @@ function discoverDefaultSources() {
   }).map(function (entry) {
     return { name: entry.name, root: path.join(sourceParent, entry.name) };
   });
-  const objectsToolsRoot = path.join(sourceParent, "!backups:data", "icons", "app-input", "Objects & Tools");
-  if (fs.existsSync(objectsToolsRoot)) discovered.push({ name: "objects-tools", root: objectsToolsRoot });
+  [
+    { name: "objects-tools", folder: "Objects & Tools" },
+    { name: "norway-sweden", folder: "norway:sweden" },
+    { name: "indices", folder: "indicies" }
+  ].forEach(function (source) {
+    const root = path.join(sourceParent, "!backups:data", "icons", "app-input", source.folder);
+    if (fs.existsSync(root)) discovered.push({ name: source.name, root: root });
+  });
   return discovered.sort(function (a, b) { return a.name.localeCompare(b.name); });
 }
 
@@ -147,6 +153,7 @@ const ICON_CATEGORIES = [
   { id: "games", label: "Games", terms: ["game", "meeple", "dice", "castle", "abbey", "wizard", "witch", "mage", "fairy", "elf", "dragon", "sheep", "wolf", "robber", "princess", "knight", "spartan", "crown", "medieval", "ringmaster", "pigsty", "baazar", "vineyard"] },
   { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
   { id: "home-appliances", label: "Home & Appliances", terms: ["conditioner", "purifier", "bathtub", "cabinet", "chair", "chandelier", "cooktop", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "microwave", "oven", "refrigerator", "shower", "sink", "sofa", "spigot", "sprinkler", "stove", "toilet", "vacuum", "washer"] },
+  { id: "indices", label: "Indices", terms: ["index", "indices"] },
   { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "gearshape", "settings", "magnifyingglass", "search", "filter", "sort", "terminal", "curlybraces", "widget", "dock", "menubar", "inset", "gauge", "target", "swatchpalette", "chart", "table", "fit", "mode", "lightbulb", "line", "link", "pip", "view"] },
   { id: "keyboard", label: "Keyboard", terms: ["keyboard", "command", "control", "option", "shift", "capslock", "escape", "return", "delete", "fn"] },
   { id: "locations", label: "Locations", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope", "country", "continent", "earth", "landmark", "monument", "building", "cathedral", "church", "lighthouse", "stadium", "university", "campus", "bridge", "tower", "road", "park", "backpack", "obelisk", "wall"] },
@@ -155,6 +162,7 @@ const ICON_CATEGORIES = [
   { id: "nature", label: "Nature", terms: ["nature", "mountain", "water", "volcano"] },
   { id: "animals-plants", label: "Animals & Plants", parent: "nature", terms: ["leaf", "tree", "flower", "plant", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor"] },
   { id: "weather", label: "Weather", parent: "nature", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] },
+  { id: "norway-sweden", label: "Norway & Sweden", terms: ["norway", "norwegian", "sweden", "swedish"] },
   { id: "objects-tools", label: "Objects & Tools", terms: ["object", "tool", "hammer", "wrench", "screwdriver", "flashlight", "lamp", "chair", "sofa", "bed", "toilet", "key", "suitcase", "briefcase", "watch", "clock", "shoe", "scissors", "ruler", "paintbrush", "basket", "box", "shippingbox", "mug", "cup"] },
   { id: "rays-sparkles", label: "Rays & Sparkles", section: "appearance", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
@@ -453,6 +461,19 @@ function deriveMetadata(record) {
     OBJECT_TOOL_CATEGORY_RULES.forEach(function (rule) {
       if (!categories.includes(rule.id) && rule.terms.some(function (term) { return recordMatchesTerm(record, term); })) categories.push(rule.id);
     });
+  }
+  const isNorwaySwedenSource = record.sources.some(function (source) { return source.repo === "norway-sweden"; });
+  if (isNorwaySwedenSource) {
+    ["norway-sweden", "commerce", "locations"].forEach(function (categoryId) {
+      if (!categories.includes(categoryId)) categories.push(categoryId);
+    });
+  }
+  const indicesSourceNames = record.sources.filter(function (source) { return source.repo === "indices"; }).map(function (source) { return normalizedName(source.symbol); });
+  if (indicesSourceNames.length) {
+    if (!categories.includes("indices")) categories.push("indices");
+    if (indicesSourceNames.some(function (name) { return /^(?:\d{1,2}|[4-9]_alt)_(?:circle|square)(?:_|$)/.test(name); }) && !categories.includes("math")) categories.push("math");
+    if (indicesSourceNames.some(function (name) { return /^[a-z]_(?:circle|square)(?:_|$)/.test(name); }) && !categories.includes("text-formatting")) categories.push("text-formatting");
+    if (indicesSourceNames.some(function (name) { return /sign(?:_|$)/.test(name); }) && !categories.includes("commerce")) categories.push("commerce");
   }
   const isLocationSource = record.sources.some(function (source) {
     return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents|earth)\//i.test(source.file);

@@ -18,7 +18,7 @@
     Object.freeze({ id: "meaning", label: "What it is" }),
     Object.freeze({ id: "appearance", label: "How it looks" })
   ]);
-  const ICON_APPEARANCE_ORDER = Object.freeze(["badged", "circled", "squared", "slashed", "shapes", "rays-sparkles"]);
+  const ICON_APPEARANCE_ORDER = Object.freeze(["badged", "building", "circled", "squared", "slashed", "shapes", "rays-sparkles"]);
   const sourceIconById = new Map(sourceIconCatalog.map(function (icon) { return [icon.id, icon]; }));
   let iconCatalog = sourceIconCatalog;
   let iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
@@ -33,6 +33,8 @@
   let iconVisibleCount = ICON_PAGE_SIZE;
   let copiedIconTimer = 0;
   let iconInfoTrigger = null;
+  let whatsNewDismissTimer = 0;
+  let whatsNewTimerVersion = "";
 
   const $ = function (selector, root) { return (root || document).querySelector(selector); };
   const $$ = function (selector, root) { return Array.from((root || document).querySelectorAll(selector)); };
@@ -197,13 +199,37 @@
       $("[data-whats-new-version]").textContent = "v" + latest.version;
       $("[data-whats-new-title]").textContent = latest.title;
       $("[data-whats-new-summary]").textContent = latest.summary;
+      startWhatsNewTimer(latest.version);
+    } else {
+      stopWhatsNewTimer();
     }
     const hint = $("#contextHint");
     const hintHidden = !config.features.hints || !state().preferences.hints.enabled || state().preferences.hints.dismissed.includes("icon-library-basics");
     hint.hidden = hintHidden;
   }
 
+  function stopWhatsNewTimer() {
+    window.clearTimeout(whatsNewDismissTimer);
+    whatsNewDismissTimer = 0;
+    whatsNewTimerVersion = "";
+    $("#whatsNewBanner")?.classList.remove("is-counting-down");
+  }
+
+  function startWhatsNewTimer(version) {
+    if (whatsNewDismissTimer && whatsNewTimerVersion === version) return;
+    stopWhatsNewTimer();
+    const banner = $("#whatsNewBanner");
+    const duration = Math.max(1000, Number(config.controls.whatsNewAutoDismissMs) || 30000);
+    banner.style.setProperty("--whats-new-duration", duration + "ms");
+    banner.classList.add("is-counting-down");
+    whatsNewTimerVersion = version;
+    whatsNewDismissTimer = window.setTimeout(function () {
+      if (config.releases[0]?.version === version && state().ui.seenReleaseVersion !== version) dismissWhatsNew();
+    }, duration);
+  }
+
   function dismissWhatsNew() {
+    stopWhatsNewTimer();
     storage.mutate(function (next) { next.ui.seenReleaseVersion = config.releases[0].version; }, { reason: "release-seen" });
     renderHeader();
   }
@@ -281,6 +307,8 @@
   function repositoryLabel(value) {
     if (value === "mctree-mchome") return "McTree McHome";
     if (value === "objects-tools") return "Objects & Tools";
+    if (value === "norway-sweden") return "Norway & Sweden";
+    if (value === "indices") return "Indices";
     return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
   }
 

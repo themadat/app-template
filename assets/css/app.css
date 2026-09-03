@@ -190,6 +190,7 @@ a { color: var(--accent-strong); }
 :root[data-button-style="icons"] .top-toolbar .action-button { width: 46px; min-width: 46px; min-height: 46px; }
 :root[data-button-style="text"] .top-toolbar .action-button { width: auto; min-width: 54px; min-height: 42px; padding-inline: .6rem; }
 .whats-new-banner, .context-hint {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -202,9 +203,14 @@ a { color: var(--accent-strong); }
   background: var(--surface);
   box-shadow: var(--shadow-small);
 }
+.whats-new-banner { overflow: hidden; }
 .whats-new-banner > div:first-child { display: grid; gap: .08rem; min-width: 0; }
 .whats-new-banner strong { font-size: .95rem; }
 .whats-new-banner span:last-child { color: var(--muted); }
+.whats-new-timer { position: absolute; inset: auto 0 0; height: 3px; background: var(--surface-2); }
+.whats-new-timer::after { position: absolute; inset: 0; background: var(--accent-2); content: ""; transform: scaleX(1); transform-origin: left center; }
+.whats-new-banner.is-counting-down .whats-new-timer::after { animation: whats-new-countdown var(--whats-new-duration, 30000ms) linear forwards; }
+@keyframes whats-new-countdown { to { transform: scaleX(0); } }
 .banner-actions { display: flex; flex: 0 0 auto; gap: .35rem; }
 .banner-actions .icon-button { width: 38px; min-width: 38px; height: 38px; }
 .context-hint { justify-content: flex-start; border-left-color: var(--accent); background: var(--accent-soft); }
@@ -728,6 +734,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
 }
 :root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+:root[data-motion="reduce"] .whats-new-banner.is-counting-down .whats-new-timer::after { animation-duration: var(--whats-new-duration, 30000ms) !important; animation-timing-function: steps(30, end); }
 
 @media (forced-colors: active) {
   .status-chip, .roadmap-card, .status-button { forced-color-adjust: auto; }

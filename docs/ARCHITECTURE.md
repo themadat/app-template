@@ -16,7 +16,7 @@ The application is a static page with ordered scripts and no module loader:
 10. `core/pwa.js` manages appearance-aware install metadata, device detection, service-worker registration, and update messaging.
 11. `app.js` renders the searchable icon catalog, shell, and Settings modules and binds interactions and shortcuts.
 
-`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory, captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, skips generated bundles and corrupted derived outputs, normalizes SF Symbol paint to currentColor, removes the `Svgrepo Com` display-label suffix, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Categories expose a `meaning` or `appearance` section. Maps and Maps & Travel consolidate into Locations; source-aware rules place countries, continents, earth views, Text Formatting, Connectivity, and game artwork into Locations, Editing → Text Formatting, Devices & Connectivity, and Games. Legacy category IDs normalize during compilation and state loading. Badged remains a collapsible appearance tree with 39 primary choices—including plain Badge—plus nested Shapes and Exclamation Mark variants. Stable icon IDs let the compiler apply validated display-name, type, category, and optional filter-source changes from `build/icon-library-overrides.json` after deduplication. The UI renders 500 matching cards at a time so the large catalog remains responsive.
+`build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory and only the configured Objects & Tools, `norway:sweden`, and `indicies` children beneath the excluded `!backups:data` parent. It captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, skips generated bundles and corrupted derived outputs, normalizes SF Symbol paint to currentColor, removes the `Svgrepo Com` display-label suffix, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Categories expose a `meaning` or `appearance` section. Maps and Maps & Travel consolidate into Locations; source-aware rules place countries, continents, earth views, Text Formatting, Connectivity, game artwork, indices, and Norway/Sweden currency symbols into their focused source categories and applicable existing semantic categories. Legacy category IDs normalize during compilation and state loading. Badged remains a collapsible appearance tree with 39 primary choices—including plain Badge—plus nested Shapes and Exclamation Mark variants. Stable icon IDs let the compiler apply validated display-name, type, category, and optional filter-source changes from `build/icon-library-overrides.json` after deduplication. The UI renders 500 matching cards at a time so the large catalog remains responsive.
 
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.32",
-    "buildId": "0.0.1.32",
+    "appVersion": "0.0.1.33",
+    "buildId": "0.0.1.33",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
