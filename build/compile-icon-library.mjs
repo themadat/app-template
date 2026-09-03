@@ -27,7 +27,10 @@ function readExistingCatalog() {
 
 const existingCatalog = readExistingCatalog();
 const existingIdByName = new Map();
+const existingIdByHash = new Map();
 existingCatalog.forEach(function (icon) {
+  const hash = crypto.createHash("sha256").update(canonicalSvg(String(icon.svg || ""))).digest("hex").slice(0, 12);
+  if (hash && !existingIdByHash.has(hash)) existingIdByHash.set(hash, icon.id);
   [icon.name].concat(Array.isArray(icon.aliases) ? icon.aliases : []).filter(Boolean).forEach(function (name) {
     if (!existingIdByName.has(name)) existingIdByName.set(name, icon.id);
   });
@@ -153,6 +156,7 @@ const ICON_CATEGORIES = [
   { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
   { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid", "eye off"] },
   { id: "shapes", label: "Shapes", section: "appearance", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape", "ring"] },
+  { id: "building", label: "Building", section: "appearance", terms: ["building"] },
   { id: "badged", label: "Badged", section: "appearance", terms: ["badge", "trianglebadge", "circlebadge"] },
   { id: "badged-badge", label: "Badge", parent: "badged", terms: ["badge"] },
   { id: "badged-airplane", label: "Airplane", parent: "badged", terms: ["airplane"] },
@@ -213,6 +217,38 @@ const ICON_CATEGORY_ALIASES = new Map([
   ["badged-shield", "badged-shapes-shield"]
 ]);
 const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
+
+const OBJECT_TOOL_CATEGORY_RULES = [
+  { id: "actions", terms: ["flashlight", "hammer", "screwdriver"] },
+  { id: "accessibility", terms: ["eyeglasses"] },
+  { id: "communication", terms: ["faxmachine", "greetingcard", "horn"] },
+  { id: "commerce", terms: ["briefcase", "case", "coat", "creditcard", "handbag", "hat", "jacket", "shippingbox", "shoe", "suitcase", "ticket", "tshirt"] },
+  { id: "devices", terms: ["air conditioner", "air purifier", "airpods", "amplifier", "battery", "batteryblock", "beats headphones", "cpu", "dehumidifier", "dishwasher", "drone", "dryer", "earbud", "earbuds", "esim", "fan", "faxmachine", "flashlight", "gamecontroller", "gyroscope", "headphones", "headset", "heater", "hifireceiver", "humidifier", "lamp", "laser", "light", "memorychip", "microwave", "opticaldisc", "oven", "powercord", "poweroutlet", "powerplug", "radio", "refrigerator", "robotic vacuum", "scanner", "sdcard", "simcard", "stove", "videoprojector", "washer"] },
+  { id: "documents", terms: ["books", "briefcase", "greetingcard", "lanyardcard", "magazine", "menucard", "newspaper", "pad header", "paperclip", "scroll", "shippingbox", "tray"] },
+  { id: "editing", terms: ["comb", "hammer", "level", "paintpalette", "scalemass", "screwdriver", "theatermask and paintbrush"] },
+  { id: "food-drink", terms: ["birthday cake", "cooktop", "dishwasher", "frying pan", "menucard", "microwave", "oven", "pizza slice", "popcorn", "refrigerator", "stove", "tray", "waterbottle"] },
+  { id: "games", terms: ["american football", "arcade stick", "australian football", "baseball", "basketball", "cricket ball", "fireworks", "flag pattern checkered", "gamecontroller", "hockey puck", "oar", "party popper", "puzzlepiece", "rosette", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "surfboard", "teddybear", "tennis racket", "tennisball", "theatermasks", "trophy", "volleyball"] },
+  { id: "health", terms: ["air purifier", "comb", "eyeglasses", "fire extinguisher", "flask", "fluid", "inhaler", "lifepreserver", "testtube"] },
+  { id: "interface", terms: ["cube", "drop keypad", "entry lever keypad", "level", "rosette", "tray"] },
+  { id: "locations", terms: ["air conditioner", "bathtub", "beach umbrella", "cabinet", "chair", "chandelier", "door", "entry lever", "fireplace", "house", "lamp", "light", "pedestrian gate", "shower", "sink", "sofa", "spigot", "sprinkler", "studentdesk", "tent", "toilet"] },
+  { id: "math", terms: ["gyroscope", "level", "scalemass"] },
+  { id: "media", terms: ["airpods", "amplifier", "beats headphones", "earbud", "earbuds", "film", "guitars", "headphones", "headset", "hifireceiver", "horn", "metronome", "movieclapper", "opticaldisc", "pianokeys", "radio", "suitcase rolling and film", "theatermask", "tuningfork", "videoprojector"] },
+  { id: "animals-plants", terms: ["pet carrier"] },
+  { id: "people", terms: ["coat", "comb", "eyeglasses", "graduationcap", "handbag", "hanger", "hat", "jacket", "lanyardcard", "shoe", "stroller", "sunglasses", "tshirt"] },
+  { id: "security", terms: ["batteryblock stack trianglebadge", "door", "entry lever", "fire extinguisher", "flashlight", "helmet", "latch", "lifepreserver", "pedestrian gate"] },
+  { id: "status", terms: ["balloon", "battery", "batteryblock", "fireworks", "flag", "party popper", "rosette", "trophy"] },
+  { id: "time", terms: ["metronome"] },
+  { id: "transportation", terms: ["drone", "helmet", "lifepreserver", "oar", "oilcan", "skateboard", "skis", "snowboard", "stroller", "suitcase", "surfboard"] },
+  { id: "weather", terms: ["air conditioner", "air purifier", "barometer", "beach umbrella", "dehumidifier", "fan", "fireplace", "heater", "humidifier", "sprinkler", "umbrella"] }
+];
+
+function recordMatchesTerm(record, term) {
+  const needle = normalizedName(term);
+  return [record.name].concat(Array.from(record.aliases), record.sources.map(function (source) { return source.symbol; })).some(function (value) {
+    const name = normalizedName(value);
+    return name === needle || name.startsWith(needle + "_") || name.endsWith("_" + needle) || name.includes("_" + needle + "_");
+  });
+}
 
 function normalizeCategoryIds(values) {
   const selected = new Set((Array.isArray(values) ? values : []).map(function (categoryId) {
@@ -402,7 +438,12 @@ function deriveMetadata(record) {
   });
   if (isRaysSource && !categories.includes("rays-sparkles")) categories.push("rays-sparkles");
   const isObjectsToolsSource = record.sources.some(function (source) { return source.repo === "objects-tools"; });
-  if (isObjectsToolsSource && !categories.includes("objects-tools")) categories.push("objects-tools");
+  if (isObjectsToolsSource) {
+    if (!categories.includes("objects-tools")) categories.push("objects-tools");
+    OBJECT_TOOL_CATEGORY_RULES.forEach(function (rule) {
+      if (!categories.includes(rule.id) && rule.terms.some(function (term) { return recordMatchesTerm(record, term); })) categories.push(rule.id);
+    });
+  }
   const isLocationSource = record.sources.some(function (source) {
     return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents|earth)\//i.test(source.file);
   });
@@ -626,6 +667,24 @@ existingCatalog.forEach(function (icon) {
   });
 });
 
+const assignedIconIds = new Set();
+
+function stableIconId(record, preferred) {
+  const slug = preferred.replace(/_/g, "-");
+  const candidates = [
+    existingIdByHash.get(record.hash),
+    existingIdByName.get(preferred),
+    preferred === "x_square_fill" ? "x-square-fill-44b51b" : "",
+    slug + "-" + record.hash.slice(0, 6),
+    slug + "-" + record.hash.slice(0, 8),
+    slug + "-" + record.hash
+  ].filter(Boolean);
+  const selected = candidates.find(function (candidate) { return !assignedIconIds.has(candidate); });
+  if (!selected) throw new Error("Could not assign a unique icon id for " + preferred + ".");
+  assignedIconIds.add(selected);
+  return selected;
+}
+
 const compiledRecords = Array.from(iconRecords).map(function (record) {
   const aliases = Array.from(record.aliases).sort();
   const sourcesForIcon = Array.from(new Map(record.sources.map(function (source) {
@@ -636,7 +695,7 @@ const compiledRecords = Array.from(iconRecords).map(function (record) {
   const preferred = record.name;
   const metadata = deriveMetadata(record);
   return {
-    id: existingIdByName.get(preferred) || (preferred === "x_square_fill" ? "x-square-fill-44b51b" : preferred.replace(/_/g, "-") + "-" + record.hash.slice(0, 6)),
+    id: stableIconId(record, preferred),
     name: preferred,
     label: cleanIconLabel(labelFor(preferred)) || "Icon",
     kind: record.kinds.has("sf-symbol") ? "sf-symbol" : "custom",

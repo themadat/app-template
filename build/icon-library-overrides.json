@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-02T23:25:46Z",
-  "applicationVersion": "0.0.1.30",
+  "generatedAt": "2026-09-02T23:49:36Z",
+  "applicationVersion": "0.0.1.31",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -119,8 +119,7 @@
       "label": "Shrine Rocks",
       "categories": [
         "games",
-        "locations",
-        "nature"
+        "locations"
       ]
     },
     {
@@ -160,6 +159,48 @@
       "label": "Africa Map",
       "categories": [
         "locations"
+      ]
+    },
+    {
+      "iconId": "airplane-cloud-574b5c",
+      "label": "Airplane Cloud",
+      "categories": [
+        "cloud-server",
+        "transportation"
+      ]
+    },
+    {
+      "iconId": "ant-c3f347",
+      "label": "Ant",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "ant-circle-26e7a8",
+      "label": "Ant Circle",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "ant-circle-fill-202d7c",
+      "label": "Ant Circle Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "ant-fill-ab1f6c",
+      "label": "Ant Fill",
+      "categories": [
+        "nature",
+        "animals-plants"
       ]
     },
     {
@@ -233,11 +274,41 @@
       ]
     },
     {
+      "iconId": "apple-meditate-36d674",
+      "label": "Apple Meditate",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "apple-meditate-circle-c2b63b",
+      "label": "Apple Meditate Circle",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "apple-meditate-circle-fill-f69459",
+      "label": "Apple Meditate Circle Fill",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
       "iconId": "apple-meditate-square-stack-a536b2",
       "label": "Apple Meditate Square Stack",
       "categories": [
         "health",
-        "nature"
+        "nature",
+        "animals-plants"
       ]
     },
     {
@@ -245,7 +316,117 @@
       "label": "Apple Meditate Square Stack Fill",
       "categories": [
         "health",
-        "nature"
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "bolt-car-7605c3",
+      "label": "Bolt Car",
+      "categories": [
+        "transportation"
+      ]
+    },
+    {
+      "iconId": "bolt-car-circle-3a88fe",
+      "label": "Bolt Car Circle",
+      "categories": [
+        "circled",
+        "transportation"
+      ]
+    },
+    {
+      "iconId": "bolt-car-circle-fill-14ae6c",
+      "label": "Bolt Car Circle Fill",
+      "categories": [
+        "circled",
+        "transportation"
+      ]
+    },
+    {
+      "iconId": "bolt-car-fill-028114",
+      "label": "Bolt Car Fill",
+      "categories": [
+        "transportation"
+      ]
+    },
+    {
+      "iconId": "camera-macro-099c4a",
+      "label": "Camera Macro",
+      "categories": [
+        "media",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "camera-macro-circle-28d528",
+      "label": "Camera Macro Circle",
+      "categories": [
+        "media",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "camera-macro-circle-fill-60e0fe",
+      "label": "Camera Macro Circle Fill",
+      "categories": [
+        "media",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "camera-macro-slash-b654d9",
+      "label": "Camera Macro Slash",
+      "categories": [
+        "media",
+        "nature",
+        "animals-plants",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "camera-macro-slash-circle-275624",
+      "label": "Camera Macro Slash Circle",
+      "categories": [
+        "media",
+        "nature",
+        "animals-plants",
+        "circled",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "camera-macro-slash-circle-fill-817818",
+      "label": "Camera Macro Slash Circle Fill",
+      "categories": [
+        "media",
+        "nature",
+        "animals-plants",
+        "circled",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "carrot-9bccd5",
+      "label": "Carrot",
+      "categories": [
+        "food-drink",
+        "nature",
+        "objects-tools"
+      ]
+    },
+    {
+      "iconId": "carrot-fill-a9556a",
+      "label": "Carrot Fill",
+      "categories": [
+        "food-drink",
+        "nature",
+        "objects-tools"
       ]
     },
     {
@@ -435,6 +616,22 @@
       ]
     },
     {
+      "iconId": "circle-e252b9",
+      "label": "Circle",
+      "categories": [
+        "shapes",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "circle-fill-c98592",
+      "label": "Circle Fill",
+      "categories": [
+        "shapes",
+        "circled"
+      ]
+    },
+    {
       "iconId": "circle-grid-3-x3-circle-8beede",
       "label": "Circle Grid 3 X3 Circle",
       "categories": [
@@ -548,6 +745,99 @@
       "kind": "custom"
     },
     {
+      "iconId": "figure-open-water-swim-circle-da8d68",
+      "label": "Figure Open Water Swim Circle",
+      "categories": [
+        "accessibility",
+        "people",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "figure-water-fitness-circle-4ccc6e",
+      "label": "Figure Water Fitness Circle",
+      "categories": [
+        "accessibility",
+        "health",
+        "people",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "fossil-shell-73d57f",
+      "label": "Fossil Shell",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "objects-tools"
+      ]
+    },
+    {
+      "iconId": "fossil-shell-fill-8ab33f",
+      "label": "Fossil Shell Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "objects-tools"
+      ]
+    },
+    {
+      "iconId": "globe-americas-a18e60",
+      "label": "Globe Americas",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-americas-fill-946e87",
+      "label": "Globe Americas Fill",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-asia-australia-e9a07c",
+      "label": "Globe Asia Australia",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-asia-australia-fill-ccf6f8",
+      "label": "Globe Asia Australia Fill",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-central-south-asia-6641d2",
+      "label": "Globe Central South Asia",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-central-south-asia-fill-95705b",
+      "label": "Globe Central South Asia Fill",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-europe-africa-88bbb1",
+      "label": "Globe Europe Africa",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
+      "iconId": "globe-europe-africa-fill-8903f0",
+      "label": "Globe Europe Africa Fill",
+      "categories": [
+        "locations"
+      ]
+    },
+    {
       "iconId": "hand-raised-square-on-square-2cdde8",
       "label": "Hand Raised Square On Square",
       "categories": [
@@ -564,11 +854,171 @@
       ]
     },
     {
+      "iconId": "hare-66296d",
+      "label": "Hare",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "hare-circle-70e836",
+      "label": "Hare Circle",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "hare-circle-fill-199e2c",
+      "label": "Hare Circle Fill",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "hare-fill-49a20e",
+      "label": "Hare Fill",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
       "iconId": "info-circle-text-page-bdbb27",
       "label": "Info Circle Text Page",
       "categories": [
         "documents",
         "status"
+      ]
+    },
+    {
+      "iconId": "ladybug-16683f",
+      "label": "Ladybug",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "ladybug-circle-8e6a21",
+      "label": "Ladybug Circle",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "ladybug-circle-fill-1f553f",
+      "label": "Ladybug Circle Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "ladybug-fill-443eac",
+      "label": "Ladybug Fill",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "ladybug-slash-a7e231",
+      "label": "Ladybug Slash",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "ladybug-slash-circle-a0f4ad",
+      "label": "Ladybug Slash Circle",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "ladybug-slash-circle-fill-1ca829",
+      "label": "Ladybug Slash Circle Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "ladybug-slash-fill-00225b",
+      "label": "Ladybug Slash Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "slashed"
+      ]
+    },
+    {
+      "iconId": "laurel-leading-af7fbe",
+      "label": "Laurel Leading",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "laurel-trailing-e841ea",
+      "label": "Laurel Trailing",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "lizard-circle-84be32",
+      "label": "Lizard Circle",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "lizard-circle-fill-f3b132",
+      "label": "Lizard Circle Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "lizard-d0b9e7",
+      "label": "Lizard",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "lizard-fill-c7b2a5",
+      "label": "Lizard Fill",
+      "categories": [
+        "nature",
+        "animals-plants"
       ]
     },
     {
@@ -588,10 +1038,107 @@
       ]
     },
     {
+      "iconId": "map-volcano-svgrepo-com-ad0340",
+      "label": "Volcano Smoke Path",
+      "categories": [
+        "games",
+        "locations",
+        "nature"
+      ]
+    },
+    {
       "iconId": "meeple-circle-svgrepo-com-30069d",
       "label": "Meeple Circle",
       "categories": [
         "games"
+      ]
+    },
+    {
+      "iconId": "microbe-208e95",
+      "label": "Microbe",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "microbe-circle-7545e4",
+      "label": "Microbe Circle",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "microbe-circle-fill-b433e4",
+      "label": "Microbe Circle Fill",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "microbe-fill-561ac9",
+      "label": "Microbe Fill",
+      "categories": [
+        "health",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "other-3-volcano-8b6038",
+      "label": "Volcano Smoke Small",
+      "categories": [
+        "games",
+        "nature"
+      ]
+    },
+    {
+      "iconId": "other-3-volcano-23903b",
+      "label": "Volcano Smoke Big",
+      "categories": [
+        "games",
+        "nature"
+      ]
+    },
+    {
+      "iconId": "pawprint-circle-b5568f",
+      "label": "Pawprint Circle",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "pawprint-circle-fill-695308",
+      "label": "Pawprint Circle Fill",
+      "categories": [
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "pawprint-fb8fe1",
+      "label": "Pawprint",
+      "categories": [
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "pawprint-fill-f470f4",
+      "label": "Pawprint Fill",
+      "categories": [
+        "nature",
+        "animals-plants"
       ]
     },
     {
@@ -1599,6 +2146,44 @@
       "label": "Text Square Filled",
       "categories": [
         "documents"
+      ]
+    },
+    {
+      "iconId": "tortoise-2d0124",
+      "label": "Tortoise",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants"
+      ]
+    },
+    {
+      "iconId": "tortoise-circle-472671",
+      "label": "Tortoise Circle",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "tortoise-circle-fill-67a6ec",
+      "label": "Tortoise Circle Fill",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants",
+        "circled"
+      ]
+    },
+    {
+      "iconId": "tortoise-fill-04f56c",
+      "label": "Tortoise Fill",
+      "categories": [
+        "accessibility",
+        "nature",
+        "animals-plants"
       ]
     },
     {
