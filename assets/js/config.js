@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.34",
-      buildId: "0.0.1.34",
+      version: "0.0.1.35",
+      buildId: "0.0.1.35",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.35",
+        date: "2026-09-03T21:26:13.000Z",
+        title: "Align category navigation",
+        summary: "Category rows are easier to scan with larger type, aligned labels and counts, and familiar inline disclosure chevrons.",
+        features: [],
+        improvements: ["Counts align at the far right of every category row", "Category names share one starting position whether or not the row expands", "Sidebar category labels and counts use larger default type"],
+        fixes: ["Expansion controls now sit at the far left inside the category container and use right/down chevrons"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.34",
         date: "2026-09-03T17:20:59.000Z",

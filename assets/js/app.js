@@ -388,6 +388,11 @@
       return '<button class="' + className + '" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(ariaLabel) + '"' + (disabled ? ' disabled' : '') + (active ? ' aria-keyshortcuts="F Control+Alt+Shift+F" data-shortcut="F"' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
     }
 
+    function categoryBranch(choice, isSubcategory, toggle) {
+      const prefix = toggle || '<span class="icon-category-collapse-spacer" aria-hidden="true"></span>';
+      return '<div class="icon-category-branch' + (isSubcategory ? ' is-subcategory' : '') + (choice.id === selected ? ' is-active' : '') + '">' + prefix + choiceButton(choice, isSubcategory) + '</div>';
+    }
+
     const choices = iconCategories.map(function (category) {
       return { id: category.id, label: category.label, parent: category.parent || "", section: category.section || "meaning", count: counts.get(category.id) || 0 };
     });
@@ -396,8 +401,8 @@
       const children = choices.filter(function (candidate) { return candidate.parent === choice.id; });
       const isCollapsed = children.length > 0 && collapsed.has(choice.id);
       const childrenId = "icon-category-children-" + choice.id;
-      const toggle = children.length ? '<button class="icon-category-collapse" type="button" data-icon-category-collapse="' + u.escapeHtml(choice.id) + '" aria-expanded="' + String(!isCollapsed) + '" aria-controls="' + u.escapeHtml(childrenId) + '" aria-label="' + u.escapeHtml((isCollapsed ? "Expand " : "Collapse ") + choice.label + " subcategories") + '" title="' + u.escapeHtml(isCollapsed ? "Expand" : "Collapse") + '"><span aria-hidden="true" data-symbol="' + (isCollapsed ? "down" : "up") + '"></span></button>' : "";
-      const branch = '<div class="icon-category-branch">' + choiceButton(choice, depth > 0) + toggle + '</div>';
+      const toggle = children.length ? '<button class="icon-category-collapse" type="button" data-icon-category-collapse="' + u.escapeHtml(choice.id) + '" aria-expanded="' + String(!isCollapsed) + '" aria-controls="' + u.escapeHtml(childrenId) + '" aria-label="' + u.escapeHtml((isCollapsed ? "Expand " : "Collapse ") + choice.label + " subcategories") + '" title="' + u.escapeHtml(isCollapsed ? "Expand" : "Collapse") + '"><span aria-hidden="true" data-symbol="' + (isCollapsed ? "chevronRight" : "chevronDown") + '"></span></button>' : "";
+      const branch = categoryBranch(choice, depth > 0, toggle);
       const childMarkup = children.length ? '<div id="' + u.escapeHtml(childrenId) + '" class="icon-category-subcategories" role="group" aria-label="' + u.escapeHtml(choice.label + " subcategories") + '"' + (isCollapsed ? " hidden" : "") + '>' + children.map(function (child) { return categoryTree(child, depth + 1); }).join("") + '</div>' : "";
       return '<div class="icon-category-group" data-icon-category-depth="' + depth + '">' + branch + childMarkup + '</div>';
     }
@@ -410,7 +415,7 @@
       const headingId = "icon-category-section-" + section.id;
       return '<section class="icon-category-section" aria-labelledby="' + headingId + '"><h3 id="' + headingId + '" class="icon-category-section-title">' + u.escapeHtml(section.label) + '</h3><div class="icon-category-section-groups">' + sectionChoices.map(function (choice) { return categoryTree(choice, 0); }).join("") + '</div></section>';
     }).join("");
-    container.innerHTML = '<div class="icon-category-all">' + choiceButton({ id: "all", label: "All", parent: "", count: baseMatches.length }, false) + '</div>' + (otherChoice ? '<div class="icon-category-other">' + choiceButton(otherChoice, false) + '</div>' : "") + sections;
+    container.innerHTML = '<div class="icon-category-all">' + categoryBranch({ id: "all", label: "All", parent: "", count: baseMatches.length }, false, "") + '</div>' + (otherChoice ? '<div class="icon-category-other">' + categoryBranch(otherChoice, false, "") + '</div>' : "") + sections;
     icons.mount(container);
     decorateShortcutControls(container);
   }
