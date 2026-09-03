@@ -135,9 +135,12 @@ function cleanIconLabel(value) {
 }
 
 const ICON_CATEGORIES = [
-  { id: "actions", label: "Actions", terms: ["add", "plus", "minus", "copy", "duplicate", "delete", "trash", "download", "upload", "share", "export", "import", "refresh", "reload", "undo", "redo", "save", "print", "scan", "bake", "dismiss", "hide", "manage", "wrench"] },
   { id: "accessibility", label: "Accessibility", terms: ["accessibility", "assistive", "braille", "ear", "figure", "voiceover", "wheelchair"] },
-  { id: "arrows", label: "Arrows", terms: ["arrow", "arrowshape", "arrowtriangle", "chevron", "caret", "direction", "forward", "backward"] },
+  { id: "arrows", label: "Arrows", section: "appearance", terms: [] },
+  { id: "arrows-chevron", label: "Chevron", parent: "arrows", terms: [] },
+  { id: "arrows-triangle", label: "Triangle", parent: "arrows", terms: [] },
+  { id: "arrows-chevron-arrow", label: "Chevron Arrow", parent: "arrows", terms: [] },
+  { id: "arrows-triangle-arrow", label: "Triangle Arrow", parent: "arrows", terms: [] },
   { id: "branding", label: "Apps & Branding", terms: ["favicon", "logo", "splash", "safari"] },
   { id: "celebrations-awards", label: "Celebrations & Awards", terms: ["award", "balloon", "birthday", "cake", "fireworks", "flag", "gift", "medal", "party", "rosette", "trophy"] },
   { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "paperplane", "phone", "call", "megaphone", "bell", "notification", "mention"] },
@@ -150,22 +153,26 @@ const ICON_CATEGORIES = [
   { id: "text-formatting", label: "Text Formatting", parent: "editing", terms: ["abc", "a z", "bold", "italic", "underline", "strikethrough", "paragraphsign", "quotelevel", "indent", "kashida", "fleuron", "textbox", "uppercase", "lowercase", "phonetic"] },
   { id: "education-science", label: "Education & Science", terms: ["atom", "book", "books", "flask", "graduationcap", "gyroscope", "level", "microscope", "scalemass", "school", "science", "studentdesk", "testtube", "university"] },
   { id: "food-drink", label: "Food & Drink", terms: ["bar", "cocktail", "drink", "glass", "wine", "wineglass", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
-  { id: "games", label: "Games", terms: ["game", "meeple", "dice", "castle", "abbey", "wizard", "witch", "mage", "fairy", "elf", "dragon", "sheep", "wolf", "robber", "princess", "knight", "spartan", "crown", "medieval", "ringmaster", "pigsty", "baazar", "vineyard"] },
   { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
   { id: "home-appliances", label: "Home & Appliances", terms: ["conditioner", "purifier", "bathtub", "cabinet", "chair", "chandelier", "cooktop", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "microwave", "oven", "refrigerator", "shower", "sink", "sofa", "spigot", "sprinkler", "stove", "toilet", "vacuum", "washer"] },
   { id: "indices", label: "Indices", terms: ["index", "indices"] },
-  { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "gearshape", "settings", "magnifyingglass", "search", "filter", "sort", "terminal", "curlybraces", "widget", "dock", "menubar", "inset", "gauge", "target", "swatchpalette", "chart", "table", "fit", "mode", "lightbulb", "line", "link", "pip", "view"] },
+  { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "gearshape", "settings", "magnifyingglass", "search", "filter", "sort", "terminal", "curlybraces", "widget", "dock", "menubar", "inset", "gauge", "target", "swatchpalette", "chart", "table", "fit", "mode", "lightbulb", "line", "link", "pip", "view", "dismiss", "hide", "trash", "bin", "wrench"] },
   { id: "keyboard", label: "Keyboard", terms: ["keyboard", "command", "control", "option", "shift", "capslock", "escape", "return", "delete", "fn"] },
-  { id: "locations", label: "Locations", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope", "country", "continent", "earth", "landmark", "monument", "building", "cathedral", "church", "lighthouse", "stadium", "university", "campus", "bridge", "tower", "road", "park", "backpack", "obelisk", "wall"] },
+  { id: "locations", label: "Locations", terms: [] },
+  { id: "locations-countries", label: "Countries", parent: "locations", terms: ["country", "continent"] },
+  { id: "locations-mapping", label: "Mapping", parent: "locations", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope", "earth", "world"] },
+  { id: "locations-places", label: "Places", parent: "locations", terms: ["landmark", "monument", "building", "cathedral", "church", "lighthouse", "stadium", "university", "campus", "bridge", "tower", "road", "park", "obelisk", "wall", "house", "tent", "shrine", "pavilion", "gate", "mecca"] },
   { id: "math", label: "Math", terms: ["123", "function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
-  { id: "media", label: "Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
+  { id: "media", label: "Entertainment & Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
   { id: "nature", label: "Nature", terms: ["nature", "mountain", "water", "volcano"] },
   { id: "animals-plants", label: "Animals & Plants", parent: "nature", terms: ["leaf", "tree", "flower", "plant", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor"] },
   { id: "weather", label: "Weather", parent: "nature", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] },
-  { id: "norway-sweden", label: "Norway & Sweden", terms: ["norway", "norwegian", "sweden", "swedish"] },
   { id: "objects-tools", label: "Objects & Tools", terms: ["object", "tool", "hammer", "wrench", "screwdriver", "flashlight", "lamp", "chair", "sofa", "bed", "toilet", "key", "suitcase", "briefcase", "watch", "clock", "shoe", "scissors", "ruler", "paintbrush", "basket", "box", "shippingbox", "mug", "cup"] },
   { id: "rays-sparkles", label: "Rays & Sparkles", section: "appearance", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
-  { id: "people", label: "People", terms: ["person", "people", "user", "figure", "face", "hand", "body", "accessibility"] },
+  { id: "people", label: "People", terms: [] },
+  { id: "recreation", label: "Recreation", terms: [] },
+  { id: "recreation-games", label: "Games", parent: "recreation", terms: ["game", "meeple", "die", "dice", "castle", "abbey", "wizard", "witch", "mage", "fairy", "elf", "dragon", "sheep", "wolf", "robber", "princess", "knight", "spartan", "crown", "medieval", "ringmaster", "pigsty", "baazar", "vineyard", "arcade", "gamecontroller", "puzzlepiece", "teddybear"] },
+  { id: "recreation-sport", label: "Sport", parent: "recreation", terms: ["baseball", "basketball", "cricket", "football", "hockey", "oar", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "sport", "surfboard", "tennis", "trophy", "volleyball"] },
   { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid", "eye off"] },
   { id: "shapes", label: "Shapes", section: "appearance", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape", "ring"] },
   { id: "building", label: "Building", section: "appearance", terms: ["building"] },
@@ -216,15 +223,18 @@ const ICON_CATEGORIES = [
   { id: "squared", label: "Squared", section: "appearance", terms: ["square"] },
   { id: "circled", label: "Circled", section: "appearance", terms: ["circle"] },
   { id: "slashed", label: "Slashed", section: "appearance", terms: ["slash", "slashed"] },
-  { id: "sports-recreation", label: "Sports & Recreation", terms: ["arcade", "baseball", "basketball", "cricket", "football", "gamecontroller", "hockey", "oar", "puzzlepiece", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "sport", "surfboard", "teddybear", "tennis", "trophy", "volleyball"] },
   { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge", "medal"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
   { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] }
 ];
 
 const ICON_CATEGORY_ALIASES = new Map([
+  ["actions", "interface"],
   ["maps-travel", "locations"],
-  ["maps", "locations"],
+  ["maps", "locations-mapping"],
+  ["games", "recreation-games"],
+  ["sports-recreation", "recreation-sport"],
+  ["norway-sweden", "commerce"],
   ["rays", "rays-sparkles"],
   ["sparkled", "rays-sparkles"],
   ["badged-shield", "badged-shapes-shield"]
@@ -232,7 +242,6 @@ const ICON_CATEGORY_ALIASES = new Map([
 const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
 
 const OBJECT_TOOL_CATEGORY_RULES = [
-  { id: "actions", terms: ["flashlight", "hammer", "screwdriver"] },
   { id: "accessibility", terms: ["eyeglasses"] },
   { id: "celebrations-awards", terms: ["balloon", "birthday cake", "fireworks", "flag", "party popper", "rosette", "trophy"] },
   { id: "clothing-personal", terms: ["coat", "comb", "eyeglasses", "handbag", "hanger", "hat", "jacket", "shoe", "suitcase", "sunglasses", "tshirt"] },
@@ -243,17 +252,16 @@ const OBJECT_TOOL_CATEGORY_RULES = [
   { id: "editing", terms: ["comb", "hammer", "level", "paintpalette", "scalemass", "screwdriver", "theatermask and paintbrush"] },
   { id: "education-science", terms: ["books", "flask", "graduationcap", "gyroscope", "level", "scalemass", "studentdesk", "testtube"] },
   { id: "food-drink", terms: ["birthday cake", "cooktop", "dishwasher", "frying pan", "menucard", "microwave", "oven", "pizza slice", "popcorn", "refrigerator", "stove", "tray", "waterbottle"] },
-  { id: "games", terms: ["american football", "arcade stick", "australian football", "baseball", "basketball", "cricket ball", "fireworks", "flag pattern checkered", "gamecontroller", "hockey puck", "oar", "party popper", "puzzlepiece", "rosette", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "surfboard", "teddybear", "tennis racket", "tennisball", "theatermasks", "trophy", "volleyball"] },
+  { id: "recreation-games", terms: ["arcade stick", "die face", "gamecontroller", "puzzlepiece", "teddybear", "theatermasks"] },
+  { id: "recreation-sport", terms: ["american football", "australian football", "baseball", "basketball", "cricket ball", "hockey puck", "oar", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "surfboard", "tennis racket", "tennisball", "trophy", "volleyball"] },
   { id: "health", terms: ["air purifier", "comb", "eyeglasses", "fire extinguisher", "flask", "fluid", "inhaler", "lifepreserver", "testtube"] },
   { id: "home-appliances", terms: ["air conditioner", "air purifier", "bathtub", "cabinet", "chair", "chandelier", "cooktop", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "microwave", "oven", "refrigerator", "robotic vacuum", "shower", "sink", "sofa", "spigot", "sprinkler", "stove", "toilet", "washer"] },
   { id: "interface", terms: ["cube", "drop keypad", "entry lever keypad", "level", "rosette", "tray"] },
-  { id: "locations", terms: ["air conditioner", "bathtub", "beach umbrella", "cabinet", "chair", "chandelier", "door", "entry lever", "fireplace", "house", "lamp", "light", "pedestrian gate", "shower", "sink", "sofa", "spigot", "sprinkler", "studentdesk", "tent", "toilet"] },
+  { id: "locations-places", terms: ["house", "pedestrian gate", "tent"] },
   { id: "math", terms: ["gyroscope", "level", "scalemass"] },
   { id: "media", terms: ["airpods", "amplifier", "beats headphones", "earbud", "earbuds", "film", "guitars", "headphones", "headset", "hifireceiver", "horn", "metronome", "movieclapper", "opticaldisc", "pianokeys", "radio", "suitcase rolling and film", "theatermask", "tuningfork", "videoprojector"] },
   { id: "animals-plants", terms: ["pet carrier"] },
-  { id: "people", terms: ["coat", "comb", "eyeglasses", "graduationcap", "handbag", "hanger", "hat", "jacket", "lanyardcard", "shoe", "stroller", "sunglasses", "tshirt"] },
   { id: "security", terms: ["batteryblock stack trianglebadge", "door", "entry lever", "fire extinguisher", "flashlight", "helmet", "latch", "lifepreserver", "pedestrian gate"] },
-  { id: "sports-recreation", terms: ["american football", "arcade stick", "australian football", "baseball", "basketball", "cricket ball", "gamecontroller", "hockey puck", "oar", "puzzlepiece", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "surfboard", "teddybear", "tennis racket", "tennisball", "trophy", "volleyball"] },
   { id: "status", terms: ["balloon", "battery", "batteryblock", "fireworks", "flag", "party popper", "rosette", "trophy"] },
   { id: "time", terms: ["metronome"] },
   { id: "transportation", terms: ["drone", "helmet", "lifepreserver", "oar", "oilcan", "skateboard", "skis", "snowboard", "stroller", "suitcase", "surfboard"] },
@@ -376,6 +384,31 @@ function metadataKeys(values) {
   return keys;
 }
 
+function metadataNames(record) {
+  return [record.name].concat(Array.from(record.aliases), record.sources.map(function (source) { return source.symbol; })).map(normalizedName);
+}
+
+function arrowCategoryIds(record) {
+  const names = metadataNames(record);
+  const categories = [];
+  if (names.some(function (name) { return /(?:^|_)(?:chevron|caret)(?:_|$)/.test(name); })) categories.push("arrows-chevron");
+  if (names.some(function (name) { return /^(?:triangle|triangleshape)(?:_|$)/.test(name) || /^(?:forward|backward)(?:_|$)/.test(name); })) categories.push("arrows-triangle");
+  if (names.some(function (name) { return /(?:^|_)(?:arrowtriangle|arrow_triangle(?:head)?)(?:_|$)/.test(name); })) categories.push("arrows-triangle-arrow");
+  if (names.some(function (name) {
+    return /(?:^|_)(?:arrow|arrowshape)(?:_|$)/.test(name) && !/(?:^|_)(?:arrowtriangle|arrow_triangle(?:head)?)(?:_|$)/.test(name);
+  })) categories.push("arrows-chevron-arrow");
+  return categories;
+}
+
+function recordDepictsPeople(record) {
+  return metadataNames(record).some(function (name) {
+    if (/(?:^|_)(?:person|people|user|figure|body|accessibility)(?:_|$)/.test(name)) return true;
+    if (/(?:^|_)(?:ear|eye|eyes|nose|mouth|brain|lungs|heart|foot|feet|leg|arm|head|torso|fingerprint|touchid)(?:_|$)/.test(name)) return true;
+    if (/(?:^|_)(?:face|faceid)(?:_|$)/.test(name) && !/(?:^|_)die_face(?:_|$)/.test(name)) return true;
+    return /(?:^|_)hands?(?:_|$)/.test(name) && !/(?:^|_)door(?:_sliding)?_(?:left|right)_hand(?:_|$)/.test(name);
+  });
+}
+
 function badgeMetadata(record) {
   const subtypes = new Set();
   const shapes = new Set();
@@ -409,6 +442,7 @@ function deriveMetadata(record) {
   const keys = metadataKeys([record.name].concat(Array.from(record.aliases), record.sources.map(function (item) { return item.symbol; })));
   const badge = badgeMetadata(record);
   const categories = ICON_CATEGORIES.filter(function (category) {
+    if (category.id === "people") return recordDepictsPeople(record);
     if (category.id === "shapes") return category.terms.some(function (term) {
       const normalized = normalizedName(term);
       return record.name === normalized || record.name.startsWith(normalized + "_");
@@ -419,6 +453,9 @@ function deriveMetadata(record) {
     if (category.parent === "badged") return category.terms.some(function (term) { return badge.subtypes.has(normalizedName(term)); });
     return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
+  arrowCategoryIds(record).forEach(function (categoryId) {
+    if (!categories.includes(categoryId)) categories.push(categoryId);
+  });
   const isBadgeSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/(?:!Badge|Badge)\//i.test(source.file);
   });
@@ -463,11 +500,7 @@ function deriveMetadata(record) {
     });
   }
   const isNorwaySwedenSource = record.sources.some(function (source) { return source.repo === "norway-sweden"; });
-  if (isNorwaySwedenSource) {
-    ["norway-sweden", "commerce", "locations"].forEach(function (categoryId) {
-      if (!categories.includes(categoryId)) categories.push(categoryId);
-    });
-  }
+  if (isNorwaySwedenSource && !categories.includes("commerce")) categories.push("commerce");
   const indicesSourceNames = record.sources.filter(function (source) { return source.repo === "indices"; }).map(function (source) { return normalizedName(source.symbol); });
   if (indicesSourceNames.length) {
     if (!categories.includes("indices")) categories.push("indices");
@@ -475,10 +508,14 @@ function deriveMetadata(record) {
     if (indicesSourceNames.some(function (name) { return /^[a-z]_(?:circle|square)(?:_|$)/.test(name); }) && !categories.includes("text-formatting")) categories.push("text-formatting");
     if (indicesSourceNames.some(function (name) { return /sign(?:_|$)/.test(name); }) && !categories.includes("commerce")) categories.push("commerce");
   }
-  const isLocationSource = record.sources.some(function (source) {
-    return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents|earth)\//i.test(source.file);
+  const isCountrySource = record.sources.some(function (source) {
+    return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents)\//i.test(source.file);
   });
-  if (isLocationSource && !categories.includes("locations")) categories.push("locations");
+  if (isCountrySource && !categories.includes("locations-countries")) categories.push("locations-countries");
+  const isEarthSource = record.sources.some(function (source) {
+    return source.repo === "visit-tracker" && /^assets\/svgs\/!earth\//i.test(source.file);
+  });
+  if (isEarthSource && !categories.includes("locations-mapping")) categories.push("locations-mapping");
   const isTextFormattingSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/Text Formatting\//i.test(source.file);
   });
@@ -490,7 +527,7 @@ function deriveMetadata(record) {
   const isGameSource = record.sources.some(function (source) {
     return source.repo === "carcassone-cheatsheet" && /^assets\/(?:unused\/)?[^/]+\.svg$/i.test(source.file);
   });
-  if (isGameSource && !categories.includes("games")) categories.push("games");
+  if (isGameSource && !categories.includes("recreation-games")) categories.push("recreation-games");
   const isBrandingSource = record.sources.some(function (source) {
     return /(?:^|\/)(?:app[ -]?icon|apple[ -]?touch[ -]?icon|favicon|splash)[^/]*\.svg$/i.test(source.file);
   });
@@ -499,7 +536,7 @@ function deriveMetadata(record) {
     { id: "accessibility", folder: "Accessibility" },
     { id: "editing", folder: "Editing" },
     { id: "keyboard", folder: "Keyboard" },
-    { id: "locations", folder: "Maps" },
+    { id: "locations-mapping", folder: "Maps" },
     { id: "math", folder: "Math" },
     { id: "media", folder: "Media" },
     { id: "security", folder: "Privacy & Security" },
@@ -752,6 +789,12 @@ hardcodedOverrides.forEach(function (override) {
   record.label = cleanIconLabel(override.label) || record.label;
   record.kind = override.kind || record.kind;
   const overrideCategories = override.categories.filter(function (categoryId) { return categoryId !== "other"; });
+  ["arrows", "locations", "recreation"].forEach(function (parentId) {
+    if (!overrideCategories.includes(parentId)) return;
+    record.categories.filter(function (categoryId) { return ICON_CATEGORY_BY_ID.get(categoryId)?.parent === parentId; }).forEach(function (categoryId) {
+      if (!overrideCategories.includes(categoryId)) overrideCategories.push(categoryId);
+    });
+  });
   record.categories = overrideCategories.length ? normalizeCategoryIds(overrideCategories) : record.categories;
   record.source = override.source;
   overridesApplied += 1;

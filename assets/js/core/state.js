@@ -11,7 +11,7 @@
   const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
   const ICON_CATEGORY_PARENT_IDS = new Set(ICON_CATEGORIES.map(function (category) { return category.parent || ""; }).filter(Boolean));
   const ICON_BY_ID = new Map((App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : []).map(function (icon) { return [icon.id, icon]; }));
-  const ICON_CATEGORY_ALIASES = new Map([["maps-travel", "locations"], ["maps", "locations"], ["rays", "rays-sparkles"], ["sparkled", "rays-sparkles"], ["badged-shield", "badged-shapes-shield"]]);
+  const ICON_CATEGORY_ALIASES = new Map([["actions", "interface"], ["maps-travel", "locations"], ["maps", "locations-mapping"], ["games", "recreation-games"], ["sports-recreation", "recreation-sport"], ["norway-sweden", "commerce"], ["rays", "rays-sparkles"], ["sparkled", "rays-sparkles"], ["badged-shield", "badged-shapes-shield"]]);
   const ICON_SOURCE_IDS = new Set(App.iconLibrary && Array.isArray(App.iconLibrary.sourceRepositories) ? App.iconLibrary.sourceRepositories : []);
 
   function normalizeIconCategoryId(value) {

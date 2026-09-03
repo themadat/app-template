@@ -18,7 +18,7 @@
     Object.freeze({ id: "meaning", label: "What it is" }),
     Object.freeze({ id: "appearance", label: "How it looks" })
   ]);
-  const ICON_APPEARANCE_ORDER = Object.freeze(["badged", "building", "circled", "squared", "slashed", "shapes", "rays-sparkles"]);
+  const ICON_APPEARANCE_ORDER = Object.freeze(["badged", "building", "arrows", "circled", "squared", "slashed", "shapes", "rays-sparkles"]);
   const sourceIconById = new Map(sourceIconCatalog.map(function (icon) { return [icon.id, icon]; }));
   let iconCatalog = sourceIconCatalog;
   let iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
