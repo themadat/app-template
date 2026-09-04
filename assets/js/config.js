@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.49",
-      buildId: "0.0.1.49",
+      version: "0.0.1.50",
+      buildId: "0.0.1.50",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.50",
+        date: "2026-09-04T21:58:24.000Z",
+        title: "Version deployment notifications",
+        summary: "The GitHub Pages workflow name now carries the application version in the field displayed by GitHub Mobile notifications.",
+        features: ["Application version in the GitHub Mobile Pages deployment notification label"],
+        improvements: ["The dynamic run title continues to mirror the full versioned commit subject in Actions", "Release instructions now keep the Mobile-visible workflow name synchronized with every app build"],
+        fixes: ["Moved the notification version from the ignored dynamic run title to the fixed workflow name used by GitHub Mobile"],
+        knownIssues: ["GitHub Pages must use GitHub Actions as its only publishing source to prevent duplicate deployment notifications.", "GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.49",
         date: "2026-09-04T21:49:01.000Z",

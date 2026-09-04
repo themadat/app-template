@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.49` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.50` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -32,13 +32,13 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
 3. Leave the default Notes document blank or add intentional starter text in `demoDocuments()` inside `assets/js/core/state.js`.
 4. Keep the committed icon catalog when the new app should retain the full searchable SVG collection, even if you replace the main page. Remove its UI only when the new app does not need icon browsing; the shell, Notes, Settings, and synchronization modules remain independent.
-5. Use `major.minor.patch.build` versions. Increment the fourth number for every completed application update; when intentionally changing major, minor, or patch, reset the build number to `1` unless another value is required. Keep `identity.buildId` equal to the full version, add the matching dated release entry, update the build query values in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
+5. Use `major.minor.patch.build` versions. Increment the fourth number for every completed application update; when intentionally changing major, minor, or patch, reset the build number to `1` unless another value is required. Keep `identity.buildId` equal to the full version, add the matching dated release entry, update the build query values in `index.html`, update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js`, and update the version in the workflow `name` inside `.github/workflows/deploy-pages.yml` together.
 
 ## Project structure
 
 ```text
 index.html                     Application shell, icon-library page, Notes, and dialogs
-.github/workflows/deploy-pages.yml  Version-labelled GitHub Pages deployment
+.github/workflows/deploy-pages.yml  Version-labelled GitHub Pages runs and notifications
 assets/css/app.css             Theme, layout, components, and responsive behavior
 assets/js/config.js            Identity, versions, theme defaults, help, releases, and roadmap
 assets/js/icons.js             Inline SF Symbol SVG catalog
@@ -110,7 +110,7 @@ Editable sources and generated install assets are in `assets/icons/`. Keep the e
    - `apple-touch-icon-dark.png` at 180 × 180
 
 5. Replace `splash-light.svg` and `splash-dark.svg`, then export `splash-light.png` and `splash-dark.png` at 1170 × 1170.
-6. Advance the fourth component of the app version, use the same full version as the build identifier, add the matching release entry, update the build queries in `index.html`, and update both `CACHE_NAME` and `ASSET_VERSION` in `sw.js` so installed copies receive the assets.
+6. Advance the fourth component of the app version, use the same full version as the build identifier, add the matching release entry, update the build queries in `index.html`, update both `CACHE_NAME` and `ASSET_VERSION` in `sw.js`, and update the version in the workflow `name` inside `.github/workflows/deploy-pages.yml` so installed copies and deployment notifications identify the same build.
 
 Example Inkscape exports:
 
@@ -177,7 +177,7 @@ The token stays in browser storage on that device, is never included in exports 
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
 
-For GitHub Pages, use **Settings → Pages → GitHub Actions** as the publishing source. The checked-in `deploy-pages.yml` workflow publishes the repository root after each push to `main`. Its run title uses the commit subject, so the required `Version - Text` commit format automatically carries the application version into the Actions run and supported notifications without editing the workflow for each release. Do not enable **Deploy from a branch** at the same time; two publishing paths would create duplicate deployments for the same commit.
+For GitHub Pages, use **Settings → Pages → GitHub Actions** as the only publishing source. The checked-in `deploy-pages.yml` workflow publishes the repository root after each push to `main`. Its dynamic run title uses the required `Version - Text` commit subject in the Actions interface, while its fixed workflow `name` includes the current application version because GitHub Mobile displays that field in deployment notifications. Advance the version in that workflow name with every application build. Do not enable **Deploy from a branch** at the same time; two publishing paths create duplicate deployments and notifications for the same commit.
 
 The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. When a waiting worker is ready, a persistent **New version available** toast appears at the bottom. Its clockwise-arrow action force-activates that worker and reloads with a cache-busting URL, including in the installed PWA. While the toast is visible, <kbd>R</kbd> runs Force Refresh and <kbd>X</kbd> closes the notice; both also work with Shift–Control–Option.
 
@@ -190,4 +190,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.49 - Label Pages deployment runs`), and pushes the current branch. This version-prefixed subject also labels the GitHub Pages workflow run. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.50 - Version deployment notifications`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

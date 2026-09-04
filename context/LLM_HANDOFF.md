@@ -12,7 +12,7 @@ How it looks includes Dashed & Dotted with 142 explicit dashed/dotted variants a
 
 On desktop, category navigation is vertically compact and category labels remain on one truncated line until the user widens the resizable rail. Mobile keeps larger horizontally scrolling category targets.
 
-The app-identity SVGs give the grid, X, and three concentric circles the same 24-unit stroke width and full opacity so every path remains visible at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines; its center horizontal and vertical bars match the X stroke while the four outer grid guides remain lighter. GitHub Pages uses the checked-in custom Actions workflow, whose run title automatically mirrors the required version-prefixed commit subject.
+The app-identity SVGs give the grid, X, and three concentric circles the same 24-unit stroke width and full opacity so every path remains visible at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines; its center horizontal and vertical bars match the X stroke while the four outer grid guides remain lighter. GitHub Pages uses the checked-in custom Actions workflow. Its dynamic run title mirrors the required version-prefixed commit subject in Actions, while its fixed workflow name carries the matching application version for GitHub Mobile notifications.
 
 ## Workflows
 
@@ -39,7 +39,7 @@ Implement an approved plan.
 
 - Read the wish and plan, set the wish to `Active`, and keep the Resume section current.
 - Add only the architecture the real feature needs. Do not reintroduce the former Records interface, rich-text editor, or a speculative framework.
-- Use `major.minor.patch.build` versions. For every completed application update, increment the fourth `build` component. When the user chooses a new major, minor, or patch value, reset `build` to `1` unless they specify it. Keep `identity.buildId` equal to the full version, add or update the matching dated release entry, update the build queries in `index.html`, and update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js` together.
+- Use `major.minor.patch.build` versions. For every completed application update, increment the fourth `build` component. When the user chooses a new major, minor, or patch value, reset `build` to `1` unless they specify it. Keep `identity.buildId` equal to the full version, add or update the matching dated release entry, update the build queries in `index.html`, update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js`, and update the version in `.github/workflows/deploy-pages.yml`'s workflow `name` together.
 - Verify the affected desktop, mobile, accessibility, and offline behavior.
 
 ### `cut`
@@ -63,7 +63,7 @@ Do not silently move from one lifecycle stage to another.
 - `assets/js/app.js`: rendering, event wiring, shortcuts, theme, Developer Mode, and Beta detection.
 - `assets/js/core/`: state, storage, reusable components, portability, GitHub Sync, and PWA behavior.
 - `assets/icons/`: editable SVG sources and generated install assets.
-- `.github/workflows/deploy-pages.yml`: static-site Pages deployment with version-labelled run titles.
+- `.github/workflows/deploy-pages.yml`: static-site Pages deployment with version-labelled Actions runs and GitHub Mobile notifications.
 - `manifest.webmanifest` and `manifest-dark.webmanifest`: install metadata.
 - `sw.js`: minimal offline shell.
 - `README.md`: setup, customization, icons, SSH, and hosting instructions.
@@ -79,6 +79,7 @@ Do not silently move from one lifecycle stage to another.
 - New controls use native elements, accessible names, visible focus, and touch-sized hit areas.
 - Avoid horizontal overflow and preserve safe-area and reduced-motion behavior.
 - Every application update advances the fourth component of the visible `major.minor.patch.build` version, with the same full value used for the build id, release, asset queries, and service-worker cache.
+- The full application version in `.github/workflows/deploy-pages.yml`'s workflow `name` matches every other version surface; GitHub Mobile ignores `run-name` and displays this fixed name in completion notifications.
 
 ## Verification baseline
 
