@@ -69,8 +69,8 @@
       "label": "Princess Castle",
       "categories": [
         "recreation-games",
-        "locations",
-        "locations-places",
+        "geography",
+        "geography-places",
         "people"
       ]
     },
@@ -79,8 +79,8 @@
       "label": "Volcano",
       "categories": [
         "recreation-games",
-        "locations",
-        "locations-places",
+        "geography",
+        "geography-places",
         "nature"
       ]
     },
@@ -89,7 +89,7 @@
       "label": "Castle Tower",
       "categories": [
         "recreation-games",
-        "locations"
+        "geography"
       ]
     },
     {
@@ -112,7 +112,7 @@
       "label": "Medieval Gate",
       "categories": [
         "recreation-games",
-        "locations"
+        "geography"
       ]
     },
     {
@@ -120,7 +120,7 @@
       "label": "Shrine Rocks",
       "categories": [
         "recreation-games",
-        "locations"
+        "geography"
       ]
     },
     {
@@ -128,7 +128,7 @@
       "label": "Shrine Building",
       "categories": [
         "recreation-games",
-        "locations",
+        "geography",
         "building"
       ]
     },
@@ -137,8 +137,8 @@
       "label": "Stonehedge",
       "categories": [
         "recreation-games",
-        "locations",
-        "locations-places"
+        "geography",
+        "geography-places"
       ]
     },
     {
@@ -146,7 +146,7 @@
       "label": "Medieval Pavilion",
       "categories": [
         "recreation-games",
-        "locations"
+        "geography"
       ]
     },
     {
@@ -154,14 +154,14 @@
       "label": "Medieval Tent",
       "categories": [
         "recreation-games",
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "africa-map-svgrepo-com-d6ad37",
       "label": "Africa Map",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
@@ -357,7 +357,7 @@
       "iconId": "building-2-31b299",
       "label": "Building 2",
       "categories": [
-        "locations",
+        "geography",
         "objects-tools",
         "building"
       ]
@@ -367,7 +367,7 @@
       "label": "Building 2 Crop Circle",
       "categories": [
         "editing",
-        "locations",
+        "geography",
         "objects-tools",
         "circled",
         "building"
@@ -378,7 +378,7 @@
       "label": "Building 2 Crop Circle Fill",
       "categories": [
         "editing",
-        "locations",
+        "geography",
         "objects-tools",
         "circled",
         "building"
@@ -388,7 +388,7 @@
       "iconId": "building-2-fill-37b76c",
       "label": "Building 2 Fill",
       "categories": [
-        "locations",
+        "geography",
         "objects-tools",
         "building"
       ]
@@ -397,7 +397,7 @@
       "iconId": "building-5f8ef1",
       "label": "Building",
       "categories": [
-        "locations",
+        "geography",
         "objects-tools",
         "building"
       ]
@@ -406,7 +406,7 @@
       "iconId": "building-columns-circle-4d48e5",
       "label": "Building Columns Circle",
       "categories": [
-        "locations",
+        "geography",
         "circled",
         "building"
       ]
@@ -415,7 +415,7 @@
       "iconId": "building-fill-dd1c96",
       "label": "Building Fill",
       "categories": [
-        "locations",
+        "geography",
         "objects-tools",
         "building"
       ]
@@ -852,56 +852,56 @@
       "iconId": "globe-americas-a18e60",
       "label": "Globe Americas",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-americas-fill-946e87",
       "label": "Globe Americas Fill",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-asia-australia-e9a07c",
       "label": "Globe Asia Australia",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-asia-australia-fill-ccf6f8",
       "label": "Globe Asia Australia Fill",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-central-south-asia-6641d2",
       "label": "Globe Central South Asia",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-central-south-asia-fill-95705b",
       "label": "Globe Central South Asia Fill",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-europe-africa-88bbb1",
       "label": "Globe Europe Africa",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
       "iconId": "globe-europe-africa-fill-8903f0",
       "label": "Globe Europe Africa Fill",
       "categories": [
-        "locations"
+        "geography"
       ]
     },
     {
@@ -1109,8 +1109,8 @@
       "label": "Volcano Smoke Path",
       "categories": [
         "recreation-games",
-        "locations",
-        "locations-places",
+        "geography",
+        "geography-places",
         "nature"
       ]
     },
@@ -2255,7 +2255,7 @@
       "iconId": "university-campus-building-house-business-svgrepo-com-1a9cb7",
       "label": "University Campus Building House Business",
       "categories": [
-        "locations",
+        "geography",
         "education-science",
         "home-appliances",
         "building"

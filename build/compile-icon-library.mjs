@@ -158,10 +158,11 @@ const ICON_CATEGORIES = [
   { id: "indices", label: "Indices", terms: ["index", "indices"] },
   { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "gearshape", "settings", "magnifyingglass", "search", "filter", "sort", "terminal", "curlybraces", "widget", "dock", "menubar", "inset", "gauge", "target", "swatchpalette", "chart", "table", "fit", "mode", "lightbulb", "line", "link", "pip", "view", "dismiss", "hide", "trash", "bin", "wrench"] },
   { id: "keyboard", label: "Keyboard", terms: ["keyboard", "command", "control", "option", "shift", "capslock", "escape", "return", "delete", "fn"] },
-  { id: "locations", label: "Locations", terms: [] },
-  { id: "locations-countries", label: "Countries", parent: "locations", terms: ["country", "continent"] },
-  { id: "locations-mapping", label: "Mapping", parent: "locations", terms: ["map", "location", "mappin", "pin", "globe", "compass", "signpost", "scope", "earth", "world"] },
-  { id: "locations-places", label: "Places", parent: "locations", terms: ["landmark", "monument", "building", "cathedral", "church", "lighthouse", "stadium", "university", "campus", "bridge", "tower", "road", "park", "obelisk", "wall", "house", "tent", "shrine", "pavilion", "gate", "mecca"] },
+  { id: "geography", label: "Geography", terms: [] },
+  { id: "geography-countries", label: "Countries", parent: "geography", terms: [] },
+  { id: "geography-regions", label: "Regions", parent: "geography", terms: [] },
+  { id: "geography-mapping", label: "Mapping", parent: "geography", terms: [] },
+  { id: "geography-places", label: "Places", parent: "geography", terms: [] },
   { id: "math", label: "Math", terms: ["123", "function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
   { id: "media", label: "Entertainment & Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
   { id: "nature", label: "Nature", terms: ["nature", "mountain", "water", "volcano"] },
@@ -230,8 +231,13 @@ const ICON_CATEGORIES = [
 
 const ICON_CATEGORY_ALIASES = new Map([
   ["actions", "interface"],
-  ["maps-travel", "locations"],
-  ["maps", "locations-mapping"],
+  ["maps-travel", "geography"],
+  ["maps", "geography-mapping"],
+  ["locations", "geography"],
+  ["locations-countries", "geography-countries"],
+  ["locations-regions", "geography-regions"],
+  ["locations-mapping", "geography-mapping"],
+  ["locations-places", "geography-places"],
   ["games", "recreation-games"],
   ["sports-recreation", "recreation-sport"],
   ["norway-sweden", "commerce"],
@@ -257,7 +263,7 @@ const OBJECT_TOOL_CATEGORY_RULES = [
   { id: "health", terms: ["air purifier", "comb", "eyeglasses", "fire extinguisher", "flask", "fluid", "inhaler", "lifepreserver", "testtube"] },
   { id: "home-appliances", terms: ["air conditioner", "air purifier", "bathtub", "cabinet", "chair", "chandelier", "cooktop", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "microwave", "oven", "refrigerator", "robotic vacuum", "shower", "sink", "sofa", "spigot", "sprinkler", "stove", "toilet", "washer"] },
   { id: "interface", terms: ["cube", "drop keypad", "entry lever keypad", "level", "rosette", "tray"] },
-  { id: "locations-places", terms: ["house", "pedestrian gate", "tent"] },
+  { id: "geography-places", terms: ["house", "pedestrian gate", "tent"] },
   { id: "math", terms: ["gyroscope", "level", "scalemass"] },
   { id: "media", terms: ["airpods", "amplifier", "beats headphones", "earbud", "earbuds", "film", "guitars", "headphones", "headset", "hifireceiver", "horn", "metronome", "movieclapper", "opticaldisc", "pianokeys", "radio", "suitcase rolling and film", "theatermask", "tuningfork", "videoprojector"] },
   { id: "animals-plants", terms: ["pet carrier"] },
@@ -351,8 +357,10 @@ const TAG_GROUPS = [
   ["heart", "favorite", "love", "health"],
   ["star", "favorite", "rating", "featured"],
   ["house", "home", "start"],
-  ["map", "location", "place", "geography", "travel"],
-  ["pin", "location", "marker", "place"],
+  ["map", "location", "mapping", "geography", "travel"],
+  ["pin", "location", "marker", "mapping"],
+  ["globe", "earth", "world", "region", "geography"],
+  ["building", "landmark", "monument", "place", "destination"],
   ["car", "vehicle", "drive", "transport", "travel"],
   ["airplane", "plane", "flight", "transport", "travel"],
   ["message", "chat", "conversation", "communication"],
@@ -400,6 +408,39 @@ function arrowCategoryIds(record) {
   return categories;
 }
 
+function geographyCategoryIds(record) {
+  const names = metadataNames(record);
+  const matchesName = function (pattern) {
+    return names.some(function (name) { return pattern.test(name); });
+  };
+  const isCountrySource = record.sources.some(function (source) {
+    return /(?:^|\/)!?countries\//i.test(source.file);
+  });
+  const isRegionSource = record.sources.some(function (source) {
+    return /(?:^|\/)!?(?:continents|earth|world|regions|states|provinces|territories)\//i.test(source.file);
+  });
+  const isMappingSource = record.sources.some(function (source) {
+    return /(?:^|\/)!?(?:maps|mapping)\//i.test(source.file);
+  });
+  const isPlaceSource = record.sources.some(function (source) {
+    return /(?:^|\/)!?(?:places|landmarks)\//i.test(source.file);
+  });
+  const isNamedTerritory = matchesName(/(?:^|_)(?:hong_kong|montserrat)(?:_|$)/);
+  const isRegion = isRegionSource || isNamedTerritory || matchesName(/(?:^|_)(?:continent|state|province|territory|region|county|district|prefecture|hemisphere|globe|earth|world)(?:_|$)/);
+  const isCountry = !isRegion && (isCountrySource || matchesName(/(?:^|_)country(?:_|$)/) || matchesName(/^(?:us|usa|united_states)_map(?:_|$)/));
+  const hasDedicatedMappingSymbol = matchesName(/(?:^|_)(?:mappin|pin|marker|route|road|location|compass|direction|signpost|scope|waypoint|navigation|navigator)(?:_|$)/) ||
+    names.some(function (name) { return /(?:^|_)point(?:_|.*_)(?:curvepath|scurvepath|capsulepath)(?:_|$)/.test(name); });
+  const hasMapSymbol = matchesName(/(?:^|_)map(?:_|$)/);
+  const isMapping = hasDedicatedMappingSymbol || ((!isCountry && !isRegion) && (isMappingSource || hasMapSymbol));
+  const isPlace = isPlaceSource || matchesName(/(?:^|_)(?:airport|airfield|bridge|building|campus|cathedral|church|destination|gate|house|landmark|library|lighthouse|mecca|monument|museum|obelisk|park|pavilion|poi|point_of_interest|shrine|stadium|station|tent|tower|university|volcano|wall)(?:_|$)/);
+  const categories = [];
+  if (isCountry) categories.push("geography-countries");
+  if (isRegion) categories.push("geography-regions");
+  if (isMapping) categories.push("geography-mapping");
+  if (isPlace) categories.push("geography-places");
+  return categories;
+}
+
 function recordDepictsPeople(record) {
   return metadataNames(record).some(function (name) {
     if (/(?:^|_)(?:person|people|user|figure|body|accessibility)(?:_|$)/.test(name)) return true;
@@ -442,6 +483,7 @@ function deriveMetadata(record) {
   const keys = metadataKeys([record.name].concat(Array.from(record.aliases), record.sources.map(function (item) { return item.symbol; })));
   const badge = badgeMetadata(record);
   const categories = ICON_CATEGORIES.filter(function (category) {
+    if (category.id === "geography" || category.parent === "geography") return false;
     if (category.id === "people") return recordDepictsPeople(record);
     if (category.id === "shapes") return category.terms.some(function (term) {
       const normalized = normalizedName(term);
@@ -454,6 +496,9 @@ function deriveMetadata(record) {
     return category.terms.some(function (term) { return keys.has(normalizedName(term)); });
   }).map(function (category) { return category.id; });
   arrowCategoryIds(record).forEach(function (categoryId) {
+    if (!categories.includes(categoryId)) categories.push(categoryId);
+  });
+  geographyCategoryIds(record).forEach(function (categoryId) {
     if (!categories.includes(categoryId)) categories.push(categoryId);
   });
   const isBadgeSource = record.sources.some(function (source) {
@@ -508,14 +553,6 @@ function deriveMetadata(record) {
     if (indicesSourceNames.some(function (name) { return /^[a-z]_(?:circle|square)(?:_|$)/.test(name); }) && !categories.includes("text-formatting")) categories.push("text-formatting");
     if (indicesSourceNames.some(function (name) { return /sign(?:_|$)/.test(name); }) && !categories.includes("commerce")) categories.push("commerce");
   }
-  const isCountrySource = record.sources.some(function (source) {
-    return source.repo === "visit-tracker" && /^assets\/svgs\/!(?:countries|continents)\//i.test(source.file);
-  });
-  if (isCountrySource && !categories.includes("locations-countries")) categories.push("locations-countries");
-  const isEarthSource = record.sources.some(function (source) {
-    return source.repo === "visit-tracker" && /^assets\/svgs\/!earth\//i.test(source.file);
-  });
-  if (isEarthSource && !categories.includes("locations-mapping")) categories.push("locations-mapping");
   const isTextFormattingSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/Text Formatting\//i.test(source.file);
   });
@@ -536,7 +573,6 @@ function deriveMetadata(record) {
     { id: "accessibility", folder: "Accessibility" },
     { id: "editing", folder: "Editing" },
     { id: "keyboard", folder: "Keyboard" },
-    { id: "locations-mapping", folder: "Maps" },
     { id: "math", folder: "Math" },
     { id: "media", folder: "Media" },
     { id: "security", folder: "Privacy & Security" },
@@ -614,7 +650,7 @@ function consolidateRecords(target, duplicate) {
 function addIcon(input) {
   const kind = isSfSymbol(input) ? "sf-symbol" : "custom";
   let svg = cleanSvg(input.svg);
-  if (!svg) { stats.rejected += 1; return; }
+  if (!svg) { stats.rejected += 1; return null; }
   if (kind === "sf-symbol") svg = normalizeSfSymbolPaint(svg);
   const repaired = repairKnownSourceIcon(input, svg);
   svg = repaired.svg;
@@ -637,12 +673,13 @@ function addIcon(input) {
     recordsByHash.set(hash, existing);
     if (kind === "sf-symbol") sfRecordsByName.set(name, existing);
     if (!input.inline && iconNameComesFirst(name, existing.name)) existing.name = name;
-    return;
+    return existing;
   }
   const record = { hash: hash, name: name, aliases: new Set([name]), sources: [source], kinds: new Set([kind]), svg: svg };
   recordsByHash.set(hash, record);
   if (kind === "sf-symbol") sfRecordsByName.set(name, record);
   iconRecords.add(record);
+  return record;
 }
 
 function templateSymbol(text, matchIndex, svg, source, ordinal) {
@@ -731,7 +768,8 @@ for (const source of sources) {
 existingCatalog.forEach(function (icon) {
   const retainedSources = Array.isArray(icon.sources) && icon.sources.length ? icon.sources : [{ repo: "retained-catalog", file: "assets/js/icon-library.js", symbol: icon.name }];
   retainedSources.forEach(function (source, index) {
-    addIcon({ repo: source.repo, file: source.file, symbol: source.symbol || icon.name, preferredName: index === 0 ? icon.name : "", kind: icon.kind, svg: icon.svg });
+    const record = addIcon({ repo: source.repo, file: source.file, symbol: source.symbol || icon.name, preferredName: index === 0 ? icon.name : "", kind: icon.kind, svg: icon.svg });
+    if (record && index === 0) (Array.isArray(icon.aliases) ? icon.aliases : []).forEach(function (alias) { record.aliases.add(normalizedName(alias)); });
   });
 });
 
@@ -789,7 +827,7 @@ hardcodedOverrides.forEach(function (override) {
   record.label = cleanIconLabel(override.label) || record.label;
   record.kind = override.kind || record.kind;
   const overrideCategories = override.categories.filter(function (categoryId) { return categoryId !== "other"; });
-  ["arrows", "locations", "recreation"].forEach(function (parentId) {
+  ["arrows", "geography", "recreation"].forEach(function (parentId) {
     if (!overrideCategories.includes(parentId)) return;
     record.categories.filter(function (categoryId) { return ICON_CATEGORY_BY_ID.get(categoryId)?.parent === parentId; }).forEach(function (categoryId) {
       if (!overrideCategories.includes(categoryId)) overrideCategories.push(categoryId);
