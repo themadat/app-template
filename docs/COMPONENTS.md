@@ -28,7 +28,7 @@ Notes is one large, initially blank plain-text textarea in a native modal. It op
 
 ## App identity control
 
-The top-left app icon uses separate light and dark SVG artwork with display-weight blueprint strokes so its grid and concentric circles remain visible at 42px. Clicking or pressing `T` changes the color theme and therefore swaps the matching icon artwork; the button only scales slightly while actively pressed. The favicon uses the same construction geometry with heavier, high-contrast icy-blue strokes on the full-bleed Safari-gray background.
+The top-left app icon uses separate light and dark SVG artwork with display-weight blueprint strokes so its grid and concentric circles remain visible at 42px. Clicking or pressing `T` changes the color theme and therefore swaps the matching icon artwork; the button only scales slightly while actively pressed. The favicon uses a simplified construction of three grid lines per axis, two squares, and two circles with thinner neon-blue strokes on the full-bleed Safari-gray background.
 
 ## Icon catalog
 

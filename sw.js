@@ -1,7 +1,7 @@
 "use strict";
 
-const CACHE_NAME = "app-template-shell-0.0.1.39";
-const ASSET_VERSION = "0.0.1.39";
+const CACHE_NAME = "app-template-shell-0.0.1.41";
+const ASSET_VERSION = "0.0.1.41";
 const versioned = function (path) { return path + "?v=" + ASSET_VERSION; };
 const SHELL = [
   "./",

@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.39",
-    "buildId": "0.0.1.39",
+    "appVersion": "0.0.1.41",
+    "buildId": "0.0.1.41",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -71,7 +71,7 @@ The current model is version 4:
 }
 ```
 
-Icon-library overrides are normalized to stable icon ID, sanitized display name, optional Custom/Symbol type, recognized category IDs with required ancestors, and an optional recognized filter source. Legacy `locations`, `locations-countries`, `locations-regions`, `locations-mapping`, `locations-places`, `maps`, `maps-travel`, and `other` assignments migrate to the compiled semantic categories without losing name/type/source edits. The filter-source override changes filtering only; compiled source-file provenance remains intact. Overrides are user-managed content: backup and sync include them, Reset Preferences preserves them, and Erase All removes them. Category collapse state and filter-rail width persist as preferences. `minimumLabelLength` is a Developer Mode filter from 0 through 120; it persists locally but is ignored while Developer Mode is off.
+Icon-library overrides are normalized to stable icon ID, sanitized display name, optional Custom/Symbol type, recognized category IDs with required ancestors, and an optional recognized filter source. Legacy `locations`, `locations-countries`, `locations-regions`, `locations-mapping`, `locations-places`, `maps`, `maps-travel`, and `other` assignments migrate to the compiled semantic categories without losing name/type/source edits. Permanent overrides may opt into exact category replacement so an exported removal is not repopulated by inferred child membership. The filter-source override changes filtering only; compiled source-file provenance remains intact. Overrides are user-managed content: backup and sync include them, Reset Preferences preserves them, and Erase All removes them. Category collapse state and filter-rail width persist as preferences. `minimumLabelLength` is a Developer Mode filter from 0 through 120; it persists locally but is ignored while Developer Mode is off.
 
 The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. Fresh Notes are blank, and normalization removes the exact former demonstration sentence while preserving all other user text. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 
