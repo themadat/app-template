@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.36",
-      buildId: "0.0.1.36",
+      version: "0.0.1.37",
+      buildId: "0.0.1.37",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.37",
+        date: "2026-09-04T04:10:36.000Z",
+        title: "Fit more icon cards",
+        summary: "Narrower icon cards fit more results on each row while preserving the longest 20-character icon-name words.",
+        features: [],
+        improvements: ["Icon cards now use a compact 132–140 pixel responsive width", "The longest uninterrupted 20-character icon-name words remain intact at the default text size"],
+        fixes: [],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.36",
         date: "2026-09-03T21:49:22.000Z",

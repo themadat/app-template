@@ -2,13 +2,13 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.36` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.37` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
 - Sticky application header with version, Beta, centered icon search, Notes, and Settings controls.
 - Full-width responsive catalog of 4,540 deduplicated SVG icons gathered from the configured local sources.
-- Wider Symbol/Custom cards beside a sticky, horizontally resizable filter rail split into **What it is** and **How it looks**. Semantic destinations include Recreation with Games and Sport children, Locations with Countries, Mapping, and Places children, Entertainment & Media, Indices, Celebrations & Awards, Clothing & Personal Items, Education & Science, Home & Appliances, Apps & Branding, Devices & Connectivity, nested Text Formatting, and Nature with Animals & Plants and Weather children. The appearance set includes Arrows with Chevron, Triangle, Chevron Arrow, and Triangle Arrow children, plus Badged, Building, Circled, Squared, Slashed, Shapes, and Rays & Sparkles. The catalog also provides semantic search tags, persistent collapsible branches, editable names/types/groups/filter sources, right-click group removal with Undo, compact override export, source details, module shortcuts, 500-icon batches, and one-click SVG copying.
+- Compact 132–140px Symbol/Custom cards sized for uninterrupted 20-character names beside a sticky, horizontally resizable filter rail split into **What it is** and **How it looks**. Semantic destinations include Recreation with Games and Sport children, Locations with Countries, Mapping, and Places children, Entertainment & Media, Indices, Celebrations & Awards, Clothing & Personal Items, Education & Science, Home & Appliances, Apps & Branding, Devices & Connectivity, nested Text Formatting, and Nature with Animals & Plants and Weather children. The appearance set includes Arrows with Chevron, Triangle, Chevron Arrow, and Triangle Arrow children, plus Badged, Building, Circled, Squared, Slashed, Shapes, and Rays & Sparkles. The catalog also provides semantic search tags, persistent collapsible branches, editable names/types/groups/filter sources, right-click group removal with Undo, compact override export, source details, module shortcuts, 500-icon batches, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
 - Replaceable Roadmap inside Settings with search, view filters, and sorting.
 - Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
@@ -187,4 +187,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.36 - Compact category navigation`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.37 - Fit more icon cards`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
