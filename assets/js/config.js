@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.37",
-      buildId: "0.0.1.37",
+      version: "0.0.1.38",
+      buildId: "0.0.1.38",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.38",
+        date: "2026-09-04T04:21:12.000Z",
+        title: "Clarify app icon artwork",
+        summary: "The header icon now preserves its full blueprint geometry at display size, and the favicon uses a much brighter blue against Safari gray.",
+        features: [],
+        improvements: ["Thicker construction-grid and circle strokes in both header icon appearances", "Brighter, heavier favicon geometry for stronger small-size contrast"],
+        fixes: ["The header icon no longer loses most of its grid and circles when scaled to 42 pixels"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.37",
         date: "2026-09-04T04:10:36.000Z",

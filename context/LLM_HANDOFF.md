@@ -10,6 +10,8 @@ This repository is a focused SVG icon-library application. It includes the reusa
 
 On desktop, category navigation is vertically compact and category labels remain on one truncated line until the user widens the resizable rail. Mobile keeps larger horizontally scrolling category targets.
 
+The app-identity SVGs use display-weight blueprint strokes so the grid and concentric circles survive the 42px header treatment. The favicon keeps its full-bleed Safari-gray background and uses a brighter, heavier icy-blue construction layer for legibility at tab size.
+
 ## Workflows
 
 ### `wish`

@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.37` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.38` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -91,7 +91,7 @@ Select **Export overrides** in the editor or Developer Mode—or use the Export 
 Editable sources and generated install assets are in `assets/icons/`. Keep the existing filenames unless you also update every reference in `index.html`, both manifests, `assets/js/config.js`, and `sw.js`.
 
 1. Replace the six editable source files named `App Icon Template Light.svg`, `App Icon Template Light.png`, `App Icon Template Dark.svg`, `App Icon Template Dark.png`, `App Icon Template Gray.svg`, and `App Icon Template Gray.png`.
-2. Copy the light and dark SVG sources to `app-icon-light.svg` and `app-icon-dark.svg`. Copy the gray SVG source to `favicon.svg`; keep its Safari-gray background fully opaque and edge to edge, and use favicon-weight blueprint strokes so the construction design remains visible at tab size. Keep important install-icon artwork inside the central 80% for maskable crops.
+2. Copy the light and dark SVG sources to `app-icon-light.svg` and `app-icon-dark.svg`; use display-weight strokes so their construction geometry survives the 42px header treatment. Copy the gray SVG source to `favicon.svg`; keep its Safari-gray background fully opaque and edge to edge, and use bright, favicon-weight blueprint strokes so the construction design remains visible at tab size. Keep important install-icon artwork inside the central 80% for maskable crops.
 3. Export the light icon to:
 
    - `icon-192.png` at 192 × 192
@@ -187,4 +187,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.37 - Fit more icon cards`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.38 - Clarify app icon artwork`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <title>App Template</title>
   <rect width="64" height="64" fill="#8E8E93"/>
-  <g fill="none" stroke="#5CB2FF" stroke-width="1.5" stroke-miterlimit="10" opacity="0.9">
+  <g fill="none" stroke="#D6F1FF" stroke-width="2.75" stroke-miterlimit="10">
     <path d="M0 8H64M0 16H64M0 24H64M0 32H64M0 40H64M0 48H64M0 56H64"/>
     <path d="M8 0V64M16 0V64M24 0V64M32 0V64M40 0V64M48 0V64M56 0V64"/>
     <path d="M64 0L0 64M64 64L0 0"/>
