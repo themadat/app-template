@@ -12,7 +12,7 @@ How it looks includes Dashed & Dotted with 142 explicit dashed/dotted variants a
 
 On desktop, category navigation is vertically compact and category labels remain on one truncated line until the user widens the resizable rail. Mobile keeps larger horizontally scrolling category targets.
 
-The app-identity SVGs give the grid, X, and three concentric circles the same 24-unit stroke width and full opacity so every path remains visible at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines; its center horizontal and vertical bars match the X stroke while the four outer grid guides remain lighter.
+The app-identity SVGs give the grid, X, and three concentric circles the same 24-unit stroke width and full opacity so every path remains visible at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines; its center horizontal and vertical bars match the X stroke while the four outer grid guides remain lighter. GitHub Pages uses the checked-in custom Actions workflow, whose run title automatically mirrors the required version-prefixed commit subject.
 
 ## Workflows
 
@@ -63,6 +63,7 @@ Do not silently move from one lifecycle stage to another.
 - `assets/js/app.js`: rendering, event wiring, shortcuts, theme, Developer Mode, and Beta detection.
 - `assets/js/core/`: state, storage, reusable components, portability, GitHub Sync, and PWA behavior.
 - `assets/icons/`: editable SVG sources and generated install assets.
+- `.github/workflows/deploy-pages.yml`: static-site Pages deployment with version-labelled run titles.
 - `manifest.webmanifest` and `manifest-dark.webmanifest`: install metadata.
 - `sw.js`: minimal offline shell.
 - `README.md`: setup, customization, icons, SSH, and hosting instructions.
@@ -71,7 +72,7 @@ Do not silently move from one lifecycle stage to another.
 
 - Keep the runtime static, dependency-free, backend-free, and hostable as ordinary files.
 - Preserve the full sibling-repository icon scan and searchable icon catalog, single Notes modal, and Settings Roadmap unless the user explicitly removes or replaces them.
-- Use one GitHub Pages deployment path. This repository relies on GitHub’s built-in branch deployment from `main`; do not add a second push-triggered Pages workflow while that setting is enabled.
+- Use one GitHub Pages deployment path. Keep **Settings → Pages → Source** set to **GitHub Actions** so `.github/workflows/deploy-pages.yml` is the only deployment triggered by pushes to `main`; do not also enable branch deployment.
 - The built-in application icon click changes theme; press-and-hold toggles Developer Mode without also changing theme.
 - Developer Mode adds `DEV` to the single version pill. Beta remains a separate environment pill.
 - Standard interface icons use inline SF Symbol SVGs rather than emoji or icon fonts.

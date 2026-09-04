@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.48` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.49` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -38,6 +38,7 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 
 ```text
 index.html                     Application shell, icon-library page, Notes, and dialogs
+.github/workflows/deploy-pages.yml  Version-labelled GitHub Pages deployment
 assets/css/app.css             Theme, layout, components, and responsive behavior
 assets/js/config.js            Identity, versions, theme defaults, help, releases, and roadmap
 assets/js/icons.js             Inline SF Symbol SVG catalog
@@ -176,7 +177,7 @@ The token stays in browser storage on that device, is never included in exports 
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
 
-For GitHub Pages, use **Settings → Pages → Deploy from a branch**, select `main` and `/ (root)`, then save. GitHub’s built-in **pages build and deployment** workflow will publish each push. Do not add a second push-triggered Pages workflow unless you first disable branch deployment; enabling both paths creates two deployments for the same commit.
+For GitHub Pages, use **Settings → Pages → GitHub Actions** as the publishing source. The checked-in `deploy-pages.yml` workflow publishes the repository root after each push to `main`. Its run title uses the commit subject, so the required `Version - Text` commit format automatically carries the application version into the Actions run and supported notifications without editing the workflow for each release. Do not enable **Deploy from a branch** at the same time; two publishing paths would create duplicate deployments for the same commit.
 
 The service worker checks the network first for same-origin application files, and `index.html` gives build-stamped URLs to the application assets. An ordinary browser refresh therefore retrieves a consistent current set of HTML, CSS, and JavaScript when online, then falls back to the cached shell when offline. When a waiting worker is ready, a persistent **New version available** toast appears at the bottom. Its clockwise-arrow action force-activates that worker and reloads with a cache-busting URL, including in the installed PWA. While the toast is visible, <kbd>R</kbd> runs Force Refresh and <kbd>X</kbd> closes the notice; both also work with Shift–Control–Option.
 
@@ -189,4 +190,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.48 - Add dashed and layered filters`), and pushes the current branch. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.49 - Label Pages deployment runs`), and pushes the current branch. This version-prefixed subject also labels the GitHub Pages workflow run. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
