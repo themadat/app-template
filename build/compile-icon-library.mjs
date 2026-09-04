@@ -45,7 +45,8 @@ function discoverDefaultSources() {
   [
     { name: "objects-tools", folder: "Objects & Tools" },
     { name: "norway-sweden", folder: "norway:sweden" },
-    { name: "indices", folder: "indicies" }
+    { name: "indices", folder: "indicies" },
+    { name: "Rest", folder: "Rest" }
   ].forEach(function (source) {
     const root = path.join(sourceParent, "!backups:data", "icons", "app-input", source.folder);
     if (fs.existsSync(root)) discovered.push({ name: source.name, root: root });
@@ -141,20 +142,22 @@ const ICON_CATEGORIES = [
   { id: "arrows-triangle", label: "Triangle", parent: "arrows", terms: [] },
   { id: "arrows-chevron-arrow", label: "Chevron Arrow", parent: "arrows", terms: [] },
   { id: "arrows-triangle-arrow", label: "Triangle Arrow", parent: "arrows", terms: [] },
-  { id: "branding", label: "Apps & Branding", terms: ["favicon", "logo", "splash", "safari"] },
+  { id: "branding", label: "Apps & Branding", terms: ["favicon", "logo", "splash", "safari", "appclip"] },
   { id: "celebrations-awards", label: "Celebrations & Awards", terms: ["award", "balloon", "birthday", "cake", "fireworks", "flag", "gift", "medal", "party", "rosette", "trophy"] },
   { id: "communication", label: "Communication", terms: ["message", "chat", "bubble", "mail", "envelope", "paperplane", "phone", "call", "megaphone", "bell", "notification", "mention"] },
   { id: "commerce", label: "Commerce", terms: ["cart", "bag", "basket", "credit", "currency", "dollar", "bank", "wallet", "gift", "receipt", "tag"] },
   { id: "clothing-personal", label: "Clothing & Personal Items", terms: ["backpack", "briefcase", "coat", "comb", "eyeglasses", "handbag", "hanger", "hat", "jacket", "shoe", "suitcase", "sunglasses", "tshirt", "watch"] },
-  { id: "devices", label: "Devices & Connectivity", terms: ["desktop", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "watch", "keyboard", "mouse", "printer", "display", "monitor", "television", "tv", "antenna", "bonjour", "cellularbars", "hotspot", "personalhotspot", "radiowaves", "wifi"] },
+  { id: "devices", label: "Devices & Connectivity", terms: ["desktop", "desktopcomputer", "laptop", "computer", "tablet", "iphone", "ipad", "mobile", "smartphone", "candybarphone", "flipphone", "watch", "applewatch", "keyboard", "mouse", "computermouse", "magicmouse", "printer", "display", "monitor", "television", "tv", "appletv", "airpod", "airpods", "earpods", "beats", "homepod", "hifispeaker", "ipod", "macbook", "macmini", "macpro", "macstudio", "vision pro", "xserve", "airtag", "applepencil", "magsafe", "audio jack", "cable connector", "antenna", "bonjour", "cellularbars", "hotspot", "personalhotspot", "radiowaves", "wifi", "fibrechannel"] },
+  { id: "development", label: "Development", terms: ["applescript", "arkit", "developer", "programming", "swift", "swiftdata"] },
   { id: "cloud-server", label: "Cloud & Drive", terms: ["cloud", "icloud", "server", "drive", "externaldrive", "internaldrive", "opticaldiscdrive", "storage", "database", "network"] },
   { id: "documents", label: "Documents", terms: ["document", "doc", "file", "folder", "page", "paper", "note", "clipboard", "book", "text", "list", "archive", "archivebox", "bookmark", "data", "json"] },
-  { id: "editing", label: "Editing", terms: ["pencil", "pen", "highlight", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat", "editor", "legend"] },
+  { id: "editing", label: "Editing", terms: ["edit", "pencil", "pen", "highlight", "highlighter", "crop", "scissors", "ruler", "paint", "eyedropper", "slider", "textformat", "editor", "legend"] },
   { id: "text-formatting", label: "Text Formatting", parent: "editing", terms: ["abc", "a z", "bold", "italic", "underline", "strikethrough", "paragraphsign", "quotelevel", "indent", "kashida", "fleuron", "textbox", "uppercase", "lowercase", "phonetic"] },
   { id: "education-science", label: "Education & Science", terms: ["atom", "book", "books", "flask", "graduationcap", "gyroscope", "level", "microscope", "scalemass", "school", "science", "studentdesk", "testtube", "university"] },
+  { id: "energy-power", label: "Energy & Power", terms: ["alternatingcurrent", "battery", "charge", "charging", "directcurrent", "electricity", "energy", "hydrogen", "power", "powercord", "powermeter", "poweroutlet", "powerplug"] },
   { id: "food-drink", label: "Food & Drink", terms: ["bar", "cocktail", "drink", "glass", "wine", "wineglass", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
   { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
-  { id: "home-appliances", label: "Home & Appliances", terms: ["conditioner", "purifier", "bathtub", "cabinet", "chair", "chandelier", "cooktop", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "microwave", "oven", "refrigerator", "shower", "sink", "sofa", "spigot", "sprinkler", "stove", "toilet", "vacuum", "washer"] },
+  { id: "home-appliances", label: "Home & Appliances", terms: ["conditioner", "purifier", "bathtub", "blinds", "cabinet", "chair", "chandelier", "contact sensor", "cooktop", "curtains", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "lightswitch", "microwave", "oven", "pipe", "refrigerator", "roller shade", "roman shade", "sensor", "shower", "sink", "sofa", "spigot", "sprinkler", "stairs", "stove", "toilet", "vacuum", "washer"] },
   { id: "indices", label: "Indices", terms: ["index", "indices"] },
   { id: "interface", label: "Interface", terms: ["menu", "sidebar", "toolbar", "window", "panel", "grid", "ellipsis", "gear", "gearshape", "settings", "magnifyingglass", "search", "filter", "sort", "terminal", "curlybraces", "widget", "dock", "menubar", "inset", "gauge", "target", "swatchpalette", "chart", "table", "fit", "mode", "lightbulb", "line", "link", "pip", "view", "dismiss", "hide", "trash", "bin", "wrench"] },
   { id: "keyboard", label: "Keyboard", terms: ["keyboard", "command", "control", "option", "shift", "capslock", "escape", "return", "delete", "fn"] },
@@ -164,7 +167,7 @@ const ICON_CATEGORIES = [
   { id: "geography-mapping", label: "Mapping", parent: "geography", terms: [] },
   { id: "geography-places", label: "Places", parent: "geography", terms: [] },
   { id: "math", label: "Math", terms: ["123", "function", "sum", "number", "percent", "divide", "multiply", "equal", "greaterthan", "lessthan", "plusminus", "radical"] },
-  { id: "media", label: "Entertainment & Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "image", "music", "speaker", "volume", "microphone", "waveform", "record"] },
+  { id: "media", label: "Entertainment & Media", terms: ["play", "pause", "stop", "video", "camera", "photo", "livephoto", "pano", "spatial capture", "slowmo", "timelapse", "image", "music", "speaker", "hifispeaker", "homepod", "airplay audio", "airpod", "airpods", "earpods", "beats", "volume", "microphone", "waveform", "record", "recordingtape"] },
   { id: "nature", label: "Nature", terms: ["nature", "mountain", "water", "volcano"] },
   { id: "animals-plants", label: "Animals & Plants", parent: "nature", terms: ["leaf", "tree", "flower", "plant", "animal", "dog", "cat", "bird", "fish", "dinosaur", "raptor", "velociraptor"] },
   { id: "weather", label: "Weather", parent: "nature", terms: ["sun", "cloud", "rain", "snow", "wind", "temperature", "moon", "bolt", "lightning"] },
@@ -172,10 +175,10 @@ const ICON_CATEGORIES = [
   { id: "rays-sparkles", label: "Rays & Sparkles", section: "appearance", terms: ["ray", "rays", "laser", "burst", "sparkle", "sparkles"] },
   { id: "people", label: "People", terms: [] },
   { id: "recreation", label: "Recreation", terms: [] },
-  { id: "recreation-games", label: "Games", parent: "recreation", terms: ["game", "meeple", "die", "dice", "castle", "abbey", "wizard", "witch", "mage", "fairy", "elf", "dragon", "sheep", "wolf", "robber", "princess", "knight", "spartan", "crown", "medieval", "ringmaster", "pigsty", "baazar", "vineyard", "arcade", "gamecontroller", "puzzlepiece", "teddybear"] },
+  { id: "recreation-games", label: "Games", parent: "recreation", terms: ["game", "meeple", "die", "dice", "castle", "abbey", "wizard", "witch", "mage", "fairy", "elf", "dragon", "sheep", "wolf", "robber", "princess", "knight", "spartan", "crown", "medieval", "ringmaster", "pigsty", "baazar", "vineyard", "arcade", "gamecontroller", "dpad", "joystick", "puzzlepiece", "teddybear", "suit club", "suit spade"] },
   { id: "recreation-sport", label: "Sport", parent: "recreation", terms: ["baseball", "basketball", "cricket", "football", "hockey", "oar", "rugbyball", "skateboard", "skis", "snowboard", "soccerball", "sport", "surfboard", "tennis", "trophy", "volleyball"] },
   { id: "security", label: "Privacy & Security", terms: ["lock", "key", "shield", "privacy", "secure", "password", "faceid", "touchid", "eye off"] },
-  { id: "shapes", label: "Shapes", section: "appearance", terms: ["circle", "square", "rectangle", "triangle", "diamond", "hexagon", "shape", "ring"] },
+  { id: "shapes", label: "Shapes", section: "appearance", terms: ["circle", "square", "rectangle", "triangle", "righttriangle", "diamond", "hexagon", "pentagon", "octagon", "oval", "capsule", "cone", "cube", "cylinder", "pyramid", "torus", "squareshape", "shape", "ring"] },
   { id: "building", label: "Building", section: "appearance", terms: ["building"] },
   { id: "badged", label: "Badged", section: "appearance", terms: ["badge", "trianglebadge", "circlebadge"] },
   { id: "badged-badge", label: "Badge", parent: "badged", terms: ["badge"] },
@@ -224,9 +227,10 @@ const ICON_CATEGORIES = [
   { id: "squared", label: "Squared", section: "appearance", terms: ["square"] },
   { id: "circled", label: "Circled", section: "appearance", terms: ["circle"] },
   { id: "slashed", label: "Slashed", section: "appearance", terms: ["slash", "slashed"] },
-  { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "warning", "info", "question", "error", "success", "badge", "medal"] },
+  { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "exclamationmark", "warning", "warninglight", "hazardsign", "info", "question", "questionmark", "error", "success", "badge", "medal", "progress indicator", "purchased"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },
-  { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] }
+  { id: "transportation", label: "Transportation", terms: ["car", "bus", "train", "tram", "plane", "airplane", "boat", "ferry", "bicycle", "scooter", "vehicle", "transportation"] },
+  { id: "transportation-automotive", label: "Automotive", parent: "transportation", terms: [] }
 ];
 
 const ICON_CATEGORY_ALIASES = new Map([
@@ -272,6 +276,54 @@ const OBJECT_TOOL_CATEGORY_RULES = [
   { id: "time", terms: ["metronome"] },
   { id: "transportation", terms: ["drone", "helmet", "lifepreserver", "oar", "oilcan", "skateboard", "skis", "snowboard", "stroller", "suitcase", "surfboard"] },
   { id: "weather", terms: ["air conditioner", "air purifier", "barometer", "beach umbrella", "dehumidifier", "fan", "fireplace", "heater", "humidifier", "sprinkler", "umbrella"] }
+];
+
+const REST_CATEGORY_RULES = [
+  { id: "transportation-automotive", pattern: /(?:^|_)(?:abs|autostartstop|axle|brakesignal|carseat|convertible|engine|gearshift|glowplug|headlight|lane|mirror_side|paddleshifter|parkinglight|parkingsign|pedal|pickup|retarder|steeringwheel|suspension|suv|tachometer|taillight|tire|tirepressure|tow_hitch|transmission|truck_side|vent_airflow|windshield)(?:_|$)|^(?:2h|4a|4h|4l|kph|mph)$|^(?:air|wave_3_down)_(?:convertible|pickup|suv)_side(?:_|$)|(?:^|_)electronic_toll_collection(?:_|$)|(?:^|_)thermometer_(?:brakesignal|tirepressure|transmission)(?:_|$)/ },
+  { id: "commerce", pattern: /(?:^|_)(?:banknote|barcode|creditcard|giftcard|purchased|qrcode|storefront)(?:_|$)|(?:currency|dollar|cent|austral|australiandollar|baht|bitcoin|brazilianreal|cedi|coloncurrency|cruzeiro|danishkrone|dinar|dong|euro|eurozone|florin|franc|guarani|hryvnia|indianrupee|kip|lari|lira|malaysianringgit|manat|mill|naira|peruviansoles|peseta|peso|polishzloty|ruble|rupee|shekel|singaporedollar|sterling|tenge|tugrik|turkishlira|won|yen)sign(?:_|$)/ },
+  { id: "development", pattern: /(?:^|_)(?:apple_intelligence|apple_terminal|apple_writing_tools|applescript|appclip|arkit|curlybraces|f_cursive|finder|flowchart|fx|helm|parentheses|swift|swiftdata)(?:_|$)/ },
+  { id: "energy-power", pattern: /(?:^|_)(?:alternatingcurrent|directcurrent|glowplug|hydrogen|magsafe_batterypack|power|powermeter|poweron|poweroutlet|togglepower)(?:_|$)/ },
+  { id: "recreation-games", pattern: /(?:^|_)(?:dpad|joystick)(?:_|$)|^(?:l|r|lb|lm|lsb|lt|m|p|pl|pr|rb|rm|rsb|rt|zl|zr)\d?_button(?:_|$)|(?:^|_)suit_(?:club|spade)(?:_|$)/ },
+  { id: "recreation-sport", pattern: /(?:^|_)sportscourt(?:_|$)/ },
+  { id: "home-appliances", pattern: /(?:^|_)(?:apple_homekit|blinds|contact_sensor|curtains|lightswitch|pipe_and_drop|roller_shade|roman_shade|sensor|stairs|switch_programmable)(?:_|$)/ },
+  { id: "devices", pattern: /(?:^|_)(?:airtag|applepencil|appletvremote|audio_jack|av_remote|cable_coaxial|cable_connector|deskview|digitalcrown|mediastick|opticid|pc|vision_pro|watchface)(?:_|$)/ },
+  { id: "media", pattern: /^(?:burn)$|(?:^|_)(?:apple_classical|apple_podcasts|airplay_audio|livephoto|memories|pano|recordingtape|shareplay|slowmo|spatial_capture|timelapse)(?:_|$)/ },
+  { id: "editing", pattern: /(?:^|_)(?:apple_writing_tools|applepencil|eyebrow|filemenu|lines_measurement|lineweight|placeholdertext|quote_closing|quote_opening|relationship_edit|translate)(?:_|$)/ },
+  { id: "interface", pattern: /(?:^|_)(?:app_background|app_dashed|app_shadow|app_specular|app_translucent|appwindow|arrowkeys|button_horizontal|button_vertical|deskview|dot_crosshair|dot_squareshape|dot_viewfinder|filemenu|flowchart|mosaic|progress_indicator|restart|squares_below|squares_leading|switch_2|tablecells|togglepower|uiwindow|viewfinder)(?:_|$)/ },
+  { id: "math", pattern: /(?:^|_)(?:asterisk|f_cursive|fx|lines_measurement|parentheses|plus_minus|righttriangle)(?:_|$)/ },
+  { id: "text-formatting", pattern: /^(?:k)$/ },
+  { id: "communication", pattern: /^(?:at|sharedwithyou|shareplay)$/ },
+  { id: "security", pattern: /(?:^|_)(?:opticid|tsa)(?:_|$)/ },
+  { id: "status", pattern: /(?:^|_)(?:asterisk|exclamationmark|hazardsign|peacesign|progress_indicator|purchased|questionmark|star|warninglight|wrongwaysign|yieldsign)(?:_|$)/ },
+  { id: "weather", pattern: /(?:^|_)(?:heat_waves|moonrise|moonset|thermometer_and_liquid_waves)(?:_|$)/ },
+  { id: "nature", pattern: /(?:^|_)drop_halffull(?:_|$)/ },
+  { id: "education-science", pattern: /(?:^|_)lightspectrum(?:_|$)/ },
+  { id: "celebrations-awards", pattern: /(?:^|_)laurel(?:_|$)/ },
+  { id: "arrows-chevron", pattern: /^(?:left|right)$/ },
+  { id: "time", pattern: /^(?:powersleep|sleep|wake|zzz)$/ },
+  { id: "clothing-personal", pattern: /(?:^|_)(?:mustache|shoeprints)(?:_|$)/ },
+  { id: "shapes", pattern: /(?:^|_)(?:capsule|cone|cube|cylinder|octagon|oval|pentagon|point_3_(?:filled_)?connected_trianglepath|pyramid|righttriangle|squares_below|squares_leading|squareshape|torus)(?:_|$)/ }
+];
+
+const CATEGORY_SEARCH_TAGS = {
+  "commerce": ["buy", "finance", "money", "payment", "shop"],
+  "development": ["code", "developer", "programming", "software"],
+  "devices": ["accessory", "connection", "device", "hardware", "technology"],
+  "energy-power": ["electric", "electricity", "energy", "power", "utility"],
+  "home-appliances": ["appliance", "home", "household", "smart home"],
+  "media": ["audio", "entertainment", "media", "sound", "video"],
+  "recreation-games": ["controller", "game", "gaming", "play"],
+  "shapes": ["geometry", "shape"],
+  "transportation-automotive": ["automotive", "car", "dashboard", "driving", "vehicle"]
+};
+
+const SEARCH_TAG_RULES = [
+  { pattern: /(?:^|_)(?:airpod|airpods|beats|earpods)(?:_|$)/, tags: ["earbuds", "headphones", "listening", "wireless audio"] },
+  { pattern: /(?:^|_)(?:hifispeaker|homepod)(?:_|$)/, tags: ["audio", "smart speaker", "sound", "speaker"] },
+  { pattern: /(?:currency|dollar|cent|austral|baht|cedi|coloncurrency|cruzeiro|dinar|dong|euro|florin|franc|guarani|hryvnia|indianrupee|kip|lari|lira|manat|naira|peseta|peso|polishzloty|ruble|rupee|shekel|sterling|tenge|tugrik|turkishlira|won|yen)sign(?:_|$)/, tags: ["currency", "finance", "money", "payment"] },
+  { pattern: /(?:^|_)(?:blinds|curtains|roller_shade|roman_shade)(?:_|$)/, tags: ["shade", "smart home", "window covering"] },
+  { pattern: /(?:^|_)(?:brakesignal|headlight|taillight|tirepressure|transmission|windshield)(?:_|$)/, tags: ["automotive", "dashboard", "driving", "vehicle warning"] },
+  { pattern: /(?:^|_)(?:dpad|joystick)(?:_|$)|^(?:l|r|lb|lm|lsb|lt|m|p|pl|pr|rb|rm|rsb|rt|zl|zr)\d?_button(?:_|$)/, tags: ["controller", "gamepad", "gaming", "input"] }
 ];
 
 function recordMatchesTerm(record, term) {
@@ -395,6 +447,10 @@ function metadataKeys(values) {
 
 function metadataNames(record) {
   return [record.name].concat(Array.from(record.aliases), record.sources.map(function (source) { return source.symbol; })).map(normalizedName);
+}
+
+function recordMatchesPattern(record, pattern) {
+  return metadataNames(record).some(function (name) { return pattern.test(name); });
 }
 
 function arrowCategoryIds(record) {
@@ -586,17 +642,28 @@ function deriveMetadata(record) {
     });
     if (isRequestedSource && !categories.includes(rule.id)) categories.push(rule.id);
   });
+  const isRestSource = record.sources.some(function (source) { return source.repo === "Rest"; });
+  if (isRestSource) {
+    REST_CATEGORY_RULES.forEach(function (rule) {
+      if (!categories.includes(rule.id) && recordMatchesPattern(record, rule.pattern)) categories.push(rule.id);
+    });
+  }
   if (!categories.length) categories.push("other");
   const tags = new Set(Array.from(keys));
   TAG_GROUPS.forEach(function (group) {
     if (!group.some(function (term) { return keys.has(normalizedName(term)); })) return;
     group.forEach(function (term) { tags.add(normalizedName(term).replace(/_/g, " ")); });
   });
-  categories.forEach(function (categoryId) {
+  const normalizedCategories = normalizeCategoryIds(categories);
+  normalizedCategories.forEach(function (categoryId) {
     const category = ICON_CATEGORIES.find(function (item) { return item.id === categoryId; });
     tags.add(category ? category.label.toLowerCase() : "other");
+    (CATEGORY_SEARCH_TAGS[categoryId] || []).forEach(function (tag) { tags.add(tag); });
   });
-  return { categories: normalizeCategoryIds(categories), tags: Array.from(tags).filter(Boolean).sort().slice(0, 120) };
+  SEARCH_TAG_RULES.forEach(function (rule) {
+    if (recordMatchesPattern(record, rule.pattern)) rule.tags.forEach(function (tag) { tags.add(tag); });
+  });
+  return { categories: normalizedCategories, tags: Array.from(tags).filter(Boolean).sort().slice(0, 120) };
 }
 
 function templateLiteral(value) {

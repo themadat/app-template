@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.43",
-      buildId: "0.0.1.43",
+      version: "0.0.1.44",
+      buildId: "0.0.1.44",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.44",
+        date: "2026-09-04T17:40:43.000Z",
+        title: "Expand the icon catalog",
+        summary: "The remaining SF Symbols source now joins the catalog with semantic categories and richer search vocabulary.",
+        features: ["3,006 deduplicated icons from the Rest source", "Automotive under Transportation, plus Development and Energy & Power categories"],
+        improvements: ["Rest icons reuse existing categories wherever their names identify a clear subject", "Category and concept synonyms make imported icons searchable beyond their source names"],
+        fixes: ["All 7,232 retained icons have at least one semantic category and searchable tags"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.43",
         date: "2026-09-04T16:56:06.000Z",
