@@ -327,7 +327,8 @@ function loadIconOverrides() {
       label: label,
       kind: ["sf-symbol", "custom"].includes(String(source.kind || "").trim()) ? String(source.kind || "").trim() : "",
       categories: normalizeCategoryIds(source.categories),
-      source: sourceIds.has(String(source.source || "").trim()) ? String(source.source || "").trim() : ""
+      source: sourceIds.has(String(source.source || "").trim()) ? String(source.source || "").trim() : "",
+      exactCategories: source.exactCategories === true
     };
   });
   return { overrides: overrides, excludedIconIds: excludedIconIds };
@@ -827,12 +828,14 @@ hardcodedOverrides.forEach(function (override) {
   record.label = cleanIconLabel(override.label) || record.label;
   record.kind = override.kind || record.kind;
   const overrideCategories = override.categories.filter(function (categoryId) { return categoryId !== "other"; });
-  ["arrows", "geography", "recreation"].forEach(function (parentId) {
-    if (!overrideCategories.includes(parentId)) return;
-    record.categories.filter(function (categoryId) { return ICON_CATEGORY_BY_ID.get(categoryId)?.parent === parentId; }).forEach(function (categoryId) {
-      if (!overrideCategories.includes(categoryId)) overrideCategories.push(categoryId);
+  if (!override.exactCategories) {
+    ["arrows", "geography", "recreation"].forEach(function (parentId) {
+      if (!overrideCategories.includes(parentId)) return;
+      record.categories.filter(function (categoryId) { return ICON_CATEGORY_BY_ID.get(categoryId)?.parent === parentId; }).forEach(function (categoryId) {
+        if (!overrideCategories.includes(categoryId)) overrideCategories.push(categoryId);
+      });
     });
-  });
+  }
   record.categories = overrideCategories.length ? normalizeCategoryIds(overrideCategories) : record.categories;
   record.source = override.source;
   overridesApplied += 1;

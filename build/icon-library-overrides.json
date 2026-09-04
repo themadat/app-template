@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-03T17:20:59Z",
-  "applicationVersion": "0.0.1.34",
+  "generatedAt": "2026-09-04T04:59:15Z",
+  "applicationVersion": "0.0.1.42",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -324,6 +324,261 @@
       ]
     },
     {
+      "iconId": "arrow-left-and-right-text-vertical-dd1705",
+      "label": "Arrow Left And Right Text Vertical",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "documents",
+        "editing",
+        "text-formatting"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrow-up-and-down-and-arrow-left-and-right-0eed7e",
+      "label": "Arrow Up And Down And Arrow Left And Right",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "arrows-triangle-arrow",
+        "geography",
+        "geography-mapping"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrow-up-and-down-text-horizontal-9d87cb",
+      "label": "Arrow Up And Down Text Horizontal",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "documents",
+        "editing",
+        "text-formatting"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrow-up-left-and-down-right-and-arrow-up-right-and-down-left-62321c",
+      "label": "Arrow Up Left And Down Right And Arrow Up Right And Down Left",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "arrows-triangle-arrow",
+        "geography",
+        "geography-mapping"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrow-up-left-and-down-right-magnifyingglass-788fea",
+      "label": "Arrow Up Left And Down Right Magnifyingglass",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "interface",
+        "objects-tools"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-down-circle-f67703",
+      "label": "Arrowshape Down Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-down-fill-d03500",
+      "label": "Arrowshape Down Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-left-circle-b1a796",
+      "label": "Arrowshape Left Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-right-circle-5539d7",
+      "label": "Arrowshape Right Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-turn-up-backward-badge-clock-b47252",
+      "label": "Arrowshape Turn Up Backward Badge Clock",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "objects-tools",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-turn-up-backward-badge-clock-fill-80fa50",
+      "label": "Arrowshape Turn Up Backward Badge Clock Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "objects-tools",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-turn-up-left-2-circle-4ebee4",
+      "label": "Arrowshape Turn Up Left 2 Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-turn-up-left-circle-00c791",
+      "label": "Arrowshape Turn Up Left Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-turn-up-right-circle-aa23a1",
+      "label": "Arrowshape Turn Up Right Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-up-circle-de1468",
+      "label": "Arrowshape Up Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "arrowshape-up-fill-9be52a",
+      "label": "Arrowshape Up Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "australiandollarsign-building-classical-599505",
+      "label": "Australiandollarsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "australiandollarsign-building-classical-fill-7a9e9f",
+      "label": "Australiandollarsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "australsign-building-classical-e95bea",
+      "label": "Australsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "australsign-building-classical-fill-a9cb36",
+      "label": "Australsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "bahtsign-building-classical-3c621c",
+      "label": "Bahtsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "bahtsign-building-classical-fill-6a5115",
+      "label": "Bahtsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "bitcoinsign-building-classical-b6f9bc",
+      "label": "Bitcoinsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "bitcoinsign-building-classical-fill-777cec",
+      "label": "Bitcoinsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "bolt-car-7605c3",
       "label": "Bolt Car",
       "categories": [
@@ -352,6 +607,26 @@
       "categories": [
         "transportation"
       ]
+    },
+    {
+      "iconId": "brazilianrealsign-building-classical-3d9f40",
+      "label": "Brazilianrealsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "brazilianrealsign-building-classical-fill-ed054f",
+      "label": "Brazilianrealsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "building-2-31b299",
@@ -486,18 +761,58 @@
       "label": "Carrot",
       "categories": [
         "food-drink",
-        "nature",
-        "objects-tools"
-      ]
+        "nature"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "carrot-fill-a9556a",
       "label": "Carrot Fill",
       "categories": [
         "food-drink",
-        "nature",
-        "objects-tools"
-      ]
+        "nature"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "cedisign-building-classical-e7e798",
+      "label": "Cedisign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "cedisign-building-classical-fill-a92cad",
+      "label": "Cedisign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "centsign-building-classical-4f97bd",
+      "label": "Centsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "centsign-building-classical-fill-053653",
+      "label": "Centsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "chart-bar-xaxis-22bea8",
@@ -749,6 +1064,75 @@
       ]
     },
     {
+      "iconId": "coloncurrencysign-building-classical-f19601",
+      "label": "Coloncurrencysign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "coloncurrencysign-building-classical-fill-7553f7",
+      "label": "Coloncurrencysign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "contextualmenu-and-pointer-arrow-9168cf",
+      "label": "Contextualmenu And Pointer Arrow",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "cruzeirosign-building-classical-c4cf6c",
+      "label": "Cruzeirosign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "cruzeirosign-building-classical-fill-524c0f",
+      "label": "Cruzeirosign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "danishkronesign-building-classical-6147f0",
+      "label": "Danishkronesign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "danishkronesign-building-classical-fill-4b0b76",
+      "label": "Danishkronesign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "diamond-circle-a1c541",
       "label": "Diamond Circle",
       "categories": [
@@ -761,6 +1145,96 @@
       "categories": [
         "circled"
       ]
+    },
+    {
+      "iconId": "digitalcrown-arrow-clockwise-29000b",
+      "label": "Digitalcrown Arrow Clockwise",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "arrows-triangle-arrow"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "digitalcrown-arrow-clockwise-fill-7b47a1",
+      "label": "Digitalcrown Arrow Clockwise Fill",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "arrows-triangle-arrow"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "digitalcrown-arrow-counterclockwise-7511e3",
+      "label": "Digitalcrown Arrow Counterclockwise",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "arrows-triangle-arrow"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "digitalcrown-arrow-counterclockwise-fill-623177",
+      "label": "Digitalcrown Arrow Counterclockwise Fill",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "arrows-triangle-arrow"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "dollarsign-building-classical-874d64",
+      "label": "Dollarsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "dollarsign-building-classical-fill-79c20a",
+      "label": "Dollarsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "dongsign-building-classical-23b6d0",
+      "label": "Dongsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "dongsign-building-classical-fill-8b4c6e",
+      "label": "Dongsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "dot-circle-and-pointer-arrow-a0a1d0",
+      "label": "Dot Circle And Pointer Arrow",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "circled"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "drink-beer-c1ded2",
@@ -812,6 +1286,124 @@
       "kind": "custom"
     },
     {
+      "iconId": "eurosign-building-classical-93242f",
+      "label": "Eurosign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "eurosign-building-classical-fill-e7a5a7",
+      "label": "Eurosign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "eurozonesign-building-classical-20810e",
+      "label": "Eurozonesign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "eurozonesign-building-classical-fill-56d5ed",
+      "label": "Eurozonesign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "ev-charger-arrowtriangle-left-f6bbb7",
+      "label": "Ev Charger Arrowtriangle Left",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "ev-charger-arrowtriangle-left-fill-308570",
+      "label": "Ev Charger Arrowtriangle Left Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "ev-charger-arrowtriangle-right-b2c466",
+      "label": "Ev Charger Arrowtriangle Right",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "ev-charger-arrowtriangle-right-fill-34b8ab",
+      "label": "Ev Charger Arrowtriangle Right Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "fan-badge-arrow-up-and-down-and-arrow-left-and-right-6526ba",
+      "label": "Fan Badge Arrow Up And Down And Arrow Left And Right",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "devices",
+        "home-appliances",
+        "nature",
+        "weather",
+        "objects-tools",
+        "badged",
+        "badged-arrow",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "fan-badge-arrow-up-and-down-and-arrow-left-and-right-fill-13ca81",
+      "label": "Fan Badge Arrow Up And Down And Arrow Left And Right Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "devices",
+        "home-appliances",
+        "nature",
+        "weather",
+        "objects-tools",
+        "badged",
+        "badged-arrow",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "figure-open-water-swim-circle-da8d68",
       "label": "Figure Open Water Swim Circle",
       "categories": [
@@ -831,22 +1423,115 @@
       ]
     },
     {
+      "iconId": "filemenu-and-pointer-arrow-53f0bf",
+      "label": "Filemenu And Pointer Arrow",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "florinsign-building-classical-a9d1d9",
+      "label": "Florinsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "florinsign-building-classical-fill-e518a0",
+      "label": "Florinsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "fossil-shell-73d57f",
       "label": "Fossil Shell",
       "categories": [
         "nature",
-        "animals-plants",
-        "objects-tools"
-      ]
+        "animals-plants"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "fossil-shell-fill-8ab33f",
       "label": "Fossil Shell Fill",
       "categories": [
         "nature",
-        "animals-plants",
-        "objects-tools"
-      ]
+        "animals-plants"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "francsign-building-classical-dd0aa3",
+      "label": "Francsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "francsign-building-classical-fill-1de3fe",
+      "label": "Francsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "fuelpump-arrowtriangle-left-b67ca3",
+      "label": "Fuelpump Arrowtriangle Left",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "fuelpump-arrowtriangle-left-fill-db0c25",
+      "label": "Fuelpump Arrowtriangle Left Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "fuelpump-arrowtriangle-right-60cc99",
+      "label": "Fuelpump Arrowtriangle Right",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "fuelpump-arrowtriangle-right-fill-2f90f7",
+      "label": "Fuelpump Arrowtriangle Right Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "objects-tools",
+        "transportation"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "globe-americas-a18e60",
@@ -905,6 +1590,36 @@
       ]
     },
     {
+      "iconId": "guaranisign-building-classical-4255e0",
+      "label": "Guaranisign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "guaranisign-building-classical-fill-0ff30d",
+      "label": "Guaranisign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "guidepoint-vertical-arrowtriangle-forward-49d80c",
+      "label": "Guidepoint Vertical Arrowtriangle Forward",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "editing"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "hand-raised-square-on-square-2cdde8",
       "label": "Hand Raised Square On Square",
       "categories": [
@@ -959,12 +1674,72 @@
       ]
     },
     {
+      "iconId": "hryvniasign-building-classical-1ddddd",
+      "label": "Hryvniasign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "hryvniasign-building-classical-fill-22ae1e",
+      "label": "Hryvniasign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "indianrupeesign-building-classical-ee63a1",
+      "label": "Indianrupeesign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "indianrupeesign-building-classical-fill-4d9c07",
+      "label": "Indianrupeesign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "info-circle-text-page-bdbb27",
       "label": "Info Circle Text Page",
       "categories": [
         "documents",
         "status"
       ]
+    },
+    {
+      "iconId": "kipsign-building-classical-e7cf24",
+      "label": "Kipsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "kipsign-building-classical-fill-333f19",
+      "label": "Kipsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "ladybug-16683f",
@@ -1039,6 +1814,26 @@
       ]
     },
     {
+      "iconId": "larisign-building-classical-70f198",
+      "label": "Larisign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "larisign-building-classical-fill-e25f9c",
+      "label": "Larisign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "laurel-leading-af7fbe",
       "label": "Laurel Leading",
       "categories": [
@@ -1053,6 +1848,26 @@
         "nature",
         "animals-plants"
       ]
+    },
+    {
+      "iconId": "lirasign-building-classical-fc0106",
+      "label": "Lirasign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "lirasign-building-classical-fill-e11532",
+      "label": "Lirasign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "lizard-circle-84be32",
@@ -1103,6 +1918,54 @@
         "security",
         "objects-tools"
       ]
+    },
+    {
+      "iconId": "macwindow-and-pointer-arrow-dec22b",
+      "label": "Macwindow And Pointer Arrow",
+      "categories": [
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "malaysianringgitsign-building-classical-93acd4",
+      "label": "Malaysianringgitsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "malaysianringgitsign-building-classical-fill-697418",
+      "label": "Malaysianringgitsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "manatsign-building-classical-cf4760",
+      "label": "Manatsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "manatsign-building-classical-fill-dfffb7",
+      "label": "Manatsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "map-volcano-svgrepo-com-ad0340",
@@ -1160,16 +2023,139 @@
       ]
     },
     {
-      "iconId": "other-3-volcano-8b6038",
-      "label": "Volcano Smoke Small",
+      "iconId": "millsign-building-classical-90780a",
+      "label": "Millsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "millsign-building-classical-fill-e8813e",
+      "label": "Millsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "minus-plus-batteryblock-stack-arrowtriangle-left-07981c",
+      "label": "Minus Plus Batteryblock Stack Arrowtriangle Left",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "objects-tools",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "minus-plus-batteryblock-stack-arrowtriangle-left-fill-811da3",
+      "label": "Minus Plus Batteryblock Stack Arrowtriangle Left Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "objects-tools",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "minus-plus-batteryblock-stack-arrowtriangle-right-48d094",
+      "label": "Minus Plus Batteryblock Stack Arrowtriangle Right",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "objects-tools",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "minus-plus-batteryblock-stack-arrowtriangle-right-and-arrowtriangle-left-bf00be",
+      "label": "Minus Plus Batteryblock Stack Arrowtriangle Right And Arrowtriangle Left",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "objects-tools",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "minus-plus-batteryblock-stack-arrowtriangle-right-and-arrowtriangle-left-fill-fe73e0",
+      "label": "Minus Plus Batteryblock Stack Arrowtriangle Right And Arrowtriangle Left Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "objects-tools",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "minus-plus-batteryblock-stack-arrowtriangle-right-fill-d2853e",
+      "label": "Minus Plus Batteryblock Stack Arrowtriangle Right Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "objects-tools",
+        "status"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "nairasign-building-classical-58e90d",
+      "label": "Nairasign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "nairasign-building-classical-fill-f565de",
+      "label": "Nairasign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "norwegiankronesign-building-classical-479546",
+      "label": "Norwegiankronesign Building Classical",
+      "categories": [
+        "commerce",
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "other-3-volcano-23903b",
+      "label": "Volcano Smoke Big",
       "categories": [
         "recreation-games",
         "nature"
       ]
     },
     {
-      "iconId": "other-3-volcano-23903b",
-      "label": "Volcano Smoke Big",
+      "iconId": "other-3-volcano-8b6038",
+      "label": "Volcano Smoke Small",
       "categories": [
         "recreation-games",
         "nature"
@@ -1258,6 +2244,77 @@
       ]
     },
     {
+      "iconId": "peruviansolessign-building-classical-983d16",
+      "label": "Peruviansolessign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "peruviansolessign-building-classical-fill-7f1d5e",
+      "label": "Peruviansolessign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pesetasign-building-classical-624e80",
+      "label": "Pesetasign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pesetasign-building-classical-fill-10cb73",
+      "label": "Pesetasign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pesosign-building-classical-6ff2ed",
+      "label": "Pesosign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pesosign-building-classical-fill-00272c",
+      "label": "Pesosign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "play-circle-e654c0",
+      "label": "Play Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "media",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "play-square-stack-162148",
       "label": "Play Square Stack",
       "categories": [
@@ -1291,7 +2348,40 @@
       "categories": [
         "accessibility",
         "arrows"
-      ]
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-click-2-576070",
+      "label": "Pointer Arrow Click 2",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-click-89d6e1",
+      "label": "Pointer Arrow Click",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-click-badge-clock-3284e1",
+      "label": "Pointer Arrow Click Badge Clock",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "objects-tools",
+        "badged",
+        "badged-clock",
+        "status",
+        "time"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "pointer-arrow-ipad-and-square-on-square-dashed-0eafab",
@@ -1300,7 +2390,86 @@
         "accessibility",
         "arrows",
         "devices"
-      ]
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-ipad-rays-b1b3b9",
+      "label": "Pointer Arrow Ipad Rays",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "devices",
+        "rays-sparkles"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-ipad-square-fill-3f1177",
+      "label": "Pointer Arrow Ipad Square Fill",
+      "categories": [
+        "arrows",
+        "devices",
+        "squared"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-motionlines-b13859",
+      "label": "Pointer Arrow Motionlines",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-motionlines-click-94529a",
+      "label": "Pointer Arrow Motionlines Click",
+      "categories": [
+        "accessibility",
+        "arrows"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-rays-4a92db",
+      "label": "Pointer Arrow Rays",
+      "categories": [
+        "accessibility",
+        "arrows",
+        "rays-sparkles"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "pointer-arrow-square-fill-4dc650",
+      "label": "Pointer Arrow Square Fill",
+      "categories": [
+        "arrows",
+        "squared"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "polishzlotysign-building-classical-e93615",
+      "label": "Polishzlotysign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "polishzlotysign-building-classical-fill-b29b30",
+      "label": "Polishzlotysign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "rectangle-3-group-fill-fc2f3e",
@@ -1664,6 +2833,160 @@
       ]
     },
     {
+      "iconId": "robotic-vacuum-and-arrowtriangle-up-febd81",
+      "label": "Robotic Vacuum And Arrowtriangle Up",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "home-appliances",
+        "objects-tools"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "robotic-vacuum-and-arrowtriangle-up-fill-d10e6a",
+      "label": "Robotic Vacuum And Arrowtriangle Up Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "devices",
+        "home-appliances",
+        "objects-tools"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "rublesign-building-classical-93630c",
+      "label": "Rublesign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "rublesign-building-classical-fill-94545b",
+      "label": "Rublesign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "rupeesign-building-classical-deed04",
+      "label": "Rupeesign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "rupeesign-building-classical-fill-f8fe37",
+      "label": "Rupeesign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "shekelsign-building-classical-5cd93f",
+      "label": "Shekelsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "shekelsign-building-classical-fill-158c96",
+      "label": "Shekelsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "signpost-and-arrowtriangle-up-279289",
+      "label": "Signpost And Arrowtriangle Up",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "geography",
+        "geography-mapping",
+        "objects-tools"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "signpost-and-arrowtriangle-up-circle-2868e0",
+      "label": "Signpost And Arrowtriangle Up Circle",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "geography",
+        "geography-mapping",
+        "objects-tools",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "signpost-and-arrowtriangle-up-circle-fill-c746d4",
+      "label": "Signpost And Arrowtriangle Up Circle Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "geography",
+        "geography-mapping",
+        "objects-tools",
+        "circled"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "signpost-and-arrowtriangle-up-fill-72ffbc",
+      "label": "Signpost And Arrowtriangle Up Fill",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "geography",
+        "geography-mapping",
+        "objects-tools"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "singaporedollarsign-building-classical-adbbe0",
+      "label": "Singaporedollarsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "singaporedollarsign-building-classical-fill-f2d8e1",
+      "label": "Singaporedollarsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "slider-horizontal-2-square-badge-arrow-down-24e0ef",
       "label": "Slider Horizontal 2 Square Badge Arrow Down",
       "categories": [
@@ -1938,8 +3261,10 @@
       "iconId": "square-arrowtriangle-4-outward-85eb81",
       "label": "Square Arrowtriangle 4 Outward",
       "categories": [
-        "arrows"
-      ]
+        "arrows",
+        "arrows-triangle"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "square-badge-plus-c9c26d",
@@ -2193,11 +3518,108 @@
       ]
     },
     {
+      "iconId": "sterlingsign-building-classical-263f99",
+      "label": "Sterlingsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "sterlingsign-building-classical-fill-0144c4",
+      "label": "Sterlingsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "swedishkronasign-building-classical-fbe359",
+      "label": "Swedishkronasign Building Classical",
+      "categories": [
+        "commerce",
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "swedishkronasign-building-classical-fill-aa667b",
+      "label": "Swedishkronasign Building Classical Fill",
+      "categories": [
+        "commerce",
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "tengesign-building-classical-4f1637",
+      "label": "Tengesign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "tengesign-building-classical-fill-673f71",
+      "label": "Tengesign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "text-line-first-and-arrowtriangle-forward-721b27",
+      "label": "Text Line First And Arrowtriangle Forward",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "documents",
+        "interface",
+        "media"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "text-line-last-and-arrowtriangle-forward-44d3ac",
+      "label": "Text Line Last And Arrowtriangle Forward",
+      "categories": [
+        "arrows",
+        "arrows-triangle",
+        "documents",
+        "interface",
+        "media"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "text-square-filled-645a87",
       "label": "Text Square Filled",
       "categories": [
         "documents"
       ]
+    },
+    {
+      "iconId": "textformat-characters-arrow-left-and-right-a0df6b",
+      "label": "Textformat Characters Arrow Left And Right",
+      "categories": [
+        "arrows",
+        "arrows-triangle-arrow",
+        "editing",
+        "text-formatting"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "tortoise-2d0124",
@@ -2252,6 +3674,46 @@
       ]
     },
     {
+      "iconId": "tugriksign-building-classical-f886c7",
+      "label": "Tugriksign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "tugriksign-building-classical-fill-baca24",
+      "label": "Tugriksign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "turkishlirasign-building-classical-4fe96f",
+      "label": "Turkishlirasign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "turkishlirasign-building-classical-fill-b41f79",
+      "label": "Turkishlirasign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "university-campus-building-house-business-svgrepo-com-1a9cb7",
       "label": "University Campus Building House Business",
       "categories": [
@@ -2294,6 +3756,26 @@
       ]
     },
     {
+      "iconId": "wonsign-building-classical-68c89c",
+      "label": "Wonsign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "wonsign-building-classical-fill-28d450",
+      "label": "Wonsign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "xmark-triangle-circle-square-5e0108",
       "label": "Xmark Triangle Circle Square",
       "categories": [
@@ -2308,6 +3790,26 @@
         "shapes",
         "status"
       ]
+    },
+    {
+      "iconId": "yensign-building-classical-29dc9c",
+      "label": "Yensign Building Classical",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "yensign-building-classical-fill-68330a",
+      "label": "Yensign Building Classical Fill",
+      "categories": [
+        "geography",
+        "objects-tools",
+        "building"
+      ],
+      "exactCategories": true
     }
   ]
 }

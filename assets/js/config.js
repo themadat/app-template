@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.41",
-      buildId: "0.0.1.41",
+      version: "0.0.1.42",
+      buildId: "0.0.1.42",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.42",
+        date: "2026-09-04T16:27:38.000Z",
+        title: "Persist exact icon overrides",
+        summary: "The latest exported category edits now remain exact across every future catalog rebuild.",
+        features: ["Exact category replacement for compiler-consumed permanent override entries"],
+        improvements: ["All 150 supplied icon IDs are stored in the 409-entry permanent override set", "Source provenance remains intact even when an exported edit intentionally removes a source category"],
+        fixes: ["Compiler inference no longer restores child or source groups removed by an exact exported override"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.41",
         date: "2026-09-04T16:17:00.000Z",
