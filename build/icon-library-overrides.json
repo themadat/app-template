@@ -311,7 +311,8 @@
       "categories": [
         "health",
         "nature",
-        "animals-plants"
+        "animals-plants",
+        "layered-stacked"
       ]
     },
     {
@@ -320,7 +321,8 @@
       "categories": [
         "health",
         "nature",
-        "animals-plants"
+        "animals-plants",
+        "layered-stacked"
       ]
     },
     {
@@ -986,14 +988,16 @@
       "iconId": "circle-dashed-rectangle-52d2b1",
       "label": "Circle Dashed Rectangle",
       "categories": [
-        "editing"
+        "editing",
+        "dashed-dotted"
       ]
     },
     {
       "iconId": "circle-dotted-circle-f63f6d",
       "label": "Circle Dotted Circle",
       "categories": [
-        "circled"
+        "circled",
+        "dashed-dotted"
       ]
     },
     {
@@ -1908,7 +1912,8 @@
       "label": "Lock Square Stack",
       "categories": [
         "security",
-        "objects-tools"
+        "objects-tools",
+        "layered-stacked"
       ]
     },
     {
@@ -1916,7 +1921,8 @@
       "label": "Lock Square Stack Fill",
       "categories": [
         "security",
-        "objects-tools"
+        "objects-tools",
+        "layered-stacked"
       ]
     },
     {
@@ -2049,6 +2055,7 @@
         "arrows",
         "arrows-triangle",
         "devices",
+        "layered-stacked",
         "objects-tools",
         "status"
       ],
@@ -2061,6 +2068,7 @@
         "arrows",
         "arrows-triangle",
         "devices",
+        "layered-stacked",
         "objects-tools",
         "status"
       ],
@@ -2073,6 +2081,7 @@
         "arrows",
         "arrows-triangle",
         "devices",
+        "layered-stacked",
         "objects-tools",
         "status"
       ],
@@ -2085,6 +2094,7 @@
         "arrows",
         "arrows-triangle",
         "devices",
+        "layered-stacked",
         "objects-tools",
         "status"
       ],
@@ -2097,6 +2107,7 @@
         "arrows",
         "arrows-triangle",
         "devices",
+        "layered-stacked",
         "objects-tools",
         "status"
       ],
@@ -2109,6 +2120,7 @@
         "arrows",
         "arrows-triangle",
         "devices",
+        "layered-stacked",
         "objects-tools",
         "status"
       ],
@@ -2318,14 +2330,16 @@
       "iconId": "play-square-stack-162148",
       "label": "Play Square Stack",
       "categories": [
-        "media"
+        "media",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "play-square-stack-fill-9f6226",
       "label": "Play Square Stack Fill",
       "categories": [
-        "media"
+        "media",
+        "layered-stacked"
       ]
     },
     {
@@ -2347,7 +2361,8 @@
       "label": "Pointer Arrow And Square On Square Dashed",
       "categories": [
         "accessibility",
-        "arrows"
+        "arrows",
+        "dashed-dotted"
       ],
       "exactCategories": true
     },
@@ -2389,6 +2404,7 @@
       "categories": [
         "accessibility",
         "arrows",
+        "dashed-dotted",
         "devices"
       ],
       "exactCategories": true
@@ -2578,7 +2594,8 @@
         "media",
         "badged",
         "badged-record",
-        "status"
+        "status",
+        "dashed-dotted"
       ]
     },
     {
@@ -2753,7 +2770,8 @@
       "categories": [
         "badged",
         "badged-minus",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -2764,7 +2782,8 @@
         "people",
         "badged",
         "badged-person",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -2775,7 +2794,8 @@
         "people",
         "badged",
         "badged-person",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -2785,7 +2805,8 @@
         "media",
         "badged",
         "badged-play",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -2795,7 +2816,8 @@
         "media",
         "badged",
         "badged-play",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -2804,14 +2826,16 @@
       "categories": [
         "badged",
         "badged-plus",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "rectangle-stack-efdc04",
       "label": "Rectangle Stack",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
@@ -2820,7 +2844,8 @@
       "categories": [
         "badged",
         "badged-minus",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -2829,7 +2854,8 @@
       "categories": [
         "badged",
         "badged-plus",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -3029,49 +3055,56 @@
       "iconId": "square-3-layers-3-d-48b0b1",
       "label": "Square 3 Layers 3 D",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "square-3-layers-3-d-bottom-filled-9f9e69",
       "label": "Square 3 Layers 3 D Bottom Filled",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "square-3-layers-3-d-middle-filled-532a8f",
       "label": "Square 3 Layers 3 D Middle Filled",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "square-3-layers-3-d-top-filled-414dfd",
       "label": "Square 3 Layers 3 D Top Filled",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "square-3-layers-3d-bottom-filled-fb6352",
       "label": "Square 3 Layers 3d Bottom Filled",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "square-3-layers-3d-middle-filled-b6d6d1",
       "label": "Square 3 Layers 3d Middle Filled",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
       "iconId": "square-3-layers-3d-top-filled-9e19b3",
       "label": "Square 3 Layers 3d Top Filled",
       "categories": [
-        "interface"
+        "interface",
+        "layered-stacked"
       ]
     },
     {
@@ -3483,7 +3516,8 @@
       "categories": [
         "badged",
         "badged-automatic",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -3492,7 +3526,8 @@
       "categories": [
         "badged",
         "badged-automatic",
-        "status"
+        "status",
+        "layered-stacked"
       ]
     },
     {
@@ -3503,7 +3538,8 @@
         "badged-exclamationmark",
         "badged-exclamationmark-triangle",
         "badged-shapes",
-        "badged-shapes-triangle"
+        "badged-shapes-triangle",
+        "layered-stacked"
       ]
     },
     {
@@ -3514,7 +3550,8 @@
         "badged-exclamationmark",
         "badged-exclamationmark-triangle",
         "badged-shapes",
-        "badged-shapes-triangle"
+        "badged-shapes-triangle",
+        "layered-stacked"
       ]
     },
     {

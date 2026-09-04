@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.47",
-      buildId: "0.0.1.47",
+      version: "0.0.1.48",
+      buildId: "0.0.1.48",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.48",
+        date: "2026-09-04T21:32:50.000Z",
+        title: "Add dashed and layered filters",
+        summary: "How it looks now includes focused filters for dashed or dotted artwork and layered or stacked compositions.",
+        features: ["Dashed & Dotted with 142 matching icons", "Layered & Stacked with 88 matching icons"],
+        improvements: ["Conservative explicit-name matching avoids unrelated dot and multiple-item symbols", "Existing metadata overrides retain the new appearance memberships"],
+        fixes: [],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.47",
         date: "2026-09-04T21:17:00.000Z",

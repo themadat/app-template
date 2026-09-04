@@ -226,6 +226,8 @@ const ICON_CATEGORIES = [
   { id: "badged-xmark", label: "Xmark", parent: "badged", terms: ["xmark"] },
   { id: "squared", label: "Squared", section: "appearance", terms: ["square"] },
   { id: "circled", label: "Circled", section: "appearance", terms: ["circle"] },
+  { id: "dashed-dotted", label: "Dashed & Dotted", section: "appearance", terms: ["dashed", "dotted"] },
+  { id: "layered-stacked", label: "Layered & Stacked", section: "appearance", terms: ["layer", "layers", "layered", "stack", "stacked"] },
   { id: "slashed", label: "Slashed", section: "appearance", terms: ["slash", "slashed"] },
   { id: "status", label: "Status", terms: ["check", "checkmark", "xmark", "close", "exclamation", "exclamationmark", "warning", "warninglight", "hazardsign", "info", "question", "questionmark", "error", "success", "badge", "medal", "progress indicator", "purchased"] },
   { id: "time", label: "Time", terms: ["clock", "calendar", "timer", "hourglass", "alarm", "date"] },

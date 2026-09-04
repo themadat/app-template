@@ -18,6 +18,8 @@ The application is a static page with ordered scripts and no module loader:
 
 `build/compile-icon-library.mjs` is a dependency-free development tool rather than a runtime requirement. By default it discovers every non-hidden sibling application directory and only the configured Objects & Tools, `norway:sweden`, and `indicies` children beneath the excluded `!backups:data` parent. It captures complete SVG template literals and standalone SVG files, sanitizes the markup, classifies SF Symbols versus Custom artwork, hashes normalized artwork, merges aliases/source references, coalesces repeated SF Symbol names, skips generated bundles and corrupted derived outputs, normalizes SF Symbol paint to currentColor, removes the `Svgrepo Com` display-label suffix, assigns multiple categories where appropriate, expands semantic search tags, and rewrites the single generated catalog file. Categories expose a `meaning` or `appearance` section. Geography owns Countries, Regions, Mapping, and Places; source-aware and metadata rules separate country outlines, regional/administrative areas and world views, map/navigation tools, and physical destinations. Other source-aware rules place Text Formatting, Connectivity, game artwork, indices, and Norway/Sweden currency symbols into their focused source categories and applicable existing semantic categories. Legacy Locations, Maps, and Maps & Travel category IDs normalize during compilation and state loading. Badged remains a collapsible appearance tree with 39 primary choices—including plain Badge—plus nested Shapes and Exclamation Mark variants. Stable icon IDs let the compiler apply validated display-name, type, category, and optional filter-source changes from `build/icon-library-overrides.json` after deduplication. The UI renders 500 matching cards at a time so the large catalog remains responsive.
 
+Dashed & Dotted and Layered & Stacked use explicit dashed/dotted and layer/stack name tokens so visually unrelated dot and multiple-item symbols remain excluded. Existing permanent overrides that match those objective patterns include the corresponding appearance membership.
+
 All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
 
 ## State model
@@ -28,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.47",
-    "buildId": "0.0.1.47",
+    "appVersion": "0.0.1.48",
+    "buildId": "0.0.1.48",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
