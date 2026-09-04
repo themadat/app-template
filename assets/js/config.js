@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.45",
-      buildId: "0.0.1.45",
+      version: "0.0.1.46",
+      buildId: "0.0.1.46",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.46",
+        date: "2026-09-04T18:14:26.000Z",
+        title: "Balance favicon center bars",
+        summary: "The favicon’s center horizontal and vertical bars now carry the same weight as its diagonal X.",
+        features: [],
+        improvements: ["Center cross and X share the 2.75-unit full-opacity stroke", "Outer grid guides retain their lighter 1.5-unit treatment"],
+        fixes: ["The favicon center no longer looks weaker than its diagonals"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.45",
         date: "2026-09-04T17:55:13.000Z",

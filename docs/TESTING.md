@@ -68,6 +68,6 @@
 - [ ] First online visit caches every `SHELL` entry, including the generated icon catalog, and a later offline reload supports icon search/copy, Notes, the Settings Roadmap, and Settings.
 - [ ] An online refresh revalidates and displays current HTML, CSS, and JavaScript instead of preferring stale cache entries.
 - [ ] A waiting service worker shows a bottom New version available toast; its arrow-only Force refresh action and contextual R shortcut activate it and reload the browser tab or installed PWA, while X closes the notice. R/X also work with Shift–Control–Option, display shortcut hints, and stay inactive when a dialog owns focus.
-- [ ] The Safari favicon uses a fully opaque `#8E8E93` background with visible neon-blue geometry, an X, two circles, every other grid line, no square outlines, and no inset outline; manifest, touch icon, install icon, and splash assets resolve.
+- [ ] The Safari favicon uses a fully opaque `#8E8E93` background with visible neon-blue geometry, an X, two circles, every other grid line, no square outlines, and no inset outline; its center cross matches the X thickness while the outer grid guides remain lighter; manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.
