@@ -26,6 +26,9 @@
   const ICON_PAGE_SIZE = 500;
   const ICON_FILTER_MIN_WIDTH = 156;
   const ICON_FILTER_MAX_WIDTH = 360;
+  const ICON_WEIGHTS = Object.freeze(["light", "medium", "bold"]);
+  const ICON_WEIGHT_EROSION = Object.freeze({ light: 0.45, medium: 0.25 });
+  const weightedIconSvgCache = new Map();
   let versionView = "released";
   let hintModifierActive = false;
   let appIconHoldTimer = 0;
@@ -325,6 +328,33 @@
     return iconCategoryById.has(category) ? category : "all";
   }
 
+  function selectedIconWeight() {
+    const weight = state().modules.iconLibrary.weight;
+    return ICON_WEIGHTS.includes(weight) ? weight : "bold";
+  }
+
+  function iconSvgAtSelectedWeight(icon) {
+    const weight = selectedIconWeight();
+    if (!icon || icon.kind !== "sf-symbol" || weight === "bold") return icon ? icon.svg : "";
+    const cacheKey = weight + "\u0000" + icon.id + "\u0000" + icon.svg;
+    if (weightedIconSvgCache.has(cacheKey)) return weightedIconSvgCache.get(cacheKey);
+    const filterId = "icon-weight-" + weight + "-" + String(icon.id || "symbol").replace(/[^a-z0-9_-]/gi, "-");
+    const filter = '<defs><filter id="' + filterId + '" x="-20%" y="-20%" width="140%" height="140%"><feMorphology in="SourceGraphic" operator="erode" radius="' + ICON_WEIGHT_EROSION[weight] + '"/></filter></defs>';
+    const weighted = String(icon.svg || "").replace(/^(\s*<svg\b[^>]*>)/i, function (openingTag) {
+      return openingTag + filter + '<g data-icon-weight="' + weight + '" filter="url(#' + filterId + ')">';
+    }).replace(/<\/svg>\s*$/i, "</g></svg>");
+    weightedIconSvgCache.set(cacheKey, weighted);
+    return weighted;
+  }
+
+  function renderIconWeightControl() {
+    const control = $("#iconWeightControl");
+    if (!control) return;
+    const weight = selectedIconWeight();
+    control.dataset.selectedWeight = weight;
+    $$("[data-icon-weight]", control).forEach(function (input) { input.checked = input.value === weight; });
+  }
+
   function iconCategoryChildren(categoryId) {
     return iconCategories.filter(function (category) { return category.parent === categoryId; });
   }
@@ -429,7 +459,8 @@
     const typeText = iconKindLabel(icon.kind);
     const label = u.escapeHtml(icon.label);
     const id = u.escapeHtml(icon.id);
-    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + icon.svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
+    const svg = iconSvgAtSelectedWeight(icon);
+    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
   function iconOverrideFor(iconId) {
@@ -453,7 +484,7 @@
     $("#iconInfoSource").textContent = icon.source ? repositoryLabel(icon.source) + " (selected)" : icon.repositories.map(repositoryLabel).join(", ");
     $("#iconInfoCategories").textContent = (icon.categories || []).map(function (categoryId) { return iconCategoryById.get(categoryId)?.label || categoryId; }).join(", ") || "No groups";
     $("#iconInfoTags").textContent = (icon.tags || []).join(", ") || "No additional tags";
-    $("#iconInfoPreview").innerHTML = icon.svg;
+    $("#iconInfoPreview").innerHTML = iconSvgAtSelectedWeight(icon);
     $("#iconInfoSourceCount").textContent = sources.length + (sources.length === 1 ? " source" : " sources");
     $("#iconInfoSources").innerHTML = sources.length ? sources.map(function (source) {
       const file = String(source.file || "");
@@ -510,7 +541,7 @@
     if (!icon) return false;
     $("#iconEditForm").dataset.iconId = icon.id;
     $("#iconEditDialogTitle").textContent = "Edit " + icon.label;
-    $("#iconEditPreview").innerHTML = icon.svg;
+    $("#iconEditPreview").innerHTML = iconSvgAtSelectedWeight(icon);
     $("#iconEditType").value = icon.kind;
     $("#iconEditLabel").value = icon.label;
     const sourceSelect = $("#iconEditSource");
@@ -810,6 +841,7 @@
     const grid = $("#iconLibraryGrid");
     if (!grid) return;
     applyIconFilterWidth(state().modules.iconLibrary.sidebarWidth);
+    renderIconWeightControl();
     const sources = App.iconLibrary && App.iconLibrary.sourceRepositories || [];
     const sourceSelect = $("#iconSourceFilter");
     if (sourceSelect.options.length !== sources.length + 1) {
@@ -862,7 +894,7 @@
     if (!icon || button.disabled) return;
     button.disabled = true;
     try {
-      await writeClipboard(icon.svg);
+      await writeClipboard(iconSvgAtSelectedWeight(icon));
       $$('[data-copied="true"]').forEach(function (element) {
         delete element.dataset.copied;
         const copyText = element.querySelector("[data-icon-copy-text]");
@@ -1571,6 +1603,12 @@
     $("#iconKindFilter").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.iconLibrary.kind = event.target.value; }, { reason: "icon-kind" });
       iconVisibleCount = ICON_PAGE_SIZE;
+      renderIconLibrary();
+    });
+    $("#iconWeightControl").addEventListener("change", function (event) {
+      const input = event.target.closest("[data-icon-weight]");
+      if (!input || !ICON_WEIGHTS.includes(input.value)) return;
+      storage.mutate(function (next) { next.modules.iconLibrary.weight = input.value; }, { reason: "icon-weight" });
       renderIconLibrary();
     });
     $("#iconClearSearch").addEventListener("click", function () {

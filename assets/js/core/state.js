@@ -138,7 +138,7 @@
         supportTab: "settings"
       },
       modules: {
-        iconLibrary: { category: "all", kind: "all", source: "all", sidebarWidth: 204, minimumLabelLength: 0, collapsedCategories: ["badged"], overrides: [] },
+        iconLibrary: { category: "all", kind: "all", source: "all", weight: "bold", sidebarWidth: 204, minimumLabelLength: 0, collapsedCategories: ["badged"], overrides: [] },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
         roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
@@ -486,6 +486,7 @@
           })(),
           kind: ["all", "sf-symbol", "custom"].includes(sourceIconLibrary.kind) ? sourceIconLibrary.kind : "all",
           source: u.cleanLine(sourceIconLibrary.source || "all", 80) || "all",
+          weight: ["light", "medium", "bold"].includes(sourceIconLibrary.weight) ? sourceIconLibrary.weight : "bold",
           sidebarWidth: u.clamp(sourceIconLibrary.sidebarWidth, 156, 360, base.modules.iconLibrary.sidebarWidth),
           minimumLabelLength: Math.round(u.clamp(sourceIconLibrary.minimumLabelLength, 0, 120, 0)),
           collapsedCategories: Array.from(new Set((Array.isArray(sourceIconLibrary.collapsedCategories) ? sourceIconLibrary.collapsedCategories : base.modules.iconLibrary.collapsedCategories).map(normalizeIconCategoryId).filter(function (categoryId) { return ICON_CATEGORY_PARENT_IDS.has(categoryId); }))).slice(0, 100),
