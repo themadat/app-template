@@ -28,8 +28,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.46",
-    "buildId": "0.0.1.46",
+    "appVersion": "0.0.1.47",
+    "buildId": "0.0.1.47",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -99,7 +99,7 @@ Merging chooses the newer note for each stable id, honors newer deletion tombsto
 
 ## Accessibility and responsive behavior
 
-The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. The icon catalog is an announced list of native copy buttons; its sticky vertical filter rail labels separate What it is and How it looks groups, using native pressed buttons, nested groups, collapse buttons, and a native radio group for persistent Light/Medium/Bold SF Symbol weight. Medium and Light output use self-contained SVG morphology filters, while Bold preserves the compiled SVG and custom icons remain unchanged. The resizable divider is an operable ARIA separator, and search results can move focus to the corresponding card. Collapse controls expose `aria-expanded`/`aria-controls`; collapsing a branch with the selected descendant moves selection to the visible parent. Icon details labels and validates its direct Name/Type fields; the complete metadata editor labels every group checkbox and source selector, manages recursive parent/subgroup membership, and uses a custom confirmation before resetting an icon. Copy and save results use live toast messaging. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
+The shell uses landmarks, native buttons and inputs, native dialogs, tabs, status regions, and explicit ARIA state. The icon catalog is an announced list of native copy buttons; its sticky vertical filter rail labels separate What it is and How it looks groups, using native pressed buttons, nested groups, collapse buttons, and a native radio group for persistent Light/Medium/Bold SF Symbol weight. How it looks roots and descendants are sorted alphabetically at render time in both the filter rail and metadata editor, while the semantic taxonomy retains its curated order. Medium and Light output use self-contained SVG morphology filters, while Bold preserves the compiled SVG and custom icons remain unchanged. The resizable divider is an operable ARIA separator, and search results can move focus to the corresponding card. Collapse controls expose `aria-expanded`/`aria-controls`; collapsing a branch with the selected descendant moves selection to the visible parent. Icon details labels and validates its direct Name/Type fields; the complete metadata editor labels every group checkbox and source selector, manages recursive parent/subgroup membership, and uses a custom confirmation before resetting an icon. Copy and save results use live toast messaging. Opening a dialog moves focus; closing restores the trigger. Escape closes temporary UI. All primary actions have keyboard and touch equivalents.
 
 Notes uses one spacious modal on desktop and a full-screen editor on mobile. Settings also becomes a full-screen dialog with one scrolling content surface. Safe-area variables, 16px mobile form controls, reduced motion, and horizontal overflow protection are built into the shared stylesheet.
 

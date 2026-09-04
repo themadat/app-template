@@ -18,7 +18,6 @@
     Object.freeze({ id: "meaning", label: "What it is" }),
     Object.freeze({ id: "appearance", label: "How it looks" })
   ]);
-  const ICON_APPEARANCE_ORDER = Object.freeze(["badged", "building", "arrows", "circled", "squared", "slashed", "shapes", "rays-sparkles"]);
   const sourceIconById = new Map(sourceIconCatalog.map(function (icon) { return [icon.id, icon]; }));
   let iconCatalog = sourceIconCatalog;
   let iconById = new Map(iconCatalog.map(function (icon) { return [icon.id, icon]; }));
@@ -46,11 +45,7 @@
   function categoryRootsForSection(roots, sectionId) {
     const matches = roots.filter(function (category) { return (category.section || "meaning") === sectionId; });
     if (sectionId !== "appearance") return matches;
-    return matches.sort(function (a, b) {
-      const aIndex = ICON_APPEARANCE_ORDER.indexOf(a.id);
-      const bIndex = ICON_APPEARANCE_ORDER.indexOf(b.id);
-      return (aIndex < 0 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex < 0 ? Number.MAX_SAFE_INTEGER : bIndex);
-    });
+    return matches.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }); });
   }
 
   const SHORTCUTS = [
@@ -427,13 +422,14 @@
       return { id: category.id, label: category.label, parent: category.parent || "", section: category.section || "meaning", count: counts.get(category.id) || 0 };
     });
 
-    function categoryTree(choice, depth) {
+    function categoryTree(choice, depth, alphabetize) {
       const children = choices.filter(function (candidate) { return candidate.parent === choice.id; });
+      if (alphabetize) children.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }); });
       const isCollapsed = children.length > 0 && collapsed.has(choice.id);
       const childrenId = "icon-category-children-" + choice.id;
       const toggle = children.length ? '<button class="icon-category-collapse" type="button" data-icon-category-collapse="' + u.escapeHtml(choice.id) + '" aria-expanded="' + String(!isCollapsed) + '" aria-controls="' + u.escapeHtml(childrenId) + '" aria-label="' + u.escapeHtml((isCollapsed ? "Expand " : "Collapse ") + choice.label + " subcategories") + '" title="' + u.escapeHtml(isCollapsed ? "Expand" : "Collapse") + '"><span aria-hidden="true" data-symbol="' + (isCollapsed ? "chevronRight" : "chevronDown") + '"></span></button>' : "";
       const branch = categoryBranch(choice, depth > 0, toggle);
-      const childMarkup = children.length ? '<div id="' + u.escapeHtml(childrenId) + '" class="icon-category-subcategories" role="group" aria-label="' + u.escapeHtml(choice.label + " subcategories") + '"' + (isCollapsed ? " hidden" : "") + '>' + children.map(function (child) { return categoryTree(child, depth + 1); }).join("") + '</div>' : "";
+      const childMarkup = children.length ? '<div id="' + u.escapeHtml(childrenId) + '" class="icon-category-subcategories" role="group" aria-label="' + u.escapeHtml(choice.label + " subcategories") + '"' + (isCollapsed ? " hidden" : "") + '>' + children.map(function (child) { return categoryTree(child, depth + 1, alphabetize); }).join("") + '</div>' : "";
       return '<div class="icon-category-group" data-icon-category-depth="' + depth + '">' + branch + childMarkup + '</div>';
     }
 
@@ -443,7 +439,7 @@
       const sectionChoices = categoryRootsForSection(rootChoices, section.id);
       if (!sectionChoices.length) return "";
       const headingId = "icon-category-section-" + section.id;
-      return '<section class="icon-category-section" aria-labelledby="' + headingId + '"><h3 id="' + headingId + '" class="icon-category-section-title">' + u.escapeHtml(section.label) + '</h3><div class="icon-category-section-groups">' + sectionChoices.map(function (choice) { return categoryTree(choice, 0); }).join("") + '</div></section>';
+      return '<section class="icon-category-section" aria-labelledby="' + headingId + '"><h3 id="' + headingId + '" class="icon-category-section-title">' + u.escapeHtml(section.label) + '</h3><div class="icon-category-section-groups">' + sectionChoices.map(function (choice) { return categoryTree(choice, 0, section.id === "appearance"); }).join("") + '</div></section>';
     }).join("");
     container.innerHTML = '<div class="icon-category-all">' + categoryBranch({ id: "all", label: "All", parent: "", count: baseMatches.length }, false, "") + '</div>' + (otherChoice ? '<div class="icon-category-other">' + categoryBranch(otherChoice, false, "") + '</div>' : "") + sections;
     icons.mount(container);
@@ -514,15 +510,16 @@
 
   function renderIconEditGroups(icon) {
     const selected = new Set(icon.categories || []);
-    function categoryTree(category) {
+    function categoryTree(category, alphabetize) {
       const children = iconCategoryChildren(category.id);
-      return '<div class="icon-edit-group-cluster" data-icon-edit-group="' + u.escapeHtml(category.id) + '">' + iconEditChoice(category, selected) + (children.length ? '<div class="icon-edit-subgroups" role="group" aria-label="' + u.escapeHtml(category.label + " subgroups") + '">' + children.map(categoryTree).join("") + '</div>' : "") + '</div>';
+      if (alphabetize) children.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }); });
+      return '<div class="icon-edit-group-cluster" data-icon-edit-group="' + u.escapeHtml(category.id) + '">' + iconEditChoice(category, selected) + (children.length ? '<div class="icon-edit-subgroups" role="group" aria-label="' + u.escapeHtml(category.label + " subgroups") + '">' + children.map(function (child) { return categoryTree(child, alphabetize); }).join("") + '</div>' : "") + '</div>';
     }
     const roots = iconCategories.filter(function (category) { return !category.parent; });
     $("#iconEditGroups").innerHTML = ICON_CATEGORY_SECTIONS.map(function (section) {
       const categories = categoryRootsForSection(roots, section.id);
       if (!categories.length) return "";
-      return '<section class="icon-edit-category-section" aria-label="' + u.escapeHtml(section.label) + '"><h4 class="icon-edit-category-section-title">' + u.escapeHtml(section.label) + '</h4>' + categories.map(categoryTree).join("") + '</section>';
+      return '<section class="icon-edit-category-section" aria-label="' + u.escapeHtml(section.label) + '"><h4 class="icon-edit-category-section-title">' + u.escapeHtml(section.label) + '</h4>' + categories.map(function (category) { return categoryTree(category, section.id === "appearance"); }).join("") + '</section>';
     }).join("");
     updateIconEditControls();
   }
