@@ -9786,10 +9786,7 @@
       repositories: ["app-template"],
       sources: [{"repo":"app-template","file":"assets/icons/App Icon Template Dark.svg","symbol":"App Icon Template Dark"},{"repo":"app-template","file":"assets/icons/app-icon-dark.svg","symbol":"app-icon-dark"}],
       svg: `<svg width="1026" height="1026" viewBox="0 0 1026 1026" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-<style>
-path { stroke-width: 24; }
-path:nth-of-type(-n+14) { opacity: .46; stroke-width: 10; }
-</style>
+<style>path { opacity: 1; stroke-width: 24; }</style>
 <rect width="1024" height="1024" transform="translate(0.53033 0.530334)" fill="black" style="fill:black;fill-opacity:1;"/>
 <path d="M1024.53 896.53H0.53033" stroke="#5DB3F9" style="stroke:#5DB3F9;stroke:color(display-p3 0.3647 0.7020 0.9765);stroke-opacity:1;" stroke-width="1.5" stroke-miterlimit="10"/>
 <path d="M1024.53 768.53H0.53033" stroke="#5DB3F9" style="stroke:#5DB3F9;stroke:color(display-p3 0.3647 0.7020 0.9765);stroke-opacity:1;" stroke-width="1.5" stroke-miterlimit="10"/>
@@ -9866,10 +9863,7 @@ path:nth-of-type(-n+14) { opacity: .46; stroke-width: 10; }
       repositories: ["app-template"],
       sources: [{"repo":"app-template","file":"assets/icons/App Icon Template Light.svg","symbol":"App Icon Template Light"},{"repo":"app-template","file":"assets/icons/app-icon-light.svg","symbol":"app-icon-light"}],
       svg: `<svg width="1026" height="1026" viewBox="0 0 1026 1026" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-<style>
-path { stroke-width: 24; }
-path:nth-of-type(-n+14) { opacity: .46; stroke-width: 10; }
-</style>
+<style>path { opacity: 1; stroke-width: 24; }</style>
 <rect width="1024" height="1024" transform="translate(0.53033 0.530334)" fill="white" style="fill:white;fill-opacity:1;"/>
 <path d="M1024.53 896.53H0.53033" stroke="#5DB3F9" style="stroke:#5DB3F9;stroke:color(display-p3 0.3647 0.7020 0.9765);stroke-opacity:1;" stroke-width="1.5" stroke-miterlimit="10"/>
 <path d="M1024.53 768.53H0.53033" stroke="#5DB3F9" style="stroke:#5DB3F9;stroke:color(display-p3 0.3647 0.7020 0.9765);stroke-opacity:1;" stroke-width="1.5" stroke-miterlimit="10"/>

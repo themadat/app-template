@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.44",
-      buildId: "0.0.1.44",
+      version: "0.0.1.45",
+      buildId: "0.0.1.45",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.45",
+        date: "2026-09-04T17:55:13.000Z",
+        title: "Unify app icon strokes",
+        summary: "Every construction path in the light and dark app icons now renders at the same width and opacity.",
+        features: [],
+        improvements: ["Grid, diagonals, and concentric circles all use a 24-unit stroke at full opacity", "The construction grid remains clearly visible in the 42px top-bar icon"],
+        fixes: ["Removed the grid-only rule that reduced its paths to a faint sub-pixel treatment"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.44",
         date: "2026-09-04T17:40:43.000Z",

@@ -10,7 +10,7 @@ This repository is a focused SVG icon-library application. It includes the reusa
 
 On desktop, category navigation is vertically compact and category labels remain on one truncated line until the user widens the resizable rail. Mobile keeps larger horizontally scrolling category targets.
 
-The app-identity SVGs keep the X and three concentric circles prominent over a quieter construction grid at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines.
+The app-identity SVGs give the grid, X, and three concentric circles the same 24-unit stroke width and full opacity so every path remains visible at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines.
 
 ## Workflows
 
