@@ -13,8 +13,10 @@ const overrideFile = path.join(projectRoot, "build/icon-library-overrides.json")
 const requestedRoots = process.argv.slice(2);
 const seedFile = process.env.APP_TEMPLATE_ICON_SEED || outputFile;
 const NATIVE_WEIGHT_SOURCE_BY_FOLDER = new Map([
+  ["All 1 Ultrathin", { name: "all-1-ultrathin", weight: "ultralight" }],
   ["All 3 Light", { name: "all-3-light", weight: "light" }],
-  ["All 5 Medium", { name: "all-5-medium", weight: "medium" }]
+  ["All 5 Medium", { name: "all-5-medium", weight: "medium" }],
+  ["All 9 Black", { name: "all-9-black", weight: "black" }]
 ]);
 const NATIVE_WEIGHT_BY_SOURCE_NAME = new Map(Array.from(NATIVE_WEIGHT_SOURCE_BY_FOLDER.values()).map(function (source) { return [source.name, source.weight]; }));
 
@@ -58,8 +60,10 @@ function discoverDefaultSources() {
     { name: "norway-sweden", folder: "norway:sweden" },
     { name: "indices", folder: "indicies" },
     { name: "Rest", folder: "Rest" },
+    { name: "all-1-ultrathin", folder: "All 1 Ultrathin", weight: "ultralight" },
     { name: "all-3-light", folder: "All 3 Light", weight: "light" },
-    { name: "all-5-medium", folder: "All 5 Medium", weight: "medium" }
+    { name: "all-5-medium", folder: "All 5 Medium", weight: "medium" },
+    { name: "all-9-black", folder: "All 9 Black", weight: "black" }
   ].forEach(function (source) {
     const root = path.join(sourceParent, "!backups:data", "icons", "app-input", source.folder);
     if (fs.existsSync(root)) discovered.push({ name: source.name, root: root, weight: source.weight || "" });
