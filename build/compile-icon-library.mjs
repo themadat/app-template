@@ -13,6 +13,7 @@ const overrideFile = path.join(projectRoot, "build/icon-library-overrides.json")
 const requestedRoots = process.argv.slice(2);
 const seedFile = process.env.APP_TEMPLATE_ICON_SEED || outputFile;
 const NATIVE_WEIGHT_SOURCE_BY_FOLDER = new Map([
+  ["All 1 Ultralight", { name: "all-1-ultrathin", weight: "ultralight" }],
   ["All 1 Ultrathin", { name: "all-1-ultrathin", weight: "ultralight" }],
   ["All 3 Light", { name: "all-3-light", weight: "light" }],
   ["All 5 Medium", { name: "all-5-medium", weight: "medium" }],
@@ -20,6 +21,59 @@ const NATIVE_WEIGHT_SOURCE_BY_FOLDER = new Map([
   ["All 9 Black", { name: "all-9-black", weight: "black" }]
 ]);
 const NATIVE_WEIGHT_BY_SOURCE_NAME = new Map(Array.from(NATIVE_WEIGHT_SOURCE_BY_FOLDER.values()).map(function (source) { return [source.name, source.weight]; }));
+// App-facing names whose matching source artwork uses a newer or canonical SF Symbol name.
+const NATIVE_WEIGHT_COUNTERPART_BY_ICON_NAME = new Map([
+  ["2_h_circle", "2h_circle"],
+  ["4_a_circle", "4a_circle"],
+  ["4_h_circle", "4h_circle"],
+  ["4_l_circle", "4l_circle"],
+  ["123", "numbers"],
+  ["a_z", "textformat_characters"],
+  ["abc", "characters_uppercase"],
+  ["bake_updated_index", "oven_fill"],
+  ["battery_100_percent_circle", "battery_100percent_circle"],
+  ["building_columns_circle", "building_classical_columns_circle"],
+  ["bullet_clipboard_fill", "list_bullet_clipboard_fill"],
+  ["circle_grid_3_x3_circle", "circle_grid_3x3_circle"],
+  ["compressed_table", "rectangle_expand_diagonal"],
+  ["data_source_notes", "info_circle"],
+  ["dismiss", "xmark"],
+  ["drink_coffee", "cup_and_saucer_fill"],
+  ["drink_water", "drop_fill"],
+  ["drink_wine", "wineglass_fill"],
+  ["editor_amp_legend", "pencil"],
+  ["eye_off", "eye_slash"],
+  ["fit_view", "viewfinder"],
+  ["hide_medals", "medal_fill"],
+  ["hide_non_participants", "checkmark_seal_fill"],
+  ["hide_play", "percent"],
+  ["hide_qp", "number_sign"],
+  ["highlight_by_confederation", "inset_filled_center_rectangle"],
+  ["light_mode", "sun_max_fill"],
+  ["macwindow_and_pointer_arrow", "interface_window_and_pointer_arrow"],
+  ["music_microphone_circle", "microphone_dynamic_on_stand_circle"],
+  ["my_bar", "waterbottle_fill"],
+  ["number", "number_sign"],
+  ["number_circle", "number_sign_circle"],
+  ["rectangle_grid_1_x2_fill", "rectangle_grid_1x2_fill"],
+  ["rectangle_grid_1_x3_fill", "rectangle_grid_1x3_fill"],
+  ["rectangle_split_3_x1", "rectangle_split_3x1"],
+  ["relationship_delete", "person_2_badge_minus_fill"],
+  ["relationship_edit", "person_2_badge_gearshape_fill"],
+  ["rotate_3_d_circle", "rotate_3d_circle"],
+  ["settings", "gearshape_fill"],
+  ["square_3_layers_3_d", "square_3_layers_3d"],
+  ["square_3_layers_3_d_bottom_filled", "square_3_layers_3d_bottom_filled"],
+  ["square_3_layers_3_d_middle_filled", "square_3_layers_3d_middle_filled"],
+  ["square_3_layers_3_d_top_filled", "square_3_layers_3d_top_filled"],
+  ["square_fill_text_grid_1_x2", "square_fill_text_grid_1x2"],
+  ["square_grid_2_x2", "square_grid_2x2"],
+  ["square_grid_3_x1_below_line_grid_1_x2_fill", "square_grid_3x1_below_line_grid_1x2_fill"],
+  ["square_grid_3_x1_folder_fill_badge_plus", "square_grid_3x1_folder_fill_badge_plus"],
+  ["square_grid_4_x3_fill", "square_grid_4x3_fill"],
+  ["text_and_command_macwindow", "text_and_command_interface_window"],
+  ["view_data_json", "ellipsis_curlybraces"]
+]);
 
 function sourceForRoot(root) {
   const resolved = path.resolve(root);
@@ -61,7 +115,7 @@ function discoverDefaultSources() {
     { name: "norway-sweden", folder: "norway:sweden" },
     { name: "indices", folder: "indicies" },
     { name: "Rest", folder: "Rest" },
-    { name: "all-1-ultrathin", folder: "All 1 Ultrathin", weight: "ultralight" },
+    { name: "all-1-ultrathin", folder: "All 1 Ultralight", weight: "ultralight" },
     { name: "all-3-light", folder: "All 3 Light", weight: "light" },
     { name: "all-5-medium", folder: "All 5 Medium", weight: "medium" },
     { name: "all-7-bold", folder: "All 7 Bold", weight: "bold" },
@@ -86,7 +140,7 @@ const recordsByHash = new Map();
 const sfRecordsByName = new Map();
 const iconRecords = new Set();
 const nativeWeightVariants = [];
-const stats = { files: 0, extracted: 0, nativeWeightVariants: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
+const stats = { files: 0, extracted: 0, nativeWeightVariants: 0, nativeWeightCounterparts: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
 
 function walk(root) {
   const files = [];
@@ -917,6 +971,21 @@ nativeWeightVariants.forEach(function (variant) {
   record.weightSvgs = Object.assign({}, record.weightSvgs || {}, { [variant.weight]: variant.svg });
 });
 
+const fallbackWeights = ["ultralight", "light", "medium", "black"];
+NATIVE_WEIGHT_COUNTERPART_BY_ICON_NAME.forEach(function (sourceName, targetName) {
+  const target = recordsByKnownName.get(targetName);
+  const source = recordsByKnownName.get(sourceName);
+  if (!target || !source) return;
+  fallbackWeights.forEach(function (weight) {
+    if (!source.weightSvgs || !source.weightSvgs[weight]) return;
+    target.weightSvgs = Object.assign({}, target.weightSvgs || {}, { [weight]: source.weightSvgs[weight] });
+    source.sources.filter(function (item) { return NATIVE_WEIGHT_BY_SOURCE_NAME.get(item.repo) === weight; }).forEach(function (item) {
+      target.sources.push(item);
+    });
+    stats.nativeWeightCounterparts += 1;
+  });
+});
+
 const assignedIconIds = new Set();
 
 function stableIconId(record, preferred) {
@@ -1037,6 +1106,7 @@ process.stdout.write(JSON.stringify({
   scannedFiles: stats.files,
   extracted: stats.extracted,
   nativeWeightVariants: stats.nativeWeightVariants,
+  nativeWeightCounterparts: stats.nativeWeightCounterparts,
   templateLiterals: stats.templateLiterals,
   inlineMarkup: stats.inlineMarkup,
   standalone: stats.standalone,

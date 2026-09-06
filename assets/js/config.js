@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.55",
-      buildId: "0.0.1.55",
+      version: "0.0.1.56",
+      buildId: "0.0.1.56",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.56",
+        date: "2026-09-06T22:08:14.000Z",
+        title: "Complete native icon weights",
+        summary: "All 6,918 SF Symbol records now provide Ultra, Light, Medium, Bold, and Black output from the complete app-input weight library.",
+        features: ["Verified native-weight mappings for 50 app-facing symbol names", "Complete Ultra, Light, Medium, and Black coverage across the SF Symbol catalog"],
+        improvements: ["The compiler reads the current All 1 Ultralight folder", "Mapped variants retain their exact app-input source provenance"],
+        fixes: ["Filled the final 200 missing non-Bold weight variants without adding duplicate cards"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.55",
         date: "2026-09-06T19:46:23.000Z",

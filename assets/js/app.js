@@ -313,7 +313,7 @@
     if (value === "objects-tools") return "Objects & Tools";
     if (value === "norway-sweden") return "Norway & Sweden";
     if (value === "indices") return "Indices";
-    if (value === "all-1-ultrathin") return "All 1 Ultrathin";
+    if (value === "all-1-ultrathin") return "All 1 Ultralight";
     if (value === "all-3-light") return "All 3 Light";
     if (value === "all-5-medium") return "All 5 Medium";
     if (value === "all-7-bold") return "All 7 Bold";
