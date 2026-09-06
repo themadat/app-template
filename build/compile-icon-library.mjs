@@ -170,6 +170,23 @@ function cleanSvg(svg) {
   value = value.replace(/\r\n?/g, "\n").replace(/[ \t]+$/gm, "");
   if (!/^<svg\b[\s\S]*<\/svg>$/i.test(value) || FORBIDDEN_SVG.test(value) || FORBIDDEN_REFERENCE.test(value) || value.includes("${")) return "";
   value = value.replace(/\s(?:aria-hidden|focusable)=(?:"[^"]*"|'[^']*')/gi, "");
+  const embeddedStyles = Array.from(value.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi));
+  if (embeddedStyles.length) {
+    const scope = crypto.createHash("sha256").update(value).digest("hex").slice(0, 12);
+    const prefix = '[data-icon-style-scope="' + scope + '"]';
+    value = value.replace(/<style\b([^>]*)>([\s\S]*?)<\/style>/gi, function (_, attributes, css) {
+      const cdataStart = css.match(/^\s*<!\[CDATA\[/)?.[0] || "";
+      const cdataEnd = css.match(/\]\]>\s*$/)?.[0] || "";
+      const rules = css.slice(cdataStart.length, cdataEnd ? -cdataEnd.length : undefined);
+      const scopedRules = rules.replace(/(^|[{}])(\s*)(?!@)([^{}]*?)(\s*)\{/g, function (match, boundary, whitespace, selectorText, trailingWhitespace) {
+        const selectors = selectorText.trim();
+        if (!selectors) return match;
+        return boundary + whitespace + selectors.split(",").map(function (selector) { return prefix + " " + selector.trim(); }).join(", ") + trailingWhitespace + "{";
+      });
+      return "<style" + attributes + ">" + cdataStart + scopedRules + cdataEnd + "</style>";
+    });
+    value = value.replace(/^<svg\b/i, '<svg data-icon-style-scope="' + scope + '"');
+  }
   value = value.replace(/^<svg\b([^>]*)>/i, '<svg$1 aria-hidden="true" focusable="false">');
   return value;
 }
@@ -181,6 +198,8 @@ function normalizeSfSymbolPaint(svg) {
 function canonicalSvg(svg) {
   return svg
     .replace(/\sclass=(?:"sf-symbol"|'sf-symbol')/gi, "")
+    .replace(/\sdata-icon-style-scope=(?:"[^"]*"|'[^']*')/gi, "")
+    .replace(/\[data-icon-style-scope=(?:"[^"]*"|'[^']*')\]\s*/gi, "")
     .replace(/\s(?:aria-hidden|focusable)=(?:"[^"]*"|'[^']*')/gi, "")
     .replace(/>\s+</g, "><")
     .replace(/\s+/g, " ")

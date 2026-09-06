@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.58",
-      buildId: "0.0.1.58",
+      version: "0.0.1.59",
+      buildId: "0.0.1.59",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.59",
+        date: "2026-09-06T23:01:54.000Z",
+        title: "Isolate catalog styles and expand filter shortcuts",
+        summary: "Category-specific SVG styles stay inside their own artwork, and direct shortcuts make category and filter reset faster.",
+        features: ["A selects the All icon category", "C clears the icon search plus category, type, source, and developer label-length filters"],
+        improvements: ["The clear action remains available whenever any catalog filter or search is active"],
+        fixes: ["Scoped embedded SVG stylesheet selectors so Apps & Branding and Home & Appliances artwork cannot distort category chevrons"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.58",
         date: "2026-09-06T22:40:47.000Z",

@@ -59,7 +59,8 @@
     { keys: "9", hintKey: "9", chordKey: "9", label: "Use Black icon weight", group: "Icon Library" },
     { keys: "G", hintKey: "G", chordKey: "G", label: "Focus the first visible icon", group: "Icon Library" },
     { keys: "I", hintKey: "I", chordKey: "I", label: "Show details for the focused icon", group: "Icon Library" },
-    { keys: "C", hintKey: "C", chordKey: "C", label: "Clear the icon search", group: "Icon Library" },
+    { keys: "A", hintKey: "A", chordKey: "A", label: "Select the All icon category", group: "Icon Library" },
+    { keys: "C", hintKey: "C", chordKey: "C", label: "Clear icon filters and search", group: "Icon Library" },
     { keys: "L", hintKey: "L", chordKey: "L", label: "Show more matching icons", group: "Icon Library" },
     { keys: "Esc", hintKey: "Esc", chordKey: "Esc", label: "Close a dialog or menu", group: "Global" },
     { keys: "H or ?", hintKey: "H", chordKey: "H", label: "Open Help Center", group: "Global" },
@@ -434,7 +435,8 @@
       const parent = choice.parent ? iconCategoryById.get(choice.parent) : null;
       const ariaLabel = (parent ? parent.label + ": " : "") + choice.label + ", " + choice.count + " icons";
       const className = "icon-category-chip" + (isSubcategory ? " is-subcategory" : "");
-      return '<button class="' + className + '" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(ariaLabel) + '"' + (disabled ? ' disabled' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
+      const shortcut = choice.id === "all" ? ' aria-keyshortcuts="A Control+Alt+Shift+A" data-shortcut="A"' : "";
+      return '<button class="' + className + '" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(ariaLabel) + '"' + shortcut + (disabled ? ' disabled' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
     }
 
     function categoryBranch(choice, isSubcategory, toggle) {
@@ -897,7 +899,13 @@
     grid.hidden = shown.length === 0;
     $("#iconLibraryEmpty").hidden = shown.length !== 0;
     $("#iconLoadMore").hidden = shown.length >= matches.length;
-    $("#iconClearSearch").hidden = !state().ui.search;
+    const libraryState = state().modules.iconLibrary;
+    const hasActiveFilters = Boolean(state().ui.search)
+      || selectedIconCategory() !== "all"
+      || libraryState.kind !== "all"
+      || libraryState.source !== "all"
+      || state().preferences.controls.developerMode && libraryState.minimumLabelLength > 0;
+    $("#iconClearSearch").hidden = !hasActiveFilters;
     $("#iconLibraryCount").textContent = matches.length === iconCatalog.length ? iconCatalog.length + " icons" : matches.length + " of " + iconCatalog.length;
     const category = iconCategoryById.get(selectedIconCategory());
     const scope = category ? " in " + category.label : "";
@@ -1489,6 +1497,7 @@
     else if (event.code === "Digit9" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightBlack"]').click(); });
     else if (event.code === "KeyG" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, focusFirstIcon);
     else if (event.code === "KeyI" && iconPageActive && focusedIconId && shortcutModifiersAllowed(event)) runShortcut(event, function () { openIconInfo(focusedIconId, document.activeElement); });
+    else if (event.code === "KeyA" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('[data-icon-category="all"]').click(); });
     else if (event.code === "KeyC" && iconPageActive && !$("#iconClearSearch").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconClearSearch").click(); });
     else if (event.code === "KeyL" && iconPageActive && !$("#iconLoadMore").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconLoadMore").click(); });
     else if (event.code === "KeyV") runShortcut(event, function () { openSupport("releases", event.target); });
@@ -1654,11 +1663,18 @@
       renderIconLibrary();
     });
     $("#iconClearSearch").addEventListener("click", function () {
-      storage.mutate(function (next) { next.ui.search = ""; }, { reason: "global-search" });
+      storage.mutate(function (next) {
+        next.ui.search = "";
+        next.modules.iconLibrary.category = "all";
+        next.modules.iconLibrary.kind = "all";
+        next.modules.iconLibrary.source = "all";
+        next.modules.iconLibrary.minimumLabelLength = 0;
+      }, { reason: "icon-filters" });
       $("#globalSearch").value = "";
       iconVisibleCount = ICON_PAGE_SIZE;
       renderIconLibrary();
       renderGlobalSearchResults();
+      renderDeveloper();
       $("#globalSearch").focus();
     });
     $("#iconLoadMore").addEventListener("click", function () { iconVisibleCount += ICON_PAGE_SIZE; renderIconLibrary(); });
