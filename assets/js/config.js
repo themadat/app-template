@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.51",
-      buildId: "0.0.1.51",
+      version: "0.0.1.52",
+      buildId: "0.0.1.52",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.52",
+        date: "2026-09-06T18:31:01.000Z",
+        title: "Add native Medium symbols",
+        summary: "The complete All 5 Medium source set now supplies native Medium artwork, with direct 3/5/7 shortcuts for all three icon weights.",
+        features: ["7,152 imported Medium source symbols with exact native geometry", "3 selects Light, 5 selects Medium, and 7 selects Bold"],
+        improvements: ["Matching Medium files enrich existing records without duplicate cards", "All 5 Medium is available as a source filter and provenance label", "The shortcut reference and visible weight controls expose the new commands"],
+        fixes: ["Replaced the generated Medium treatment wherever native Medium artwork is available"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.51",
         date: "2026-09-06T18:09:45.000Z",

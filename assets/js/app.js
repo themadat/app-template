@@ -52,6 +52,9 @@
     { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
     { keys: "Enter", label: "Show icon search results below", group: "Icon Library", chord: false },
     { keys: "F", hintKey: "F", chordKey: "F", label: "Focus icon categories and filters", group: "Icon Library" },
+    { keys: "3", hintKey: "3", chordKey: "3", label: "Use Light icon weight", group: "Icon Library" },
+    { keys: "5", hintKey: "5", chordKey: "5", label: "Use Medium icon weight", group: "Icon Library" },
+    { keys: "7", hintKey: "7", chordKey: "7", label: "Use Bold icon weight", group: "Icon Library" },
     { keys: "G", hintKey: "G", chordKey: "G", label: "Focus the first visible icon", group: "Icon Library" },
     { keys: "I", hintKey: "I", chordKey: "I", label: "Show details for the focused icon", group: "Icon Library" },
     { keys: "C", hintKey: "C", chordKey: "C", label: "Clear the icon search", group: "Icon Library" },
@@ -308,6 +311,7 @@
     if (value === "norway-sweden") return "Norway & Sweden";
     if (value === "indices") return "Indices";
     if (value === "all-3-light") return "All 3 Light";
+    if (value === "all-5-medium") return "All 5 Medium";
     return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
   }
 
@@ -1444,6 +1448,9 @@
     else if (event.code === "Comma") runShortcut(event, function () { openSupport("settings", event.target); });
     else if (event.code === "Digit2" && activeModuleEnabled("roadmap")) runShortcut(event, function () { openSupport("roadmap", event.target); });
     else if (event.code === "KeyN") runShortcut(event, function () { openNotes(event.target); });
+    else if (event.code === "Digit3" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightLight"]').click(); });
+    else if (event.code === "Digit5" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightMedium"]').click(); });
+    else if (event.code === "Digit7" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightBold"]').click(); });
     else if (event.code === "KeyF" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("[data-icon-category][aria-pressed='true']")?.focus(); });
     else if (event.code === "KeyG" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, focusFirstIcon);
     else if (event.code === "KeyI" && iconPageActive && focusedIconId && shortcutModifiersAllowed(event)) runShortcut(event, function () { openIconInfo(focusedIconId, document.activeElement); });

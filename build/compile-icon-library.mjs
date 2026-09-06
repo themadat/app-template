@@ -13,8 +13,10 @@ const overrideFile = path.join(projectRoot, "build/icon-library-overrides.json")
 const requestedRoots = process.argv.slice(2);
 const seedFile = process.env.APP_TEMPLATE_ICON_SEED || outputFile;
 const NATIVE_WEIGHT_SOURCE_BY_FOLDER = new Map([
-  ["All 3 Light", { name: "all-3-light", weight: "light" }]
+  ["All 3 Light", { name: "all-3-light", weight: "light" }],
+  ["All 5 Medium", { name: "all-5-medium", weight: "medium" }]
 ]);
+const NATIVE_WEIGHT_BY_SOURCE_NAME = new Map(Array.from(NATIVE_WEIGHT_SOURCE_BY_FOLDER.values()).map(function (source) { return [source.name, source.weight]; }));
 
 function sourceForRoot(root) {
   const resolved = path.resolve(root);
@@ -56,7 +58,8 @@ function discoverDefaultSources() {
     { name: "norway-sweden", folder: "norway:sweden" },
     { name: "indices", folder: "indicies" },
     { name: "Rest", folder: "Rest" },
-    { name: "all-3-light", folder: "All 3 Light", weight: "light" }
+    { name: "all-3-light", folder: "All 3 Light", weight: "light" },
+    { name: "all-5-medium", folder: "All 5 Medium", weight: "medium" }
   ].forEach(function (source) {
     const root = path.join(sourceParent, "!backups:data", "icons", "app-input", source.folder);
     if (fs.existsSync(root)) discovered.push({ name: source.name, root: root, weight: source.weight || "" });
@@ -866,7 +869,9 @@ for (const source of sources) {
 existingCatalog.forEach(function (icon) {
   const retainedSources = Array.isArray(icon.sources) && icon.sources.length ? icon.sources : [{ repo: "retained-catalog", file: "assets/js/icon-library.js", symbol: icon.name }];
   const baseSources = retainedSources.filter(function (source) {
-    return icon.baseWeight === "light" ? source.repo !== "retained-catalog" : source.repo !== "all-3-light";
+    const sourceWeight = NATIVE_WEIGHT_BY_SOURCE_NAME.get(source.repo);
+    if (icon.baseWeight && icon.baseWeight !== "bold") return source.repo !== "retained-catalog" && sourceWeight === icon.baseWeight;
+    return !sourceWeight;
   });
   const sourcesToRetain = baseSources.length ? baseSources : [{ repo: "retained-catalog", file: "assets/js/icon-library.js", symbol: icon.name }];
   let retainedRecord = null;
@@ -880,7 +885,7 @@ existingCatalog.forEach(function (icon) {
   if (!retainedRecord) return;
   if (icon.kind === "sf-symbol" && icon.weightSvgs && typeof icon.weightSvgs === "object") retainedRecord.weightSvgs = Object.assign({}, retainedRecord.weightSvgs || {}, icon.weightSvgs);
   if (icon.baseWeight) retainedRecord.baseWeight = icon.baseWeight;
-  if (icon.kind === "sf-symbol") retainedSources.filter(function (source) { return source.repo === "all-3-light"; }).forEach(function (source) { retainedRecord.sources.push(source); });
+  if (icon.kind === "sf-symbol") retainedSources.filter(function (source) { return NATIVE_WEIGHT_BY_SOURCE_NAME.has(source.repo); }).forEach(function (source) { retainedRecord.sources.push(source); });
 });
 
 const recordsByKnownName = new Map();
