@@ -25,8 +25,9 @@
   const ICON_PAGE_SIZE = 500;
   const ICON_FILTER_MIN_WIDTH = 156;
   const ICON_FILTER_MAX_WIDTH = 360;
-  const ICON_WEIGHTS = Object.freeze(["light", "medium", "bold"]);
-  const ICON_WEIGHT_EROSION = Object.freeze({ light: 0.45, medium: 0.25 });
+  const ICON_WEIGHTS = Object.freeze(["ultralight", "light", "medium", "bold", "black"]);
+  const ICON_WEIGHT_STRENGTH = Object.freeze({ ultralight: 1, light: 3, medium: 5, bold: 7, black: 9 });
+  const ICON_WEIGHT_MORPHOLOGY_PER_STEP = 0.115;
   const weightedIconSvgCache = new Map();
   let versionView = "released";
   let hintModifierActive = false;
@@ -52,9 +53,11 @@
     { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
     { keys: "Enter", label: "Show icon search results below", group: "Icon Library", chord: false },
     { keys: "F", hintKey: "F", chordKey: "F", label: "Focus icon categories and filters", group: "Icon Library" },
+    { keys: "1", hintKey: "1", chordKey: "1", label: "Use Ultralight icon weight", group: "Icon Library" },
     { keys: "3", hintKey: "3", chordKey: "3", label: "Use Light icon weight", group: "Icon Library" },
     { keys: "5", hintKey: "5", chordKey: "5", label: "Use Medium icon weight", group: "Icon Library" },
     { keys: "7", hintKey: "7", chordKey: "7", label: "Use Bold icon weight", group: "Icon Library" },
+    { keys: "9", hintKey: "9", chordKey: "9", label: "Use Black icon weight", group: "Icon Library" },
     { keys: "G", hintKey: "G", chordKey: "G", label: "Focus the first visible icon", group: "Icon Library" },
     { keys: "I", hintKey: "I", chordKey: "I", label: "Show details for the focused icon", group: "Icon Library" },
     { keys: "C", hintKey: "C", chordKey: "C", label: "Clear the icon search", group: "Icon Library" },
@@ -337,12 +340,24 @@
     const weight = selectedIconWeight();
     if (!icon) return "";
     if (icon.weightSvgs && icon.weightSvgs[weight]) return icon.weightSvgs[weight];
-    if (icon.kind !== "sf-symbol" || weight === "bold" || icon.baseWeight === "light") return icon.svg;
-    const cacheKey = weight + "\u0000" + icon.id + "\u0000" + icon.svg;
+    if (icon.kind !== "sf-symbol") return icon.svg;
+    const sources = [{ weight: ICON_WEIGHTS.includes(icon.baseWeight) ? icon.baseWeight : "bold", svg: icon.svg }];
+    Object.keys(icon.weightSvgs || {}).forEach(function (sourceWeight) {
+      if (ICON_WEIGHTS.includes(sourceWeight)) sources.push({ weight: sourceWeight, svg: icon.weightSvgs[sourceWeight] });
+    });
+    sources.sort(function (a, b) {
+      return Math.abs(ICON_WEIGHT_STRENGTH[a.weight] - ICON_WEIGHT_STRENGTH[weight]) - Math.abs(ICON_WEIGHT_STRENGTH[b.weight] - ICON_WEIGHT_STRENGTH[weight]);
+    });
+    const source = sources[0];
+    if (!source || source.weight === weight) return source?.svg || icon.svg;
+    const strengthDelta = ICON_WEIGHT_STRENGTH[weight] - ICON_WEIGHT_STRENGTH[source.weight];
+    const operator = strengthDelta > 0 ? "dilate" : "erode";
+    const radius = Math.abs(strengthDelta) * ICON_WEIGHT_MORPHOLOGY_PER_STEP;
+    const cacheKey = weight + "\u0000" + icon.id + "\u0000" + source.weight + "\u0000" + source.svg;
     if (weightedIconSvgCache.has(cacheKey)) return weightedIconSvgCache.get(cacheKey);
     const filterId = "icon-weight-" + weight + "-" + String(icon.id || "symbol").replace(/[^a-z0-9_-]/gi, "-");
-    const filter = '<defs><filter id="' + filterId + '" x="-20%" y="-20%" width="140%" height="140%"><feMorphology in="SourceGraphic" operator="erode" radius="' + ICON_WEIGHT_EROSION[weight] + '"/></filter></defs>';
-    const weighted = String(icon.svg || "").replace(/^(\s*<svg\b[^>]*>)/i, function (openingTag) {
+    const filter = '<defs><filter id="' + filterId + '" x="-20%" y="-20%" width="140%" height="140%"><feMorphology in="SourceGraphic" operator="' + operator + '" radius="' + radius + '"/></filter></defs>';
+    const weighted = String(source.svg || "").replace(/^(\s*<svg\b[^>]*>)/i, function (openingTag) {
       return openingTag + filter + '<g data-icon-weight="' + weight + '" filter="url(#' + filterId + ')">';
     }).replace(/<\/svg>\s*$/i, "</g></svg>");
     weightedIconSvgCache.set(cacheKey, weighted);
@@ -1430,7 +1445,7 @@
       $("#globalSearchResults").hidden = true;
       return;
     }
-    if (u.isEditableTarget(event.target)) return;
+    if (u.isEditableTarget(event.target) && !event.target.matches?.("[data-icon-weight]")) return;
     if (event.metaKey) return;
     if (event.code === "Slash") {
       if (!shortcutChordHeld(event) && event.shiftKey) runShortcut(event, function () { openSupport("help", event.target); });
@@ -1448,9 +1463,11 @@
     else if (event.code === "Comma") runShortcut(event, function () { openSupport("settings", event.target); });
     else if (event.code === "Digit2" && activeModuleEnabled("roadmap")) runShortcut(event, function () { openSupport("roadmap", event.target); });
     else if (event.code === "KeyN") runShortcut(event, function () { openNotes(event.target); });
+    else if (event.code === "Digit1" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightUltralight"]').click(); });
     else if (event.code === "Digit3" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightLight"]').click(); });
     else if (event.code === "Digit5" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightMedium"]').click(); });
     else if (event.code === "Digit7" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightBold"]').click(); });
+    else if (event.code === "Digit9" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightBlack"]').click(); });
     else if (event.code === "KeyF" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("[data-icon-category][aria-pressed='true']")?.focus(); });
     else if (event.code === "KeyG" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, focusFirstIcon);
     else if (event.code === "KeyI" && iconPageActive && focusedIconId && shortcutModifiersAllowed(event)) runShortcut(event, function () { openIconInfo(focusedIconId, document.activeElement); });

@@ -12,23 +12,23 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.52">
-  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.52">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.52">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.52" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.52" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.52">
-  <script defer src="assets/js/config.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/icon-library.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.52"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.52"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.53">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.53">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.53">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.53" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.53" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.53">
+  <script defer src="assets/js/config.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/icon-library.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.53"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.53"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -36,12 +36,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T | Control+Alt+Shift+T Control+Alt+Shift+|" data-shortcut="T" data-shortcut-secondary="|">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.52" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.53" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.52</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.53</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -97,12 +97,16 @@
             <fieldset id="iconWeightControl" class="icon-weight-control" data-selected-weight="bold">
               <legend>Icon Weight <small>SF Symbols only</small></legend>
               <div class="icon-weight-selector">
+                <input class="visually-hidden" id="iconWeightUltralight" type="radio" name="iconWeight" value="ultralight" data-icon-weight aria-keyshortcuts="1 Control+Alt+Shift+1">
+                <label for="iconWeightUltralight" data-shortcut="1"><span class="icon-weight-sample" aria-hidden="true" data-symbol="weightUltralight"></span><span class="icon-weight-name" aria-hidden="true">Ultra<br>light</span><span class="visually-hidden">Ultralight</span></label>
                 <input class="visually-hidden" id="iconWeightLight" type="radio" name="iconWeight" value="light" data-icon-weight aria-keyshortcuts="3 Control+Alt+Shift+3">
                 <label for="iconWeightLight" data-shortcut="3"><span class="icon-weight-sample" aria-hidden="true" data-symbol="weightLight"></span><span>Light</span></label>
                 <input class="visually-hidden" id="iconWeightMedium" type="radio" name="iconWeight" value="medium" data-icon-weight aria-keyshortcuts="5 Control+Alt+Shift+5">
                 <label for="iconWeightMedium" data-shortcut="5"><span class="icon-weight-sample" aria-hidden="true" data-symbol="weightMedium"></span><span>Medium</span></label>
                 <input class="visually-hidden" id="iconWeightBold" type="radio" name="iconWeight" value="bold" data-icon-weight checked aria-keyshortcuts="7 Control+Alt+Shift+7">
                 <label for="iconWeightBold" data-shortcut="7"><span class="icon-weight-sample" aria-hidden="true" data-symbol="weightBold"></span><span>Bold</span></label>
+                <input class="visually-hidden" id="iconWeightBlack" type="radio" name="iconWeight" value="black" data-icon-weight aria-keyshortcuts="9 Control+Alt+Shift+9">
+                <label for="iconWeightBlack" data-shortcut="9"><span class="icon-weight-sample" aria-hidden="true" data-symbol="weightBlack"></span><span>Black</span></label>
               </div>
             </fieldset>
             <button id="iconClearSearch" class="button" type="button" aria-keyshortcuts="C Control+Alt+Shift+C" data-shortcut="C" hidden>Clear search</button>
@@ -261,7 +265,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.52</h3></div><p>Browse released work and the configurable roadmap.</p></div>
+            <div class="release-summary"><div><span class="eyebrow">Current version</span><h3 id="releaseCurrentVersion">v0.0.1.53</h3></div><p>Browse released work and the configurable roadmap.</p></div>
             <div class="segmented version-views" role="group" aria-label="Version views"><button type="button" data-version-view="released" aria-pressed="true">Released</button><button type="button" data-version-view="planned" aria-pressed="false">Planned</button><button type="button" data-version-view="wishlist" aria-pressed="false">Wishlist</button></div>
             <div id="releaseContent" class="release-list"></div>
           </section>
