@@ -975,12 +975,12 @@ nativeWeightVariants.forEach(function (variant) {
   record.weightSvgs = Object.assign({}, record.weightSvgs || {}, { [variant.weight]: variant.svg });
 });
 
-const fallbackWeights = ["ultralight", "light", "medium", "black"];
+const canonicalWeights = ["ultralight", "light", "medium", "bold", "black"];
 NATIVE_WEIGHT_COUNTERPART_BY_ICON_NAME.forEach(function (sourceName, targetName) {
   const target = recordsByKnownName.get(targetName);
   const source = recordsByKnownName.get(sourceName);
   if (!target || !source) return;
-  fallbackWeights.forEach(function (weight) {
+  canonicalWeights.forEach(function (weight) {
     if (!source.weightSvgs || !source.weightSvgs[weight]) return;
     target.weightSvgs = Object.assign({}, target.weightSvgs || {}, { [weight]: source.weightSvgs[weight] });
     source.sources.filter(function (item) { return NATIVE_WEIGHT_BY_SOURCE_NAME.get(item.repo) === weight; }).forEach(function (item) {

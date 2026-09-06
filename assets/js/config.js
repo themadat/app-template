@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.57",
-      buildId: "0.0.1.57",
+      version: "0.0.1.58",
+      buildId: "0.0.1.58",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.58",
+        date: "2026-09-06T22:40:47.000Z",
+        title: "Correct category controls and canonical weights",
+        summary: "Category disclosure controls, selected search text, and compatibility-mapped SF Symbol weights now render consistently.",
+        features: ["All five native-weight folders are authoritative for every mapped SF Symbol name"],
+        improvements: ["Selected text in the search field uses a high-contrast accent treatment"],
+        fixes: ["Removed Safari’s native button appearance from category chevrons", "Replaced legacy pseudo-Bold geometry with canonical All 7 Bold artwork for 50 mapped symbols"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.57",
         date: "2026-09-06T22:25:46.000Z",
