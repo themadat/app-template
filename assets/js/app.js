@@ -52,7 +52,6 @@
   const SHORTCUTS = [
     { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
     { keys: "Enter", label: "Show icon search results below", group: "Icon Library", chord: false },
-    { keys: "F", hintKey: "F", chordKey: "F", label: "Focus icon categories and filters", group: "Icon Library" },
     { keys: "1", hintKey: "1", chordKey: "1", label: "Use Ultra icon weight", group: "Icon Library" },
     { keys: "3", hintKey: "3", chordKey: "3", label: "Use Light icon weight", group: "Icon Library" },
     { keys: "5", hintKey: "5", chordKey: "5", label: "Use Medium icon weight", group: "Icon Library" },
@@ -435,7 +434,7 @@
       const parent = choice.parent ? iconCategoryById.get(choice.parent) : null;
       const ariaLabel = (parent ? parent.label + ": " : "") + choice.label + ", " + choice.count + " icons";
       const className = "icon-category-chip" + (isSubcategory ? " is-subcategory" : "");
-      return '<button class="' + className + '" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(ariaLabel) + '"' + (disabled ? ' disabled' : '') + (active ? ' aria-keyshortcuts="F Control+Alt+Shift+F" data-shortcut="F"' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
+      return '<button class="' + className + '" type="button" data-icon-category="' + u.escapeHtml(choice.id) + '" aria-pressed="' + active + '" aria-label="' + u.escapeHtml(ariaLabel) + '"' + (disabled ? ' disabled' : '') + '><span>' + u.escapeHtml(choice.label) + '</span><small>' + choice.count + '</small></button>';
     }
 
     function categoryBranch(choice, isSubcategory, toggle) {
@@ -476,12 +475,29 @@
     return parts[parts.length - 1] || "Unknown file";
   }
 
+  function highlightedSearchText(value, query) {
+    const text = String(value || "");
+    const needle = String(query || "").trim().toLowerCase();
+    if (!needle) return u.escapeHtml(text);
+    let cursor = 0;
+    let output = "";
+    let index = text.toLowerCase().indexOf(needle);
+    while (index >= 0) {
+      output += u.escapeHtml(text.slice(cursor, index));
+      output += '<mark class="search-match">' + u.escapeHtml(text.slice(index, index + needle.length)) + "</mark>";
+      cursor = index + needle.length;
+      index = text.toLowerCase().indexOf(needle, cursor);
+    }
+    return output + u.escapeHtml(text.slice(cursor));
+  }
+
   function iconCard(icon) {
     const typeText = iconKindLabel(icon.kind);
     const label = u.escapeHtml(icon.label);
+    const highlightedLabel = highlightedSearchText(icon.label, state().ui.search);
     const id = u.escapeHtml(icon.id);
     const svg = iconSvgAtSelectedWeight(icon);
-    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + label + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
+    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + highlightedLabel + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
   function iconOverrideFor(iconId) {
@@ -970,7 +986,7 @@
     const results = globalSearchMatches(query);
     container.hidden = false;
     container.innerHTML = results.length ? results.map(function (result, index) {
-      return '<button type="button" role="option" id="global-result-' + index + '" data-search-type="' + result.type + '" data-search-id="' + u.escapeHtml(result.id) + '"><span><strong>' + u.escapeHtml(result.title) + '</strong><small>' + u.escapeHtml(result.meta) + "</small></span><span aria-hidden=\"true\">→</span></button>";
+      return '<button type="button" role="option" id="global-result-' + index + '" data-search-type="' + result.type + '" data-search-id="' + u.escapeHtml(result.id) + '"><span><strong>' + highlightedSearchText(result.title, query) + '</strong><small>' + highlightedSearchText(result.meta, query) + "</small></span><span aria-hidden=\"true\">→</span></button>";
     }).join("") : '<div class="search-empty">No matching icons or support content.</div>';
   }
 
@@ -1471,7 +1487,6 @@
     else if (event.code === "Digit5" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightMedium"]').click(); });
     else if (event.code === "Digit7" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightBold"]').click(); });
     else if (event.code === "Digit9" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $('label[for="iconWeightBlack"]').click(); });
-    else if (event.code === "KeyF" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("[data-icon-category][aria-pressed='true']")?.focus(); });
     else if (event.code === "KeyG" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, focusFirstIcon);
     else if (event.code === "KeyI" && iconPageActive && focusedIconId && shortcutModifiersAllowed(event)) runShortcut(event, function () { openIconInfo(focusedIconId, document.activeElement); });
     else if (event.code === "KeyC" && iconPageActive && !$("#iconClearSearch").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconClearSearch").click(); });
