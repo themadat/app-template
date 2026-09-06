@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.50",
-      buildId: "0.0.1.50",
+      version: "0.0.1.51",
+      buildId: "0.0.1.51",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.51",
+        date: "2026-09-06T18:09:45.000Z",
+        title: "Add native Light symbols",
+        summary: "The complete All 3 Light source set now supplies native Light artwork throughout the deduplicated icon catalog.",
+        features: ["7,152 imported Light source symbols with exact native geometry", "49 genuinely new deduplicated icons, bringing the catalog to 7,281"],
+        improvements: ["The Light weight control prefers native source artwork while Medium retains its generated fallback", "Matching Light files enrich existing icon records instead of creating duplicate cards", "All 3 Light is available as a source filter and provenance label"],
+        fixes: ["Replaced the simulated Light treatment wherever native Light artwork is available"],
+        knownIssues: ["Medium continues to use a generated morphology fallback until a native Medium source is imported.", "GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.50",
         date: "2026-09-04T21:58:24.000Z",

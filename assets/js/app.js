@@ -307,6 +307,7 @@
     if (value === "objects-tools") return "Objects & Tools";
     if (value === "norway-sweden") return "Norway & Sweden";
     if (value === "indices") return "Indices";
+    if (value === "all-3-light") return "All 3 Light";
     return String(value || "").split("-").map(function (part) { return part.charAt(0).toUpperCase() + part.slice(1); }).join(" ");
   }
 
@@ -330,7 +331,9 @@
 
   function iconSvgAtSelectedWeight(icon) {
     const weight = selectedIconWeight();
-    if (!icon || icon.kind !== "sf-symbol" || weight === "bold") return icon ? icon.svg : "";
+    if (!icon) return "";
+    if (icon.weightSvgs && icon.weightSvgs[weight]) return icon.weightSvgs[weight];
+    if (icon.kind !== "sf-symbol" || weight === "bold" || icon.baseWeight === "light") return icon.svg;
     const cacheKey = weight + "\u0000" + icon.id + "\u0000" + icon.svg;
     if (weightedIconSvgCache.has(cacheKey)) return weightedIconSvgCache.get(cacheKey);
     const filterId = "icon-weight-" + weight + "-" + String(icon.id || "symbol").replace(/[^a-z0-9_-]/gi, "-");

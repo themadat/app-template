@@ -12,6 +12,15 @@ const outputFile = path.join(projectRoot, "assets/js/icon-library.js");
 const overrideFile = path.join(projectRoot, "build/icon-library-overrides.json");
 const requestedRoots = process.argv.slice(2);
 const seedFile = process.env.APP_TEMPLATE_ICON_SEED || outputFile;
+const NATIVE_WEIGHT_SOURCE_BY_FOLDER = new Map([
+  ["All 3 Light", { name: "all-3-light", weight: "light" }]
+]);
+
+function sourceForRoot(root) {
+  const resolved = path.resolve(root);
+  const nativeWeightSource = NATIVE_WEIGHT_SOURCE_BY_FOLDER.get(path.basename(resolved));
+  return Object.assign({ name: path.basename(resolved), root: resolved }, nativeWeightSource || {});
+}
 
 function readExistingCatalog() {
   if (!fs.existsSync(seedFile)) return [];
@@ -46,17 +55,17 @@ function discoverDefaultSources() {
     { name: "objects-tools", folder: "Objects & Tools" },
     { name: "norway-sweden", folder: "norway:sweden" },
     { name: "indices", folder: "indicies" },
-    { name: "Rest", folder: "Rest" }
+    { name: "Rest", folder: "Rest" },
+    { name: "all-3-light", folder: "All 3 Light", weight: "light" }
   ].forEach(function (source) {
     const root = path.join(sourceParent, "!backups:data", "icons", "app-input", source.folder);
-    if (fs.existsSync(root)) discovered.push({ name: source.name, root: root });
+    if (fs.existsSync(root)) discovered.push({ name: source.name, root: root, weight: source.weight || "" });
   });
   return discovered.sort(function (a, b) { return a.name.localeCompare(b.name); });
 }
 
 const sources = requestedRoots.length ? requestedRoots.map(function (root) {
-  const resolved = path.resolve(root);
-  return { name: path.basename(resolved), root: resolved };
+  return sourceForRoot(root);
 }) : discoverDefaultSources();
 
 const TEXT_EXTENSIONS = new Set([".cjs", ".html", ".htm", ".js", ".jsx", ".md", ".mjs", ".ts", ".tsx"]);
@@ -67,7 +76,8 @@ const FORBIDDEN_REFERENCE = /(?:href|xlink:href)\s*=\s*["'](?!#)|@import\b|url\(
 const recordsByHash = new Map();
 const sfRecordsByName = new Map();
 const iconRecords = new Set();
-const stats = { files: 0, extracted: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
+const nativeWeightVariants = [];
+const stats = { files: 0, extracted: 0, nativeWeightVariants: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
 
 function walk(root) {
   const files = [];
@@ -711,6 +721,8 @@ function consolidateRecords(target, duplicate) {
   duplicate.aliases.forEach(function (alias) { target.aliases.add(alias); });
   target.sources.push.apply(target.sources, duplicate.sources);
   duplicate.kinds.forEach(function (kind) { target.kinds.add(kind); });
+  target.weightSvgs = Object.assign({}, duplicate.weightSvgs || {}, target.weightSvgs || {});
+  if (!target.baseWeight && duplicate.baseWeight) target.baseWeight = duplicate.baseWeight;
   recordsByHash.forEach(function (record, hash) { if (record === duplicate) recordsByHash.set(hash, target); });
   sfRecordsByName.forEach(function (record, name) { if (record === duplicate) sfRecordsByName.set(name, target); });
   iconRecords.delete(duplicate);
@@ -750,6 +762,20 @@ function addIcon(input) {
   if (kind === "sf-symbol") sfRecordsByName.set(name, record);
   iconRecords.add(record);
   return record;
+}
+
+function addNativeWeightVariant(input) {
+  let svg = cleanSvg(input.svg);
+  if (!svg) { stats.rejected += 1; return; }
+  svg = normalizeSfSymbolPaint(svg);
+  nativeWeightVariants.push({
+    name: normalizedName(input.symbol),
+    weight: input.weight,
+    svg: svg,
+    source: { repo: input.repo, file: input.file, symbol: input.symbol }
+  });
+  stats.extracted += 1;
+  stats.nativeWeightVariants += 1;
 }
 
 function templateSymbol(text, matchIndex, svg, source, ordinal) {
@@ -830,17 +856,54 @@ for (const source of sources) {
       stats.files += 1;
       if (fs.statSync(absolute).size > MAX_STANDALONE_SVG_BYTES) { stats.skippedOversized += 1; continue; }
       stats.standalone += 1;
-      addIcon({ repo: source.name, file: relative, symbol: path.basename(relative, extension), svg: fs.readFileSync(absolute, "utf8") });
+      const input = { repo: source.name, file: relative, symbol: path.basename(relative, extension), svg: fs.readFileSync(absolute, "utf8") };
+      if (source.weight) addNativeWeightVariant(Object.assign({ weight: source.weight }, input));
+      else addIcon(input);
     }
   }
 }
 
 existingCatalog.forEach(function (icon) {
   const retainedSources = Array.isArray(icon.sources) && icon.sources.length ? icon.sources : [{ repo: "retained-catalog", file: "assets/js/icon-library.js", symbol: icon.name }];
-  retainedSources.forEach(function (source, index) {
-    const record = addIcon({ repo: source.repo, file: source.file, symbol: source.symbol || icon.name, preferredName: index === 0 ? icon.name : "", kind: icon.kind, svg: icon.svg });
-    if (record && index === 0) (Array.isArray(icon.aliases) ? icon.aliases : []).forEach(function (alias) { record.aliases.add(normalizedName(alias)); });
+  const baseSources = retainedSources.filter(function (source) {
+    return icon.baseWeight === "light" ? source.repo !== "retained-catalog" : source.repo !== "all-3-light";
   });
+  const sourcesToRetain = baseSources.length ? baseSources : [{ repo: "retained-catalog", file: "assets/js/icon-library.js", symbol: icon.name }];
+  let retainedRecord = null;
+  sourcesToRetain.forEach(function (source, index) {
+    const record = addIcon({ repo: source.repo, file: source.file, symbol: source.symbol || icon.name, preferredName: index === 0 ? icon.name : "", kind: icon.kind, svg: icon.svg });
+    if (record && index === 0) {
+      retainedRecord = record;
+      (Array.isArray(icon.aliases) ? icon.aliases : []).forEach(function (alias) { record.aliases.add(normalizedName(alias)); });
+    }
+  });
+  if (!retainedRecord) return;
+  if (icon.kind === "sf-symbol" && icon.weightSvgs && typeof icon.weightSvgs === "object") retainedRecord.weightSvgs = Object.assign({}, retainedRecord.weightSvgs || {}, icon.weightSvgs);
+  if (icon.baseWeight) retainedRecord.baseWeight = icon.baseWeight;
+  if (icon.kind === "sf-symbol") retainedSources.filter(function (source) { return source.repo === "all-3-light"; }).forEach(function (source) { retainedRecord.sources.push(source); });
+});
+
+const recordsByKnownName = new Map();
+iconRecords.forEach(function (record) {
+  if (!record.kinds.has("sf-symbol")) return;
+  [record.name].concat(Array.from(record.aliases)).forEach(function (name) {
+    if (!recordsByKnownName.has(name)) recordsByKnownName.set(name, record);
+  });
+});
+
+nativeWeightVariants.forEach(function (variant) {
+  let record = recordsByKnownName.get(variant.name);
+  if (!record) {
+    const recordCount = iconRecords.size;
+    record = addIcon({ repo: variant.source.repo, file: variant.source.file, symbol: variant.source.symbol, kind: "sf-symbol", svg: variant.svg });
+    if (!record) return;
+    if (iconRecords.size > recordCount) record.baseWeight = variant.weight;
+    [record.name].concat(Array.from(record.aliases)).forEach(function (name) { recordsByKnownName.set(name, record); });
+  } else {
+    record.sources.push(variant.source);
+    record.aliases.add(variant.name);
+  }
+  record.weightSvgs = Object.assign({}, record.weightSvgs || {}, { [variant.weight]: variant.svg });
 });
 
 const assignedIconIds = new Set();
@@ -881,6 +944,8 @@ const compiledRecords = Array.from(iconRecords).map(function (record) {
     repositories: Array.from(new Set(sourcesForIcon.map(function (source) { return source.repo; }))).sort(),
     source: "",
     sources: sourcesForIcon,
+    baseWeight: record.baseWeight || "bold",
+    weightSvgs: Object.assign({}, record.weightSvgs || {}),
     svg: record.svg
   };
 });
@@ -933,6 +998,8 @@ records.forEach(function (record) {
   lines.push("      repositories: " + JSON.stringify(record.repositories) + ",");
   if (record.source) lines.push("      source: " + JSON.stringify(record.source) + ",");
   lines.push("      sources: " + JSON.stringify(record.sources) + ",");
+  if (record.baseWeight !== "bold") lines.push("      baseWeight: " + JSON.stringify(record.baseWeight) + ",");
+  if (Object.keys(record.weightSvgs).length) lines.push("      weightSvgs: " + JSON.stringify(record.weightSvgs) + ",");
   lines.push("      svg: " + templateLiteral(record.svg));
   lines.push("    },");
 });
@@ -958,6 +1025,7 @@ process.stdout.write(JSON.stringify({
   output: path.relative(projectRoot, outputFile),
   scannedFiles: stats.files,
   extracted: stats.extracted,
+  nativeWeightVariants: stats.nativeWeightVariants,
   templateLiterals: stats.templateLiterals,
   inlineMarkup: stats.inlineMarkup,
   standalone: stats.standalone,
