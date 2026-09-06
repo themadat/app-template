@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.54",
-      buildId: "0.0.1.54",
+      version: "0.0.1.55",
+      buildId: "0.0.1.55",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -69,6 +69,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.55",
+        date: "2026-09-06T19:46:23.000Z",
+        title: "Add native Bold symbols",
+        summary: "The All 7 Bold source set now supplies exact native Bold artwork and closes the remaining Bold gaps in the five-weight selector.",
+        features: ["7,152 imported Bold source files", "Exact native Bold geometry on 6,868 deduplicated symbol records"],
+        improvements: ["All 7 Bold source filter and provenance", "Matching Bold files enrich existing records without duplicate cards"],
+        fixes: ["Eliminated every missing Bold weight in the SF Symbol catalog"],
+        knownIssues: ["GitHub Sync requires a user-provided repository and fine-grained token."]
+      },
       {
         version: "0.0.1.54",
         date: "2026-09-06T19:13:11.000Z",
