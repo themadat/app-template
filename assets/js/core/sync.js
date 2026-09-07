@@ -62,6 +62,7 @@
     const rememberToken = input.rememberToken !== false;
     const secret = token || storage.getSecret();
     const previousTarget = target();
+    if (!storage.setSecret(secret, rememberToken)) throw new Error("This browser could not store the GitHub token.");
     storage.mutate(function (state) {
       const cloud = state.modules.cloudSync;
       cloud.owner = next.owner;
@@ -78,7 +79,6 @@
         cloud.lastCheckedAt = "";
       }
     }, { reason: "sync-settings" });
-    storage.setSecret(secret, rememberToken);
     resetRuntime();
     emit();
     return next;

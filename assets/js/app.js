@@ -1120,11 +1120,19 @@
         link.removeAttribute("aria-label");
       }
     });
-    $("#syncRememberToken").checked = cloud.rememberToken;
-    $("#storedTokenLabel").textContent = storage.hasSecret() ? "A token is stored; enter a value only to replace it." : "A token is required.";
-    $("#syncToken").value = "";
-    $("#syncToken").placeholder = storage.hasSecret() ? "Token stored on this device" : "Enter token";
-    $("#forgetSyncButton").disabled = !storage.hasSecret() && !cloud.baselineHash;
+    const tokenInput = $("#syncToken");
+    const rememberInput = $("#syncRememberToken");
+    const hasStoredToken = storage.hasSecret();
+    if (tokenInput.dataset.dirty !== "true") tokenInput.value = hasStoredToken ? storage.getSecret() : "";
+    if (rememberInput.dataset.dirty !== "true") rememberInput.checked = cloud.rememberToken;
+    $("#storedTokenLabel").textContent = hasStoredToken ? (cloud.rememberToken ? "Stored on this device" : "Stored for this tab") : "Required";
+    tokenInput.placeholder = hasStoredToken ? "Token stored" : "Enter token";
+    $("#forgetSyncButton").disabled = !hasStoredToken && !cloud.baselineHash;
+  }
+
+  function markSyncCredentialFieldsClean() {
+    delete $("#syncToken").dataset.dirty;
+    delete $("#syncRememberToken").dataset.dirty;
   }
 
   function renderHelp() {
@@ -1247,6 +1255,7 @@
     const accepted = await components.confirm({ title: "Forget GitHub token on this device?", message: "The stored token and sync history will be removed. The app’s fixed repository target and local notes will stay here.", confirmLabel: "Forget token", danger: true });
     if (!accepted) return;
     await sync.forget();
+    markSyncCredentialFieldsClean();
     renderSyncSettings(); renderSyncStatus();
     components.toast("The GitHub token and sync history were removed from this device.", { title: "Sync disconnected", kind: "success" });
   }
@@ -1266,7 +1275,7 @@
   async function saveSyncSettings() {
     try {
       sync.saveConfiguration(syncFormValues());
-      $("#syncToken").value = "";
+      markSyncCredentialFieldsClean();
       renderSyncSettings(); renderSyncStatus();
       components.toast("The GitHub connection settings were saved.", { title: "Sync configured", kind: "success" });
       sync.check(true);
@@ -1279,7 +1288,10 @@
     try {
       components.setLoading(true, "Testing GitHub…");
       const result = await sync.testConnection(syncFormValues());
-      if (result) components.message("Connection succeeded", result.message, { trigger: $("#testSyncButton") });
+      if (result) {
+        markSyncCredentialFieldsClean();
+        components.message("Connection succeeded", result.message, { trigger: $("#testSyncButton") });
+      }
     } catch (error) {
       components.message("Connection failed", error.message || "GitHub could not be reached with these settings.", { trigger: $("#testSyncButton") });
     } finally {
@@ -1404,6 +1416,8 @@
     $("#saveSyncButton").addEventListener("click", saveSyncSettings);
     $("#testSyncButton").addEventListener("click", testSyncSettings);
     $("#forgetSyncButton").addEventListener("click", forgetSync);
+    $("#syncToken").addEventListener("input", function (event) { event.currentTarget.dataset.dirty = "true"; });
+    $("#syncRememberToken").addEventListener("change", function (event) { event.currentTarget.dataset.dirty = "true"; });
     $("#exportButton").addEventListener("click", portability.exportJson);
     $("#importButton").addEventListener("click", function () { $("#importFileInput").click(); });
     $("#resetPreferencesButton").addEventListener("click", resetPreferences);

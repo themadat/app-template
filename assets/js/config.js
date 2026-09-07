@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.64",
-      buildId: "0.0.1.64",
+      version: "0.0.1.65",
+      buildId: "0.0.1.65",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.65",
+        date: "2026-09-07T21:11:57.000Z",
+        title: "Keep GitHub credentials visible",
+        summary: "Saved and successfully tested GitHub credentials now remain visibly present as a masked token with a clear storage label.",
+        features: ["Visible device or browser-tab storage state beside the masked GitHub token"],
+        improvements: ["Background sync status updates preserve token and Remember-choice edits that are still in progress"],
+        fixes: ["Save and successful Test no longer empty the visible token field", "Save now reports a storage failure instead of presenting an unconnected state as successful"],
+        knownIssues: ["GitHub Sync requires a user-provided fine-grained token."]
+      },
       {
         version: "0.0.1.64",
         date: "2026-09-07T20:43:46.000Z",

@@ -59,7 +59,7 @@
 - [ ] The target line stays a single contained horizontal line at mobile widths without causing page-level horizontal overflow; Settings shows only Forget, Test, and Save actions below the token and remember choice.
 - [ ] Missing token opens setup; invalid values show actionable validation.
 - [ ] Connection testing distinguishes authentication, permission, missing repository/branch, network, and malformed remote-file failures.
-- [ ] A successful Test stores the verified token according to the Remember choice and still reports it stored after Settings re-renders; a failed Test does not persist a newly entered token.
+- [ ] Save and a successful Test keep the token visibly masked in the password field, label device or tab-only storage, and survive Settings re-renders; a failed Test does not persist a newly entered token, and background sync renders do not overwrite an in-progress token or Remember-choice edit.
 - [ ] Local-only, remote-only, current, missing-file, first-sync, conflict, offline, and error states have distinct accessible labels and styles.
 - [ ] Conflict choices include merge, upload, download, and cancel; no divergent data is overwritten silently.
 - [ ] Download and merge preserve a recovery copy and keep device-local cloud settings.

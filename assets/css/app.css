@@ -592,6 +592,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .sync-target-item a[href]:hover { color: var(--accent); text-decoration-thickness: 2px; }
 .sync-target-item a[href]:focus-visible { border-radius: 3px; outline: 3px solid color-mix(in srgb, var(--focus) 68%, transparent); outline-offset: 2px; }
 .sync-token-field { margin-top: .55rem; }
+.sync-token-state { color: var(--accent-strong) !important; font-weight: 750 !important; }
 .sync-remember { display: flex; align-items: center; gap: .45rem; margin-top: .65rem; color: var(--text); font-size: .73rem; font-weight: 750; }
 .sync-remember input { width: 18px; height: 18px; min-height: 0; }
 .sync-remember small { color: var(--muted); font-weight: 500; }
