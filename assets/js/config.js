@@ -8,15 +8,15 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.63",
-      buildId: "0.0.1.63",
+      version: "0.0.1.64",
+      buildId: "0.0.1.64",
       repository: {
-        label: "Project repository",
-        url: "https://github.com/OWNER/REPOSITORY"
+        label: "App repository",
+        url: "https://github.com/themadat/app-template"
       },
       support: [
-        { label: "Report a problem", url: "https://github.com/OWNER/REPOSITORY/issues/new" },
-        { label: "View documentation", url: "https://github.com/OWNER/REPOSITORY#readme" }
+        { label: "Report a problem", url: "https://github.com/themadat/app-template/issues/new" },
+        { label: "View documentation", url: "https://github.com/themadat/app-template#readme" }
       ],
       assets: {
         favicon: "assets/icons/favicon.svg",
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.64",
+        date: "2026-09-07T20:43:46.000Z",
+        title: "Keep tested GitHub credentials",
+        summary: "A successful connection test now keeps the verified token, and Settings links directly to the application repository.",
+        features: ["Direct App repository link beneath the GitHub heading in Settings"],
+        improvements: ["Successful tests respect the Remember token choice for persistent or tab-only storage"],
+        fixes: ["Testing a newly entered access token no longer discards it when Settings refreshes"],
+        knownIssues: ["GitHub Sync requires a user-provided fine-grained token."]
+      },
       {
         version: "0.0.1.63",
         date: "2026-09-07T20:28:49.000Z",

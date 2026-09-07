@@ -580,6 +580,9 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .compact-github-icon .sf-symbol { width: 1.1rem; height: 1.1rem; }
 .compact-github-copy { display: grid; min-width: 0; }
 .compact-github-copy small { overflow: hidden; color: var(--muted); font-size: .7rem; text-overflow: ellipsis; white-space: nowrap; }
+.compact-app-repository-link { width: fit-content; max-width: 100%; overflow: hidden; color: var(--accent-strong); font-size: .7rem; font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-overflow: ellipsis; text-underline-offset: .16em; white-space: nowrap; }
+.compact-app-repository-link:hover { color: var(--accent); text-decoration-thickness: 2px; }
+.compact-app-repository-link:focus-visible { border-radius: 3px; outline: 3px solid color-mix(in srgb, var(--focus) 68%, transparent); outline-offset: 2px; }
 .sync-target-line { display: flex; align-items: baseline; gap: 0; margin: .65rem 0 0; padding: .55rem .65rem; overflow-x: auto; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-2); scrollbar-width: thin; }
 .sync-target-item { display: flex; flex: 0 0 auto; align-items: baseline; gap: .3rem; min-width: max-content; white-space: nowrap; }
 .sync-target-item + .sync-target-item { margin-left: .65rem; padding-left: .65rem; border-left: 1px solid var(--line); }

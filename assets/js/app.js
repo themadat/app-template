@@ -1090,7 +1090,17 @@
     $("#cloudSyncSettings").hidden = false;
     $("#syncSettingsState").textContent = info.title;
     $("#syncSettingsState").dataset.kind = info.kind;
-    $("#syncSettingsTarget").textContent = cloud.owner + "/" + cloud.repo;
+    const appRepositoryUrl = u.safeUrl(config.identity.repository.url);
+    const appRepositoryLink = $("#appRepositoryLink");
+    appRepositoryLink.textContent = appRepositoryUrl ? config.identity.repository.label : "App repository not configured";
+    appRepositoryLink.hidden = !appRepositoryUrl;
+    if (appRepositoryUrl) {
+      appRepositoryLink.href = appRepositoryUrl;
+      appRepositoryLink.setAttribute("aria-label", config.identity.repository.label + " (opens in a new tab)");
+    } else {
+      appRepositoryLink.removeAttribute("href");
+      appRepositoryLink.removeAttribute("aria-label");
+    }
     $("#syncOwner").textContent = cloud.owner || "Not set";
     $("#syncBranch").textContent = cloud.branch || "Not set";
     const repositoryUrl = cloud.owner && cloud.repo ? u.safeUrl("https://github.com/" + encodeURIComponent(cloud.owner) + "/" + encodeURIComponent(cloud.repo)) : "";

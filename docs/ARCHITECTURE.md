@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.63",
-    "buildId": "0.0.1.63",
+    "appVersion": "0.0.1.64",
+    "buildId": "0.0.1.64",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -77,7 +77,7 @@ Icon-library overrides are normalized to stable icon ID, sanitized display name,
 
 The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. Fresh Notes are blank, and normalization removes the exact former demonstration sentence while preserving all other user text. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 
-The GitHub owner, repository, branch, and path are copied from `config.cloudSync` during defaults and normalization; imported or legacy state cannot redirect the target. Settings renders the four values as one metadata line, linking the repository and exact data file when the target is complete. The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry.
+The application repository comes from `config.identity.repository` and appears as a direct link beneath the GitHub heading in Settings. The GitHub Sync owner, repository, branch, and path are copied from `config.cloudSync` during defaults and normalization; imported or legacy state cannot redirect the target. Settings renders the four sync values as one metadata line, linking the repository and exact data file when the target is complete. The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry. Save stores it directly, and a successful connection test stores the verified token according to the Remember choice; a failed test does not persist a newly entered token.
 
 ## Persistence and migration
 

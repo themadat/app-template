@@ -309,6 +309,7 @@
     const tokenInput = u.cleanLine(input.token, 500);
     const cloud = validateConfiguration(input, tokenInput);
     const token = tokenInput || storage.getSecret();
+    const rememberToken = input.rememberToken !== false;
     const context = requestContext("checking");
     runtime.checking = true;
     runtime.error = "";
@@ -317,7 +318,12 @@
       await verifyTarget(cloud, token, context);
       const remote = await readRemote(cloud, token, context, true);
       if (!currentRequest(context)) return null;
-      return { ok: true, remoteExists: Boolean(remote), message: remote ? "Connection succeeded and the data file is readable." : "Connection succeeded. The data file will be created on first upload." };
+      if (!storage.setSecret(token, rememberToken)) throw new Error("Connection succeeded, but this browser could not store the token.");
+      storage.mutate(function (state) {
+        state.modules.cloudSync.rememberToken = rememberToken;
+      }, { touch: false, reason: "sync-token-tested" });
+      const storedMessage = rememberToken ? " The token is stored on this device." : " The token is stored for this browser tab.";
+      return { ok: true, remoteExists: Boolean(remote), message: (remote ? "Connection succeeded and the data file is readable." : "Connection succeeded. The data file will be created on first upload.") + storedMessage };
     } catch (error) {
       if (error && error.name === "AbortError") return null;
       throw error;
