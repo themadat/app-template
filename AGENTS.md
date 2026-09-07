@@ -25,7 +25,7 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 
 Treat these one-word user requests as repository workflows:
 
-- `reset`: turn a copied repository into a clean new-app foundation at `0.0.1.1`, retaining the reusable shell and infrastructure while removing the icon-library product. Follow the preflight and complete reset contract in `context/LLM_HANDOFF.md` and `docs/RESET.md`; do not run it against the canonical template accidentally.
+- `reset`: turn a copied repository into a clean new-app foundation at `0.0.1.1`, retaining the reusable shell and infrastructure while removing the icon-library product. Before editing, explicitly obtain or confirm the app name and obtain the replacement app-icon source; autofill the identity, replace every icon/favicon/install variant, and bake all retained base-UI symbols into the self-contained interface catalog. Follow the preflight and complete reset contract in `context/LLM_HANDOFF.md` and `docs/RESET.md`; do not run it against the canonical template accidentally.
 - `wish`: capture a scoped idea in `context/WISHES.md`; do not plan or implement it.
 - `plan`: investigate a wish and write or revise `context/WISH-###-<slug>-PLAN.md`; do not implement it.
 - `start`: implement an approved plan, maintain its Resume block, update the app and build versions, and verify the work.

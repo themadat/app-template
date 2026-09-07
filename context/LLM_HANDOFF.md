@@ -22,11 +22,11 @@ Transform a copied repository into a clean foundation for a different applicatio
 
 - Read and follow `docs/RESET.md` completely before editing. Its keep/remove/rewrite lists are the authoritative reset checklist.
 - Run the normal session preflight, inspect the repository path and `origin`, and require a clean working tree unless every pending change is explicitly part of the reset. Never reset the canonical `app-template` checkout or its canonical remote merely because the user typed the shorthand; if the target still appears canonical, obtain explicit confirmation and the new application identity first.
-- Resolve the new name, short name, slug, description, repository URL, and storage namespace from the request, copied-directory name, and non-template remote. Ask only for identity values that cannot be derived safely.
+- Ask for or confirm the new application name before editing, then derive and autofill its short name, slug, page/manifest titles, download and sync filenames, storage namespace, and identity copy. Ask for a high-quality square app-icon source before editing and replace the header icon, favicon, install/touch/maskable icons, splash artwork, and editable sources; a completed reset never retains placeholder App Template art.
 - Preserve the reusable static shell, Notes, vertical Settings experience, Appearance, generic Help/What’s New/Roadmap/Shortcuts sections, local persistence and recovery, JSON portability, optional GitHub Sync, PWA/offline behavior, accessibility, responsive layout, application-icon assets, and deployment workflow.
-- Remove the searchable icon-library product: generated catalog parts and assembler, compiler and overrides, catalog markup and dialogs, catalog-only state/storage fields, render/edit/filter/copy logic, catalog-only shortcuts and hints, unused styles, service-worker entries, and all icon-library-specific product prose. Keep `assets/js/icons.js` as the small interface-symbol catalog; it is shell infrastructure, not the removed product.
+- Remove the searchable icon-library product: generated catalog parts and assembler, compiler and overrides, catalog markup and dialogs, catalog-only state/storage fields, render/edit/filter/copy logic, catalog-only shortcuts and hints, unused styles, service-worker entries, and all icon-library-specific product prose. Before removal, inventory every retained `data-symbol`, helper call, component action, and config symbol; bake their exact SVGs into `assets/js/icons.js` and remove its catalog fallback so the top bar, search, Notes, every Settings page, GitHub Sync, dialogs, toasts, and PWA controls stay intact without the generated library.
 - Leave the main workspace as a semantic blank starter surface. Reset Roadmap to no items, Help to only accurate generic shell guidance, What’s New to one initial `0.0.1.1` release, Notes to blank, and `context/WISHES.md` to an empty `WISH-001` ledger. Remove obsolete wish/plan documents.
-- Set every application/build/cache/deployment version surface to `0.0.1.1`, establish a new app-specific local-storage and sync identity so data from the template cannot bleed into the copied app, and rewrite README, architecture, component, customization, and testing documentation to describe only the retained starter foundation.
+- Set every application/build/cache/deployment version surface to `0.0.1.1`, establish a new app-specific local-storage and sync identity so data from the template cannot bleed into the copied app, and rewrite README, architecture, component, customization, testing, and two-laptop Git setup documentation to describe only the retained starter foundation.
 - Do not rewrite Git history, change remotes, create repositories, commit, push, or deploy unless the user separately asks.
 - Run the reset-specific acceptance checks in `docs/RESET.md`, then the surviving application verification baseline.
 
@@ -83,6 +83,7 @@ Do not silently move from one lifecycle stage to another.
 - `manifest.webmanifest` and `manifest-dark.webmanifest`: install metadata.
 - `sw.js`: minimal offline shell.
 - `README.md`: setup, customization, icons, SSH, and hosting instructions.
+- `docs/GIT-SETUP.md`: copy-paste terminal Git and GitHub SSH setup for separate personal and work Macs.
 
 ## Invariants
 

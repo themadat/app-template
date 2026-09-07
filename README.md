@@ -28,9 +28,9 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 
 ## Start a new application
 
-Copy or duplicate this repository, open the copy in Codex, and say `reset`. You can include the identity in the same request—for example, `reset for Trail Log`—or let the workflow derive it from the copied directory and its non-template remote. It asks only for identity details it cannot determine safely.
+Copy or duplicate this repository, open the copy in Codex, and say `reset`. The workflow asks you to confirm the app name and provide a high-quality square SVG or PNG app icon before it edits anything. It derives and autofills the short name, slug, page and manifest titles, download/sync names, storage namespace, and other identity-bearing copy from the confirmed name.
 
-Reset keeps the reusable local-first shell, Notes, vertical Settings pages, Appearance, Help, What’s New, Roadmap, Shortcuts, storage/recovery, JSON portability, optional GitHub Sync, PWA/offline support, accessibility, responsive behavior, install assets, and Pages workflow. It removes the icon-library product and its roughly 93 MB generated catalog, leaves a blank starter workspace, creates fresh Help and release content, empties the Roadmap and wish ledger, isolates browser storage under the new app identity, rewrites the README and documentation, and starts the copied app at `0.0.1.1`.
+Reset keeps the reusable local-first shell, Notes, vertical Settings pages, Appearance, Help, What’s New, Roadmap, Shortcuts, storage/recovery, JSON portability, optional GitHub Sync, PWA/offline support, accessibility, responsive behavior, and Pages workflow. Before deleting the roughly 93 MB icon-library catalog, it bakes every SVG needed by the top bar, search, Notes, Settings, GitHub Sync, dialogs, toasts, and PWA controls into the small self-contained interface catalog. It replaces every app-icon/favicon/install/splash variant with the supplied artwork, leaves a blank starter workspace, creates fresh Help and release content, empties the Roadmap and wish ledger, isolates browser storage under the new app identity, rewrites the README and documentation, and starts the copied app at `0.0.1.1`.
 
 The reset does not rewrite Git history, change remotes, commit, push, or deploy. It refuses to transform the canonical template checkout without explicit confirmation. See [`docs/RESET.md`](docs/RESET.md) for the exact contract and acceptance checklist.
 
@@ -56,7 +56,7 @@ build/compile-icon-library.mjs Dependency-free development-time icon scanner/com
 build/icon-library-overrides.json Compiler-consumed permanent name/group/source overrides
 manifest*.webmanifest          Light and dark install metadata
 sw.js                          Offline shell and update cache
-docs/                          Architecture, components, customization, and test checklists
+docs/                          Architecture, customization, reset, Git/SSH, and test guides
 context/                       Agent reset, wish, plan, start, and cut workflows
 ```
 
@@ -122,47 +122,9 @@ inkscape assets/icons/app-icon-dark.svg --export-filename=assets/icons/icon-512-
 
 Verify the favicon, launcher icon, maskable crop, and splash artwork in both appearances.
 
-## Set up GitHub SSH for repository work
+## Set up terminal Git access
 
-This controls Git clone, pull, and push from your computer. It is separate from the optional in-app sync module, which uses the GitHub Contents API and a fine-grained token because a browser cannot use your SSH key.
-
-1. Check for an existing key:
-
-   ```sh
-   ls -al ~/.ssh
-   ```
-
-2. If `id_ed25519` and `id_ed25519.pub` do not exist, create them:
-
-   ```sh
-   ssh-keygen -t ed25519 -C "YOUR_GITHUB_EMAIL"
-   ```
-
-3. On macOS, load the key and save it in Keychain:
-
-   ```sh
-   eval "$(ssh-agent -s)"
-   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-   ```
-
-4. Copy the public key and add it in GitHub under **Settings → SSH and GPG keys → New SSH key**:
-
-   ```sh
-   pbcopy < ~/.ssh/id_ed25519.pub
-   ```
-
-   Never upload or share the private file without `.pub`.
-
-5. Test authentication and set the repository’s SSH remote:
-
-   ```sh
-   ssh -T git@github.com
-   git remote set-url origin git@github.com:OWNER/REPOSITORY.git
-   git remote -v
-   git push -u origin main
-   ```
-
-If Git reports `Permission denied (publickey)`, confirm the key is loaded and attached to the correct GitHub account. A prompt for the SSH key’s passphrase is local; it is not a GitHub password.
+Use [`docs/GIT-SETUP.md`](docs/GIT-SETUP.md) for copy-paste commands that configure commit identity, create separate SSH keys on a personal and work Mac, add them to GitHub, test authentication, clone the repository, and use the normal pull/commit/push flow. Terminal SSH access is separate from the app’s optional browser-based GitHub Sync token.
 
 ## Configure optional in-app GitHub Sync
 
