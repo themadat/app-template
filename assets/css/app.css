@@ -580,8 +580,14 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .compact-github-icon .sf-symbol { width: 1.1rem; height: 1.1rem; }
 .compact-github-copy { display: grid; min-width: 0; }
 .compact-github-copy small { overflow: hidden; color: var(--muted); font-size: .7rem; text-overflow: ellipsis; white-space: nowrap; }
-.sync-target-grid { display: grid; grid-template-columns: minmax(96px, .75fr) minmax(120px, .9fr) minmax(78px, .55fr) minmax(210px, 1.8fr); gap: .45rem; margin-top: .65rem; }
-.sync-target-grid input[readonly] { background: var(--surface-2); color: var(--text); font-weight: 750; }
+.sync-target-line { display: flex; align-items: baseline; gap: 0; margin: .65rem 0 0; padding: .55rem .65rem; overflow-x: auto; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-2); scrollbar-width: thin; }
+.sync-target-item { display: flex; flex: 0 0 auto; align-items: baseline; gap: .3rem; min-width: max-content; white-space: nowrap; }
+.sync-target-item + .sync-target-item { margin-left: .65rem; padding-left: .65rem; border-left: 1px solid var(--line); }
+.sync-target-item dt { color: var(--muted); font-size: .66rem; font-weight: 700; }
+.sync-target-item dd { margin: 0; color: var(--text); font-size: .73rem; font-weight: 800; }
+.sync-target-item a[href] { color: var(--accent-strong); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .16em; }
+.sync-target-item a[href]:hover { color: var(--accent); text-decoration-thickness: 2px; }
+.sync-target-item a[href]:focus-visible { border-radius: 3px; outline: 3px solid color-mix(in srgb, var(--focus) 68%, transparent); outline-offset: 2px; }
 .sync-token-field { margin-top: .55rem; }
 .sync-remember { display: flex; align-items: center; gap: .45rem; margin-top: .65rem; color: var(--text); font-size: .73rem; font-weight: 750; }
 .sync-remember input { width: 18px; height: 18px; min-height: 0; }
@@ -804,7 +810,6 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .appearance-footer .button { width: 100%; }
   .setting-row > .segmented, .setting-row > select, .setting-row > input[type="range"] { width: 100%; }
   .text-size-control { width: 100%; max-width: none; min-width: 0; }
-  .sync-target-grid { grid-template-columns: 1fr 1fr; }
   .sync-remember { align-items: flex-start; flex-wrap: wrap; }
   .segmented { overflow-x: auto; }
   .segmented button { flex: 1; }

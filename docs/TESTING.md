@@ -55,7 +55,8 @@
 
 ## GitHub synchronization
 
-- [ ] Owner, repository, branch, and path come from `config.cloudSync`, appear read-only in one desktop row, and cannot be redirected by saved or imported state; Settings shows only Forget, Test, and Save actions below the token and remember choice.
+- [ ] Owner, repository, branch, and path come from `config.cloudSync`, appear with their values on one non-input metadata line, and cannot be redirected by saved or imported state; Repository links to the configured GitHub repository and Path links to the exact branch/file when the target is complete.
+- [ ] The target line stays a single contained horizontal line at mobile widths without causing page-level horizontal overflow; Settings shows only Forget, Test, and Save actions below the token and remember choice.
 - [ ] Missing token opens setup; invalid values show actionable validation.
 - [ ] Connection testing distinguishes authentication, permission, missing repository/branch, network, and malformed remote-file failures.
 - [ ] Local-only, remote-only, current, missing-file, first-sync, conflict, offline, and error states have distinct accessible labels and styles.

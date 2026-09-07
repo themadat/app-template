@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.62",
-      buildId: "0.0.1.62",
+      version: "0.0.1.63",
+      buildId: "0.0.1.63",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -38,9 +38,9 @@
 
     cloudSync: {
       owner: "themadat",
-      repo: "app-template",
+      repo: "app-data",
       branch: "main",
-      path: "data/workspace.json"
+      path: "data/app-template.json"
     },
 
     features: {
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.63",
+        date: "2026-09-07T20:28:49.000Z",
+        title: "Link the fixed GitHub target",
+        summary: "GitHub Sync now presents its fixed target as compact metadata with direct repository and data-file links.",
+        features: ["Direct links to the configured GitHub repository and exact JSON data file"],
+        improvements: ["Owner, repository, branch, and path share one read-only metadata line instead of looking editable"],
+        fixes: ["App Template sync now targets themadat/app-data/main/data/app-template.json"],
+        knownIssues: ["GitHub Sync requires a user-provided fine-grained token."]
+      },
       {
         version: "0.0.1.62",
         date: "2026-09-07T06:00:53.000Z",

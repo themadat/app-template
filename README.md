@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.62` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.63` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -128,7 +128,7 @@ Use [`docs/GIT-SETUP.md`](docs/GIT-SETUP.md) for copy-paste commands that config
 
 ## Configure optional in-app GitHub Sync
 
-Set the fixed repository target in `config.cloudSync` inside `assets/js/config.js`, then open **Settings → Storage & GitHub** and provide a fine-grained personal access token limited to that repository with **Contents: Read and write** permission. Owner, repository, branch, and JSON file path appear together as read-only fields so saved or imported application state cannot redirect synchronization.
+Set the fixed repository target in `config.cloudSync` inside `assets/js/config.js`, then open **Settings → Storage & GitHub** and provide a fine-grained personal access token limited to that repository with **Contents: Read and write** permission. Owner, linked repository, branch, and linked JSON file path appear together on one read-only metadata line so saved or imported application state cannot redirect synchronization.
 
 New apps created with `reset` use a unique JSON file in [`themadat/app-data/data`](https://github.com/themadat/app-data/tree/main/data). Create the app-scoped credential from [GitHub’s fine-grained token settings](https://github.com/settings/personal-access-tokens), select only the `app-data` repository, and grant **Contents: Read and write**. The reset checklist records the exact file, target, token, and first-sync verification sequence.
 
@@ -152,4 +152,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.62 - Refine button symbols and Settings scrolling`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.63 - Link the fixed GitHub target`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

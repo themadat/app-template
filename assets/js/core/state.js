@@ -8,7 +8,7 @@
     owner: u.cleanLine(config.cloudSync?.owner, 39),
     repo: u.cleanLine(config.cloudSync?.repo, 100).replace(/\.git$/i, ""),
     branch: u.cleanLine(config.cloudSync?.branch || "main", 250) || "main",
-    path: u.cleanLine(config.cloudSync?.path || "data/workspace.json", 500).replace(/^\/+/, "") || "data/workspace.json"
+    path: u.cleanLine(config.cloudSync?.path || "data/app-template.json", 500).replace(/^\/+/, "") || "data/app-template.json"
   });
   const STATUS_IDS = new Set(config.statuses.map(function (status) { return status.id; }));
   const MODULE_IDS = ["roadmap"];

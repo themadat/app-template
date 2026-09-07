@@ -1091,10 +1091,25 @@
     $("#syncSettingsState").textContent = info.title;
     $("#syncSettingsState").dataset.kind = info.kind;
     $("#syncSettingsTarget").textContent = cloud.owner + "/" + cloud.repo;
-    setInputValue($("#syncOwner"), cloud.owner);
-    setInputValue($("#syncRepo"), cloud.repo);
-    setInputValue($("#syncBranch"), cloud.branch);
-    setInputValue($("#syncPath"), cloud.path);
+    $("#syncOwner").textContent = cloud.owner || "Not set";
+    $("#syncBranch").textContent = cloud.branch || "Not set";
+    const repositoryUrl = cloud.owner && cloud.repo ? u.safeUrl("https://github.com/" + encodeURIComponent(cloud.owner) + "/" + encodeURIComponent(cloud.repo)) : "";
+    const dataFileUrl = repositoryUrl && cloud.branch && cloud.path ? u.safeUrl(repositoryUrl + "/blob/" + encodeURIComponent(cloud.branch) + "/" + cloud.path.split("/").map(encodeURIComponent).join("/")) : "";
+    [["#syncRepo", cloud.repo, repositoryUrl, "Open GitHub repository"], ["#syncPath", cloud.path, dataFileUrl, "Open GitHub data file"]].forEach(function (entry) {
+      const link = $(entry[0]);
+      link.textContent = entry[1] || "Not set";
+      if (entry[2]) {
+        link.href = entry[2];
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.setAttribute("aria-label", entry[3] + " (opens in a new tab)");
+      } else {
+        link.removeAttribute("href");
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.removeAttribute("aria-label");
+      }
+    });
     $("#syncRememberToken").checked = cloud.rememberToken;
     $("#storedTokenLabel").textContent = storage.hasSecret() ? "A token is stored; enter a value only to replace it." : "A token is required.";
     $("#syncToken").value = "";
@@ -1227,11 +1242,12 @@
   }
 
   function syncFormValues() {
+    const cloud = state().modules.cloudSync;
     return {
-      owner: $("#syncOwner").value,
-      repo: $("#syncRepo").value,
-      branch: $("#syncBranch").value,
-      path: $("#syncPath").value,
+      owner: cloud.owner,
+      repo: cloud.repo,
+      branch: cloud.branch,
+      path: cloud.path,
       token: $("#syncToken").value,
       rememberToken: $("#syncRememberToken").checked
     };
