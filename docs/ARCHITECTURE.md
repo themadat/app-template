@@ -4,7 +4,7 @@
 
 The application is a static page with ordered scripts and no module loader:
 
-1. `config.js` defines identity, feature flags, theme defaults, help, releases, and demonstration Roadmap content.
+1. `config.js` defines identity, the fixed GitHub Sync target, feature flags, theme defaults, help, releases, and demonstration Roadmap content.
 2. `icons.js` provides the small SF Symbol set used by the application shell.
 3. `icon-library-part-1.js` through `icon-library-part-4.js` hold the committed generated records below GitHub’s large-file warning threshold, and `icon-library.js` assembles them into the catalog of sanitized, deduplicated SVG symbols, categories, semantic tags, aliases, and source metadata; `build/icon-library-overrides.json` supplies permanent display-name, type, group, filter-source, and exclusion metadata.
 4. `core/utils.js` provides escaping, sanitization, URL/color validation, ids, dates, and hashing.
@@ -20,7 +20,7 @@ The application is a static page with ordered scripts and no module loader:
 
 Dashed & Dotted and Layered & Stacked use explicit dashed/dotted and layer/stack name tokens so visually unrelated dot and multiple-item symbols remain excluded. Existing permanent overrides that match those objective patterns include the corresponding appearance membership.
 
-All modules attach to `window.LocalApp`. Runtime network access occurs only after the user configures or invokes GitHub Sync.
+All modules attach to `window.LocalApp`. Runtime network access occurs only after the user saves a token or invokes GitHub Sync.
 
 ## State model
 
@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.60",
-    "buildId": "0.0.1.60",
+    "appVersion": "0.0.1.61",
+    "buildId": "0.0.1.61",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -77,7 +77,7 @@ Icon-library overrides are normalized to stable icon ID, sanitized display name,
 
 The single Notes modal continues to use the legacy `documents` collection and `html` field so older exports remain compatible. New editing is plain text; it is escaped before being stored in the stable `app-notes` document. Fresh Notes are blank, and normalization removes the exact former demonstration sentence while preserving all other user text. The v3→v4 migration consolidates multiple older documents into this one note and keeps their titles as section headings. Empty `records` and related tombstone/UI fields are retained only as backward-compatibility scaffolding for older backups and sync data. There is no Records interface or demonstration record data.
 
-The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry.
+The GitHub owner, repository, branch, and path are copied from `config.cloudSync` during defaults and normalization; imported or legacy state cannot redirect the target. The GitHub token is never part of application state. It lives under a separate per-device storage key and is excluded from export, sync payloads, diagnostics, and visible fields after entry.
 
 ## Persistence and migration
 

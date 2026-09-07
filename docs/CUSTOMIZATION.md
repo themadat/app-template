@@ -31,6 +31,10 @@ The aggregate `svg-converter/app-input/!All/` roll-up is intentionally skipped b
 
 Base theme variables live at the top of `assets/css/app.css`, with fallback colors in `config.themeDefaults`. Settings exposes color mode, button presentation, and one application-wide text scale; it intentionally omits individual color editors, preset themes, and a manual motion override. Reduced motion follows the device preference.
 
+## GitHub Sync target
+
+Set `config.cloudSync.owner`, `repo`, `branch`, and `path` in `assets/js/config.js` for the copied application. Settings presents those values as a compact read-only target and asks the user only for a fine-grained token. State normalization reapplies the configured target so a backup, import, or older saved state cannot silently redirect synchronization.
+
 ## Keyboard shortcuts
 
 Add a visible entry to `SHORTCUTS` in `assets/js/app.js`, add `data-shortcut` to the related control when a hint is useful, and handle the key in `handleGlobalKeydown()`. Ignore shortcuts in editable controls and always retain a visible, keyboard-operable action.
@@ -58,7 +62,7 @@ Avoid generic abstractions until a second real module needs the same behavior.
 
 ## Publish a version
 
-Versions use `major.minor.patch.build`. Increment the fourth component for every completed application update. If a major, minor, or patch value changes, reset the build component to `1` unless another value is required. Add the newest release card first, show its date beside its version in the release log, keep `buildId` equal to the full version, update manifest text if public metadata changed, update the build queries in `index.html`, and set the matching `CACHE_NAME` and `ASSET_VERSION` in `sw.js`. Use the commit subject `Version - Text`, then run the complete checklist in `docs/TESTING.md`.
+Versions use `major.minor.patch.build`. Increment the fourth component for every completed application update. If a major, minor, or patch value changes, reset the build component to `1` unless another value is required. Add the newest release card first, show its date beside its version in the release log, keep `buildId` equal to the full version, update manifest text if public metadata changed, update the build queries in `index.html`, set the matching `CACHE_NAME` and `ASSET_VERSION` in `sw.js`, and keep the version in `.github/workflows/deploy-pages.yml`'s workflow `name` identical so GitHub Mobile notifications show the build. Use the commit subject `Version - Text`, then run the complete checklist in `docs/TESTING.md`.
 
 ## Icons and PWA assets
 

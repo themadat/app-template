@@ -549,7 +549,7 @@ dialog::backdrop { background: rgba(10, 16, 14, .56); backdrop-filter: blur(3px)
 .appearance-footer { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
 .appearance-footer .setting-note { margin: 0; }
 .appearance-footer .button { flex: 0 0 auto; }
-.text-size-control { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .48rem; width: min(360px, 100%); min-width: 240px; }
+.text-size-control { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .48rem; width: 100%; min-width: 0; }
 .text-size-control .size-letter { color: var(--muted); font-weight: 850; line-height: 1; }
 .text-size-control .size-letter.small { font-size: .74rem; }
 .text-size-control .size-letter.large { font-size: 1.12rem; }
@@ -579,13 +579,15 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .compact-github-icon .sf-symbol { width: 1.1rem; height: 1.1rem; }
 .compact-github-copy { display: grid; min-width: 0; }
 .compact-github-copy small { overflow: hidden; color: var(--muted); font-size: .7rem; text-overflow: ellipsis; white-space: nowrap; }
-.compact-sync-status { margin-top: .6rem; padding: .5rem .6rem; }
-.compact-sync-status .sf-symbol { width: 1rem; height: 1rem; }
-.compact-sync-status small { font-size: .7rem; }
-.compact-github-details { margin-top: .5rem; }
-.compact-github-details > summary { display: flex; align-items: center; min-height: 34px; }
-.compact-sync-actions, .compact-sync-now { margin-top: .55rem; }
-.compact-sync-now { justify-content: flex-start; }
+.sync-target-grid { display: grid; grid-template-columns: minmax(96px, .75fr) minmax(120px, .9fr) minmax(78px, .55fr) minmax(210px, 1.8fr); gap: .45rem; margin-top: .65rem; }
+.sync-target-grid input[readonly] { background: var(--surface-2); color: var(--text); font-weight: 750; }
+.sync-token-field { margin-top: .55rem; }
+.sync-remember { display: flex; align-items: center; gap: .45rem; margin-top: .65rem; color: var(--text); font-size: .73rem; font-weight: 750; }
+.sync-remember input { width: 18px; height: 18px; min-height: 0; }
+.sync-remember small { color: var(--muted); font-weight: 500; }
+.compact-sync-actions { align-items: center; margin-top: .65rem; }
+.setting-button-icon { display: grid; flex: 0 0 1rem; place-items: center; width: 1rem; height: 1rem; }
+.setting-button-icon .sf-symbol { width: 1rem; height: 1rem; }
 
 .support-search { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin: -1rem -1rem .9rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line); }
 .help-content { display: grid; gap: .75rem; }
@@ -798,6 +800,8 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .appearance-footer .button { width: 100%; }
   .setting-row > .segmented, .setting-row > select, .setting-row > input[type="range"] { width: 100%; }
   .text-size-control { width: 100%; max-width: none; min-width: 0; }
+  .sync-target-grid { grid-template-columns: 1fr 1fr; }
+  .sync-remember { align-items: flex-start; flex-wrap: wrap; }
   .segmented { overflow-x: auto; }
   .segmented button { flex: 1; }
   .danger-zone { align-items: stretch; flex-direction: column; }

@@ -1088,19 +1088,16 @@
     $("#cloudSyncSettings").hidden = false;
     $("#syncSettingsState").textContent = info.title;
     $("#syncSettingsState").dataset.kind = info.kind;
-    $("#syncSettingsTarget").textContent = cloud.owner && cloud.repo ? cloud.owner + "/" + cloud.repo : "Not configured";
-    $("#syncSettingsSummary").innerHTML = '<span aria-hidden="true">' + icons.markup(info.kind === "danger" ? "close" : info.kind === "success" ? "check" : "sync") + '</span><span><strong>' + u.escapeHtml(info.title) + '</strong><small>' + u.escapeHtml(info.message) + (info.checkedAt ? " Checked " + u.relativeTime(info.checkedAt) + "." : "") + "</small></span>";
+    $("#syncSettingsTarget").textContent = cloud.owner + "/" + cloud.repo;
     setInputValue($("#syncOwner"), cloud.owner);
     setInputValue($("#syncRepo"), cloud.repo);
     setInputValue($("#syncBranch"), cloud.branch);
     setInputValue($("#syncPath"), cloud.path);
     $("#syncRememberToken").checked = cloud.rememberToken;
-    $("#storedTokenLabel").textContent = storage.hasSecret() ? "A token is stored; enter a value only to replace it." : "Required";
+    $("#storedTokenLabel").textContent = storage.hasSecret() ? "A token is stored; enter a value only to replace it." : "A token is required.";
     $("#syncToken").value = "";
-    $("#syncAdvancedFields").open = cloud.advancedOpen || !sync.configured();
-    $("#syncNowSettingsButton").disabled = info.busy || info.state === "offline";
-    $("#syncNowSettingsButton").textContent = info.action;
-    $("#forgetSyncButton").disabled = !sync.configured() && !cloud.owner;
+    $("#syncToken").placeholder = storage.hasSecret() ? "Token stored on this device" : "Enter token";
+    $("#forgetSyncButton").disabled = !storage.hasSecret() && !cloud.baselineHash;
   }
 
   function renderHelp() {
@@ -1220,11 +1217,11 @@
   }
 
   async function forgetSync() {
-    const accepted = await components.confirm({ title: "Forget GitHub on this device?", message: "Repository settings, sync history, and the stored token will be removed. Local notes will stay here.", confirmLabel: "Forget GitHub", danger: true });
+    const accepted = await components.confirm({ title: "Forget GitHub token on this device?", message: "The stored token and sync history will be removed. The app’s fixed repository target and local notes will stay here.", confirmLabel: "Forget token", danger: true });
     if (!accepted) return;
     await sync.forget();
     renderSyncSettings(); renderSyncStatus();
-    components.toast("GitHub settings and token were removed from this device.", { title: "Sync disconnected", kind: "success" });
+    components.toast("The GitHub token and sync history were removed from this device.", { title: "Sync disconnected", kind: "success" });
   }
 
   function syncFormValues() {
@@ -1242,7 +1239,6 @@
     try {
       sync.saveConfiguration(syncFormValues());
       $("#syncToken").value = "";
-      storage.mutate(function (next) { next.modules.cloudSync.advancedOpen = false; }, { touch: false, reason: "sync-settings-view" });
       renderSyncSettings(); renderSyncStatus();
       components.toast("The GitHub connection settings were saved.", { title: "Sync configured", kind: "success" });
       sync.check(true);
@@ -1377,11 +1373,9 @@
       button.addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.enabled = button.dataset.hintsEnabled === "true"; }, { reason: "hints" }); renderHeader(); renderSettings(); });
     });
     $("#restoreHintsButton").addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.dismissed = []; next.ui.dismissedHints = []; }, { reason: "hints" }); renderHeader(); renderSettings(); components.toast("All contextual hints are available again.", { title: "Hints restored", kind: "success" }); });
-    $("#syncAdvancedFields").addEventListener("toggle", function () { storage.mutate(function (next) { next.modules.cloudSync.advancedOpen = $("#syncAdvancedFields").open; }, { touch: false, reason: "sync-settings-view" }); });
     $("#saveSyncButton").addEventListener("click", saveSyncSettings);
     $("#testSyncButton").addEventListener("click", testSyncSettings);
     $("#forgetSyncButton").addEventListener("click", forgetSync);
-    $("#syncNowSettingsButton").addEventListener("click", function (event) { sync.syncNow(event.currentTarget); });
     $("#exportButton").addEventListener("click", portability.exportJson);
     $("#importButton").addEventListener("click", function () { $("#importFileInput").click(); });
     $("#resetPreferencesButton").addEventListener("click", resetPreferences);
@@ -1730,8 +1724,7 @@
     });
     window.addEventListener("app:opensyncsettings", function (event) {
       openSupport("settings", event.detail && event.detail.trigger);
-      $("#syncAdvancedFields").open = true;
-      requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); $("#syncOwner").focus(); });
+      requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); $("#syncToken").focus(); });
     });
     window.addEventListener("app:storageerror", function (event) {
       components.toast(event.detail.message, { title: event.detail.title, kind: "danger", duration: 0, actionLabel: "Export", onAction: portability.exportJson });

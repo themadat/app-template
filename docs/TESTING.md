@@ -19,7 +19,7 @@
 - [ ] In Developer Mode, a minimum label length such as 30 filters the main catalog and reports the matching count; clearing restores the catalog, disabling Developer Mode suspends the filter, and Export overrides is enabled only when local icon changes exist.
 - [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
-- [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
+- [ ] The current four-part version matches the build id, asset queries, service-worker cache, manifest icon queries, architecture example, and deployment workflow name; each release-log date appears beside its version number.
 - [ ] Roadmap search, state/priority/target/effort filters, result count, reset action, and every sort option work inside Settings.
 - [ ] Icon-led Settings, Help, What’s New, Roadmap, Shortcuts, and Developer tabs render in that order and manage focus with vertical and horizontal arrow keys; the main-page What’s New banner exposes V/X, displays a bottom-edge 30-second countdown, and automatically marks itself seen when time expires; the New version available toast exposes R to Force Refresh and X to close, directly and with Shift–Control–Option.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
@@ -30,7 +30,7 @@
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
 - [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
 - [ ] Icon details and metadata editing fill the mobile viewport, wrap long content, keep one scrollable content panel, and present touch-sized group checkboxes and footer actions.
-- [ ] Settings fills the screen and uses one scrolling content surface; Appearance remains compact, System keeps its computer symbol, and the GitHub connection fields stay in the compact expandable setup.
+- [ ] Settings fills the screen and uses one scrolling content surface; Appearance remains compact, its controls fill the available row width, System keeps its computer symbol, and the fixed GitHub target uses two columns without overflow.
 - [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
 ## Keyboard and accessibility
@@ -41,7 +41,7 @@
 - [ ] Holding Shift–Control–Option reveals shortcut hints only for enabled controls in the active page or dialog, and releasing any chord key hides them.
 - [ ] Hovering a shortcut-enabled control shows both its plain key and Shift–Control–Option command.
 - [ ] The desktop category rail remains sticky while the icon results page scrolls, its What it is and How it looks sections remain distinct, and the appearance section is alphabetized at every level: Arrows (Chevron, Chevron Arrow, Triangle, Triangle Arrow), Badged, Building, Circled, Dashed & Dotted (142), Layered & Stacked (88), Rays & Sparkles, Shapes, Slashed, and Squared. Both new filters return only explicitly named dashed/dotted or layer/stack variants, and the metadata editor presents the same appearance order. Category labels share one aligned inset, counts align at the far right, label/count type remains comfortably readable, and expandable rows contain a native-appearance-neutral left-side right/down chevron with an equal-width spacer on leaf rows. Tabs and menu items support arrow-key movement; icon cards support Left/Right/Up/Down plus Home/End without hiding the separate information controls; the separator supports drag/touch plus Left/Right/Home/End resizing and reports its current value; Developer Mode shows the rail percentage only while pointer dragging.
-- [ ] Appearance contains color mode, then button presentation, then one iOS-style text-size slider; there are no Primary/Secondary/status color editors, theme presets, or manual motion controls, the slider updates application and reading text together, and the device reduced-motion setting removes nonessential transitions and animations.
+- [ ] Appearance contains color mode, then symbol-led button presentation, then one iOS-style text-size slider, followed by symbol-led Hints controls and the supplied circular restore symbol; the slider fills the same control width as the segmented toggles and updates the whole application, no redundant Text Size disclaimer remains, and the device reduced-motion setting removes nonessential transitions and animations.
 - [ ] Light and dark themes meet contrast needs; every path in the 42px app icon uses the same width and full opacity before and after theme switching; the favicon geometry remains distinct against its Safari-gray fill at tab size; status always includes text or an accessible label.
 
 ## Persistence, import, and migration
@@ -55,7 +55,8 @@
 
 ## GitHub synchronization
 
-- [ ] Missing configuration opens setup; invalid values show actionable validation.
+- [ ] Owner, repository, branch, and path come from `config.cloudSync`, appear read-only in one desktop row, and cannot be redirected by saved or imported state; Settings shows only Forget, Test, and Save actions below the token and remember choice.
+- [ ] Missing token opens setup; invalid values show actionable validation.
 - [ ] Connection testing distinguishes authentication, permission, missing repository/branch, network, and malformed remote-file failures.
 - [ ] Local-only, remote-only, current, missing-file, first-sync, conflict, offline, and error states have distinct accessible labels and styles.
 - [ ] Conflict choices include merge, upload, download, and cancel; no divergent data is overwritten silently.

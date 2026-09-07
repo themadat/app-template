@@ -4,6 +4,12 @@
   const App = window.LocalApp;
   const config = App.config;
   const u = App.utils;
+  const CLOUD_TARGET = Object.freeze({
+    owner: u.cleanLine(config.cloudSync?.owner, 39),
+    repo: u.cleanLine(config.cloudSync?.repo, 100).replace(/\.git$/i, ""),
+    branch: u.cleanLine(config.cloudSync?.branch || "main", 250) || "main",
+    path: u.cleanLine(config.cloudSync?.path || "data/workspace.json", 500).replace(/^\/+/, "") || "data/workspace.json"
+  });
   const STATUS_IDS = new Set(config.statuses.map(function (status) { return status.id; }));
   const MODULE_IDS = ["roadmap"];
   const ICON_CATEGORIES = App.iconLibrary && Array.isArray(App.iconLibrary.categories) ? App.iconLibrary.categories : [];
@@ -144,10 +150,10 @@
         roadmap: { search: "", state: "all", priority: "all", target: "all", effort: "all", sortBy: "priority", sortDirection: "asc" },
         cloudSync: {
           enabled: config.features.cloudSync,
-          owner: "",
-          repo: "",
-          branch: "main",
-          path: "data/workspace.json",
+          owner: CLOUD_TARGET.owner,
+          repo: CLOUD_TARGET.repo,
+          branch: CLOUD_TARGET.branch,
+          path: CLOUD_TARGET.path,
           rememberToken: true,
           advancedOpen: false,
           baselineTarget: "",
@@ -505,10 +511,10 @@
         },
         cloudSync: {
           enabled: config.features.cloudSync && sourceCloud.enabled !== false,
-          owner: u.cleanLine(sourceCloud.owner, 39),
-          repo: u.cleanLine(sourceCloud.repo, 100).replace(/\.git$/i, ""),
-          branch: u.cleanLine(sourceCloud.branch || "main", 250) || "main",
-          path: u.cleanLine(sourceCloud.path || "data/workspace.json", 500).replace(/^\/+/, "") || "data/workspace.json",
+          owner: CLOUD_TARGET.owner,
+          repo: CLOUD_TARGET.repo,
+          branch: CLOUD_TARGET.branch,
+          path: CLOUD_TARGET.path,
           rememberToken: sourceCloud.rememberToken !== false,
           advancedOpen: sourceCloud.advancedOpen === true,
           baselineTarget: u.cleanLine(sourceCloud.baselineTarget, 800),
