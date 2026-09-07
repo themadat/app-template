@@ -28,11 +28,11 @@ Open `http://localhost:8000`. Use a local server instead of opening `index.html`
 
 ## Start a new application
 
-1. Update identity, version, release notes, help, roadmap data, repository links, and feature flags in `assets/js/config.js`.
-2. Mirror the public name and description in `manifest.webmanifest`, `manifest-dark.webmanifest`, and the fallback metadata in `index.html`.
-3. Leave the default Notes document blank or add intentional starter text in `demoDocuments()` inside `assets/js/core/state.js`.
-4. Keep the committed icon catalog when the new app should retain the full searchable SVG collection, even if you replace the main page. Remove its UI only when the new app does not need icon browsing; the shell, Notes, Settings, and synchronization modules remain independent.
-5. Use `major.minor.patch.build` versions. Increment the fourth number for every completed application update; when intentionally changing major, minor, or patch, reset the build number to `1` unless another value is required. Keep `identity.buildId` equal to the full version, add the matching dated release entry, update the build query values in `index.html`, update `CACHE_NAME` plus `ASSET_VERSION` in `sw.js`, and update the version in the workflow `name` inside `.github/workflows/deploy-pages.yml` together.
+Copy or duplicate this repository, open the copy in Codex, and say `reset`. You can include the identity in the same request—for example, `reset for Trail Log`—or let the workflow derive it from the copied directory and its non-template remote. It asks only for identity details it cannot determine safely.
+
+Reset keeps the reusable local-first shell, Notes, vertical Settings pages, Appearance, Help, What’s New, Roadmap, Shortcuts, storage/recovery, JSON portability, optional GitHub Sync, PWA/offline support, accessibility, responsive behavior, install assets, and Pages workflow. It removes the icon-library product and its roughly 93 MB generated catalog, leaves a blank starter workspace, creates fresh Help and release content, empties the Roadmap and wish ledger, isolates browser storage under the new app identity, rewrites the README and documentation, and starts the copied app at `0.0.1.1`.
+
+The reset does not rewrite Git history, change remotes, commit, push, or deploy. It refuses to transform the canonical template checkout without explicit confirmation. See [`docs/RESET.md`](docs/RESET.md) for the exact contract and acceptance checklist.
 
 ## Project structure
 
@@ -57,7 +57,7 @@ build/icon-library-overrides.json Compiler-consumed permanent name/group/source 
 manifest*.webmanifest          Light and dark install metadata
 sw.js                          Offline shell and update cache
 docs/                          Architecture, components, customization, and test checklists
-context/                       Agent wish, plan, start, and cut workflow
+context/                       Agent reset, wish, plan, start, and cut workflows
 ```
 
 ## Rebuild the SVG icon catalog
@@ -186,6 +186,7 @@ The service worker checks the network first for same-origin application files, a
 
 `AGENTS.md` and `context/LLM_HANDOFF.md` define the repository workflow:
 
+- `reset`: turn a copied repository into a clean `0.0.1.1` application foundation.
 - `wish`: record an idea only.
 - `plan`: investigate and document it only.
 - `start`: implement an approved plan.

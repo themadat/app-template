@@ -1,5 +1,11 @@
 # Customization
 
+## Start from a clean foundation
+
+After copying this repository for a different application, say `reset` in Codex. The workflow removes the icon-library product and generated catalog while preserving the reusable app shell and infrastructure, then starts the new application at `0.0.1.1`. Include the new name in the request when the directory name or remote is not enough to identify it safely. The complete keep/remove/rewrite contract and acceptance checks are in [`RESET.md`](RESET.md).
+
+Reset is intentionally broad. Run it in the copied repository, not the canonical template checkout. It does not rewrite history, change the remote, commit, push, or deploy.
+
 ## Rename the application
 
 Change `identity` in `assets/js/config.js`, then mirror user-visible fallback metadata in `index.html`, `manifest.webmanifest`, and `manifest-dark.webmanifest`. Update repository and support URLs before publishing.

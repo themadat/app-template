@@ -15,7 +15,7 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 - Central identity, versions, and shell settings live in `assets/js/config.js`.
 - Preserve the focused foundation: top bar with centered search, blank main workspace, single Notes modal, demonstrative Roadmap inside Settings, combined floating storage/sync status, local persistence/recovery, and optional GitHub Sync. Do not restore the removed Records interface, multi-note workspace, rich-text editor, or an app-space Roadmap without an explicit request.
 - Keep additions narrow and configurable. The compatibility state may retain legacy record/document fields so older backups and sync copies remain readable.
-- Application versions use `major.minor.patch.build`. Every completed application update increments the fourth `build` number. An explicit major, minor, or patch change resets `build` to `1` unless the user specifies another value. Keep `identity.buildId` identical to the full four-part `identity.version`, add or update the matching dated release entry, update the build queries in `index.html` plus the service-worker cache/build ids, and keep the version in `.github/workflows/deploy-pages.yml`'s workflow `name` identical so GitHub Mobile deployment notifications show it. Wish, plan, and agent-instruction-only edits do not change the app version unless explicitly requested.
+- Application versions use `major.minor.patch.build`. Every completed application update increments the fourth `build` number. An explicit major, minor, or patch change resets `build` to `1` unless the user specifies another value. Keep `identity.buildId` identical to the full four-part `identity.version`, add or update the matching dated release entry, update the build queries in `index.html` plus the service-worker cache/build ids, and keep the version in `.github/workflows/deploy-pages.yml`'s workflow `name` identical so GitHub Mobile deployment notifications show it. Wish, plan, and agent-instruction-only edits do not change the app version unless explicitly requested. The destructive `reset` workflow is the sole exception: it deliberately starts a copied application at `0.0.1.1`.
 - Use semantic HTML, labelled controls, visible focus, safe URLs, and escaped user text.
 - Use the shared inline SVG symbol catalog for interface icons whenever an appropriate symbol exists; do not use emoji or font glyphs for standard controls.
 - Verify proportionally: JavaScript syntax, manifest JSON parsing, `git diff --check`, referenced asset paths, and relevant desktop/mobile/offline workflows.
@@ -25,12 +25,13 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 
 Treat these one-word user requests as repository workflows:
 
+- `reset`: turn a copied repository into a clean new-app foundation at `0.0.1.1`, retaining the reusable shell and infrastructure while removing the icon-library product. Follow the preflight and complete reset contract in `context/LLM_HANDOFF.md` and `docs/RESET.md`; do not run it against the canonical template accidentally.
 - `wish`: capture a scoped idea in `context/WISHES.md`; do not plan or implement it.
 - `plan`: investigate a wish and write or revise `context/WISH-###-<slug>-PLAN.md`; do not implement it.
 - `start`: implement an approved plan, maintain its Resume block, update the app and build versions, and verify the work.
 - `cut`: finalize the active line as a release, update all version/release/cache surfaces, close the wish, and run the full release checklist.
 
-The detailed contracts are in `context/LLM_HANDOFF.md`. Do not silently advance from one lifecycle stage to another.
+The detailed contracts are in `context/LLM_HANDOFF.md`, with the destructive reset checklist in `docs/RESET.md`. Do not silently advance from one lifecycle stage to another.
 
 ## End of turn
 
