@@ -66,8 +66,24 @@
     close: __XMARK
   });
 
+  const CATALOG_SYMBOL_NAMES = Object.freeze({
+    computer: "desktopcomputer",
+    developer: "wrench_and_screwdriver",
+    help: "questionmark_circle",
+    keyboard: "keyboard",
+    moon: "moon",
+    sun: "sun_max"
+  });
+
+  function catalogMarkup(name) {
+    const catalogName = CATALOG_SYMBOL_NAMES[name];
+    if (!catalogName) return "";
+    const catalog = window.LocalApp.iconLibrary?.icons || [];
+    return catalog.find(function (icon) { return icon.name === catalogName; })?.svg || "";
+  }
+
   function markup(name) {
-    return SYMBOLS[name] || "";
+    return SYMBOLS[name] || catalogMarkup(name);
   }
 
   function set(target, name) {

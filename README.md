@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.59` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.60` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -10,8 +10,8 @@ The included product surface is intentionally focused:
 - Full-width responsive catalog of 7,281 deduplicated SVG icons gathered from the configured local sources, including 7,152 source files for each native Ultra, Light, Medium, Bold, and Black set.
 - Compact 132–140px Symbol/Custom cards sized for uninterrupted 20-character names beside a sticky, horizontally resizable filter rail with a persistent Ultra/Light/Medium/Bold/Black SF Symbol weight selector with 1/3/5/7/9 shortcuts and categories split into **What it is** and **How it looks**. A selects All, while C clears search plus every active category, type, source, and developer label-length filter. Semantic destinations include Recreation with Games and Sport children, Transportation with an Automotive child, Geography with Countries, Regions, Mapping, and Places children, Development, Energy & Power, Entertainment & Media, Indices, Celebrations & Awards, Clothing & Personal Items, Education & Science, Home & Appliances, Apps & Branding, Devices & Connectivity, nested Text Formatting, and Nature with Animals & Plants and Weather children. The alphabetized appearance set includes Arrows with Chevron, Chevron Arrow, Triangle, and Triangle Arrow children, plus Badged, Building, Circled, Dashed & Dotted, Layered & Stacked, Rays & Sparkles, Shapes, Slashed, and Squared. The catalog also provides semantic search tags, persistent collapsible branches, editable names/types/groups/filter sources, right-click group removal with Undo, compact override export, source details, module shortcuts, 500-icon batches, and one-click SVG copying.
 - Single plain-text Notes modal that starts empty and autosaves locally.
-- Replaceable Roadmap inside Settings with search, view filters, and sorting.
-- Settings, searchable Help, What’s New, release history, shortcut reference, and Roadmap views.
+- Replaceable Roadmap inside Settings with search, state/priority/target/effort filters, live result count, reset, and sorting.
+- Icon-led vertical Settings navigation with compact Appearance and GitHub setup, separate collapsible release history and Roadmap views, searchable Help, and a shortcut reference below Roadmap.
 - Optional GitHub Contents API synchronization with explicit conflict choices and manual JSON backup/restore.
 - Contextual hints, toast and live announcements, keyboard shortcuts, including V/X What’s New banner actions and a visible 30-second auto-dismiss countdown, shortcut-hint mode, and hidden Developer Mode with minimum-label-length filtering.
 - Installable offline PWA shell with light/dark assets and a bottom new-version toast with R/X Force Refresh and Close shortcuts.
@@ -191,4 +191,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.59 - Isolate catalog styles`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.60 - Refresh settings experience`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

@@ -29,7 +29,6 @@
   const ICON_WEIGHT_STRENGTH = Object.freeze({ ultralight: 1, light: 3, medium: 5, bold: 7, black: 9 });
   const ICON_WEIGHT_MORPHOLOGY_PER_STEP = 0.115;
   const weightedIconSvgCache = new Map();
-  let versionView = "released";
   let hintModifierActive = false;
   let appIconHoldTimer = 0;
   let appIconHoldHandled = false;
@@ -287,12 +286,16 @@
 
   function filteredRoadmap(overrides) {
     const moduleState = state().modules.roadmap;
-    const filters = Object.assign({ search: moduleState.search, state: moduleState.state, sortBy: moduleState.sortBy, sortDirection: moduleState.sortDirection }, overrides || {});
+    const filters = Object.assign({ search: moduleState.search, state: moduleState.state, priority: moduleState.priority, target: moduleState.target, effort: moduleState.effort, sortBy: moduleState.sortBy, sortDirection: moduleState.sortDirection }, overrides || {});
     const query = String(filters.search || "").trim().toLowerCase();
     const direction = filters.sortDirection === "desc" ? -1 : 1;
     const priority = function (item) { return Number(item.priority) || 99; };
     return config.roadmap.filter(function (item) {
-      return (filters.state === "all" || item.state === filters.state) && (!query || (item.title + " " + item.description + " " + item.target).toLowerCase().includes(query));
+      return (filters.state === "all" || item.state === filters.state)
+        && (filters.priority === "all" || String(item.priority) === String(filters.priority))
+        && (filters.target === "all" || item.target === filters.target)
+        && (filters.effort === "all" || String(item.effort) === String(filters.effort))
+        && (!query || (item.title + " " + item.description + " " + item.target).toLowerCase().includes(query));
     }).slice().sort(function (a, b) {
       let compared = 0;
       if (filters.sortBy === "priority") compared = priority(a) - priority(b);
@@ -1015,7 +1018,7 @@
       storage.mutate(function (next) { next.modules.roadmap.search = config.roadmap.find(function (item) { return item.id === id; })?.title || ""; }, { reason: "roadmap-search" });
       openSupport("roadmap", $("#globalSearch"));
     }
-    else if (type === "release") { versionView = "released"; openSupport("releases"); }
+    else if (type === "release") openSupport("releases");
     $("#globalSearchResults").hidden = true;
   }
 
@@ -1070,8 +1073,7 @@
     $$('[data-theme-mode]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.themeMode === appearance.mode)); });
     renderTextSizeControl();
     $$('[data-button-style]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.buttonStyle === preferences.controls.buttonStyle)); });
-    $("#hintsToggle").setAttribute("aria-pressed", String(preferences.hints.enabled));
-    $("#hintsToggle").textContent = preferences.hints.enabled ? "On" : "Off";
+    $$('[data-hints-enabled]').forEach(function (button) { button.setAttribute("aria-pressed", String((button.dataset.hintsEnabled === "true") === preferences.hints.enabled)); });
     renderSyncSettings();
   }
 
@@ -1086,6 +1088,7 @@
     $("#cloudSyncSettings").hidden = false;
     $("#syncSettingsState").textContent = info.title;
     $("#syncSettingsState").dataset.kind = info.kind;
+    $("#syncSettingsTarget").textContent = cloud.owner && cloud.repo ? cloud.owner + "/" + cloud.repo : "Not configured";
     $("#syncSettingsSummary").innerHTML = '<span aria-hidden="true">' + icons.markup(info.kind === "danger" ? "close" : info.kind === "success" ? "check" : "sync") + '</span><span><strong>' + u.escapeHtml(info.title) + '</strong><small>' + u.escapeHtml(info.message) + (info.checkedAt ? " Checked " + u.relativeTime(info.checkedAt) + "." : "") + "</small></span>";
     setInputValue($("#syncOwner"), cloud.owner);
     setInputValue($("#syncRepo"), cloud.repo);
@@ -1119,20 +1122,15 @@
     return '<section class="help-section"><h3>Support links</h3><div class="support-links">' + links.map(function (item) { return '<button type="button" class="safe-link-button" data-open-url="' + u.escapeHtml(u.safeUrl(item.url)) + '">' + u.escapeHtml(item.label) + ' <span aria-hidden="true">↗</span></button>'; }).join("") + "</div></section>";
   }
 
-  function releaseCard(release) {
+  function releaseCard(release, index) {
     const section = function (title, values) {
       return values && values.length ? '<div class="release-section"><h5>' + title + "</h5><ul>" + values.map(function (value) { return "<li>" + u.escapeHtml(value) + "</li>"; }).join("") + "</ul></div>" : "";
     };
-    return '<article class="release-card"><header><div class="release-version-line"><span class="version-pill">v' + u.escapeHtml(release.version) + '</span><time datetime="' + u.escapeHtml(release.date) + '">' + u.dateLabel(release.date) + '</time></div><h4>' + u.escapeHtml(release.title) + '</h4></header><p>' + u.escapeHtml(release.summary) + '</p><div class="release-sections">' + section("Features", release.features) + section("Improvements", release.improvements) + section("Fixes", release.fixes) + section("Known issues", release.knownIssues) + "</div></article>";
+    return '<details class="release-card"' + (index === 0 ? " open" : "") + '><summary><div class="release-version-line"><span class="version-pill">v' + u.escapeHtml(release.version) + '</span><time datetime="' + u.escapeHtml(release.date) + '">' + u.dateLabel(release.date) + '</time></div><h4>' + u.escapeHtml(release.title) + '</h4></summary><div class="release-card-content"><p>' + u.escapeHtml(release.summary) + '</p><div class="release-sections">' + section("Features", release.features) + section("Improvements", release.improvements) + section("Fixes", release.fixes) + section("Known issues", release.knownIssues) + "</div></div></details>";
   }
 
   function renderReleases() {
-    $$('[data-version-view]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.versionView === versionView)); });
-    if (versionView === "released") $("#releaseContent").innerHTML = config.releases.map(releaseCard).join("");
-    else {
-      const items = config.roadmap.filter(function (item) { return item.state === versionView; });
-      $("#releaseContent").innerHTML = items.length ? items.map(roadmapCard).join("") : emptyState("Nothing here", "This demonstration view has no matching entries.");
-    }
+    $("#releaseContent").innerHTML = config.releases.map(releaseCard).join("");
   }
 
   function renderShortcuts() {
@@ -1150,8 +1148,15 @@
     const moduleState = state().modules.roadmap;
     setInputValue($("#supportRoadmapSearch"), moduleState.search);
     $("#supportRoadmapState").value = moduleState.state;
+    $("#supportRoadmapPriority").value = moduleState.priority;
+    const targetSelect = $("#supportRoadmapTarget");
+    const targetOptions = Array.from(new Set(config.roadmap.map(function (item) { return item.target; }))).sort(function (a, b) { return String(a).localeCompare(String(b), undefined, { numeric: true }); });
+    targetSelect.innerHTML = '<option value="all">All targets</option>' + targetOptions.map(function (target) { return '<option value="' + u.escapeHtml(target) + '">' + u.escapeHtml(target) + "</option>"; }).join("");
+    targetSelect.value = moduleState.target;
+    $("#supportRoadmapEffort").value = moduleState.effort;
     $("#supportRoadmapSort").value = moduleState.sortBy;
     const items = filteredRoadmap();
+    $("#supportRoadmapCount").textContent = items.length + " " + (items.length === 1 ? "item" : "items");
     $("#supportRoadmapList").innerHTML = items.length ? items.map(roadmapCard).join("") : emptyState("No roadmap matches", "Try another search or view.");
   }
 
@@ -1192,7 +1197,7 @@
   }
 
   function clearRoadmapFilters() {
-    storage.mutate(function (next) { next.modules.roadmap.search = ""; next.modules.roadmap.state = "all"; next.modules.roadmap.sortBy = "priority"; }, { reason: "clear-roadmap-filters" });
+    storage.mutate(function (next) { next.modules.roadmap.search = ""; next.modules.roadmap.state = "all"; next.modules.roadmap.priority = "all"; next.modules.roadmap.target = "all"; next.modules.roadmap.effort = "all"; next.modules.roadmap.sortBy = "priority"; }, { reason: "clear-roadmap-filters" });
     renderSupportRoadmap();
   }
 
@@ -1356,20 +1361,21 @@
       }
       const style = event.target.closest("[data-button-style]");
       if (style) { storage.mutate(function (next) { next.preferences.controls.buttonStyle = style.dataset.buttonStyle; }, { reason: "button-style" }); applyAppearance(); renderSettings(); return; }
-      const versionButton = event.target.closest("[data-version-view]");
-      if (versionButton) { versionView = versionButton.dataset.versionView; renderReleases(); return; }
     });
     dialog.addEventListener("keydown", function (event) {
       const tab = event.target.closest("[role='tab']");
-      if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      if (!tab || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
       event.preventDefault();
       const tabs = $$('[data-support-tab]:not([hidden])');
       const index = tabs.indexOf(tab);
-      const target = event.key === "Home" ? tabs[0] : event.key === "End" ? tabs[tabs.length - 1] : tabs[(index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+      const forward = event.key === "ArrowRight" || event.key === "ArrowDown";
+      const target = event.key === "Home" ? tabs[0] : event.key === "End" ? tabs[tabs.length - 1] : tabs[(index + (forward ? 1 : -1) + tabs.length) % tabs.length];
       target.focus(); switchSupportTab(target.dataset.supportTab);
     });
     $("#textSizeSlider").addEventListener("input", function (event) { storage.mutate(function (next) { next.preferences.appearance.textScale = Number(event.target.value) / 100; }, { reason: "appearance" }); applyAppearance(); renderTextSizeControl(); });
-    $("#hintsToggle").addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.enabled = !next.preferences.hints.enabled; }, { reason: "hints" }); renderHeader(); renderSettings(); });
+    $$('[data-hints-enabled]').forEach(function (button) {
+      button.addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.enabled = button.dataset.hintsEnabled === "true"; }, { reason: "hints" }); renderHeader(); renderSettings(); });
+    });
     $("#restoreHintsButton").addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.dismissed = []; next.ui.dismissedHints = []; }, { reason: "hints" }); renderHeader(); renderSettings(); components.toast("All contextual hints are available again.", { title: "Hints restored", kind: "success" }); });
     $("#syncAdvancedFields").addEventListener("toggle", function () { storage.mutate(function (next) { next.modules.cloudSync.advancedOpen = $("#syncAdvancedFields").open; }, { touch: false, reason: "sync-settings-view" }); });
     $("#saveSyncButton").addEventListener("click", saveSyncSettings);
@@ -1389,10 +1395,23 @@
       storage.mutate(function (next) { next.modules.roadmap.state = event.target.value; }, { reason: "roadmap-filter" });
       renderSupportRoadmap();
     });
+    $("#supportRoadmapPriority").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.roadmap.priority = event.target.value; }, { reason: "roadmap-filter" });
+      renderSupportRoadmap();
+    });
+    $("#supportRoadmapTarget").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.roadmap.target = event.target.value; }, { reason: "roadmap-filter" });
+      renderSupportRoadmap();
+    });
+    $("#supportRoadmapEffort").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.roadmap.effort = event.target.value; }, { reason: "roadmap-filter" });
+      renderSupportRoadmap();
+    });
     $("#supportRoadmapSort").addEventListener("change", function (event) {
       storage.mutate(function (next) { next.modules.roadmap.sortBy = event.target.value; }, { reason: "roadmap-sort" });
       renderSupportRoadmap();
     });
+    $("#resetSupportRoadmapFilters").addEventListener("click", clearRoadmapFilters);
     $("#restoreRecoveryButton").addEventListener("click", restoreRecovery);
     $("#saveRecoveryButton").addEventListener("click", saveRecoveryCopy);
     $("#developerLabelLengthFilter").addEventListener("change", function (event) {

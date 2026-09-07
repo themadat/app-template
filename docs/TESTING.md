@@ -20,8 +20,8 @@
 - [ ] Copying shows visible and announced success, and clipboard denial provides an actionable failure message.
 - [ ] Notes opens blank as one modal, focuses its textarea, autosaves plain text, has no Done button or autosave heading, appears in global search, and restores focus when closed.
 - [ ] The current four-part version matches the build id, asset queries, and service-worker cache; each release-log date appears beside its version number.
-- [ ] Roadmap search, Released/Planned/Wishlist filters, and every sort option work inside Settings.
-- [ ] Settings, Help, What’s New, Shortcuts, Roadmap, and Developer tabs render and manage focus; the main-page What’s New banner exposes V/X, displays a bottom-edge 30-second countdown, and automatically marks itself seen when time expires; the New version available toast exposes R to Force Refresh and X to close, directly and with Shift–Control–Option.
+- [ ] Roadmap search, state/priority/target/effort filters, result count, reset action, and every sort option work inside Settings.
+- [ ] Icon-led Settings, Help, What’s New, Roadmap, Shortcuts, and Developer tabs render in that order and manage focus with vertical and horizontal arrow keys; the main-page What’s New banner exposes V/X, displays a bottom-edge 30-second countdown, and automatically marks itself seen when time expires; the New version available toast exposes R to Force Refresh and X to close, directly and with Shift–Control–Option.
 - [ ] Toasts and polite/assertive announcements communicate completion without relying on color.
 
 ## Tablet and mobile
@@ -30,7 +30,7 @@
 - [ ] Top controls remain touch-sized and form fields do not trigger unwanted input zoom.
 - [ ] Notes fills the mobile viewport without horizontal overflow or nested page scrolling.
 - [ ] Icon details and metadata editing fill the mobile viewport, wrap long content, keep one scrollable content panel, and present touch-sized group checkboxes and footer actions.
-- [ ] Settings fills the screen and uses one scrolling content surface.
+- [ ] Settings fills the screen and uses one scrolling content surface; Appearance remains compact, System keeps its computer symbol, and the GitHub connection fields stay in the compact expandable setup.
 - [ ] Floating Sync stays inside safe areas and does not obscure required controls.
 
 ## Keyboard and accessibility

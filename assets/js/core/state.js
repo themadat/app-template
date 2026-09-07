@@ -141,7 +141,7 @@
         iconLibrary: { category: "all", kind: "all", source: "all", weight: "bold", sidebarWidth: 204, minimumLabelLength: 0, collapsedCategories: ["badged"], overrides: [] },
         records: { showDemoFields: true },
         documents: { enabled: config.features.documents },
-        roadmap: { search: "", state: "all", sortBy: "priority", sortDirection: "asc" },
+        roadmap: { search: "", state: "all", priority: "all", target: "all", effort: "all", sortBy: "priority", sortDirection: "asc" },
         cloudSync: {
           enabled: config.features.cloudSync,
           owner: "",
@@ -497,6 +497,9 @@
         roadmap: {
           search: u.cleanLine(sourceRoadmap.search, 200),
           state: ["all", "released", "planned", "wishlist"].includes(sourceRoadmap.state) ? sourceRoadmap.state : "all",
+          priority: ["all", "1", "2", "3"].includes(String(sourceRoadmap.priority)) ? String(sourceRoadmap.priority) : "all",
+          target: sourceRoadmap.target ? u.cleanLine(sourceRoadmap.target, 80) : "all",
+          effort: ["all", "1", "2", "3", "4"].includes(String(sourceRoadmap.effort)) ? String(sourceRoadmap.effort) : "all",
           sortBy: ["priority", "target", "effort", "age", "title"].includes(sourceRoadmap.sortBy) ? sourceRoadmap.sortBy : "priority",
           sortDirection: sourceRoadmap.sortDirection === "desc" ? "desc" : "asc"
         },
