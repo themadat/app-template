@@ -37,6 +37,8 @@ Base theme variables live at the top of `assets/css/app.css`, with fallback colo
 
 Set `config.cloudSync.owner`, `repo`, `branch`, and `path` in `assets/js/config.js` for the copied application. Settings presents those values as a compact read-only target and asks the user only for a fine-grained token. State normalization reapplies the configured target so a backup, import, or older saved state cannot silently redirect synchronization.
 
+For a reset that retains sync, use owner `themadat`, repository `app-data`, branch `main`, and a unique `data/<app-slug>.json` path. Create the file from the [`app-data/data` folder](https://github.com/themadat/app-data/tree/main/data). Create or manage the app’s token from [Fine-grained personal access tokens](https://github.com/settings/personal-access-tokens), select only the `app-data` repository, and grant only **Contents: Read and write**. Tokens are configured per browser/device and must never be committed or placed in the shared JSON file. The complete setup and verification sequence is in [`RESET.md`](RESET.md#provision-the-app-data-file-and-token).
+
 ## Keyboard shortcuts
 
 Add a visible entry to `SHORTCUTS` in `assets/js/app.js`, add `data-shortcut` to the related control when a hint is useful, and handle the key in `handleGlobalKeydown()`. Ignore shortcuts in editable controls and always retain a visible, keyboard-operable action.

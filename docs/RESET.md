@@ -59,6 +59,21 @@ Do not remove the application icon assets, PWA icons, or the interface SVG symbo
 - Rewrite `README.md`, `docs/ARCHITECTURE.md`, `docs/COMPONENTS.md`, `docs/CUSTOMIZATION.md`, `docs/TESTING.md`, `docs/GIT-SETUP.md`, `AGENTS.md`, and the product description/invariants in `context/LLM_HANDOFF.md` around the new identity and actual retained surface. Keep this reset contract available for later copies, but remove historical icon-product details from it once their exact filenames no longer exist.
 - Replace icon-specific sample backups with generic starter examples or remove them together with every reference.
 
+## Provision the app data file and token
+
+Complete these GitHub Sync steps for every reset that retains the optional sync module:
+
+1. Derive a unique lowercase filename from the confirmed app slug, such as `data/trail-log.json`. Do not reuse another app’s file.
+2. Open the [`app-data/data` folder](https://github.com/themadat/app-data/tree/main/data), create that JSON file on `main`, initialize it with `{}`, and commit it. The app’s first upload replaces this starter object with its normalized sync payload.
+3. Set `config.cloudSync` to owner `themadat`, repository `app-data`, branch `main`, and the new `data/<app-slug>.json` path. Keep the target config-driven and read-only in Settings.
+4. Open [Fine-grained personal access tokens](https://github.com/settings/personal-access-tokens) and create a token named for the app, using `themadat` as the resource owner.
+5. Under **Repository access**, choose **Only select repositories** and select only `app-data`.
+6. Under **Repository permissions**, set **Contents** to **Read and write**. Do not grant broader permissions merely for application sync.
+7. Copy the token when GitHub displays it, paste it into **Settings → Storage & GitHub**, choose whether this browser should remember it, then run **Test** and **Save**. The token is a secret: never place it in the data file, source, documentation, backups, commits, issues, or chat.
+8. Configure the token separately in each browser or installed copy that will sync. The same app-scoped token can be entered on both laptops, or separate tokens can be used when independent revocation is preferred.
+
+Do not mark sync setup complete until the fixed target displays `themadat/app-data/main/data/<app-slug>.json`, the file exists, **Test** succeeds, and a first upload/download round trip succeeds.
+
 ## Preserve the base interface symbols
 
 Before deleting any generated icon-library file, inventory all remaining symbol consumers: every `data-symbol` value in HTML, every `icons.markup()` and `icons.set()` call in JavaScript, symbols requested by shared components, and symbols referenced by configuration data. Include the top bar, search, Notes, Settings tabs, Appearance choices, Hints restore action, Help, What’s New, Roadmap, Shortcuts, Developer, storage status, GitHub Sync status and actions, backup/restore/reset controls, dialogs, menus, toasts, and the PWA update flow.
@@ -69,7 +84,7 @@ Resetting a copied application is the sole versioning exception that may move a 
 
 ## Boundaries
 
-Reset does not rewrite or squash Git history, change branches or remotes, create a GitHub repository, change GitHub Pages settings, commit, push, or deploy. Perform any of those only after a separate explicit request.
+Reset does not rewrite or squash Git history, change branches or remotes, create a GitHub repository, change GitHub Pages settings, commit, push, or deploy. Perform any of those only after a separate explicit request. The `app-data` file and fine-grained token are user-facing checklist items: configure the fixed target locally, direct the user to the supplied GitHub links, verify completion, and never ask the user to paste a token into chat. Do not mutate the separate `app-data` repository on the user’s behalf unless they explicitly request that external write.
 
 Reset also does not invent the new product’s data model or first feature. The output is a blank, working foundation ready for `wish`, `plan`, or a direct scoped implementation request.
 
@@ -80,9 +95,10 @@ Reset also does not invent the new product’s data model or first feature. The 
 3. Confirm all public identity, storage namespaces, manifests, asset queries, cache ids, release data, and workflow version labels agree with the explicitly confirmed app name and `0.0.1.1`. Search for the old app name, short name, slug, repository placeholders, and template storage prefixes.
 4. Confirm the header icon, favicon, light/dark install icons, maskable icons, touch icons, and splash assets all use the supplied artwork and render correctly at their target sizes. No App Template placeholder geometry may remain.
 5. Confirm every remaining `data-symbol`, `icons.markup()`, `icons.set()`, component action symbol, and config-provided symbol resolves from the self-contained `assets/js/icons.js` after all generated catalog scripts are absent. Confirm no `catalogMarkup`, `CATALOG_SYMBOL_NAMES`, or `LocalApp.iconLibrary` dependency remains in the interface-symbol helper.
-6. Confirm What’s New has exactly one initial release, Roadmap has zero items and a useful empty state, Help contains only accurate retained topics, Notes starts blank, and `context/WISHES.md` starts at `WISH-001`.
-7. Run JavaScript syntax checks for every remaining script, parse both manifests, run `git diff --check`, and verify every local path referenced by HTML, manifests, CSS, config, and the service worker exists.
-8. Serve the repository locally and test desktop and mobile: startup without console errors, blank main workspace, header, Notes autosave, every Settings page, every retained SVG control, appearance controls, empty Roadmap, release/help search, shortcut hints, backup/import, combined local/GitHub status, PWA registration, update flow, offline reload, visible focus, reduced motion, and no horizontal overflow.
-9. Stop the local server. Review `git status --short` and the deletion list before handing off the change.
+6. If GitHub Sync remains enabled, confirm `config.cloudSync` targets `themadat/app-data/main/data/<app-slug>.json`, that the file exists, and that a token scoped only to `app-data` with **Contents: Read and write** passes Test plus a first sync round trip. Confirm no token appears in tracked files, exported JSON, diagnostics, or logs.
+7. Confirm What’s New has exactly one initial release, Roadmap has zero items and a useful empty state, Help contains only accurate retained topics, Notes starts blank, and `context/WISHES.md` starts at `WISH-001`.
+8. Run JavaScript syntax checks for every remaining script, parse both manifests, run `git diff --check`, and verify every local path referenced by HTML, manifests, CSS, config, and the service worker exists.
+9. Serve the repository locally and test desktop and mobile: startup without console errors, blank main workspace, header, Notes autosave, every Settings page, every retained SVG control, appearance controls, empty Roadmap, release/help search, shortcut hints, backup/import, combined local/GitHub status, PWA registration, update flow, offline reload, visible focus, reduced motion, and no horizontal overflow.
+10. Stop the local server. Review `git status --short` and the deletion list before handing off the change.
 
 The reset is complete only when the copied app works independently without loading, documenting, testing, or storing any part of the former icon-library product.

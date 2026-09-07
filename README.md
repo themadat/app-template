@@ -130,6 +130,8 @@ Use [`docs/GIT-SETUP.md`](docs/GIT-SETUP.md) for copy-paste commands that config
 
 Set the fixed repository target in `config.cloudSync` inside `assets/js/config.js`, then open **Settings → Storage & GitHub** and provide a fine-grained personal access token limited to that repository with **Contents: Read and write** permission. Owner, repository, branch, and JSON file path appear together as read-only fields so saved or imported application state cannot redirect synchronization.
 
+New apps created with `reset` use a unique JSON file in [`themadat/app-data/data`](https://github.com/themadat/app-data/tree/main/data). Create the app-scoped credential from [GitHub’s fine-grained token settings](https://github.com/settings/personal-access-tokens), select only the `app-data` repository, and grant **Contents: Read and write**. The reset checklist records the exact file, target, token, and first-sync verification sequence.
+
 The token stays in browser storage on that device, is never included in exports or diagnostics, and is not displayed again. The Sync button checks local and remote state before choosing upload, download, merge, or conflict handling. JSON export/import remains the fallback.
 
 ## Host as a static site
