@@ -515,8 +515,9 @@ dialog::backdrop { background: rgba(10, 16, 14, .56); backdrop-filter: blur(3px)
 .choice-actions .button span { color: var(--muted); font-size: .72rem; font-weight: 500; }
 
 .support-dialog { width: min(1080px, calc(100vw - 2rem)); height: min(88svh, 860px); max-height: 88svh; }
+.support-dialog > .dialog-shell { height: 100%; }
 .support-header { min-height: 68px; }
-.support-layout { display: grid; grid-template-columns: 180px minmax(0, 1fr); flex: 1; min-height: 0; }
+.support-layout { display: grid; grid-template-columns: 180px minmax(0, 1fr); flex: 1; min-height: 0; overflow: hidden; }
 .support-tabs { display: flex; flex-direction: column; gap: .25rem; min-width: 0; padding: .65rem; border-right: 1px solid var(--line); background: var(--surface-2); }
 .support-tabs button { display: flex; align-items: center; gap: .55rem; min-height: 42px; padding: .5rem .65rem; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); font-weight: 750; text-align: left; }
 .support-tab-icon { display: grid; flex: 0 0 1.15rem; place-items: center; width: 1.15rem; height: 1.15rem; }
@@ -788,11 +789,14 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .dialog-body { padding-bottom: calc(1rem + var(--safe-bottom)); }
   .dialog-shell, dialog > form { height: 100%; max-height: 100dvh; }
   .form-grid { grid-template-columns: 1fr; }
-  .support-layout { display: flex; flex-direction: column; min-height: 0; }
-  .support-tabs { flex: 0 0 auto; flex-direction: row; overflow-x: auto; padding: .45rem; border-right: 0; border-bottom: 1px solid var(--line); }
+  dialog.support-dialog { overflow-y: auto; overscroll-behavior-y: contain; -webkit-overflow-scrolling: touch; }
+  .support-dialog > .dialog-shell { height: auto; min-height: 100%; max-height: none; overflow: visible; }
+  .support-dialog .support-header { position: sticky; z-index: 8; top: 0; }
+  .support-layout { display: block; flex: 0 0 auto; min-height: 0; overflow: visible; }
+  .support-tabs { flex: 0 0 auto; flex-direction: row; overflow-x: auto; overflow-y: hidden; padding: .45rem; border-right: 0; border-bottom: 1px solid var(--line); }
   .support-tabs button { flex: 0 0 auto; min-height: 40px; white-space: nowrap; }
-  .support-panels { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
-  .support-panel { padding: .7rem; }
+  .support-panels { min-height: 0; overflow: visible; }
+  .support-panel { min-height: 0; padding: .7rem; }
   .support-search { margin: -.7rem -.7rem .7rem; padding: .55rem .7rem; }
   .setting-row { align-items: flex-start; flex-direction: column; gap: .55rem; }
   .appearance-settings .setting-row { grid-template-columns: 1fr; }

@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.61",
-      buildId: "0.0.1.61",
+      version: "0.0.1.62",
+      buildId: "0.0.1.62",
       repository: {
         label: "Project repository",
         url: "https://github.com/OWNER/REPOSITORY"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.62",
+        date: "2026-09-07T06:00:53.000Z",
+        title: "Refine button symbols and Settings scrolling",
+        summary: "Button Style uses a purpose-built matched symbol set, and mobile Settings now scrolls as one complete screen.",
+        features: ["Supplied square-and-A artwork for Icons + Text with matching square-only and A-only variants"],
+        improvements: ["One full-screen mobile Settings scroll surface with a sticky close header", "Settings tabs reset the active scroll surface to the top"],
+        fixes: ["Removed unrelated catalog artwork from the Button Style choices", "Bottom Settings controls remain reachable without relying on a nested panel scroller"],
+        knownIssues: ["GitHub Sync requires a user-provided fine-grained token."]
+      },
       {
         version: "0.0.1.61",
         date: "2026-09-07T05:11:32.000Z",

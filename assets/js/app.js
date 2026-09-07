@@ -1050,6 +1050,8 @@
     else if (tab === "developer") renderDeveloper();
     else renderSettings();
     $(".support-panels")?.scrollTo({ top: 0, behavior: "auto" });
+    $("#supportDialog")?.scrollTo({ top: 0, behavior: "auto" });
+    $("#supportDialog .dialog-shell")?.scrollTo({ top: 0, behavior: "auto" });
   }
 
   function renderTextSizeControl() {
