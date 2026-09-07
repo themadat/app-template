@@ -178,11 +178,11 @@
       <header class="dialog-header"><div><span class="eyebrow">Icon metadata</span><h2 id="iconEditDialogTitle">Edit icon</h2></div><button type="button" class="icon-button" data-close-dialog="iconEditDialog" aria-label="Close icon editor"><span aria-hidden="true" data-symbol="close"></span></button></header>
       <div class="dialog-body icon-edit-body">
         <div class="icon-edit-hero"><div id="iconEditPreview" class="icon-edit-preview" aria-hidden="true"></div><p>Edit the same Name and Type fields shown in Icon details, then choose its filter source and groups.</p></div>
-        <div class="icon-metadata-fields">
+        <div class="icon-metadata-fields icon-edit-primary-fields">
           <label for="iconEditLabel"><span>Name</span><input id="iconEditLabel" type="text" maxlength="120" autocomplete="off" required aria-describedby="iconEditValidation"></label>
           <label for="iconEditType"><span>Type</span><select id="iconEditType"><option value="sf-symbol">Symbol</option><option value="custom">Custom</option></select></label>
+          <label for="iconEditSource"><span>Source</span><select id="iconEditSource" aria-describedby="iconEditSourceHelp"></select><small id="iconEditSourceHelp">Changes filtering; original files stay in Icon details.</small></label>
         </div>
-        <label class="icon-edit-name" for="iconEditSource"><span>Source</span><select id="iconEditSource" aria-describedby="iconEditSourceHelp"></select><small id="iconEditSourceHelp">This changes source filtering while the original files remain listed in Icon details.</small></label>
         <fieldset class="icon-edit-fieldset">
           <legend>Groups</legend>
           <p>Select any number of groups. Choosing a badge subtype also chooses Badged.</p>
