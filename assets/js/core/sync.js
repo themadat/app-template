@@ -51,7 +51,7 @@
     checking: false,
     remoteSha: "",
     remoteHash: "",
-    remoteState: null,
+    remoteState: null, remoteLegacy: false,
     remoteMissing: false,
     checkedAt: "",
     error: "",
@@ -133,7 +133,7 @@
       checking: false,
       remoteSha: "",
       remoteHash: "",
-      remoteState: null,
+      remoteState: null, remoteLegacy: false,
       remoteMissing: false,
       checkedAt: "",
       error: "",
@@ -218,8 +218,8 @@
     }
     let parsed;
     try { parsed = JSON.parse(decoded); } catch (error) { throw new Error("The GitHub data file is not valid JSON."); }
-    const prepared = model.prepare(parsed);
-    return { state: prepared.state, sha: file.sha, migrations: prepared.migrations };
+    const prepared = model.prepareSync(parsed);
+    return { state: prepared.state, sha: file.sha, legacy: prepared.legacy };
   }
 
   function utf8Base64(text) {
@@ -248,7 +248,7 @@
   }
 
   function localHash() {
-    return u.fingerprint(model.syncPayload(storage.getState()));
+    return model.syncHash(storage.getState());
   }
 
   function rememberBaseline(sha, hash) {
@@ -267,7 +267,7 @@
   function reconciliation() {
     const cloud = settings();
     const hash = localHash();
-    const baselineMatchesTarget = cloud.baselineTarget === target(cloud) && Boolean(cloud.baselineHash);
+    const baselineMatchesTarget = cloud.baselineTarget === target(cloud) && cloud.baselineHash.startsWith("data-v1:");
     if (runtime.remoteMissing) return baselineMatchesTarget ? "local" : "first-sync";
     if (!runtime.remoteSha || !runtime.remoteHash) return baselineMatchesTarget && hash !== cloud.baselineHash ? "local" : "unknown";
     if (hash === runtime.remoteHash) return "current";
@@ -293,14 +293,9 @@
     return CloudSyncState.connected;
   }
 
-  function newerCopyText() {
+  function copyComparisonText() {
     if (!runtime.remoteState) return "The remote file has not been created yet.";
-    const localTime = Date.parse(storage.getState().meta.updatedAt);
-    const remoteTime = Date.parse(runtime.remoteState.meta.updatedAt);
-    if (!Number.isFinite(localTime) || !Number.isFinite(remoteTime) || localTime === remoteTime) return "The copies have the same recorded update time.";
-    return localTime > remoteTime
-      ? "This device is newer by its recorded update time (" + u.relativeTime(storage.getState().meta.updatedAt) + ")."
-      : "The GitHub copy is newer by its recorded update time (" + u.relativeTime(runtime.remoteState.meta.updatedAt) + ").";
+    return "This device and GitHub contain different saved content.";
   }
 
   function getInfo() {
@@ -319,7 +314,7 @@
     info.help = info.title + ". " + info.message;
     return Object.assign(info, {
       state: state, change: change, checkedAt: runtime.checkedAt || settings().lastCheckedAt,
-      busy: busy, newer: newerCopyText(), action: ACTIONS[info.primaryAction].title,
+      busy: busy, newer: copyComparisonText(), action: ACTIONS[info.primaryAction].title,
       canSync: !busy && info.primaryAction === "syncNow" && configured(),
       canRestore: !busy && info.primaryAction === "syncNow" && configured() && !runtime.remoteMissing
     });
@@ -343,13 +338,21 @@
       if (remote) {
         runtime.remoteSha = remote.sha;
         runtime.remoteState = remote.state;
-        runtime.remoteHash = u.fingerprint(model.syncPayload(remote.state));
+        runtime.remoteHash = model.syncHash(remote.state);
+        runtime.remoteLegacy = remote.legacy;
         runtime.remoteMissing = false;
       } else {
         runtime.remoteSha = "";
         runtime.remoteState = null;
+        runtime.remoteLegacy = false;
         runtime.remoteHash = "";
         runtime.remoteMissing = true;
+      }
+      // Equal content establishes a baseline even after an upgrade or first check.
+      // An unchanged legacy SHA also identifies the old baseline's actual content.
+      if (remote && (localHash() === runtime.remoteHash
+        || (cloud.baselineTarget === target(cloud) && cloud.baselineSha === remote.sha && !cloud.baselineHash.startsWith("data-v1:")))) {
+        if (cloud.baselineTarget !== target(cloud) || cloud.baselineHash !== runtime.remoteHash || cloud.baselineSha !== remote.sha) rememberBaseline(remote.sha, runtime.remoteHash);
       }
       runtime.checkedAt = checkedAt;
       storage.mutate(function (state) { state.modules.cloudSync.lastCheckedAt = checkedAt; }, { touch: false, reason: "sync-check" });
@@ -388,7 +391,7 @@
         state.modules.cloudSync.enabled = true;
       }, { touch: false, reason: "sync-token-tested" });
       // A successful test establishes a connection; a sync check compares the copies.
-      Object.assign(runtime, { remoteSha: "", remoteHash: "", remoteState: null, remoteMissing: false, checkedAt: "", errorState: "", offline: false });
+      Object.assign(runtime, { remoteSha: "", remoteHash: "", remoteState: null, remoteLegacy: false, remoteMissing: false, checkedAt: "", errorState: "", offline: false });
       const storedMessage = rememberToken ? " The token is stored on this device." : " The token is stored for this browser tab.";
       return { ok: true, remoteExists: Boolean(remote), message: (remote ? "Connection succeeded and the data file is readable." : "Connection succeeded. The data file will be created on first upload.") + storedMessage };
     } catch (error) {
@@ -407,12 +410,13 @@
     runtime.error = "";
     emit();
     try {
-      const state = storage.getState();
-      const hash = localHash();
+      const state = model.normalize(u.clone(storage.getState()));
+      const hash = model.syncHash(state);
       const sha = await writeRemote(settings(), storage.getSecret(), context, state, runtime.remoteSha);
       if (!currentRequest(context)) return false;
       rememberBaseline(sha, hash);
-      runtime.remoteState = model.normalize(u.clone(state));
+      runtime.remoteState = state;
+      runtime.remoteLegacy = false;
       App.components.toast("This device’s latest data is now on GitHub.", { title: "Sync complete", kind: "success" });
       return true;
     } catch (error) {
@@ -434,13 +438,10 @@
     runtime.error = "";
     emit();
     try {
-      const localCloud = u.clone(settings());
-      const next = model.normalize(u.clone(runtime.remoteState));
-      next.modules.cloudSync = localCloud;
+      const next = model.applySync(storage.getState(), runtime.remoteState);
       if (!storage.saveRecovery("Before downloading GitHub data")) throw new Error("The local recovery copy could not be saved. Export a backup before restoring from cloud.");
       storage.replace(next, { saveRecovery: false, reason: "sync-download", touch: false });
-      const hash = u.fingerprint(model.syncPayload(storage.getState()));
-      rememberBaseline(runtime.remoteSha, hash);
+      rememberBaseline(runtime.remoteSha, runtime.remoteHash);
       App.components.toast("This device now uses the GitHub copy. The previous local copy is recoverable in Developer Tools.", { title: "Sync complete", kind: "success", duration: 5000 });
       return true;
     } catch (error) {
@@ -454,10 +455,16 @@
 
   async function performMerge() {
     if (!runtime.remoteState) return performUpload();
-    const merged = model.merge(storage.getState(), runtime.remoteState);
-    const localCloud = u.clone(settings());
-    merged.modules.cloudSync = localCloud;
-    storage.replace(merged, { recoveryReason: "Before merging GitHub data", reason: "sync-merge", touch: false });
+    try {
+      const merged = model.merge(storage.getState(), runtime.remoteState);
+      if (!storage.saveRecovery("Before merging GitHub data")) throw new Error("The local recovery copy could not be saved. Export a backup before merging.");
+      storage.replace(merged, { saveRecovery: false, reason: "sync-merge", touch: false });
+    } catch (error) {
+      recordError(error, "Merge failed.");
+      App.components.toast(runtime.error, { title: "Sync Failed", kind: "danger", duration: 6000 });
+      emit();
+      return false;
+    }
     return performUpload();
   }
 
@@ -472,6 +479,7 @@
     if (runtime.error || runtime.offline || !configured() || getInfo().busy) return;
     const state = reconciliation();
     if (state === "current") {
+      if (runtime.remoteLegacy) return performUpload();
       App.components.toast("This device already matches GitHub.", { title: "Up to date", kind: "success" });
       return;
     }
@@ -481,9 +489,9 @@
       const choices = runtime.remoteMissing
         ? [{ value: "upload", label: "Upload this device", description: "Create the GitHub data file from this device.", kind: "primary" }]
         : [
-            { value: "merge", label: "Merge both copies", description: "Keep the newest version of each saved item.", kind: "primary" },
+            ...(model.canMerge(storage.getState(), runtime.remoteState) ? [{ value: "merge", label: "Merge both copies", description: "Combine matching or separate items, keeping content present in either copy.", kind: "primary" }] : []),
             { value: "upload", label: "Upload this device", description: "Replace the GitHub copy with this device.", kind: "secondary" },
-            { value: "download", label: "Download GitHub", description: "Replace this device after saving a recovery copy.", kind: "secondary" }
+            { value: "download", label: "Download GitHub", description: "Replace saved content after making a recovery copy; keep this device’s settings.", kind: "secondary" }
           ];
       const sequence = runtime.requestSequence;
       runtime.deciding = true;
@@ -520,7 +528,7 @@
     try {
       accepted = await App.components.confirm({
         title: "Restore from Cloud?",
-        message: "Replace this device’s data with the GitHub copy? Your current local copy will be saved for recovery in Developer Tools.",
+        message: "Replace this device’s saved content with the GitHub copy? Device settings stay as they are. Your current local copy will be saved for recovery in Developer Tools.",
         confirmLabel: ACTIONS.restore.title, cancelLabel: "Keep this device", danger: true, trigger: trigger
       });
     } finally { runtime.deciding = false; emit(); }

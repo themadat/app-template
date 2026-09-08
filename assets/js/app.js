@@ -107,23 +107,6 @@
     iconSearchIndex = buildIconSearchIndex(iconCatalog);
   }
 
-  function pruneBakedIconOverrides() {
-    const overrides = state().modules.iconLibrary.overrides || [];
-    const pending = overrides.filter(function (override) {
-      const baseIcon = sourceIconById.get(override.iconId);
-      if (!baseIcon) return true;
-      return override.label !== baseIcon.label
-        || (override.kind || baseIcon.kind) !== baseIcon.kind
-        || !sameIconCategories(override.categories || [], baseIcon.categories || [])
-        || (override.source || "") !== (baseIcon.source || "");
-    });
-    if (pending.length === overrides.length) return 0;
-    storage.mutate(function (next) {
-      next.modules.iconLibrary.overrides = pending;
-    }, { reason: "prune-baked-icon-overrides", touch: false });
-    return overrides.length - pending.length;
-  }
-
   function setInputValue(input, value) {
     if (input && document.activeElement !== input) input.value = value == null ? "" : String(value);
   }
@@ -1759,7 +1742,6 @@
   }
 
   function renderAll() {
-    pruneBakedIconOverrides();
     refreshIconCatalog();
     applyAppearance();
     renderHeader();

@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.66",
-    "buildId": "0.0.1.66",
+    "appVersion": "0.0.1.67",
+    "buildId": "0.0.1.67",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -89,15 +89,21 @@ Add a migration by creating `migrateNtoNPlus1`, registering it in `migrations`, 
 
 ## GitHub conflict strategy
 
+`stateModel.syncPayload` is an allowlist of actual content: plain-text `data.notes`, pending `data.iconOverrides`, and nonempty legacy `data.records`. Empty collections are omitted, so the fresh payload is `{"syncFormat":"local-first-app-data","syncVersion":1,"schemaVersion":5,"data":{}}`. This is a complete snapshot: an absent field clears its content on download. Built-in catalog SVGs, preferences, UI, workspace title, timestamps, mutation IDs, tombstones, and cloud bookkeeping are excluded. Notes timestamps and legacy record timestamps never affect comparison. Local persistence and full backups continue to use state schema v4; the cloud envelope declares schema v5 so older builds fail closed instead of interpreting the new structure as empty v4 state.
+
+`prepareSync` accepts the compact envelope and legacy state/backup files; unsupported versions and invalid content fail before replacement. `applySync` replaces content while keeping local appearance, UI, configuration, and credentials. Baked icon overrides are pruned centrally in state normalization, so both copies compare the same effective edits.
+
 The sync module stores a baseline target, SHA, and content hash after a successful sync. A remote check compares local, remote, and baseline hashes:
 
 - Local only: upload.
 - Remote only: download after saving a recovery copy.
 - Equal: report Up to Date.
 - No baseline or missing remote file: request a first-sync decision.
-- Both changed: offer merge, upload, download, or cancel.
+- Both changed: offer upload, download, or cancel, with merge available for matching or separate content.
 
-Merging chooses the newer note for each stable id, honors newer deletion tombstones, and takes preferences from the newer whole state while preserving local per-device cloud configuration. Requests are sequenced and aborted to prevent overlap and stale responses. Checks repeat periodically, on visibility, and when connectivity returns.
+Content hashes have a `data-v1:` prefix so old whole-state hashes are never compared against content hashes. Equal content establishes a baseline even on a first check or upgrade; an unchanged legacy baseline SHA also identifies the old baseline’s content. Other unknown baselines require a choice. A matching legacy file shows Up to Date; explicit Sync Now rewrites it compactly, while checks stay read-only toward GitHub.
+
+Merging combines matching or separate items and retains content present in either copy. Different nonempty Notes or different metadata for the same icon/record require choosing a copy; save timestamps cannot decide which content to discard. Merge and download require a successful recovery save, and both preserve device settings. Requests are sequenced and aborted to prevent overlap and stale responses. Checks repeat periodically, on visibility, and when connectivity returns.
 
 Cloud status presentation lives in `core/sync.js`: `CloudSyncState`, `presentation(state, options)`, and `actions` supply the SF Symbol, semantic color kind, accessible label, help, primary action, and animation. Reconciliation only describes which copy changed; queued local/remote work is `pending`, divergent copies are a recoverable `warning`, and only an active request is `syncing`, `uploading`, or `downloading`. Configured but unchecked connections are static `connected`; `idle` and `shared` are available for consumers that need those concepts, without inferring sharing from GitHub ownership. A permission denial is recoverable by default; `presentation(state, { hardDenial: true })` supports red for an explicitly hard denial. HTTP authentication, access, rate-limit/conflict, and server failures stay distinct.
 

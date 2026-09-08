@@ -65,8 +65,12 @@
 - [ ] Floating status and Settings agree on the cloud state, symbol, semantic tint, label, and tooltip. Local/remote changes wait with a static dashed cloud; divergent copies require attention; success, upload, download, auth, access, and failure use distinct shapes. Offline is neutral and a configured unchecked connection is static.
 - [ ] Syncing rotates only the two arrows inside the supplied cloud symbol; labels, upload/download arrows, pending, and all inactive states stay still. Reduce Motion removes rotation.
 - [ ] The clockwise Sync Now action respects busy state. Counterclockwise Restore from Cloud refreshes the remote copy, confirms replacement, preserves local cloud settings, and stops if the recovery copy cannot be saved. Cancellation leaves local content untouched.
-- [ ] Conflict choices include merge, upload, download, and cancel; no divergent data is overwritten silently.
-- [ ] Download and merge preserve a recovery copy and keep device-local cloud settings.
+- [ ] A fresh cloud payload is under 120 bytes, with empty `data`; populated payloads contain only Notes, edited icon metadata, and any real legacy record content.
+- [ ] After downloading, waiting for the 30-second release notice to dismiss, changing theme/filter/sidebar width, opening Settings tabs, and reloading all retain Up to Date. Real Notes/icon edits and deletions become pending; undoing an edit clears it.
+- [ ] Old full-state cloud files compare by actual content and shrink on explicit Sync Now; checks never write. Refresh both devices before using the compact format; older builds reject its v5 envelope. Full backups retain preferences.
+- [ ] Downloads preserve this device’s appearance, filters, UI, and token. Empty cloud content clears Notes and icon overrides after recovery; Unicode, multiline text, and literal HTML round trip without becoming markup.
+- [ ] Conflict choices include upload, download, and cancel; merge is offered only when Notes and shared item IDs do not disagree, combines content present in either copy, and refuses replacement if recovery fails.
+- [ ] Download and merge preserve a recovery copy and keep all device-local settings.
 - [ ] Visibility, interval, and reconnect checks do not overlap or apply stale responses.
 - [ ] JSON backup/restore remains usable without GitHub.
 

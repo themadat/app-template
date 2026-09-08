@@ -4,6 +4,10 @@
   const App = window.LocalApp;
   const config = App.config;
   const u = App.utils;
+  const SYNC_FORMAT = "local-first-app-data";
+  const SYNC_VERSION = 1;
+  // Older apps reject v5 instead of mistaking this compact envelope for empty v4 state.
+  const SYNC_SCHEMA_VERSION = 5;
   const CLOUD_TARGET = Object.freeze({
     owner: u.cleanLine(config.cloudSync?.owner, 39),
     repo: u.cleanLine(config.cloudSync?.repo, 100).replace(/\.git$/i, ""),
@@ -49,7 +53,13 @@
       const sourceId = u.cleanLine(source.source, 100);
       overrides.set(iconId, { iconId: iconId, label: label, kind: kind, categories: categories, source: ICON_SOURCE_IDS.has(sourceId) ? sourceId : "" });
     });
-    return Array.from(overrides.values()).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
+    return Array.from(overrides.values()).filter(function (override) {
+      const base = ICON_BY_ID.get(override.iconId);
+      if (!base) return true;
+      return override.label !== base.label || (override.kind || base.kind) !== base.kind
+        || (override.source || "") !== (base.source || "")
+        || JSON.stringify(override.categories.slice().sort()) !== JSON.stringify((base.categories || []).slice().sort());
+    }).sort(function (a, b) { return a.iconId.localeCompare(b.iconId); });
   }
 
   function demoRecords(now) {
@@ -542,6 +552,7 @@
   }
 
   function prepare(input) {
+    if (input && ("syncFormat" in Object(input) || "syncVersion" in Object(input))) return prepareSync(input);
     const migration = migrate(input);
     const state = normalize(migration.state);
     const validation = validate(state);
@@ -590,66 +601,93 @@
     };
   }
 
+  // Cloud data is a complete content snapshot. Empty collections are omitted;
+  // their absence still clears that content when a snapshot is downloaded.
   function syncPayload(state) {
-    const normalized = normalize(u.clone(state));
-    return {
-      schemaVersion: normalized.schemaVersion,
-      meta: {
-        appVersion: normalized.meta.appVersion,
-        buildId: normalized.meta.buildId,
-        createdAt: normalized.meta.createdAt,
-        updatedAt: normalized.meta.updatedAt,
-        lastMutationId: normalized.meta.lastMutationId,
-        tombstones: normalized.meta.tombstones
+    const normalized = normalize(state);
+    const data = {};
+    const notes = u.richTextToPlainText(normalized.workspace.documents[0].html, config.controls.maxDocumentHtmlLength);
+    if (notes) data.notes = notes;
+    if (normalized.modules.iconLibrary.overrides.length) data.iconOverrides = normalized.modules.iconLibrary.overrides;
+    // Preserve real content from older backups, without exporting empty scaffolding.
+    if (normalized.workspace.records.length) data.records = normalized.workspace.records.map(function (record) {
+      const item = Object.assign({}, record);
+      delete item.createdAt;
+      delete item.updatedAt;
+      return item;
+    });
+    return { syncFormat: SYNC_FORMAT, syncVersion: SYNC_VERSION, schemaVersion: SYNC_SCHEMA_VERSION, data: data };
+  }
+
+  function syncHash(state) {
+    // Prefix separates content hashes from the previous whole-state baselines.
+    return "data-v1:" + u.fingerprint(syncPayload(state));
+  }
+
+  function prepareSync(input) {
+    if (!input || typeof input !== "object" || Array.isArray(input)) throw new Error("The GitHub data must be a JSON object.");
+    if (!("syncFormat" in input) && !("syncVersion" in input)) {
+      return Object.assign({}, prepare(input), { legacy: true });
+    }
+    if (input.syncFormat !== SYNC_FORMAT || input.syncVersion !== SYNC_VERSION || input.schemaVersion !== SYNC_SCHEMA_VERSION) throw new Error("This cloud data format is not supported. Update the app before syncing.");
+    const data = input.data;
+    if (!data || typeof data !== "object" || Array.isArray(data)
+      || Object.keys(data).some(function (key) { return !["notes", "iconOverrides", "records"].includes(key); })
+      || ("notes" in data && (typeof data.notes !== "string" || data.notes.length > config.controls.maxDocumentHtmlLength))
+      || ("iconOverrides" in data && (!Array.isArray(data.iconOverrides) || data.iconOverrides.length > config.controls.maxIconOverrides))
+      || ("records" in data && (!Array.isArray(data.records) || data.records.length > config.controls.maxRecords))) {
+      throw new Error("The cloud file contains invalid or unsupported content.");
+    }
+    if ((data.iconOverrides || []).some(function (item) { return !item || typeof item.iconId !== "string" || !item.iconId || typeof item.label !== "string" || !item.label; })
+      || (data.records || []).some(function (item) { return !item || typeof item.id !== "string" || !item.id; })) {
+      throw new Error("The cloud file contains an invalid saved item.");
+    }
+    const state = normalize({
+      workspace: {
+        documents: [{ id: "app-notes", title: "Notes", html: u.escapeHtml(data.notes || "").replace(/\n/g, "<br>") }],
+        records: data.records || []
       },
-      workspace: normalized.workspace,
-      preferences: normalized.preferences,
-      ui: normalized.ui,
-      modules: {
-        iconLibrary: normalized.modules.iconLibrary,
-        records: normalized.modules.records,
-        documents: normalized.modules.documents,
-        roadmap: normalized.modules.roadmap
-      }
-    };
+      modules: { iconLibrary: { overrides: data.iconOverrides || [] } }
+    });
+    return { state: state, legacy: false, migrations: [], validation: validate(state) };
   }
 
-  function mergeCollections(localItems, remoteItems, localTombstones, remoteTombstones) {
-    const tombstones = new Map();
-    [].concat(localTombstones || [], remoteTombstones || []).forEach(function (entry) {
-      const current = tombstones.get(entry.id);
-      if (!current || Date.parse(entry.deletedAt) > Date.parse(current.deletedAt)) tombstones.set(entry.id, entry);
-    });
-    const items = new Map();
-    [].concat(localItems || [], remoteItems || []).forEach(function (item) {
-      const current = items.get(item.id);
-      if (!current || Date.parse(item.updatedAt) > Date.parse(current.updatedAt)) items.set(item.id, item);
-    });
-    tombstones.forEach(function (tombstone, id) {
-      const item = items.get(id);
-      if (!item || Date.parse(tombstone.deletedAt) >= Date.parse(item.updatedAt)) items.delete(id);
-      else tombstones.delete(id);
-    });
-    return {
-      items: Array.from(items.values()).sort(function (a, b) { return Number(a.order) - Number(b.order); }).map(function (item, index) { return Object.assign({}, item, { order: index }); }),
-      tombstones: Array.from(tombstones.values())
-    };
+  function applySync(localState, remoteState) {
+    const next = normalize(localState);
+    const remote = normalize(remoteState);
+    next.workspace.documents = remote.workspace.documents;
+    next.workspace.records = remote.workspace.records;
+    next.modules.iconLibrary.overrides = remote.modules.iconLibrary.overrides;
+    next.meta.tombstones = remote.meta.tombstones;
+    return normalize(touch(next));
   }
 
-  function merge(localState, remoteInput) {
-    const local = normalize(localState);
-    const remote = prepare(remoteInput).state;
-    const mergedRecords = mergeCollections(local.workspace.records, remote.workspace.records, local.meta.tombstones.records, remote.meta.tombstones.records);
-    const mergedDocuments = mergeCollections(local.workspace.documents, remote.workspace.documents, local.meta.tombstones.documents, remote.meta.tombstones.documents);
-    const newer = Date.parse(remote.meta.updatedAt) > Date.parse(local.meta.updatedAt) ? remote : local;
-    const result = u.clone(newer);
-    result.workspace.records = mergedRecords.items;
-    result.workspace.documents = mergedDocuments.items;
-    result.meta.tombstones.records = mergedRecords.tombstones;
-    result.meta.tombstones.documents = mergedDocuments.tombstones;
-    result.modules.cloudSync = u.clone(local.modules.cloudSync);
-    touch(result);
-    return normalize(result);
+  function mergeSyncData(localState, remoteState) {
+    const local = syncPayload(localState).data;
+    const remote = syncPayload(remoteState).data;
+    if (local.notes && remote.notes && local.notes !== remote.notes) throw new Error("Notes differ. Choose which copy to keep.");
+    const data = {};
+    if (local.notes || remote.notes) data.notes = local.notes || remote.notes;
+    [["iconOverrides", "iconId", config.controls.maxIconOverrides], ["records", "id", config.controls.maxRecords]].forEach(function (entry) {
+      const items = new Map();
+      (local[entry[0]] || []).concat(remote[entry[0]] || []).forEach(function (item) {
+        const current = items.get(item[entry[1]]);
+        if (current && u.stableJson(current) !== u.stableJson(item)) throw new Error("The same saved item differs. Choose which copy to keep.");
+        items.set(item[entry[1]], item);
+      });
+      if (items.size > entry[2]) throw new Error("The combined content exceeds the saved item limit.");
+      if (items.size) data[entry[0]] = Array.from(items.values());
+    });
+    return { syncFormat: SYNC_FORMAT, syncVersion: SYNC_VERSION, schemaVersion: SYNC_SCHEMA_VERSION, data: data };
+  }
+
+  function canMerge(localState, remoteState) {
+    try { mergeSyncData(localState, remoteState); return true; }
+    catch (error) { return false; }
+  }
+
+  function merge(localState, remoteState) {
+    return applySync(localState, prepareSync(mergeSyncData(localState, remoteState)).state);
   }
 
   App.stateModel = {
@@ -662,6 +700,10 @@
     resetPreferences: resetPreferences,
     exportEnvelope: exportEnvelope,
     syncPayload: syncPayload,
+    syncHash: syncHash,
+    prepareSync: prepareSync,
+    applySync: applySync,
+    canMerge: canMerge,
     merge: merge
   };
 })();

@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.66` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.67` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -134,6 +134,10 @@ New apps created with `reset` use a unique JSON file in [`themadat/app-data/data
 
 The token stays in browser storage on that device and is never included in exports or diagnostics. Settings keeps the saved token masked in its password field and labels whether it is stored on the device or only for the browser tab. Save stores it directly; a successful Test also stores the verified token according to the Remember choice, while a failed test does not persist a newly entered token. Background sync checks do not overwrite token or Remember-choice edits that are still in progress. The Sync button checks local and remote state before choosing upload, download, merge, or conflict handling. JSON export/import remains the fallback.
 
+GitHub Sync contains only saved Notes and custom icon metadata (plus any nonempty legacy record content). A fresh template uploads an empty `data` object in a small versioned envelope. Appearance, filters, sidebar layout, open Settings tabs, release notices, credentials, and save timestamps remain local and never make content pending. Downloads preserve device settings. Full JSON backups still include them.
+
+Existing whole-state cloud files are read compatibly. The next **Sync Now** rewrites a matching old file into the compact format; background checks never upload. Refresh both computers to **0.0.1.67** or later before syncing; older builds reject the new envelope instead of treating it as empty data. When both copies differ, choose upload or download; merge is available only for matching or separate items and keeps content present in either copy.
+
 ## Host as a static site
 
 Upload the repository contents without changing their relative paths. Use HTTPS in production so service-worker and install features are available. Keep `sw.js` at the application root because its location defines the offline scope.
@@ -152,4 +156,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.66 - Clarify cloud sync status and actions`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.67 - Clarify cloud sync status and actions`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
