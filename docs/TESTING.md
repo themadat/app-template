@@ -84,3 +84,5 @@
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.
 
 The compiler regression in `tests/icon-compiler.test.mjs` builds a temporary SVG catalog three times and verifies that retained artwork and its CSS scope remain identical. Run it together with the sync tests using `node --test tests/*.test.mjs` on a current Node version.
+
+- [ ] Selecting text in Notes uses the same white text and strong accent background as selecting search-field text, in both light and dark mode.

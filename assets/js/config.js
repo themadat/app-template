@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.68",
-      buildId: "0.0.1.68",
+      version: "0.0.1.69",
+      buildId: "0.0.1.69",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.69",
+        date: "2026-09-08T03:49:06.784Z",
+        title: "Consistent Notes selection",
+        summary: "Selected text in Notes now uses the same clear highlight as the search bar.",
+        features: [],
+        improvements: ["Notes and search share white selected text on the strong accent background"],
+        fixes: ["Replaced the faint Notes selection highlight with the existing search-field treatment"],
+        knownIssues: []
+      },
       {
         version: "0.0.1.68",
         date: "2026-09-08T03:36:19.909Z",
