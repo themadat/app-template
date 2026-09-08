@@ -124,7 +124,7 @@ Verify the favicon, launcher icon, maskable crop, and splash artwork in both app
 
 ## Set up terminal Git access
 
-Use [`docs/GIT-SETUP.md`](docs/GIT-SETUP.md) for copy-paste commands that configure commit identity, create separate SSH keys on a personal and work Mac, add them to GitHub, test authentication, clone the repository, and use the normal pull/commit/push flow. Terminal SSH access is separate from the app’s optional browser-based GitHub Sync token.
+Use [`docs/GIT-SETUP.md`](docs/GIT-SETUP.md) for a portable Git setup across personal and work computers. Keep the repository’s standard GitHub remote URL and select the correct account through each computer’s local SSH/Git configuration. The guide covers existing personal/work profiles, narrowly scoped account routing, first-time keys, and dry-run push verification. Terminal SSH access is separate from the app’s optional browser-based GitHub Sync token.
 
 ## Configure optional in-app GitHub Sync
 

@@ -1,8 +1,60 @@
-# Git terminal setup on two Macs
+# Portable Git setup across computers
 
 Use these steps once on each laptop. Generate a separate SSH key on each machine; add both public keys to GitHub and never copy a private key between computers. Terminal Git access is separate from the app’s optional browser-based GitHub Sync token.
 
 Replace the all-caps placeholders before running a command. On a managed work laptop, follow the employer’s source-control and key-storage policy.
+
+## Use the same repository URL on both computers
+
+Keep this repository’s saved remote canonical:
+
+```text
+git@github.com:themadat/app-template.git
+```
+
+The repository should not store an SSH alias, an absolute private-key path, or a computer-specific `core.sshCommand`. Each computer selects its own credentials outside the repository. A commit’s `user.name` and `user.email` identify its author; they do not select the GitHub account used for authentication.
+
+If the personal computer already pushes successfully as `themadat`, its authentication setup needs no change. On a computer where `github.com` uses a work account, keep that existing SSH profile and use a separate personal profile in that computer’s `~/.ssh/config`:
+
+```text
+Host gh-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_personal
+  IdentitiesOnly yes
+```
+
+The identity file must name an existing key on that computer whose public half is registered with `themadat`. Reuse a working personal profile when one already exists; do not regenerate or copy a private key. The alias and key filename are local choices, so the personal computer can use a different filename or its default profile.
+
+Verify the personal profile first:
+
+```sh
+ssh -T git@gh-personal
+```
+
+It should say `Hi themadat!` followed by the expected notice that GitHub does not provide shell access. Then add this rule to that computer’s global Git configuration:
+
+```sh
+git config --global 'url.git@gh-personal:themadat/.insteadOf' 'git@github.com:themadat/'
+```
+
+Here `--global` means the current user’s configuration on this computer. The rule matches only SSH URLs in the `themadat/` namespace; work repositories under other owners keep their existing authentication. Keep the rule in the computer’s own Git configuration, not in the shared checkout or a configuration synced to another computer without the same SSH profile. This uses Git’s documented [URL rewriting](https://git-scm.com/docs/git-config#Documentation/git-config.txt-urlltbasegtinsteadOf).
+
+Verify the stored remote, the locally resolved destination, and push permission without publishing:
+
+```sh
+git config --local --get remote.origin.url
+git remote get-url origin
+git push --dry-run origin main
+```
+
+On the work computer, the first command should retain `git@github.com:themadat/app-template.git`; the second can resolve to `git@gh-personal:themadat/app-template.git`. The ordinary `git pull` and `git push origin main` commands then work on either computer without editing the remote when switching devices.
+
+If a combined commit-and-push command reports a successful commit followed by `Permission ... denied to ...`, the commit is already saved locally. Fix authentication and retry the push; do not recreate or reset that commit.
+
+## First-time setup
+
+The remaining steps are for computers that do not yet have working credentials. An existing work account does not automatically have access to repositories owned by a personal account; configure the personal profile above as well when needed.
 
 ## Personal laptop
 
