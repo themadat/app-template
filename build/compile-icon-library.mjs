@@ -4,6 +4,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
+import { orderSvgPaint } from "./order-svg-paint.mjs";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -1083,6 +1084,10 @@ records.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, 
 
 const contributingSources = Array.from(new Set(records.flatMap(function (record) { return record.repositories.concat(record.source || []); }))).sort();
 function serializeRecord(record) {
+  if (record.kind === "sf-symbol") {
+    record.svg = orderSvgPaint(record.svg);
+    record.weightSvgs = Object.fromEntries(Object.entries(record.weightSvgs).map(([weight, svg]) => [weight, orderSvgPaint(svg)]));
+  }
   const lines = ["    {"];
   lines.push("      id: " + JSON.stringify(record.id) + ",");
   lines.push("      name: " + JSON.stringify(record.name) + ",");

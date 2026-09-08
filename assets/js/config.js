@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.71",
-      buildId: "0.0.1.71",
+      version: "0.0.1.72",
+      buildId: "0.0.1.72",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.72",
+        date: "2026-09-08T12:00:00.000Z",
+        title: "Put SVG paint attributes first",
+        summary: "SF Symbol markup places fill, opacity, and stroke attributes before geometry for easier editing.",
+        features: [],
+        improvements: ["Consistent paint-first attributes across all five SF Symbol weights and base UI symbols", "Future catalog builds retain the attribute order"],
+        fixes: [],
+        knownIssues: ["GitHub Sync requires a user-provided fine-grained token."]
+      },
       {
         version: "0.0.1.71",
         date: "2026-09-08T16:58:14.448Z",

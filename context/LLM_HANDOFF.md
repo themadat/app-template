@@ -96,6 +96,8 @@ Do not silently move from one lifecycle stage to another.
 
 ## Invariants
 
+- SF Symbol opening tags place fill, opacity, and stroke attributes (including hyphenated variants) before geometry. `build/order-svg-paint.mjs` preserves values and relative order, and catalog serialization applies it to every SF Symbol weight. Custom catalog artwork is unchanged.
+
 - Keep the runtime static, dependency-free, backend-free, and hostable as ordinary files.
 - Preserve the full sibling-repository icon scan and searchable icon catalog, single Notes modal, and Settings Roadmap unless the user explicitly removes or replaces them.
 - Use one GitHub Pages deployment path. Keep **Settings → Pages → Source** set to **GitHub Actions** so `.github/workflows/deploy-pages.yml` is the only deployment triggered by pushes to `main`; do not also enable branch deployment.

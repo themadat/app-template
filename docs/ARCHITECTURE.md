@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.71",
-    "buildId": "0.0.1.71",
+    "appVersion": "0.0.1.72",
+    "buildId": "0.0.1.72",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
