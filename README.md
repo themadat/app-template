@@ -2,7 +2,7 @@
 
 A static, local-first SVG icon library with no required build step, runtime dependency, backend, account, or sign-in. Search the compiled catalog and select any icon to copy its complete inline SVG for another app.
 
-The template starts on the pre-launch `0.0.1` line at version `0.0.1.70` (`major.minor.patch.build`). Routine updates increment the fourth number.
+The template starts on the pre-launch `0.0.1` line at version `0.0.1.71` (`major.minor.patch.build`). Routine updates increment the fourth number.
 
 The included product surface is intentionally focused:
 
@@ -128,7 +128,7 @@ Use [`docs/GIT-SETUP.md`](docs/GIT-SETUP.md) for a portable Git setup across per
 
 ## Configure optional in-app GitHub Sync
 
-Set the application repository in `config.identity.repository` and the fixed sync target in `config.cloudSync` inside `assets/js/config.js`, then open **Settings → Storage & GitHub** and provide a fine-grained personal access token limited to that repository with **Contents: Read and write** permission. The GitHub heading links to the application repository. Owner, linked sync repository, branch, and linked JSON file path appear together on one read-only metadata line so saved or imported application state cannot redirect synchronization.
+Set the application repository in `config.identity.repository` and the fixed sync target in `config.cloudSync` inside `assets/js/config.js`, then open **Settings → Data Sync** and provide a fine-grained personal access token limited to that repository with **Contents: Read and write** permission. The GitHub heading links to the application repository. Owner, linked sync repository, branch, and linked JSON file path appear together on one read-only metadata line so saved or imported application state cannot redirect synchronization.
 
 New apps created with `reset` use a unique JSON file in [`themadat/app-data/data`](https://github.com/themadat/app-data/tree/main/data). Create the app-scoped credential from [GitHub’s fine-grained token settings](https://github.com/settings/personal-access-tokens), select only the `app-data` repository, and grant **Contents: Read and write**. The reset checklist records the exact file, target, token, and first-sync verification sequence.
 
@@ -156,4 +156,4 @@ The service worker checks the network first for same-origin application files, a
 - `start`: implement an approved plan.
 - `cut`: finalize a release.
 
-After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.70 - Left-align cloud sync choices with symbols`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.
+After a completed change, agents provide one copy-paste command that stages only relevant files, creates a commit in the form `Version - Text` (for example, `0.0.1.71 - Add Data Sync settings and JSON preview`), and pushes the current branch. This version-prefixed subject labels the GitHub Pages run in Actions; the synchronized version in the workflow `name` labels its GitHub Mobile notification. When every working-tree change belongs to the update, the command uses `git add .`; if unrelated changes exist, it names only the relevant files. Agents do not run it unless explicitly asked.

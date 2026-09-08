@@ -1033,7 +1033,8 @@
       button.tabIndex = selected ? 0 : -1;
     });
     $$('[data-support-panel]').forEach(function (panel) { panel.hidden = panel.dataset.supportPanel !== tab; });
-    if (tab === "help") renderHelp();
+    if (tab === "dataSync") renderSyncSettings();
+    else if (tab === "help") renderHelp();
     else if (tab === "releases") renderReleases();
     else if (tab === "shortcuts") renderShortcuts();
     else if (tab === "roadmap") renderSupportRoadmap();
@@ -1066,10 +1067,16 @@
     renderTextSizeControl();
     $$('[data-button-style]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.buttonStyle === preferences.controls.buttonStyle)); });
     $$('[data-hints-enabled]').forEach(function (button) { button.setAttribute("aria-pressed", String((button.dataset.hintsEnabled === "true") === preferences.hints.enabled)); });
-    renderSyncSettings();
+  }
+
+  function renderSyncPayload() {
+    const output = $("#syncPayloadJson");
+    const json = JSON.stringify(model.syncPayload(state()), null, 2);
+    if (output.textContent !== json) output.textContent = json;
   }
 
   function renderSyncSettings() {
+    renderSyncPayload();
     const localAvailable = storage.isPersistent();
     $("#localStorageSettingsState").textContent = localAvailable ? "Saved locally" : "Unavailable";
     $("#localStorageSettingsState").dataset.kind = localAvailable ? "success" : "danger";
@@ -1760,23 +1767,27 @@
     });
     window.addEventListener("app:syncchange", function () {
       renderSyncStatus();
-      if ($("#supportDialog").open && state().ui.supportTab === "settings") renderSyncSettings();
+      if ($("#supportDialog").open && state().ui.supportTab === "dataSync") renderSyncSettings();
       if ($("#supportDialog").open && state().ui.supportTab === "developer") renderDeveloper();
     });
     window.addEventListener("app:opensyncsettings", function (event) {
-      openSupport("settings", event.detail && event.detail.trigger);
+      openSupport("dataSync", event.detail && event.detail.trigger);
       requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); $("#syncToken").focus(); });
     });
     window.addEventListener("app:storageerror", function (event) {
       components.toast(event.detail.message, { title: event.detail.title, kind: "danger", duration: 0, actionLabel: "Export", onAction: portability.exportJson });
       renderSyncStatus();
     });
-    window.addEventListener("app:statesaved", renderSyncStatus);
+    window.addEventListener("app:statesaved", function () {
+      renderSyncStatus();
+      if ($("#supportDialog").open && state().ui.supportTab === "dataSync") renderSyncSettings();
+    });
     window.addEventListener("app:networkchange", function () { document.documentElement.classList.toggle("offline", navigator.onLine === false); renderSyncStatus(); });
     window.addEventListener("app:pwaerror", function (event) { components.toast(event.detail.message, { title: "Offline support unavailable", kind: "warning", duration: 5000 }); });
     window.addEventListener("app:statechange", function (event) {
       const reasons = new Set(["import", "sync-download", "sync-merge", "recovery", "erase-all", "reset-preferences", "restore-demo"]);
       if (reasons.has(event.detail.reason)) renderAll();
+      else if ($("#supportDialog").open && state().ui.supportTab === "dataSync") renderSyncPayload();
     });
     window.addEventListener("resize", function () { if ($("#developerPanel") && !$("#developerPanel").hidden) renderDeveloper(); });
     ["(prefers-color-scheme: dark)", "(prefers-reduced-motion: reduce)"].forEach(function (query) {

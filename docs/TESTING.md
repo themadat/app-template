@@ -57,6 +57,9 @@
 
 ## GitHub synchronization
 
+- [ ] Data Sync is a separate Settings navigation tab. The connection controls are absent from the general Settings panel, and missing-token sync setup opens Data Sync directly.
+- [ ] Sync payload (JSON) starts collapsed, opens with the keyboard, and shows exactly the current `stateModel.syncPayload` with no credentials or device preferences. Notes/icon edits refresh it without closing it or replacing dirty token fields. Long JSON wraps without horizontal overflow on mobile; tab selection survives reopening/reload.
+
 - [ ] The GitHub heading links to `config.identity.repository`; owner, repository, branch, and path come from `config.cloudSync`, appear with their values on one non-input metadata line, and cannot be redirected by saved or imported state; Repository links to the configured sync repository and Path links to the exact branch/file when the target is complete.
 - [ ] The target line stays a single contained horizontal line at mobile widths without causing page-level horizontal overflow; Settings shows Sync Now and Restore from Cloud above the target, with Forget, Test, and Save below the token and remember choice.
 - [ ] Missing token opens setup; invalid values show actionable validation.

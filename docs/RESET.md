@@ -69,7 +69,7 @@ Complete these GitHub Sync steps for every reset that retains the optional sync 
 4. Open [Fine-grained personal access tokens](https://github.com/settings/personal-access-tokens) and create a token named for the app, using `themadat` as the resource owner.
 5. Under **Repository access**, choose **Only select repositories** and select only `app-data`.
 6. Under **Repository permissions**, set **Contents** to **Read and write**. Do not grant broader permissions merely for application sync.
-7. Copy the token when GitHub displays it, paste it into **Settings → Storage & GitHub**, choose whether this browser should remember it, then run **Test** and **Save**. The token is a secret: never place it in the data file, source, documentation, backups, commits, issues, or chat.
+7. Copy the token when GitHub displays it, paste it into **Settings → Data Sync**, choose whether this browser should remember it, then run **Test** and **Save**. The token is a secret: never place it in the data file, source, documentation, backups, commits, issues, or chat.
 8. Configure the token separately in each browser or installed copy that will sync. The same app-scoped token can be entered on both laptops, or separate tokens can be used when independent revocation is preferred.
 
 Do not mark sync setup complete until the fixed target displays `themadat/app-data/main/data/<app-slug>.json`, the file exists, **Test** succeeds, and a first upload/download round trip succeeds.

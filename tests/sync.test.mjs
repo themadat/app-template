@@ -262,12 +262,13 @@ test('empty templates sync only an empty content envelope, independent of device
   assert.deepEqual(JSON.parse(original), { syncFormat: 'local-first-app-data', syncVersion: 1, schemaVersion: 5, data: {} });
   assert.ok(Buffer.byteLength(JSON.stringify(model.syncPayload(h.state), null, 2)) < 120);
   h.App.storage.mutate(state => {
-    state.preferences.appearance.mode = 'dark'; state.ui.search = 'cloud'; state.ui.supportTab = 'storage';
+    state.preferences.appearance.mode = 'dark'; state.ui.search = 'cloud'; state.ui.supportTab = 'dataSync';
     state.ui.seenReleaseVersion = 'next-build'; state.modules.iconLibrary.weight = 'light';
     state.modules.iconLibrary.sidebarWidth = 280; state.modules.roadmap.search = 'filter';
     state.workspace.title = 'This computer'; state.workspace.documents[0].updatedAt = '2000-01-01T00:00:00.000Z';
     state.meta.createdAt = '2000-01-01T00:00:00.000Z'; state.meta.tombstones.records = [{ id: 'old', deletedAt: state.meta.createdAt }];
   });
+  assert.equal(h.state.ui.supportTab, 'dataSync');
   assert.equal(JSON.stringify(model.syncPayload(h.state)), original);
   assert.equal(model.syncHash(h.state), model.syncHash(model.createDefaultState()));
   const backup = model.exportEnvelope(h.state);

@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.70",
-    "buildId": "0.0.1.70",
+    "appVersion": "0.0.1.71",
+    "buildId": "0.0.1.71",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -86,6 +86,8 @@ Startup checks the current storage key and then known legacy keys. Every candida
 User mutations update metadata and schedule an autosave. Storage failures emit an application event that becomes an actionable toast. Import, cloud download, merge, reset, and other replacements create or preserve recovery data as appropriate.
 
 Add a migration by creating `migrateNtoNPlus1`, registering it in `migrations`, increasing `schemaVersion`, and adding a fixture that proves renamed, removed, split, or combined values preserve user content.
+
+Settings → Data Sync owns the connection controls and a collapsible, read-only JSON preview generated directly by `stateModel.syncPayload`. The preview shows the current local upload content, not a fetched cloud copy or full backup; updates use `textContent` and preserve the disclosure state. The Data Sync tab is persisted locally and shares existing tab keyboard navigation.
 
 ## GitHub conflict strategy
 

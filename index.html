@@ -12,27 +12,27 @@
   <meta name="apple-mobile-web-app-title" content="App Template">
   <meta name="mobile-web-app-capable" content="yes">
   <title>App Template</title>
-  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.70">
-  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.70">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.70">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.70" media="(prefers-color-scheme: light)">
-  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.70" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.70">
-  <script defer src="assets/js/config.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/icons.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/icon-library-part-1.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/icon-library-part-2.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/icon-library-part-3.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/icon-library-part-4.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/icon-library.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/utils.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/state.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/storage.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/components.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/portability.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/sync.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/core/pwa.js?v=0.0.1.70"></script>
-  <script defer src="assets/js/app.js?v=0.0.1.70"></script>
+  <link rel="manifest" href="manifest.webmanifest?v=0.0.1.71">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/icons/favicon.svg?v=0.0.1.71">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=0.0.1.71">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-light.png?v=0.0.1.71" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="assets/icons/splash-dark.png?v=0.0.1.71" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/css/app.css?v=0.0.1.71">
+  <script defer src="assets/js/config.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/icons.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/icon-library-part-1.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/icon-library-part-2.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/icon-library-part-3.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/icon-library-part-4.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/icon-library.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/utils.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/state.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/storage.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/components.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/portability.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/sync.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/core/pwa.js?v=0.0.1.71"></script>
+  <script defer src="assets/js/app.js?v=0.0.1.71"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -40,12 +40,12 @@
   <header class="app-header">
     <div class="title-cluster">
       <button id="appIconButton" class="app-icon-button" type="button" aria-label="Switch color theme. Press and hold to toggle Developer Mode" title="Switch color theme · Press and hold for Developer Mode" aria-keyshortcuts="T Control+Alt+Shift+T" data-shortcut="T">
-        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.70" alt="">
+        <img id="appIcon" src="assets/icons/app-icon-light.svg?v=0.0.1.71" alt="">
       </button>
       <div class="identity-copy">
         <span id="appName" class="app-name">App Template</span>
         <div class="identity-pill-row">
-          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.70</button>
+          <button id="versionButton" class="version-pill" type="button" aria-label="Open release notes" aria-keyshortcuts="V Control+Alt+Shift+V" data-shortcut="V">v0.0.1.71</button>
           <span id="betaPill" class="environment-pill beta-pill" title="This is the beta application" hidden>BETA</span>
         </div>
       </div>
@@ -212,6 +212,7 @@
       <div class="support-layout">
         <div class="support-tabs" role="tablist" aria-label="Settings sections">
           <button id="settingsTab" type="button" role="tab" aria-selected="true" aria-controls="settingsPanel" data-support-tab="settings"><span class="support-tab-icon" aria-hidden="true" data-symbol="support"></span><span>Settings</span></button>
+          <button id="dataSyncTab" type="button" role="tab" aria-selected="false" aria-controls="dataSyncPanel" data-support-tab="dataSync"><span class="support-tab-icon" aria-hidden="true" data-symbol="json"></span><span>Data Sync</span></button>
           <button id="helpTab" type="button" role="tab" aria-selected="false" aria-controls="helpPanel" data-support-tab="help"><span class="support-tab-icon" aria-hidden="true" data-symbol="help"></span><span>Help</span></button>
           <button id="releasesTab" type="button" role="tab" aria-selected="false" aria-controls="releasesPanel" data-support-tab="releases"><span class="support-tab-icon" aria-hidden="true" data-symbol="releaseNotes"></span><span>What’s New</span></button>
           <button id="supportRoadmapTab" type="button" role="tab" aria-selected="false" aria-controls="supportRoadmapPanel" data-support-tab="roadmap"><span class="support-tab-icon" aria-hidden="true" data-symbol="roadmap"></span><span>Roadmap</span></button>
@@ -229,8 +230,18 @@
               <div class="appearance-footer"><span class="setting-note">Turning Hints off hides all guidance. Restoring brings back dismissed hints.</span><button id="restoreHintsButton" class="button small" type="button"><span class="setting-button-icon" aria-hidden="true" data-symbol="restore"></span><span>Restore Hints</span></button></div>
             </div>
 
+            <div class="settings-section">
+              <div class="section-heading"><div><span class="eyebrow">Data safety</span><h3>Backup, restore & reset</h3></div></div>
+              <p class="section-intro">JSON backups include notes, preferences, and module settings. Tokens are excluded.</p>
+              <div class="button-row"><button id="exportButton" class="button primary" type="button">Export JSON</button><button id="importButton" class="button" type="button">Import JSON</button><input id="importFileInput" type="file" accept="application/json,.json" hidden></div>
+              <div class="danger-zone"><div><strong>Reset preferences</strong><small>Keep notes, but restore appearance, filters, and hints.</small></div><button id="resetPreferencesButton" class="button danger-text" type="button">Reset preferences</button></div>
+              <div class="danger-zone"><div><strong>Erase all application data</strong><small>Permanently remove content, preferences, sync settings, token, and recovery data from this browser.</small></div><button id="eraseAllButton" class="button danger" type="button">Erase all data</button></div>
+            </div>
+          </section>
+
+          <section id="dataSyncPanel" class="support-panel" role="tabpanel" aria-labelledby="dataSyncTab" data-support-panel="dataSync" hidden>
             <div id="storageSyncSettings" class="settings-section">
-              <div class="section-heading"><div><span class="eyebrow">Data & connection</span><h3>Storage & GitHub</h3></div><span id="localStorageSettingsState" class="status-pill" data-kind="success">Saved locally</span></div>
+              <div class="section-heading"><div><span class="eyebrow">Data & connection</span><h3>Data Sync</h3></div><span id="localStorageSettingsState" class="status-pill" data-kind="success">Saved locally</span></div>
               <div id="localStorageSettingsSummary" class="inline-status" role="status" aria-live="polite"></div>
               <div id="cloudSyncSettings" class="sync-settings-group compact-github-settings">
               <div class="compact-github-header"><span class="compact-github-icon" aria-hidden="true" data-symbol="icloud"></span><span class="compact-github-copy"><strong>GitHub</strong><a id="appRepositoryLink" class="compact-app-repository-link" target="_blank" rel="noopener noreferrer">App repository</a></span><span id="syncSettingsState" class="status-pill" data-cloud-sync role="status" aria-live="polite"><span data-sync-icon aria-hidden="true"></span><span data-sync-label>Cloud Sync</span></span></div>
@@ -247,14 +258,11 @@
               <div class="button-row compact-sync-actions"><button id="forgetSyncButton" class="button danger-text" type="button"><span class="setting-button-icon" aria-hidden="true" data-symbol="forgetConnection"></span><span>Forget</span></button><button id="testSyncButton" class="button" type="button"><span class="setting-button-icon" aria-hidden="true" data-symbol="testConnection"></span><span>Test</span></button><button id="saveSyncButton" class="button primary" type="button"><span class="setting-button-icon" aria-hidden="true" data-symbol="saveConnection"></span><span>Save</span></button></div>
               </div>
             </div>
-
-            <div class="settings-section">
-              <div class="section-heading"><div><span class="eyebrow">Data safety</span><h3>Backup, restore & reset</h3></div></div>
-              <p class="section-intro">JSON backups include notes, preferences, and module settings. Tokens are excluded.</p>
-              <div class="button-row"><button id="exportButton" class="button primary" type="button">Export JSON</button><button id="importButton" class="button" type="button">Import JSON</button><input id="importFileInput" type="file" accept="application/json,.json" hidden></div>
-              <div class="danger-zone"><div><strong>Reset preferences</strong><small>Keep notes, but restore appearance, filters, and hints.</small></div><button id="resetPreferencesButton" class="button danger-text" type="button">Reset preferences</button></div>
-              <div class="danger-zone"><div><strong>Erase all application data</strong><small>Permanently remove content, preferences, sync settings, token, and recovery data from this browser.</small></div><button id="eraseAllButton" class="button danger" type="button">Erase all data</button></div>
-            </div>
+            <details id="syncPayloadDetails" class="sync-payload">
+              <summary><span class="sync-payload-heading"><span aria-hidden="true" data-symbol="json"></span><span>Sync payload (JSON)</span></span></summary>
+              <p class="setting-note">Current local content used for GitHub Sync. The cloud copy may differ until you sync. Device settings and credentials are excluded.</p>
+              <pre class="developer-json sync-json" tabindex="0" role="region" aria-label="JSON included in GitHub Sync"><code id="syncPayloadJson"></code></pre>
+            </details>
           </section>
 
           <section id="helpPanel" class="support-panel" role="tabpanel" aria-labelledby="helpTab" data-support-panel="help" hidden>
@@ -263,7 +271,7 @@
           </section>
 
           <section id="releasesPanel" class="support-panel" role="tabpanel" aria-labelledby="releasesTab" data-support-panel="releases" hidden>
-            <div class="support-section-title"><span aria-hidden="true" data-symbol="releaseNotes"></span><div><span class="eyebrow">Current version <strong id="releaseCurrentVersion">v0.0.1.70</strong></span><h3>Release Notes</h3></div></div>
+            <div class="support-section-title"><span aria-hidden="true" data-symbol="releaseNotes"></span><div><span class="eyebrow">Current version <strong id="releaseCurrentVersion">v0.0.1.71</strong></span><h3>Release Notes</h3></div></div>
             <div id="releaseContent" class="release-list"></div>
           </section>
 
