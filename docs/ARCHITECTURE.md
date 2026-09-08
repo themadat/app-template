@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.65",
-    "buildId": "0.0.1.65",
+    "appVersion": "0.0.1.66",
+    "buildId": "0.0.1.66",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -93,11 +93,15 @@ The sync module stores a baseline target, SHA, and content hash after a successf
 
 - Local only: upload.
 - Remote only: download after saving a recovery copy.
-- Equal: report Current.
+- Equal: report Up to Date.
 - No baseline or missing remote file: request a first-sync decision.
 - Both changed: offer merge, upload, download, or cancel.
 
 Merging chooses the newer note for each stable id, honors newer deletion tombstones, and takes preferences from the newer whole state while preserving local per-device cloud configuration. Requests are sequenced and aborted to prevent overlap and stale responses. Checks repeat periodically, on visibility, and when connectivity returns.
+
+Cloud status presentation lives in `core/sync.js`: `CloudSyncState`, `presentation(state, options)`, and `actions` supply the SF Symbol, semantic color kind, accessible label, help, primary action, and animation. Reconciliation only describes which copy changed; queued local/remote work is `pending`, divergent copies are a recoverable `warning`, and only an active request is `syncing`, `uploading`, or `downloading`. Configured but unchecked connections are static `connected`; `idle` and `shared` are available for consumers that need those concepts, without inferring sharing from GitHub ownership. A permission denial is recoverable by default; `presentation(state, { hardDenial: true })` supports red for an explicitly hard denial. HTTP authentication, access, rate-limit/conflict, and server failures stay distinct.
+
+The floating control and Settings share that presentation and the user-supplied native cloud SF Symbols in `icons.js`. Only the two-arrow modifier inside the supplied cloud symbol rotates; Reduce Motion disables it. Settings offers a clockwise Sync Now action and a counterclockwise Restore from Cloud action. Restore refreshes the remote copy, asks for confirmation, and requires a saved local recovery copy before replacement. Pending decisions suppress overlapping checks, and connection changes invalidate stale results and decisions.
 
 ## Accessibility and responsive behavior
 

@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.65",
-      buildId: "0.0.1.65",
+      version: "0.0.1.66",
+      buildId: "0.0.1.66",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.66",
+        date: "2026-09-07T23:57:19.566Z",
+        title: "Clear cloud sync status and actions",
+        summary: "Cloud Sync uses the supplied cloud SF Symbols, accessible state labels, and consistent colors in the floating control and Settings.",
+        features: ["Fourteen centralized cloud states", "Sync Now and confirmed Restore from Cloud actions in Settings"],
+        improvements: ["Neutral offline and waiting states; separate authentication, access, warning, and failure indicators", "Theme-aware status colors and Reduce Motion support"],
+        fixes: ["Only the two-arrow modifier inside the supplied cloud symbol rotates, while text and directional arrows stay still", "Configured connections no longer show an idle spinner", "Cloud restore stops if the local recovery copy cannot be saved"],
+        knownIssues: ["GitHub Sync requires a user-provided fine-grained token."]
+      },
       {
         version: "0.0.1.65",
         date: "2026-09-07T21:11:57.000Z",

@@ -2,6 +2,8 @@
 
 ## Automated baseline
 
+- [ ] `node --test tests/sync.test.mjs` passes (Node 18+; no installed packages required).
+- [ ] `tests/sync-preview.html` displays all fourteen states and both circular-arrow actions using production symbols and styles; inspect Light, Dark, Reduce Motion, and system increased/forced contrast.
 - [ ] Every JavaScript file and `sw.js` passes `node --check`.
 - [ ] Both manifests parse as JSON.
 - [ ] `git diff --check` is clean.
@@ -56,11 +58,13 @@
 ## GitHub synchronization
 
 - [ ] The GitHub heading links to `config.identity.repository`; owner, repository, branch, and path come from `config.cloudSync`, appear with their values on one non-input metadata line, and cannot be redirected by saved or imported state; Repository links to the configured sync repository and Path links to the exact branch/file when the target is complete.
-- [ ] The target line stays a single contained horizontal line at mobile widths without causing page-level horizontal overflow; Settings shows only Forget, Test, and Save actions below the token and remember choice.
+- [ ] The target line stays a single contained horizontal line at mobile widths without causing page-level horizontal overflow; Settings shows Sync Now and Restore from Cloud above the target, with Forget, Test, and Save below the token and remember choice.
 - [ ] Missing token opens setup; invalid values show actionable validation.
 - [ ] Connection testing distinguishes authentication, permission, missing repository/branch, network, and malformed remote-file failures.
 - [ ] Save and a successful Test keep the token visibly masked in the password field, label device or tab-only storage, and survive Settings re-renders; a failed Test does not persist a newly entered token, and background sync renders do not overwrite an in-progress token or Remember-choice edit.
-- [ ] Local-only, remote-only, current, missing-file, first-sync, conflict, offline, and error states have distinct accessible labels and styles.
+- [ ] Floating status and Settings agree on the cloud state, symbol, semantic tint, label, and tooltip. Local/remote changes wait with a static dashed cloud; divergent copies require attention; success, upload, download, auth, access, and failure use distinct shapes. Offline is neutral and a configured unchecked connection is static.
+- [ ] Syncing rotates only the two arrows inside the supplied cloud symbol; labels, upload/download arrows, pending, and all inactive states stay still. Reduce Motion removes rotation.
+- [ ] The clockwise Sync Now action respects busy state. Counterclockwise Restore from Cloud refreshes the remote copy, confirms replacement, preserves local cloud settings, and stops if the recovery copy cannot be saved. Cancellation leaves local content untouched.
 - [ ] Conflict choices include merge, upload, download, and cancel; no divergent data is overwritten silently.
 - [ ] Download and merge preserve a recovery copy and keep device-local cloud settings.
 - [ ] Visibility, interval, and reconnect checks do not overlap or apply stale responses.

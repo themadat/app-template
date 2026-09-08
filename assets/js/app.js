@@ -237,21 +237,28 @@
     renderHeader();
   }
 
+  function renderCloudSyncVisual(element, info) {
+    element.dataset.syncState = info.state;
+    element.dataset.kind = info.kind;
+    element.dataset.animation = info.animation;
+    const icon = element.querySelector("[data-sync-icon]");
+    if (icon && icon.dataset.symbol !== info.symbol) icons.set(icon, info.symbol);
+  }
+
   function renderSyncStatus() {
     const info = sync.getInfo();
-    const offline = navigator.onLine === false;
     const localAvailable = storage.isPersistent();
     const localLabel = localAvailable ? "Saved locally" : "Storage unavailable";
-    const syncLabel = !config.features.cloudSync ? "GitHub disabled" : offline ? "GitHub offline" : !sync.configured() ? "GitHub setup required" : "GitHub · " + info.title;
+    const syncLabel = "GitHub · " + info.title;
     const button = $("#floatingStatusButton");
-    button.dataset.syncState = localAvailable ? (offline ? "offline" : info.state) : "error";
-    button.disabled = info.busy;
-    button.title = localLabel + ". " + syncLabel + ". " + info.message;
+    renderCloudSyncVisual(button, info);
+    button.dataset.localStorage = localAvailable ? "available" : "unavailable";
+    button.setAttribute("aria-disabled", String(info.busy));
+    button.title = localLabel + ". " + info.help + (info.busy ? "" : " " + info.action + ": " + sync.actions[info.primaryAction].help);
     button.setAttribute("aria-label", button.title);
     decorateShortcutControls(button);
     $("[data-floating-local-label]").textContent = localLabel;
     $("[data-floating-sync-label]").textContent = syncLabel;
-    $("[data-floating-status-icon]").innerHTML = icons.markup(!localAvailable || info.kind === "danger" ? "close" : sync.configured() || info.busy ? "sync" : "check");
   }
 
   function documentText(documentItem) {
@@ -1088,8 +1095,19 @@
     const cloud = state().modules.cloudSync;
     const info = sync.getInfo();
     $("#cloudSyncSettings").hidden = false;
-    $("#syncSettingsState").textContent = info.title;
-    $("#syncSettingsState").dataset.kind = info.kind;
+    const settingsStatus = $("#syncSettingsState");
+    renderCloudSyncVisual(settingsStatus, info);
+    settingsStatus.querySelector("[data-sync-label]").textContent = info.title;
+    settingsStatus.title = info.help;
+    [["#syncNowButton", "syncNow", info.canSync], ["#restoreCloudButton", "restore", info.canRestore]].forEach(function (entry) {
+      const button = $(entry[0]);
+      const action = sync.actions[entry[1]];
+      icons.set(button.querySelector("[data-sync-action-icon]"), action.symbol);
+      button.querySelector("[data-sync-action-label]").textContent = action.title;
+      button.setAttribute("aria-label", action.title);
+      button.title = action.help + (entry[2] ? "" : " " + info.help);
+      button.disabled = !entry[2];
+    });
     const appRepositoryUrl = u.safeUrl(config.identity.repository.url);
     const appRepositoryLink = $("#appRepositoryLink");
     appRepositoryLink.textContent = appRepositoryUrl ? config.identity.repository.label : "App repository not configured";
@@ -1128,6 +1146,8 @@
     $("#storedTokenLabel").textContent = hasStoredToken ? (cloud.rememberToken ? "Stored on this device" : "Stored for this tab") : "Required";
     tokenInput.placeholder = hasStoredToken ? "Token stored" : "Enter token";
     $("#forgetSyncButton").disabled = !hasStoredToken && !cloud.baselineHash;
+    $("#saveSyncButton").disabled = info.busy;
+    $("#testSyncButton").disabled = info.busy;
   }
 
   function markSyncCredentialFieldsClean() {
@@ -1416,6 +1436,8 @@
     $("#saveSyncButton").addEventListener("click", saveSyncSettings);
     $("#testSyncButton").addEventListener("click", testSyncSettings);
     $("#forgetSyncButton").addEventListener("click", forgetSync);
+    $("#syncNowButton").addEventListener("click", function (event) { sync.syncNow(event.currentTarget); });
+    $("#restoreCloudButton").addEventListener("click", function (event) { sync.restoreFromCloud(event.currentTarget); });
     $("#syncToken").addEventListener("input", function (event) { event.currentTarget.dataset.dirty = "true"; });
     $("#syncRememberToken").addEventListener("change", function (event) { event.currentTarget.dataset.dirty = "true"; });
     $("#exportButton").addEventListener("click", portability.exportJson);
@@ -1577,12 +1599,7 @@
     $("#notesButton").addEventListener("click", function (event) { openNotes(event.currentTarget); });
     $("#notesTextarea").addEventListener("input", function (event) { saveNotes(event.target.value); });
     $("#floatingStatusButton").addEventListener("click", function (event) {
-      const info = sync.getInfo();
-      if (sync.configured() && info.state !== "offline") sync.syncNow(event.currentTarget);
-      else {
-        openSupport("settings", event.currentTarget);
-        requestAnimationFrame(function () { $("#storageSyncSettings").scrollIntoView({ block: "start" }); });
-      }
+      sync.syncNow(event.currentTarget);
     });
     document.addEventListener("click", function (event) {
       const action = event.target.closest("[data-action]");

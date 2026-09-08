@@ -14,6 +14,8 @@ On desktop, category navigation is vertically compact and category labels remain
 
 The app-identity SVGs give the grid, X, and three concentric circles the same 24-unit stroke width and full opacity so every path remains visible at 42px. The favicon keeps its full-bleed Safari-gray background and uses neon-blue geometry with three grid lines per axis, an X, and two circles but no square outlines; its center horizontal and vertical bars match the X stroke while the four outer grid guides remain lighter. GitHub Pages uses the checked-in custom Actions workflow. Its dynamic run title mirrors the required version-prefixed commit subject in Actions, while its fixed workflow name carries the matching application version for GitHub Mobile notifications.
 
+Cloud Sync now shares fourteen centralized states and native SF Symbol presentations between the floating status control and Settings. Queued work and offline are neutral; authentication, permissions, recoverable warnings, and hard failures have distinct shapes and labels. Only the active two-arrow modifier rotates inside its stationary cloud outline, with Reduce Motion respected. Settings adds clockwise Sync Now and counterclockwise Restore from Cloud; restore confirms and requires a successful recovery save. Dependency-free Node tests live in `tests/sync.test.mjs`, with the production-style state gallery in `tests/sync-preview.html`.
+
 ## Workflows
 
 ### `reset`
