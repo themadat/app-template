@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.69",
-      buildId: "0.0.1.69",
+      version: "0.0.1.70",
+      buildId: "0.0.1.70",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.70",
+        date: "2026-09-08T16:51:06.339Z",
+        title: "Clearer cloud sync choices",
+        summary: "Cloud sync choices have left-aligned text and a cloud symbol beside each option.",
+        features: [],
+        improvements: ["Upload, download, and merge use distinct leading cloud symbols", "Descriptions align beneath their labels and wrap on narrow screens"],
+        fixes: ["Sync choice content fills each button instead of centering as a group"],
+        knownIssues: []
+      },
       {
         version: "0.0.1.69",
         date: "2026-09-08T03:49:06.784Z",

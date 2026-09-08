@@ -71,14 +71,26 @@
       button.className = "button " + (choice.kind || "secondary");
       button.dataset.choiceValue = choice.value;
       if (index === 0) button.dataset.initialFocus = "";
+      if (choice.symbol && App.icons) {
+        const icon = document.createElement("span");
+        icon.className = "choice-icon";
+        icon.setAttribute("aria-hidden", "true");
+        App.icons.set(icon, choice.symbol);
+        button.appendChild(icon);
+        button.classList.add("has-symbol");
+      }
+      const copy = document.createElement("span");
+      copy.className = "choice-copy";
       const title = document.createElement("strong");
       title.textContent = choice.label;
-      button.appendChild(title);
+      copy.appendChild(title);
       if (choice.description) {
         const description = document.createElement("span");
+        description.className = "choice-description";
         description.textContent = choice.description;
-        button.appendChild(description);
+        copy.appendChild(description);
       }
+      button.appendChild(copy);
       container.appendChild(button);
     });
     dialog.querySelector("[data-choice-cancel]").textContent = settings.cancelLabel;

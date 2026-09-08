@@ -487,11 +487,11 @@
     if (state === "remote") return performDownload();
     if (state === "first-sync" || state === "conflict") {
       const choices = runtime.remoteMissing
-        ? [{ value: "upload", label: "Upload this device", description: "Create the GitHub data file from this device.", kind: "primary" }]
+        ? [{ value: "upload", symbol: STATE_PRESENTATIONS.uploading.symbol, label: "Upload this device", description: "Create the GitHub data file from this device.", kind: "primary" }]
         : [
-            ...(model.canMerge(storage.getState(), runtime.remoteState) ? [{ value: "merge", label: "Merge both copies", description: "Combine matching or separate items, keeping content present in either copy.", kind: "primary" }] : []),
-            { value: "upload", label: "Upload this device", description: "Replace the GitHub copy with this device.", kind: "secondary" },
-            { value: "download", label: "Download GitHub", description: "Replace saved content after making a recovery copy; keep this device’s settings.", kind: "secondary" }
+            ...(model.canMerge(storage.getState(), runtime.remoteState) ? [{ value: "merge", symbol: "link.icloud", label: "Merge both copies", description: "Combine matching or separate items, keeping content present in either copy.", kind: "primary" }] : []),
+            { value: "upload", symbol: STATE_PRESENTATIONS.uploading.symbol, label: "Upload this device", description: "Replace the GitHub copy with this device.", kind: "secondary" },
+            { value: "download", symbol: STATE_PRESENTATIONS.downloading.symbol, label: "Download GitHub", description: "Replace saved content after making a recovery copy; keep this device’s settings.", kind: "secondary" }
           ];
       const sequence = runtime.requestSequence;
       runtime.deciding = true;

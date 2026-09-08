@@ -527,8 +527,13 @@ dialog::backdrop { background: rgba(10, 16, 14, .56); backdrop-filter: blur(3px)
 .notes-textarea { flex: 1 1 auto; width: 100%; min-height: 0; resize: none; font-size: 1rem; line-height: 1.65; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
 .choice-actions { display: grid; gap: .5rem; margin-top: 1rem; }
-.choice-actions .button { display: grid; justify-items: start; height: auto; min-height: 60px; text-align: left; }
-.choice-actions .button span { color: var(--muted); font-size: .72rem; font-weight: 500; }
+.choice-actions .button { display: grid; grid-template-columns: minmax(0, 1fr); justify-content: stretch; justify-items: stretch; gap: .75rem; height: auto; min-height: 60px; text-align: left; }
+.choice-actions .button.has-symbol { grid-template-columns: 1.75rem minmax(0, 1fr); }
+.choice-icon { display: grid; place-items: center; }
+.choice-icon .sf-symbol { width: 1.6rem; height: 1.6rem; }
+.choice-copy { display: grid; gap: .2rem; min-width: 0; overflow-wrap: anywhere; }
+.choice-description { color: var(--muted); font-size: .72rem; font-weight: 500; }
+.choice-actions .primary .choice-description { color: inherit; }
 
 .support-dialog { width: min(1080px, calc(100vw - 2rem)); height: min(88svh, 860px); max-height: 88svh; }
 .support-dialog > .dialog-shell { height: 100%; }
