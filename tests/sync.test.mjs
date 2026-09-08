@@ -403,3 +403,22 @@ test('invalid or future cloud data is rejected without replacing or uploading co
     assert.ok(h.requests.every(request => request.options.method !== 'PUT'));
   }
 });
+
+
+test('Sync Now removes baked overrides from an already compact cloud file without marking content pending', async () => {
+  const h = harness();
+  const payload = JSON.parse(JSON.stringify(h.App.stateModel.syncPayload(h.state)));
+  payload.data.iconOverrides = [{ iconId: 'icon-a', label: 'Original', kind: 'sf-symbol', categories: ['interface'], source: '' }];
+  h.respond = (url, options) => options.method === 'PUT'
+    ? response(200, { content: { sha: 'clean-sha' } })
+    : response(200, { type: 'file', sha: 'remote-sha', content: Buffer.from(JSON.stringify(payload)).toString('base64') });
+  await h.sync.check(true);
+  assert.equal(h.sync.getInfo().state, 'upToDate');
+  assert.ok(h.requests.every(r => r.options.method !== 'PUT'));
+  await h.sync.syncNow();
+  const write = h.requests.find(r => r.options.method === 'PUT');
+  assert.ok(write);
+  const written = JSON.parse(Buffer.from(JSON.parse(write.options.body).content, 'base64').toString());
+  assert.deepEqual(written.data, {});
+  assert.equal(h.sync.getInfo().state, 'upToDate');
+});

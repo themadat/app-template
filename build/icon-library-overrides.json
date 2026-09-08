@@ -1,8 +1,8 @@
 {
   "format": "app-template-icon-library-overrides",
   "formatVersion": 1,
-  "generatedAt": "2026-09-04T04:59:15Z",
-  "applicationVersion": "0.0.1.43",
+  "generatedAt": "2026-09-08T03:36:07.760Z",
+  "applicationVersion": "0.0.1.68",
   "excludedIconIds": [
     "e-push-t-segment-prefix-t-i-to-string-16-e-push-t-e-push-c3f343"
   ],
@@ -2127,6 +2127,30 @@
       "exactCategories": true
     },
     {
+      "iconId": "moonphase-first-quarter-inverse-5fe29b",
+      "label": "Moonphase First Quarter Inverse",
+      "categories": [
+        "nature"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "moonphase-waning-crescent-inverse-cc1b22",
+      "label": "Moonphase Waning Crescent Inverse",
+      "categories": [
+        "nature"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "moonphase-waning-gibbous-inverse-2e7766",
+      "label": "Moonphase Waning Gibbous Inverse",
+      "categories": [
+        "nature"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "nairasign-building-classical-58e90d",
       "label": "Nairasign Building Classical",
       "categories": [
@@ -2484,6 +2508,14 @@
         "geography",
         "objects-tools",
         "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "poweroff-66aa03",
+      "label": "Poweroff",
+      "categories": [
+        "energy-power"
       ],
       "exactCategories": true
     },
@@ -3009,6 +3041,22 @@
         "geography",
         "objects-tools",
         "building"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "siri-6b2948",
+      "label": "Siri",
+      "categories": [
+        "branding"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "siri-gen2-a4116a",
+      "label": "Siri Gen2",
+      "categories": [
+        "branding"
       ],
       "exactCategories": true
     },
@@ -3575,6 +3623,24 @@
       "exactCategories": true
     },
     {
+      "iconId": "suit-diamond-29bfeb",
+      "label": "Suit Diamond",
+      "categories": [
+        "recreation",
+        "recreation-games"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "suit-diamond-fill-30479b",
+      "label": "Suit Diamond Fill",
+      "categories": [
+        "recreation",
+        "recreation-games"
+      ],
+      "exactCategories": true
+    },
+    {
       "iconId": "swedishkronasign-building-classical-fbe359",
       "label": "Swedishkronasign Building Classical",
       "categories": [
@@ -3791,6 +3857,22 @@
         "badged-shapes",
         "badged-shapes-triangle"
       ]
+    },
+    {
+      "iconId": "wave-3-backward-32eb68",
+      "label": "Wave 3 Backward",
+      "categories": [
+        "devices"
+      ],
+      "exactCategories": true
+    },
+    {
+      "iconId": "wave-3-forward-585747",
+      "label": "Wave 3 Forward",
+      "categories": [
+        "devices"
+      ],
+      "exactCategories": true
     },
     {
       "iconId": "wonsign-building-classical-68c89c",

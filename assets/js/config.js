@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.67",
-      buildId: "0.0.1.67",
+      version: "0.0.1.68",
+      buildId: "0.0.1.68",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.68",
+        date: "2026-09-08T03:36:19.909Z",
+        title: "Bake in ten icon category edits",
+        summary: "Ten exported icon edits are now part of the built-in catalog.",
+        features: [],
+        improvements: ["Moon phases use Nature; Poweroff uses Energy & Power; Siri uses Apps & Branding; diamond suits use Games; directional waves use Devices & Connectivity"],
+        fixes: ["These baked edits no longer need local overrides or cloud storage", "Rebuilding the catalog preserves existing SVG style scopes"],
+        knownIssues: []
+      },
       {
         version: "0.0.1.67",
         date: "2026-09-08T00:30:21.000Z",

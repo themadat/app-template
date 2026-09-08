@@ -51,7 +51,7 @@
     checking: false,
     remoteSha: "",
     remoteHash: "",
-    remoteState: null, remoteLegacy: false,
+    remoteState: null, remoteNeedsRewrite: false,
     remoteMissing: false,
     checkedAt: "",
     error: "",
@@ -133,7 +133,7 @@
       checking: false,
       remoteSha: "",
       remoteHash: "",
-      remoteState: null, remoteLegacy: false,
+      remoteState: null, remoteNeedsRewrite: false,
       remoteMissing: false,
       checkedAt: "",
       error: "",
@@ -219,7 +219,7 @@
     let parsed;
     try { parsed = JSON.parse(decoded); } catch (error) { throw new Error("The GitHub data file is not valid JSON."); }
     const prepared = model.prepareSync(parsed);
-    return { state: prepared.state, sha: file.sha, legacy: prepared.legacy };
+    return { state: prepared.state, sha: file.sha, needsRewrite: prepared.legacy || u.stableJson(parsed) !== u.stableJson(model.syncPayload(prepared.state)) };
   }
 
   function utf8Base64(text) {
@@ -339,12 +339,12 @@
         runtime.remoteSha = remote.sha;
         runtime.remoteState = remote.state;
         runtime.remoteHash = model.syncHash(remote.state);
-        runtime.remoteLegacy = remote.legacy;
+        runtime.remoteNeedsRewrite = remote.needsRewrite;
         runtime.remoteMissing = false;
       } else {
         runtime.remoteSha = "";
         runtime.remoteState = null;
-        runtime.remoteLegacy = false;
+        runtime.remoteNeedsRewrite = false;
         runtime.remoteHash = "";
         runtime.remoteMissing = true;
       }
@@ -391,7 +391,7 @@
         state.modules.cloudSync.enabled = true;
       }, { touch: false, reason: "sync-token-tested" });
       // A successful test establishes a connection; a sync check compares the copies.
-      Object.assign(runtime, { remoteSha: "", remoteHash: "", remoteState: null, remoteLegacy: false, remoteMissing: false, checkedAt: "", errorState: "", offline: false });
+      Object.assign(runtime, { remoteSha: "", remoteHash: "", remoteState: null, remoteNeedsRewrite: false, remoteMissing: false, checkedAt: "", errorState: "", offline: false });
       const storedMessage = rememberToken ? " The token is stored on this device." : " The token is stored for this browser tab.";
       return { ok: true, remoteExists: Boolean(remote), message: (remote ? "Connection succeeded and the data file is readable." : "Connection succeeded. The data file will be created on first upload.") + storedMessage };
     } catch (error) {
@@ -416,7 +416,7 @@
       if (!currentRequest(context)) return false;
       rememberBaseline(sha, hash);
       runtime.remoteState = state;
-      runtime.remoteLegacy = false;
+      runtime.remoteNeedsRewrite = false;
       App.components.toast("This device’s latest data is now on GitHub.", { title: "Sync complete", kind: "success" });
       return true;
     } catch (error) {
@@ -479,7 +479,7 @@
     if (runtime.error || runtime.offline || !configured() || getInfo().busy) return;
     const state = reconciliation();
     if (state === "current") {
-      if (runtime.remoteLegacy) return performUpload();
+      if (runtime.remoteNeedsRewrite) return performUpload();
       App.components.toast("This device already matches GitHub.", { title: "Up to date", kind: "success" });
       return;
     }

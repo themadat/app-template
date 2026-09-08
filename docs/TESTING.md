@@ -82,3 +82,5 @@
 - [ ] The Safari favicon uses a fully opaque `#8E8E93` background with visible neon-blue geometry, an X, two circles, every other grid line, no square outlines, and no inset outline; its center cross matches the X thickness while the outer grid guides remain lighter; manifest, touch icon, install icon, and splash assets resolve.
 - [ ] Manual recovery copy enables Restore; restoring replaces state only after confirmation.
 - [ ] Storage quota and unavailable-API paths show useful fallback messages.
+
+The compiler regression in `tests/icon-compiler.test.mjs` builds a temporary SVG catalog three times and verifies that retained artwork and its CSS scope remain identical. Run it together with the sync tests using `node --test tests/*.test.mjs` on a current Node version.

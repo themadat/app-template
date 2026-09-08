@@ -30,8 +30,8 @@ The current model is version 4:
 {
   "schemaVersion": 4,
   "meta": {
-    "appVersion": "0.0.1.67",
-    "buildId": "0.0.1.67",
+    "appVersion": "0.0.1.68",
+    "buildId": "0.0.1.68",
     "createdAt": "ISO timestamp",
     "updatedAt": "ISO timestamp",
     "lastMutationId": "stable id",
@@ -101,7 +101,7 @@ The sync module stores a baseline target, SHA, and content hash after a successf
 - No baseline or missing remote file: request a first-sync decision.
 - Both changed: offer upload, download, or cancel, with merge available for matching or separate content.
 
-Content hashes have a `data-v1:` prefix so old whole-state hashes are never compared against content hashes. Equal content establishes a baseline even on a first check or upgrade; an unchanged legacy baseline SHA also identifies the old baseline’s content. Other unknown baselines require a choice. A matching legacy file shows Up to Date; explicit Sync Now rewrites it compactly, while checks stay read-only toward GitHub.
+Content hashes have a `data-v1:` prefix so old whole-state hashes are never compared against content hashes. Equal content establishes a baseline even on a first check or upgrade; an unchanged legacy baseline SHA also identifies the old baseline’s content. Other unknown baselines require a choice. A matching legacy file shows Up to Date; explicit Sync Now rewrites it compactly, while checks stay read-only toward GitHub. The same cleanup removes baked overrides from an already compact file; normalization differences alone never make user content pending.
 
 Merging combines matching or separate items and retains content present in either copy. Different nonempty Notes or different metadata for the same icon/record require choosing a copy; save timestamps cannot decide which content to discard. Merge and download require a successful recovery save, and both preserve device settings. Requests are sequenced and aborted to prevent overlap and stale responses. Checks repeat periodically, on visibility, and when connectivity returns.
 

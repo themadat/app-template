@@ -170,8 +170,10 @@ function cleanSvg(svg) {
   value = value.replace(/\r\n?/g, "\n").replace(/[ \t]+$/gm, "");
   if (!/^<svg\b[\s\S]*<\/svg>$/i.test(value) || FORBIDDEN_SVG.test(value) || FORBIDDEN_REFERENCE.test(value) || value.includes("${")) return "";
   value = value.replace(/\s(?:aria-hidden|focusable)=(?:"[^"]*"|'[^']*')/gi, "");
+  // Retained catalog artwork already has a scope. Keep it intact across rebuilds.
+  const alreadyScoped = /^<svg\b[^>]*\sdata-icon-style-scope="[a-f0-9]{12}"/i.test(value);
   const embeddedStyles = Array.from(value.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi));
-  if (embeddedStyles.length) {
+  if (embeddedStyles.length && !alreadyScoped) {
     const scope = crypto.createHash("sha256").update(value).digest("hex").slice(0, 12);
     const prefix = '[data-icon-style-scope="' + scope + '"]';
     value = value.replace(/<style\b([^>]*)>([\s\S]*?)<\/style>/gi, function (_, attributes, css) {
