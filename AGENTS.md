@@ -8,98 +8,9 @@ Static, local-first HTML/CSS/JavaScript application. There is no required build 
 2. Read `context/LLM_HANDOFF.md` and `context/WISHES.md`.
 3. If a feature is in flight, inspect `git log --oneline -5`, `git diff main...HEAD --stat`, and the `## Resume` section of its plan document.
 
-## Agent Continuity Protocol
-
-Agent work must be resumable across sessions.
-
 ### `continue`
 
-When the user sends only `continue`, resume the current task:
-
-1. Read `AGENT_STATUS.md`.
-2. Inspect `git status`, the current diff, recent relevant commits, and relevant changed files.
-3. Verify `AGENT_STATUS.md` against the actual repository state.
-4. Determine whether the current phase is `PLANNING`, `IMPLEMENTING`, `TESTING`, `VERIFYING`, `COMPLETE`, or `BLOCKED`.
-5. Continue with the next unfinished work.
-6. Do not redo completed work unless repository inspection or verification shows it is necessary.
-7. Keep `AGENT_STATUS.md` updated as work progresses.
-
-If `AGENT_STATUS.md` does not exist, infer the current state from the repository, current task context, Git history, and working tree, then create it when an unfinished task is active.
-
-### Persistent status
-
-Maintain a concise `AGENT_STATUS.md` in the repository root for any active agent task. Update it after meaningful milestones and before stopping whenever possible. It describes the current resumable state, not a verbose work log. Use this structure:
-
-```md
-# Goal
-Current task.
-# Status
-PLANNING | IMPLEMENTING | TESTING | VERIFYING | COMPLETE | BLOCKED
-# Checkpoint
-Current agent checkpoint version and commit, if one exists.
-# Completed
-- Completed work
-# Remaining
-- Remaining work
-# Verification
-- Build: PASS | FAIL | NOT RUN
-- Tests: PASS | FAIL | NOT RUN
-- Lint: PASS | FAIL | NOT RUN
-- Review: PASS | FAIL | NOT RUN
-# Next
-Exact next action.
-# Decisions
-- Important implementation decisions or assumptions
-```
-
-### Agent checkpoints
-
-A `+X` build suffix represents an agent checkpoint, not a release or specifically a usage-limit event, for example `1.4.0`, `1.4.0+1`, and `1.4.0+2`. For long-running tasks, checkpoint at useful stable boundaries so another agent can resume without losing significant work. Good boundaries include:
-
-- completion of a meaningful implementation unit;
-- the transition from implementation to testing;
-- the transition from testing to verification;
-- substantial progress before another large unit;
-- low available usage or context; or
-- an expected session stop.
-
-Do not depend on predicting exactly when usage or context will run out.
-
-When creating a checkpoint:
-
-1. Reach a coherent stopping point.
-2. Update `AGENT_STATUS.md`.
-3. Find the existing canonical version source and preserve the normal version while incrementing only supported build metadata.
-4. Run reasonable validation for the state being checkpointed.
-5. Update `# Checkpoint` in `AGENT_STATUS.md`.
-6. If the user has explicitly authorized commits, commit with `checkpoint: <version> - <short description>` and then record both the checkpoint version and commit hash, for example `1.4.0+2 (a1b2c3d)`.
-
-This repository's canonical application version is `identity.version` in `assets/js/config.js`, mirrored by `identity.buildId` and the version/cache/deployment surfaces described below. Its required `major.minor.patch.build` convention does not support a `+X` suffix. Do not change the application version for an agent checkpoint; record the checkpoint number only in `AGENT_STATUS.md`. The existing rule requiring explicit user authorization before any commit also applies to checkpoint commits.
-
-Do not automatically create a checkpoint commit when unrelated user changes would be included, secrets or unwanted generated files are present, the repository is knowingly too broken to provide a useful resume state, or the user has instructed you not to commit. Never discard, reset, overwrite, or clean unrelated user changes to create a checkpoint.
-
-### Usage and context awareness
-
-During long-running work, periodically check remaining usage, context, or session limits when the environment exposes them. When capacity appears low:
-
-1. Stop starting large implementation units.
-2. Finish the smallest coherent unit in progress.
-3. Run the most relevant available verification.
-4. Update `AGENT_STATUS.md`.
-5. Create an agent checkpoint if it is safe and authorized.
-6. Leave `# Next` with a precise instruction for the next agent.
-
-If capacity cannot be determined, rely on regular milestone checkpoints.
-
-### Completion standard
-
-Do not mark a task `COMPLETE` merely because coding is finished. `COMPLETE` means the requested functionality is implemented, relevant tests pass, build/typecheck and lint pass where applicable, the implementation has been reviewed against the original request, and no known required work remains. The expected progression is generally:
-
-`IMPLEMENTING` → `TESTING` → `VERIFYING` → `COMPLETE`
-
-Use `TESTING` when implementation is finished but testing is incomplete. Use `VERIFYING` after tests pass while final review remains. When truly complete, set `AGENT_STATUS.md` to `COMPLETE`, record final verification clearly, and do not create another `+X` checkpoint solely for completion unless the normal release/version workflow requires it.
-
-Installing or updating this protocol alone does not change the application version. Create `AGENT_STATUS.md` only while an unfinished task is active; otherwise wait until agent work begins.
+When the user sends only `continue`, inspect Git status, the current diff and recent relevant commits, then read any existing handoff or active plan and resume the next unfinished work. Do not create a separate status file or tracking system.
 
 ## Working rules
 
