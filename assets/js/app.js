@@ -49,7 +49,8 @@
   }
 
   const SHORTCUTS = [
-    { keys: "/", hintKey: "/", chordKey: "/", label: "Focus global search", group: "Global" },
+    { keys: "/", hintKey: "/", chordKey: "/", label: "Search all fields and select current search text", group: "Global" },
+    { keys: "'", label: "Enable name-only matching while typing in search", group: "Icon Library", chord: false },
     { keys: "Enter", label: "Show icon search results below", group: "Icon Library", chord: false },
     { keys: "1", hintKey: "1", chordKey: "1", label: "Use Ultra icon weight", group: "Icon Library" },
     { keys: "3", hintKey: "3", chordKey: "3", label: "Use Light icon weight", group: "Icon Library" },
@@ -318,7 +319,7 @@
 
   function iconMatches(icon, needle) {
     if (!needle) return true;
-    const searchable = iconSearchIndex.get(icon.id) || "";
+    const searchable = state().ui.searchNameOnly ? icon.label.toLowerCase() : (iconSearchIndex.get(icon.id) || "");
     return needle.split(/\s+/).filter(Boolean).every(function (term) { return searchable.includes(term); });
   }
 
@@ -893,7 +894,7 @@
     $("#iconLibraryEmpty").hidden = shown.length !== 0;
     $("#iconLoadMore").hidden = shown.length >= matches.length;
     const libraryState = state().modules.iconLibrary;
-    const hasActiveFilters = Boolean(state().ui.search)
+    const hasActiveFilters = Boolean(state().ui.search) || state().ui.searchNameOnly
       || selectedIconCategory() !== "all"
       || libraryState.kind !== "all"
       || libraryState.source !== "all"
@@ -965,6 +966,7 @@
     iconCatalog.forEach(function (icon) {
       if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: iconKindLabel(icon.kind) + " · " + icon.repositories.map(repositoryLabel).join(" + ") });
     });
+    if (state().ui.searchNameOnly) return results;
     const notes = state().workspace.documents[0];
     if (config.features.documents && notes && (`notes ${documentText(notes)}`).toLowerCase().includes(needle)) results.push({ type: "notes", id: notes.id, title: "Notes", meta: "Local notes" });
     config.help.forEach(function (topic) {
@@ -980,7 +982,29 @@
     return results.slice(0, 12);
   }
 
+  function renderSearchMode() {
+    const enabled = state().ui.searchNameOnly;
+    $("#searchNameOnly").hidden = !enabled;
+    $("#globalSearch").closest(".global-search-wrap").classList.toggle("name-only", enabled);
+    $("#globalSearch").setAttribute("aria-label", enabled ? "Search icon names only" : "Search icons and application support");
+    $("#globalSearch").placeholder = enabled ? "Search icon names only" : "Search icons";
+  }
+
+  function setSearchNameOnly(enabled) {
+    storage.mutate(function (next) { next.ui.searchNameOnly = enabled; }, { reason: "search-mode" });
+    iconVisibleCount = ICON_PAGE_SIZE;
+    renderIconLibrary();
+    renderGlobalSearchResults();
+  }
+
+  function focusGlobalSearch() {
+    setSearchNameOnly(false);
+    $("#globalSearch").focus();
+    $("#globalSearch").select();
+  }
+
   function renderGlobalSearchResults() {
+    renderSearchMode();
     const container = $("#globalSearchResults");
     const query = state().ui.search;
     if (!query || document.activeElement !== $("#globalSearch")) { container.hidden = true; return; }
@@ -1539,11 +1563,16 @@
       $("#globalSearchResults").hidden = true;
       return;
     }
+    if (event.isComposing || event.defaultPrevented) return;
+    if (event.target === $("#globalSearch") && event.key === "/" && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      runShortcut(event, focusGlobalSearch);
+      return;
+    }
     if (u.isEditableTarget(event.target) && !event.target.matches?.("[data-icon-weight]")) return;
     if (event.metaKey) return;
     if (event.code === "Slash") {
       if (!shortcutChordHeld(event) && event.shiftKey) runShortcut(event, function () { openSupport("help", event.target); });
-      else runShortcut(event, function () { $("#globalSearch").focus(); $("#globalSearch").select(); });
+      else runShortcut(event, focusGlobalSearch);
       return;
     }
     if (event.repeat) return;
@@ -1607,8 +1636,19 @@
       renderIconLibrary();
       renderGlobalSearchResults();
     });
+    $("#searchNameOnly").addEventListener("click", function () { setSearchNameOnly(false); $("#globalSearch").focus(); });
+    $("#globalSearch").addEventListener("beforeinput", function (event) {
+      if (!event.isComposing && event.data === "'") { event.preventDefault(); setSearchNameOnly(true); }
+      else if (!event.isComposing && event.data === "/") { event.preventDefault(); focusGlobalSearch(); }
+    });
     $("#globalSearch").addEventListener("focus", renderGlobalSearchResults);
     $("#globalSearch").addEventListener("keydown", function (event) {
+      if (event.isComposing) return;
+      if (event.key === "'" && !event.metaKey && !event.ctrlKey && !event.altKey) {
+        event.preventDefault();
+        setSearchNameOnly(true);
+        return;
+      }
       const results = $$("button[role='option']", $("#globalSearchResults"));
       if (event.key === "Enter") { event.preventDefault(); submitIconSearch(); }
       else if (event.key === "ArrowDown" && results.length) { event.preventDefault(); results[0].focus(); }
@@ -1727,6 +1767,7 @@
     $("#iconClearSearch").addEventListener("click", function () {
       storage.mutate(function (next) {
         next.ui.search = "";
+        next.ui.searchNameOnly = false;
         next.modules.iconLibrary.category = "all";
         next.modules.iconLibrary.kind = "all";
         next.modules.iconLibrary.source = "all";

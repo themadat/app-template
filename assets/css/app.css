@@ -874,3 +874,6 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .status-button[data-cloud-sync], .status-pill[data-cloud-sync] { border-width: 2px; }
   [data-cloud-sync] svg { opacity: 1; }
 }
+
+.global-search-wrap.name-only input { padding-right: 4.2rem; }
+.global-search-wrap > .search-name-only { position: absolute; right: 2.35rem; min-width: 24px; min-height: 28px; padding: 0 5px; border: 2px solid var(--accent-strong); border-radius: 5px; background: var(--accent-strong); color: #fff; font: bold 1.15rem/1 monospace; }

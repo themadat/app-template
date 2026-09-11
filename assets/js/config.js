@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.73",
-      buildId: "0.0.1.73",
+      version: "0.0.1.74",
+      buildId: "0.0.1.74",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.74",
+        date: "2026-09-10T18:00:00.000Z",
+        title: "Name-only search shortcut",
+        summary: "Type an apostrophe in search to match displayed icon names only, with a highlighted indicator beside the slash shortcut.",
+        features: ["Name-only search with a clickable active indicator"],
+        improvements: ["Press / to disable name-only matching, focus search, and select the current text", "Name-only matching excludes aliases, tags, sources, and support content"],
+        fixes: [],
+        knownIssues: []
+      },
       {
         version: "0.0.1.73",
         date: "2026-09-10T12:00:00.000Z",

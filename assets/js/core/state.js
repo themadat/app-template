@@ -130,6 +130,7 @@
         selectedRecordId: records[0] ? records[0].id : "",
         selectedDocumentId: documents[0] ? documents[0].id : "",
         search: "",
+        searchNameOnly: false,
         records: {
           statusFilter: "all",
           categoryFilter: "all",
@@ -471,6 +472,7 @@
         selectedRecordId: recordIds.has(sourceUi.selectedRecordId) ? sourceUi.selectedRecordId : (records[0] ? records[0].id : ""),
         selectedDocumentId: documentIds.has(sourceUi.selectedDocumentId) ? sourceUi.selectedDocumentId : (documents[0] ? documents[0].id : ""),
         search: u.cleanLine(sourceUi.search, 200),
+        searchNameOnly: sourceUi.searchNameOnly === true,
         records: {
           statusFilter: sourceRecordUi.statusFilter === "all" || STATUS_IDS.has(sourceRecordUi.statusFilter) ? (sourceRecordUi.statusFilter || "all") : "all",
           categoryFilter: sourceRecordUi.categoryFilter === "all" || categories.has(sourceRecordUi.categoryFilter) ? (sourceRecordUi.categoryFilter || "all") : "all",
@@ -578,6 +580,7 @@
     const next = u.clone(state);
     next.preferences = defaults.preferences;
     next.ui.search = "";
+    next.ui.searchNameOnly = false;
     next.ui.records = defaults.ui.records;
     next.ui.documents = defaults.ui.documents;
     next.ui.panels = defaults.ui.panels;

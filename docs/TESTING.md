@@ -91,3 +91,5 @@ The compiler regression in `tests/icon-compiler.test.mjs` builds a temporary SVG
 - [ ] Selecting text in Notes uses the same white text and strong accent background as selecting search-field text, in both light and dark mode.
 
 - [ ] Searching Hide Play returns the Percent card; all 50 approved source aliases resolve to their canonical symbols. The 49 visually identical native-name pairs remain separate. Retired-ID metadata edits survive normalization/import, and rescanning an old alias does not restore a duplicate card.
+
+- [ ] Type Hide Play, then apostrophe in search: Percent disappears because only displayed names match; the highlighted apostrophe appears left of /. Press / while focused: mode clears, query is unchanged and selected, and Percent returns. Repeat from outside search. Partial displayed names, edited labels, mobile input, clear filters, and reload retain the expected mode; Notes typing is unaffected.

@@ -439,3 +439,16 @@ test('retired icon edits migrate through sync payloads and canonical edits take 
     assert.equal(normalized[0].label, 'Canonical edit');
   }
 });
+
+test('name-only search survives local normalization without entering the sync payload', () => {
+  const h = harness();
+  const originalPayload = JSON.stringify(h.App.stateModel.syncPayload(h.state));
+  h.state.ui.search = 'Hide Play';
+  h.state.ui.searchNameOnly = true;
+  const normalized = h.App.stateModel.normalize(h.state);
+  assert.equal(normalized.ui.searchNameOnly, true);
+  assert.equal(normalized.ui.search, 'Hide Play');
+  assert.equal(JSON.stringify(h.App.stateModel.syncPayload(normalized)), originalPayload);
+  h.state.ui.searchNameOnly = 'true';
+  assert.equal(h.App.stateModel.normalize(h.state).ui.searchNameOnly, false);
+});
