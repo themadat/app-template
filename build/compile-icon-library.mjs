@@ -25,8 +25,8 @@ const NATIVE_WEIGHT_SOURCE_BY_FOLDER = new Map([
   ["All 9 Black", { name: "all-9-black", weight: "black" }]
 ]);
 const NATIVE_WEIGHT_BY_SOURCE_NAME = new Map(Array.from(NATIVE_WEIGHT_SOURCE_BY_FOLDER.values()).map(function (source) { return [source.name, source.weight]; }));
-// App-facing names whose matching source artwork uses a newer or canonical SF Symbol name.
-const NATIVE_WEIGHT_COUNTERPART_BY_ICON_NAME = new Map([
+// Approved source aliases only; visually identical native-name pairs stay separate.
+const SF_SYMBOL_CANONICAL_NAME = new Map([
   ["2_h_circle", "2h_circle"],
   ["4_a_circle", "4a_circle"],
   ["4_h_circle", "4h_circle"],
@@ -145,7 +145,7 @@ const recordsByHash = new Map();
 const sfRecordsByName = new Map();
 const iconRecords = new Set();
 const nativeWeightVariants = [];
-const stats = { files: 0, extracted: 0, nativeWeightVariants: 0, nativeWeightCounterparts: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
+const stats = { files: 0, extracted: 0, nativeWeightVariants: 0, templateLiterals: 0, inlineMarkup: 0, standalone: 0, rejected: 0, skippedOversized: 0, skippedGenerated: 0, mergedBySfName: 0 };
 
 function walk(root) {
   const files = [];
@@ -826,7 +826,8 @@ function addIcon(input) {
   const repaired = repairKnownSourceIcon(input, svg);
   svg = repaired.svg;
   const hash = crypto.createHash("sha256").update(canonicalSvg(svg)).digest("hex").slice(0, 12);
-  const name = normalizedName(input.preferredName || repaired.symbol);
+  const originalName = normalizedName(input.preferredName || repaired.symbol);
+  const name = kind === "sf-symbol" ? (SF_SYMBOL_CANONICAL_NAME.get(originalName) || originalName) : originalName;
   const source = { repo: input.repo, file: input.file, symbol: input.symbol };
   const matchingArtwork = recordsByHash.get(hash);
   const matchingSfName = kind === "sf-symbol" ? sfRecordsByName.get(name) : null;
@@ -838,6 +839,7 @@ function addIcon(input) {
   stats.extracted += 1;
   if (existing) {
     if (!matchingArtwork && matchingSfName) stats.mergedBySfName += 1;
+    existing.aliases.add(originalName);
     existing.aliases.add(name);
     existing.sources.push(source);
     existing.kinds.add(kind);
@@ -846,7 +848,7 @@ function addIcon(input) {
     if (!input.inline && iconNameComesFirst(name, existing.name)) existing.name = name;
     return existing;
   }
-  const record = { hash: hash, name: name, aliases: new Set([name]), sources: [source], kinds: new Set([kind]), svg: svg };
+  const record = { hash: hash, name: name, aliases: new Set([name, originalName]), sources: [source], kinds: new Set([kind]), svg: svg };
   recordsByHash.set(hash, record);
   if (kind === "sf-symbol") sfRecordsByName.set(name, record);
   iconRecords.add(record);
@@ -997,19 +999,26 @@ nativeWeightVariants.forEach(function (variant) {
   record.weightSvgs = Object.assign({}, record.weightSvgs || {}, { [variant.weight]: variant.svg });
 });
 
-const canonicalWeights = ["ultralight", "light", "medium", "bold", "black"];
-NATIVE_WEIGHT_COUNTERPART_BY_ICON_NAME.forEach(function (sourceName, targetName) {
-  const target = recordsByKnownName.get(targetName);
-  const source = recordsByKnownName.get(sourceName);
-  if (!target || !source) return;
-  canonicalWeights.forEach(function (weight) {
-    if (!source.weightSvgs || !source.weightSvgs[weight]) return;
-    target.weightSvgs = Object.assign({}, target.weightSvgs || {}, { [weight]: source.weightSvgs[weight] });
-    source.sources.filter(function (item) { return NATIVE_WEIGHT_BY_SOURCE_NAME.get(item.repo) === weight; }).forEach(function (item) {
-      target.sources.push(item);
-    });
-    stats.nativeWeightCounterparts += 1;
-  });
+// Prefer the surviving canonical record's stable ID and artwork. Keep retired IDs
+// so local edits and backups can follow the merged symbol.
+const canonicalSfNames = new Set(SF_SYMBOL_CANONICAL_NAME.values());
+const retainedByCanonicalName = new Map();
+existingCatalog.forEach(function (icon) {
+  if (icon.kind !== "sf-symbol") return;
+  const canonical = SF_SYMBOL_CANONICAL_NAME.get(icon.name) || icon.name;
+  if (!canonicalSfNames.has(canonical)) return;
+  if (!retainedByCanonicalName.has(canonical)) retainedByCanonicalName.set(canonical, []);
+  retainedByCanonicalName.get(canonical).push(icon);
+});
+retainedByCanonicalName.forEach(function (icons, name) {
+  const record = recordsByKnownName.get(name);
+  const canonical = icons.find(function (icon) { return icon.name === name; });
+  if (!record) return;
+  record.name = name;
+  if (canonical) {
+    record.svg = canonical.svg;
+    record.weightSvgs = Object.assign({}, record.weightSvgs, canonical.weightSvgs);
+  }
 });
 
 const assignedIconIds = new Set();
@@ -1017,6 +1026,7 @@ const assignedIconIds = new Set();
 function stableIconId(record, preferred) {
   const slug = preferred.replace(/_/g, "-");
   const candidates = [
+    retainedByCanonicalName.has(preferred) ? existingCatalog.find(function (icon) { return icon.name === preferred; })?.id : "",
     existingIdByHash.get(record.hash),
     existingIdByName.get(preferred),
     preferred === "x_square_fill" ? "x-square-fill-44b51b" : "",
@@ -1041,6 +1051,7 @@ const compiledRecords = Array.from(iconRecords).map(function (record) {
   const metadata = deriveMetadata(record);
   return {
     id: stableIconId(record, preferred),
+    retiredIds: Array.from(new Set((retainedByCanonicalName.get(preferred) || []).flatMap(function (icon) { return [icon.id].concat(icon.retiredIds || []); }))),
     name: preferred,
     label: cleanIconLabel(labelFor(preferred)) || "Icon",
     kind: record.kinds.has("sf-symbol") ? "sf-symbol" : "custom",
@@ -1062,10 +1073,12 @@ const excludedIconIds = new Set(hardcodedMetadata.excludedIconIds);
 const records = compiledRecords.filter(function (record) { return !excludedIconIds.has(record.id); });
 const recordById = new Map(records.map(function (record) { return [record.id, record]; }));
 let overridesApplied = 0;
-hardcodedOverrides.forEach(function (override) {
-  const record = recordById.get(override.iconId);
+hardcodedOverrides.slice().sort(function (a, b) {
+  return Number(recordById.has(a.iconId)) - Number(recordById.has(b.iconId));
+}).forEach(function (override) {
+  const record = recordById.get(override.iconId) || records.find(function (icon) { return icon.retiredIds.includes(override.iconId); });
   if (!record) return;
-  record.label = cleanIconLabel(override.label) || record.label;
+  if (record.id === override.iconId) record.label = cleanIconLabel(override.label) || record.label;
   record.kind = override.kind || record.kind;
   const overrideCategories = override.categories.filter(function (categoryId) { return categoryId !== "other"; });
   if (!override.exactCategories) {
@@ -1076,9 +1089,16 @@ hardcodedOverrides.forEach(function (override) {
       });
     });
   }
-  record.categories = overrideCategories.length ? normalizeCategoryIds(overrideCategories) : record.categories;
+  record.categories = overrideCategories.length ? normalizeCategoryIds(record.id === override.iconId ? overrideCategories : record.categories.concat(overrideCategories)) : record.categories;
   record.source = override.source;
   overridesApplied += 1;
+});
+records.forEach(function (record) {
+  const retained = retainedByCanonicalName.get(record.name);
+  record.retiredIds = record.retiredIds.filter(function (id) { return id !== record.id; }).sort();
+  if (!retained) return;
+  if (retained.length > 1) record.categories = normalizeCategoryIds(record.categories.concat(retained.flatMap(function (icon) { return icon.categories; })));
+  record.tags = Array.from(new Set(record.tags.concat(retained.flatMap(function (icon) { return icon.tags; })))).sort();
 });
 records.sort(function (a, b) { return a.label.localeCompare(b.label, undefined, { numeric: true }) || a.id.localeCompare(b.id); });
 
@@ -1090,6 +1110,7 @@ function serializeRecord(record) {
   }
   const lines = ["    {"];
   lines.push("      id: " + JSON.stringify(record.id) + ",");
+  if (record.retiredIds.length) lines.push("      retiredIds: " + JSON.stringify(record.retiredIds) + ",");
   lines.push("      name: " + JSON.stringify(record.name) + ",");
   lines.push("      label: " + JSON.stringify(record.label) + ",");
   lines.push("      kind: " + JSON.stringify(record.kind) + ",");
@@ -1156,7 +1177,6 @@ process.stdout.write(JSON.stringify({
   scannedFiles: stats.files,
   extracted: stats.extracted,
   nativeWeightVariants: stats.nativeWeightVariants,
-  nativeWeightCounterparts: stats.nativeWeightCounterparts,
   templateLiterals: stats.templateLiterals,
   inlineMarkup: stats.inlineMarkup,
   standalone: stats.standalone,

@@ -25,7 +25,7 @@ function harness({ token = 'test-token', online = true } = {}) {
         .replace(/<br\s*\/?>/gi, '\n').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&') };
       window.LocalApp.iconLibrary = {
         categories: [{ id: 'interface' }], sourceRepositories: [],
-        icons: [{ id: 'icon-a', label: 'Original', kind: 'sf-symbol', categories: ['interface'], source: '' }]
+        icons: [{ id: 'icon-a', retiredIds: ['retired-icon-a'], label: 'Original', kind: 'sf-symbol', categories: ['interface'], source: '' }]
       };
     }
   }
@@ -422,4 +422,20 @@ test('Sync Now removes baked overrides from an already compact cloud file withou
   const written = JSON.parse(Buffer.from(JSON.parse(write.options.body).content, 'base64').toString());
   assert.deepEqual(written.data, {});
   assert.equal(h.sync.getInfo().state, 'upToDate');
+});
+
+
+test('retired icon edits migrate through sync payloads and canonical edits take precedence', () => {
+  const h = harness();
+  const alias = { iconId: 'retired-icon-a', label: 'Alias edit', categories: ['interface'] };
+  const canonical = { iconId: 'icon-a', label: 'Canonical edit', categories: ['interface'] };
+  h.state.modules.iconLibrary.overrides = [alias];
+  assert.equal(h.App.stateModel.syncPayload(h.state).data.iconOverrides[0].iconId, 'icon-a');
+  assert.equal(h.App.stateModel.syncPayload(h.state).data.iconOverrides[0].label, 'Alias edit');
+  for (const overrides of [[alias, canonical], [canonical, alias]]) {
+    h.state.modules.iconLibrary.overrides = overrides;
+    const normalized = h.App.stateModel.normalize(h.state).modules.iconLibrary.overrides;
+    assert.equal(normalized.length, 1);
+    assert.equal(normalized[0].label, 'Canonical edit');
+  }
 });

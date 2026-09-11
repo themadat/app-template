@@ -21,6 +21,7 @@
   const ICON_CATEGORY_BY_ID = new Map(ICON_CATEGORIES.map(function (category) { return [category.id, category]; }));
   const ICON_CATEGORY_PARENT_IDS = new Set(ICON_CATEGORIES.map(function (category) { return category.parent || ""; }).filter(Boolean));
   const ICON_BY_ID = new Map((App.iconLibrary && Array.isArray(App.iconLibrary.icons) ? App.iconLibrary.icons : []).map(function (icon) { return [icon.id, icon]; }));
+  const ICON_RETIRED_IDS = new Map(Array.from(ICON_BY_ID.values()).flatMap(function (icon) { return (icon.retiredIds || []).map(function (id) { return [id, icon.id]; }); }));
   const ICON_CATEGORY_ALIASES = new Map([["actions", "interface"], ["maps-travel", "geography"], ["maps", "geography-mapping"], ["locations", "geography"], ["locations-countries", "geography-countries"], ["locations-regions", "geography-regions"], ["locations-mapping", "geography-mapping"], ["locations-places", "geography-places"], ["games", "recreation-games"], ["sports-recreation", "recreation-sport"], ["norway-sweden", "commerce"], ["rays", "rays-sparkles"], ["sparkled", "rays-sparkles"], ["badged-shield", "badged-shapes-shield"]]);
   const ICON_SOURCE_IDS = new Set(App.iconLibrary && Array.isArray(App.iconLibrary.sourceRepositories) ? App.iconLibrary.sourceRepositories : []);
 
@@ -31,9 +32,13 @@
 
   function normalizeIconOverrides(value) {
     const overrides = new Map();
-    (Array.isArray(value) ? value : []).slice(0, config.controls.maxIconOverrides).forEach(function (item) {
+    (Array.isArray(value) ? value : []).slice(0, config.controls.maxIconOverrides).sort(function (a, b) {
+      // Explicit edits to the surviving icon win over edits to a retired alias.
+      return Number(ICON_RETIRED_IDS.has(u.cleanLine(u.plainObject(b).iconId, 160))) - Number(ICON_RETIRED_IDS.has(u.cleanLine(u.plainObject(a).iconId, 160)));
+    }).forEach(function (item) {
       const source = u.plainObject(item);
-      const iconId = u.cleanLine(source.iconId, 160);
+      const originalId = u.cleanLine(source.iconId, 160);
+      const iconId = ICON_RETIRED_IDS.get(originalId) || originalId;
       const label = u.cleanIconLabel(source.label, 120);
       if (!iconId || !label) return;
       const selected = new Set((Array.isArray(source.categories) ? source.categories : []).map(normalizeIconCategoryId).filter(function (categoryId) { return ICON_CATEGORY_IDS.has(categoryId); }));

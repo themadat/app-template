@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.72",
-      buildId: "0.0.1.72",
+      version: "0.0.1.73",
+      buildId: "0.0.1.73",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.73",
+        date: "2026-09-10T12:00:00.000Z",
+        title: "Merge imported SF Symbol aliases",
+        summary: "Fifty duplicate source entries now share their canonical SF Symbol cards, including Hide Play under Percent.",
+        features: [],
+        improvements: ["7,231 catalog entries with all five native weights", "Merged names remain searchable, with source references and categories preserved", "Saved edits to retired icon IDs follow the surviving symbols"],
+        fixes: ["Approved source aliases no longer reappear as duplicate cards after a catalog rebuild"],
+        knownIssues: []
+      },
       {
         version: "0.0.1.72",
         date: "2026-09-08T12:00:00.000Z",
