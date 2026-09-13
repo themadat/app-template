@@ -25,6 +25,40 @@ The refined pre-launch shell at version `0.0.1.1` is the semantic baseline. Do n
 
 Git clone, pull, and push use SSH with this setup. The optional browser-based GitHub Sync still uses its separate fine-grained token described below.
 
+## Values to provide at the beginning
+
+Include these non-secret values in your reset request so the agent can configure sync from the start. Replace `NEW-APP-SLUG` consistently with your chosen lowercase app slug, such as `trail-log`.
+
+| Value | What to provide |
+| --- | --- |
+| App name | Your chosen display name, such as `Trail Log` |
+| Description | One sentence describing the app |
+| App icon | Attach a square SVG or PNG |
+| Application repository | `https://github.com/themadat/NEW-APP-SLUG` — contains the app source |
+| GitHub Sync | `Enabled` (or `Disabled` to skip sync provisioning) |
+| Sync owner | `themadat` |
+| Sync repository | `app-data` — contains the saved app data |
+| Sync branch | `main` |
+| Sync JSON path | `data/NEW-APP-SLUG.json` — unique to this app |
+
+Copy this request into the new app checkout and attach the icon:
+
+```text
+Reset this copied template for my new app.
+App name: [App Name]
+Description: [One-sentence description]
+Application repository: https://github.com/themadat/NEW-APP-SLUG
+App icon: attached; use the same artwork for light and dark appearances.
+GitHub Sync: enabled
+Sync owner: themadat
+Sync repository: app-data
+Sync branch: main
+Sync JSON path: data/NEW-APP-SLUG.json
+Configure these non-secret values now and walk me through creating the data file and token.
+```
+
+The agent writes the application repository into `config.identity.repository` and the sync target into `config.cloudSync`. Owner, repository, branch, and path appear read-only in the app's Settings. You enter only the token and remember preference there; the token is not needed to begin the reset and must never be included in this request.
+
 ## Required preflight
 
 1. Run `git status --short`, inspect the current path, and inspect `git remote -v`.
@@ -87,9 +121,9 @@ Complete these GitHub Sync steps for every reset that retains the optional sync 
 1. Derive a unique lowercase filename from the confirmed app slug, such as `data/trail-log.json`. Do not reuse another app’s file.
 2. Open the [`app-data/data` folder](https://github.com/themadat/app-data/tree/main/data), create that JSON file on `main`, initialize it with `{}`, and commit it. The app’s first upload replaces this starter object with its normalized sync payload.
 3. Set `config.cloudSync` to owner `themadat`, repository `app-data`, branch `main`, and the new `data/<app-slug>.json` path. Keep the target config-driven and read-only in Settings.
-4. Open [Fine-grained personal access tokens](https://github.com/settings/personal-access-tokens) and create a token named for the app, using `themadat` as the resource owner.
+4. Open [Fine-grained personal access tokens](https://github.com/settings/personal-access-tokens) and create a token named for the app (for example, `trail-log-sync`), using `themadat` as the resource owner. Choose an expiration date you can maintain; renew the credential in each configured browser when it expires.
 5. Under **Repository access**, choose **Only select repositories** and select only `app-data`.
-6. Under **Repository permissions**, set **Contents** to **Read and write**. Do not grant broader permissions merely for application sync.
+6. Under **Repository permissions**, set **Contents** to **Read and write**. This token selects `app-data`, not the new app's source repository. Its Contents permission applies to the selected repository, not only this app's JSON file; the unique filename keeps app data separate but does not narrow token permissions to that file. Do not grant broader permissions merely for application sync.
 7. Copy the token when GitHub displays it, paste it into **Settings → Data Sync**, choose whether this browser should remember it, then run **Test** and **Save**. The token is a secret: never place it in the data file, source, documentation, backups, commits, issues, or chat.
 8. Configure the token separately in each browser or installed copy that will sync. The same app-scoped token can be entered on both laptops, or separate tokens can be used when independent revocation is preferred.
 
