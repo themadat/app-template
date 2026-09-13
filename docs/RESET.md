@@ -4,6 +4,27 @@ The one-word `reset` workflow turns a copy of App Template into a clean foundati
 
 The refined pre-launch shell at version `0.0.1.1` is the semantic baseline. Do not revert the repository to an old commit: later reusable fixes to Settings, sync, storage, PWA behavior, accessibility, and responsive layout must survive.
 
+## Prepare the new repository with SSH
+
+1. Choose the new app name and prepare a high-quality square SVG or PNG app icon.
+2. Create a separate GitHub repository containing this template's files. If **Use this template** is available, use it to create the new repository. Keep the original `app-template` repository intact.
+3. Set up SSH on this computer using [the Git setup guide](GIT-SETUP.md). If personal-account pushes already work, reuse that setup. If the default GitHub SSH profile uses a work account, follow the guide's personal-profile and namespace-routing steps first. Keep the standard `git@github.com:` URL in the repository on both computers.
+4. In Terminal, run the following commands. Replace `NEW-APP-SLUG` in both places with the new repository name; replace `themadat` if a different account owns it. The parent folder below matches this template's current location; use your own GitHub folder on another computer.
+
+   ```sh
+   cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub"
+   git clone git@github.com:themadat/NEW-APP-SLUG.git
+   cd NEW-APP-SLUG
+   git config --local --get remote.origin.url
+   git remote get-url origin
+   git status --short
+   ```
+
+5. Confirm the stored origin is `git@github.com:themadat/NEW-APP-SLUG.git` and the status output is empty. With account routing configured, the resolved URL may use your local personal SSH alias. Neither URL should target `themadat/app-template`. Cloning requires the new repository to already exist and contain the template files; cloning the original template would still target the original repository.
+6. Open this new checkout in Codex, attach the app icon, and request: `Reset this copied template for my new app, [App Name]. It is [one-sentence description]. Use the attached icon. Keep GitHub Sync enabled.` Request sync disabled instead if you want local-only storage. The agent follows the preflight and reset contract below.
+
+Git clone, pull, and push use SSH with this setup. The optional browser-based GitHub Sync still uses its separate fine-grained token described below.
+
 ## Required preflight
 
 1. Run `git status --short`, inspect the current path, and inspect `git remote -v`.
