@@ -119,7 +119,7 @@
           developerMode: false
         },
         hints: {
-          enabled: config.features.hints,
+          enabled: config.features.hints && config.controls.hintsEnabledByDefault,
           dismissed: []
         },
         installation: {
@@ -231,7 +231,7 @@
         accent: source.accent || (source.settings && source.settings.accent),
         textScale: source.textScale || (source.settings && source.settings.textScale) || 1,
         buttonStyle: source.buttonStyle || (source.settings && source.settings.buttonStyle) || "both",
-        hintsEnabled: source.hintsEnabled !== false
+        hintsEnabled: typeof source.hintsEnabled === "boolean" ? source.hintsEnabled : config.controls.hintsEnabledByDefault
       },
       layout: u.plainObject(source.layout || source.panels),
       filters: u.plainObject(source.filters),
@@ -260,7 +260,7 @@
           textScale: oldPreferences.textScale || 1
         }),
         controls: Object.assign({}, base.preferences.controls, { buttonStyle: oldPreferences.buttonStyle || "both" }),
-        hints: Object.assign({}, base.preferences.hints, { enabled: oldPreferences.hintsEnabled !== false }),
+        hints: Object.assign({}, base.preferences.hints, { enabled: typeof oldPreferences.hintsEnabled === "boolean" ? oldPreferences.hintsEnabled : config.controls.hintsEnabledByDefault }),
         installation: base.preferences.installation
       },
       ui: Object.assign({}, base.ui, {
@@ -462,7 +462,7 @@
           developerMode: sourceControls.developerMode === true
         },
         hints: {
-          enabled: config.features.hints && sourceHints.enabled !== false,
+          enabled: config.features.hints && (typeof sourceHints.enabled === "boolean" ? sourceHints.enabled : config.controls.hintsEnabledByDefault),
           dismissed: Array.from(new Set((Array.isArray(sourceHints.dismissed) ? sourceHints.dismissed : []).map(function (id) { return u.cleanLine(id, 80); }).filter(Boolean))).slice(0, 200)
         },
         installation: {

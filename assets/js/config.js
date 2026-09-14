@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.75",
-      buildId: "0.0.1.75",
+      version: "0.0.1.76",
+      buildId: "0.0.1.76",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -57,6 +57,7 @@
       shortcutHintModifier: "ShiftControlOption",
       autosaveDelayMs: 180,
       syncCheckIntervalMs: 5 * 60 * 1000,
+      hintsEnabledByDefault: false,
       whatsNewAutoDismissMs: 20 * 1000,
       maxImportBytes: 5 * 1024 * 1024,
       maxRecords: 5000,
@@ -76,6 +77,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.76",
+        date: "2026-09-14T12:00:00.000Z",
+        title: "Hints off by default",
+        summary: "Dismissible contextual hints start off. Enable them in Settings whenever you want guidance.",
+        features: [],
+        improvements: ["New browser sessions default to hidden hints while saved choices are preserved"],
+        fixes: [],
+        knownIssues: []
+      },
       {
         version: "0.0.1.75",
         date: "2026-09-14T12:00:00.000Z",
