@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.76",
-      buildId: "0.0.1.76",
+      version: "0.0.1.77",
+      buildId: "0.0.1.77",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -77,6 +77,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.77",
+        date: "2026-09-14T12:00:00.000Z",
+        title: "Custom document search symbol",
+        summary: "Added Text Page Badge Magnifyingglass Fill to the custom symbol catalog.",
+        features: ["Filled document with a magnifying-glass badge, preserving the supplied SVG artwork"],
+        improvements: [],
+        fixes: [],
+        knownIssues: []
+      },
       {
         version: "0.0.1.76",
         date: "2026-09-14T12:00:00.000Z",
