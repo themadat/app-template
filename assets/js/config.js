@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.74",
-      buildId: "0.0.1.74",
+      version: "0.0.1.75",
+      buildId: "0.0.1.75",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -57,7 +57,7 @@
       shortcutHintModifier: "ShiftControlOption",
       autosaveDelayMs: 180,
       syncCheckIntervalMs: 5 * 60 * 1000,
-      whatsNewAutoDismissMs: 30 * 1000,
+      whatsNewAutoDismissMs: 20 * 1000,
       maxImportBytes: 5 * 1024 * 1024,
       maxRecords: 5000,
       maxDocuments: 500,
@@ -76,6 +76,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.75",
+        date: "2026-09-14T12:00:00.000Z",
+        title: "Top-bar sync and app updates",
+        summary: "Cloud Sync and Update now live in the top bar. What’s New dismisses after 20 seconds, with a configurable timer in Settings.",
+        features: ["What’s New dismissal setting from 1–300 seconds", "Top-bar Update action with an available-update indicator"],
+        improvements: ["Cloud Sync status stays beside the application actions", "Updates save local changes before checking and refreshing"],
+        fixes: ["Available updates no longer open a persistent pop-up"],
+        knownIssues: []
+      },
       {
         version: "0.0.1.74",
         date: "2026-09-10T18:00:00.000Z",

@@ -452,3 +452,15 @@ test('name-only search survives local normalization without entering the sync pa
   h.state.ui.searchNameOnly = 'true';
   assert.equal(h.App.stateModel.normalize(h.state).ui.searchNameOnly, false);
 });
+
+test('banner duration defaults and bounds are local preferences excluded from cloud content', () => {
+  const h = harness();
+  assert.equal(h.state.preferences.controls.whatsNewDismissSeconds, 20);
+  const payload = JSON.stringify(h.App.stateModel.syncPayload(h.state));
+  for (const [input, expected] of [[undefined, 20], ['bad', 20], [0, 1], [400, 300], [12.6, 13], [8, 8]]) {
+    h.state.preferences.controls.whatsNewDismissSeconds = input;
+    const normalized = h.App.stateModel.normalize(h.state);
+    assert.equal(normalized.preferences.controls.whatsNewDismissSeconds, expected);
+    assert.equal(JSON.stringify(h.App.stateModel.syncPayload(normalized)), payload);
+  }
+});

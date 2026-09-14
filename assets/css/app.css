@@ -220,7 +220,7 @@ a { color: var(--accent-strong); }
 .whats-new-banner span:last-child { color: var(--muted); }
 .whats-new-timer { position: absolute; inset: auto 0 0; height: 3px; background: var(--surface-2); }
 .whats-new-timer::after { position: absolute; inset: 0; background: var(--accent-2); content: ""; transform: scaleX(1); transform-origin: left center; }
-.whats-new-banner.is-counting-down .whats-new-timer::after { animation: whats-new-countdown var(--whats-new-duration, 30000ms) linear forwards; }
+.whats-new-banner.is-counting-down .whats-new-timer::after { animation: whats-new-countdown var(--whats-new-duration, 20000ms) linear forwards; }
 @keyframes whats-new-countdown { to { transform: scaleX(0); } }
 .banner-actions { display: flex; flex: 0 0 auto; gap: .35rem; }
 .banner-actions .icon-button { width: 38px; min-width: 38px; height: 38px; }
@@ -488,7 +488,6 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); outline
 .roadmap-card footer { justify-content: flex-start; flex-wrap: wrap; gap: .35rem .7rem; padding-top: .55rem; border-top: 1px solid var(--line); }
 .roadmap-state { font-weight: 850; text-transform: capitalize; }
 
-.floating-actions { position: fixed; z-index: 24; right: calc(.9rem + var(--safe-right)); bottom: calc(.9rem + var(--safe-bottom)); display: flex; align-items: center; gap: .55rem; }
 .floating-button { display: inline-flex; align-items: center; width: auto; max-width: min(310px, calc(100vw - 1.8rem - var(--safe-left) - var(--safe-right))); min-height: 54px; padding: .5rem .72rem; gap: .58rem; border-radius: 16px; box-shadow: var(--shadow); }
 .floating-status-icon { display: grid; flex: 0 0 auto; place-items: center; font-size: 1.2rem; }
 .floating-status-icon .sf-symbol { width: 1.5rem; height: 1.5rem; }
@@ -738,7 +737,6 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .mobile-back-button { display: inline-flex; align-items: center; }
   .detail-header { flex-wrap: wrap; }
   .detail-header > div:first-of-type { flex: 1; }
-  .floating-actions { z-index: 22; }
   .icon-edit-body { grid-template-columns: 1fr; }
   .icon-edit-body > * { grid-column: auto; }
   .icon-edit-primary-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -811,7 +809,6 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .roadmap-header { align-items: flex-start; }
   .roadmap-controls { align-items: stretch; flex-direction: column; }
   .roadmap-controls label { width: 100%; }
-  .floating-actions { right: calc(.65rem + var(--safe-right)); bottom: calc(.65rem + var(--safe-bottom)); }
   dialog.app-dialog {
     width: 100vw;
     max-width: 100vw;
@@ -863,7 +860,7 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 }
 :root[data-motion="reduce"] [data-cloud-sync] .sync-rotation { animation: none !important; }
 :root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-:root[data-motion="reduce"] .whats-new-banner.is-counting-down .whats-new-timer::after { animation-duration: var(--whats-new-duration, 30000ms) !important; animation-timing-function: steps(30, end); }
+:root[data-motion="reduce"] .whats-new-banner.is-counting-down .whats-new-timer::after { animation-duration: var(--whats-new-duration, 20000ms) !important; animation-timing-function: steps(30, end); }
 
 @media (forced-colors: active) {
   .status-chip, .roadmap-card, .status-button { forced-color-adjust: auto; }
@@ -877,3 +874,17 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 
 .global-search-wrap.name-only input { padding-right: 4.2rem; }
 .global-search-wrap > .search-name-only { position: absolute; right: 2.35rem; min-width: 24px; min-height: 28px; padding: 0 5px; border: 2px solid var(--accent-strong); border-radius: 5px; background: var(--accent-strong); color: #fff; font: bold 1.15rem/1 monospace; }
+
+
+/* Shared shell actions stay in the top bar on every screen size. */
+.top-toolbar .toolbar-status { display: inline-flex; align-items: center; gap: .4rem; max-width: 155px; min-height: 44px; padding: .25rem .4rem; box-shadow: none; }
+#updateAppButton[data-update-available="true"] .button-icon { color: #d52c20; }
+[data-theme="dark"] #updateAppButton[data-update-available="true"] .button-icon { color: #ff7367; }
+@media (max-width: 1199px) {
+  .top-toolbar .toolbar-status { width: 44px; min-width: 44px; justify-content: center; }
+  .top-toolbar .toolbar-status .floating-status-copy { display: none; }
+}
+@media (max-width: 379px) {
+  .app-header { grid-template-areas: "title title" "search search" "toolbar toolbar"; }
+  .top-toolbar { justify-self: end; }
+}

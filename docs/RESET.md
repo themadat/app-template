@@ -72,12 +72,13 @@ The agent writes the application repository into `config.identity.repository` an
 ## Keep
 
 - The static, dependency-free HTML/CSS/JavaScript architecture.
-- The application header and semantic blank main workspace.
+- The application header with top-bar Cloud Sync and Update controls, and semantic blank main workspace.
 - The single plain-text Notes modal and its local autosave behavior.
 - Vertical Settings navigation and the Appearance, Help, What’s New, Roadmap, Shortcuts, and Developer sections. What’s New and Roadmap remain separate.
 - Theme selection, button presentation, text scale, contextual hints, focus handling, keyboard infrastructure, safe-area support, reduced-motion support, and responsive layout.
 - Combined local/GitHub status, recovery copies, JSON export/import, and optional GitHub Sync with secrets kept outside exported state.
-- PWA registration, offline shell, update notice, manifests, install assets, and the GitHub Pages Actions workflow.
+- PWA registration, offline shell, top-bar available-update indicator and save-before-refresh behavior, manifests, install assets, and the GitHub Pages Actions workflow.
+- The device-only What’s New dismissal setting (1–300 seconds, default 20 seconds).
 - `assets/js/icons.js` and every symbol needed by the retained interface. This small inline interface-symbol set is shell infrastructure, not the icon-library product, and must be self-contained before the generated catalog is removed.
 - Reusable utilities and components in `assets/js/core/`, pruned to the state and behavior the starter shell still uses.
 - `docs/GIT-SETUP.md`, with separate personal- and work-laptop terminal Git/SSH setup and placeholders updated when the new repository target is known.

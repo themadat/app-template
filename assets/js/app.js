@@ -206,8 +206,9 @@
     if (whatsNewDismissTimer && whatsNewTimerVersion === version) return;
     stopWhatsNewTimer();
     const banner = $("#whatsNewBanner");
-    const duration = Math.max(1000, Number(config.controls.whatsNewAutoDismissMs) || 30000);
+    const duration = state().preferences.controls.whatsNewDismissSeconds * 1000;
     banner.style.setProperty("--whats-new-duration", duration + "ms");
+    void banner.offsetWidth;
     banner.classList.add("is-counting-down");
     whatsNewTimerVersion = version;
     whatsNewDismissTimer = window.setTimeout(function () {
@@ -1089,6 +1090,7 @@
     const appearance = preferences.appearance;
     $$('[data-theme-mode]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.themeMode === appearance.mode)); });
     renderTextSizeControl();
+    setInputValue($("#whatsNewDismissSeconds"), preferences.controls.whatsNewDismissSeconds);
     $$('[data-button-style]').forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.buttonStyle === preferences.controls.buttonStyle)); });
     $$('[data-hints-enabled]').forEach(function (button) { button.setAttribute("aria-pressed", String((button.dataset.hintsEnabled === "true") === preferences.hints.enabled)); });
   }
@@ -1445,6 +1447,14 @@
     $("#textSizeSlider").addEventListener("input", function (event) { storage.mutate(function (next) { next.preferences.appearance.textScale = Number(event.target.value) / 100; }, { reason: "appearance" }); applyAppearance(); renderTextSizeControl(); });
     $$('[data-hints-enabled]').forEach(function (button) {
       button.addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.enabled = button.dataset.hintsEnabled === "true"; }, { reason: "hints" }); renderHeader(); renderSettings(); });
+    });
+    $("#whatsNewDismissSeconds").addEventListener("change", function () {
+      if (!this.reportValidity()) return;
+      const seconds = Number(this.value);
+      storage.mutate(function (next) { next.preferences.controls.whatsNewDismissSeconds = seconds; }, { reason: "banner-duration" });
+      storage.saveNow();
+      stopWhatsNewTimer();
+      renderHeader();
     });
     $("#restoreHintsButton").addEventListener("click", function () { storage.mutate(function (next) { next.preferences.hints.dismissed = []; next.ui.dismissedHints = []; }, { reason: "hints" }); renderHeader(); renderSettings(); components.toast("All contextual hints are available again.", { title: "Hints restored", kind: "success" }); });
     $("#saveSyncButton").addEventListener("click", saveSyncSettings);

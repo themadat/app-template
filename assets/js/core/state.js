@@ -112,6 +112,7 @@
           textScale: 1
         },
         controls: {
+          whatsNewDismissSeconds: config.controls.whatsNewAutoDismissMs / 1000,
           buttonStyle: "both",
           shortcutHints: true,
           shortcutHintModifier: config.controls.shortcutHintModifier,
@@ -454,6 +455,7 @@
           textScale: u.clamp(sourceAppearance.textScale, 0.85, 1.3, u.clamp(sourceAppearance.readingScale, 0.85, 1.3, 1))
         },
         controls: {
+          whatsNewDismissSeconds: Math.round(u.clamp(sourceControls.whatsNewDismissSeconds, 1, 300, config.controls.whatsNewAutoDismissMs / 1000)),
           buttonStyle: ["icons", "text", "both"].includes(sourceControls.buttonStyle) ? sourceControls.buttonStyle : "both",
           shortcutHints: sourceControls.shortcutHints !== false,
           shortcutHintModifier: sourceControls.shortcutHintModifier === "ShiftControlOption" ? sourceControls.shortcutHintModifier : config.controls.shortcutHintModifier,
