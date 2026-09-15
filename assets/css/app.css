@@ -898,3 +898,6 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .search-clear-label { font-size: .62rem; font-weight: 650; line-height: 1.05; }
 .search-clear-button:disabled { color: var(--muted); opacity: .4; cursor: default; }
 .global-search-wrap input::-webkit-search-cancel-button { display: none; }
+
+/* Keep the search shortcut badge above the input, clear of the C badge. */
+.global-search-wrap[data-shortcut]::after { right: 57px; }
