@@ -318,10 +318,28 @@
 
   function iconKindLabel(value) { return value === "sf-symbol" ? "Symbol" : "Custom"; }
 
+  function searchTerms(query) {
+    return Array.from(String(query || "").toLowerCase().matchAll(/"([^"]*)"|([^\s"]+)/g), function (match) {
+      return { text: (match[1] === undefined ? match[2] : match[1]).trim(), exact: match[1] !== undefined };
+    }).filter(function (term) { return term.text; });
+  }
+
+  function searchTermRanges(value, term) {
+    const text = String(value).toLowerCase();
+    const ranges = [];
+    const wordCharacter = function (character) { return /[\p{L}\p{N}]/u.test(character || ""); };
+    let index = text.indexOf(term.text);
+    while (index >= 0) {
+      const end = index + term.text.length;
+      if (!term.exact || (!wordCharacter(text[index - 1]) && !wordCharacter(text[end]))) ranges.push([index, end]);
+      index = text.indexOf(term.text, index + Math.max(1, term.text.length));
+    }
+    return ranges;
+  }
+
   function iconMatches(icon, needle) {
-    if (!needle) return true;
-    const searchable = state().ui.searchNameOnly ? icon.label.toLowerCase() : (iconSearchIndex.get(icon.id) || "");
-    return needle.split(/\s+/).filter(Boolean).every(function (term) { return searchable.includes(term); });
+    const searchable = state().ui.searchNameOnly ? icon.label : (iconSearchIndex.get(icon.id) || "");
+    return searchTerms(needle).every(function (term) { return searchTermRanges(searchable, term).length > 0; });
   }
 
   function selectedIconCategory() {
@@ -474,17 +492,20 @@
 
   function highlightedSearchText(value, query) {
     const text = String(value || "");
-    const needle = String(query || "").trim().toLowerCase();
-    if (!needle) return u.escapeHtml(text);
+    const ranges = searchTerms(query).flatMap(function (term) { return searchTermRanges(text, term); }).sort(function (a, b) { return a[0] - b[0]; });
+    const merged = [];
+    ranges.forEach(function (range) {
+      const last = merged[merged.length - 1];
+      if (last && range[0] <= last[1]) last[1] = Math.max(last[1], range[1]);
+      else merged.push(range.slice());
+    });
     let cursor = 0;
     let output = "";
-    let index = text.toLowerCase().indexOf(needle);
-    while (index >= 0) {
-      output += u.escapeHtml(text.slice(cursor, index));
-      output += '<mark class="search-match">' + u.escapeHtml(text.slice(index, index + needle.length)) + "</mark>";
-      cursor = index + needle.length;
-      index = text.toLowerCase().indexOf(needle, cursor);
-    }
+    merged.forEach(function (range) {
+      output += u.escapeHtml(text.slice(cursor, range[0]));
+      output += '<mark class="search-match">' + u.escapeHtml(text.slice(range[0], range[1])) + "</mark>";
+      cursor = range[1];
+    });
     return output + u.escapeHtml(text.slice(cursor));
   }
 
@@ -966,7 +987,7 @@
     if (!needle) return [];
     const results = [];
     iconCatalog.forEach(function (icon) {
-      if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: iconKindLabel(icon.kind) + " · " + icon.repositories.map(repositoryLabel).join(" + ") });
+      if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: iconKindLabel(icon.kind) });
     });
     if (state().ui.searchNameOnly) return results;
     const notes = state().workspace.documents[0];

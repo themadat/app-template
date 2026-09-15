@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.81",
-      buildId: "0.0.1.81",
+      version: "0.0.1.82",
+      buildId: "0.0.1.82",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -77,6 +77,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.82",
+        date: "2026-09-15T12:00:00.000Z",
+        title: "Exact words in icon search",
+        summary: "Quote a search term to match a whole word, including in name-only mode. Search suggestions no longer display source names.",
+        features: ["Quoted whole-word and phrase matching"],
+        improvements: ["Highlight each matching search term"],
+        fixes: ["Remove source metadata from search suggestions"],
+        knownIssues: []
+      },
       {
         version: "0.0.1.81",
         date: "2026-09-15T12:00:00.000Z",

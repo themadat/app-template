@@ -139,3 +139,5 @@ The custom Text Page Badge Magnifyingglass Fill source is retained at assets/cus
 The 52px global search has a right-anchored clear button using the supplied xmark-square SVG, disabled without active search/filters. It shares the existing C clear-all action. Shift–Control–Option–C and –R (Update) also work in search; dialogs retain keyboard ownership. Plain C/R work outside editable fields.
 
 Icon search indexes names, aliases, tags, kinds, and categories only. Repository names and source symbol/file metadata are excluded; the Source filter and displayed provenance remain available.
+
+Icon search supports double-quoted whole words/phrases combined with unquoted partial terms; all terms must match, including in apostrophe name-only mode. Suggestions show type only, without source names. Highlights use the same term boundaries.
