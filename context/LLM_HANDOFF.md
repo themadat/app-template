@@ -137,3 +137,5 @@ Dismissible contextual hints default off through config.controls.hintsEnabledByD
 The custom Text Page Badge Magnifyingglass Fill source is retained at assets/custom-symbols/text-page-badge-magnifyingglass-fill.svg and compiled into the catalog as Custom. Its supplied paths and document mask are preserved.
 
 The 52px global search has a right-anchored clear button using the supplied xmark-square SVG, disabled without active search/filters. It shares the existing C clear-all action. Shift–Control–Option–C and –R (Update) also work in search; dialogs retain keyboard ownership. Plain C/R work outside editable fields.
+
+Icon search indexes names, aliases, tags, kinds, and categories only. Repository names and source symbol/file metadata are excluded; the Source filter and displayed provenance remain available.
