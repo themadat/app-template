@@ -135,3 +135,5 @@ Cloud Sync now lives in the top toolbar beside Update, Notes, and Settings. Upda
 Dismissible contextual hints default off through config.controls.hintsEnabledByDefault. Explicit saved choices survive normalization and legacy migration; Settings can still enable hints. Shortcut hints and What’s New keep their separate behavior.
 
 The custom Text Page Badge Magnifyingglass Fill source is retained at assets/custom-symbols/text-page-badge-magnifyingglass-fill.svg and compiled into the catalog as Custom. Its supplied paths and document mask are preserved.
+
+The 52px global search has a right-anchored clear button using the supplied xmark-square SVG, disabled without active search/filters. It shares the existing C clear-all action. Shift–Control–Option–C and –R (Update) also work in search; dialogs retain keyboard ownership. Plain C/R work outside editable fields.

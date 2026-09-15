@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.77",
-      buildId: "0.0.1.77",
+      version: "0.0.1.78",
+      buildId: "0.0.1.78",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -77,6 +77,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.78",
+        date: "2026-09-15T12:00:00.000Z",
+        title: "Search clear button and Update shortcut",
+        summary: "Clear filters and search from the right edge of the taller search bar. Shift–Control–Option–C clears and Shift–Control–Option–R updates, including while search is focused.",
+        features: ["Search clear button with disabled empty state", "Top-bar Update keyboard shortcut"],
+        improvements: ["Search bar and clear button share a 52px height"],
+        fixes: [],
+        knownIssues: []
+      },
       {
         version: "0.0.1.77",
         date: "2026-09-14T12:00:00.000Z",
@@ -854,10 +864,10 @@
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort reset filters", html: "<p>Search Roadmap, filter by state, priority, target, or effort, reset the controls in one step, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },
       { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. The app configuration fixes the repository, branch, and JSON file path; enter a fine-grained token with Contents access in Settings → Data Sync. Expand Sync payload (JSON) there to inspect the current local content included in uploads. Only Notes and edited icon metadata sync; appearance, filters, and settings stay on this device. Conflicts ask which copy to keep, with merging available for matching or separate items.</p>" },
-      { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline update refresh shortcut", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline. When a new version is ready, press <kbd>R</kbd> to Force Refresh or <kbd>X</kbd> to close its notice.</p>" },
+      { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline update refresh shortcut", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline. Use the top-bar Update button or Shift–Control–Option–R to check for updates and force refresh.</p>" },
       { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press shortcut pipe", html: "<p>Click or tap the app icon, or press <kbd>T</kbd>, to switch between light and dark themes. Press and hold the icon, or press <kbd>|</kbd> or <kbd>D</kbd>, to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },
-      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version update refresh pipe developer countdown auto dismiss icon weight ultra ultralight ultrathin light medium bold black", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>|</kbd> or <kbd>D</kbd> for Developer Mode, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. The main-page What’s New notice closes automatically after its 30-second countdown; use <kbd>V</kbd> to view release notes or <kbd>X</kbd> to dismiss it sooner. When New version available is visible, use <kbd>R</kbd> to Force Refresh and <kbd>X</kbd> to close it. In the icon library, use <kbd>1</kbd>, <kbd>3</kbd>, <kbd>5</kbd>, <kbd>7</kbd>, or <kbd>9</kbd> for Ultra through Black, and <kbd>G</kbd>, <kbd>I</kbd>, <kbd>C</kbd>, and <kbd>L</kbd> for the visible module actions. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
+      { id: "shortcuts", title: "Keyboard access", section: "Accessibility", keywords: "keyboard shortcuts slash escape alt option shift control hints hover version update refresh pipe developer countdown auto dismiss icon weight ultra ultralight ultrathin light medium bold black", html: "<p>Press <kbd>/</kbd> for global search, <kbd>N</kbd> for Notes, <kbd>V</kbd> for What’s New, <kbd>T</kbd> for the theme, <kbd>|</kbd> or <kbd>D</kbd> for Developer Mode, <kbd>,</kbd> for Settings, and <kbd>H</kbd> or <kbd>?</kbd> for Help. The main-page What’s New notice closes automatically after its configurable countdown (20 seconds by default); use <kbd>V</kbd> to view release notes or <kbd>X</kbd> to dismiss it sooner. Use Shift–Control–Option–R to check for updates and force refresh, and Shift–Control–Option–C to clear filters and search, even while search is focused. In the icon library, use <kbd>1</kbd>, <kbd>3</kbd>, <kbd>5</kbd>, <kbd>7</kbd>, or <kbd>9</kbd> for Ultra through Black, and <kbd>G</kbd>, <kbd>I</kbd>, <kbd>C</kbd>, and <kbd>L</kbd> for the visible module actions. Commands work directly or with Shift–Control–Option held. Hold that chord to reveal available shortcut badges, and hover a shortcut-enabled control for its full command.</p>" }
     ]
   };
 

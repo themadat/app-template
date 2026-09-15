@@ -68,8 +68,8 @@
     { keys: "2", hintKey: "2", chordKey: "2", label: "Open Roadmap in Settings", group: "Navigation" },
     { keys: "N", hintKey: "N", chordKey: "N", label: "Open Notes", group: "Actions" },
     { keys: "V", hintKey: "V", chordKey: "V", label: "Open What’s New", group: "Actions" },
-    { keys: "R", hintKey: "R", chordKey: "R", label: "Force refresh an available app update", group: "Updates" },
-    { keys: "X", hintKey: "X", chordKey: "X", label: "Dismiss the active update notice or What’s New banner", group: "Updates" },
+    { keys: "R", hintKey: "R", chordKey: "R", label: "Check for updates and force refresh", group: "Updates" },
+    { keys: "X", hintKey: "X", chordKey: "X", label: "Dismiss What’s New", group: "Updates" },
     { keys: "S", hintKey: "S", chordKey: "S", label: "Run the primary sync action", group: "Actions" },
     { keys: "E", hintKey: "E", chordKey: "E", label: "Export a JSON backup", group: "Actions" },
     { keys: "T", hintKey: "T", chordKey: "T", label: "Switch color theme", group: "Actions" },
@@ -901,6 +901,7 @@
       || libraryState.source !== "all"
       || state().preferences.controls.developerMode && libraryState.minimumLabelLength > 0;
     $("#iconClearSearch").hidden = !hasActiveFilters;
+    $("#clearSearchButton").disabled = !hasActiveFilters;
     $("#iconLibraryCount").textContent = matches.length === iconCatalog.length ? iconCatalog.length + " icons" : matches.length + " of " + iconCatalog.length;
     const category = iconCategoryById.get(selectedIconCategory());
     const scope = category ? " in " + category.label : "";
@@ -1578,6 +1579,16 @@
       runShortcut(event, focusGlobalSearch);
       return;
     }
+    if (!event.repeat && !event.metaKey && ! $("dialog[open]") && shortcutChordHeld(event)) {
+      if (event.code === "KeyC" && !$("#clearSearchButton").disabled) {
+        runShortcut(event, function () { $("#clearSearchButton").click(); });
+        return;
+      }
+      if (event.code === "KeyR") {
+        runShortcut(event, function () { $("#updateAppButton").click(); });
+        return;
+      }
+    }
     if (u.isEditableTarget(event.target) && !event.target.matches?.("[data-icon-weight]")) return;
     if (event.metaKey) return;
     if (event.code === "Slash") {
@@ -1607,7 +1618,7 @@
     else if (event.code === "KeyC" && iconPageActive && !$("#iconClearSearch").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconClearSearch").click(); });
     else if (event.code === "KeyL" && iconPageActive && !$("#iconLoadMore").hidden && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#iconLoadMore").click(); });
     else if (event.code === "KeyV") runShortcut(event, function () { openSupport("releases", event.target); });
-    else if (event.code === "KeyR" && iconPageActive && updateToastVisible && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#appToast [data-toast-action]").click(); });
+    else if (event.code === "KeyR" && iconPageActive && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#updateAppButton").click(); });
     else if (event.code === "KeyX" && iconPageActive && updateToastVisible && shortcutModifiersAllowed(event)) runShortcut(event, function () { $("#appToast [data-toast-close]").click(); });
     else if (event.code === "KeyX" && !$("dialog[open]") && !$("#whatsNewBanner").hidden && shortcutModifiersAllowed(event)) runShortcut(event, dismissWhatsNew);
     else if (event.code === "KeyS") runShortcut(event, function () { sync.syncNow(event.target); });
@@ -1774,6 +1785,7 @@
       storage.mutate(function (next) { next.modules.iconLibrary.weight = input.value; }, { reason: "icon-weight" });
       renderIconLibrary();
     });
+    $("#clearSearchButton").addEventListener("click", function () { $("#iconClearSearch").click(); });
     $("#iconClearSearch").addEventListener("click", function () {
       storage.mutate(function (next) {
         next.ui.search = "";

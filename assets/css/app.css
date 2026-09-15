@@ -888,3 +888,12 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
   .app-header { grid-template-areas: "title title" "search search" "toolbar toolbar"; }
   .top-toolbar { justify-self: end; }
 }
+
+
+.global-search-wrap { height: 52px; padding-right: 52px; }
+.global-search-wrap > kbd { right: calc(52px + .65rem); }
+.global-search-wrap > .search-name-only { right: calc(52px + 2.35rem); }
+.global-search-wrap > .search-clear-button { position: absolute; inset: 0 0 0 auto; width: 52px; height: 100%; min-height: 0; padding: 0; border: 0; border-left: 1px solid var(--line); border-radius: 0 11px 11px 0; background: transparent; }
+.search-clear-button .sf-symbol { width: 30px; height: 30px; }
+.search-clear-button:disabled { color: var(--muted); opacity: .4; cursor: default; }
+.global-search-wrap input::-webkit-search-cancel-button { display: none; }
