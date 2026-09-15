@@ -8,8 +8,8 @@
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.78",
-      buildId: "0.0.1.78",
+      version: "0.0.1.79",
+      buildId: "0.0.1.79",
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -77,6 +77,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: "0.0.1.79",
+        date: "2026-09-15T12:00:00.000Z",
+        title: "Clear button label",
+        summary: "The search clear button shows Clear below its icon and C as its hover hint.",
+        features: [],
+        improvements: ["Visible Clear label and concise shortcut hint"],
+        fixes: [],
+        knownIssues: []
+      },
       {
         version: "0.0.1.78",
         date: "2026-09-15T12:00:00.000Z",

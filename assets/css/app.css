@@ -893,7 +893,8 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 .global-search-wrap { height: 52px; padding-right: 52px; }
 .global-search-wrap > kbd { right: calc(52px + .65rem); }
 .global-search-wrap > .search-name-only { right: calc(52px + 2.35rem); }
-.global-search-wrap > .search-clear-button { position: absolute; inset: 0 0 0 auto; width: 52px; height: 100%; min-height: 0; padding: 0; border: 0; border-left: 1px solid var(--line); border-radius: 0 11px 11px 0; background: transparent; }
-.search-clear-button .sf-symbol { width: 30px; height: 30px; }
+.global-search-wrap > .search-clear-button { position: absolute; inset: 0 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; width: 52px; height: 100%; min-height: 0; padding: 2px 0; border: 0; border-left: 1px solid var(--line); border-radius: 0 11px 11px 0; background: transparent; }
+.search-clear-button .sf-symbol { width: 26px; height: 26px; }
+.search-clear-label { font-size: .62rem; font-weight: 650; line-height: 1.05; }
 .search-clear-button:disabled { color: var(--muted); opacity: .4; cursor: default; }
 .global-search-wrap input::-webkit-search-cancel-button { display: none; }

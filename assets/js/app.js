@@ -1548,7 +1548,7 @@
         const chordKey = commandKey === command?.secondaryHintKey ? commandKey : command?.chordKey || commandKey;
         return commandKey + " or Shift + Control + Option + " + chordKey;
       });
-      control.title = baseTitle + " · Shortcut" + (commands.length > 1 ? "s: " : ": ") + commands.join("; ");
+      control.title = control.dataset.shortcutTitle || baseTitle + " · Shortcut" + (commands.length > 1 ? "s: " : ": ") + commands.join("; ");
     });
   }
 
