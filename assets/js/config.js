@@ -3,13 +3,15 @@
 
   window.LocalApp = window.LocalApp || {};
 
+  const VERSION = "1.0.0.1";
+
   const CONFIG = {
     identity: {
       name: "App Template",
       shortName: "Template",
       description: "A searchable local SVG icon library for finding and copying reusable interface symbols.",
-      version: "0.0.1.83",
-      buildId: "0.0.1.83",
+      version: VERSION,
+      buildId: VERSION,
       repository: {
         label: "App repository",
         url: "https://github.com/themadat/app-template"
@@ -77,6 +79,16 @@
     themeDefaults: { accent: "#315f73", accent2: "#b86b4b", success: "#4f745f", warning: "#9b6a24", danger: "#a74747" },
 
     releases: [
+      {
+        version: VERSION,
+        date: "2026-09-20T23:55:00.000Z",
+        title: "App Template 1.0",
+        summary: "The 1.0 foundation uses one version source and concise maintenance documentation.",
+        features: [],
+        improvements: ["Update VERSION and release notes in config.js; asset URLs and offline caches follow automatically", "Short task-specific documentation replaces repeated historical detail"],
+        fixes: [],
+        knownIssues: []
+      },
       {
         version: "0.0.1.83",
         date: "2026-09-20T23:41:43.000Z",

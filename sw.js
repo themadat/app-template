@@ -1,15 +1,17 @@
 "use strict";
 
-const CACHE_NAME = "app-template-shell-0.0.1.83";
-const ASSET_VERSION = "0.0.1.83";
+// Registration supplies config.identity.buildId; no release literal lives here.
+const ASSET_VERSION = new URL(self.location.href).searchParams.get("v") || "development";
+const CACHE_NAME = "app-template-shell-" + ASSET_VERSION;
 const versioned = function (path) { return path + "?v=" + ASSET_VERSION; };
 const SHELL = [
   "./",
   "./index.html",
+  "./assets/js/boot.js",
+  "./assets/js/config.js",
   versioned("./manifest.webmanifest"),
   versioned("./manifest-dark.webmanifest"),
   versioned("./assets/css/app.css"),
-  versioned("./assets/js/config.js"),
   versioned("./assets/js/icons.js"),
   versioned("./assets/js/icon-library-part-1.js"),
   versioned("./assets/js/icon-library-part-2.js"),
@@ -59,6 +61,9 @@ self.addEventListener("fetch", function (event) {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  // Keep one config cache entry despite boot's freshness nonce.
+  const cacheUrl = new URL(request.url);
+  cacheUrl.searchParams.delete("boot");
 
   if (request.mode === "navigate") {
     event.respondWith(fetch(request, { cache: "no-cache" }).then(function (response) {
@@ -74,7 +79,7 @@ self.addEventListener("fetch", function (event) {
   event.respondWith(fetch(request, { cache: "no-cache" }).then(function (response) {
       if (!response || !response.ok || response.type !== "basic") return response;
       const copy = response.clone();
-      caches.open(CACHE_NAME).then(function (cache) { cache.put(request, copy); });
+      caches.open(CACHE_NAME).then(function (cache) { cache.put(cacheUrl.href, copy); });
       return response;
-    }).catch(function () { return caches.match(request).then(function (cached) { return cached || Response.error(); }); }));
+    }).catch(function () { return caches.open(CACHE_NAME).then(function (cache) { return cache.match(cacheUrl.href, { ignoreSearch: true }); }).then(function (cached) { return cached || Response.error(); }); }));
 });
