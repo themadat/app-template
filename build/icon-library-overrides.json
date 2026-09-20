@@ -8,6 +8,12 @@
   ],
   "overrides": [
     {
+      "iconId": "string-lights-b62a0e",
+      "label": "String Lights",
+      "kind": "custom",
+      "categories": ["home-appliances", "celebrations-awards"]
+    },
+    {
       "iconId": "0-boat-holiday-sea-sky-travel-vacation-svgrepo-com-2c6640",
       "label": "Sailboat Double",
       "categories": [

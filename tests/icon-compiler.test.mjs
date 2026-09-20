@@ -48,7 +48,7 @@ test('only the 50 approved SF aliases are retired and retained rebuilds are stab
   const icons = loadCatalog(catalogDir);
   const approved = JSON.parse(readFileSync(new URL('./fixtures/sf-symbol-merges.json', import.meta.url), 'utf8'));
   assert.equal(approved.length, 50);
-  assert.equal(icons.length, 7231);
+  assert.equal(icons.length, 7233);
   assert.equal(icons.filter(icon => icon.kind === 'sf-symbol').length, 6868);
   assert.deepEqual(icons.flatMap(icon => icon.retiredIds || []).sort(), approved.map(item => item.id).sort());
   for (const item of approved) {
