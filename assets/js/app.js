@@ -515,7 +515,7 @@
     const highlightedLabel = highlightedSearchText(icon.label, state().ui.search);
     const id = u.escapeHtml(icon.id);
     const svg = iconSvgAtSelectedWeight(icon);
-    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + highlightedLabel + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button icon-png-button" type="button" data-icon-png="' + id + '" aria-label="Copy ' + label + ' PNG" title="Copy PNG"><span aria-hidden="true" data-symbol="copyPng"></span></button><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
+    return '<div class="icon-card-item" role="listitem" data-icon-item="' + id + '"><button id="icon-card-' + id + '" class="icon-card" type="button" data-icon-id="' + id + '" aria-label="Copy ' + label + ' SVG" aria-keyshortcuts="I Control+Alt+Shift+I" title="Copy SVG · Press I for details"><span class="icon-preview" aria-hidden="true">' + svg + '</span><span class="visually-hidden" data-icon-copy-text>Copy SVG</span></button><button class="icon-card-name" type="button" data-icon-rename="' + id + '" aria-haspopup="dialog" aria-controls="iconEditDialog" aria-label="Edit metadata for ' + label + '" title="Edit metadata">' + highlightedLabel + '</button><div class="icon-card-footer"><span class="icon-card-type">' + u.escapeHtml(typeText) + '</span><button class="icon-info-button icon-png-button" type="button" data-icon-png="' + id + '" aria-label="Copy ' + label + ' PNG" title="Copy PNG · Right-click for gray background"><span aria-hidden="true" data-symbol="copyPng"></span></button><button class="icon-info-button" type="button" data-icon-info="' + id + '" aria-haspopup="dialog" aria-controls="iconInfoDialog" aria-label="More information about ' + label + '" title="More information"><span aria-hidden="true" data-symbol="info"></span></button></div></div>';
   }
 
   function iconOverrideFor(iconId) {
@@ -952,7 +952,7 @@
     });
   }
 
-  function iconPngBlob(svg) {
+  function iconPngBlob(svg, grayBackground = false) {
     return new Promise(function (resolve, reject) {
       const doc = new DOMParser().parseFromString(svg, "image/svg+xml");
       if (doc.querySelector("parsererror")) { reject(new Error("Invalid SVG")); return; }
@@ -971,7 +971,12 @@
         try {
           const canvas = document.createElement("canvas");
           canvas.width = canvas.height = 512;
-          canvas.getContext("2d").drawImage(image, 0, 0, 512, 512);
+          const context = canvas.getContext("2d");
+          if (grayBackground) {
+            context.fillStyle = "#808080";
+            context.fillRect(0, 0, 512, 512);
+          }
+          context.drawImage(image, 0, 0, 512, 512);
           canvas.toBlob(function (blob) { blob ? resolve(blob) : reject(new Error("PNG conversion failed")); }, "image/png");
         } catch (error) { reject(error); }
       };
@@ -980,19 +985,19 @@
     });
   }
 
-  async function copyIconPng(iconId, button) {
+  async function copyIconPng(iconId, button, grayBackground = false) {
     const icon = iconById.get(iconId);
     if (!icon || button.disabled) return;
     button.disabled = true;
     button.setAttribute("aria-busy", "true");
-    const png = iconPngBlob(iconSvgAtSelectedWeight(icon));
+    const png = iconPngBlob(iconSvgAtSelectedWeight(icon), grayBackground);
     // Handle conversion failure even if clipboard access rejects immediately.
     png.catch(function () {});
     try {
       if (!window.isSecureContext || !navigator.clipboard?.write || !window.ClipboardItem) throw new Error("Image clipboard unavailable");
       // Start the write during the click, preserving Safari's user activation.
       await navigator.clipboard.write([new ClipboardItem({ "image/png": png })]);
-      components.toast(icon.label + " is ready to paste.", { title: "PNG copied", kind: "success", duration: 2200 });
+      components.toast(icon.label + (grayBackground ? " with a gray background is ready to paste." : " is ready to paste."), { title: "PNG copied", kind: "success", duration: 2200 });
     } catch (error) {
       try {
         const blob = await png;
@@ -1781,6 +1786,12 @@
       if (button) copyIcon(button.dataset.iconId, button);
     });
     $("#iconLibraryGrid").addEventListener("contextmenu", function (event) {
+      const pngButton = event.target.closest("[data-icon-png]");
+      if (pngButton) {
+        event.preventDefault();
+        copyIconPng(pngButton.dataset.iconPng, pngButton, true);
+        return;
+      }
       const item = event.target.closest("[data-icon-item]");
       if (!item) return;
       event.preventDefault();

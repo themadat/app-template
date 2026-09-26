@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.3";
+  const VERSION = "1.0.0.4";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-09-26T12:00:00.000Z",
+        title: "Gray-background PNG copy",
+        summary: "Right-click a card’s PNG button to copy with a gray background for visibility in light and dark notes.",
+        features: ["Right-click PNG copy with an opaque gray background"],
+        improvements: ["Normal PNG clicks keep transparent backgrounds and theme-aware artwork"],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.3",
         date: "2026-09-26T12:00:00.000Z",
         title: "PNG color follows the theme",
         summary: "PNG copies use white symbol artwork in dark mode and black in light mode, with transparent backgrounds.",
