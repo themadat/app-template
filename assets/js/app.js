@@ -961,8 +961,9 @@
       root.setAttribute("width", "512");
       root.setAttribute("height", "512");
       root.setAttribute("preserveAspectRatio", "xMidYMid meet");
-      root.style.color = "#000";
-      root.style.fill = "#000";
+      const foreground = document.documentElement.dataset.theme === "dark" ? "#fff" : "#000";
+      root.style.color = foreground;
+      root.style.fill = foreground;
       const url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(root)], { type: "image/svg+xml" }));
       const image = new Image();
       image.onload = function () {

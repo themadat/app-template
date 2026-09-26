@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.2";
+  const VERSION = "1.0.0.3";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-09-26T12:00:00.000Z",
+        title: "PNG color follows the theme",
+        summary: "PNG copies use white symbol artwork in dark mode and black in light mode, with transparent backgrounds.",
+        features: [],
+        improvements: ["Theme-aware PNG fills and currentColor strokes"],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.2",
         date: "2026-09-26T12:00:00.000Z",
         title: "One-click PNG copy",
         summary: "Copy a symbol as a transparent 512px PNG directly from its card using the selected weight.",
