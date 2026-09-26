@@ -901,3 +901,10 @@ details > summary { width: fit-content; cursor: pointer; color: var(--accent-str
 
 /* Keep the search shortcut badge above the input, clear of the C badge. */
 .global-search-wrap[data-shortcut]::after { right: 57px; }
+
+.icon-card-type { margin-right: auto; }
+.icon-png-button .sf-symbol { width: 19px; height: 19px; }
+@media (pointer: coarse) {
+  .icon-card-item { padding-bottom: 2.9rem; min-height: 148px; }
+  .icon-card-footer .icon-info-button { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }
+}

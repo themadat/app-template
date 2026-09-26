@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.1";
+  const VERSION = "1.0.0.2";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-09-26T12:00:00.000Z",
+        title: "One-click PNG copy",
+        summary: "Copy a symbol as a transparent 512px PNG directly from its card using the selected weight.",
+        features: ["PNG copy button beside each info button", "Download fallback when image clipboard access is unavailable"],
+        improvements: ["Black PNG artwork on a transparent background"],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.1",
         date: "2026-09-20T23:55:00.000Z",
         title: "App Template 1.0",
         summary: "The 1.0 foundation uses one version source and concise maintenance documentation.",
