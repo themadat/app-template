@@ -1,5 +1,7 @@
 # Verification
 
+Choose checks for changed behavior and shared-code risk. Documentation-only edits need `git diff --check` and relevant link checks, not app tests or a preview. Run affected tests first; use the full suite for releases or cross-cutting changes. Summarize passing results and show failures only. Do not repeat successful checks without new changes or evidence.
+
 ## Automated
 
 ```sh

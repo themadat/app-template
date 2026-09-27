@@ -10,7 +10,7 @@ Theme variables live in CSS with config defaults. Keep system appearance and OS 
 
 ## Release
 
-Change `VERSION` in config. The format is `major.minor.patch.build`; increment build normally, or use build 1 after changing major/minor/patch. Add a dated entry first in `releases` using `version: VERSION`; replace the previous first entry's VERSION reference with its old number. Identity/buildId, boot asset queries, visible labels, and service-worker cache names follow automatically.
+Bump `VERSION` in config once per completed app-change batch, before committing a deployable release. Every deployed changed app build needs a fresh version for asset/cache updates. Do not bump for each intermediate edit or for documentation-only changes. The format is `major.minor.patch.build`; increment build normally, or use build 1 after changing major/minor/patch. Add a dated entry first in `releases` using `version: VERSION`; replace the previous first entry's VERSION reference with its old number. Identity/buildId, boot asset queries, visible labels, and service-worker cache names follow automatically.
 
 Do not edit versions in HTML, manifests, workflow names, or documentation. The workflow uses a stable name and the commit subject for its run title. Validate using [Testing](TESTING.md), then use commit subject `Version - Text`.
 

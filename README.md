@@ -33,6 +33,12 @@ The app's repository and sync target are separate config values. Settings → Da
 
 Create a unique app JSON file in [app-data/data](https://github.com/themadat/app-data/tree/main/data). Create the token in [GitHub settings](https://github.com/settings/personal-access-tokens), selecting only `app-data` with **Contents: Read and write**. Tokens stay outside app data, backups, and diagnostics. SSH for terminal Git is configured separately on each computer.
 
+## Agent context
+
+`.codex/config.toml` uses medium reasoning, retains at most 2,000 tokens per tool output, and disables optional iOS, document, spreadsheet, presentation, PDF, template-creator, and visualization plugins for this trusted project. Change the relevant `enabled` value to `true` when needed; these project overrides leave other projects unchanged. Start a fresh task after configuration changes to load the new defaults; explicit task/model overrides may take precedence.
+
+Read reference docs only for the task at hand; generated catalog files should be searched or inspected programmatically rather than dumped into context. Use a fresh task for unrelated objectives and a short Resume for interrupted work.
+
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md): runtime, persistence, cloud contract, offline updates.

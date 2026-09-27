@@ -1,7 +1,5 @@
-# Wish ledger
+# Wishes
 
-Next id: `WISH-001`
+Next id: `WISH-001`. No active wishes.
 
-No active wishes.
-
-For each wish, record: ID/title, status (Proposed/Planned/Active/Shipped/Parked), behavior and rationale, scope/constraints, acceptance criteria, priority/effort, affected files, open questions, and plan link. Add release/date when shipped. Wishes do not authorize implementation; detailed release history belongs in config.
+Record ID/title, desired behavior, and status (Proposed/Planned/Active/Shipped/Parked). Add a plan link only when needed. Wishes do not authorize implementation; release history stays in config.
