@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.5";
+  const VERSION = "1.0.0.6";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-09-30T12:00:00.000Z",
+        title: "Clearer selection and aligned controls",
+        summary: "Selected text is easier to see in both themes, and standard controls share a consistent height.",
+        features: [],
+        improvements: ["High-contrast text selection throughout the app", "Aligned dropdowns, toggles, text and number fields, and standard buttons, including larger text sizes"],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.5",
         date: "2026-09-28T12:00:00.000Z",
         title: "PNG background choices",
         summary: "The PNG button now offers transparent, white, gray, and black backgrounds before copying.",
