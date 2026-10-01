@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.6";
+  const VERSION = "1.0.0.7";
 
   const CONFIG = {
     identity: {
@@ -58,7 +58,7 @@
     controls: {
       shortcutHintModifier: "ShiftControlOption",
       autosaveDelayMs: 180,
-      syncCheckIntervalMs: 5 * 60 * 1000,
+      syncCheckIntervalMs: 30000,
       hintsEnabledByDefault: false,
       whatsNewAutoDismissMs: 20 * 1000,
       maxImportBytes: 5 * 1024 * 1024,
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-10-01T12:00:00.000Z",
+        title: "Automatic GitHub data sync",
+        summary: "Optional automatic uploads and downloads keep Notes and icon metadata synchronized while this app is open.",
+        features: ["Auto Sync toggle in Data Sync, enabled after a successful manual sync"],
+        improvements: ["Delayed uploads after edits, visible-app checks every 30 seconds, and retries with backoff", "Recovery before downloads and manual review for conflicts or missing cloud files"],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.6",
         date: "2026-09-30T12:00:00.000Z",
         title: "Clearer selection and aligned controls",
         summary: "Selected text is easier to see in both themes, and standard controls share a consistent height.",
@@ -975,7 +985,7 @@
       { id: "notes", title: "Working with Notes", section: "Features", keywords: "notes text edit modal autosave", html: "<p>Open Notes from the top bar or press <kbd>N</kbd>. The single plain-text editor saves locally and is included in backup and synchronization data.</p>" },
       { id: "roadmap", title: "Using Roadmap", section: "Features", keywords: "roadmap planned released wishlist priority target effort reset filters", html: "<p>Search Roadmap, filter by state, priority, target, or effort, reset the controls in one step, and sort by priority, target release, effort, age, or title. Replace the demonstration entries in configuration.</p>" },
       { id: "backup", title: "Backup and restore", section: "Data", keywords: "json export import backup restore recovery", html: "<p>Export a JSON backup from Settings. Imports are parsed, migrated, sanitized, summarized, and confirmed before replacement. The current copy is saved as a recovery snapshot first.</p>" },
-      { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. The app configuration fixes the repository, branch, and JSON file path; enter a fine-grained token with Contents access in Settings → Data Sync. Expand Sync payload (JSON) there to inspect the current local content included in uploads. Only Notes and edited icon metadata sync; appearance, filters, and settings stay on this device. Conflicts ask which copy to keep, with merging available for matching or separate items.</p>" },
+      { id: "sync", title: "GitHub synchronization", section: "Data", keywords: "github cloud sync token conflict merge", html: "<p>GitHub sync is optional. The app configuration fixes the repository, branch, and JSON file path; enter a fine-grained token with Contents access in Settings → Data Sync. Expand Sync payload (JSON) there to inspect the current local content included in uploads. Only Notes and edited icon metadata sync; appearance, filters, and settings stay on this device. Enable <strong>Auto sync while this app is open</strong> after a successful manual sync to upload local edits and download remote changes automatically while the app is visible. Checks run every 30 seconds; closed apps do not sync. Conflicts and missing cloud files require manual review. Downloads save a recovery copy. Conflicts ask which copy to keep, with merging available for matching or separate items.</p>" },
       { id: "install", title: "Install the application", section: "Installation", keywords: "install add home screen iphone ipad android mac windows pwa offline update refresh shortcut", html: "<p>Use your browser’s Install app, Add to Home Screen, or Add to Dock command. There is no in-app installation dialog. Once the application shell has loaded, core local features continue to work offline. Use the top-bar Update button or Shift–Control–Option–R to check for updates and force refresh.</p>" },
       { id: "app-icon", title: "App icon controls", section: "Appearance", keywords: "icon theme dark light beta developer mode hold press shortcut pipe", html: "<p>Click or tap the app icon, or press <kbd>T</kbd>, to switch between light and dark themes. Press and hold the icon, or press <kbd>|</kbd> or <kbd>D</kbd>, to enable or disable Developer Mode. The Beta pill appears automatically on a <code>/beta/</code> URL or when <code>?beta=1</code> is present.</p>" },
       { id: "privacy", title: "Privacy and local data", section: "Data", keywords: "privacy local storage token secret", html: "<p>Notes remain in browser storage unless you export them or explicitly use GitHub Sync. Tokens are stored separately per device and excluded from backups and diagnostics.</p>" },

@@ -6,13 +6,16 @@ import vm from 'node:vm';
 
 function harness({ token = 'test-token', online = true } = {}) {
   const events = [], requests = [], toasts = [], replacements = [];
-  const listeners = new Map();
+  const listeners = new Map(), timers = new Map(), documentListeners = new Map();
+  let timerId = 0;
   const window = {
     addEventListener(name, callback) { listeners.set(name, callback); },
     dispatchEvent(event) { events.push(event); listeners.get(event.type)?.(event); },
-    setInterval() {}, setTimeout() {}
+    setInterval(callback, delay) { h.interval = { callback, delay }; },
+    setTimeout(callback, delay) { timers.set(++timerId, { callback, delay }); return timerId; },
+    clearTimeout(id) { timers.delete(id); }
   };
-  const context = vm.createContext({ window, navigator: { onLine: online }, document: { addEventListener() {} },
+  const context = vm.createContext({ window, navigator: { onLine: online }, document: { visibilityState: "visible", addEventListener(name, callback) { documentListeners.set(name, callback); } },
     CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options?.detail; } },
     TextEncoder, TextDecoder, Uint8Array, AbortController, structuredClone, atob, btoa, URL, console,
     fetch: async (url, options) => { requests.push({ url, options }); return h.respond(url, options); }
@@ -31,10 +34,11 @@ function harness({ token = 'test-token', online = true } = {}) {
   }
   const App = window.LocalApp;
   let state = App.stateModel.normalize(App.stateModel.createDefaultState({ demo: false }));
-  const h = { App, context, events, requests, toasts, replacements, get state() { return state; }, get token() { return token; },
+  const h = { App, context, events, requests, toasts, replacements, timers, listeners, documentListeners, saveWorks: true, get state() { return state; }, get token() { return token; },
     respond: () => response(500), recoveryWorks: true, confirmation: false, choice: 'cancel', recovery: null, legacy: false, choices: []
   };
   App.storage = {
+    saveNow: () => h.saveWorks,
     getState: () => state, hasSecret: () => Boolean(token), getSecret: () => token,
     setSecret(value) { token = value; return true; }, clearSecret() { token = ''; },
     mutate(callback, options = {}) { callback(state); if (options.touch !== false) App.stateModel.touch(state); state = App.stateModel.normalize(state); },
@@ -463,4 +467,136 @@ test('banner duration defaults and bounds are local preferences excluded from cl
     assert.equal(normalized.preferences.controls.whatsNewDismissSeconds, expected);
     assert.equal(JSON.stringify(h.App.stateModel.syncPayload(normalized)), payload);
   }
+});
+
+
+async function enableAuto(h) {
+  await h.sync.syncNow();
+  h.state.modules.cloudSync.autoSync = true;
+  assert.equal(h.state.modules.cloudSync.autoSyncReady, true);
+}
+
+test('auto sync is opt-in, requires a manual baseline, and stays device-local', async () => {
+  const h = harness();
+  h.state.modules.cloudSync.autoSync = true;
+  await h.sync.check(true);
+  assert.equal(await h.sync.autoSync(), false);
+  assert.equal(h.state.modules.cloudSync.autoSyncReady, false);
+  await enableAuto(h);
+  const payload = JSON.stringify(h.App.stateModel.syncPayload(h.state));
+  assert.doesNotMatch(payload, /autoSync|baseline|test-token/);
+  const normalized = h.App.stateModel.normalize(h.state);
+  assert.equal(normalized.modules.cloudSync.autoSync, true);
+  assert.equal(normalized.modules.cloudSync.autoSyncReady, true);
+  h.state.modules.cloudSync.autoSync = false;
+  const count = h.requests.length;
+  assert.equal(await h.sync.autoSync(), false);
+  assert.equal(h.requests.length, count);
+});
+
+test('auto sync uploads local edits quietly and downloads remote edits with recovery', async () => {
+  const h = harness();
+  await enableAuto(h);
+  h.toasts.length = 0;
+  changeNotes(h.state, 'Local automatic edit');
+  h.respond = (url, options) => {
+    if (options.method === 'PUT') {
+      const body = JSON.parse(options.body);
+      const payload = JSON.parse(Buffer.from(body.content, 'base64').toString());
+      h.remote = h.App.stateModel.prepareSync(payload).state;
+      assert.equal(body.sha, 'remote-sha');
+      return response(200, { content: { sha: 'new-sha' } });
+    }
+    return h.file();
+  };
+  assert.equal(await h.sync.autoSync(), true);
+  assert.equal(h.toasts.length, 0);
+  assert.equal(h.state.modules.cloudSync.baselineHash, h.App.stateModel.syncHash(h.state));
+  changeNotes(h.remote, 'Remote automatic edit');
+  assert.equal(await h.sync.autoSync(), true);
+  assert.ok(h.recovery);
+  assert.equal(h.replacements.at(-1).reason, 'sync-download');
+  assert.equal(h.App.stateModel.syncHash(h.state), h.App.stateModel.syncHash(h.remote));
+  assert.equal(h.state.modules.cloudSync.autoSync, true);
+  assert.equal(h.toasts.length, 0);
+});
+
+test('auto sync preserves conflicts and missing files for manual review', async () => {
+  const h = harness();
+  await enableAuto(h);
+  changeNotes(h.state, 'Local conflict');
+  changeNotes(h.remote, 'Remote conflict');
+  assert.equal(await h.sync.autoSync(), false);
+  assert.equal(h.sync.getInfo().change, 'conflict');
+  assert.equal(h.requests.filter(r => r.options.method === 'PUT').length, 0);
+  assert.equal(h.replacements.length, 0);
+  assert.equal(h.choices.length, 0);
+  h.respond = () => response(404);
+  assert.equal(await h.sync.autoSync(), false);
+  assert.equal(h.requests.filter(r => r.options.method === 'PUT').length, 0);
+});
+
+test('auto sync stops for offline, hidden, changed targets, disabled setting and failed saves', async () => {
+  const h = harness();
+  await enableAuto(h);
+  changeNotes(h.state, 'Pending edit');
+  const count = h.requests.length;
+  h.context.navigator.onLine = false;
+  assert.equal(await h.sync.autoSync(), false);
+  h.context.navigator.onLine = true;
+  h.context.document.visibilityState = 'hidden';
+  assert.equal(await h.sync.autoSync(), false);
+  h.context.document.visibilityState = 'visible';
+  const target = h.state.modules.cloudSync.baselineTarget;
+  h.state.modules.cloudSync.baselineTarget = 'another/target';
+  assert.equal(await h.sync.autoSync(), false);
+  h.state.modules.cloudSync.baselineTarget = target;
+  h.saveWorks = false;
+  assert.equal(await h.sync.autoSync(), false);
+  assert.equal(h.requests.length, count);
+});
+
+test('auto downloads require recovery and auto sync stops if turned off during comparison', async () => {
+  const h = harness();
+  await enableAuto(h);
+  changeNotes(h.remote, 'Remote edit');
+  h.recoveryWorks = false;
+  assert.equal(await h.sync.autoSync(), false);
+  assert.equal(h.replacements.length, 0);
+  const waiting = deferred();
+  h.respond = () => waiting.promise;
+  const operation = h.sync.autoSync();
+  assert.equal(await h.sync.autoSync(), false);
+  h.state.modules.cloudSync.autoSync = false;
+  waiting.resolve(h.file());
+  assert.equal(await operation, false);
+  assert.equal(h.replacements.length, 0);
+});
+
+test('auto scheduling debounces edits, backs off failures, and uses 30-second visible checks', async () => {
+  const h = harness();
+  await enableAuto(h);
+  h.sync.init();
+  h.timers.clear();
+  const changed = () => h.listeners.get('app:statechange')({ detail: { reason: 'notes-edit' } });
+  changed(); changed();
+  assert.equal(h.timers.size, 1);
+  assert.equal([...h.timers.values()][0].delay, 1200);
+  assert.equal(h.interval.delay, 30000);
+  h.respond = () => response(500);
+  await h.sync.autoSync();
+  assert.equal([...h.timers.values()][0].delay, 2400);
+  for (let i = 0; i < 5; i++) await h.sync.autoSync();
+  assert.equal([...h.timers.values()][0].delay, 60000);
+  h.interval.callback();
+  assert.equal([...h.timers.values()][0].delay, 60000);
+  h.context.document.visibilityState = 'hidden';
+  h.documentListeners.get('visibilitychange')();
+  assert.equal(h.timers.size, 0);
+  h.context.document.visibilityState = 'visible';
+  h.documentListeners.get('visibilitychange')();
+  assert.equal(h.timers.size, 1);
+  h.state.modules.cloudSync.autoSync = false;
+  changed();
+  assert.equal(h.timers.size, 0);
 });

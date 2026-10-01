@@ -1267,6 +1267,7 @@
     });
     const tokenInput = $("#syncToken");
     const rememberInput = $("#syncRememberToken");
+    $("#autoSyncEnabled").checked = cloud.autoSync;
     const hasStoredToken = storage.hasSecret();
     if (tokenInput.dataset.dirty !== "true") tokenInput.value = hasStoredToken ? storage.getSecret() : "";
     if (rememberInput.dataset.dirty !== "true") rememberInput.checked = cloud.rememberToken;
@@ -1574,6 +1575,9 @@
     $("#syncNowButton").addEventListener("click", function (event) { sync.syncNow(event.currentTarget); });
     $("#restoreCloudButton").addEventListener("click", function (event) { sync.restoreFromCloud(event.currentTarget); });
     $("#syncToken").addEventListener("input", function (event) { event.currentTarget.dataset.dirty = "true"; });
+    $("#autoSyncEnabled").addEventListener("change", function (event) {
+      storage.mutate(function (next) { next.modules.cloudSync.autoSync = event.target.checked; }, { reason: "sync-auto", touch: false });
+    });
     $("#syncRememberToken").addEventListener("change", function (event) { event.currentTarget.dataset.dirty = "true"; });
     $("#exportButton").addEventListener("click", portability.exportJson);
     $("#importButton").addEventListener("click", function () { $("#importFileInput").click(); });

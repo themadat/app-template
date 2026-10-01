@@ -113,6 +113,7 @@
       cloud.rememberToken = rememberToken;
       cloud.enabled = true;
       if (previousTarget !== target(cloud)) {
+        cloud.autoSyncReady = false;
         cloud.baselineTarget = "";
         cloud.baselineSha = "";
         cloud.baselineHash = "";
@@ -251,10 +252,11 @@
     return model.syncHash(storage.getState());
   }
 
-  function rememberBaseline(sha, hash) {
+  function rememberBaseline(sha, hash, established) {
     const now = u.isoNow();
     storage.mutate(function (state) {
       const cloud = state.modules.cloudSync;
+      if (established) cloud.autoSyncReady = true;
       cloud.baselineTarget = target(cloud);
       cloud.baselineSha = sha || "";
       cloud.baselineHash = hash || localHash();
@@ -403,7 +405,7 @@
     }
   }
 
-  async function performUpload() {
+  async function performUpload(quiet) {
     const context = requestContext("uploading");
     runtime.busy = true;
     runtime.operation = "uploading";
@@ -414,23 +416,23 @@
       const hash = model.syncHash(state);
       const sha = await writeRemote(settings(), storage.getSecret(), context, state, runtime.remoteSha);
       if (!currentRequest(context)) return false;
-      rememberBaseline(sha, hash);
+      rememberBaseline(sha, hash, true);
       runtime.remoteState = state;
       runtime.remoteNeedsRewrite = false;
-      App.components.toast("This device’s latest data is now on GitHub.", { title: "Sync complete", kind: "success" });
+      if (!quiet) App.components.toast("This device’s latest data is now on GitHub.", { title: "Sync complete", kind: "success" });
       return true;
     } catch (error) {
       if (!currentRequest(context) || error && error.name === "AbortError") return false;
       recordError(error, "Upload failed.");
       const info = presentation(runtime.offline ? CloudSyncState.offline : runtime.errorState);
-      App.components.toast(runtime.error, { title: info.title, kind: info.kind, duration: 6000 });
+      if (!quiet) App.components.toast(runtime.error, { title: info.title, kind: info.kind, duration: 6000 });
       return false;
     } finally {
       if (currentRequest(context)) { runtime.busy = false; runtime.operation = ""; emit(); }
     }
   }
 
-  async function performDownload() {
+  async function performDownload(quiet) {
     if (!runtime.remoteState) throw new Error("No remote data is available to download.");
     const context = requestContext("downloading");
     runtime.busy = true;
@@ -441,12 +443,12 @@
       const next = model.applySync(storage.getState(), runtime.remoteState);
       if (!storage.saveRecovery("Before downloading GitHub data")) throw new Error("The local recovery copy could not be saved. Export a backup before restoring from cloud.");
       storage.replace(next, { saveRecovery: false, reason: "sync-download", touch: false });
-      rememberBaseline(runtime.remoteSha, runtime.remoteHash);
-      App.components.toast("This device now uses the GitHub copy. The previous local copy is recoverable in Developer Tools.", { title: "Sync complete", kind: "success", duration: 5000 });
+      rememberBaseline(runtime.remoteSha, runtime.remoteHash, true);
+      if (!quiet) App.components.toast("This device now uses the GitHub copy. The previous local copy is recoverable in Developer Tools.", { title: "Sync complete", kind: "success", duration: 5000 });
       return true;
     } catch (error) {
       recordError(error, "Download failed.");
-      App.components.toast(runtime.error, { title: "Sync Failed", kind: "danger", duration: 6000 });
+      if (!quiet) App.components.toast(runtime.error, { title: "Sync Failed", kind: "danger", duration: 6000 });
       return false;
     } finally {
       if (currentRequest(context)) { runtime.busy = false; runtime.operation = ""; emit(); }
@@ -480,6 +482,7 @@
     const state = reconciliation();
     if (state === "current") {
       if (runtime.remoteNeedsRewrite) return performUpload();
+      rememberBaseline(runtime.remoteSha, runtime.remoteHash, true);
       App.components.toast("This device already matches GitHub.", { title: "Up to date", kind: "success" });
       return;
     }
@@ -544,17 +547,76 @@
     emit();
   }
 
+  let autoTimer = 0, autoFailures = 0, autoRunning = false;
+
+  function autoEligible() {
+    const cloud = settings();
+    return config.features.cloudSync && configured() && cloud.autoSync && cloud.autoSyncReady
+      && cloud.baselineTarget === target() && cloud.baselineHash.startsWith("data-v1:")
+      && navigator.onLine !== false && document.visibilityState !== "hidden";
+  }
+
+  async function autoSync() {
+    if (!autoEligible() || autoRunning || getInfo().busy) return false;
+    autoRunning = true;
+    try {
+      if (storage.saveNow && !storage.saveNow()) {
+        recordError(new Error("Local changes could not be saved. Resolve device storage before syncing."));
+        emit();
+        return false;
+      }
+      await check(true);
+      if (!autoEligible() || runtime.error || getInfo().busy) return false;
+      // Missing files and conflicting edits always need an explicit manual decision.
+      if (runtime.remoteMissing) return false;
+      const change = reconciliation();
+      if (change === "local") {
+        if (storage.saveNow && !storage.saveNow()) {
+          recordError(new Error("Local changes could not be saved. Resolve device storage before syncing."));
+          emit();
+          return false;
+        }
+        return await performUpload(true);
+      }
+      if (change === "remote") return await performDownload(true);
+      return change === "current";
+    } finally {
+      autoRunning = false;
+      autoFailures = runtime.error ? Math.min(autoFailures + 1, 6) : 0;
+      if (autoEligible() && (runtime.error || reconciliation() === "local" && !runtime.remoteMissing)) scheduleAuto();
+    }
+  }
+
+  function scheduleAuto() {
+    if (autoTimer) window.clearTimeout(autoTimer);
+    autoTimer = 0;
+    if (!autoEligible()) return;
+    autoTimer = window.setTimeout(async function () {
+      autoTimer = 0;
+      const run = function () { return autoSync(); };
+      if (navigator.locks && navigator.locks.request) {
+        await navigator.locks.request("app-template-sync-" + target(), run);
+      } else await run();
+    }, Math.min(60000, 1200 * Math.pow(2, autoFailures)));
+  }
+
   function init() {
+    const refresh = function () { if (settings().autoSync) { if (!autoTimer) scheduleAuto(); } else check(false); };
     window.addEventListener("online", function () {
       runtime.offline = false;
       runtime.error = "";
       emit();
-      check(true);
+      if (settings().autoSync) scheduleAuto(); else check(true);
     });
-    window.addEventListener("offline", function () { runtime.offline = true; emit(); });
-    document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") check(false); });
-    window.setInterval(function () { check(false); }, config.controls.syncCheckIntervalMs);
-    window.setTimeout(function () { check(false); }, 700);
+    window.addEventListener("offline", function () { runtime.offline = true; scheduleAuto(); emit(); });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") refresh(); else scheduleAuto();
+    });
+    window.setInterval(function () { if (document.visibilityState !== "hidden") refresh(); }, config.controls.syncCheckIntervalMs);
+    window.addEventListener("app:statechange", function (event) {
+      if (!["sync-baseline", "sync-check", "sync-merge", "sync-download"].includes(event.detail.reason)) scheduleAuto();
+    });
+    window.setTimeout(refresh, 700);
     emit();
   }
 
@@ -569,6 +631,7 @@
     testConnection: testConnection,
     check: check,
     syncNow: syncNow,
+    autoSync: autoSync,
     restoreFromCloud: restoreFromCloud,
     forget: forget
   };
