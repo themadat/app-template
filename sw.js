@@ -26,7 +26,7 @@ const SHELL = [
   versioned("./assets/js/core/sync.js"),
   versioned("./assets/js/core/pwa.js"),
   versioned("./assets/js/app.js"),
-  versioned("./assets/icons/favicon.svg"),
+  versioned("./assets/icons/favicon-tab.svg"),
   versioned("./assets/icons/app-icon-light.svg"),
   versioned("./assets/icons/app-icon-dark.svg"),
   versioned("./assets/icons/icon-192.png"),

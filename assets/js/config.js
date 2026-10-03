@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.7";
+  const VERSION = "1.0.0.8";
 
   const CONFIG = {
     identity: {
@@ -21,7 +21,7 @@
         { label: "View documentation", url: "https://github.com/themadat/app-template#readme" }
       ],
       assets: {
-        favicon: "assets/icons/favicon.svg",
+        favicon: "assets/icons/favicon-tab.svg",
         appIconLight: "assets/icons/app-icon-light.svg",
         appIconDark: "assets/icons/app-icon-dark.svg",
         manifestLight: "manifest.webmanifest",
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-10-03T12:00:00.000Z",
+        title: "Full black tab favicon",
+        summary: "The browser tab now uses the complete blue construction-grid icon on a solid black background.",
+        features: [],
+        improvements: ["Dedicated tab artwork with versioned loading and offline caching"],
+        fixes: ["Replaced the simplified gray tab favicon"],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.7",
         date: "2026-10-01T12:00:00.000Z",
         title: "Automatic GitHub data sync",
         summary: "Optional automatic uploads and downloads keep Notes and icon metadata synchronized while this app is open.",
