@@ -797,6 +797,7 @@
 
   function submitIconSearch() {
     $("#globalSearchResults").hidden = true;
+    $("#globalSearch").blur();
     iconVisibleCount = ICON_PAGE_SIZE;
     renderIconLibrary();
     requestAnimationFrame(function () {
@@ -1756,6 +1757,10 @@
       sync.syncNow(event.currentTarget);
     });
     document.addEventListener("click", function (event) {
+      if (!event.target.closest(".global-search-wrap")) {
+        $("#globalSearchResults").hidden = true;
+        if (document.activeElement === $("#globalSearch")) $("#globalSearch").blur();
+      }
       const action = event.target.closest("[data-action]");
       if (action) handleAction(action.dataset.action, action);
       const dismissHint = event.target.closest("[data-dismiss-hint]");

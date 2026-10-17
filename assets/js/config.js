@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.8";
+  const VERSION = "1.0.0.9";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-10-17T12:00:00.000Z",
+        title: "Search dropdown dismissal",
+        summary: "Search suggestions close when clicking outside the search area or pressing Enter.",
+        features: [],
+        improvements: [],
+        fixes: ["Dismiss suggestions on clicks that do not move focus", "Release search focus when submitting with Enter"],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.8",
         date: "2026-10-03T12:00:00.000Z",
         title: "Full black tab favicon",
         summary: "The browser tab now uses the complete blue construction-grid icon on a solid black background.",
