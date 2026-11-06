@@ -20,6 +20,8 @@ Inspect cwd, Git status, and origin. Never transform the canonical app-template 
 
 Keep the static shell, top-bar search/Sync/Update, single Notes modal, vertical Settings, appearance, generic Help/releases/Roadmap/shortcuts, recovery, backup/import, optional Sync, accessibility, and PWA/install infrastructure. The main workspace becomes blank.
 
+Keep `core/search.js`, `core/tables.js`, and `core/import-review.js`, including ordered script/cache entries. Retain support/settings search providers; remove the icon provider, icon-only search mode, and icon-specific backup comparison row. New product providers register with `App.search`; tables and import review remain optional helpers. See [Components](COMPONENTS.md).
+
 Before removing the catalog, inventory every retained data-symbol, icons.markup/set call, component/config symbol, sync state, dialog, and update icon. Bake their exact SVGs into icons.js, remove catalog fallback, and verify they render without catalog scripts.
 
 Remove generated catalog parts/assembler, compiler/overrides and custom product artwork, catalog UI/dialogs, render/filter/edit/copy code, catalog state/search/shortcuts/hints, CSS, cache/script entries, tests/fixtures, obsolete wishes/plans, and product-specific prose. Preserve shell icon assets and utilities. Remove only template-specific compatibility; retained Notes/backup/sync must still function.

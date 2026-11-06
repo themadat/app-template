@@ -29,6 +29,9 @@
   <script type="application/x-app-script" data-app-src="assets/js/core/state.js"></script>
   <script type="application/x-app-script" data-app-src="assets/js/core/storage.js"></script>
   <script type="application/x-app-script" data-app-src="assets/js/core/components.js"></script>
+  <script type="application/x-app-script" data-app-src="assets/js/core/search.js"></script>
+  <script type="application/x-app-script" data-app-src="assets/js/core/tables.js"></script>
+  <script type="application/x-app-script" data-app-src="assets/js/core/import-review.js"></script>
   <script type="application/x-app-script" data-app-src="assets/js/core/portability.js"></script>
   <script type="application/x-app-script" data-app-src="assets/js/core/sync.js"></script>
   <script type="application/x-app-script" data-app-src="assets/js/core/pwa.js"></script>
@@ -53,8 +56,8 @@
 
     <div class="global-search-wrap" data-shortcut="/">
       <span class="search-icon" aria-hidden="true" data-symbol="search"></span>
-      <label class="visually-hidden" for="globalSearch">Search icons and application support</label>
-      <input id="globalSearch" type="search" autocomplete="off" placeholder="Search icons" aria-haspopup="listbox" aria-controls="globalSearchResults" aria-keyshortcuts="/ Control+Alt+Shift+/">
+      <label class="visually-hidden" for="globalSearch">Search Everything</label>
+      <input id="globalSearch" type="search" autocomplete="off" placeholder="Search Everything" aria-haspopup="listbox" aria-expanded="false" aria-controls="globalSearchResults" aria-keyshortcuts="/ Control+Alt+Shift+/">
       <button id="searchNameOnly" class="search-name-only" type="button" aria-label="Name-only search enabled. Disable name-only search" title="Name-only search enabled · Press / to search all fields" aria-pressed="true" hidden>'</button>
       <kbd aria-hidden="true">/</kbd>
       <button id="clearSearchButton" class="icon-button search-clear-button" type="button" aria-label="Clear filters and search" aria-keyshortcuts="C Control+Alt+Shift+C" data-shortcut="C" data-shortcut-title="C" title="C" disabled><span aria-hidden="true" data-symbol="clearSearch"></span><span class="search-clear-label">Clear</span></button>
@@ -322,6 +325,8 @@
         <p><strong data-import-file></strong> passed parsing, migration, sanitization, normalization, and validation.</p>
         <dl class="preview-grid"><div><dt>Workspace</dt><dd data-import-workspace></dd></div><div><dt>Notes</dt><dd data-import-documents></dd></div><div><dt>Versions</dt><dd data-import-version></dd></div><div><dt>Last updated</dt><dd data-import-updated></dd></div><div data-import-migrations-row><dt>Migrations</dt><dd data-import-migrations></dd></div></dl>
         <p class="inline-status warning" data-import-warning hidden></p>
+        <div data-import-comparison></div>
+        <p class="setting-note">Filtering this preview does not change what is imported. The complete backup replaces current data.</p>
         <p class="inline-status"><span aria-hidden="true">↶</span><span>The current data will be saved as a local recovery copy before replacement.</span></p>
       </div>
       <footer class="dialog-footer"><button type="button" class="button" data-close-dialog="importPreviewDialog">Keep current data</button><button type="button" class="button primary" data-import-confirm>Continue</button></footer>

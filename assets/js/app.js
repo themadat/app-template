@@ -1072,35 +1072,59 @@
     }
   }
 
+  const searchableSettings = [
+    { id: "textSizeSlider", title: "Text size", keywords: "appearance font scale zoom", panel: "settings" },
+    { id: "theme", title: "Theme", keywords: "appearance light dark system color mode", panel: "settings", selector: "[data-theme-mode]" },
+    { id: "buttons", title: "Button style", keywords: "appearance icons text both", panel: "settings", selector: "[data-button-style]" },
+    { id: "hints", title: "Hints", keywords: "shortcuts keyboard contextual hints", panel: "settings", selector: "[data-hints-enabled]" },
+    { id: "whatsNewDismissSeconds", title: "What’s New dismissal", keywords: "release timeout seconds", panel: "settings" },
+    { id: "exportButton", title: "Export JSON backup", keywords: "download save recovery data", panel: "settings" },
+    { id: "importButton", title: "Import JSON backup", keywords: "restore upload review recovery data", panel: "settings" },
+    { id: "resetPreferencesButton", title: "Reset preferences", keywords: "appearance filters defaults", panel: "settings" },
+    { id: "eraseAllButton", title: "Erase all data", keywords: "delete clear storage", panel: "settings" },
+    { id: "syncNowButton", title: "Data Sync", keywords: "github cloud connection token credentials auto sync", panel: "dataSync" }
+  ];
+
+  function registerSearchProviders() {
+    const register = function (id, search, enabled) {
+      App.search.register({ id: id, search: search, enabled: enabled, limit: id === "icon" ? 8 : 4, activate: function (itemId) { openSearchResult(id, itemId); } });
+    };
+    register("icon", function (query) {
+      const results = [];
+      for (const icon of iconCatalog) {
+        if (iconMatches(icon, query)) results.push({ id: icon.id, title: icon.label, meta: "Icons · " + iconKindLabel(icon.kind) });
+        if (results.length === 8) break;
+      }
+      return results;
+    });
+    register("setting", function (query) {
+      return searchableSettings.filter(function (item) { return App.search.matches("settings " + item.title + " " + item.keywords, query); }).map(function (item) { return { id: item.id, title: item.title, meta: "Settings · " + (item.panel === "dataSync" ? "Data Sync" : "General") }; });
+    });
+    register("notes", function (query) {
+      const notes = state().workspace.documents[0];
+      return notes && App.search.matches("notes " + documentText(notes), query) ? [{ id: notes.id, title: "Notes", meta: "Local notes" }] : [];
+    }, function () { return config.features.documents; });
+    register("help", function (query) {
+      return config.help.filter(function (topic) { return App.search.matches(topic.title + " " + topic.keywords + " " + u.stripHtml(topic.html), query); }).map(function (topic) { return { id: topic.id, title: topic.title, meta: "Help · " + topic.section }; });
+    });
+    register("roadmap", function (query) {
+      return config.roadmap.filter(function (item) { return App.search.matches(item.title + " " + item.description, query); }).map(function (item) { return { id: item.id, title: item.title, meta: "Roadmap · " + item.state }; });
+    }, function () { return config.features.roadmap; });
+    register("release", function (query) {
+      return config.releases.filter(function (release) { return App.search.matches([release.version, release.title, release.summary].concat(release.features || [], release.improvements || [], release.fixes || [], release.knownIssues || []).join(" "), query); }).map(function (release) { return { id: release.version, title: release.title, meta: "Release · v" + release.version }; });
+    });
+  }
+
   function globalSearchMatches(query) {
-    const needle = query.trim().toLowerCase();
-    if (!needle) return [];
-    const results = [];
-    iconCatalog.forEach(function (icon) {
-      if (results.length < 8 && iconMatches(icon, needle)) results.push({ type: "icon", id: icon.id, title: icon.label, meta: iconKindLabel(icon.kind) });
-    });
-    if (state().ui.searchNameOnly) return results;
-    const notes = state().workspace.documents[0];
-    if (config.features.documents && notes && (`notes ${documentText(notes)}`).toLowerCase().includes(needle)) results.push({ type: "notes", id: notes.id, title: "Notes", meta: "Local notes" });
-    config.help.forEach(function (topic) {
-      if ((topic.title + " " + topic.keywords + " " + u.stripHtml(topic.html)).toLowerCase().includes(needle)) results.push({ type: "help", id: topic.id, title: topic.title, meta: "Help · " + topic.section });
-    });
-    if (config.features.roadmap) config.roadmap.forEach(function (item) {
-      if ((item.title + " " + item.description).toLowerCase().includes(needle)) results.push({ type: "roadmap", id: item.id, title: item.title, meta: "Roadmap · " + item.state });
-    });
-    config.releases.forEach(function (release) {
-      const releaseText = [release.version, release.title, release.summary].concat(release.features || [], release.improvements || [], release.fixes || [], release.knownIssues || []).join(" ");
-      if (releaseText.toLowerCase().includes(needle)) results.push({ type: "release", id: release.version, title: release.title, meta: "Release · v" + release.version });
-    });
-    return results.slice(0, 12);
+    return App.search.query(query, { only: state().ui.searchNameOnly ? "icon" : null });
   }
 
   function renderSearchMode() {
     const enabled = state().ui.searchNameOnly;
     $("#searchNameOnly").hidden = !enabled;
     $("#globalSearch").closest(".global-search-wrap").classList.toggle("name-only", enabled);
-    $("#globalSearch").setAttribute("aria-label", enabled ? "Search icon names only" : "Search icons and application support");
-    $("#globalSearch").placeholder = enabled ? "Search icon names only" : "Search icons";
+    $("#globalSearch").setAttribute("aria-label", enabled ? "Search icon names only" : "Search Everything");
+    $("#globalSearch").placeholder = enabled ? "Search icon names only" : "Search Everything";
   }
 
   function setSearchNameOnly(enabled) {
@@ -1124,11 +1148,16 @@
     const results = globalSearchMatches(query);
     container.hidden = false;
     container.innerHTML = results.length ? results.map(function (result, index) {
-      return '<button type="button" role="option" id="global-result-' + index + '" data-search-type="' + result.type + '" data-search-id="' + u.escapeHtml(result.id) + '"><span><strong>' + highlightedSearchText(result.title, query) + '</strong><small>' + highlightedSearchText(result.meta, query) + "</small></span><span aria-hidden=\"true\">→</span></button>";
-    }).join("") : '<div class="search-empty">No matching icons or support content.</div>';
+      return '<button type="button" role="option" aria-selected="false" id="global-result-' + index + '" data-search-type="' + u.escapeHtml(result.type) + '" data-search-id="' + u.escapeHtml(result.id) + '"><span><strong>' + highlightedSearchText(result.title, query) + '</strong><small>' + highlightedSearchText(result.meta, query) + "</small></span><span aria-hidden=\"true\">→</span></button>";
+    }).join("") : '<div class="search-empty">No matching icons, settings, notes, or support content.</div>';
   }
 
   function activateGlobalSearchResult(type, id) {
+    App.search.activate(type, id);
+    $("#globalSearchResults").hidden = true;
+  }
+
+  function openSearchResult(type, id) {
     if (type === "icon") {
       if (state().modules.iconLibrary.source !== "all" || state().modules.iconLibrary.kind !== "all" || state().modules.iconLibrary.category !== "all") storage.mutate(function (next) { next.modules.iconLibrary.source = "all"; next.modules.iconLibrary.kind = "all"; next.modules.iconLibrary.category = "all"; }, { reason: "icon-filters" });
       iconVisibleCount = ICON_PAGE_SIZE;
@@ -1138,6 +1167,18 @@
         card?.scrollIntoView({ block: "center", behavior: document.documentElement.dataset.motion === "reduce" ? "auto" : "smooth" });
         card?.focus({ preventScroll: true });
       });
+    }
+    else if (type === "setting") {
+      const item = searchableSettings.find(function (setting) { return setting.id === id; });
+      if (item) {
+        openSupport(item.panel, $("#globalSearch"));
+        requestAnimationFrame(function () {
+          const target = item.selector ? $(item.selector) : document.getElementById(item.id);
+          // Navigation only: a result never invokes an import, deletion, or sync action.
+          const focusTarget = target && !target.disabled ? target : $("[data-support-tab='" + item.panel + "']");
+          focusTarget?.scrollIntoView({ block: "center" }); focusTarget?.focus({ preventScroll: true });
+        });
+      }
     }
     else if (type === "notes") openNotes($("#globalSearch"));
     else if (type === "help") { openSupport("help"); setInputValue($("#helpSearch"), config.help.find(function (topic) { return topic.id === id; })?.title || ""); renderHelp(); }
@@ -1795,6 +1836,9 @@
       else if (event.key === "Escape") { $("#globalSearchResults").hidden = true; event.target.select(); }
     });
     $("#globalSearchResults").addEventListener("click", function (event) { const result = event.target.closest("[data-search-type]"); if (result) activateGlobalSearchResult(result.dataset.searchType, result.dataset.searchId); });
+    $("#globalSearchResults").addEventListener("focusin", function (event) {
+      $$("[role='option']", event.currentTarget).forEach(function (option) { option.setAttribute("aria-selected", String(option === event.target.closest("[role='option']"))); });
+    });
     $("#globalSearchResults").addEventListener("keydown", function (event) {
       const button = event.target.closest("[data-search-type]"); if (!button) return;
       const buttons = $$("[data-search-type]", event.currentTarget); const index = buttons.indexOf(button);
@@ -2002,6 +2046,8 @@
     storage.load();
     applyIdentity();
     components.init();
+    registerSearchProviders();
+    new MutationObserver(function () { $("#globalSearch").setAttribute("aria-expanded", String(!$("#globalSearchResults").hidden)); }).observe($("#globalSearchResults"), { attributes: true, attributeFilter: ["hidden"] });
     portability.init();
     bindGeneralEvents();
     bindIconFilterDivider();

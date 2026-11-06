@@ -6,7 +6,7 @@
   const u = App.utils;
   const model = App.stateModel;
   const storage = App.storage;
-  let pendingImport = null;
+  let importTrigger = null;
 
   function summaryFor(state, migrations) {
     const categories = new Set(state.workspace.records.map(function (record) { return record.category; }));
@@ -64,43 +64,66 @@
     const warning = document.querySelector("[data-import-warning]");
     warning.hidden = candidate.validation.warnings.length === 0;
     warning.textContent = candidate.validation.warnings.join(" ");
+    const before = storage.getState(), after = candidate.state;
+    const notesLength = function (value) { return value.workspace.documents.reduce(function (total, item) { return total + u.richTextToPlainText(item.html || "", config.controls.maxDocumentHtmlLength).length; }, 0); };
+    App.tables.mount(document.querySelector("[data-import-comparison]"), {
+      caption: "Backup replacement: current and imported values",
+      columns: [{ id: "item", label: "Content", width: 200 }, { id: "current", label: "Current", width: 180 }, { id: "imported", label: "In backup", width: 180 }],
+      rows: [
+        { item: "Workspace", current: current.workspaceTitle, imported: summary.workspaceTitle },
+        { item: "Notes", current: current.documents, imported: summary.documents },
+        { item: "Notes characters", current: notesLength(before), imported: notesLength(after) },
+        { item: "Edited icons", current: before.modules.iconLibrary.overrides.length, imported: after.modules.iconLibrary.overrides.length },
+        { item: "Theme", current: before.preferences.appearance.mode, imported: after.preferences.appearance.mode },
+        { item: "Text size", current: Math.round(before.preferences.appearance.textScale * 100) + "%", imported: Math.round(after.preferences.appearance.textScale * 100) + "%" }
+      ]
+    });
   }
 
-  async function previewFile(file, trigger) {
-    try {
-      App.components.setLoading(true, "Checking backup…");
+  const review = App.importReview.create({
+    prepare: async function (file) {
       const text = await readFile(file);
       let parsed;
       try { parsed = JSON.parse(text); }
       catch (error) { throw new Error("The selected file is not valid JSON."); }
-      const candidate = model.prepare(parsed);
-      pendingImport = candidate;
+      return model.prepare(parsed);
+    },
+    onPreview: function (candidate, file) {
       renderPreview(candidate, file.name);
-      App.components.openDialog("#importPreviewDialog", { trigger: trigger, focus: "[data-import-confirm]" });
-    } catch (error) {
-      pendingImport = null;
-      App.components.message("Import unavailable", error.message || "That backup could not be used.", { trigger: trigger });
-    } finally {
-      App.components.setLoading(false);
-    }
-  }
-
-  async function confirmImport() {
-    if (!pendingImport) return;
-    const accepted = await App.components.confirm({
+      App.components.openDialog("#importPreviewDialog", { trigger: importTrigger, focus: "[data-import-confirm]" });
+    },
+    confirm: function () { return App.components.confirm({
       title: "Replace current data?",
       message: "The validated backup will replace notes, preferences, and module settings. A recoverable copy of the current data will be saved first.",
       confirmLabel: "Replace data",
       cancelLabel: "Keep current data",
       danger: true,
       trigger: document.querySelector("[data-import-confirm]")
-    });
-    if (!accepted) return;
-    const summary = summaryFor(pendingImport.state, pendingImport.migrations);
-    storage.replace(pendingImport.state, { recoveryReason: "Before importing " + summary.workspaceTitle, reason: "import" });
-    pendingImport = null;
-    App.components.closeDialog("#importPreviewDialog", "imported");
-    App.components.toast("Imported " + summary.documents + " notes.", { title: "Backup restored", kind: "success" });
+    }); },
+    apply: function (candidate) {
+      const summary = summaryFor(candidate.state, candidate.migrations);
+      if (!storage.saveRecovery("Before importing " + summary.workspaceTitle)) throw new Error("The current data could not be saved for recovery. Free browser storage or export a backup before trying again.");
+      storage.replace(candidate.state, { saveRecovery: false, reason: "import" });
+    },
+    onApplied: function (candidate) {
+      App.components.closeDialog("#importPreviewDialog", "imported");
+      App.components.toast("Imported " + summaryFor(candidate.state).documents + " notes.", { title: "Backup restored", kind: "success" });
+    },
+    onError: function (error) {
+      App.components.message("Import unavailable", error.message || "That backup could not be used.", { trigger: importTrigger });
+    },
+    onBusy: function (busy) {
+      const button = document.querySelector("[data-import-confirm]");
+      if (button) button.disabled = busy;
+      App.components.setLoading(busy && review.getPhase() === "preparing", "Checking backup…");
+    }
+  });
+
+  function previewFile(file, trigger) {
+    if (!file) return Promise.resolve(false);
+    if (["confirming", "applying"].includes(review.getPhase())) return Promise.resolve(false);
+    importTrigger = trigger;
+    return review.preview(file);
   }
 
   function init() {
@@ -110,9 +133,9 @@
       previewFile(file, document.activeElement);
       event.target.value = "";
     });
-    document.querySelector("[data-import-confirm]")?.addEventListener("click", confirmImport);
+    document.querySelector("[data-import-confirm]")?.addEventListener("click", review.commit);
     document.querySelector("#importPreviewDialog")?.addEventListener("close", function () {
-      if (this.returnValue !== "imported") pendingImport = null;
+      if (this.returnValue !== "imported") review.cancel();
     });
   }
 

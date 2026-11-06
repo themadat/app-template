@@ -10,6 +10,8 @@ No build step, runtime packages, backend, or sign-in is required. Node is used o
 
 The app includes searchable SVGs, five native SF Symbol weights, metadata editing, a single Notes modal, appearance settings, Help, release notes, Roadmap, JSON backup/recovery, and optional GitHub Sync. The current version and history appear in Settings → What's New.
 
+Reusable helpers provide Search Everything across content and settings, sortable/filterable tables with adjustable columns, and an import-review lifecycle. Backup review uses these table controls to compare current and imported values. See [Components](docs/COMPONENTS.md) for the APIs available to future apps.
+
 ## Develop and release
 
 Edit `assets/js/config.js` to configure identity, features, cloud target, and help. For a release, change its sole `VERSION` value and add release notes at the front of `releases`. The newest entry uses `VERSION`; keep previous entries pinned to their historical numbers. Versions use `major.minor.patch.build`.
