@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -48,7 +48,7 @@ test('only the 50 approved SF aliases are retired and retained rebuilds are stab
   const icons = loadCatalog(catalogDir);
   const approved = JSON.parse(readFileSync(new URL('./fixtures/sf-symbol-merges.json', import.meta.url), 'utf8'));
   assert.equal(approved.length, 50);
-  assert.equal(icons.length, 7233);
+  assert.equal(icons.length, 7368);
   assert.equal(icons.filter(icon => icon.kind === 'sf-symbol').length, 6868);
   assert.deepEqual(icons.flatMap(icon => icon.retiredIds || []).sort(), approved.map(item => item.id).sort());
   for (const item of approved) {
@@ -83,4 +83,32 @@ test('only the 50 approved SF aliases are retired and retained rebuilds are stab
     execFileSync(process.execPath, [join(build, 'compile-icon-library.mjs'), empty], { encoding: 'utf8' });
     assert.deepEqual(loadCatalog(output), rebuilt);
   } finally { rmSync(root, { recursive: true, force: true }); }
+});
+
+
+test('all supplied glassware variants retain paths and masks under Food & Drink', () => {
+  const catalogDir = fileURLToPath(new URL('../assets/js/', import.meta.url));
+  const sourceDir = fileURLToPath(new URL('../assets/custom-symbols/glassware/', import.meta.url));
+  const icons = loadCatalog(catalogDir);
+  const files = ['', 'filled/', 'liquid/'].flatMap(folder =>
+    readdirSync(join(sourceDir, folder)).filter(file => file.endsWith('.svg')).map(file => folder + file));
+  assert.equal(files.length, 135);
+  assert.equal(new Set(icons.map(icon => icon.id)).size, icons.length);
+  const paths = svg => Array.from(svg.matchAll(/<(?:[\w.-]+:)?path\b[^>]*\bd="([^"]*)"/g), match => match[1]);
+  for (const file of files) {
+    const icon = icons.find(icon => icon.sources.some(source => source.repo === 'glassware' && source.file === file));
+    assert.ok(icon, file);
+    assert.equal(icon.kind, 'custom');
+    assert.ok(icon.categories.includes('glassware'), file);
+    assert.ok(icon.categories.includes('food-drink'), file);
+    assert.doesNotMatch(icon.label, /noun|\d{6}/i);
+    const svg = readFileSync(join(sourceDir, file), 'utf8');
+    assert.deepEqual(paths(icon.svg), paths(svg), file);
+    assert.equal((icon.svg.match(/<(?:[\w.-]+:)?mask\b/g) || []).length, (svg.match(/<(?:[\w.-]+:)?mask\b/g) || []).length, file);
+    if (file.startsWith('filled/') || file.startsWith('liquid/')) {
+      assert.match(icon.svg, /fill="white"/);
+      assert.match(icon.svg, /fill="black"/);
+      assert.match(icon.svg, /fill="currentColor"/);
+    }
+  }
 });

@@ -255,6 +255,7 @@ const ICON_CATEGORIES = [
   { id: "education-science", label: "Education & Science", terms: ["atom", "book", "books", "flask", "graduationcap", "gyroscope", "level", "microscope", "scalemass", "school", "science", "studentdesk", "testtube", "university"] },
   { id: "energy-power", label: "Energy & Power", terms: ["alternatingcurrent", "battery", "charge", "charging", "directcurrent", "electricity", "energy", "hydrogen", "power", "powercord", "powermeter", "poweroutlet", "powerplug"] },
   { id: "food-drink", label: "Food & Drink", terms: ["bar", "cocktail", "drink", "glass", "wine", "wineglass", "beer", "cup", "mug", "fork", "knife", "spoon", "food", "restaurant", "bottle", "coffee"] },
+  { id: "glassware", label: "Glassware", parent: "food-drink", terms: [] },
   { id: "health", label: "Health", terms: ["heart", "medical", "medicine", "pill", "bandage", "stethoscope", "health", "hospital", "fitness", "dumbbell"] },
   { id: "home-appliances", label: "Home & Appliances", terms: ["conditioner", "purifier", "bathtub", "blinds", "cabinet", "chair", "chandelier", "contact sensor", "cooktop", "curtains", "dehumidifier", "dishwasher", "door", "dryer", "fan", "fireplace", "heater", "house", "humidifier", "lamp", "light", "lightswitch", "microwave", "oven", "pipe", "refrigerator", "roller shade", "roman shade", "sensor", "shower", "sink", "sofa", "spigot", "sprinkler", "stairs", "stove", "toilet", "vacuum", "washer"] },
   { id: "indices", label: "Indices", terms: ["index", "indices"] },
@@ -659,6 +660,10 @@ function deriveMetadata(record) {
   geographyCategoryIds(record).forEach(function (categoryId) {
     if (!categories.includes(categoryId)) categories.push(categoryId);
   });
+  const isGlasswareSource = record.sources.some(function (source) {
+    return source.repo === "glassware" || /(?:^|\/)custom-symbols\/glassware\//i.test(source.file);
+  });
+  if (isGlasswareSource && !categories.includes("glassware")) categories.push("glassware");
   const isBadgeSource = record.sources.some(function (source) {
     return source.repo === "svg-converter" && /^app-input\/(?:!Badge|Badge)\//i.test(source.file);
   });

@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.10";
+  const VERSION = "1.0.0.11";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-11-14T12:00:00.000Z",
+        title: "Glassware symbols and search styling",
+        summary: "Browse custom glassware symbols under Food & Drink and use the refreshed Home Bar search styling.",
+        features: ["Glassware category with original, filled, and liquid custom symbols"],
+        improvements: ["Search field matches Home Bar spacing, height, shortcut badge, and Clear control"],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.10",
         date: "2026-11-06T12:00:00.000Z",
         title: "Reusable search, tables, and import review",
         summary: "Search Everything includes settings, and backup review compares current and imported data with shared table controls.",

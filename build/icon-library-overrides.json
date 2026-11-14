@@ -11,7 +11,10 @@
       "iconId": "string-lights-b62a0e",
       "label": "String Lights",
       "kind": "custom",
-      "categories": ["home-appliances", "celebrations-awards"]
+      "categories": [
+        "home-appliances",
+        "celebrations-awards"
+      ]
     },
     {
       "iconId": "0-boat-holiday-sea-sky-travel-vacation-svgrepo-com-2c6640",
@@ -3935,6 +3938,1086 @@
         "building"
       ],
       "exactCategories": true
+    },
+    {
+      "iconId": "noun-banquetgobletglass-2452823-c29b83",
+      "label": "Banquet Goblet Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-banquetgobletglass-2452823-f3bf44",
+      "label": "Banquet Goblet Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-banquetgobletglass-2452823-ff29f3",
+      "label": "Banquet Goblet Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beermug-2587042-4b618b",
+      "label": "Beer Mug — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beermug-2587042-8af81c",
+      "label": "Beer Mug",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beermug-2587042-dea750",
+      "label": "Beer Mug — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beerpitcher-2452816-121f4a",
+      "label": "Beer Pitcher",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beerpitcher-2452816-4240c0",
+      "label": "Beer Pitcher — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beerpitcher-2452816-819f8f",
+      "label": "Beer Pitcher — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beerstein-2452815-1bdfe3",
+      "label": "Beer Stein",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beerstein-2452815-34946c",
+      "label": "Beer Stein — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-beerstein-2452815-80d8aa",
+      "label": "Beer Stein — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-brandy-snifter-2452814-268a10",
+      "label": "Brandy Snifter — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-brandy-snifter-2452814-3a108b",
+      "label": "Brandy Snifter",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-brandy-snifter-2452814-c66745",
+      "label": "Brandy Snifter — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-collinsglass-2452817-812316",
+      "label": "Collins Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-collinsglass-2452817-ad4aa7",
+      "label": "Collins Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-collinsglass-2452817-fe69a6",
+      "label": "Collins Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-cordialglass-2452819-5a27c5",
+      "label": "Cordial Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-cordialglass-2452819-91ce7e",
+      "label": "Cordial Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-cordialglass-2452819-c57979",
+      "label": "Cordial Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-cosmopolitan-2452820-6fe392",
+      "label": "Cosmopolitan",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-cosmopolitan-2452820-9b5ad2",
+      "label": "Cosmopolitan — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-cosmopolitan-2452820-eb3e14",
+      "label": "Cosmopolitan — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-coupetteglass-2452818-066988",
+      "label": "Coupette Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-coupetteglass-2452818-a8c134",
+      "label": "Coupette Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-coupetteglass-2452818-bee14c",
+      "label": "Coupette Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-drinkshaker-2452822-1eb24a",
+      "label": "Drink Shaker — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-drinkshaker-2452822-25d5b7",
+      "label": "Drink Shaker",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-drinkshaker-2452822-59fcda",
+      "label": "Drink Shaker — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-flute-glass-2452825-4aa946",
+      "label": "Flute Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-flute-glass-2452825-51a7c5",
+      "label": "Flute Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-flute-glass-2452825-bfb89f",
+      "label": "Flute Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-goblet-2452827-77f763",
+      "label": "Goblet",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-goblet-2452827-8f565a",
+      "label": "Goblet — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-goblet-2452827-dcc9e2",
+      "label": "Goblet — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-grandeglass-2452826-079cf0",
+      "label": "Grande Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-grandeglass-2452826-2c848b",
+      "label": "Grande Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-grandeglass-2452826-5ee3b5",
+      "label": "Grande Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-highballglass-2452830-2ae795",
+      "label": "Highball Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-highballglass-2452830-3f86ad",
+      "label": "Highball Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-highballglass-2452830-f48a6b",
+      "label": "Highball Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-hurricaneglass-2452832-428c54",
+      "label": "Hurricane Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-hurricaneglass-2452832-64e830",
+      "label": "Hurricane Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-hurricaneglass-2452832-9040f9",
+      "label": "Hurricane Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-irishcoffeeglass-2452829-12953a",
+      "label": "Irish Coffee Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-irishcoffeeglass-2452829-70463f",
+      "label": "Irish Coffee Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-irishcoffeeglass-2452829-8acf4e",
+      "label": "Irish Coffee Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-juleptin-6729421-032836",
+      "label": "Julep Tin — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-juleptin-6729421-176dbb",
+      "label": "Julep Tin — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-juleptin-6729421-4fc4c7",
+      "label": "Julep Tin",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-margaritaglass-2452833-12829f",
+      "label": "Margarita Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-margaritaglass-2452833-73388b",
+      "label": "Margarita Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-margaritaglass-2452833-860efe",
+      "label": "Margarita Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-margaritaglass-2452834-383c1c",
+      "label": "Margarita Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-margaritaglass-2452834-390dcc",
+      "label": "Margarita Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-margaritaglass-2452834-6cce3e",
+      "label": "Margarita Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-martini-2452821-508b59",
+      "label": "Martini",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-martini-2452821-ad85a4",
+      "label": "Martini — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-martini-2452821-d254fb",
+      "label": "Martini — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pilsner-beer-glass-2452836-46d313",
+      "label": "Pilsner Beer Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pilsner-beer-glass-2452836-864964",
+      "label": "Pilsner Beer Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pilsner-beer-glass-2452836-8e9dfc",
+      "label": "Pilsner Beer Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pintglass-2460992-079664",
+      "label": "Pint Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pintglass-2460992-63c511",
+      "label": "Pint Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pintglass-2460992-bea7a1",
+      "label": "Pint Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pintglass-2460993-0a5641",
+      "label": "Pint Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pintglass-2460993-1db668",
+      "label": "Pint Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pintglass-2460993-4447a1",
+      "label": "Pint Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-poco-grande-2452835-182033",
+      "label": "Poco Grande — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-poco-grande-2452835-7a2f68",
+      "label": "Poco Grande — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-poco-grande-2452835-e7857d",
+      "label": "Poco Grande",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pontarlierreservoir-2460991-0eed8f",
+      "label": "Pontarlier Reservoir — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pontarlierreservoir-2460991-b0db9a",
+      "label": "Pontarlier Reservoir",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-pontarlierreservoir-2460991-c9eb7a",
+      "label": "Pontarlier Reservoir — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-punchcup-2460990-03e016",
+      "label": "Punch Cup — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-punchcup-2460990-6ce536",
+      "label": "Punch Cup — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-punchcup-2460990-e219bc",
+      "label": "Punch Cup",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-redwineglass-2460995-636b11",
+      "label": "Red Wine Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-redwineglass-2460995-8edf50",
+      "label": "Red Wine Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-redwineglass-2460995-d701a6",
+      "label": "Red Wine Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460994-4ece60",
+      "label": "Rocks Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460994-527372",
+      "label": "Rocks Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460994-cf1165",
+      "label": "Rocks Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460996-2dc025",
+      "label": "Rocks Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460996-da1c11",
+      "label": "Rocks Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460996-ef5a27",
+      "label": "Rocks Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460997-6ce43a",
+      "label": "Rocks Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460997-a65ce3",
+      "label": "Rocks Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-rocks-glass-2460997-e29504",
+      "label": "Rocks Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-sherryglass-2461000-399c60",
+      "label": "Sherry Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-sherryglass-2461000-89de69",
+      "label": "Sherry Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-sherryglass-2461000-967f4f",
+      "label": "Sherry Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shootersglass-2461001-52077c",
+      "label": "Shooters Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shootersglass-2461001-e45df8",
+      "label": "Shooters Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shootersglass-2461001-f795ec",
+      "label": "Shooters Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shootersglasssingle-2460998-17791e",
+      "label": "Shooters Glass Single — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shootersglasssingle-2460998-250361",
+      "label": "Shooters Glass Single",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shootersglasssingle-2460998-d1121f",
+      "label": "Shooters Glass Single — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shot-glass-2460999-269e33",
+      "label": "Shot Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shot-glass-2460999-b517af",
+      "label": "Shot Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shot-glass-2460999-dae584",
+      "label": "Shot Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shot-glass-2461003-0abd63",
+      "label": "Shot Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shot-glass-2461003-c0f838",
+      "label": "Shot Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-shot-glass-2461003-f8b9fa",
+      "label": "Shot Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-stange-glass-2461002-0afbed",
+      "label": "Stange Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-stange-glass-2461002-26de49",
+      "label": "Stange Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-stange-glass-2461002-979367",
+      "label": "Stange Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-teardropgobletglass-2452824-136ae0",
+      "label": "Teardrop Goblet Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-teardropgobletglass-2452824-b641c8",
+      "label": "Teardrop Goblet Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-teardropgobletglass-2452824-c24fe5",
+      "label": "Teardrop Goblet Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-thistleglass-2461008-04fafe",
+      "label": "Thistle Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-thistleglass-2461008-12b37b",
+      "label": "Thistle Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-thistleglass-2461008-6621c5",
+      "label": "Thistle Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-toddyglass-6729420-337c06",
+      "label": "Toddy Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-toddyglass-6729420-442789",
+      "label": "Toddy Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-toddyglass-6729420-cec96b",
+      "label": "Toddy Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-tumblerglass-2452828-3a86fb",
+      "label": "Tumbler Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-tumblerglass-2452828-d88539",
+      "label": "Tumbler Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-tumblerglass-2452828-f15693",
+      "label": "Tumbler Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-weizen-glass-2461005-1dbb95",
+      "label": "Weizen Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-weizen-glass-2461005-725b18",
+      "label": "Weizen Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-weizen-glass-2461005-c0db85",
+      "label": "Weizen Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-whiskyglass-2452831-171cee",
+      "label": "Whisky Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-whiskyglass-2452831-735515",
+      "label": "Whisky Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-whiskyglass-2452831-76d47d",
+      "label": "Whisky Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-whitewineglass-2461007-1fb55f",
+      "label": "White Wine Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-whitewineglass-2461007-892171",
+      "label": "White Wine Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-whitewineglass-2461007-94148c",
+      "label": "White Wine Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-wobbleglass-2461006-504e16",
+      "label": "Wobble Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-wobbleglass-2461006-b79032",
+      "label": "Wobble Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-wobbleglass-2461006-bcddee",
+      "label": "Wobble Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-zombie-glass-2461004-457445",
+      "label": "Zombie Glass — Filled",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-zombie-glass-2461004-a22fd8",
+      "label": "Zombie Glass — Liquid",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
+    },
+    {
+      "iconId": "noun-zombie-glass-2461004-e6a626",
+      "label": "Zombie Glass",
+      "categories": [
+        "food-drink",
+        "glassware"
+      ]
     }
   ]
 }
