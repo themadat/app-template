@@ -48,7 +48,7 @@ test('only the 50 approved SF aliases are retired and retained rebuilds are stab
   const icons = loadCatalog(catalogDir);
   const approved = JSON.parse(readFileSync(new URL('./fixtures/sf-symbol-merges.json', import.meta.url), 'utf8'));
   assert.equal(approved.length, 50);
-  assert.equal(icons.length, 7368);
+  assert.equal(icons.length, 7369);
   assert.equal(icons.filter(icon => icon.kind === 'sf-symbol').length, 6868);
   assert.deepEqual(icons.flatMap(icon => icon.retiredIds || []).sort(), approved.map(item => item.id).sort());
   for (const item of approved) {
@@ -92,7 +92,7 @@ test('all supplied glassware variants retain paths and masks under Food & Drink'
   const icons = loadCatalog(catalogDir);
   const files = ['', 'filled/', 'liquid/'].flatMap(folder =>
     readdirSync(join(sourceDir, folder)).filter(file => file.endsWith('.svg')).map(file => folder + file));
-  assert.equal(files.length, 135);
+  assert.equal(files.length, 136);
   assert.equal(new Set(icons.map(icon => icon.id)).size, icons.length);
   const paths = svg => Array.from(svg.matchAll(/<(?:[\w.-]+:)?path\b[^>]*\bd="([^"]*)"/g), match => match[1]);
   for (const file of files) {

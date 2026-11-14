@@ -3,7 +3,7 @@
 
   window.LocalApp = window.LocalApp || {};
 
-  const VERSION = "1.0.0.11";
+  const VERSION = "1.0.0.12";
 
   const CONFIG = {
     identity: {
@@ -81,6 +81,16 @@
     releases: [
       {
         version: VERSION,
+        date: "2026-11-14T12:00:00.000Z",
+        title: "Glencairn Glass",
+        summary: "Added the custom Glencairn Glass symbol to Food & Drink → Glassware.",
+        features: ["Glencairn Glass with a low liquid fill"],
+        improvements: [],
+        fixes: [],
+        knownIssues: []
+      },
+      {
+        version: "1.0.0.11",
         date: "2026-11-14T12:00:00.000Z",
         title: "Glassware symbols and search styling",
         summary: "Browse custom glassware symbols under Food & Drink and use the refreshed Home Bar search styling.",
